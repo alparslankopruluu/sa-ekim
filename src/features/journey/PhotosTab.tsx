@@ -100,7 +100,10 @@ export function PhotosTab({ view }: { view: JourneyView }) {
   const size = Math.floor((contentWidth - GAP * (COLUMNS - 1)) / COLUMNS);
   const angles = ANGLES_BY_GOAL[view.goal];
   const primary = angle ?? angles[0] ?? 'front';
-  const groups = useMemo(() => groupPhotosByWeek(view.photos, view.procedureDate, angle), [view.photos, view.procedureDate, angle]);
+  const groups = useMemo(
+    () => groupPhotosByWeek(view.photos, view.procedureDate, angle),
+    [view.photos, view.procedureDate, angle],
+  );
   const total = view.photos.length;
   const atLimit = access.loaded && !access.isPro && total >= FREE_LIMITS.journeyPhotos;
 
@@ -115,7 +118,11 @@ export function PhotosTab({ view }: { view: JourneyView }) {
       }
       if (group.kind === 'undated' && group.month) {
         const [y, m] = group.month.split('-').map(Number) as [number, number];
-        return new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString(locale, { month: 'long', year: 'numeric', timeZone: 'UTC' });
+        return new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString(locale, {
+          month: 'long',
+          year: 'numeric',
+          timeZone: 'UTC',
+        });
       }
       return t('journey.photos.all');
     },
@@ -225,7 +232,10 @@ export function PhotosTab({ view }: { view: JourneyView }) {
             {t('journey.photos.emptyFilter')}
           </AppText>
         }
-        contentContainerStyle={{ paddingHorizontal: layout.screenPadding, paddingBottom: layout.tabBarClearance + spacing.xxxl }}
+        contentContainerStyle={{
+          paddingHorizontal: layout.screenPadding,
+          paddingBottom: layout.tabBarClearance + spacing.xxxl,
+        }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item: group }) => (
           <View style={styles.group}>
@@ -249,7 +259,11 @@ export function PhotosTab({ view }: { view: JourneyView }) {
                     angle: t(`journey.angles.${photo.angle}`),
                     group: labelFor(group),
                   })}
-                  onPress={() => (selecting ? toggleSelect(photo.id) : router.push({ pathname: '/photo/[id]', params: { id: photo.id } }))}
+                  onPress={() =>
+                    selecting
+                      ? toggleSelect(photo.id)
+                      : router.push({ pathname: '/photo/[id]', params: { id: photo.id } })
+                  }
                 />
               ))}
             </View>

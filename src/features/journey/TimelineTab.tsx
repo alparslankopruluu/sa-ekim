@@ -60,7 +60,13 @@ export function TimelineTab({ view, onOpenPlan }: { view: JourneyView; onOpenPla
         <AppText variant="title2" accessibilityRole="header" style={styles.heading}>
           {t('journey.timeline.phasesTitle')}
         </AppText>
-        <PhaseRail rows={rows} currentId={currentId} day={day} locale={locale} showLocks={access.loaded && !access.isPro} />
+        <PhaseRail
+          rows={rows}
+          currentId={currentId}
+          day={day}
+          locale={locale}
+          showLocks={access.loaded && !access.isPro}
+        />
       </Reveal>
       <Reveal index={3}>
         <View style={styles.note}>

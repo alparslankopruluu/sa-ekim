@@ -1,8 +1,9 @@
 rules_version = '2';
 
-// Deny by default. Clients may write only their own profile and device
-// registrations; wallets, entitlements, renders, ledgers, idempotency records
-// and provider state are written exclusively by Cloud Functions (Admin SDK).
+// Kök — deny by default. Clients may write only their own profile (shape-checked, no money or
+// entitlement fields) and their device registrations. Wallets, gifts, consent, entitlements,
+// previews, ledgers, idempotency records, cohort membership, reports and config are written
+// exclusively by Cloud Functions (Admin SDK, which bypasses these rules).
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -14,18 +15,17 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
 
-    // users/{uid}: the only client-writable profile fields, shape-checked.
+    // users/{uid}: the only client-writable profile fields.
     function isValidProfile(data) {
-      return data.keys().hasOnly(['locale', 'goal', 'genres', 'onboardingVariant', 'createdAt'])
+      return data.keys().hasOnly(['locale', 'goal', 'stage', 'onboardingVariant', 'createdAt'])
         && (!('locale' in data)
             || (data.locale is string && data.locale.size() > 0 && data.locale.size() <= 35))
         && (!('goal' in data)
             || data.goal == null
-            || data.goal in ['pet', 'me', 'birthday', 'bestie', 'creator'])
-        && (!('genres' in data)
-            || (data.genres is list
-                && data.genres.size() <= 8
-                && data.genres.hasOnly(['pop', 'kpop', 'rap', 'rock', 'opera', 'lofi', 'country', 'love'])))
+            || data.goal in ['hairline', 'crown', 'part', 'brows', 'beard'])
+        && (!('stage' in data)
+            || data.stage == null
+            || data.stage in ['researching', 'planned', 'done'])
         && (!('onboardingVariant' in data)
             || (data.onboardingVariant is string && data.onboardingVariant.size() <= 40));
     }
@@ -41,13 +41,15 @@ service cloud.firestore {
         || (!('createdAt' in existing) && data.createdAt == request.time);
     }
 
-    // users/{uid}/devices/{deviceId}: FCM registration written by the app.
+    // users/{uid}/devices/{deviceId}: push registration written by the app.
     function isValidDevice(data) {
       return data.keys().hasAll(['token', 'platform', 'updatedAt'])
         && data.keys().hasOnly(['token', 'platform', 'topics', 'locale', 'updatedAt'])
         && data.token is string && data.token.size() > 0 && data.token.size() <= 4096
-        && data.platform in ['ios', 'android']
-        && (!('topics' in data) || (data.topics is list && data.topics.size() <= 20))
+        && data.platform in ['ios', 'android', 'web']
+        && (!('topics' in data)
+            || (data.topics is list && data.topics.size() <= 10
+                && data.topics.hasOnly(['previews', 'offers', 'reminders'])))
         && (!('locale' in data) || (data.locale is string && data.locale.size() <= 16))
         && data.updatedAt == request.time;
     }
@@ -69,20 +71,20 @@ service cloud.firestore {
       }
 
       // Server-written, owner-readable. No client write rules exist.
-      match /renders/{renderId} {
+      match /previews/{previewId} {
         allow read: if isOwner(uid);
       }
       match /private/{docId} {
-        allow read: if isOwner(uid);
+        allow get: if isOwner(uid) && docId in ['wallet', 'gift', 'entitlement', 'consent'];
       }
       match /ledger/{entryId} {
         allow read: if isOwner(uid);
       }
 
-      // requests/*, renders_private/*, rc_events/*: no client access at all.
+      // requests/*, previews_private/*, rc_events/*: no client access at all.
     }
 
-    // config/*: server-only (e.g. config/wheel weights). Everything else denied.
+    // cohortMembers/*, reports/*, config/*: server-only. Everything else denied.
     match /{document=**} {
       allow read, write: if false;
     }

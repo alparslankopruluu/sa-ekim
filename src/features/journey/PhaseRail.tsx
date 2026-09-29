@@ -30,7 +30,7 @@ const MARKER = 22;
 export function PhaseRail({ rows, currentId, day, locale, showLocks }: PhaseRailProps) {
   const { t } = useTranslation();
   return (
-    <View style={styles.rail} accessibilityRole="list">
+    <View style={styles.rail}>
       {rows.map((row, i) => {
         const current = row.id === currentId;
         const past = day !== null && day > row.toDay;
@@ -38,12 +38,15 @@ export function PhaseRail({ rows, currentId, day, locale, showLocks }: PhaseRail
         const title = t(`guide.${row.id}.title`);
         const dates =
           row.startDate && row.endDate
-            ? t('journey.rail.dates', { from: formatIsoDate(row.startDate, locale), to: formatIsoDate(row.endDate, locale) })
+            ? t('journey.rail.dates', {
+                from: formatIsoDate(row.startDate, locale),
+                to: formatIsoDate(row.endDate, locale),
+              })
             : t('journey.rail.days', { from: row.fromDay, to: row.toDay });
         const weeks = t('journey.rail.weeks', { from: weekIndex(row.fromDay), to: weekIndex(row.toDay) });
         const state = current ? t('journey.rail.current') : past ? t('journey.rail.past') : t('journey.rail.upcoming');
         return (
-          <View key={row.id} style={styles.item} accessibilityRole="listitem">
+          <View key={row.id} style={styles.item}>
             <View style={styles.markerCol}>
               <View
                 style={[
@@ -76,7 +79,9 @@ export function PhaseRail({ rows, currentId, day, locale, showLocks }: PhaseRail
                     {title}
                   </AppText>
                 </View>
-                {showLocks && row.id !== 'care' ? <Ionicons name="lock-closed-outline" size={16} color={colors.textTertiary} /> : null}
+                {showLocks && row.id !== 'care' ? (
+                  <Ionicons name="lock-closed-outline" size={16} color={colors.textTertiary} />
+                ) : null}
                 <Chevron />
               </View>
               <AppText variant="callout" color="textSecondary">

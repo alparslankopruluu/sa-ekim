@@ -1,4 +1,6 @@
 import '@/lib/i18n';
+// Restores a saved in-app language choice on cold start (Settings → Language).
+import '@/features/settings/language';
 
 import * as Application from 'expo-application';
 import { useFonts } from 'expo-font';

@@ -1,36 +1,54 @@
-import { act, renderHook } from '@testing-library/react-native';
+import type { PreviewDoc } from '@shared/api';
 
-import type { RenderDoc } from '@shared/api';
+import { renderHook } from '@testing-library/react-native';
 
-import { useAccount, useRecentRenders } from '../account';
+import { findPreview, useAccount, useRecentPreviews } from '../account';
 
-const render = (id: string, status: RenderDoc['status']) => ({ id, status }) as RenderDoc;
+function doc(id: string, status: PreviewDoc['status']): PreviewDoc {
+  return {
+    id,
+    status,
+    goal: 'hairline',
+    styleId: 'hairline_soft',
+    density: 'natural',
+    quality: 'standard',
+    progress: status === 'succeeded' ? 1 : 0,
+    reservedCredits: 1,
+    chargedCredits: status === 'succeeded' ? 1 : 0,
+    photoPath: `uploads/u/${id}.jpg`,
+    resultPath: status === 'succeeded' ? `results/u/${id}.jpg` : null,
+    watermarked: false,
+    onboarding: false,
+    errorCode: null,
+    createdAt: 1,
+    updatedAt: 1,
+    expiresAt: 2,
+  };
+}
 
-describe('useRecentRenders', () => {
-  beforeEach(async () => {
-    await act(() => useAccount.getState().setRenders([]));
+beforeEach(() => useAccount.getState().reset());
+
+describe('account store', () => {
+  it('marks previews ready and finds them by id', () => {
+    useAccount.getState().setPreviews([doc('a', 'succeeded'), doc('b', 'processing')]);
+    expect(useAccount.getState().previewsState).toBe('ready');
+    expect(findPreview('b')?.status).toBe('processing');
+    expect(findPreview(undefined)).toBeUndefined();
   });
 
-  it('renders without an update loop when renders exist', async () => {
-    await act(() => useAccount.getState().setRenders([render('a', 'succeeded'), render('b', 'failed')]));
-    const { result } = await renderHook(() => useRecentRenders());
-    expect(result.current.map((r) => r.id)).toEqual(['a']);
-  });
-
-  it('keeps the same array while the matching renders are unchanged', async () => {
-    const renders = [render('a', 'succeeded')];
-    await act(() => useAccount.getState().setRenders(renders));
-    const { result, rerender } = await renderHook(() => useRecentRenders());
+  it('lists only succeeded previews, capped, with a stable reference', async () => {
+    useAccount.getState().setPreviews([doc('a', 'succeeded'), doc('b', 'failed'), doc('c', 'succeeded')]);
+    const { result, rerender } = await renderHook(() => useRecentPreviews(1));
     const first = result.current;
-    await act(() => useAccount.getState().setBackendState('ready'));
+    expect(first.map((p: PreviewDoc) => p.id)).toEqual(['a']);
     await rerender({});
     expect(result.current).toBe(first);
   });
 
-  it('caps the list at six succeeded renders', async () => {
-    const many = Array.from({ length: 8 }, (_, i) => render(`r${i}`, 'succeeded'));
-    await act(() => useAccount.getState().setRenders(many));
-    const { result } = await renderHook(() => useRecentRenders());
-    expect(result.current).toHaveLength(6);
+  it('resets the wallet and previews', () => {
+    useAccount.getState().setWallet({ balance: 9, freeHighTokens: 1, previewUsed: true, updatedAt: 1 });
+    useAccount.getState().reset();
+    expect(useAccount.getState().wallet.balance).toBe(0);
+    expect(useAccount.getState().walletLoaded).toBe(false);
   });
 });

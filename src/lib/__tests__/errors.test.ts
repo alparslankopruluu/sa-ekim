@@ -1,15 +1,11 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-
 import { ERROR_CODES } from '@shared/api';
+
+import en from '@/translations/en/errors.json';
+import tr from '@/translations/tr/errors.json';
 
 import { errorCodeOf, errorMessageKey, isRetryableError } from '../errors';
 
-const root = join(__dirname, '..', '..', 'translations');
-
-function load(locale: string): Record<string, string> {
-  return JSON.parse(readFileSync(join(root, locale, 'errors.json'), 'utf8')) as Record<string, string>;
-}
+const LOCALES: Record<string, Record<string, string>> = { en, tr };
 
 describe('errorCodeOf', () => {
   it('passes valid codes through', () => {
@@ -47,7 +43,7 @@ describe('isRetryableError', () => {
 
 describe('errors translations', () => {
   it.each(['en', 'tr'])('%s has a non-empty message for every ErrorCode and nothing else', (locale) => {
-    const messages = load(locale);
+    const messages = LOCALES[locale] ?? {};
     expect(Object.keys(messages).sort()).toEqual([...ERROR_CODES].sort());
     for (const code of ERROR_CODES) expect((messages[code] ?? '').trim().length).toBeGreaterThan(0);
   });

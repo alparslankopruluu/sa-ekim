@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "night": "Hello, night owl"
+  },
+  "today": {
+    "subtitleUnset": "Your journey starts with one date.",
+    "subtitleUpcoming": "Operation on {{date}}",
+    "editDate": "Edit your date and journey details",
+    "bandTitle": "Your week on the typical timeline"
+  },
+  "hero": {
+    "day": "Day",
+    "dayWeek": "Day {{day}} · Week {{week}}",
+    "monthOf": "Month {{month}} of about {{total}}",
+    "complete": "Beyond the typical {{months}}-month window",
+    "untilOperation_one": "{{count}} day until your operation",
+    "untilOperation_other": "{{count}} days until your operation",
+    "daysToGo_one": "day to go",
+    "daysToGo_other": "days to go",
+    "session": "Session",
+    "ofTotal": "of {{total}}",
+    "prpSession": "Session {{current}} of {{total}}",
+    "prpDone": "All {{total}} sessions logged"
+  },
+  "phase": {
+    "rightNow": "Right now",
+    "expected": "Expected",
+    "normalLabel": "Typical right now",
+    "clinicNote": "Individual results vary — follow your own clinic's advice.",
+    "nextIn_one": "{{phase}} typically begins in {{count}} day",
+    "nextIn_other": "{{phase}} typically begins in {{count}} days",
+    "last": "This is the last phase of the typical timeline.",
+    "openGuide": "Opens the guide for this phase"
+  },
+  "band": {
+    "a11y": "Chart of the typical range over the growth timeline. You are in the phase: {{phase}}. Individual results vary.",
+    "a11yNone": "Chart of the typical range over the growth timeline. Individual results vary.",
+    "a11yLocked": "Chart of the typical range, available with Pro.",
+    "lockChip": "See where you are · Pro",
+    "lockedHint": "Opens the Pro plans",
+    "start": "Operation",
+    "end": "Maturity",
+    "disclaimer": "Typical range — individual results vary",
+    "seeTimeline": "Timeline"
+  },
+  "care": {
+    "items": {
+      "wash": "Gentle wash, the way your clinic showed you",
+      "sleep": "Sleep with your head raised",
+      "hands": "Hands off the grafts — no scratching",
+      "sun": "Keep the area out of direct sun"
+    }
+  },
+  "task": {
+    "eyebrow": "Next step",
+    "photoCta": "Take photo",
+    "baseline": {
+      "title": "Take a “before” photo",
+      "body": "A photo before the operation makes every later comparison clearer."
+    },
+    "care": {
+      "title": "Today's care checklist",
+      "doneTitle": "Today's care is ticked off",
+      "body": "Many clinics advise these in the first two weeks. Your own clinic's instructions come first.",
+      "progress": "{{done}} of {{total}} done"
+    },
+    "photo": {
+      "firstTitle": "Take your first progress photo",
+      "weeklyTitle": "This week's photo",
+      "monthlyTitle": "This month's photo",
+      "weeklyBody": "Weekly for the first three months — same angle, same light.",
+      "monthlyBody": "Monthly from month four — same angle, same light."
+    },
+    "shed": {
+      "title": "Log today's shedding",
+      "body": "Shedding in weeks 2–8 is commonly seen. A quick count helps you see the pattern over time.",
+      "cta": "Log shedding"
+    },
+    "prp": {
+      "title": "Session {{current}} of {{total}} is planned",
+      "bodyToday": "Today is the planned day. A photo before the session keeps your series comparable.",
+      "bodyLate": "Planned for {{date}}. Mark it done once it has happened.",
+      "markDone": "Mark done"
+    },
+    "caughtUp": {
+      "title": "All caught up",
+      "body": "Nothing needs doing today.",
+      "nextPhoto_one": "Next photo in {{count}} day.",
+      "nextPhoto_other": "Next photo in {{count}} days.",
+      "nextSession_one": "Next session in {{count}} day.",
+      "nextSession_other": "Next session in {{count}} days."
+    }
+  },
+  "setDate": {
+    "title": "Set your operation date",
+    "body": "Kök uses the date to show your day, week and phase, and to plan photo reminders.",
+    "prpTitle": "Set your first session date",
+    "prpBody": "Kök plans your sessions from it and reminds you the day before each one.",
+    "cta": "Set the date",
+    "privacy": "Stays on your phone."
+  },
+  "pre": {
+    "title": "Before your operation",
+    "body": "Many people find these helpful in the days before. Your clinic's instructions come first.",
+    "tip1": "Take “before” photos from the front, top and sides in good light.",
+    "tip2": "Ask your clinic for their written aftercare instructions.",
+    "tip3": "Plan a few quiet days after the operation.",
+    "tip4": "Have a travel pillow ready for sleeping with your head raised.",
+    "clinicNote": "Questions about medicines or your health? Ask your clinic or a doctor."
+  },
+  "previewCard": {
+    "title": "Preview a style",
+    "body": "An AI preview to explore ideas — not a prediction of your result."
+  },
+  "shedPeek": {
+    "title": "Recent shedding",
+    "hint": "Opens the shed log",
+    "note": "Shedding in weeks 2–8 is commonly seen."
+  },
+  "tabs": {
+    "timeline": "Timeline",
+    "photos": "Photos",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "The typical timeline",
+    "phasesTitle": "Phases"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Days {{from}}–{{to}}",
+    "weeks": "Weeks {{from}}–{{to}}",
+    "current": "Current phase",
+    "past": "Behind you",
+    "upcoming": "Ahead",
+    "youAreHere": "You are here"
+  },
+  "maturation": {
+    "title": "When is the result judged?",
+    "note": "Hair typically keeps maturing for about {{months}} months after the operation.",
+    "evaluate12": "Clinics typically evaluate the result at around 12 months.",
+    "evaluate18": "Clinics typically look at the result around 12 months, and the crown or parting can keep maturing up to 18 months.",
+    "clinicNote": "Individual results vary — your clinic sets your own check-ups."
+  },
+  "photos": {
+    "add": "Add",
+    "count_one": "{{count}} photo",
+    "count_other": "{{count}} photos",
+    "freeCounter_one": "{{count}} of {{limit}} free photos",
+    "freeCounter_other": "{{count}} of {{limit}} free photos",
+    "limitReached": "{{limit}} free photos used — Pro keeps unlimited photos",
+    "allAngles": "All",
+    "before": "Before the operation",
+    "week": "Week {{week}} · {{date}}",
+    "all": "Photos",
+    "compare": "Compare",
+    "compareHint": "Pick two photos to compare them.",
+    "selectHint": "Select two photos.",
+    "selected_one": "{{count}} of {{max}} selected",
+    "selected_other": "{{count}} of {{max}} selected",
+    "compareCta": "Compare",
+    "groupCount_one": "{{count}} photo",
+    "groupCount_other": "{{count}} photos",
+    "thumbLabel": "{{angle}} photo, {{group}}",
+    "missing": "File missing",
+    "emptyTitle": "No photos yet",
+    "emptyBody": "Take one photo per angle. Next time a faint ghost of it helps you line up the same view.",
+    "emptyCta": "Take the first photo",
+    "emptyFilter": "No photos from this angle yet."
+  },
+  "angles": {
+    "front": "Front",
+    "left": "Left",
+    "right": "Right",
+    "top": "Top",
+    "crown": "Crown"
+  },
+  "plan": {
+    "intro": "Photo checkpoints at the months clinics commonly look at. Same angle, same light.",
+    "checkpoint": "Month {{month}}",
+    "status": {
+      "done": "Photo taken",
+      "due": "Due now",
+      "upcoming": "Upcoming",
+      "missed": "No photo"
+    },
+    "takePhoto": "Take photo",
+    "note": "A checkpoint counts with any photo from one week before to two weeks after it."
+  },
+  "prp": {
+    "timelineTitle": "Your PRP / mesotherapy course",
+    "timelineBody": "Courses are commonly planned as a few sessions a few weeks apart, then maintenance. Your clinic sets your own plan.",
+    "openPlan": "Open the plan",
+    "emptyTitle": "Plan your sessions",
+    "emptyBody": "Start with a common plan: {{sessions}} sessions, {{weeks}} weeks apart. You can change every date.",
+    "createPlan": "Create plan",
+    "intro": "Tick a session once it has happened. A photo before each one keeps your series comparable.",
+    "session": "Session {{number}}",
+    "done": "Done",
+    "due": "Due",
+    "planned": "Planned",
+    "markDoneLabel": "Session {{number}} on {{date}} done",
+    "changeDate": "Change date",
+    "photoBefore": "Photo before",
+    "remove": "Remove",
+    "removeTitle": "Remove this session?",
+    "removeBody": "Its reminder is removed too.",
+    "addSession": "Add a session",
+    "maintenanceTitle": "Maintenance",
+    "maintenanceBody": "Many clinics suggest a maintenance session about {{months}} months later — around {{date}}.",
+    "clinicNote": "Follow your own clinic's plan."
+  },
+  "setup": {
+    "title": "Your journey",
+    "kindTitle": "What are you tracking?",
+    "kind": {
+      "transplant": {
+        "title": "Hair transplant",
+        "body": "Hairline, crown, parting, eyebrows or beard"
+      },
+      "prp": {
+        "title": "PRP / mesotherapy course",
+        "body": "A series of sessions a few weeks apart"
+      }
+    },
+    "goalTitle": "Which area?",
+    "goals": {
+      "hairline": "Hairline",
+      "crown": "Crown",
+      "part": "Parting",
+      "brows": "Eyebrows",
+      "beard": "Beard"
+    },
+    "dateTitleTransplant": "Operation date",
+    "dateTitlePrp": "First session date",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "relToday": "That's today — day 0",
+    "relPast": "Day {{day}} · week {{week}}",
+    "relFuture_one": "In {{count}} day",
+    "relFuture_other": "In {{count}} days",
+    "clinicTitle": "Clinic (optional)",
+    "clinicPlaceholder": "Clinic name",
+    "clinicHint": "Only on this phone. Never uploaded.",
+    "clinicTooLong": "Please keep it under {{max}} characters.",
+    "clinicBlocked": "Please use a different name.",
+    "save": "Save",
+    "saved": "Saved",
+    "relabelTitle": "Change the date?",
+    "relabelBody": "Every photo's day and week label will be recalculated from the new date.",
+    "relabelConfirm": "Change date"
+  }
+}

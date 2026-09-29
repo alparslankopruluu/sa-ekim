@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
-  addMonthsUtc,
+  addWeeks,
+  planGrantCredits,
   pickTransferredEntitlement,
   advanceAllowance,
   decideRcProcessing,
@@ -13,7 +14,8 @@ import {
   type RcAction,
   shouldMirrorEvent,
 } from '../src/lib/revenuecat.js';
-import { PLAN_ALLOWANCE, TRIAL_ALLOWANCE_CREDITS } from '../src/shared/pricing.js';
+import { WEEK_MS } from '../src/config.js';
+import { CREDIT_PACKS, PLAN_ALLOWANCE } from '../src/shared/pricing.js';
 
 const NOW = Date.UTC(2026, 8, 26, 12, 0, 0);
 const DAY = 24 * 60 * 60 * 1000;
@@ -26,7 +28,7 @@ function event(patch: Record<string, unknown>) {
       type: 'INITIAL_PURCHASE',
       app_user_id: 'firebaseUid123',
       original_app_user_id: 'firebaseUid123',
-      product_id: 'app.belto.ios.pro.weekly',
+      product_id: 'com.techtactoe.kok.pro.weekly',
       entitlement_ids: ['pro'],
       period_type: 'NORMAL',
       purchased_at_ms: NOW - 1000,
@@ -68,51 +70,62 @@ test('weekly purchase grants the weekly allowance and mirrors pro', () => {
   assert.equal(a.entitlement?.allowance, null);
 });
 
-test('annual purchase/renewal grants now and schedules the monthly allowance', () => {
+test('monthly purchase grants the monthly allowance', () => {
+  const a = applied(planRcEvent(event({ product_id: 'com.techtactoe.kok.pro.monthly', expiration_at_ms: NOW + 30 * DAY }), NOW));
+  assert.equal(a.grant?.credits, PLAN_ALLOWANCE.monthly.credits);
+  assert.equal(a.entitlement?.plan, 'monthly');
+  assert.equal(a.entitlement?.allowance, null);
+});
+
+test('annual purchase/renewal grants the initial amount and schedules the weekly top-up', () => {
   for (const type of ['INITIAL_PURCHASE', 'RENEWAL']) {
     const a = applied(
-      planRcEvent(event({ type, product_id: 'app.belto.ios.pro.annual', expiration_at_ms: NOW + 365 * DAY }), NOW),
+      planRcEvent(event({ type, product_id: 'com.techtactoe.kok.pro.annual', expiration_at_ms: NOW + 365 * DAY }), NOW),
     );
-    assert.equal(a.grant?.credits, PLAN_ALLOWANCE.annual.credits);
+    assert.equal(a.grant?.credits, PLAN_ALLOWANCE.annual.initial);
     assert.equal(a.entitlement?.plan, 'annual');
-    assert.deepEqual(a.entitlement?.allowance, {
-      anchorAt: NOW - 1000,
-      month: 1,
-      nextAt: addMonthsUtc(NOW - 1000, 1),
-    });
+    assert.deepEqual(a.entitlement?.allowance, { anchorAt: NOW - 1000, week: 1, nextAt: NOW - 1000 + WEEK_MS });
   }
+});
+
+test('the gift annual product maps to the annual plan and redeems the gift', () => {
+  const a = applied(planRcEvent(event({ product_id: 'com.techtactoe.kok.pro.annual.gift', expiration_at_ms: NOW + 365 * DAY }), NOW));
+  assert.equal(a.entitlement?.plan, 'annual');
+  assert.equal(a.grant?.credits, PLAN_ALLOWANCE.annual.initial);
+  assert.equal(a.giftOfferingRedeemed, true);
+});
+
+test('plan grants come from PLAN_ALLOWANCE only', () => {
+  assert.equal(planGrantCredits('weekly'), PLAN_ALLOWANCE.weekly.credits);
+  assert.equal(planGrantCredits('monthly'), PLAN_ALLOWANCE.monthly.credits);
+  assert.equal(planGrantCredits('annual'), PLAN_ALLOWANCE.annual.initial);
+});
+
+test('a TRIAL period type gets no special handling (there is no trial): the normal plan grant applies', () => {
+  const a = applied(planRcEvent(event({ period_type: 'TRIAL' }), NOW));
+  assert.equal(a.grant?.credits, PLAN_ALLOWANCE.weekly.credits);
 });
 
 test('product change mirrors the new plan without granting (the following RENEWAL grants)', () => {
   const a = applied(
-    planRcEvent(event({ type: 'PRODUCT_CHANGE', product_id: 'app.belto.ios.pro.weekly', new_product_id: 'app.belto.ios.pro.annual' }), NOW),
+    planRcEvent(event({ type: 'PRODUCT_CHANGE', product_id: 'com.techtactoe.kok.pro.weekly', new_product_id: 'com.techtactoe.kok.pro.annual' }), NOW),
   );
   assert.equal(a.entitlement?.plan, 'annual');
   assert.equal(a.grant, null);
 });
 
-test('a free-trial start grants only the trial allowance; the first paid renewal grants the plan allowance', () => {
-  const trial = applied(
-    planRcEvent(event({ type: 'INITIAL_PURCHASE', period_type: 'TRIAL', product_id: 'app.belto.ios.pro.annual', expiration_at_ms: NOW + 3 * DAY }), NOW),
-  );
-  assert.equal(trial.grant?.credits, TRIAL_ALLOWANCE_CREDITS);
-  assert.equal(trial.entitlement?.pro, true);
-  const paid = applied(
-    planRcEvent(event({ id: 'evt-0002', type: 'RENEWAL', period_type: 'NORMAL', product_id: 'app.belto.ios.pro.annual', expiration_at_ms: NOW + 365 * DAY }), NOW),
-  );
-  assert.equal(paid.grant?.credits, PLAN_ALLOWANCE.annual.credits);
-});
-
 test('credit packs grant their credits and leave the entitlement alone', () => {
-  for (const [product, credits] of [
-    ['app.belto.ios.credits_100', 100],
-    ['credits_300', 300],
-    ['app.belto.ios.credits_800', 800],
-  ] as const) {
-    const a = applied(planRcEvent(event({ type: 'NON_RENEWING_PURCHASE', product_id: product, entitlement_ids: [] }), NOW));
-    assert.deepEqual(a.grant, { credits, reason: 'credit_pack', refId: 'rc:evt-0001' });
-    assert.equal(a.entitlement, null);
+  for (const pack of CREDIT_PACKS) {
+    for (const product of [`com.techtactoe.kok.${pack.id}`, pack.id]) {
+      const a = applied(planRcEvent(event({ type: 'NON_RENEWING_PURCHASE', product_id: product, entitlement_ids: [] }), NOW));
+      assert.deepEqual(a.grant, { credits: pack.credits, reason: 'credit_pack', refId: 'rc:evt-0001' });
+      assert.equal(a.entitlement, null);
+    }
   }
+  assert.deepEqual(planRcEvent(event({ type: 'NON_RENEWING_PURCHASE', product_id: 'credits_100', entitlement_ids: [] }), NOW), {
+    kind: 'ignore',
+    reason: 'unknown_product',
+  });
 });
 
 test('expiration turns pro off; cancellation keeps pro until the period ends', () => {
@@ -135,7 +148,7 @@ test('ignores test events, anonymous users, unknown products and unsupported typ
     planRcEvent(event({ app_user_id: '$RCAnonymousID:abc', original_app_user_id: '$RCAnonymousID:abc', aliases: [] }), NOW),
     { kind: 'ignore', reason: 'unknown_user' },
   );
-  assert.deepEqual(planRcEvent(event({ product_id: 'app.belto.ios.sticker_pack' }), NOW), {
+  assert.deepEqual(planRcEvent(event({ product_id: 'com.techtactoe.kok.sticker_pack' }), NOW), {
     kind: 'ignore',
     reason: 'unknown_product',
   });
@@ -157,8 +170,7 @@ test('an anonymous purchaser resolves to the Firebase uid alias', () => {
 });
 
 test('wheel-prize offering purchases are flagged for gift redemption', () => {
-  assert.equal(applied(planRcEvent(event({ product_id: 'app.belto.ios.pro.annual.gift' }), NOW)).giftOfferingRedeemed, true);
-  assert.equal(applied(planRcEvent(event({ product_id: 'app.belto.ios.pro.annual.trial7' }), NOW)).giftOfferingRedeemed, true);
+  assert.equal(applied(planRcEvent(event({ product_id: 'com.techtactoe.kok.pro.annual.gift' }), NOW)).giftOfferingRedeemed, true);
   assert.equal(applied(planRcEvent(event({}), NOW)).giftOfferingRedeemed, false);
 });
 
@@ -179,33 +191,25 @@ test('an older event never overwrites a newer entitlement mirror', () => {
   assert.equal(shouldMirrorEvent(NOW + 1, NOW), false);
 });
 
-test('calendar months clamp to the end of shorter months without drifting', () => {
-  const jan31 = Date.UTC(2026, 0, 31, 9, 30);
-  assert.equal(new Date(addMonthsUtc(jan31, 1)).toISOString(), '2026-02-28T09:30:00.000Z');
-  assert.equal(new Date(addMonthsUtc(jan31, 2)).toISOString(), '2026-03-31T09:30:00.000Z');
-  assert.equal(new Date(addMonthsUtc(jan31, 12)).toISOString(), '2027-01-31T09:30:00.000Z');
-  assert.equal(new Date(addMonthsUtc(Date.UTC(2027, 10, 15), 3)).toISOString(), '2028-02-15T00:00:00.000Z');
-});
-
-test('monthly allowance is due inside the paid period and skips the renewal month', () => {
+test('weekly top-up for annual is due inside the paid period and skips the renewal week', () => {
   const anchor = Date.UTC(2026, 0, 31);
   const entitlement = {
     pro: true,
     plan: 'annual',
-    expiresAt: addMonthsUtc(anchor, 12),
+    expiresAt: anchor + 365 * DAY,
     allowanceAnchorAt: anchor,
-    allowanceMonth: 1,
-    nextAllowanceAt: addMonthsUtc(anchor, 1),
+    allowanceWeek: 1,
+    nextAllowanceAt: addWeeks(anchor, 1),
   };
-  assert.equal(isAllowanceDue(entitlement, addMonthsUtc(anchor, 1) - 1), false);
-  assert.equal(isAllowanceDue(entitlement, addMonthsUtc(anchor, 1) + 1), true);
-  const next = advanceAllowance(entitlement);
-  assert.deepEqual(next, { allowanceMonth: 2, nextAllowanceAt: addMonthsUtc(anchor, 2) });
-  // Month 12 coincides with the yearly renewal, which grants instead.
-  const month12 = { ...entitlement, allowanceMonth: 12, nextAllowanceAt: addMonthsUtc(anchor, 12) };
-  assert.equal(isAllowanceDue(month12, addMonthsUtc(anchor, 12) - 1000), false);
-  assert.equal(isAllowanceDue({ ...entitlement, pro: false }, NOW), false);
-  assert.equal(isAllowanceDue({ ...entitlement, plan: 'weekly' }, NOW), false);
+  assert.equal(isAllowanceDue(entitlement, addWeeks(anchor, 1) - 1), false);
+  assert.equal(isAllowanceDue(entitlement, addWeeks(anchor, 1) + 1), true);
+  assert.deepEqual(advanceAllowance(entitlement), { allowanceWeek: 2, nextAllowanceAt: addWeeks(anchor, 2) });
+  // A top-up landing within 12 h of the yearly renewal is skipped (the renewal grants instead).
+  const last = { ...entitlement, allowanceWeek: 52, nextAllowanceAt: anchor + 365 * DAY - 60_000 };
+  assert.equal(isAllowanceDue(last, anchor + 365 * DAY - 30_000), false);
+  assert.equal(isAllowanceDue({ ...entitlement, pro: false }, addWeeks(anchor, 2)), false);
+  assert.equal(isAllowanceDue({ ...entitlement, plan: 'monthly' }, addWeeks(anchor, 2)), false);
+  assert.equal(isAllowanceDue({ ...entitlement, expiresAt: addWeeks(anchor, 1) }, addWeeks(anchor, 1) + 1), false);
 });
 
 test('restore on a new account: TRANSFER moves the entitlement to the new uid', () => {
@@ -228,14 +232,14 @@ test('restore on a new account: TRANSFER moves the entitlement to the new uid', 
 
 test('the active, longest-running source mirror is the one that moves', () => {
   const weekly = { pro: true, plan: 'weekly', productId: 'w', expiresAt: NOW + DAY, lastEventAt: 5, updatedAt: 6 };
-  const annual = { pro: true, plan: 'annual', productId: 'a', expiresAt: NOW + 300 * DAY, allowanceMonth: 3 };
+  const annual = { pro: true, plan: 'annual', productId: 'a', expiresAt: NOW + 300 * DAY, allowanceWeek: 3 };
   const expired = { pro: true, plan: 'annual', productId: 'x', expiresAt: NOW - 1 };
   assert.deepEqual(pickTransferredEntitlement([weekly, annual, expired, undefined], NOW), {
     pro: true,
     plan: 'annual',
     productId: 'a',
     expiresAt: NOW + 300 * DAY,
-    allowanceMonth: 3,
+    allowanceWeek: 3,
   });
   assert.equal(pickTransferredEntitlement([expired, { pro: false }], NOW), null);
   // Bookkeeping fields never move.

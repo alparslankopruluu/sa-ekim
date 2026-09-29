@@ -34,5 +34,6 @@
     "failed": "Rapor oluşturulamadı. Tekrar dene.",
     "empty": "Önce bir fotoğraf ya da dökülme kaydı ekle.",
     "unsupported": "Raporlar tarayıcıda oluşturulamaz."
-  }
+  },
+  "unavailable": "Bu önizleme bildirilemiyor."
 }

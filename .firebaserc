@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "kok-dev",
+    "dev": "kok-dev",
+    "prod": "kok-prod"
+  }
+}

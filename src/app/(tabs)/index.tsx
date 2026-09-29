@@ -122,7 +122,13 @@ export default function TodayScreen() {
 
               {kind === 'transplant' && clock.status === 'active' ? (
                 <Reveal index={4}>
-                  <BandCard view={view} goal={view.goal} title={t('journey.today.bandTitle')} height={120} linkToTimeline />
+                  <BandCard
+                    view={view}
+                    goal={view.goal}
+                    title={t('journey.today.bandTitle')}
+                    height={120}
+                    linkToTimeline
+                  />
                 </Reveal>
               ) : null}
 

@@ -56,12 +56,12 @@ function parseEntry(value: string | undefined): PreviewEntry {
   return ENTRIES.find((entry) => entry === value) ?? 'deeplink';
 }
 
-interface Params {
+type Params = {
   entry?: string;
   goal?: string;
   keep?: string;
   quality?: string;
-}
+};
 
 /** Prepares the in-memory draft once, before the first paint. */
 function bootstrapDraft(params: Params, sessionGoal: Goal | null): void {

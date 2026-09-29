@@ -1,6 +1,13 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
-import { type NativeScrollEvent, type NativeSyntheticEvent, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import {
+  type NativeScrollEvent,
+  type NativeSyntheticEvent,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  View,
+} from 'react-native';
 
 import type { IsoDate } from '@shared/timeline';
 
@@ -161,7 +168,11 @@ export function DateWheelPicker({
   const order = useMemo(() => dateFieldOrder(locale), [locale]);
 
   const dayItems = useMemo<WheelItem[]>(
-    () => Array.from({ length: daysInMonth(parts.year, parts.month) }, (_, i) => ({ key: String(i + 1), label: String(i + 1) })),
+    () =>
+      Array.from({ length: daysInMonth(parts.year, parts.month) }, (_, i) => ({
+        key: String(i + 1),
+        label: String(i + 1),
+      })),
     [parts.month, parts.year],
   );
   const monthItems = useMemo<WheelItem[]>(() => months.map((label, i) => ({ key: String(i + 1), label })), [months]);
@@ -174,7 +185,10 @@ export function DateWheelPicker({
     [maxDate, minDate, onChange],
   );
 
-  const columns: Record<DateField, { items: WheelItem[]; index: number; onIndexChange: (i: number) => void; label: string; flex: number }> = {
+  const columns: Record<
+    DateField,
+    { items: WheelItem[]; index: number; onIndexChange: (i: number) => void; label: string; flex: number }
+  > = {
     day: {
       items: dayItems,
       index: Math.min(dayItems.length - 1, parts.day - 1),

@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "Günaydın",
+    "afternoon": "İyi günler",
+    "evening": "İyi akşamlar",
+    "night": "Merhaba, gece kuşu"
+  },
+  "today": {
+    "subtitleUnset": "Yolculuğun tek bir tarihle başlıyor.",
+    "subtitleUpcoming": "Operasyon tarihi: {{date}}",
+    "editDate": "Tarihi ve yolculuk bilgilerini düzenle",
+    "bandTitle": "Tipik zaman çizelgesinde bu haftan"
+  },
+  "hero": {
+    "day": "Gün",
+    "dayWeek": "{{day}}. gün · {{week}}. hafta",
+    "monthOf": "Yaklaşık {{total}} aydan {{month}}. ay",
+    "complete": "Tipik {{months}} aylık sürenin ötesinde",
+    "untilOperation_one": "Operasyonuna {{count}} gün var",
+    "untilOperation_other": "Operasyonuna {{count}} gün var",
+    "daysToGo_one": "gün kaldı",
+    "daysToGo_other": "gün kaldı",
+    "session": "Seans",
+    "ofTotal": "/ {{total}}",
+    "prpSession": "{{total}} seanstan {{current}}. seans",
+    "prpDone": "{{total}} seansın tamamı kaydedildi"
+  },
+  "phase": {
+    "rightNow": "Şu an",
+    "expected": "Beklenen",
+    "normalLabel": "Şu an tipik olan",
+    "clinicNote": "Sonuçlar kişiden kişiye değişir — kendi kliniğinin önerilerine uy.",
+    "nextIn_one": "{{phase}} tipik olarak {{count}} gün sonra başlar",
+    "nextIn_other": "{{phase}} tipik olarak {{count}} gün sonra başlar",
+    "last": "Bu, tipik zaman çizelgesinin son evresi.",
+    "openGuide": "Bu evrenin rehberini açar"
+  },
+  "band": {
+    "a11y": "Büyüme sürecindeki tipik aralığı gösteren grafik. Şu anki evren: {{phase}}. Sonuçlar kişiden kişiye değişir.",
+    "a11yNone": "Büyüme sürecindeki tipik aralığı gösteren grafik. Sonuçlar kişiden kişiye değişir.",
+    "a11yLocked": "Tipik aralık grafiği, Pro ile açılır.",
+    "lockChip": "Nerede olduğunu gör · Pro",
+    "lockedHint": "Pro planlarını açar",
+    "start": "Operasyon",
+    "end": "Olgunluk",
+    "disclaimer": "Tipik aralık — sonuçlar kişiden kişiye değişir",
+    "seeTimeline": "Zaman çizelgesi"
+  },
+  "care": {
+    "items": {
+      "wash": "Kliniğinin gösterdiği gibi nazikçe yıka",
+      "sleep": "Başın yüksekte uyu",
+      "hands": "Greftlere dokunma, kaşıma",
+      "sun": "Bölgeyi doğrudan güneşten koru"
+    }
+  },
+  "task": {
+    "eyebrow": "Sıradaki adım",
+    "photoCta": "Fotoğraf çek",
+    "baseline": {
+      "title": "Bir “önce” fotoğrafı çek",
+      "body": "Operasyondan önceki bir fotoğraf, sonraki her karşılaştırmayı daha net yapar."
+    },
+    "care": {
+      "title": "Bugünün bakım listesi",
+      "doneTitle": "Bugünün bakımı tamam",
+      "body": "Birçok klinik ilk iki haftada bunları önerir. Önce kendi kliniğinin talimatları gelir.",
+      "progress": "{{total}} maddeden {{done}} tamam"
+    },
+    "photo": {
+      "firstTitle": "İlk gelişim fotoğrafını çek",
+      "weeklyTitle": "Bu haftanın fotoğrafı",
+      "monthlyTitle": "Bu ayın fotoğrafı",
+      "weeklyBody": "İlk üç ay her hafta — aynı açı, aynı ışık.",
+      "monthlyBody": "Dördüncü aydan itibaren her ay — aynı açı, aynı ışık."
+    },
+    "shed": {
+      "title": "Bugünkü dökülmeyi kaydet",
+      "body": "2.–8. haftalarda dökülme sık görülür. Kısa bir sayım, zaman içindeki düzeni görmene yardımcı olur.",
+      "cta": "Dökülmeyi kaydet"
+    },
+    "prp": {
+      "title": "{{total}} seanstan {{current}}. seans planlandı",
+      "bodyToday": "Bugün planlanan gün. Seanstan önce bir fotoğraf, serini karşılaştırılabilir tutar.",
+      "bodyLate": "{{date}} için planlanmıştı. Gerçekleştiğinde tamamlandı olarak işaretle.",
+      "markDone": "Tamamlandı"
+    },
+    "caughtUp": {
+      "title": "Her şey güncel",
+      "body": "Bugün yapman gereken bir şey yok.",
+      "nextPhoto_one": "Sonraki fotoğraf {{count}} gün sonra.",
+      "nextPhoto_other": "Sonraki fotoğraf {{count}} gün sonra.",
+      "nextSession_one": "Sonraki seans {{count}} gün sonra.",
+      "nextSession_other": "Sonraki seans {{count}} gün sonra."
+    }
+  },
+  "setDate": {
+    "title": "Operasyon tarihini gir",
+    "body": "Kök bu tarihle gününü, haftanı ve evreni gösterir, fotoğraf hatırlatmalarını planlar.",
+    "prpTitle": "İlk seans tarihini gir",
+    "prpBody": "Kök seanslarını bu tarihten planlar ve her seanstan bir gün önce hatırlatır.",
+    "cta": "Tarihi gir",
+    "privacy": "Telefonunda kalır."
+  },
+  "pre": {
+    "title": "Operasyondan önce",
+    "body": "Birçok kişi son günlerde bunları faydalı buluyor. Önce kendi kliniğinin talimatları gelir.",
+    "tip1": "İyi ışıkta önden, üstten ve yanlardan “önce” fotoğrafları çek.",
+    "tip2": "Kliniğinden yazılı bakım talimatlarını iste.",
+    "tip3": "Operasyondan sonrası için birkaç sakin gün planla.",
+    "tip4": "Başın yüksekte uyumak için bir boyun yastığı hazırla.",
+    "clinicNote": "İlaçlar ya da sağlığınla ilgili soruların için kliniğine veya bir doktora danış."
+  },
+  "previewCard": {
+    "title": "Bir stili önizle",
+    "body": "Fikir edinmek için yapay zekâ önizlemesi — sonucunun bir tahmini değildir."
+  },
+  "shedPeek": {
+    "title": "Son dökülmeler",
+    "hint": "Dökülme kaydını açar",
+    "note": "2.–8. haftalarda dökülme sık görülür."
+  },
+  "tabs": {
+    "timeline": "Zaman çizelgesi",
+    "photos": "Fotoğraflar",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "Tipik zaman çizelgesi",
+    "phasesTitle": "Evreler"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "{{from}}.–{{to}}. günler",
+    "weeks": "{{from}}.–{{to}}. haftalar",
+    "current": "Şu anki evre",
+    "past": "Geride kaldı",
+    "upcoming": "Önünde",
+    "youAreHere": "Buradasın"
+  },
+  "maturation": {
+    "title": "Sonuç ne zaman değerlendirilir?",
+    "note": "Saçlar operasyondan sonra tipik olarak yaklaşık {{months}} ay boyunca olgunlaşmaya devam eder.",
+    "evaluate12": "Klinikler sonucu tipik olarak 12. ay civarında değerlendirir.",
+    "evaluate18": "Klinikler sonuca tipik olarak 12. ay civarında bakar; tepe ya da ayrım bölgesi 18 aya kadar olgunlaşmaya devam edebilir.",
+    "clinicNote": "Sonuçlar kişiden kişiye değişir — kontrol zamanlarını kendi kliniğin belirler."
+  },
+  "photos": {
+    "add": "Ekle",
+    "count_one": "{{count}} fotoğraf",
+    "count_other": "{{count}} fotoğraf",
+    "freeCounter_one": "{{limit}} ücretsiz fotoğraftan {{count}}",
+    "freeCounter_other": "{{limit}} ücretsiz fotoğraftan {{count}}",
+    "limitReached": "{{limit}} ücretsiz fotoğraf kullanıldı — Pro ile sınırsız",
+    "allAngles": "Tümü",
+    "before": "Operasyondan önce",
+    "week": "{{week}}. hafta · {{date}}",
+    "all": "Fotoğraflar",
+    "compare": "Karşılaştır",
+    "compareHint": "Karşılaştırmak için iki fotoğraf seç.",
+    "selectHint": "İki fotoğraf seç.",
+    "selected_one": "{{max}} fotoğraftan {{count}} seçildi",
+    "selected_other": "{{max}} fotoğraftan {{count}} seçildi",
+    "compareCta": "Karşılaştır",
+    "groupCount_one": "{{count}} fotoğraf",
+    "groupCount_other": "{{count}} fotoğraf",
+    "thumbLabel": "{{angle}} fotoğrafı, {{group}}",
+    "missing": "Dosya bulunamadı",
+    "emptyTitle": "Henüz fotoğraf yok",
+    "emptyBody": "Her açıdan bir fotoğraf çek. Bir dahaki sefere soluk bir hayaleti aynı görüntüyü yakalamana yardım eder.",
+    "emptyCta": "İlk fotoğrafı çek",
+    "emptyFilter": "Bu açıdan henüz fotoğraf yok."
+  },
+  "angles": {
+    "front": "Ön",
+    "left": "Sol",
+    "right": "Sağ",
+    "top": "Üst",
+    "crown": "Tepe"
+  },
+  "plan": {
+    "intro": "Kliniklerin sık baktığı aylarda fotoğraf kontrol noktaları. Aynı açı, aynı ışık.",
+    "checkpoint": "{{month}}. ay",
+    "status": {
+      "done": "Fotoğraf çekildi",
+      "due": "Zamanı geldi",
+      "upcoming": "Yaklaşıyor",
+      "missed": "Fotoğraf yok"
+    },
+    "takePhoto": "Fotoğraf çek",
+    "note": "Kontrol noktası, bir hafta öncesinden iki hafta sonrasına kadar çekilen herhangi bir fotoğrafla tamamlanır."
+  },
+  "prp": {
+    "timelineTitle": "PRP / mezoterapi kürün",
+    "timelineBody": "Kürler genellikle birkaç hafta arayla birkaç seans ve ardından idame olarak planlanır. Kendi planını kliniğin belirler.",
+    "openPlan": "Planı aç",
+    "emptyTitle": "Seanslarını planla",
+    "emptyBody": "Yaygın bir planla başla: {{weeks}} hafta arayla {{sessions}} seans. Her tarihi değiştirebilirsin.",
+    "createPlan": "Plan oluştur",
+    "intro": "Seans gerçekleşince işaretle. Her seanstan önce bir fotoğraf, serini karşılaştırılabilir tutar.",
+    "session": "{{number}}. seans",
+    "done": "Tamam",
+    "due": "Zamanı geldi",
+    "planned": "Planlandı",
+    "markDoneLabel": "{{date}} tarihli {{number}}. seans tamamlandı",
+    "changeDate": "Tarihi değiştir",
+    "photoBefore": "Öncesi fotoğraf",
+    "remove": "Kaldır",
+    "removeTitle": "Bu seans kaldırılsın mı?",
+    "removeBody": "Hatırlatması da kaldırılır.",
+    "addSession": "Seans ekle",
+    "maintenanceTitle": "İdame",
+    "maintenanceBody": "Birçok klinik yaklaşık {{months}} ay sonra bir idame seansı önerir — {{date}} civarı.",
+    "clinicNote": "Kendi kliniğinin planına uy."
+  },
+  "setup": {
+    "title": "Yolculuğun",
+    "kindTitle": "Neyi takip ediyorsun?",
+    "kind": {
+      "transplant": {
+        "title": "Saç ekimi",
+        "body": "Saç çizgisi, tepe, ayrım, kaş veya sakal"
+      },
+      "prp": {
+        "title": "PRP / mezoterapi kürü",
+        "body": "Birkaç hafta arayla bir dizi seans"
+      }
+    },
+    "goalTitle": "Hangi bölge?",
+    "goals": {
+      "hairline": "Saç çizgisi",
+      "crown": "Tepe",
+      "part": "Ayrım",
+      "brows": "Kaş",
+      "beard": "Sakal"
+    },
+    "dateTitleTransplant": "Operasyon tarihi",
+    "dateTitlePrp": "İlk seans tarihi",
+    "day": "Gün",
+    "month": "Ay",
+    "year": "Yıl",
+    "relToday": "Bugün — 0. gün",
+    "relPast": "{{day}}. gün · {{week}}. hafta",
+    "relFuture_one": "{{count}} gün sonra",
+    "relFuture_other": "{{count}} gün sonra",
+    "clinicTitle": "Klinik (isteğe bağlı)",
+    "clinicPlaceholder": "Klinik adı",
+    "clinicHint": "Yalnızca bu telefonda. Asla yüklenmez.",
+    "clinicTooLong": "Lütfen {{max}} karakterden kısa tut.",
+    "clinicBlocked": "Lütfen başka bir ad kullan.",
+    "save": "Kaydet",
+    "saved": "Kaydedildi",
+    "relabelTitle": "Tarih değiştirilsin mi?",
+    "relabelBody": "Tüm fotoğrafların gün ve hafta etiketleri yeni tarihe göre yeniden hesaplanır.",
+    "relabelConfirm": "Tarihi değiştir"
+  }
+}

@@ -1,8 +1,7 @@
 import * as Crypto from 'expo-crypto';
 import { useCallback, useMemo, useState } from 'react';
-import { Alert } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 
 import { ANGLES_BY_GOAL } from '@shared/catalog';
 import { PRP_DEFAULTS } from '@shared/timeline';
@@ -108,7 +107,14 @@ export function PrpPlanner({ view }: { view: JourneyView }) {
         onRemove={removeSession}
       />
       {sessions.length < MAX_SESSIONS ? (
-        <Button label={t('journey.prp.addSession')} icon="add" variant="secondary" size="md" onPress={addSession} testID="prp-add" />
+        <Button
+          label={t('journey.prp.addSession')}
+          icon="add"
+          variant="secondary"
+          size="md"
+          onPress={addSession}
+          testID="prp-add"
+        />
       ) : null}
       {maintenance ? (
         <View style={styles.card}>

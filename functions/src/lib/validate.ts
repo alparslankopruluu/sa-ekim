@@ -40,8 +40,8 @@ function optionalBoolean(value: unknown): boolean {
   return value;
 }
 
-/** `uploads/{uid}/{file}` — exactly three segments, the caller's own uid, a plain image file name. */
-export const UPLOAD_FILE_PATTERN = /^[A-Za-z0-9_.-]{1,120}\.(jpe?g|png|webp|heic)$/i;
+/** `uploads/{uid}/{file}` — exactly three segments, the caller's own uid, a plain image file name (mirrors storage.rules). */
+export const UPLOAD_FILE_PATTERN = /^[A-Za-z0-9_-]{1,100}\.(jpg|jpeg|png|heic)$/;
 
 export function isOwnedUploadPath(path: unknown, uid: string): path is string {
   if (typeof path !== 'string' || path.length > 300) return false;

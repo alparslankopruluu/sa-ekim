@@ -168,7 +168,12 @@ describe('isPhaseId', () => {
 });
 
 describe('lastPhotoDay and groupPhotosByWeek', () => {
-  const photo = (id: string, iso: string, angle: Angle = 'front') => ({ id, uri: `file://${id}.jpg`, takenAt: at(iso).getTime(), angle });
+  const photo = (id: string, iso: string, angle: Angle = 'front') => ({
+    id,
+    uri: `file://${id}.jpg`,
+    takenAt: at(iso).getTime(),
+    angle,
+  });
 
   it('returns the day index of the latest photo', () => {
     expect(lastPhotoDay([], '2026-09-01')).toBeNull();
@@ -248,7 +253,10 @@ describe('PRP helpers', () => {
     const earlier = prpSummary(sessions, '2026-09-20');
     expect(earlier.dueNow).toBe(false);
     expect(earlier.daysToNext).toBe(9);
-    const finished = prpSummary(sessions.map((s) => ({ ...s, done: true })), '2026-11-01');
+    const finished = prpSummary(
+      sessions.map((s) => ({ ...s, done: true })),
+      '2026-11-01',
+    );
     expect(finished).toMatchObject({ allDone: true, current: 3, next: null });
   });
 
@@ -277,12 +285,17 @@ describe('chooseNextTask', () => {
 
   it('suggests a baseline photo before the operation when there is none', () => {
     const clock = journeyClock('2026-10-09', at('2026-09-29'), 'hairline');
-    expect(chooseNextTask({ ...base, clock, hasPhotos: false, lastPhotoDay: null })).toEqual({ kind: 'baseline_photo', angle: 'front' });
+    expect(chooseNextTask({ ...base, clock, hasPhotos: false, lastPhotoDay: null })).toEqual({
+      kind: 'baseline_photo',
+      angle: 'front',
+    });
     expect(chooseNextTask({ ...base, clock, hasPhotos: true })).toEqual({ kind: 'none' });
   });
 
   it('puts the care checklist first in days 0 to 14', () => {
-    expect(chooseNextTask({ ...base, clock: active('2026-09-05'), carePending: true, lastPhotoDay: null })).toEqual({ kind: 'care' });
+    expect(chooseNextTask({ ...base, clock: active('2026-09-05'), carePending: true, lastPhotoDay: null })).toEqual({
+      kind: 'care',
+    });
   });
 
   it('moves to the photo when the care list is done and a photo is due', () => {
@@ -297,14 +310,20 @@ describe('chooseNextTask', () => {
   it('nudges the shed log in days 15 to 56 when no photo is due', () => {
     const clock = active('2026-09-25'); // day 24
     expect(chooseNextTask({ ...base, clock, lastPhotoDay: 22, shedLoggedToday: false })).toEqual({ kind: 'shed' });
-    expect(chooseNextTask({ ...base, clock, lastPhotoDay: 22, shedLoggedToday: true })).toMatchObject({ kind: 'caught_up' });
+    expect(chooseNextTask({ ...base, clock, lastPhotoDay: 22, shedLoggedToday: true })).toMatchObject({
+      kind: 'caught_up',
+    });
   });
 
   it('uses the monthly cadence after day 90 and reports days to the next photo', () => {
     const clock = journeyClock('2026-01-01', at('2026-05-01'), 'hairline'); // day 120
     const task = chooseNextTask({ ...base, clock, lastPhotoDay: 110 });
     expect(task).toEqual({ kind: 'caught_up', nextPhotoInDays: 20 });
-    expect(chooseNextTask({ ...base, clock, lastPhotoDay: 80 })).toMatchObject({ kind: 'photo', cadence: 'monthly', first: false });
+    expect(chooseNextTask({ ...base, clock, lastPhotoDay: 80 })).toMatchObject({
+      kind: 'photo',
+      cadence: 'monthly',
+      first: false,
+    });
   });
 
   it('never recommends a shed log outside the shedding window', () => {
@@ -320,14 +339,23 @@ describe('chooseNextTask', () => {
     const clock = journeyClock('2026-09-29', at('2026-09-29'), 'part');
     const due = chooseNextTask({ ...base, kind: 'prp', goal: 'part', clock, prp: prpSummary(sessions, '2026-09-29') });
     expect(due).toEqual({ kind: 'prp_due', sessionId: 'a', daysOverdue: 0, angle: 'top' });
-    const later = chooseNextTask({ ...base, kind: 'prp', goal: 'part', clock, prp: prpSummary(sessions, '2026-09-10') });
+    const later = chooseNextTask({
+      ...base,
+      kind: 'prp',
+      goal: 'part',
+      clock,
+      prp: prpSummary(sessions, '2026-09-10'),
+    });
     expect(later).toMatchObject({ kind: 'caught_up', nextSessionInDays: 19 });
     const done = chooseNextTask({
       ...base,
       kind: 'prp',
       goal: 'part',
       clock,
-      prp: prpSummary(sessions.map((s) => ({ ...s, done: true })), '2026-09-29'),
+      prp: prpSummary(
+        sessions.map((s) => ({ ...s, done: true })),
+        '2026-09-29',
+      ),
     });
     expect(done).toMatchObject({ kind: 'caught_up' });
   });

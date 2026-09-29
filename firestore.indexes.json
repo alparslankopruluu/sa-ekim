@@ -1,7 +1,7 @@
 {
   "indexes": [
     {
-      "collectionGroup": "renders",
+      "collectionGroup": "previews",
       "queryScope": "COLLECTION_GROUP",
       "fields": [
         { "fieldPath": "status", "order": "ASCENDING" },
@@ -17,23 +17,36 @@
       ]
     },
     {
-      "collectionGroup": "requests",
+      "collectionGroup": "cohortMembers",
       "queryScope": "COLLECTION",
       "fields": [
-        { "fieldPath": "kind", "order": "ASCENDING" },
-        { "fieldPath": "createdAt", "order": "ASCENDING" }
+        { "fieldPath": "goal", "order": "ASCENDING" },
+        { "fieldPath": "procedureDate", "order": "ASCENDING" }
       ]
     }
   ],
   "fieldOverrides": [
     {
-      "collectionGroup": "private",
-      "fieldPath": "nextAllowanceAt",
-      "ttl": false,
+      "collectionGroup": "previews",
+      "fieldPath": "expiresAt",
       "indexes": [
         { "order": "ASCENDING", "queryScope": "COLLECTION" },
-        { "order": "DESCENDING", "queryScope": "COLLECTION" },
-        { "arrayConfig": "CONTAINS", "queryScope": "COLLECTION" },
+        { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }
+      ]
+    },
+    {
+      "collectionGroup": "private",
+      "fieldPath": "nextAllowanceAt",
+      "indexes": [
+        { "order": "ASCENDING", "queryScope": "COLLECTION" },
+        { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }
+      ]
+    },
+    {
+      "collectionGroup": "private",
+      "fieldPath": "tokenExpiresAt",
+      "indexes": [
+        { "order": "ASCENDING", "queryScope": "COLLECTION" },
         { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }
       ]
     },

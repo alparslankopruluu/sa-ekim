@@ -16,7 +16,6 @@ import Animated, {
 import Svg, { Circle, ClipPath, Defs, G, Line, LinearGradient, Path, Rect, Stop } from 'react-native-svg';
 
 import type { Goal } from '@shared/catalog';
-import { maturationMonthsFor } from '@shared/catalog';
 import type { PhaseId } from '@shared/timeline';
 
 import { AppText } from '@/components/AppText';
@@ -45,7 +44,14 @@ export interface PhaseBandChartProps {
  * band with a "you are here" dot. Illustrative shape from `BAND_ANCHORS`, never a prediction,
  * deliberately without numbers on the axis.
  */
-export function PhaseBandChart({ day, goal, phaseId, height = 148, locked = false, onLockedPress }: PhaseBandChartProps) {
+export function PhaseBandChart({
+  day,
+  goal,
+  phaseId,
+  height = 148,
+  locked = false,
+  onLockedPress,
+}: PhaseBandChartProps) {
   const { t } = useTranslation();
   const reduceMotion = useReducedMotion();
   const rawId = useId();
@@ -71,7 +77,12 @@ export function PhaseBandChart({ day, goal, phaseId, height = 148, locked = fals
     dotOpacity.set(0);
     reveal.set(withTiming(width, { duration: 1100, easing: easings.standard }));
     dotOpacity.set(withDelay(800, withTiming(1, { duration: 320 })));
-    pulse.set(withDelay(1200, withRepeat(withSequence(withTiming(1, { duration: 1400 }), withTiming(0, { duration: 1400 })), -1)));
+    pulse.set(
+      withDelay(
+        1200,
+        withRepeat(withSequence(withTiming(1, { duration: 1400 }), withTiming(0, { duration: 1400 })), -1),
+      ),
+    );
     return () => {
       cancelAnimation(reveal);
       cancelAnimation(dotOpacity);
@@ -81,7 +92,10 @@ export function PhaseBandChart({ day, goal, phaseId, height = 148, locked = fals
 
   const clipProps = useAnimatedProps(() => ({ width: reveal.value }));
   const coreProps = useAnimatedProps(() => ({ opacity: dotOpacity.value }));
-  const haloProps = useAnimatedProps(() => ({ r: 9 + pulse.value * 5, opacity: dotOpacity.value * (0.34 - pulse.value * 0.26) }));
+  const haloProps = useAnimatedProps(() => ({
+    r: 9 + pulse.value * 5,
+    opacity: dotOpacity.value * (0.34 - pulse.value * 0.26),
+  }));
 
   const phaseTitle = phaseId ? t(`guide.${phaseId}.title`) : null;
   const label = locked
@@ -89,7 +103,6 @@ export function PhaseBandChart({ day, goal, phaseId, height = 148, locked = fals
     : phaseTitle
       ? t('journey.band.a11y', { phase: phaseTitle })
       : t('journey.band.a11yNone');
-  const months = maturationMonthsFor(goal);
 
   const chart = (
     <View
@@ -181,7 +194,7 @@ export function PhaseBandChart({ day, goal, phaseId, height = 148, locked = fals
           {t('journey.band.start')}
         </AppText>
         <AppText variant="micro" color="textTertiary">
-          {t('journey.band.end', { months })}
+          {t('journey.band.end')}
         </AppText>
       </View>
       <AppText variant="caption" color="textTertiary">

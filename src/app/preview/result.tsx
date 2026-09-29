@@ -177,7 +177,7 @@ export default function ResultScreen() {
         await sharePreviewImage(after.uri, doc.id);
         useSession.getState().recordShare();
         track('preview_shared', { quality: doc.quality });
-        void maybeAskForReview('share');
+        void maybeAskForReview('preview');
       }
     } catch (error) {
       if (error instanceof ExportError && error.reason === 'permission') showToast(t('preview.result.saveDenied'), 'error');

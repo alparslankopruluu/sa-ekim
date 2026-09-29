@@ -79,7 +79,7 @@ export function StageBackground({ accents, animated = true, intensity = 'full' }
   const big = Math.max(width, height) * (intensity === 'full' ? 0.95 : 0.7);
 
   return (
-    <View pointerEvents="none" style={StyleSheet.absoluteFill}>
+    <View pointerEvents="none" style={styles.frame}>
       <LinearGradient colors={gradients.stage} style={StyleSheet.absoluteFill} />
       <Spotlight
         id="spotA"
@@ -107,6 +107,8 @@ export function StageBackground({ accents, animated = true, intensity = 'full' }
 }
 
 const styles = StyleSheet.create({
+  // Clip the drifting spotlights so they never grow the page (web) or bleed past a card.
+  frame: { ...StyleSheet.absoluteFill, overflow: 'hidden' },
   spot: { position: 'absolute' },
   fade: { top: '55%' },
 });

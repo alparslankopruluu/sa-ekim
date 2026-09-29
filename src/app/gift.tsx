@@ -61,6 +61,7 @@ export default function GiftScreen() {
     existing ? { prizeId: existing.prizeId, expiresAt: existing.expiresAt, redeemedAt: existing.redeemedAt } : null,
   );
   const [burst, setBurst] = useState(0);
+  const [openedAt] = useState(() => Date.now());
   const wheelSize = Math.min(width - layout.screenPadding * 2, 340);
 
   useEffect(() => {
@@ -99,7 +100,7 @@ export default function GiftScreen() {
 
   const prize = won ? PRIZES[won.prizeId] : null;
   const isOffer = prize?.kind === 'offering';
-  const offerOpen = !!won && isOffer && won.redeemedAt === null && won.expiresAt > Date.now();
+  const offerOpen = !!won && isOffer && won.redeemedAt === null && won.expiresAt > openedAt;
 
   return (
     <View style={styles.root}>

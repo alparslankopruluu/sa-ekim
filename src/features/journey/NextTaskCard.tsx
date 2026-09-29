@@ -134,80 +134,109 @@ export function NextTaskCard({ view, index = 0 }: { view: JourneyView; index?: n
   return content ? <Reveal index={index}>{content}</Reveal> : null;
 
   function renderTask() {
-  switch (task.kind) {
-    case 'none':
-      return null;
-    case 'care':
-      return <CareChecklist view={view} doneCount={doneCount} />;
-    case 'baseline_photo':
-      return (
-        <CardShell icon="camera-outline" title={t('journey.task.baseline.title')} body={t('journey.task.baseline.body')} testID="next-task-baseline">
-          <Button label={t('journey.task.photoCta')} icon="camera" onPress={() => startCapture(task.angle)} />
-        </CardShell>
-      );
-    case 'photo':
-      return (
-        <CardShell
-          icon="camera-outline"
-          title={
-            task.first
-              ? t('journey.task.photo.firstTitle')
-              : task.cadence === 'weekly'
-                ? t('journey.task.photo.weeklyTitle')
-                : t('journey.task.photo.monthlyTitle')
-          }
-          body={task.cadence === 'weekly' ? t('journey.task.photo.weeklyBody') : t('journey.task.photo.monthlyBody')}
-          testID="next-task-photo"
-        >
-          <Button label={t('journey.task.photoCta')} icon="camera" onPress={() => startCapture(task.angle)} />
-        </CardShell>
-      );
-    case 'shed':
-      return (
-        <CardShell icon="water-outline" title={t('journey.task.shed.title')} body={t('journey.task.shed.body')} testID="next-task-shed">
-          <Button label={t('journey.task.shed.cta')} icon="add" variant="secondary" onPress={() => router.push('/shed')} />
-        </CardShell>
-      );
-    case 'prp_due': {
-      const prp = view.prp;
-      const session = view.prpSessions.find((s) => s.id === task.sessionId);
-      const body =
-        task.daysOverdue === 0
-          ? t('journey.task.prp.bodyToday')
-          : t('journey.task.prp.bodyLate', {
-              date: session ? formatIsoDate(session.date, currentLocaleTag()) : '',
-            });
-      return (
-        <CardShell
-          icon="calendar-outline"
-          title={t('journey.task.prp.title', { current: prp?.current ?? 1, total: prp?.total ?? 1 })}
-          body={body}
-          testID="next-task-prp"
-        >
-          <View style={styles.actions}>
-            <Button label={t('journey.task.photoCta')} icon="camera" size="md" onPress={() => startCapture(task.angle)} style={styles.action} />
+    switch (task.kind) {
+      case 'none':
+        return null;
+      case 'care':
+        return <CareChecklist view={view} doneCount={doneCount} />;
+      case 'baseline_photo':
+        return (
+          <CardShell
+            icon="camera-outline"
+            title={t('journey.task.baseline.title')}
+            body={t('journey.task.baseline.body')}
+            testID="next-task-baseline"
+          >
+            <Button label={t('journey.task.photoCta')} icon="camera" onPress={() => startCapture(task.angle)} />
+          </CardShell>
+        );
+      case 'photo':
+        return (
+          <CardShell
+            icon="camera-outline"
+            title={
+              task.first
+                ? t('journey.task.photo.firstTitle')
+                : task.cadence === 'weekly'
+                  ? t('journey.task.photo.weeklyTitle')
+                  : t('journey.task.photo.monthlyTitle')
+            }
+            body={task.cadence === 'weekly' ? t('journey.task.photo.weeklyBody') : t('journey.task.photo.monthlyBody')}
+            testID="next-task-photo"
+          >
+            <Button label={t('journey.task.photoCta')} icon="camera" onPress={() => startCapture(task.angle)} />
+          </CardShell>
+        );
+      case 'shed':
+        return (
+          <CardShell
+            icon="water-outline"
+            title={t('journey.task.shed.title')}
+            body={t('journey.task.shed.body')}
+            testID="next-task-shed"
+          >
             <Button
-              label={t('journey.task.prp.markDone')}
-              icon="checkmark"
-              size="md"
+              label={t('journey.task.shed.cta')}
+              icon="add"
               variant="secondary"
-              onPress={() => useJourney.getState().togglePrpSession(task.sessionId)}
-              style={styles.action}
+              onPress={() => router.push('/shed')}
             />
-          </View>
-        </CardShell>
-      );
+          </CardShell>
+        );
+      case 'prp_due': {
+        const prp = view.prp;
+        const session = view.prpSessions.find((s) => s.id === task.sessionId);
+        const body =
+          task.daysOverdue === 0
+            ? t('journey.task.prp.bodyToday')
+            : t('journey.task.prp.bodyLate', {
+                date: session ? formatIsoDate(session.date, currentLocaleTag()) : '',
+              });
+        return (
+          <CardShell
+            icon="calendar-outline"
+            title={t('journey.task.prp.title', { current: prp?.current ?? 1, total: prp?.total ?? 1 })}
+            body={body}
+            testID="next-task-prp"
+          >
+            <View style={styles.actions}>
+              <Button
+                label={t('journey.task.photoCta')}
+                icon="camera"
+                size="md"
+                onPress={() => startCapture(task.angle)}
+                style={styles.action}
+              />
+              <Button
+                label={t('journey.task.prp.markDone')}
+                icon="checkmark"
+                size="md"
+                variant="secondary"
+                onPress={() => useJourney.getState().togglePrpSession(task.sessionId)}
+                style={styles.action}
+              />
+            </View>
+          </CardShell>
+        );
+      }
+      case 'caught_up': {
+        const body =
+          task.nextSessionInDays != null
+            ? t('journey.task.caughtUp.nextSession', { count: task.nextSessionInDays })
+            : task.nextPhotoInDays != null
+              ? t('journey.task.caughtUp.nextPhoto', { count: task.nextPhotoInDays })
+              : t('journey.task.caughtUp.body');
+        return (
+          <CardShell
+            icon="checkmark-circle-outline"
+            tone="sage"
+            title={t('journey.task.caughtUp.title')}
+            body={body}
+            testID="next-task-caught-up"
+          />
+        );
+      }
     }
-    case 'caught_up': {
-      const body =
-        task.nextSessionInDays != null
-          ? t('journey.task.caughtUp.nextSession', { count: task.nextSessionInDays })
-          : task.nextPhotoInDays != null
-            ? t('journey.task.caughtUp.nextPhoto', { count: task.nextPhotoInDays })
-            : t('journey.task.caughtUp.body');
-      return <CardShell icon="checkmark-circle-outline" tone="sage" title={t('journey.task.caughtUp.title')} body={body} testID="next-task-caught-up" />;
-    }
-  }
   }
 }
 

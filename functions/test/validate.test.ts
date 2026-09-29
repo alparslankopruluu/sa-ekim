@@ -64,12 +64,14 @@ test('the photo must be the caller\'s own upload, exactly uploads/{uid}/{file}',
     `uploads/${UID}/selfie.exe`,
     `uploads/${UID}/../other/a.jpg`,
     `uploads/${UID}/sp ace.jpg`,
+    `uploads/${UID}/a.webp`,
+    `uploads/${UID}/a.b.jpg`,
     42,
     undefined,
   ]) {
     assert.equal(codeOf(() => parseCreatePreview(request({ photoPath }), UID)), 'invalid_input', String(photoPath));
   }
-  for (const file of ['a.jpg', 'a.JPEG', 'a.png', 'a.heic', 'a.webp']) {
+  for (const file of ['a.jpg', 'a.jpeg', 'a.png', 'a.heic']) {
     assert.equal(isOwnedUploadPath(`uploads/${UID}/${file}`, UID), true, file);
   }
 });

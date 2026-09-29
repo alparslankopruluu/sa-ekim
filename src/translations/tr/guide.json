@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Neler oluyor",
+    "normal": "Tipik olan",
+    "todo": "Bu hafta yap",
+    "redflags": "Şu durumlarda kliniğini veya bir doktoru ara…",
+    "care": "Gün gün",
+    "wash": "Yıkama",
+    "sleep": "Uyku",
+    "avoid": "Kaçın"
+  },
+  "header": {
+    "week": "Hafta",
+    "days": "{{from}}.–{{to}}. günler",
+    "weeks": "{{from}}.–{{to}}. haftalar",
+    "current": "Buradasın",
+    "past": "Geride kaldı",
+    "upcoming": "Önünde"
+  },
+  "lock": {
+    "title": "Evre rehberinin tamamı Pro'da",
+    "body": "Tipik olarak neler olduğu, bu hafta ne yapılacağı ve gün gün notlar — her evre için.",
+    "cta": "Pro'yu gör",
+    "redflagsNote": "Kliniğine ne zaman başvurman gerektiği herkes için ücretsiz, aşağıda."
+  },
+  "notFound": {
+    "title": "Rehber bulunamadı",
+    "body": "Bu sayfa eski bir bağlantıdan gelmiş olabilir.",
+    "cta": "Geri"
+  },
+  "flags": {
+    "fever": "Ateş veya titreme",
+    "redness": "Yayılan ya da giderek artan kızarıklık veya şişlik",
+    "pus": "İrin, sarı akıntı veya kötü koku",
+    "pain": "Şiddetli ya da giderek artan ağrı",
+    "bleeding": "Yoğun kanama veya hafif baskıyla durmayan kanama",
+    "contact": "Bunlardan biri olursa kliniğine veya bir doktora başvur. Acil bir durumda bölgendeki acil yardım numarasını ara."
+  },
+  "disclaimer": "Yaygın klinik zaman çizelgelerinden derlenen genel bilgilendirme — tıbbi tavsiye ya da tahmin değildir. Sonuçlar kişiden kişiye değişir; önce kendi kliniğinin talimatları gelir.",
+  "care": {
+    "title": "İlk iki hafta",
+    "tagline": "Greftler yerleşirken onları korumak",
+    "happening": "Yeni greftler yerine yerleşiyor. Her greftin çevresinde tipik olarak küçük kabuklar oluşur ve bunlar genellikle 7–14 gün içinde düşer. İlk günlerde alında şişlik ve kızarıklık sık görülür.",
+    "normal": "Tipik olarak ilk iki haftada küçük kabuklar, hafif kızarıklık, biraz şişlik ve gerginlik hissi sık görülür.",
+    "todo1": "Kliniğinin gösterdiği yıkama düzenine uy.",
+    "todo2": "Kliniğin öneriyorsa ilk gecelerde başın yüksekte uyu.",
+    "todo3": "Kabukların kendiliğinden düşmesine izin ver — koparma, kaşıma.",
+    "todo4": "Kliniğin aksini söyleyene kadar ağır egzersiz, sauna, yüzme ve doğrudan güneşten uzak dur.",
+    "redflags": "Şu an biraz kızarıklık ve şişlik sık görülür. Şunları fark edersen kliniğine veya bir doktora başvur:",
+    "days": {
+      "intro": "Birçok klinik şunları önerir. Önce kendi kliniğinin talimatlarına uy.",
+      "d0_3": {
+        "title": "0.–3. günler",
+        "wash": "Birçok klinik ilk yıkamayı kendisi ya da 1.–2. günde yapar, ardından ovmadan çok nazik bir durulama önerir.",
+        "sleep": "Birçok klinik, örneğin iki yastık ya da bir boyun yastığıyla, başın yüksekte sırtüstü uyumayı önerir.",
+        "avoid": "Birçok klinik öne eğilmekten, yük kaldırmaktan, greftlere dokunmaktan, alkolden ve sigaradan kaçınmayı önerir."
+      },
+      "d4_7": {
+        "title": "4.–7. günler",
+        "wash": "Birçok klinik, verdiği ürünlerle her gün nazik bir yıkama ve greftleri ovmadan, tampon yaparak kurulamayı önerir.",
+        "sleep": "Başın yüksekte uyumak hâlâ sık önerilir; şişlik tipik olarak bu günlerde azalır.",
+        "avoid": "Birçok klinik sıkı şapkalardan, yoğun terlemeden, doğrudan güneşten ve kaşımaktan kaçınmayı önerir."
+      },
+      "d8_14": {
+        "title": "8.–14. günler",
+        "wash": "Birçok klinik artık kabukların nazikçe düşebilmesi için biraz daha kuvvetli yıkamaya izin verir.",
+        "sleep": "Kliniğin onaylarsa birçok kişi bu dönemde alışık olduğu uyku pozisyonuna dönebilir.",
+        "avoid": "Birçok klinik havuzdan, saunadan, ağır antrenmandan ve son kabukları koparmaktan kaçınmayı önerir."
+      }
+    }
+  },
+  "shed": {
+    "title": "Dökülme evresi",
+    "tagline": "Ekilen saçlar sıklıkla dökülür — kökler tipik olarak yerinde kalır",
+    "happening": "2. ile 8. haftalar arasında ekilen saç tellerinin çoğu tipik olarak dökülür. Klinikler buna şok dökülme der. Deri altındaki kökler genellikle yerinde kalır ve yeni saç üretmeden önce dinlenir.",
+    "normal": "Tipik olarak 2.–8. haftalarda belirgin dökülme sık görülür — klinikler bunu sürecin olağan bir aşaması olarak tanımlar.",
+    "todo1": "Haftalık fotoğrafı aynı açıdan çekmeye devam et; seri, düzeni aynadan daha iyi gösterir.",
+    "todo2": "Birkaç gün ne kadar döküldüğünü kaydet — bir sayı, bir histen daha kolay konuşulur.",
+    "todo3": "Kliniğinin önerdiği şekilde nazikçe yıkamaya devam et.",
+    "todo4": "Kliniğinle bir sonraki görüşme için sorularını not al.",
+    "redflags": "Bu haftalarda dökülmenin kendisi sık görülür. Şunları fark edersen kliniğine veya bir doktora başvur:"
+  },
+  "quiet": {
+    "title": "Sessiz aylar",
+    "tagline": "Yüzeyde pek bir şey olmuyor gibi görünür",
+    "happening": "2. ile 4. aylar sıklıkla “çirkin ördek yavrusu” evresi olarak anılır. Kökler tipik olarak dinlenir ve yeni saçları hazırlar; bu yüzden bölge operasyondan önceki haline benzeyebilir.",
+    "normal": "Tipik olarak 2.–4. aylarda çok az görünür uzama olması sık görülür.",
+    "todo1": "Günleri değil ayları karşılaştır — fotoğraf serin en adil görünümdür.",
+    "todo2": "Yeni saçlar çıkarken küçük kabarıklıklar görülebilir; emin değilsen kliniğine sor.",
+    "todo3": "Kliniğinin önerdiği şekilde saçlı derini güçlü güneşten koru.",
+    "todo4": "Her fotoğrafta aynı açıyı ve ışığı koru.",
+    "redflags": "Şunları fark edersen kliniğine veya bir doktora başvur:"
+  },
+  "sprout": {
+    "title": "İlk çıkış",
+    "tagline": "İnce yeni saçlar tipik olarak görünmeye başlar",
+    "happening": "3.–4. aylar civarında ilk yeni saçlar sıklıkla görünür. Başta genellikle ince, açık renkli ve düzensizdirler; bazıları kıvırcık ya da dalgalı olabilir.",
+    "normal": "Tipik olarak ilk saçlar ince, seyrek ve farklı hızlarda uzar.",
+    "todo1": "Kontrol noktası fotoğraflarını aynı ışıkta ve aynı açıdan çek.",
+    "todo2": "İnce ya da düzensiz saçlara zaman tanı — kalınlık genellikle sonraki aylarda artar.",
+    "todo3": "Saç kesimi, boya ve şekillendirici ürünlerin senin için ne zaman uygun olduğunu kliniğine sor.",
+    "todo4": "Başkalarının sonuçları yerine kendi ilk fotoğraflarına bak.",
+    "redflags": "Şunları fark edersen kliniğine veya bir doktora başvur:"
+  },
+  "grow": {
+    "title": "Yoğunluk artıyor",
+    "tagline": "Saçlar tipik olarak kalınlaşır ve dolgunlaşır",
+    "happening": "6. ile 9. aylar arasında yeni saçlar tipik olarak kalınlaşır ve uzar; bölge sıklıkla aydan aya daha dolgun görünür.",
+    "normal": "Tipik olarak yoğunluk 6.–9. aylar boyunca artmaya devam eder ve görünüm bu dönemde çok değişebilir.",
+    "todo1": "6. ve 9. ay kontrol noktası fotoğraflarını çek.",
+    "todo2": "Başkalarınınkiyle değil, kendi ilk fotoğraflarınla karşılaştır.",
+    "todo3": "Kliniğine bu dönemde genelde yaptığı kontrolü sor.",
+    "todo4": "Saçlı derini güçlü güneşten korumaya devam et.",
+    "redflags": "Şunları fark edersen kliniğine veya bir doktora başvur:"
+  },
+  "mature": {
+    "title": "Olgunlaşma",
+    "tagline": "Doku ve yoğunluk tipik olarak oturur",
+    "happening": "9. ile 12. aylar sıklıkla olgunlaşma dönemidir: saçlar kalınlaşmaya devam eder ve dokuları oturur. Klinikler saç çizgisi sonucunu tipik olarak 12. ay civarında değerlendirir.",
+    "normal": "Tipik olarak 9.–12. aylarda değişimler yavaşlar ve daha ince olur.",
+    "todo1": "12. ay kontrol noktası fotoğrafını her açıdan çek.",
+    "todo2": "Klinik ziyaretinden önce ilk ve son fotoğraflarını yan yana koy.",
+    "todo3": "Değerlendirmede sormak istediğin soruları yaz.",
+    "todo4": "Tepe ve ayrım bölgesinin tipik olarak daha uzun sürdüğünü unutma.",
+    "redflags": "Şunları fark edersen kliniğine veya bir doktora başvur:"
+  },
+  "final": {
+    "title": "Son olgunlaşma",
+    "tagline": "Tepe ve ayrım bölgesi olgunlaşmaya devam edebilir",
+    "happening": "12. aydan sonra değişimlerin çoğu tipik olarak küçüktür. Tepe, ayrım bölgesi ve birçok kadının sonucu sıklıkla 18 aya kadar olgunlaşmaya devam eder.",
+    "normal": "Tipik olarak 12. aydan sonra yavaş ve kademeli değişim sık görülür, özellikle tepede.",
+    "todo1": "Bir iki ayda bir fotoğraf çek.",
+    "todo2": "Kliniğinin önerdiği değerlendirme randevusunu al.",
+    "todo3": "İstersen fotoğraf serini kliniğinle paylaşmak için yanında götür.",
+    "todo4": "Adil bir karşılaştırma için aynı açıyı ve ışığı koru.",
+    "redflags": "Şunları fark edersen kliniğine veya bir doktora başvur:"
+  }
+}

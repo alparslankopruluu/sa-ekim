@@ -104,6 +104,14 @@
       "home": "ana ekran",
       "onboarding_exit": "tanıtım çıkışı",
       "off": "kapalı"
-    }
+    },
+    "storefront": "Sahte mağaza para birimi",
+    "giftOffer": "Hediye teklifini ödülsüz göster",
+    "forcePro": "Pro yetkisi",
+    "grantFreeHigh": "Ücretsiz HD önizleme ver",
+    "previewsEnabled": "Önizlemeler açık (acil kapatma)",
+    "nextPrize": "Sonraki çark ödülü",
+    "honest": "dürüst çekiliş",
+    "offerCacheNote": "Mağaza değişiklikleri paywall'da tekrar denediğinde veya beş dakika sonra geçerli olur."
   }
 }

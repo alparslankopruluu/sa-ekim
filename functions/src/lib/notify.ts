@@ -1,7 +1,7 @@
 /**
- * Best-effort FCM "preview ready" push to the owner's registered devices. Sent only to devices that
- * did not opt out of the `previews` topic (the app writes its notification toggles as `topics`).
- * A value moment only — copy is plain and never a medical claim.
+ * Best-effort FCM "preview ready" push to the owner's registered devices: a transactional message
+ * about a preview the user started (device `topics` only govern offers). Copy is plain and never a
+ * medical claim.
  */
 import { db, messaging } from './admin.js';
 import { errorName } from './errors.js';
@@ -29,11 +29,6 @@ export function previewReadyCopy(locale: unknown): { title: string; body: string
   return PREVIEW_READY_COPY[tag] ?? PREVIEW_READY_COPY[tag.split('-')[0] ?? 'en'] ?? fallback;
 }
 
-/** A device receives the push unless its `topics` list exists and omits `previews`. */
-export function wantsPreviewPush(topics: unknown): boolean {
-  return !Array.isArray(topics) || topics.includes('previews');
-}
-
 const STALE_TOKEN_ERRORS = new Set([
   'messaging/registration-token-not-registered',
   'messaging/invalid-registration-token',
@@ -47,10 +42,8 @@ export async function notifyPreviewReady(uid: string, previewId: string): Promis
         ref: doc.ref,
         token: doc.get('token') as unknown,
         locale: doc.get('locale') as unknown,
-        topics: doc.get('topics') as unknown,
       }))
-      .filter((d): d is typeof d & { token: string } => typeof d.token === 'string' && d.token.length > 0 && d.token.length <= 4096)
-      .filter((d) => wantsPreviewPush(d.topics));
+      .filter((d): d is typeof d & { token: string } => typeof d.token === 'string' && d.token.length > 0 && d.token.length <= 4096);
     if (targets.length === 0) return;
 
     // One message per device so each gets the system notification in its own language.

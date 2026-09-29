@@ -1,47 +1,31 @@
 rules_version = '2';
 
-// Deny by default. Clients upload only their own source photo/recording;
-// generated media is written by Cloud Functions and readable by its owner.
+// Kök — deny by default. Clients upload only their own selfie for a preview; results are written
+// by Cloud Functions and readable by their owner. Selfies and results are deleted after 30 days
+// by hourlyMaintenance (and immediately by deletePreview / deleteAccount).
 service firebase.storage {
   match /b/{bucket}/o {
 
-    function isSignedIn() {
-      return request.auth != null;
-    }
-
     function isOwner(uid) {
-      return isSignedIn() && request.auth.uid == uid;
+      return request.auth != null && request.auth.uid == uid;
     }
 
-    // HEIC must be converted to JPEG on device: the AI providers take jpeg/png/webp.
-    function isImageUpload() {
-      return request.resource.contentType.matches('image/(jpeg|png|webp)')
+    // Selfie for one preview: create only (no overwrite, so a running preview cannot be swapped),
+    // a plain file name, an image type, at most 10 MB. HEIC is accepted by the rule but the server
+    // decodes only JPEG/PNG, so the app converts to JPEG before upload.
+    match /uploads/{uid}/{file} {
+      allow get, delete: if isOwner(uid);
+      allow create: if isOwner(uid)
+        && resource == null
+        && file.matches('[A-Za-z0-9_-]{1,100}[.](jpg|jpeg|png|heic)')
+        && request.resource.contentType.matches('image/.*')
         && request.resource.size > 0
         && request.resource.size <= 10 * 1024 * 1024;
     }
 
-    function isAudioUpload() {
-      return request.resource.contentType.matches('audio/(mpeg|mp3|mp4|m4a|x-m4a|aac|wav|x-wav|wave|webm|ogg)')
-        && request.resource.size > 0
-        && request.resource.size <= 8 * 1024 * 1024;
-    }
-
-    // Source photos and voice recordings (deleted after 24 h by hourlyMaintenance).
-    match /uploads/{uid}/{file} {
-      allow read, delete: if isOwner(uid);
-      allow create, update: if isOwner(uid)
-        && file.matches('[A-Za-z0-9_.-]{1,120}')
-        && (isImageUpload() || isAudioUpload());
-    }
-
-    // Generated media: server-written only, owner-readable.
-    match /{kind}/{uid}/{file} {
-      allow read: if kind in ['posters', 'voices', 'songs', 'renders'] && isOwner(uid);
-    }
-
-    // Library song audio for in-app previews.
-    match /catalog/{allPaths=**} {
-      allow read: if isSignedIn();
+    // Preview results: server-written only, owner-readable.
+    match /users/{uid}/previews/{file} {
+      allow get: if isOwner(uid);
     }
   }
 }

@@ -19,7 +19,8 @@ config.resolver.blockList = [
 const defaultResolve = config.resolver.resolveRequest;
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   const resolve = defaultResolve ?? context.resolveRequest;
-  if (/^\.{1,2}\//.test(moduleName) && moduleName.endsWith('.js')) {
+  const fromShared = (context.originModulePath ?? '').includes(`${path.sep}functions${path.sep}src${path.sep}shared${path.sep}`);
+  if (fromShared && /^\.{1,2}\//.test(moduleName) && moduleName.endsWith('.js')) {
     try {
       return resolve(context, moduleName.slice(0, -3), platform);
     } catch {

@@ -1,3 +1,16 @@
+/* jest.mock factories below are hoisted above these imports by babel-jest. */
+import { Platform } from 'react-native';
+
+import {
+  fitLongEdge,
+  isInsideJourneyDir,
+  MAX_LONG_EDGE,
+  rebaseJourneyUri,
+  removeJourneyFile,
+  saveJourneyPhoto,
+  wipeAllJourneyFiles,
+} from '../journeyFiles';
+
 /* In-memory doubles for the native file system and image manipulator. */
 const mockFs = new Map<string, string>();
 const mockDirs = new Set<string>();
@@ -87,17 +100,6 @@ jest.mock('expo-image-manipulator', () => {
   };
 });
 
-import { Platform } from 'react-native';
-
-import {
-  fitLongEdge,
-  isInsideJourneyDir,
-  MAX_LONG_EDGE,
-  rebaseJourneyUri,
-  removeJourneyFile,
-  saveJourneyPhoto,
-  wipeAllJourneyFiles,
-} from '../journeyFiles';
 
 beforeEach(() => {
   mockFs.clear();

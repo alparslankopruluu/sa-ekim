@@ -17,6 +17,8 @@ export const REMOTE_DEFAULTS = {
   /** Delay before the paywall close button appears (onboarding source only). */
   paywall_close_delay_ms: 2500,
   ff_review_prompt: true,
+  /** Run the real (free, watermarked) preview at the end of onboarding; off = skip to the paywall. */
+  ff_onboarding_preview: true,
   /** Client mirror of the server kill switch: `false` hides "new preview" entry points. */
   previews_enabled: true,
   /** The cohort number is only shown at or above this many people (privacy floor). */

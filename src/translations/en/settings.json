@@ -104,6 +104,14 @@
       "home": "home",
       "onboarding_exit": "onboarding exit",
       "off": "off"
-    }
+    },
+    "storefront": "Mock storefront currency",
+    "giftOffer": "Show the gift offer without a prize",
+    "forcePro": "Pro entitlement",
+    "grantFreeHigh": "Grant a free HD preview",
+    "previewsEnabled": "Previews enabled (kill switch)",
+    "nextPrize": "Next wheel prize",
+    "honest": "honest draw",
+    "offerCacheNote": "Store changes apply on the next paywall retry or after five minutes."
   }
 }

@@ -5,13 +5,7 @@ import { AppState } from 'react-native';
 import type { Goal } from '@shared/catalog';
 import { toIsoDate } from '@shared/timeline';
 
-import {
-  journeyClock,
-  type JourneyClock,
-  lastPhotoDay,
-  prpSummary,
-  type PrpSummary,
-} from '@/lib/phaseView';
+import { journeyClock, type JourneyClock, lastPhotoDay, prpSummary, type PrpSummary } from '@/lib/phaseView';
 import { useJourney } from '@/stores/journey';
 import { useSession } from '@/stores/session';
 

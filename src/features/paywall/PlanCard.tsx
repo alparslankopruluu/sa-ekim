@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   glowRing: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
     top: -4,
     bottom: -4,
     start: -4,

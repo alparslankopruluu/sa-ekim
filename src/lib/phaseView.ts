@@ -231,7 +231,14 @@ export interface BandGeometry {
   yForValue(value: number): number;
 }
 
-export function bandGeometry({ width, height, padX = 12, padY = 14, goal, samples = 56 }: BandGeometryInput): BandGeometry {
+export function bandGeometry({
+  width,
+  height,
+  padX = 12,
+  padY = 14,
+  goal,
+  samples = 56,
+}: BandGeometryInput): BandGeometry {
   const domainDays = endDayFor(goal);
   const innerW = Math.max(1, width - padX * 2);
   const innerH = Math.max(1, height - padY * 2);
@@ -489,7 +496,12 @@ export function chooseNextTask(input: NextTaskInput): NextTask {
   if (clock.status === 'active' && day <= 14 && input.carePending) return { kind: 'care' };
 
   if (isPhotoDue(day, input.lastPhotoDay)) {
-    return { kind: 'photo', cadence: photoCadenceDays(day) === 7 ? 'weekly' : 'monthly', first: input.lastPhotoDay === null, angle };
+    return {
+      kind: 'photo',
+      cadence: photoCadenceDays(day) === 7 ? 'weekly' : 'monthly',
+      first: input.lastPhotoDay === null,
+      angle,
+    };
   }
 
   if (clock.status === 'active' && day >= 15 && day <= 56 && !input.shedLoggedToday) return { kind: 'shed' };

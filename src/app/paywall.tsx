@@ -79,9 +79,9 @@ export default function PaywallScreen() {
   const [selectedId, setSelectedId] = useState<PlanId | null>(null);
   const [buying, setBuying] = useState(false);
   const [restoring, setRestoring] = useState(false);
-  const [canClose, setCanClose] = useState(false);
+  const [canClose, setCanClose] = useState(() => source !== 'onboarding');
   const [celebrate, setCelebrate] = useState(0);
-  const shownAt = useRef(Date.now());
+  const shownAt = useRef(0);
   const viewed = useRef(false);
   const request = useRef(0);
   const exitTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -122,6 +122,10 @@ export default function PaywallScreen() {
   }, [fetchOffer]);
 
   useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
+
+  useEffect(() => {
     fetchOffer(false);
     return () => {
       request.current += 1;
@@ -130,12 +134,8 @@ export default function PaywallScreen() {
 
   useEffect(() => {
     // Soft-hard paywall: the close button is delayed on the onboarding source only.
-    const delay =
-      source === 'onboarding' ? Math.min(Math.max(remoteNumber('paywall_close_delay_ms'), 0), MAX_CLOSE_DELAY_MS) : 0;
-    if (delay === 0) {
-      setCanClose(true);
-      return;
-    }
+    if (source !== 'onboarding') return;
+    const delay = Math.min(Math.max(remoteNumber('paywall_close_delay_ms'), 0), MAX_CLOSE_DELAY_MS);
     const timer = setTimeout(() => setCanClose(true), delay);
     return () => clearTimeout(timer);
   }, [source]);

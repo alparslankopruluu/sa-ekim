@@ -14,6 +14,8 @@ import { colors, minTouch, radius, spacing } from '@/theme/tokens';
 import { DateWheelPicker } from './DateWheelPicker';
 import { Tag } from './Tag';
 
+const LONG_DATE = 'long' as const;
+
 export interface SessionsListProps {
   /** Sessions in date order. */
   sessions: readonly PrpSessionLike[];
@@ -46,7 +48,7 @@ export function SessionsList({
   return (
     <View style={styles.list}>
       {sessions.map((session, index) => {
-        const date = formatIsoDate(session.date, locale, 'long');
+        const date = formatIsoDate(session.date, locale, LONG_DATE);
         const due = !session.done && session.date <= today;
         const editing = editingId === session.id;
         const number = index + 1;
@@ -86,10 +88,22 @@ export function SessionsList({
                 onPress={() => onEdit(editing ? null : session.id)}
               />
               {!session.done ? (
-                <Button label={t('journey.prp.photoBefore')} icon="camera-outline" variant="ghost" size="sm" onPress={() => onPhoto(session.id)} />
+                <Button
+                  label={t('journey.prp.photoBefore')}
+                  icon="camera-outline"
+                  variant="ghost"
+                  size="sm"
+                  onPress={() => onPhoto(session.id)}
+                />
               ) : null}
               {canRemove ? (
-                <Button label={t('journey.prp.remove')} icon="trash-outline" variant="ghost" size="sm" onPress={() => onRemove(session.id)} />
+                <Button
+                  label={t('journey.prp.remove')}
+                  icon="trash-outline"
+                  variant="ghost"
+                  size="sm"
+                  onPress={() => onRemove(session.id)}
+                />
               ) : null}
             </View>
             {editing ? (

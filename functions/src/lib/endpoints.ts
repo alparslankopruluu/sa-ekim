@@ -1,4 +1,4 @@
-/** Public URL of the `falWebhook` function, handed to fal per render. */
+/** Public URL of the `falWebhook` function, handed to fal per preview. */
 import { projectID } from 'firebase-functions/params';
 
 import { REGION } from '../config.js';

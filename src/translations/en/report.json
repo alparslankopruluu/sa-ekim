@@ -34,5 +34,6 @@
     "failed": "Couldn't create the report. Try again.",
     "empty": "Add a photo or a shed entry first.",
     "unsupported": "Reports can't be created in the browser."
-  }
+  },
+  "unavailable": "This preview isn't available to report."
 }

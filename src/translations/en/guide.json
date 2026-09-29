@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "What is happening",
+    "normal": "What's typical",
+    "todo": "Do this week",
+    "redflags": "Call your clinic or a doctor if…",
+    "care": "Day by day",
+    "wash": "Washing",
+    "sleep": "Sleep",
+    "avoid": "Avoid"
+  },
+  "header": {
+    "week": "Week",
+    "days": "Days {{from}}–{{to}}",
+    "weeks": "weeks {{from}}–{{to}}",
+    "current": "You are here",
+    "past": "Behind you",
+    "upcoming": "Ahead"
+  },
+  "lock": {
+    "title": "The full phase guide is part of Pro",
+    "body": "What typically happens, what to do this week and day-by-day notes — for every phase.",
+    "cta": "See Pro",
+    "redflagsNote": "When to contact your clinic stays free for everyone, below."
+  },
+  "notFound": {
+    "title": "Guide not found",
+    "body": "This page may be from an older link.",
+    "cta": "Back"
+  },
+  "flags": {
+    "fever": "Fever or chills",
+    "redness": "Redness or swelling that spreads or keeps getting worse",
+    "pus": "Pus, yellow discharge or a bad smell",
+    "pain": "Severe or increasing pain",
+    "bleeding": "Heavy bleeding, or bleeding that does not stop with gentle pressure",
+    "contact": "If any of these happen, contact your clinic or a doctor. In an emergency, call your local emergency number."
+  },
+  "disclaimer": "General education drawn from common clinic timelines — not medical advice and not a prediction. Individual results vary; your own clinic's instructions come first.",
+  "care": {
+    "title": "First two weeks",
+    "tagline": "Protecting the grafts while they settle",
+    "happening": "The new grafts are settling into place. Small scabs typically form around each graft and commonly come off within about 7–14 days. Some swelling of the forehead and redness are commonly seen in the first days.",
+    "normal": "Typically, small scabs, mild redness, some swelling and a tight feeling are common in the first two weeks.",
+    "todo1": "Follow the washing routine your clinic showed you.",
+    "todo2": "Sleep with your head raised in the first nights if your clinic advises it.",
+    "todo3": "Let the scabs come off on their own — no picking or scratching.",
+    "todo4": "Skip heavy exercise, saunas, swimming and direct sun until your clinic says otherwise.",
+    "redflags": "Some redness and swelling are common now. Contact your clinic or a doctor if you notice:",
+    "days": {
+      "intro": "Many clinics advise the following. Follow your own clinic's instructions first.",
+      "d0_3": {
+        "title": "Days 0–3",
+        "wash": "Many clinics do the first wash themselves or on day 1–2, then advise a very gentle rinse without rubbing.",
+        "sleep": "Many clinics advise sleeping on your back with your head raised, for example on two pillows or a travel pillow.",
+        "avoid": "Many clinics advise avoiding bending over, lifting, touching the grafts, alcohol and smoking."
+      },
+      "d4_7": {
+        "title": "Days 4–7",
+        "wash": "Many clinics advise a daily gentle wash with the products they gave you, patting the grafts dry — never rubbing.",
+        "sleep": "A raised head is still commonly advised; swelling typically eases around these days.",
+        "avoid": "Many clinics advise avoiding tight hats, heavy sweating, direct sun and scratching."
+      },
+      "d8_14": {
+        "title": "Days 8–14",
+        "wash": "Many clinics allow slightly firmer washing now so the scabs can come off gently.",
+        "sleep": "Many people can return to their usual sleeping position around now, if their clinic agrees.",
+        "avoid": "Many clinics advise avoiding pools, saunas, heavy workouts and picking at the last scabs."
+      }
+    }
+  },
+  "shed": {
+    "title": "Shedding phase",
+    "tagline": "The transplanted hairs commonly fall out — the roots typically stay",
+    "happening": "Between weeks 2 and 8 many of the transplanted hair shafts typically shed. Clinics often call this shock loss. The follicles under the skin commonly stay in place and rest before they grow new hair.",
+    "normal": "Typically, noticeable shedding in weeks 2–8 is common — clinics describe it as a usual stage of the timeline.",
+    "todo1": "Keep the weekly photo from the same angle; the series shows the pattern better than the mirror.",
+    "todo2": "Log how much you shed on a few days — a number is easier to discuss than a feeling.",
+    "todo3": "Keep washing gently, the way your clinic advises.",
+    "todo4": "Note your questions for your clinic's next check-in.",
+    "redflags": "Shedding itself is common in these weeks. Contact your clinic or a doctor if you notice:"
+  },
+  "quiet": {
+    "title": "Quiet months",
+    "tagline": "Little seems to happen on the surface",
+    "happening": "Months 2 to 4 are often called the “ugly duckling” phase. The follicles are typically resting and preparing new hairs, so the area may look much like it did before the operation.",
+    "normal": "Typically, very little visible growth in months 2–4 is common.",
+    "todo1": "Compare months, not days — your photo series is the fairest view.",
+    "todo2": "Small bumps can appear as new hairs push through; ask your clinic if you are unsure.",
+    "todo3": "Protect your scalp from strong sun, as your clinic advises.",
+    "todo4": "Keep the same angle and light for every photo.",
+    "redflags": "Contact your clinic or a doctor if you notice:"
+  },
+  "sprout": {
+    "title": "First growth",
+    "tagline": "Fine new hairs typically start to appear",
+    "happening": "Around months 3–4 the first new hairs commonly appear. They are often thin, light and uneven at first, and some may be curly or wavy.",
+    "normal": "Typically, early hairs are fine, patchy and grow at different speeds.",
+    "todo1": "Take your checkpoint photos in the same light and from the same angle.",
+    "todo2": "Give thin or uneven hairs time — thickness commonly builds in later months.",
+    "todo3": "Ask your clinic when haircuts, colouring and styling products are fine for you.",
+    "todo4": "Look back at your early photos rather than at other people's results.",
+    "redflags": "Contact your clinic or a doctor if you notice:"
+  },
+  "grow": {
+    "title": "Density builds",
+    "tagline": "Hairs typically thicken and fill in",
+    "happening": "Between months 6 and 9 the new hairs typically become thicker and longer, and the area commonly looks fuller from month to month.",
+    "normal": "Typically, density keeps building through months 6–9, and the look can change a lot in this stretch.",
+    "todo1": "Take your 6- and 9-month checkpoint photos.",
+    "todo2": "Compare with your own first photos, not with anyone else's.",
+    "todo3": "Ask your clinic about the check-up they usually offer around now.",
+    "todo4": "Keep protecting your scalp from strong sun.",
+    "redflags": "Contact your clinic or a doctor if you notice:"
+  },
+  "mature": {
+    "title": "Maturing",
+    "tagline": "Texture and density typically settle",
+    "happening": "Months 9 to 12 are commonly a time of maturation: hairs keep thickening and their texture settles. Clinics typically evaluate a hairline result at around 12 months.",
+    "normal": "Typically, changes become slower and subtler in months 9–12.",
+    "todo1": "Take your 12-month checkpoint photo from every angle.",
+    "todo2": "Put your first and latest photos side by side before your clinic visit.",
+    "todo3": "Write down the questions you want to ask at your evaluation.",
+    "todo4": "Remember that the crown and parting typically take longer.",
+    "redflags": "Contact your clinic or a doctor if you notice:"
+  },
+  "final": {
+    "title": "Final maturation",
+    "tagline": "The crown and parting can keep maturing",
+    "happening": "After 12 months most changes are typically small. The crown, the parting and many women's results commonly keep maturing for up to 18 months.",
+    "normal": "Typically, slow and gradual change after month 12 is common, especially at the crown.",
+    "todo1": "Take a photo every one to two months.",
+    "todo2": "Book the evaluation your clinic recommends.",
+    "todo3": "Bring your photo series to share with your clinic if you like.",
+    "todo4": "Keep the same angle and light for a fair comparison.",
+    "redflags": "Contact your clinic or a doctor if you notice:"
+  }
+}

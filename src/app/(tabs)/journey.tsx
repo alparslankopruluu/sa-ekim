@@ -35,7 +35,11 @@ export default function JourneyScreen() {
 
   const tabs = [
     { id: 'timeline', label: t('journey.tabs.timeline') },
-    { id: 'photos', label: t('journey.tabs.photos'), badge: view.photos.length > 0 ? String(view.photos.length) : undefined },
+    {
+      id: 'photos',
+      label: t('journey.tabs.photos'),
+      badge: view.photos.length > 0 ? String(view.photos.length) : undefined,
+    },
     { id: 'plan', label: t('journey.tabs.plan') },
   ] as const;
 
@@ -69,7 +73,11 @@ export default function JourneyScreen() {
           <PhotosTab view={view} />
         ) : (
           <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-            {tab === 'timeline' ? <TimelineTab view={view} onOpenPlan={() => setChosen('plan')} /> : <PlanTab view={view} />}
+            {tab === 'timeline' ? (
+              <TimelineTab view={view} onOpenPlan={() => setChosen('plan')} />
+            ) : (
+              <PlanTab view={view} />
+            )}
             <View style={styles.bottom} />
           </ScrollView>
         )}

@@ -1,12 +1,13 @@
+/* Kök legal pages — "Warm Clinic Noir" (src/theme/tokens.ts), with a light variant. */
 :root {
-  --bg: #07060d;
-  --text: #f4f1fa;
-  --muted: #b6afc6;
-  --accent: #ff2e88;
-  --line: #262236;
+  --bg: #0d0a08;
+  --text: #fbf6ef;
+  --muted: rgba(251, 246, 239, 0.7);
+  --accent: #e89a5b;
+  --line: rgba(255, 244, 230, 0.14);
 }
 @media (prefers-color-scheme: light) {
-  :root { --bg: #ffffff; --text: #16131f; --muted: #544e63; --accent: #d1156d; --line: #e6e2ee; }
+  :root { --bg: #fbf6ef; --text: #1a0f07; --muted: #5e4d3f; --accent: #a65a22; --line: #e6dccf; }
 }
 * { box-sizing: border-box; }
 body {
@@ -15,13 +16,14 @@ body {
   color: var(--text);
   font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-.brand { font-weight: 800; letter-spacing: 0.02em; color: var(--accent); margin: 0 0 8px; }
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+.brand { font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; color: var(--accent); margin: 0 0 8px; }
 h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
 h2 { font-size: 1.15rem; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+hr { border: 0; border-top: 2px solid var(--line); margin: 56px 0; }
 .meta { color: var(--muted); margin: 0 0 24px; font-size: 0.9rem; }
-p, li { color: var(--text); }
-ul { padding-left: 20px; }
+p, li { color: var(--text); overflow-wrap: anywhere; }
+ul { padding-inline-start: 20px; }
 li { margin: 6px 0; }
 a { color: var(--accent); }
 .links { margin-top: 40px; }

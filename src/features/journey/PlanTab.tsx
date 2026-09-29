@@ -15,6 +15,8 @@ import { PrpPlanner } from './PrpPlanner';
 import { Tag } from './Tag';
 import type { JourneyView } from './useJourneyView';
 
+const LONG_DATE = 'long' as const;
+
 const TONE: Record<CheckpointStatus, 'sage' | 'gold' | 'neutral'> = {
   done: 'sage',
   due: 'gold',
@@ -43,7 +45,7 @@ export function PlanTab({ view }: { view: JourneyView }) {
         {t('journey.plan.intro')}
       </AppText>
       {checkpoints.map((checkpoint) => {
-        const date = checkpoint.date ? formatIsoDate(checkpoint.date, locale, 'long') : null;
+        const date = checkpoint.date ? formatIsoDate(checkpoint.date, locale, LONG_DATE) : null;
         const label = t('journey.plan.checkpoint', { month: checkpoint.month });
         const status = t(`journey.plan.status.${checkpoint.status}`);
         const actionable = checkpoint.status === 'due' || checkpoint.status === 'missed';
@@ -67,7 +69,13 @@ export function PlanTab({ view }: { view: JourneyView }) {
               <Tag label={status} tone={TONE[checkpoint.status]} />
             </View>
             {actionable ? (
-              <Button label={t('journey.plan.takePhoto')} icon="camera" size="sm" variant="secondary" onPress={() => startCapture(angle)} />
+              <Button
+                label={t('journey.plan.takePhoto')}
+                icon="camera"
+                size="sm"
+                variant="secondary"
+                onPress={() => startCapture(angle)}
+              />
             ) : null}
           </View>
         );
