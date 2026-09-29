@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Docs"
+  short_description: "Repair drift in the canonical project memory"
+  default_prompt: "Use $source-command-update-docs to audit recent changes and repair canonical documentation drift."

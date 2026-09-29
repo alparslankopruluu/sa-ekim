@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dynamic Workflow"
+  short_description: "Bounded multi-agent fan-out, verification, and synthesis"
+  default_prompt: "Use $source-command-dynamic-workflow to plan and run this complex task with a bounded provider-adaptive workflow, isolated writes, and lead-reviewed evidence."

@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "upstream": "https://github.com/hypersocialinc/hypershots",
+  "commit": "cbce9d8769a10e50a4bf4dd497cb042159813801",
+  "license": "MIT",
+  "components": [
+    {
+      "path": "scripts/scaffold.sh",
+      "status": "adapted",
+      "reason": "Adds launch-locale defaults and committed-source/generated-output boundaries."
+    },
+    {
+      "path": "scripts/render.sh",
+      "status": "adapted",
+      "reason": "Preserves the upstream exact-canvas two-pass renderer and adds an isolated temporary Chrome profile plus a bounded watchdog so a running desktop Chrome cannot wedge CI."
+    },
+    {
+      "path": "scripts/validate.sh",
+      "status": "vendored",
+      "reason": "Exact upstream dimensions, alpha, ICC, count, fit, and file-size validator."
+    },
+    {
+      "path": "scripts/translate-inject.mjs",
+      "status": "adapted",
+      "reason": "Preserves atomic translation injection and adds BCP-47 lang/dir plus replacement-glyph checks."
+    },
+    {
+      "path": "scripts/make-review.mjs",
+      "status": "vendored",
+      "reason": "Exact upstream locale gallery, fold, QA flag, and styled-toggle review."
+    },
+    {
+      "path": "scripts/make-contact-sheet.sh",
+      "status": "adapted",
+      "reason": "Turns upstream's documented ImageMagick montage recipe into a deterministic workspace-explicit runtime command."
+    },
+    {
+      "path": "scripts/edit-pass.sh",
+      "status": "adapted",
+      "reason": "Preserves protected GPT Image 2 editing, adds a clean-review/prompt/model/cost approval receipt gate, and forbids full-canvas UI regeneration."
+    },
+    {
+      "path": "scripts/grade-set.sh",
+      "status": "adapted",
+      "reason": "Preserves anchored set-consistent protected grading while forbidding unsafe full-canvas mode."
+    },
+    {
+      "path": "scripts/verify-provider-approval.mjs",
+      "status": "adapted",
+      "reason": "App-factory extension that prevents paid style or fal.ai asset calls unless a 0600 receipt matches the reviewed clean set, artifact, prompt, provider, model, and estimated cost."
+    },
+    {
+      "path": "scripts/fal-sticker-pass.sh",
+      "status": "adapted",
+      "reason": "Approval-gated GPT Image 2 plus fal.ai BiRefNet sticker pipeline based on the upstream production recipe."
+    },
+    {
+      "path": "scripts/fal-background-pass.sh",
+      "status": "adapted",
+      "reason": "Approval-gated fal.ai Flux background pipeline based on the upstream production recipe."
+    },
+    {
+      "path": "scripts/make-mask.mjs",
+      "status": "vendored",
+      "reason": "Exact protected-region mask generation."
+    },
+    {
+      "path": "scripts/preflight.sh",
+      "status": "vendored",
+      "reason": "Exact dependency report."
+    },
+    {
+      "path": "scripts/fetch-fonts.sh",
+      "status": "adapted",
+      "reason": "Optional brand-font vendoring helper. Prefer copying woff2 assets from the matching Fontsource npm packages (the source of the vendored fonts, 5.2.10); the Google Fonts css2 fetch path depends on a spoofed Chrome UA string and may break silently."
+    },
+    {
+      "path": "scripts/lib/profile-dims.mjs",
+      "status": "vendored",
+      "reason": "Exact profile dimension and device-scale resolver."
+    },
+    {
+      "path": "assets/frame.css",
+      "status": "vendored",
+      "reason": "Exact immutable device geometry contract."
+    },
+    {
+      "path": "assets/fit.js",
+      "status": "vendored",
+      "reason": "Exact auto-fit, protected-box, capture, mockup, and grid instrumentation."
+    },
+    {
+      "path": "assets/fonts.css",
+      "status": "adapted",
+      "reason": "Preserves upstream faces and adds offline Noto coverage for all app-factory launch scripts."
+    },
+    {
+      "path": "assets/fonts",
+      "status": "adapted",
+      "reason": "Preserves upstream OFL fonts and adds Fontsource 5.2.10 Noto Sans, Arabic, JP, and SC packages with OFL licenses, pruned to the wght-normal faces and script subsets the launch locales (en,tr,ar,ja,zh-Hans,ru,es,pt-BR,de) actually reference from fonts.css."
+    },
+    {
+      "path": "profiles.json",
+      "status": "vendored",
+      "reason": "Exact upstream Apple profile geometry."
+    },
+    {
+      "path": "references/create.md",
+      "status": "adapted",
+      "reason": "Preserves the complete authoring and review loop while routing upload authority through ASC."
+    },
+    {
+      "path": "references/revise.md",
+      "status": "vendored",
+      "reason": "Exact visual revision and founder-feedback loop."
+    },
+    {
+      "path": "references/translate.md",
+      "status": "vendored",
+      "reason": "Exact translation workflow and review contract."
+    },
+    {
+      "path": "references/i18n.md",
+      "status": "vendored",
+      "reason": "Exact data-i18n schema and locale injection contract."
+    },
+    {
+      "path": "references/typography.md",
+      "status": "vendored",
+      "reason": "Exact typography, fitting, and legibility rules."
+    },
+    {
+      "path": "references/capture-recipes.md",
+      "status": "adapted",
+      "reason": "Preserves real-app capture recipes while routing upload authority through ASC."
+    },
+    {
+      "path": "references/asset-recipes.md",
+      "status": "vendored",
+      "reason": "Exact transparent-asset and sticker recipes."
+    },
+    {
+      "path": "references/edit-filter.md",
+      "status": "adapted",
+      "reason": "Preserves protected-region editing and grading guidance under app-factory's receipt gate; full-canvas regeneration is disabled."
+    },
+    {
+      "path": "references/store-specs.md",
+      "status": "vendored",
+      "reason": "Exact Apple screenshot profile and file constraints."
+    },
+    {
+      "path": "references/gotchas.md",
+      "status": "vendored",
+      "reason": "Exact production failure and repair guide."
+    },
+    {
+      "path": "references/upstream-skill.md",
+      "status": "adapted",
+      "reason": "Pinned upstream orchestration contract retained for audit with omitted upload/gallery routes redirected to app-factory policy."
+    },
+    {
+      "path": "LICENSE-HYPERSHOTS.txt",
+      "status": "vendored",
+      "reason": "Pinned upstream MIT license notice."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "status": "intentionally_omitted",
+      "reason": "The parent source-command-store-assets skill owns Agent Skills UI metadata."
+    },
+    {
+      "path": "examples/spotless",
+      "status": "intentionally_omitted",
+      "reason": "Example brand assets and trade dress are not shipped into generated apps."
+    },
+    {
+      "path": "references/fastlane-deliver.md",
+      "status": "intentionally_omitted",
+      "reason": "app-factory keeps ASC plan/apply/readback as the only iOS upload authority."
+    },
+    {
+      "path": "references/gallery-submission.md",
+      "status": "intentionally_omitted",
+      "reason": "Featuring an app on an external gallery is unrelated to store delivery and requires separate consent."
+    },
+    {
+      "path": "google-play-renderer",
+      "status": "intentionally_omitted",
+      "reason": "The upstream release has no Google Play implementation; app-factory keeps its native Android pipeline."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set up phone access"
+  short_description: "Guide secure Codex and Claude phone access."
+  default_prompt: "Use $source-command-remote-access to guide secure phone access for Codex or Claude Code."

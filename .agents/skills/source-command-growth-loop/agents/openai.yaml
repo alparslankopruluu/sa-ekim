@@ -1,0 +1,4 @@
+interface:
+  display_name: "Growth Loop"
+  short_description: "Diagnose growth and propose one safe experiment"
+  default_prompt: "Use $source-command-growth-loop to diagnose the latest app funnel and propose one evidence-backed experiment."

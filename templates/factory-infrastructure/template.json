@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "factory-infrastructure",
+  "description": "Firebase-hosted public web and aggregate-only admin console with a read-only R2 asset worker.",
+  "placeholders": {
+    "__APP_NAME__": "Human-readable app name",
+    "__APP_SLUG__": "Lowercase DNS-safe app slug",
+    "__SUPPORT_EMAIL__": "Public support email address"
+  },
+  "copyTargets": {
+    "firebase.json": "firebase.json",
+    "web": "web",
+    "functions": "functions",
+    "r2-worker": "r2-worker"
+  },
+  "requiredRuntimeConfiguration": [
+    "VITE_FIREBASE_API_KEY",
+    "VITE_FIREBASE_AUTH_DOMAIN",
+    "VITE_FIREBASE_PROJECT_ID",
+    "VITE_FIREBASE_APP_ID",
+    "VITE_FIREBASE_APPCHECK_SITE_KEY",
+    "ADMIN_EMAILS"
+  ],
+  "postCopyChecks": [
+    "npm --prefix web run typecheck",
+    "npm --prefix web test",
+    "npm --prefix web run build",
+    "npm --prefix functions test",
+    "npm --prefix r2-worker test",
+    "npm --prefix r2-worker run typecheck",
+    "npm --prefix r2-worker run build"
+  ]
+}

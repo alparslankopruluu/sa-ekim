@@ -1,0 +1,2196 @@
+{
+  "schemaVersion": 3,
+  "capabilities": [
+    {
+      "id": "factory-setup",
+      "title": "Prepare the factory workstation",
+      "summary": "Verify the local toolchain, authentication health, disk space, and safe operator setup.",
+      "category": "Setup & providers",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "Before the first factory run or whenever the local toolchain and authentication health need rechecking.",
+      "stages": [
+        "setup"
+      ],
+      "claudeInvocation": "/factory-setup",
+      "skillInvocation": "$source-command-factory-setup",
+      "roleIds": [
+        "tech_lead",
+        "release_manager"
+      ],
+      "prerequisites": [],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/factory-run.md",
+        "command:python3"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 5,
+      "triggerExamples": [
+        "prepare workstation setup",
+        "install factory tools"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/factory-run.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "command:python3"
+      ]
+    },
+    {
+      "id": "expo-tools",
+      "title": "Enable the official Expo agent profile",
+      "summary": "Verify Expo's official plugin or skills, authenticated MCP, SDK compatibility, and project-local expo-mcp development setup.",
+      "category": "Setup & providers",
+      "platforms": [
+        "local",
+        "ios",
+        "android"
+      ],
+      "whenUseful": "When an Expo project needs current Expo guidance, authenticated build and workflow readback, logs, feedback, or simulator tools.",
+      "stages": [
+        "setup",
+        "planning",
+        "build"
+      ],
+      "claudeInvocation": "/factory-setup --expo-tools",
+      "skillInvocation": "$source-command-factory-setup --expo-tools",
+      "roleIds": [
+        "tech_lead",
+        "security_review",
+        "release_manager"
+      ],
+      "prerequisites": [
+        "factory-setup"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "stack:expo",
+        "plugin:expo",
+        "mcp:expo",
+        "file:docs/playbooks/expo-agent-tools.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 8,
+      "triggerExamples": [
+        "configure expo skills mcp",
+        "expo agent tools"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/expo-agent-tools.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "plugin:expo",
+        "mcp:expo"
+      ]
+    },
+    {
+      "id": "remote-access",
+      "title": "Continue the project from your phone",
+      "summary": "Guide, diagnose, set up, or revoke optional managed phone access for local Codex and Claude Code sessions without exposing the host or storing pairing secrets.",
+      "category": "Phone access",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "When you want to continue the same local Codex or Claude Code project safely from your phone.",
+      "stages": [
+        "setup",
+        "build",
+        "post_launch"
+      ],
+      "claudeInvocation": "/remote-access both --mode=guide",
+      "skillInvocation": "$source-command-remote-access both --mode=guide",
+      "roleIds": [
+        "tech_lead",
+        "security_review"
+      ],
+      "prerequisites": [
+        "factory-setup"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "file:docs/playbooks/remote-access.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 95,
+      "triggerExamples": [
+        "continue the project from your phone",
+        "when you want to continue the same local codex or claude code project safely from your phone."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/remote-access.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "connect-providers",
+      "title": "Connect required providers",
+      "summary": "Verify Firebase, RevenueCat, and fal.ai access without putting credentials in prompts or state.",
+      "category": "Setup & providers",
+      "platforms": [
+        "local",
+        "ios",
+        "android"
+      ],
+      "whenUseful": "When Firebase, RevenueCat, fal.ai, or OpenAI media access is needed and must be connected without leaking credentials.",
+      "stages": [
+        "setup",
+        "build"
+      ],
+      "claudeInvocation": "/connect-providers all",
+      "skillInvocation": "$source-command-connect-providers all",
+      "roleIds": [
+        "tech_lead",
+        "security_review"
+      ],
+      "prerequisites": [
+        "factory-setup"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/ai-media.md",
+        "command:firebase"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 10,
+      "triggerExamples": [
+        "connect required providers",
+        "when firebase, revenuecat, fal.ai, or openai media access is needed and must be connected without leaking credentials."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/ai-media.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "command:firebase"
+      ]
+    },
+    {
+      "id": "continue-app",
+      "title": "Continue an existing app",
+      "summary": "Audit an established repository, review code, reconcile real TODOs, repair the canonical memory bank, and safely resume the best verified task without scaffolding over existing work.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "local",
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "When the repository already contains real work and you need code review, TODO recovery, memory repair, and a safe continuation point.",
+      "stages": [
+        "setup",
+        "discovery",
+        "planning",
+        "build"
+      ],
+      "claudeInvocation": "/continue-app --mode=continue",
+      "skillInvocation": "$source-command-continue-app --mode=continue",
+      "roleIds": [
+        "product_owner",
+        "tech_lead",
+        "security_review"
+      ],
+      "prerequisites": [],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 2
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "existing_project:root",
+        "file:docs/mvp-plan.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 12,
+      "triggerExamples": [
+        "continue an existing app",
+        "audit current application"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "factory-run",
+      "title": "Run the app factory",
+      "summary": "Turn a reference or idea into an evidence-backed blueprint, app, infrastructure, assets, and internal TestFlight build.",
+      "category": "CEO & product",
+      "platforms": [
+        "local",
+        "ios"
+      ],
+      "whenUseful": "When an idea or reference app should be taken through evidence, blueprint, build, and internal iOS delivery.",
+      "stages": [
+        "setup",
+        "discovery"
+      ],
+      "claudeInvocation": "/factory-run <reference-or-idea>",
+      "skillInvocation": "$source-command-factory-run <reference-or-idea>",
+      "roleIds": [
+        "product_ceo",
+        "product_owner",
+        "tech_lead",
+        "release_manager"
+      ],
+      "prerequisites": [
+        "factory-setup"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 3
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/factory-run.md",
+        "file:scripts/factoryctl.py"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 20,
+      "triggerExamples": [
+        "build an app from idea",
+        "automate app factory run"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/factory-run.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "scripts/factoryctl.py",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "new-app",
+      "title": "Plan a new app with guided gates",
+      "summary": "Use the interview path to validate an idea and define product, design, business, and technical scope.",
+      "category": "CEO & product",
+      "platforms": [
+        "local",
+        "ios",
+        "web"
+      ],
+      "whenUseful": "When you prefer a guided product interview before approving the first implementation milestone.",
+      "stages": [
+        "setup",
+        "discovery"
+      ],
+      "claudeInvocation": "/new-app <product-idea>",
+      "skillInvocation": "$source-command-new-app <product-idea>",
+      "roleIds": [
+        "product_ceo",
+        "product_owner",
+        "design_director"
+      ],
+      "prerequisites": [
+        "factory-setup"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 3
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/product-strategy.md",
+        "file:PRODUCT.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 25,
+      "triggerExamples": [
+        "start a new app",
+        "create app blueprint"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/product-strategy.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "guide",
+      "title": "Get guided help choosing the next step",
+      "summary": "Interview the user on product direction and stage, then route to the smallest useful capability and knowledge doc without making them name a command or skill.",
+      "category": "CEO & product",
+      "platforms": [
+        "local",
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "When the user only has an idea, asks what the kit can do, or is unsure what to do next and wants to be walked through the options.",
+      "stages": [
+        "setup",
+        "discovery",
+        "planning",
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/guide",
+      "skillInvocation": "$source-command-guide",
+      "roleIds": [
+        "product_owner",
+        "tech_lead",
+        "design_director"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "file:docs/playbooks/context-engineering.md",
+        "file:docs/knowledge-index.json"
+      ],
+      "promotional": false,
+      "recommendable": false,
+      "rank": 3,
+      "triggerExamples": [
+        "what can this kit do",
+        "what should i do next",
+        "i only have an idea",
+        "guide me",
+        "nereden baslamaliyim",
+        "kit ne yapabilir"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/knowledge-index.json",
+            "reason": "kit knowledge router"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "business-ceo-review",
+      "title": "CEO and business review",
+      "summary": "Challenge the opportunity, wedge, channel, unit economics, proof, and go/kill criteria before build scope hardens.",
+      "category": "CEO & product",
+      "platforms": [
+        "local",
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "Before build scope hardens or whenever opportunity evidence and unit economics need a founder-level challenge; also when deciding which MRR-ladder rung the week serves.",
+      "stages": [
+        "planning"
+      ],
+      "claudeInvocation": "/factory-next --run business-ceo-review",
+      "skillInvocation": "$source-command-factory-next --run business-ceo-review",
+      "roleIds": [
+        "product_ceo"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:PRODUCT.md",
+        "file:docs/growth-plan.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 10,
+      "triggerExamples": [
+        "ceo and business review",
+        "before build scope hardens or whenever opportunity evidence and unit economics need a founder-level challenge.",
+        "which rung of the mrr ladder are we on"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/growth-plan.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "product-scope-review",
+      "title": "Product scope review",
+      "summary": "Audit the core loop, recovery states, instrumentation, retention loop, and milestone boundaries.",
+      "category": "CEO & product",
+      "platforms": [
+        "local",
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "At planning checkpoints when the core loop, recovery, retention, analytics, or milestone boundary may be unclear.",
+      "stages": [
+        "planning"
+      ],
+      "claudeInvocation": "/factory-next --run product-scope-review",
+      "skillInvocation": "$source-command-factory-next --run product-scope-review",
+      "roleIds": [
+        "product_owner"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:docs/mvp-plan.md",
+        "file:docs/product-map.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 15,
+      "triggerExamples": [
+        "product scope review",
+        "at planning checkpoints when the core loop, recovery, retention, analytics, or milestone boundary may be unclear."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/product-map.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "design-system-review",
+      "title": "Design-system and UX review",
+      "summary": "Review screen hierarchy, tokens, accessibility, interaction states, and platform-native visual quality.",
+      "category": "Design, onboarding & monetization",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "Before building or polishing screens that need stronger hierarchy, native conventions, accessibility, and design-system consistency.",
+      "stages": [
+        "planning",
+        "build"
+      ],
+      "claudeInvocation": "/factory-next --run design-system-review",
+      "skillInvocation": "$source-command-factory-next --run design-system-review",
+      "roleIds": [
+        "design_director"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:docs/playbooks/design.md",
+        "file:docs/product-map.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 20,
+      "triggerExamples": [
+        "design-system and ux review",
+        "before building or polishing screens that need stronger hierarchy, native conventions, accessibility, and design-system consistency."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/design.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/product-map.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "onboarding-conversion-review",
+      "title": "Onboarding conversion review",
+      "summary": "Review value proof, personalization, permission timing, activation, paywall handoff, and measurable drop-offs.",
+      "category": "Design, onboarding & monetization",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "When activation, permission timing, onboarding value proof, or the paywall handoff needs measurable improvement.",
+      "stages": [
+        "planning",
+        "build"
+      ],
+      "claudeInvocation": "/factory-next --run onboarding-conversion-review",
+      "skillInvocation": "$source-command-factory-next --run onboarding-conversion-review",
+      "roleIds": [
+        "onboarding_conversion",
+        "product_owner"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:docs/playbooks/onboarding.md",
+        "file:docs/playbooks/analytics.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 25,
+      "triggerExamples": [
+        "onboarding conversion review",
+        "when activation, permission timing, onboarding value proof, or the paywall handoff needs measurable improvement."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/onboarding.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/analytics.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "monetization-review",
+      "title": "Monetization review",
+      "summary": "Review paywall placement, offerings, pricing evidence, entitlements, purchase recovery, and measurement.",
+      "category": "Design, onboarding & monetization",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "Before release or after purchase friction when pricing, offerings, entitlement recovery, and paywall evidence need review.",
+      "stages": [
+        "planning",
+        "release"
+      ],
+      "claudeInvocation": "/factory-next --run monetization-review",
+      "skillInvocation": "$source-command-factory-next --run monetization-review",
+      "roleIds": [
+        "monetization_lead",
+        "security_review"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:docs/playbooks/paywall.md",
+        "file:docs/playbooks/monetization.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 30,
+      "triggerExamples": [
+        "monetization review",
+        "before release or after purchase friction when pricing, offerings, entitlement recovery, and paywall evidence need review."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/paywall.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/monetization.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "motion-review",
+      "title": "Review motion quality",
+      "summary": "Audit animation, gestures, transitions, haptics, reduced-motion behavior, and frame quality without changing code.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "After interactive flows exist and before release, especially when gestures, transitions, haptics, or frame pacing feel inconsistent.",
+      "stages": [
+        "build",
+        "release"
+      ],
+      "claudeInvocation": "/motion-review diff",
+      "skillInvocation": "$source-command-motion-review diff",
+      "roleIds": [
+        "design_director",
+        "tech_lead"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:docs/checklists/motion-quality.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 20,
+      "triggerExamples": [
+        "review motion quality",
+        "after interactive flows exist and before release, especially when gestures, transitions, haptics, or frame pacing feel inconsistent."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/checklists/motion-quality.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "update-docs",
+      "title": "Repair project memory",
+      "summary": "Reconcile recent changes with the canonical product, architecture, stack, milestone, and decision documents.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "After meaningful code or product changes, or when the memory bank and the real repository have drifted apart.",
+      "stages": [
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/update-docs",
+      "skillInvocation": "$source-command-update-docs",
+      "roleIds": [
+        "product_owner",
+        "tech_lead"
+      ],
+      "prerequisites": [],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "milestone",
+      "availabilityChecks": [
+        "file:AGENTS.md",
+        "file:docs/mvp-plan.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 60,
+      "triggerExamples": [
+        "repair project memory",
+        "after meaningful code or product changes, or when the memory bank and the real repository have drifted apart."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "AGENTS.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "store-assets",
+      "title": "Prepare store assets",
+      "summary": "Rewrite and validate market-native Apple App Store or Google Play metadata for every project-targeted locale, plus original icons, deterministic screenshots, and approval-gated upload plans.",
+      "category": "Store & release",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "After M1 and M2 are complete and the release-candidate UI, claims, build, and locale matrix are stable; use for professional per-market listing localization as well as final store creative.",
+      "stages": [
+        "release"
+      ],
+      "claudeInvocation": "/store-assets",
+      "skillInvocation": "$source-command-store-assets",
+      "roleIds": [
+        "design_director",
+        "growth_lead",
+        "release_manager"
+      ],
+      "prerequisites": [],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "release",
+      "availabilityChecks": [
+        "file:docs/playbooks/store-listing.md",
+        "milestone:creative-ready",
+        "command:asc"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 10,
+      "triggerExamples": [
+        "prepare app store screenshots",
+        "create marketing icon",
+        "professionally localize every supported store locale",
+        "rewrite App Store and Google Play listings for each target market"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/store-listing.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/localization.md",
+            "reason": "project locale and market-native localization contract"
+          },
+          {
+            "path": ".agents/skills/source-command-store-assets/references/metadata-localization.md",
+            "reason": "platform field and review workflow"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "command:asc"
+      ]
+    },
+    {
+      "id": "reliability-review",
+      "title": "Reliability and business-health review",
+      "summary": "Inspect crashes, payment health, security risks, provider failures, and release blockers before promotion.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "Before promotion, release, or growth work, and whenever crash, payment, provider, or security health is uncertain.",
+      "stages": [
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/factory-next --run reliability-review",
+      "skillInvocation": "$source-command-factory-next --run reliability-review",
+      "roleIds": [
+        "reliability_operator",
+        "security_review",
+        "release_manager"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "release",
+      "availabilityChecks": [
+        "file:docs/checklists/release.md",
+        "file:docs/checklists/security.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 50,
+      "triggerExamples": [
+        "reliability and business-health review",
+        "before promotion, release, or growth work, and whenever crash, payment, provider, or security health is uncertain."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/checklists/release.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/checklists/security.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "app-store-growth",
+      "title": "Prepare a measurable App Store growth surface",
+      "summary": "Plan, prepare, safely apply, and measure CPP, PPO, creative assets, In-App Events, or tags against exact build truth.",
+      "category": "Store & release",
+      "platforms": [
+        "ios"
+      ],
+      "whenUseful": "After the baseline App Store page is truthful and stable, when one audience page or conversion experiment has a measurable hypothesis.",
+      "stages": [
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/app-store-growth --surface=all --mode=plan --locales=launch",
+      "skillInvocation": "$source-command-app-store-growth --surface=all --mode=plan --locales=launch",
+      "roleIds": [
+        "growth_lead",
+        "design_director",
+        "release_manager"
+      ],
+      "prerequisites": [
+        "store-assets"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "file:docs/playbooks/app-store-growth.md",
+        "skill:source-command-app-store-growth",
+        "claude_command:app-store-growth",
+        "command:asc"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 18,
+      "triggerExamples": [
+        "custom product pages ppo",
+        "app store growth experiment"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/app-store-growth.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "skill:source-command-app-store-growth",
+        "command:asc"
+      ]
+    },
+    {
+      "id": "ship",
+      "title": "Run the release gate",
+      "summary": "Validate per-platform engineering, performance, security, accessibility, review readiness, and approved TestFlight or Play Internal Testing delivery.",
+      "category": "Store & release",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "whenUseful": "After local release gates and store packages are complete for the selected platform.",
+      "stages": [
+        "release"
+      ],
+      "claudeInvocation": "/ship",
+      "skillInvocation": "$source-command-ship",
+      "roleIds": [
+        "release_manager",
+        "security_review",
+        "reliability_operator"
+      ],
+      "prerequisites": [
+        "store-assets"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "release",
+      "availabilityChecks": [
+        "file:docs/checklists/release.md",
+        "command:asc"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 15,
+      "triggerExamples": [
+        "ship release build",
+        "testflight release readiness"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/checklists/release.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "command:asc"
+      ]
+    },
+    {
+      "id": "port-android",
+      "title": "Build the native Android version",
+      "summary": "Port proven SwiftUI behavior into an Android-native Kotlin/Compose app and, after approval, deliver a verified AAB to Play Internal Testing.",
+      "category": "Android parity",
+      "platforms": [
+        "android"
+      ],
+      "whenUseful": "After an owned SwiftUI app has shipped and its real behavior can be used as the parity contract.",
+      "stages": [
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/port-android --scope=shipped --through=internal",
+      "skillInvocation": "$source-command-port-android --scope=shipped --through=internal",
+      "roleIds": [
+        "product_owner",
+        "design_director",
+        "tech_lead",
+        "security_review",
+        "release_manager"
+      ],
+      "prerequisites": [
+        "ship"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 3
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "stack:swiftui",
+        "file:docs/android-parity.md",
+        "file:docs/playbooks/android-port.md"
+      ],
+      "promotional": true,
+      "recommendable": true,
+      "rank": 65,
+      "triggerExamples": [
+        "build the native android version",
+        "after an owned swiftui app has shipped and its real behavior can be used as the parity contract."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/android-parity.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/android-port.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "growth-loop",
+      "title": "Diagnose the growth bottleneck",
+      "summary": "Compare ASC, RevenueCat, and Firebase evidence and propose one measurable guarded experiment.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "After launch when acquisition, activation, conversion, retention, or revenue evidence points to one bottleneck worth testing; also when deciding which MRR-ladder rung the week serves.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/growth-loop --window=auto",
+      "skillInvocation": "$source-command-growth-loop --window=auto",
+      "roleIds": [
+        "growth_lead",
+        "product_ceo",
+        "monetization_lead"
+      ],
+      "prerequisites": [
+        "reliability-review"
+      ],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 1
+      },
+      "defaultPriority": "now",
+      "defaultCadence": "weekly",
+      "availabilityChecks": [
+        "file:docs/playbooks/growth-loop.md",
+        "file:docs/growth-plan.md"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 20,
+      "triggerExamples": [
+        "analyze post launch growth",
+        "find next growth experiment",
+        "which rung of the mrr ladder are we on"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/growth-loop.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/growth-plan.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/distribution.md",
+            "reason": "channel execution contract (creators, meme pages, UGC, paid ads)"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "operate-app",
+      "title": "Prepare the weekly post-launch package",
+      "summary": "Run health and review listening, research current channels, and prepare platform-native drafts plus measurement.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "After publication, for a repeatable health, listening, draft-content, website, and measurement cadence.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/operate-app --cadence=weekly --mode=draft",
+      "skillInvocation": "$source-command-operate-app --cadence=weekly --mode=draft",
+      "roleIds": [
+        "growth_lead",
+        "reliability_operator",
+        "video_producer"
+      ],
+      "prerequisites": [
+        "reliability-review"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 3
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "weekly",
+      "availabilityChecks": [
+        "file:docs/playbooks/post-launch.md",
+        "file:docs/growth-plan.md"
+      ],
+      "promotional": true,
+      "recommendable": true,
+      "rank": 30,
+      "triggerExamples": [
+        "operate published app",
+        "reviews social website operations"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/post-launch.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/growth-plan.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/distribution.md",
+            "reason": "channel execution contract (creators, meme pages, UGC, paid ads)"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "video-production",
+      "title": "Produce a short-form video package",
+      "summary": "Research Instagram and TikTok, script a truthful hook, plan real app footage, prepare a Remotion brief, and define measurement.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "When a shipped product state is ready to become truthful short-form creative using real footage.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/operate-app --cadence=weekly --mode=draft --platforms=instagram,tiktok",
+      "skillInvocation": "$source-command-operate-app --cadence=weekly --mode=draft --platforms=instagram,tiktok",
+      "roleIds": [
+        "video_producer",
+        "growth_lead",
+        "design_director"
+      ],
+      "prerequisites": [
+        "reliability-review"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 2
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "weekly",
+      "availabilityChecks": [
+        "file:docs/playbooks/marketing-video.md",
+        "file:docs/playbooks/post-launch.md"
+      ],
+      "promotional": true,
+      "recommendable": true,
+      "rank": 45,
+      "triggerExamples": [
+        "produce a short-form video package",
+        "when a shipped product state is ready to become truthful short-form creative using real footage."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/marketing-video.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/post-launch.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/distribution.md",
+            "reason": "channel execution contract (creators, meme pages, UGC, paid ads)"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "website-optimization",
+      "title": "Prepare the app website brief",
+      "summary": "Create a detailed responsive landing-page brief grounded in shipped product proof, SEO, analytics, accessibility, and performance.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "web"
+      ],
+      "whenUseful": "After the shipped product and store claims are stable enough to become the website source of truth.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/operate-app --cadence=weekly --mode=draft --platforms=web",
+      "skillInvocation": "$source-command-operate-app --cadence=weekly --mode=draft --platforms=web",
+      "roleIds": [
+        "design_director",
+        "growth_lead"
+      ],
+      "prerequisites": [
+        "reliability-review"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 2
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "monthly",
+      "availabilityChecks": [
+        "file:docs/playbooks/post-launch.md",
+        "file:docs/product-map.md"
+      ],
+      "promotional": true,
+      "recommendable": true,
+      "rank": 50,
+      "triggerExamples": [
+        "prepare the app website brief",
+        "after the shipped product and store claims are stable enough to become the website source of truth."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/post-launch.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/product-map.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "web-3d",
+      "title": "Build a Three.js or WebGPU experience",
+      "summary": "Classify the 3D job, install the smallest pinned Three.js skill subset, and ship it with measured browser evidence.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "web"
+      ],
+      "whenUseful": "When the product needs a real-time 3D scene, a WebGL hero section, a browser game, a 3D product configurator, or WebGPU/TSL shader work that a static render cannot deliver.",
+      "stages": [
+        "build",
+        "post_launch"
+      ],
+      "claudeInvocation": "/web-3d <goal>",
+      "skillInvocation": "$source-command-web-3d <goal>",
+      "roleIds": [
+        "tech_lead",
+        "design_director",
+        "growth_lead"
+      ],
+      "prerequisites": [
+        "product-scope-review"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 2
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/web-3d.md",
+        "command:npx"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 60,
+      "triggerExamples": [
+        "add a three.js 3d scene",
+        "build a browser game with three.js",
+        "webgpu tsl shader work",
+        "3d product configurator",
+        "webgl hero section for the landing page"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/web-3d.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/skill-discovery.md",
+            "reason": "external skill install doctrine"
+          },
+          {
+            "path": "docs/checklists/performance.md",
+            "reason": "frame-budget and perf floor"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "web-design",
+      "title": "Design a web page grounded in its subject",
+      "summary": "Plan a token system from the product's own domain, critique it against generated-design defaults, then build and measure the page.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "web"
+      ],
+      "whenUseful": "When a web page, landing page, or marketing surface is being built or restyled and it must look intentional rather than generated — before any markup, not after.",
+      "stages": [
+        "build",
+        "post_launch"
+      ],
+      "claudeInvocation": "/web-design <page or goal>",
+      "skillInvocation": "$source-command-web-design <page or goal>",
+      "roleIds": [
+        "design_director",
+        "tech_lead",
+        "growth_lead"
+      ],
+      "prerequisites": [
+        "product-scope-review"
+      ],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "cloud_safe",
+        "maxWorkers": 2
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/web-design.md",
+        "command:npx"
+      ],
+      "promotional": false,
+      "recommendable": true,
+      "rank": 61,
+      "triggerExamples": [
+        "design a landing page",
+        "this page looks ai generated",
+        "restyle the marketing site",
+        "make the site look less generic",
+        "web page typography and design tokens"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/playbooks/web-design.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/stack/web.md",
+            "reason": "web stack contract"
+          },
+          {
+            "path": "docs/playbooks/skill-discovery.md",
+            "reason": "external skill install doctrine"
+          },
+          {
+            "path": "docs/checklists/accessibility.md",
+            "reason": "web a11y gate"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "dynamic-workflow",
+      "title": "Run a bounded dynamic workflow",
+      "summary": "Fan out complex independent work through a provider-adaptive plan, isolated writers, independent verification, and lead-reviewed synthesis.",
+      "category": "Code, quality, motion & docs",
+      "platforms": ["local", "ios", "android", "web"],
+      "whenUseful": "When a high-value task has at least five independent items, competing hypotheses, rubric-based attempts, a large partitionable migration, or many claims that need independent verification.",
+      "stages": ["discovery", "planning", "build", "release", "post_launch"],
+      "claudeInvocation": "/dynamic-workflow <goal> --provider=auto --mode=plan",
+      "skillInvocation": "$source-command-dynamic-workflow <goal> --provider=auto --mode=plan",
+      "roleIds": ["tech_lead", "security_review", "product_ceo"],
+      "prerequisites": [],
+      "risk": "local_write",
+      "delegation": {"mode": "cloud_safe", "maxWorkers": 3},
+      "workflowPolicy": {
+        "strategy": "provider_adaptive",
+        "defaultConcurrency": 3,
+        "maxConcurrency": 8,
+        "defaultTotalAgents": 20,
+        "approvalRequiredAboveTotal": 20,
+        "requiresWorktreeForWrites": true
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "skill:source-command-dynamic-workflow",
+        "file:docs/playbooks/dynamic-workflows.md",
+        "command:git",
+        "command:python3"
+      ],
+      "promotional": false,
+      "recommendable": false,
+      "rank": 58,
+      "triggerExamples": [
+        "use a dynamic workflow",
+        "workflow kullan",
+        "run many independent reviews",
+        "cok sayida bagimsiz inceleme",
+        "adversarial verification",
+        "buyuk migration icin workflow",
+        "fan out and synthesize",
+        "use a tournament to select the best result"
+      ],
+      "contextProfile": {
+        "refs": [
+          {"path": "PRODUCT.md", "reason": "product and authority truth"},
+          {"path": "docs/mvp-plan.md", "reason": "current milestone and scope"},
+          {"path": "docs/playbooks/dynamic-workflows.md", "reason": "workflow eligibility, limits, adapters, and isolation contract"},
+          {"path": "docs/playbooks/context-engineering.md", "reason": "capsule and receipt contract"},
+          {"path": "docs/playbooks/remote-execution.md", "reason": "worker authority boundary"}
+        ],
+        "stateProjection": ["lifecycleStage", "health", "activeTask", "humanActions"]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "post-launch-schedule",
+      "title": "Prepare recurring post-launch operations",
+      "summary": "Preview a safe health, research, draft, and monthly audit schedule without scheduling publication or spend.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "local",
+        "ios",
+        "android",
+        "web"
+      ],
+      "whenUseful": "After one manual post-launch cycle works and you want a reviewable recurring cadence without automatic publishing or spend.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/operate-app --cadence=weekly --mode=draft --schedule=full",
+      "skillInvocation": "$source-command-operate-app --cadence=weekly --mode=draft --schedule=full",
+      "roleIds": [
+        "growth_lead",
+        "reliability_operator"
+      ],
+      "prerequisites": [
+        "operate-app"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "once",
+      "availabilityChecks": [
+        "file:docs/playbooks/post-launch.md"
+      ],
+      "promotional": true,
+      "recommendable": true,
+      "rank": 70,
+      "triggerExamples": [
+        "prepare recurring post-launch operations",
+        "after one manual post-launch cycle works and you want a reviewable recurring cadence without automatic publishing or spend."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/post-launch.md",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "publish-content",
+      "title": "Publish an approved channel package",
+      "summary": "Publish a reviewed X, Instagram, TikTok, Reddit, and web package only after draft, health, readiness, and explicit platform approval.",
+      "category": "Growth, video, web & operations",
+      "platforms": [
+        "web"
+      ],
+      "whenUseful": "Only after a channel-specific draft is approved and health, readiness, disclosure, and platform permissions are green.",
+      "stages": [
+        "post_launch"
+      ],
+      "claudeInvocation": "/operate-app --mode=publish --platforms=x,instagram,tiktok,reddit,web",
+      "skillInvocation": "$source-command-operate-app --mode=publish --platforms=x,instagram,tiktok,reddit,web",
+      "roleIds": [
+        "growth_lead",
+        "release_manager"
+      ],
+      "prerequisites": [
+        "operate-app"
+      ],
+      "risk": "approval_gated_external",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "file:docs/playbooks/post-launch.md"
+      ],
+      "promotional": true,
+      "recommendable": false,
+      "rank": 80,
+      "triggerExamples": [
+        "publish an approved channel package",
+        "only after a channel-specific draft is approved and health, readiness, disclosure, and platform permissions are green."
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/post-launch.md",
+            "reason": "capability contract"
+          },
+          {
+            "path": "docs/playbooks/distribution.md",
+            "reason": "channel execution contract (creators, meme pages, UGC, paid ads)"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    },
+    {
+      "id": "harness-health",
+      "title": "Verify agent handoff health",
+      "summary": "Validate versioned task packets, diagnose stale or malformed handoffs, and regenerate fresh capsules across Codex, Claude, and CLI agents.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "When a tool call or receipt is malformed, an agent forgets the task, a provider switch loses context, or Factory Status reports a degraded or blocked harness.",
+      "stages": [
+        "setup",
+        "discovery",
+        "planning",
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/harness-health --mode=diagnose",
+      "skillInvocation": "$source-command-harness-health --mode=diagnose",
+      "roleIds": [
+        "tech_lead",
+        "reliability_operator"
+      ],
+      "prerequisites": [],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "next",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "skill:source-command-harness-health",
+        "command:python3",
+        "file:docs/playbooks/context-engineering.md"
+      ],
+      "promotional": false,
+      "recommendable": false,
+      "rank": 55,
+      "triggerExamples": [
+        "tool call schema is malformed",
+        "receipt validation is failing",
+        "the agent forgot the task after switching from Claude to Codex",
+        "handoff is degraded or blocked",
+        "ajan gorevi unuttu",
+        "claude codex gecisinde context kayboldu"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "docs/playbooks/context-engineering.md",
+            "reason": "capsule receipt and harness contract"
+          },
+          {
+            "path": ".claude/commands/harness-health.md",
+            "reason": "harness diagnosis workflow"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "skill:source-command-harness-health",
+        "command:python3"
+      ]
+    },
+    {
+      "id": "external-skill-discovery",
+      "title": "Find a trusted external skill",
+      "summary": "Search the open Agent Skills ecosystem only when the local kit has no strong capability match, then review candidates before any install.",
+      "category": "Code, quality, motion & docs",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "When the user needs a specialized workflow that the local capability router cannot match with high confidence.",
+      "stages": [
+        "setup",
+        "discovery",
+        "planning",
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/find-skills <goal>",
+      "skillInvocation": "$find-skills",
+      "roleIds": [
+        "tech_lead"
+      ],
+      "prerequisites": [],
+      "risk": "local_write",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "skill:find-skills",
+        "command:npx",
+        "file:docs/playbooks/skill-discovery.md"
+      ],
+      "promotional": false,
+      "recommendable": false,
+      "rank": 998,
+      "triggerExamples": [
+        "is there a good skill for this goal",
+        "find an agent skill for a missing capability",
+        "search external skills when the local catalog has no match"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/playbooks/skill-discovery.md",
+            "reason": "external discovery and install gate"
+          },
+          {
+            "path": ".agents/skills/find-skills/SKILL.md",
+            "reason": "official discovery workflow"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": [
+        "skill:find-skills",
+        "command:npx"
+      ]
+    },
+    {
+      "id": "factory-next",
+      "title": "Show the next best factory actions",
+      "summary": "Refresh recommendations, manage TODOs, browse capabilities, and prepare a safe task prompt from one entry point.",
+      "category": "CEO & product",
+      "platforms": [
+        "local"
+      ],
+      "whenUseful": "At any checkpoint when you want the safest next action or want to queue a capability without remembering its command.",
+      "stages": [
+        "setup",
+        "discovery",
+        "planning",
+        "build",
+        "release",
+        "post_launch"
+      ],
+      "claudeInvocation": "/factory-next",
+      "skillInvocation": "$source-command-factory-next",
+      "roleIds": [
+        "product_owner"
+      ],
+      "prerequisites": [],
+      "risk": "read_only",
+      "delegation": {
+        "mode": "none",
+        "maxWorkers": 0
+      },
+      "defaultPriority": "later",
+      "defaultCadence": "on_demand",
+      "availabilityChecks": [
+        "file:docs/capabilities.json",
+        "file:scripts/factoryctl.py"
+      ],
+      "promotional": false,
+      "recommendable": false,
+      "rank": 999,
+      "triggerExamples": [
+        "what should I do next",
+        "recommend next capability"
+      ],
+      "contextProfile": {
+        "refs": [
+          {
+            "path": "PRODUCT.md",
+            "reason": "product truth"
+          },
+          {
+            "path": "docs/mvp-plan.md",
+            "reason": "current milestone and scope"
+          },
+          {
+            "path": "docs/capabilities.json",
+            "reason": "capability contract"
+          },
+          {
+            "path": "scripts/factoryctl.py",
+            "reason": "capability contract"
+          }
+        ],
+        "stateProjection": [
+          "lifecycleStage",
+          "health",
+          "activeTask",
+          "humanActions"
+        ]
+      },
+      "toolRequirements": []
+    }
+  ]
+}

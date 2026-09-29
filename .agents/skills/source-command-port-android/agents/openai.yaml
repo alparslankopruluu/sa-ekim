@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build the Android version"
+  short_description: "Port a shipped iOS app to native Android."
+  default_prompt: "Use $source-command-port-android to build the native Android version of this shipped iOS app."

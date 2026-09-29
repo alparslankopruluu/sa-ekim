@@ -1,0 +1,65 @@
+{
+  "cli": {
+    "version": ">= 18.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "resourceClass": "default"
+    },
+    "mock": {
+      "extends": "base",
+      "distribution": "internal",
+      "developmentClient": true,
+      "env": {
+        "EXPO_PUBLIC_BACKEND_MODE": "mock"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "development": {
+      "extends": "base",
+      "distribution": "internal",
+      "developmentClient": true,
+      "environment": "development",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_MODE": "emulator"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "extends": "base",
+      "distribution": "internal",
+      "environment": "preview",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_MODE": "live"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "environment": "production",
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_BACKEND_MODE": "live"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {},
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    }
+  }
+}

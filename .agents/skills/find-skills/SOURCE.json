@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "source": "https://github.com/vercel-labs/skills",
+  "path": "skills/find-skills",
+  "revision": "941a7bcfeca4bf07913b9fb6f8ed81f20ff5297c",
+  "skillSha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+  "license": "MIT",
+  "licenseUrl": "https://github.com/vercel-labs/skills/blob/941a7bcfeca4bf07913b9fb6f8ed81f20ff5297c/LICENSE"
+}

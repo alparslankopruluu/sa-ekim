@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web 3D"
+  short_description: "Three.js/WebGPU scenes, browser games, and 3D configurators"
+  default_prompt: "Use $source-command-web-3d to build the requested Three.js or WebGPU experience with pinned expert skills and browser evidence."

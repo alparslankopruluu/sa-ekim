@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide"
+  short_description: "Route an idea or question to the right next step"
+  default_prompt: "Use $source-command-guide to interview me on my product direction and recommend the smallest useful next step."

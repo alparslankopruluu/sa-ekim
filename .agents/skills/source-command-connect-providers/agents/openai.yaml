@@ -1,0 +1,4 @@
+interface:
+  display_name: Connect providers
+  short_description: Connect Firebase, RevenueCat, and fal.ai safely.
+  default_prompt: Use $source-command-connect-providers to verify provider connections without exposing secrets.

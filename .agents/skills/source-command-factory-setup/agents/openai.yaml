@@ -1,0 +1,4 @@
+interface:
+  display_name: "Factory Setup"
+  short_description: "Prepare the factory toolchain and authentication"
+  default_prompt: "Use $source-command-factory-setup to prepare this Mac for app-factory runs."

@@ -1,0 +1,4 @@
+interface:
+  display_name: Operate published app
+  short_description: Run post-launch health, social, website, and growth operations.
+  default_prompt: Use $source-command-operate-app to prepare this week's evidence-backed post-launch operating package.

@@ -1,0 +1,17 @@
+# Build output
+/lib/
+/lib-test/
+
+# Dependencies
+node_modules/
+
+# Local-only secrets and env (never committed; see .secret.local.example)
+*.local
+.secret.local
+.env
+.env.*
+
+# Logs
+firebase-debug.log
+firebase-debug.*.log
+npm-debug.log*

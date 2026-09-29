@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "comment": "Single source of truth for every external pin the kit references. tests/test_pins.py asserts each docPath still carries the exact pin and that no unmanifested 40-hex pin exists anywhere; scripts/check_pins.py reports upstream drift (review stays human).",
+  "pins": [
+    {
+      "id": "rorkai-asc-skills",
+      "kind": "skill",
+      "source": "github:rorkai/app-store-connect-cli-skills",
+      "pin": "13861c2051189e08ac843b396c90dda004b916a8",
+      "docPaths": [
+        "README.md",
+        ".claude/commands/factory-setup.md",
+        "docs/playbooks/app-store-connect.md"
+      ],
+      "watchPaths": [
+        "skills/asc-cli-usage",
+        "skills/asc-id-resolver",
+        "skills/asc-signing-setup",
+        "skills/asc-app-create-ui",
+        "skills/asc-xcode-build",
+        "skills/asc-revenuecat-catalog-sync",
+        "skills/asc-ppp-pricing",
+        "skills/asc-subscription-localization",
+        "skills/asc-metadata-sync",
+        "skills/asc-localize-metadata",
+        "skills/asc-shots-pipeline",
+        "skills/asc-submission-health",
+        "skills/asc-testflight-orchestration",
+        "skills/asc-build-lifecycle"
+      ]
+    },
+    {
+      "id": "google-android-skills",
+      "kind": "skill",
+      "source": "github:android/skills",
+      "pin": "1e5e7ae6138bebd0835d0d5854b0b9adfeed3181",
+      "tag": "v1.0.7",
+      "docPaths": [
+        ".claude/commands/factory-setup.md",
+        "docs/playbooks/android-expert-tools.md"
+      ],
+      "watchPaths": [
+        "devtools/android-cli",
+        "navigation/navigation-3",
+        "jetpack-compose/adaptive",
+        "jetpack-compose/theming/styles",
+        "system/edge-to-edge",
+        "testing/testing-setup",
+        "performance/r8-analyzer",
+        "security/android-intent-security",
+        "play/play-policy-insights"
+      ]
+    },
+    {
+      "id": "rcosteira79-android-skills",
+      "kind": "skill",
+      "source": "github:rcosteira79/android-skills",
+      "pin": "6373e59c1dcdb28fe94649e7db59055a5052f4db",
+      "docPaths": [
+        ".claude/commands/factory-setup.md",
+        "docs/playbooks/android-expert-tools.md"
+      ],
+      "watchPaths": [
+        "plugins/android-skills/skills/android-dev",
+        "plugins/android-skills/skills/compose",
+        "plugins/android-skills/skills/kotlin-coroutines",
+        "plugins/android-skills/skills/kotlin-flows",
+        "plugins/android-skills/skills/android-testing",
+        "plugins/android-skills/skills/android-debugging",
+        "plugins/android-skills/skills/android-gradle-logic"
+      ]
+    },
+    {
+      "id": "cloudai-threejs-skills",
+      "kind": "skill",
+      "source": "github:CloudAI-X/threejs-skills",
+      "pin": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "docPaths": [
+        "docs/playbooks/web-3d.md"
+      ],
+      "watchPaths": [
+        "skills/threejs-fundamentals",
+        "skills/threejs-geometry",
+        "skills/threejs-materials",
+        "skills/threejs-lighting",
+        "skills/threejs-textures",
+        "skills/threejs-animation",
+        "skills/threejs-loaders",
+        "skills/threejs-shaders",
+        "skills/threejs-postprocessing",
+        "skills/threejs-interaction"
+      ]
+    },
+    {
+      "id": "majid-threejs-game-skills",
+      "kind": "skill",
+      "source": "github:majidmanzarpour/threejs-game-skills",
+      "pin": "7221c1f4a6d2ae189a4d85d058d24f3228499d46",
+      "docPaths": [
+        "docs/playbooks/web-3d.md"
+      ],
+      "watchPaths": [
+        "skills/threejs-game-director",
+        "skills/threejs-gameplay-systems",
+        "skills/threejs-aaa-graphics-builder",
+        "skills/threejs-game-ui-designer",
+        "skills/threejs-debug-profiler",
+        "skills/threejs-qa-release",
+        "skills/threejs-3d-generator",
+        "skills/threejs-image-generator",
+        "skills/threejs-audio-generator"
+      ]
+    },
+    {
+      "id": "dgreenheck-webgpu-tsl",
+      "kind": "skill",
+      "source": "github:dgreenheck/webgpu-claude-skill",
+      "pin": "af2319bd01bb7cc881267a9ef42cafdaf5e9029d",
+      "docPaths": [
+        "docs/playbooks/web-3d.md"
+      ],
+      "watchPaths": [
+        "skills/webgpu-threejs-tsl"
+      ]
+    },
+    {
+      "id": "anthropic-frontend-design",
+      "kind": "skill",
+      "source": "github:anthropics/claude-plugins-official",
+      "pin": "f8f7402b0ff3b88bf311d2efedeb6aad5841d0bb",
+      "docPaths": [
+        "docs/playbooks/web-design.md"
+      ],
+      "watchPaths": [
+        "plugins/frontend-design/skills/frontend-design"
+      ]
+    },
+    {
+      "id": "mengto-web-design-skills",
+      "kind": "skill",
+      "source": "github:MengTo/Skills",
+      "pin": "22bacc4c4b5094001462d639df553a49a7642770",
+      "docPaths": [
+        "docs/playbooks/web-design.md"
+      ],
+      "watchPaths": [
+        "agent-skills/web-design/landing-page",
+        "agent-skills/web-design/pricing-page",
+        "agent-skills/web-design/build-awwwards-quality-sites",
+        "agent-skills/web-design/animation-systems",
+        "agent-skills/web-design/animation-on-scroll",
+        "agent-skills/web-design/gsap",
+        "agent-skills/web-design/tailwindcss"
+      ]
+    },
+    {
+      "id": "twostraws-swiftui",
+      "kind": "skill",
+      "source": "github:twostraws/SwiftUI-Agent-Skill",
+      "pin": "be297ff80dddec529af1f9b1f1f114aab6c9d11c",
+      "docPaths": [
+        "docs/playbooks/ios-expert-tools.md"
+      ]
+    },
+    {
+      "id": "twostraws-swift-concurrency",
+      "kind": "skill",
+      "source": "github:twostraws/Swift-Concurrency-Agent-Skill",
+      "pin": "bee3f69ba17142da148d3c5406f148ed62592b69",
+      "docPaths": [
+        "docs/playbooks/ios-expert-tools.md"
+      ]
+    },
+    {
+      "id": "twostraws-swift-testing",
+      "kind": "skill",
+      "source": "github:twostraws/Swift-Testing-Agent-Skill",
+      "pin": "2d6bba14a3c8bf3694f218b92fffe617c41ae43e",
+      "docPaths": [
+        "docs/playbooks/ios-expert-tools.md"
+      ]
+    },
+    {
+      "id": "twostraws-swiftdata",
+      "kind": "skill",
+      "source": "github:twostraws/SwiftData-Agent-Skill",
+      "pin": "922d989473a9914210b41529a1ac5636aff4b8c1",
+      "docPaths": [
+        "docs/playbooks/ios-expert-tools.md"
+      ]
+    },
+    {
+      "id": "axiom-mcp",
+      "kind": "npm",
+      "source": "npm:axiom-mcp",
+      "pin": "27.0.0-beta.20",
+      "docPaths": [
+        ".claude/commands/factory-setup.md",
+        "docs/playbooks/ios-expert-tools.md"
+      ]
+    },
+    {
+      "id": "vercel-find-skills",
+      "kind": "skill",
+      "source": "github:vercel-labs/skills",
+      "pin": "941a7bcfeca4bf07913b9fb6f8ed81f20ff5297c",
+      "watchPaths": [
+        "skills/find-skills"
+      ],
+      "docPaths": [
+        ".agents/skills/find-skills/SOURCE.json"
+      ]
+    },
+    {
+      "id": "hypershots",
+      "kind": "vendor",
+      "source": "github:hypersocialinc/hypershots",
+      "pin": "cbce9d8769a10e50a4bf4dd497cb042159813801",
+      "docPaths": [
+        ".agents/skills/source-command-store-assets/vendor/hypershots/PARITY.json"
+      ]
+    },
+    {
+      "id": "fontsource",
+      "kind": "npm",
+      "source": "npm:fontsource",
+      "pin": "5.2.10",
+      "docPaths": [
+        ".agents/skills/source-command-store-assets/vendor/hypershots/PARITY.json",
+        ".agents/skills/source-command-store-assets/vendor/hypershots/assets/fonts.css"
+      ]
+    },
+    {
+      "id": "asc-cli",
+      "kind": "cli",
+      "source": "brew:asc",
+      "pin": ">=3.1.0,<4",
+      "docPaths": [
+        ".claude/commands/factory-setup.md",
+        "docs/playbooks/app-store-connect.md",
+        "docs/checklists/release.md"
+      ]
+    },
+    {
+      "id": "node-runtime",
+      "kind": "runtime",
+      "source": "node",
+      "pin": ">=22.12.0",
+      "docPaths": [
+        "docs/checklists/release.md"
+      ]
+    },
+    {
+      "id": "expo-sdk-tooling-floor",
+      "kind": "runtime",
+      "source": "expo-sdk",
+      "pin": "SDK 54+",
+      "comment": "Minimum SDK for the official project-local expo-mcp tooling.",
+      "docPaths": [
+        "docs/playbooks/expo-agent-tools.md"
+      ]
+    },
+    {
+      "id": "expo-sdk-legacy-removal",
+      "kind": "runtime",
+      "source": "expo-sdk",
+      "pin": "legacy removed in SDK 55",
+      "comment": "Distinct fact from the tooling floor: current template targets SDK 56+; the legacy architecture was removed in SDK 55. Both docs must state it identically.",
+      "docPaths": [
+        "docs/stack/expo-rn.md",
+        "docs/checklists/performance.md"
+      ]
+    },
+    {
+      "id": "anthropic-claude-cookbooks",
+      "kind": "doctrine",
+      "source": "github:anthropics/claude-cookbooks",
+      "pin": "f65eb122a51e9710d4db3f4893016879c65c77d6",
+      "comment": "Reviewed orchestrator-worker, async subagent, evaluation, budget, and managed-agent patterns; referenced as doctrine and never vendored or auto-executed.",
+      "docPaths": ["docs/playbooks/dynamic-workflows.md"],
+      "watchPaths": ["patterns/agents", "managed_agents"]
+    }
+  ]
+}

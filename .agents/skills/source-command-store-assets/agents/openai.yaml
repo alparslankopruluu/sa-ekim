@@ -1,0 +1,4 @@
+interface:
+  display_name: "Localize store assets"
+  short_description: "Rewrite every target market store listing"
+  default_prompt: "Use $source-command-store-assets to rewrite and validate the Apple App Store and Google Play listings for every project-targeted locale."

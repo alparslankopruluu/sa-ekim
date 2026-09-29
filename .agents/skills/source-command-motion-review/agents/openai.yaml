@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Review"
+  short_description: "Review native motion, gestures, and haptic feedback"
+  default_prompt: "Use $source-command-motion-review to review this SwiftUI or Expo motion diff without changing code."

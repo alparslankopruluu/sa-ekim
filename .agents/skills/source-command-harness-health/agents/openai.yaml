@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Health"
+  short_description: "Diagnose and prepare verified agent handoffs"
+  default_prompt: "Use $source-command-harness-health to diagnose this agent handoff and prepare the smallest safe repair."

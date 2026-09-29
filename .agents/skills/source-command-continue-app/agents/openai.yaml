@@ -1,0 +1,4 @@
+interface:
+  display_name: "Continue an existing app"
+  short_description: "Review, repair memory, and resume safely."
+  default_prompt: "Use $source-command-continue-app to audit this existing app, repair its memory bank, and continue the best verified TODO."

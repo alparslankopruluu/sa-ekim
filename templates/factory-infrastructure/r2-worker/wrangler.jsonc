@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "__APP_SLUG__-assets",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-10",
+  "workers_dev": true,
+  "env": {
+    "dev": {
+      "name": "__APP_SLUG__-dev-assets",
+      "r2_buckets": [
+        {
+          "binding": "ASSETS",
+          "bucket_name": "__APP_SLUG__-dev-assets"
+        }
+      ]
+    },
+    "prod": {
+      "name": "__APP_SLUG__-prod-assets",
+      "r2_buckets": [
+        {
+          "binding": "ASSETS",
+          "bucket_name": "__APP_SLUG__-prod-assets"
+        }
+      ]
+    }
+  }
+}

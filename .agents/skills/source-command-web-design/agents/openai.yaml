@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Design"
+  short_description: "Subject-grounded web pages that avoid generated-looking defaults"
+  default_prompt: "Use $source-command-web-design to design the requested page grounded in its subject, with pinned design skills and browser evidence."

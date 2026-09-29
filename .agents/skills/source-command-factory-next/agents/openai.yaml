@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose the next factory action"
+  short_description: "Recommend, track, and prepare the next app task."
+  default_prompt: "Use $source-command-factory-next to show the three best actions for this app and prepare the top safe task."

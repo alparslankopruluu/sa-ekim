@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://app-factory.local/contracts/context-capsule-v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contractType", "contract", "capsuleId", "taskId", "project", "task", "current", "contextRefs", "review", "routing", "handoffSequence", "createdAt"],
+  "properties": {
+    "schemaVersion": {"type": "integer", "enum": [2]},
+    "contractType": {"type": "string", "enum": ["context_capsule"]},
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "adapterVersion", "packetDigest"],
+      "properties": {
+        "target": {"type": "string", "enum": ["codex", "claude", "cli"]},
+        "adapterVersion": {"type": "string", "minLength": 1},
+        "packetDigest": {"type": "string", "pattern": "sha256:[0-9a-f]{64}"}
+      }
+    },
+    "capsuleId": {"type": "string", "minLength": 1},
+    "taskId": {"type": "string", "minLength": 1},
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["root", "branch", "head", "workingTreeDigest", "fingerprint"],
+      "properties": {
+        "root": {"type": "string", "minLength": 1},
+        "branch": {"type": "string", "minLength": 1},
+        "head": {"type": "string", "minLength": 1},
+        "workingTreeDigest": {"type": "string", "pattern": "sha256:[0-9a-f]{64}"},
+        "fingerprint": {"type": "string", "minLength": 1}
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "capabilityId", "objective", "allowedPaths", "forbiddenPaths", "acceptance", "validations", "risk", "approvalRequirements"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "capabilityId": {"type": ["string", "null"]},
+        "objective": {"type": "string", "minLength": 1},
+        "allowedPaths": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "forbiddenPaths": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "acceptance": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "criterion"], "properties": {"id": {"type": "string", "minLength": 1}, "criterion": {"type": "string", "minLength": 1}}}},
+        "validations": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "command"], "properties": {"id": {"type": "string", "minLength": 1}, "command": {"type": "string", "minLength": 1}}}},
+        "risk": {"type": "string", "enum": ["read_only", "local_write", "approval_gated_external"]},
+        "approvalRequirements": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "current": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["milestone", "completedSummary", "decisions", "openRisks", "humanActions", "evidenceRefs", "exactNextAction"],
+      "properties": {
+        "milestone": {"type": "string", "minLength": 1},
+        "completedSummary": {"type": "string"},
+        "decisions": {"type": "array", "items": {"type": "string"}},
+        "openRisks": {"type": "array", "items": {"type": "string"}},
+        "humanActions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "title"], "properties": {"id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 1}}}},
+        "evidenceRefs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "exactNextAction": {"type": "string", "minLength": 1}
+      }
+    },
+    "contextRefs": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["path", "section", "reason", "sourceSha256", "contentSha256", "bytes", "estimatedTokens"], "properties": {"path": {"type": "string", "minLength": 1}, "section": {"type": ["string", "null"]}, "reason": {"type": "string", "minLength": 1}, "sourceSha256": {"type": "string", "pattern": "sha256:[0-9a-f]{64}"}, "contentSha256": {"type": "string", "pattern": "sha256:[0-9a-f]{64}"}, "bytes": {"type": "integer"}, "estimatedTokens": {"type": "integer"}}}},
+    "review": {"type": "object", "additionalProperties": false, "required": ["target"], "properties": {"target": {"type": "string", "enum": ["codex", "claude", "cli"]}}},
+    "routing": {"type": "object", "additionalProperties": false, "required": ["selectedCapabilityId", "skillInvocation", "claudeInvocation", "toolRequirements"], "properties": {"selectedCapabilityId": {"type": ["string", "null"]}, "skillInvocation": {"type": ["string", "null"]}, "claudeInvocation": {"type": ["string", "null"]}, "toolRequirements": {"type": "array", "items": {"type": "string"}}}},
+    "handoffSequence": {"type": "integer"},
+    "createdAt": {"type": "string", "minLength": 1}
+  }
+}

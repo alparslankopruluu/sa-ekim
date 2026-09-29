@@ -1,0 +1,4 @@
+interface:
+  display_name: "New App"
+  short_description: "Validate and scaffold a new app safely"
+  default_prompt: "Use $source-command-new-app to turn my idea into an approved app blueprint and MVP."

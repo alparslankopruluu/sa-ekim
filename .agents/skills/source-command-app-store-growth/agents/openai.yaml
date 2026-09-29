@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Store Growth"
+  short_description: "Plan and operate App Store growth surfaces"
+  default_prompt: "Use $source-command-app-store-growth to prepare one measurable App Store product-page experiment."

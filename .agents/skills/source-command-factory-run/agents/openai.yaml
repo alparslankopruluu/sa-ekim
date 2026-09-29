@@ -1,0 +1,4 @@
+interface:
+  display_name: "Factory Run"
+  short_description: "Validate, build, and deliver an app to TestFlight"
+  default_prompt: "Use $source-command-factory-run to validate this opportunity, build the approved app, and deliver it to internal TestFlight."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship"
+  short_description: "Run guarded release readiness and TestFlight checks"
+  default_prompt: "Use $source-command-ship to produce a release go/no-go report and prepare approved internal TestFlight distribution."
