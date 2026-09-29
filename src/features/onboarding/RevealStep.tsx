@@ -30,32 +30,35 @@ export function RevealStep({ preview, photoUri, onDone }: { preview: PreviewDoc 
   const { t } = useTranslation();
   const { width } = useWindowDimensions();
   const feedback = useFeedback();
-  const [load, setLoad] = useState<Load>({ state: 'loading' });
   const [attempt, setAttempt] = useState(0);
   const header = useEntering('up');
   const stage = useEntering('up', 140);
   const resultPath = preview?.status === 'succeeded' ? preview.resultPath : null;
   const previewId = preview?.id;
+  // Keyed by path + attempt so a new request never shows a stale URL; no setState in the effect body.
+  const requestKey = resultPath ? `${resultPath}#${attempt}` : null;
+  const [resolved, setResolved] = useState<{ key: string; load: Load } | null>(null);
+  const load: Load = !requestKey
+    ? { state: 'error' }
+    : resolved?.key === requestKey
+      ? resolved.load
+      : { state: 'loading' };
 
   useEffect(() => {
-    if (!resultPath) {
-      setLoad({ state: 'error' });
-      return;
-    }
+    if (!resultPath || !requestKey) return;
     let cancelled = false;
-    setLoad({ state: 'loading' });
     resolveMediaUrl(resultPath)
       .then((url) => {
-        if (!cancelled) setLoad({ state: 'ready', url });
+        if (!cancelled) setResolved({ key: requestKey, load: { state: 'ready', url } });
       })
       .catch((error: unknown) => {
         recordNonFatal(error, 'onboarding_reveal_url');
-        if (!cancelled) setLoad({ state: 'error' });
+        if (!cancelled) setResolved({ key: requestKey, load: { state: 'error' } });
       });
     return () => {
       cancelled = true;
     };
-  }, [resultPath, attempt]);
+  }, [resultPath, requestKey]);
 
   const ready = load.state === 'ready' && !!photoUri;
 

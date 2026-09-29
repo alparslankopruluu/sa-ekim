@@ -16,45 +16,41 @@ export interface MediaUrl {
  * Recently resolved paths are cached briefly so list cells that recycle do not flash.
  */
 export function useMediaUrl(path: string | null | undefined): MediaUrl {
-  const cached = path ? cache.get(path) : undefined;
-  const [uri, setUri] = useState<string | null>(cached && Date.now() - cached.at < TTL_MS ? cached.uri : null);
-  const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  // The resolved value is keyed by path + attempt, so state is only ever set from the async
+  // callback (never synchronously in the effect body) and a recycled cell never shows a stale URL.
+  const key = path ? `${path}#${attempt}` : null;
+  const [resolved, setResolved] = useState<{ key: string; uri: string | null; failed: boolean } | null>(null);
 
   useEffect(() => {
-    if (!path) {
-      setUri(null);
-      setFailed(false);
-      return;
-    }
-    const hit = cache.get(path);
-    if (hit && Date.now() - hit.at < TTL_MS && attempt === 0) {
-      setUri(hit.uri);
-      setFailed(false);
-      return;
-    }
+    if (!path || !key) return;
     let alive = true;
-    setFailed(false);
-    resolveMediaUrl(path)
-      .then((resolved) => {
+    const hit = attempt === 0 ? freshHit(path) : null;
+    const pending = hit ? Promise.resolve(hit) : resolveMediaUrl(path);
+    pending
+      .then((uri) => {
         if (!alive) return;
-        if (resolved) {
-          cache.set(path, { uri: resolved, at: Date.now() });
-          setUri(resolved);
-        } else {
-          setFailed(true);
-        }
+        if (uri) cache.set(path, { uri, at: Date.now() });
+        setResolved({ key, uri: uri || null, failed: !uri });
       })
       .catch(() => {
-        if (alive) setFailed(true);
+        if (alive) setResolved({ key, uri: null, failed: true });
       });
     return () => {
       alive = false;
     };
-  }, [path, attempt]);
+  }, [path, key, attempt]);
 
   const reload = useCallback(() => setAttempt((n) => n + 1), []);
-  return { uri, failed, reload };
+  if (!path) return { uri: null, failed: false, reload };
+  if (resolved?.key === key) return { uri: resolved.uri, failed: resolved.failed, reload };
+  // Still resolving: keep showing the last good URL for this path (no flash while cells recycle).
+  return { uri: cache.get(path)?.uri ?? null, failed: false, reload };
+}
+
+function freshHit(path: string): string | null {
+  const hit = cache.get(path);
+  return hit && Date.now() - hit.at < TTL_MS ? hit.uri : null;
 }
 
 /** Drops cached URLs (after a delete, so a recycled cell never shows a removed preview). */

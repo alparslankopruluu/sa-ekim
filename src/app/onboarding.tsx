@@ -68,8 +68,9 @@ export default function Onboarding() {
   const flowRef = useRef<FlowState>(INITIAL_FLOW);
   const stepRef = useRef<StepId>('welcome');
   const permission = useRef<PermissionState>('undetermined');
-  const consentGivenAtStart = useRef(hasConsent());
-  const startedAt = useRef(Date.now());
+  const [consentAtStart] = useState(hasConsent);
+  const [notifyDecided, setNotifyDecided] = useState(false);
+  const startedAt = useRef<number | null>(null);
   const finished = useRef(false);
   const remindersScheduled = useRef(false);
   const preview = usePreviewRender();
@@ -86,13 +87,13 @@ export default function Onboarding() {
       return {
         stage: useSession.getState().stage,
         photo: merged.photo,
-        consentGivenAtStart: consentGivenAtStart.current,
+        consentGivenAtStart: consentAtStart,
         consentDeclined: merged.consentDeclined,
         notifyDecided: permission.current !== 'undetermined',
         previewEnabled: remoteFlag('ff_onboarding_preview') && !useAccount.getState().wallet.previewUsed,
       };
     },
-    [],
+    [consentAtStart],
   );
 
   const updateFlow = useCallback((patch: Partial<FlowState>) => {
@@ -102,6 +103,7 @@ export default function Onboarding() {
 
   useEffect(() => {
     const variant = remoteString('onboarding_variant');
+    startedAt.current = Date.now();
     useSession.getState().startOnboarding();
     track('onboarding_start', { variant });
     setUserProperty('onboarding_variant', variant);
@@ -110,6 +112,7 @@ export default function Onboarding() {
     void getPermissionState()
       .then((state) => {
         permission.current = state;
+        setNotifyDecided(state !== 'undetermined');
       })
       .catch(() => undefined);
   }, []);
@@ -129,7 +132,7 @@ export default function Onboarding() {
     setUserProperty('goal', goal);
     setUserProperty('journey_stage', stageName);
     track('onboarding_complete', {
-      duration_s: Math.round((Date.now() - startedAt.current) / 1000),
+      duration_s: Math.round((Date.now() - (startedAt.current ?? Date.now())) / 1000),
       goal,
       stage: stageName,
     });
@@ -197,6 +200,7 @@ export default function Onboarding() {
   const onGranted = useCallback(() => {
     remindersScheduled.current = true;
     permission.current = 'granted';
+    setNotifyDecided(true);
   }, []);
 
   const onNotifyDone = useCallback(() => {
@@ -204,14 +208,15 @@ export default function Onboarding() {
     void getPermissionState()
       .then((state) => {
         permission.current = state;
+        setNotifyDecided(state !== 'undetermined');
       })
       .catch(() => undefined);
     advance();
   }, [advance]);
 
-  const ctx = buildContext();
   const position = progressPosition(step, {
-    ...ctx,
+    consentGivenAtStart: consentAtStart,
+    notifyDecided,
     stage,
     photo: flow.photo,
     consentDeclined: flow.consentDeclined,

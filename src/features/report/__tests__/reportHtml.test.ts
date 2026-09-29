@@ -1,4 +1,4 @@
-import { buildReportHtml, escapeHtml, isSafeImageDataUri, type ReportModel } from '../reportHtml';
+import { buildCompareHtml, buildReportHtml, escapeHtml, isSafeImageDataUri, type ReportModel } from '../reportHtml';
 
 const JPEG = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ==';
 
@@ -111,5 +111,34 @@ describe('buildReportHtml', () => {
     for (const word of ['diagnos', 'success', 'failed', 'healthy', 'graft']) {
       expect(html).not.toContain(word);
     }
+  });
+});
+
+describe('buildCompareHtml', () => {
+  const sheet = {
+    lang: 'tr',
+    dir: 'ltr' as const,
+    brand: 'Kök',
+    title: 'Photo comparison',
+    subtitle: 'Before and <b>Week 8</b>',
+    before: { dataUri: JPEG, label: 'Before', dateText: '30 Aug' },
+    after: { dataUri: 'data:text/html;base64,PGI+', label: 'Week 8', dateText: '26 Oct' },
+    disclaimer: 'Personal progress record — not a medical document',
+  };
+
+  it('shows both labels, the mark and the disclaimer, escaping text', () => {
+    const html = buildCompareHtml(sheet);
+    expect(html).toContain('Kök');
+    expect(html).toContain('Before');
+    expect(html).toContain('&lt;b&gt;Week 8&lt;/b&gt;');
+    expect(html).toContain('not a medical document');
+    expect(html).toContain('<html lang="tr" dir="ltr">');
+  });
+
+  it('keeps the photo order physical (before left) and drops unsafe images', () => {
+    const html = buildCompareHtml({ ...sheet, dir: 'rtl' });
+    expect(html).toContain('<div class="pair" dir="ltr">');
+    expect(html).not.toContain('data:text/html');
+    expect(html.match(/<img /g)).toHaveLength(1);
   });
 });

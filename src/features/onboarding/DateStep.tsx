@@ -48,7 +48,7 @@ export function DateStep({ onNext }: { onNext: () => void }) {
   const stageValue = useSession((s) => s.stage);
   const goal = useSession((s) => s.goal);
   const stage = asDateStage(stageValue);
-  const now = useMemo(() => new Date(), []);
+  const [now] = useState(() => new Date());
   const locale = i18n.language;
   const stored = useJourney((s) => s.procedureDate);
   const [parts, setParts] = useState<DateParts>(() => (stored ? (isoToParts(stored) ?? initialParts(now)) : initialParts(now)));
@@ -59,7 +59,7 @@ export function DateStep({ onNext }: { onNext: () => void }) {
   const check = checkProcedureDate(parts, stage, now);
   const order = useMemo(() => dateFieldOrder(locale), [locale]);
 
-  const items = useMemo(() => {
+  const items = (() => {
     const days: WheelItem[] = Array.from({ length: daysInMonth(parts.year, parts.month) }, (_, i) => ({
       value: i + 1,
       label: numberLabel(locale, i + 1),
@@ -67,7 +67,7 @@ export function DateStep({ onNext }: { onNext: () => void }) {
     const months: WheelItem[] = Array.from({ length: 12 }, (_, i) => ({ value: i + 1, label: monthLabel(locale, i + 1) }));
     const years: WheelItem[] = yearRange(stage, now).map((year) => ({ value: year, label: numberLabel(locale, year) }));
     return { day: days, month: months, year: years } satisfies Record<DateField, WheelItem[]>;
-  }, [locale, now, parts.month, parts.year, stage]);
+  })();
 
   const labels: Record<DateField, string> = {
     day: t('onboarding.date.wheelDay'),

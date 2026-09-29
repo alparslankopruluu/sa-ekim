@@ -1,5 +1,4 @@
-import { isErrorCode } from '@shared/api';
-import { ERROR_CODES } from '@shared/api';
+import { ERROR_CODES, isErrorCode } from '@shared/api';
 import { GOALS, STYLES, getStyle, stylesForGoal } from '@shared/catalog';
 
 import {

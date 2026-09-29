@@ -14,6 +14,7 @@ import { PlanTab } from '@/features/journey/PlanTab';
 import { TimelineTab } from '@/features/journey/TimelineTab';
 import { useJourneyView } from '@/features/journey/useJourneyView';
 import { trackScreen } from '@/services/analytics';
+import { exportClinicReport } from '@/services/report';
 import { colors, layout, minTouch, radius, spacing } from '@/theme/tokens';
 
 type TabId = 'timeline' | 'photos' | 'plan';
@@ -27,6 +28,7 @@ export default function JourneyScreen() {
   const view = useJourneyView();
   const params = useLocalSearchParams<{ tab?: string }>();
   const [chosen, setChosen] = useState<TabId | null>(null);
+  const [exporting, setExporting] = useState(false);
   const tab: TabId = chosen ?? (isTabId(params.tab) ? params.tab : view.kind === 'prp' ? 'plan' : 'timeline');
 
   useEffect(() => {
@@ -50,6 +52,19 @@ export default function JourneyScreen() {
           <AppText variant="title1" accessibilityRole="header" style={styles.title}>
             {t('nav.journey')}
           </AppText>
+          <PressableScale
+            onPress={() => {
+              if (exporting) return;
+              setExporting(true);
+              void exportClinicReport().finally(() => setExporting(false));
+            }}
+            disabled={exporting}
+            accessibilityLabel={t('report.clinic.action')}
+            style={styles.editButton}
+            testID="journey-report"
+          >
+            <Ionicons name="document-text-outline" size={22} color={colors.text} />
+          </PressableScale>
           <PressableScale
             onPress={() => router.push('/journey-setup')}
             accessibilityLabel={t('journey.today.editDate')}

@@ -134,3 +134,29 @@ ${shedBlock(model)}
 </body>
 </html>`;
 }
+
+export interface CompareSheetModel {
+  lang: string;
+  dir: 'ltr' | 'rtl';
+  brand: string;
+  title: string;
+  subtitle: string;
+  before: ReportPhoto;
+  after: ReportPhoto;
+  disclaimer: string;
+}
+
+/** One-page compare sheet: two photos side by side with their labels and the brand mark. */
+export function buildCompareHtml(model: CompareSheetModel): string {
+  const lang = LANG.test(model.lang) ? model.lang : 'en';
+  const dir = model.dir === 'rtl' ? 'rtl' : 'ltr';
+  return `<!doctype html>
+<html lang="${lang}" dir="${dir}">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>${escapeHtml(model.title)}</title><style>${CSS}</style></head>
+<body>
+<header><div class="brand">${escapeHtml(model.brand)}</div><h1>${escapeHtml(model.title)}</h1><p class="meta">${escapeHtml(model.subtitle)}</p></header>
+<div class="pair" dir="ltr">${figure(model.before)}${figure(model.after)}</div>
+<footer>${escapeHtml(model.disclaimer)}</footer>
+</body>
+</html>`;
+}

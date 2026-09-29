@@ -17,6 +17,8 @@ import { colors, radius, spacing } from '@/theme/tokens';
 import { checklistStates, type PreviewStage, ringProgress } from './previewProgress';
 import { canRetryPreview, type RenderPhase } from './usePreviewRender';
 
+const PENDING = 'pending' as const;
+
 /** The skip / cancel-for-now escape hatch appears after this long. */
 export const SKIP_AFTER_MS = 20_000;
 /** Lets the last line visibly tick before moving on to the reveal. */
@@ -144,7 +146,7 @@ export function CraftingStep({ phase, stage, progress, errorCode, goal, photoUri
 
       <View style={styles.checklist}>
         {labels.map((label, index) => {
-          const state = states[index] ?? 'pending';
+          const state = states[index] ?? PENDING;
           return (
             <View
               key={LINE_KEYS[index]}

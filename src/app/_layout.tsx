@@ -21,6 +21,8 @@ import { recordNonFatal } from '@/services/crash';
 import { onNotificationTap } from '@/services/notifications';
 import { remoteNumber } from '@/services/remoteConfig';
 import { startSession } from '@/services/session';
+import { rebaseJourneyPhotoUris } from '@/services/journeyFiles';
+import { useJourney } from '@/stores/journey';
 import { useSession } from '@/stores/session';
 import { colors, spacing } from '@/theme/tokens';
 
@@ -42,7 +44,9 @@ const navigationTheme = {
 };
 
 export default function RootLayout() {
-  const hydrated = useSession((s) => s.hydrated);
+  const sessionHydrated = useSession((s) => s.hydrated);
+  const journeyHydrated = useJourney((s) => s.hydrated);
+  const hydrated = sessionHydrated && journeyHydrated;
   const [fontsLoaded, fontError] = useFonts({
     'DMSerifDisplay-Regular': require('../../assets/fonts/DMSerifDisplay-Regular.ttf'),
     'DMSerifDisplay-Italic': require('../../assets/fonts/DMSerifDisplay-Italic.ttf'),
@@ -53,6 +57,12 @@ export default function RootLayout() {
     if (!ready) return;
     void SplashScreen.hideAsync().catch(() => undefined);
     launchTrace.stop();
+    // iOS may move the app container after a device restore; re-point saved photo files.
+    try {
+      rebaseJourneyPhotoUris();
+    } catch (error) {
+      recordNonFatal(error, 'rebase_journey_uris');
+    }
     // Heavy init after the first frame (docs/checklists/performance.md).
     const frame = requestAnimationFrame(() => {
       void startSession().then(() => {

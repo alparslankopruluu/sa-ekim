@@ -17,13 +17,14 @@ import { showToast } from '@/components/Toast';
 import { weekLabelFor } from '@/features/compare/compareLogic';
 import { formatTakenAt } from '@/features/compare/useWeekLabel';
 import { pickReportPhotos, shedWeekRows } from '@/features/report/reportData';
-import { buildReportHtml, type ReportModel, type ReportPhoto } from '@/features/report/reportHtml';
+import { buildCompareHtml, buildReportHtml, type ReportModel, type ReportPhoto } from '@/features/report/reportHtml';
 import { canUse } from '@/lib/entitlements';
 import i18n, { currentLanguage, currentLocaleTag } from '@/lib/i18n';
 import { isRtl } from '@/lib/locales';
 import { formatIsoDate } from '@/lib/phaseView';
 import { useAccount } from '@/stores/account';
 import { type JourneyPhoto, useJourney } from '@/stores/journey';
+import { useSession } from '@/stores/session';
 
 import { track } from './analytics';
 import { recordNonFatal } from './crash';
@@ -191,34 +192,22 @@ export async function shareComparison(a: JourneyPhoto, b: JourneyPhoto): Promise
     const [first, second] = await Promise.all([reportPhoto(a, locale), reportPhoto(b, locale)]);
     if (!first || !second) throw new Error('compare_embed_failed');
     const label = (p: ReportPhoto) => p.label || t('compare.label.none');
-    const html = buildReportHtml({
+    const html = buildCompareHtml({
       lang: currentLanguage(),
       dir: isRtl(currentLanguage()) ? 'rtl' : 'ltr',
       brand: t('compare.mark'),
       title: t('compare.report.title'),
-      clinicLine: null,
-      operationLine: t('compare.report.heading', { before: label(first), after: label(second) }),
-      generatedLine: t('report.clinic.generatedLine', { date: formatIsoDate(toIsoDate(new Date()), locale, 'long') }),
-      photosHeading: t(`capture.angle.${b.angle}`),
-      noPhotosText: '',
-      sections: [{ title: '', photos: [first, second] }],
-      shedHeading: '',
-      shedColumns: { week: '', days: '', average: '', max: '' },
-      shedRows: [],
-      shedEmptyText: '',
+      subtitle: t('compare.report.heading', { before: label(first), after: label(second) }),
+      before: { ...first, label: label(first) },
+      after: { ...second, label: label(second) },
       disclaimer: t('compare.report.disclaimer'),
     });
     await renderAndShare(html, t('compare.share.dialog'));
-    useSessionShare();
+    useSession.getState().recordShare();
     return 'shared';
   } catch (error) {
     recordNonFatal(error, 'compare_share');
     showToast(i18n.t('compare.share.error'), 'error');
     return 'failed';
   }
-}
-
-function useSessionShare(): void {
-  // Not a hook: counts a genuine share for the review-prompt policy.
-  void import('@/stores/session').then(({ useSession }) => useSession.getState().recordShare());
 }
