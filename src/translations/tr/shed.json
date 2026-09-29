@@ -1,0 +1,43 @@
+{
+  "title": "Dökülme günlüğü",
+  "close": "Kapat",
+  "subtitle": "Yastıkta veya lavabo giderinde yaklaşık kaç saç teli gördüğünü not et. Yaklaşık bir sayı yeterli.",
+  "typical": "2–8. haftalarda dökülme yaygındır.",
+  "phaseNow": "Operasyonundan sonraki {{week}}. haftadasın.",
+  "today": "Bugün",
+  "input": {
+    "label": "Bugün fark edilen saç teli",
+    "placeholder": "0",
+    "hint": "0 ile 999 arasında bir tam sayı"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "{{count}} ekle",
+  "save": "Kaydet",
+  "update": "Güncelle",
+  "saved": "Kaydedildi",
+  "invalid": "0 ile 999 arasında bir tam sayı gir.",
+  "chart": {
+    "title": "Son 30 gün",
+    "a11y": "Son 30 günün dökülme günlüğü",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: kayıt yok",
+    "barToday": "Bugün, {{date}}: {{count}}",
+    "barTodayEmpty": "Bugün, {{date}}: kayıt yok",
+    "window": "Dökülmenin yaygın olduğu dönem",
+    "todayLegend": "Bugün",
+    "missing": "Kayıt yok"
+  },
+  "average": "Son 7 günün ortalaması: {{count}}",
+  "averageEmpty": "Son 7 günde kayıt yok.",
+  "empty": {
+    "title": "Henüz kayıt yok",
+    "body": "Saç teli fark ettiğinde bir sayı gir. Birkaç hafta sonra grafik kendi düzenini gösterir."
+  },
+  "note": "Yalnızca kendi takibin için. Sayılar günden güne değişir ve sonuçlar kişiden kişiye farklılık gösterir.",
+  "mini": {
+    "title": "Dökülme günlüğü",
+    "empty": "Bugünün sayısını gir",
+    "a11y": "Dökülme günlüğü, son {{days}} gün. Günlüğü açar.",
+    "a11yEmpty": "Dökülme günlüğü. Henüz kayıt yok. Günlüğü açar."
+  }
+}

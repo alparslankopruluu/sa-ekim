@@ -1,0 +1,38 @@
+{
+  "title": "Bu önizlemeyi bildir",
+  "subtitle": "Neyin yanlış olduğunu bize söyle. Her bildirimi 48 saat içinde inceleriz.",
+  "inaccurate": "Yanlış görünüyor",
+  "unsafe": "Güvenli veya uygun görünmüyor",
+  "privacy": "Gizlilikle ilgili bir endişe doğuruyor",
+  "other": "Başka bir sorun",
+  "send": "Bildirimi gönder",
+  "sent": "Teşekkürler. 48 saat içinde inceleyeceğiz.",
+  "clinic": {
+    "action": "İlerleme kaydını dışa aktar",
+    "exporting": "Hazırlanıyor…",
+    "title": "Saç restorasyonu ilerleme kaydı",
+    "brand": "Kök",
+    "clinicLine": "Klinik: {{name}}",
+    "operationLine": "Operasyon tarihi: {{date}}",
+    "generatedLine": "Oluşturulma tarihi: {{date}}",
+    "photosHeading": "Fotoğraflar",
+    "noPhotos": "Henüz fotoğraf yok.",
+    "shedHeading": "Dökülme günlüğü",
+    "shedEmpty": "Henüz dökülme kaydı yok.",
+    "col": {
+      "week": "Hafta",
+      "days": "Kayıtlı gün",
+      "average": "Ortalama",
+      "max": "En yüksek"
+    },
+    "weekRow": "{{n}}. hafta",
+    "overall": "Tüm kayıtlar",
+    "before": "Öncesi",
+    "week": "{{n}}. hafta",
+    "disclaimer": "Kişisel ilerleme kaydı — tıbbi belge değildir",
+    "dialog": "İlerleme kaydını paylaş",
+    "failed": "Rapor oluşturulamadı. Tekrar dene.",
+    "empty": "Önce bir fotoğraf ya da dökülme kaydı ekle.",
+    "unsupported": "Raporlar tarayıcıda oluşturulamaz."
+  }
+}

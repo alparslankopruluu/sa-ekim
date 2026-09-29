@@ -5,12 +5,13 @@
 import {
   type GiftDoc,
   isErrorCode,
-  RENDER_STATUSES,
-  type RenderDoc,
-  type RenderStatus,
+  PREVIEW_RETENTION_DAYS,
+  PREVIEW_STATUSES,
+  type PreviewDoc,
+  type PreviewStatus,
   type WalletDoc,
 } from '@shared/api';
-import { RESOLUTIONS, type Resolution } from '@shared/pricing';
+import { isDensity, isGoal, isQuality, isStyleId } from '@shared/catalog';
 import { PRIZES, type PrizeId } from '@shared/wheel';
 
 type Raw = Record<string, unknown>;
@@ -33,38 +34,34 @@ function str(value: unknown): string | null {
   return typeof value === 'string' ? value : null;
 }
 
-export function parseRender(id: string, data: unknown): RenderDoc | null {
+export function parsePreview(id: string, data: unknown): PreviewDoc | null {
   if (!isRecord(data)) return null;
   const status = str(data.status);
-  const resolution = str(data.resolution);
-  const soundKind = str(data.soundKind);
-  if (!status || !(RENDER_STATUSES as readonly string[]).includes(status)) return null;
-  if (!resolution || !(RESOLUTIONS as readonly string[]).includes(resolution)) return null;
-  if (soundKind !== 'song' && soundKind !== 'recording' && soundKind !== 'voice' && soundKind !== 'personalSong') {
+  if (!status || !(PREVIEW_STATUSES as readonly string[]).includes(status)) return null;
+  if (!isGoal(data.goal) || !isStyleId(data.styleId) || !isDensity(data.density) || !isQuality(data.quality)) {
     return null;
   }
   const errorCode = data.errorCode;
-  const captions = Array.isArray(data.captions) ? data.captions.filter((c): c is string => typeof c === 'string') : [];
+  const createdAt = num(data.createdAt);
   return {
     id,
-    status: status as RenderStatus,
-    purpose: data.purpose === 'preview' ? 'preview' : 'full',
-    resolution: resolution as Resolution,
-    lookId: str(data.lookId) ?? 'original',
-    soundKind,
-    songId: str(data.songId),
+    status: status as PreviewStatus,
+    goal: data.goal,
+    styleId: data.styleId,
+    density: data.density,
+    quality: data.quality,
     progress: Math.min(1, Math.max(0, num(data.progress))),
-    reservedCredits: num(data.reservedCredits),
-    chargedCredits: num(data.chargedCredits),
-    seconds: typeof data.seconds === 'number' ? data.seconds : null,
-    imagePath: str(data.imagePath) ?? '',
-    soundPath: str(data.soundPath),
-    captions: captions.slice(0, 4),
-    videoPath: str(data.videoPath),
+    reservedCredits: Math.max(0, num(data.reservedCredits)),
+    chargedCredits: Math.max(0, num(data.chargedCredits)),
+    photoPath: str(data.photoPath) ?? '',
+    resultPath: str(data.resultPath),
     watermarked: data.watermarked === true,
+    onboarding: data.onboarding === true,
     errorCode: isErrorCode(errorCode) ? errorCode : null,
-    createdAt: num(data.createdAt),
+    createdAt,
     updatedAt: num(data.updatedAt),
+    // Older documents without the field still get the documented retention window.
+    expiresAt: num(data.expiresAt, createdAt + PREVIEW_RETENTION_DAYS * 24 * 60 * 60 * 1000),
   };
 }
 
@@ -72,8 +69,7 @@ export function parseWallet(data: unknown): WalletDoc {
   const raw = isRecord(data) ? data : {};
   return {
     balance: Math.max(0, num(raw.balance)),
-    freePosterTokens: Math.max(0, num(raw.freePosterTokens)),
-    hdBoostTokens: Math.max(0, num(raw.hdBoostTokens)),
+    freeHighTokens: Math.max(0, num(raw.freeHighTokens)),
     previewUsed: raw.previewUsed === true,
     updatedAt: num(raw.updatedAt),
   };
@@ -82,7 +78,7 @@ export function parseWallet(data: unknown): WalletDoc {
 export function parseGift(data: unknown): GiftDoc | null {
   if (!isRecord(data)) return null;
   const prizeId = str(data.prizeId);
-  if (!prizeId || !(prizeId in PRIZES)) return null;
+  if (!prizeId || !Object.hasOwn(PRIZES, prizeId)) return null;
   return {
     prizeId: prizeId as PrizeId,
     segmentIndex: num(data.segmentIndex),

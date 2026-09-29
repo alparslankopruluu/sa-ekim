@@ -15,8 +15,8 @@ export function CreditPill({ onPress }: { onPress: () => void }) {
   return (
     <PressableScale
       onPress={onPress}
-      accessibilityLabel={t('a11y.balance', { count: balance })}
-      accessibilityHint={t('home.getCredits')}
+      accessibilityLabel={t('ui.a11y.balance', { count: balance })}
+      accessibilityHint={t('ui.getCredits')}
       style={styles.pill}
       testID="credit-pill"
     >

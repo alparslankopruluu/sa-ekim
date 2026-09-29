@@ -1,0 +1,43 @@
+{
+  "title": "Shed log",
+  "close": "Close",
+  "subtitle": "Note roughly how many hairs you see on the pillow or in the drain. A rough number is fine.",
+  "typical": "Shedding in weeks 2–8 is typical.",
+  "phaseNow": "You are in week {{week}} after your operation.",
+  "today": "Today",
+  "input": {
+    "label": "Hairs noticed today",
+    "placeholder": "0",
+    "hint": "A whole number from 0 to 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Add {{count}}",
+  "save": "Save",
+  "update": "Update",
+  "saved": "Saved",
+  "invalid": "Enter a whole number from 0 to 999.",
+  "chart": {
+    "title": "Last 30 days",
+    "a11y": "Shed log for the last 30 days",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nothing logged",
+    "barToday": "Today, {{date}}: {{count}}",
+    "barTodayEmpty": "Today, {{date}}: nothing logged",
+    "window": "Typical shedding window",
+    "todayLegend": "Today",
+    "missing": "No entry"
+  },
+  "average": "Average over the last 7 days: {{count}}",
+  "averageEmpty": "Nothing logged in the last 7 days.",
+  "empty": {
+    "title": "Nothing logged yet",
+    "body": "Log a number whenever you notice hairs. After a few weeks the chart shows your own pattern."
+  },
+  "note": "For your own reference. Counts vary from day to day, and individual results vary.",
+  "mini": {
+    "title": "Shed log",
+    "empty": "Log today's count",
+    "a11y": "Shed log, last {{days}} days. Opens the log.",
+    "a11yEmpty": "Shed log. Nothing logged yet. Opens the log."
+  }
+}

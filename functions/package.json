@@ -1,5 +1,5 @@
 {
-  "name": "belto-functions",
+  "name": "kok-functions",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,10 +15,9 @@
     "serve": "npm run build && firebase emulators:start --only auth,firestore,functions,storage,tasks"
   },
   "dependencies": {
-    "@fal-ai/client": "^1.10.1",
-    "ffmpeg-static": "^5.3.0",
     "firebase-admin": "^13.10.0",
-    "firebase-functions": "^7.4.0"
+    "firebase-functions": "^7.4.0",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@types/node": "^22.20.4",

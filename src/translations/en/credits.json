@@ -1,0 +1,23 @@
+{
+  "title": "Get credits",
+  "subtitle": "Credits never expire. A standard preview uses {{standard}}, an HD preview uses {{high}}.",
+  "balance": "Your balance",
+  "equivalent": "≈ {{standard}} standard or {{high}} HD previews",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Popular",
+  "success": "{{count}} credits added.",
+  "pending": "Your purchase is waiting for approval.",
+  "failedBody": "Credit packs didn't load. Check your connection and try again.",
+  "emptyBody": "Credit packs aren't available right now. Please try again later.",
+  "freeHigh_one": "{{count}} free HD preview waiting",
+  "freeHigh_other": "{{count}} free HD previews waiting",
+  "examplesTitle": "How far credits go",
+  "exampleStandard": "Standard preview",
+  "exampleHigh": "HD preview, no watermark",
+  "proHint": "Pro members get credits every week or month.",
+  "close": "Close credit store"
+}

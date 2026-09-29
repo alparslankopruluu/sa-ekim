@@ -1,0 +1,28 @@
+{
+  "title": "People in your week",
+  "locked": {
+    "title": "Others in your operation week",
+    "body": "Pro shows how many people had their operation in the same week as you. You only ever see a count.",
+    "cta": "See with Pro"
+  },
+  "join": {
+    "title": "Join your operation week",
+    "body": "Opt in to be counted with people who had their operation in the same week. Only your operation date, goal and type are shared. Never photos, your name or your clinic.",
+    "switch": "Count me in",
+    "needDate": "Set your operation date first.",
+    "setDate": "Set date"
+  },
+  "joining": "Joining…",
+  "joined": "You're counted in your week",
+  "loading": "Checking your week…",
+  "visible": "You are one of {{count}} people in your week",
+  "invitation": "You're in. A number appears once enough people share your week, so nobody can be singled out.",
+  "privacy": "Only your operation date, goal and type are shared.",
+  "error": {
+    "offline": "You're offline. Try again when you're connected.",
+    "busy": "Too many requests. Try again in a moment.",
+    "pro": "This needs Pro.",
+    "generic": "Couldn't reach the group. Try again.",
+    "retry": "Try again"
+  }
+}

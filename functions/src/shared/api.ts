@@ -117,6 +117,9 @@ export interface CohortStats {
 }
 export const COHORT_MIN_VISIBLE = 20;
 
+/** Selfies and result images are deleted this many days after the preview was created. */
+export const PREVIEW_RETENTION_DAYS = 30;
+
 export const PREVIEW_STATUSES = ['queued', 'processing', 'finalizing', 'succeeded', 'failed', 'canceled'] as const;
 export type PreviewStatus = (typeof PREVIEW_STATUSES)[number];
 
@@ -143,6 +146,8 @@ export interface PreviewDoc {
   /** Epoch milliseconds (server time). */
   createdAt: number;
   updatedAt: number;
+  /** Epoch ms after which the selfie and the result are deleted (createdAt + PREVIEW_RETENTION_DAYS). */
+  expiresAt: number;
 }
 
 /** `users/{uid}/private/wallet` — written only by Functions. */

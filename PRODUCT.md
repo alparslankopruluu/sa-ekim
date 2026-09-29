@@ -9,9 +9,9 @@ one-way doors (name, bundle id, prices, provider spend) are flagged in `docs/dec
 
 ## Pitch
 
-Kök is the hair-transplant companion: see a realistic preview before the operation, then
+Kök is the hair-transplant companion: see an AI preview before the operation, then
 photograph the same angle for 12–18 months while the app shows what week you are in, what
-is normal (shock loss, the quiet months) and what to do next.
+is typical for that week (shock loss, the quiet months) and what to do next.
 
 ## Target user & trigger moment
 
@@ -25,7 +25,7 @@ is normal (shock loss, the quiet months) and what to do next.
 - **Existing alternatives & our wedge:** clinic WhatsApp groups and Reddit threads (no
   structure, no memory); recovery apps (HairSync, Capila, Hair Back, Hair Track, Follicle,
   Hairgen — see evidence). Kök's wedge is the *combination none of them ships*: (1) the
-  expected phase overlaid on **your own** photo series, (2) a shed log tied to the phase,
+  typical phase overlaid on **your own** photo series, (2) a shed log tied to the phase,
   (3) women's parting/PRP and eyebrow/beard tracks, (4) a before-op preview that starts the
   same file, (5) first-class Turkish and Arabic (and 18 more languages).
 
@@ -33,8 +33,9 @@ is normal (shock loss, the quiet months) and what to do next.
 
 - **Evidence summary** (public-only scan on 2026-09-29; `sourced` unless marked):
   - Market: ISHRS Practice Census reports >703,000 surgical procedures worldwide in 2021;
-    women were 12.7% of surgical patients in 2021 and 15.3% in 2024, i.e. female patients
-    +16.5% 2021→2024 (ISHRS, member-survey data, counts patients). Allure (23 Sep 2026)
+    women were 12.7% of surgical patients in 2021 and 15.3% in 2024, and ISHRS separately
+    reports female patient counts +16.5% from 2021 to 2024 (member-survey data; counts
+    patients, not procedures; share and count are different measures). Allure (23 Sep 2026)
     reports men flock to "Hairstanbul" and a growing number of women now do too, citing
     ~1M travellers a year and packages of $2,600–3,600 vs $20,000+ in the US.
     Country-level hair-transplant flows for USA/UK/DE/Gulf/Iran/RU are `unknown`.
@@ -51,10 +52,11 @@ is normal (shock loss, the quiet months) and what to do next.
   - Recurring complaints (thin, few reviews; `observed`): shallow AI assessment behind a
     paywall, bad top-of-head photo angles, distrust of uploading face photos, motivational
     rather than clinical tone. A reliable 1-star corpus was not retrievable.
-  - Standard timeline (clinic sources, not a single authority — `sourced`): scabs 7–14 days;
-    shock loss weeks 2–8; "ugly duckling" months 2–4; first growth months 3–4; ~60–70%
-    density around month 6 (clinic figure, not shown to users as a promise); maturation
-    9–12; evaluation at 12 months; crown and women up to 18–20 months.
+  - Standard timeline (`sourced` from clinic blogs; no single authority): scabs 7–14 days;
+    shock loss weeks 2–8; "ugly duckling" months 2–4; first growth months 3–4; density
+    builds through months 6–9 (clinic figures vary widely, so Kök shows only a wide
+    illustrative band, never a percentage); maturation 9–12; evaluation at 12 months;
+    crown and women up to 18–20 months. Clinic blogs, not a single authority.
 - **Evidence strength:** moderate for market and timeline, weak for willingness to pay and
   conversion (`unknown` until launch).
 - **Positioning:** For people about to have or recovering from a hair transplant, Kök is the
@@ -65,14 +67,19 @@ is normal (shock loss, the quiet months) and what to do next.
   before/after timelines with the on-photo phase band), ASO in TR/AR/EN, and Apple search
   ads only after month-1 ARPU is measured. No clinic lead-sale in v1.
 - **Gotcha moment (one sentence):** Your own week-3 photo, with a band that says "shedding
-  now is normal — you are exactly where you should be."
+  around now is typical — here is what usually comes next." (App Review 1.4.1: the app only
+  knows the date, so it states what is *typical*, never that you are fine.)
 - **Three-second demo / before-after proof:** the before/after wipe slider on the preview,
   and a week-N photo with the expected-phase band; understandable with sound off.
 - **Video-ready core state:** the Result screen (preview wipe) and the Journey compare
   screen (side-by-side with week label).
-- **Opportunity score:** 76/100 — go (thin). First pass 69 (`reposition`, total_below_75);
-  after narrowing the wedge to the post-op companion (differentiation 12, retention 13,
-  monetization 12, distribution 11, trust 6, defensibility 3) the deterministic score is 76.
+- **Opportunity score:** 76/100 — go (thin, 1 point above the threshold). All eight inputs,
+  second pass: problem-urgency 12, retention 13, monetization 12, distribution 11,
+  differentiation 12, technical-feasibility 7, trust/review-feasibility 6, defensibility 3.
+  First pass was 69 (`reposition`: 12/12/11/10/10/7/5/2) before the wedge was narrowed to
+  the post-op companion. `--critical-risk` is off because the medical-adjacent review risk
+  is mitigated by design (no diagnosis, vendors named, photos local) rather than an
+  unavoidable blocker, and the tarpit screen passes only through the phase-overlaid journey.
   Scores are judgment calls; see `docs/decisions.md` D-002.
 - **Critical business risks:** (1) medical-adjacent review risk (App Review 1.4.1, 5.1.1,
   5.1.2(i)) — mitigated: no diagnosis, no outcome promises, vendors named in consent,
@@ -84,15 +91,15 @@ is normal (shock loss, the quiet months) and what to do next.
 
 ## The ONE core feature
 
-> Stay on track for 12–18 months: a same-angle photo series with the expected phase for
-> your week, so a normal shedding week never feels like a failed operation.
+> Stay consistent for 12–18 months: a same-angle photo series with the typical phase for
+> your week, so a typical shedding week never feels like a failed operation.
 
 **"Exceptionally well" bar** — the core feature is done only when:
 - A new user who sets the operation date sees the correct day/week/phase, the phase's
   "what is normal" message and the next task within 10 seconds, offline, in their language.
 - The capture screen only accepts a photo when the phone is upright (accelerometer gate) and
-  overlays the previous photo as a ghost; a 3-photo series compares without manual
-  alignment work.
+  overlays the previous photo as a ghost, so same-angle photos line up without manual
+  alignment; Pro adds wipe and side-by-side compare.
 - Reminders arrive on schedule (local notifications) and never claim a medical result.
 
 ## Vision and strategic boundaries
@@ -117,10 +124,11 @@ is normal (shock loss, the quiet months) and what to do next.
   (`asc-ppp-pricing` at catalog time). Prices always come from the store, never the code.
 - **Free tier / starter credits:** free forever = the first-14-days care guide, the
   shed log, 3 progress photos with the ghost overlay, and **one** watermarked standard
-  preview (onboarding). Pro = unlimited photos, compare wipe/side-by-side, expected-phase
-  band, full weekly guide and phase reminders, "same-week" cohort, clinic PDF report,
-  HD previews without watermark, plus a credit allowance (weekly 12/wk, monthly 24/mo,
-  annual 8/wk). Extra previews cost credits (standard 1, high 3).
+  preview (onboarding). Pro = unlimited photos, compare wipe/side-by-side, typical-phase
+  band, full weekly guide and phase/photo reminders, "same-week" cohort, clinic PDF report,
+  plus a credit allowance (weekly 12/wk, monthly 24/mo, annual 10 at purchase then 6/wk).
+  Previews cost credits for everyone (standard 1, high 3; high needs no entitlement and
+  neither tier is watermarked — only the free onboarding preview is).
 - **Paywall placement:** after the first real preview at the end of onboarding
   (tease-then-gate), and on locked features (compare, band, report, HD, extra photos).
 
@@ -129,22 +137,24 @@ is normal (shock loss, the quiet months) and what to do next.
 - **Marginal cost per core action / active user:** preview ≈ $0.05 standard / ≈ $0.19 high
   (fal `gpt-image-2` output tokens, Simetra 2026-07 measurement — re-verify before launch).
   The journey itself is local and costs $0. Free user cost ≈ $0.05 once.
-- **Gross-margin target:** ≥ 70% on net proceeds. Worst-case allowance burn: weekly 12
-  credits (4 high = $0.76 vs ~$5.6 net), monthly 24 credits (8 high ≈ $1.5 vs ~$9.1 net),
-  annual 8/wk (≈ $26 worst case vs ~$28 net — only if every credit is spent on high every
-  week; typical use is far lower; Remote-Config tunable).
+- **Gross-margin target:** ≥ 70% on net proceeds at *expected* use (assumed ≤ 40% of the
+  allowance spent). Fee assumption everywhere: 30% store commission (`assumption`). Worst-case
+  burn if every credit goes to high previews: weekly 12/wk ≈ $0.76 vs ≈ $5.59 net; monthly
+  24/mo ≈ $1.52 vs ≈ $9.09; annual 10 + 6/wk ≈ $20.4 vs ≈ $27.99; the gift annual
+  ($23.99, net ≈ $16.79) loses money in that worst case, so it relies on expected use.
+  Remote-Config tunable on the server.
 - **Break-even CAC ceiling:** `unknown until retention data`; paid UA stays off until
   month-1 ARPU ≥ $2 is measured.
 - **90-day distribution thesis:** TR/AR/EN short videos from real (own, consented) timelines
   and the preview wipe; clinic-agnostic "day 0" share card; ASO on "hair transplant
   recovery / timeline / saç ekimi / زراعة الشعر".
 - **First organic creative hook:** "Week 3 of my hair transplant and I'm shedding — the app
-  says it's exactly on schedule."
+  shows me what's typical around now."
 - **Go/kill criteria:** continue if by day 60: paywall→purchase ≥ 4%, D1 ≥ 25%, D7 ≥ 20%,
   week-4 photo compliance ≥ 40%. Reposition if paywall→purchase < 2% after two paywall
   experiments; kill if provider cost exceeds 40% of net revenue.
 
-## Success metrics (first 90 days)
+## Success metrics (first 90 days) — all targets are assumptions, no measured baseline yet
 
 | Metric | Target |
 |---|---|
@@ -153,7 +163,7 @@ is normal (shock loss, the quiet months) and what to do next.
 | Purchase retention (2nd weekly renewal) | ≥ 50% |
 | D1 retention | ≥ 25% |
 | Month-1 ARPU | ≥ $2 |
-| MRR milestone | $3K by day 90 (assumption) |
+| MRR milestone | $1K by day 90 (assumption; rung 2 of the ladder in growth-plan.md) |
 
 ## Launch locales
 
@@ -164,17 +174,17 @@ reviewed by a native-speaker pass before store submission (see `docs/decisions.m
 
 ## App Store presence
 
-- **Product-page narrative:** preview it → set day 0 → photograph the same angle → know what
-  is normal this week. Lead with the outcome ("know if your hair transplant is on track").
-- **Screenshot 1 benefit:** "Know if your hair transplant is on track"
-- **Screenshot 2 benefit:** "Shedding in week 3? That's normal — see your phase"
+- **Product-page narrative:** preview it → set day 0 → photograph the same angle → see what
+  is typical this week. Lead with the outcome ("see what's typical for your week").
+- **Screenshot 1 benefit:** "See what's typical for your week of recovery"
+- **Screenshot 2 benefit:** "Shedding in week 3? See what's typical"
 - **Supported listing locales:** en-US, tr, ar-SA, ja, zh-Hans, ru, es-ES, pt-BR, de-DE,
   fr-FR, it, ko, zh-Hant, id, vi, th, hi, nl-NL, pl, sv
 - **CPP audience / intent+keyword / creative / deep link / analytics:** planned-surgery
   researchers / "hair transplant simulator" / preview wipe / `kok://simulate` / `cpp=plan`;
-  recovering patients / "hair transplant timeline shedding" / week band screenshots /
+  recovering patients / "hair transplant timeline shedding" / typical-phase screenshots /
   `kok://journey` / `cpp=recover`.
-- **PPO hypothesis / variable / metric / sample / duration / stop:** a phase-band screenshot 1
+- **PPO hypothesis / variable / metric / sample / duration / stop:** a typical-phase screenshot 1
   beats a preview-wipe screenshot 1 / screenshot 1 only / conversion rate / Apple default /
   ≥ 14 days / stop at 90% confidence or 28 days.
 - **In-App Event opportunity:** quarterly "Growth month" challenge (photo streak within the

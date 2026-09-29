@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Previews",
+    "offers": "Offers",
+    "reminders": "Reminders"
+  },
+  "previewReady": {
+    "title": "Your preview is ready",
+    "body": "Open Kök to see it. It is an AI preview, not a prediction of your result."
+  },
+  "giftExpiring": {
+    "title": "Your gift is still waiting",
+    "body": "Your annual plan discount ends on {{date}}."
+  },
+  "care": {
+    "title": "Day {{day}} of your care plan",
+    "body": "Open today's steps. Your clinic's instructions always come first."
+  },
+  "phase": {
+    "shed": {
+      "title": "Week {{week}} — shedding is typical around now",
+      "body": "Many people see shedding in this phase. Open your guide to see what is typical. Individual results vary."
+    },
+    "quiet": {
+      "title": "The quiet phase is typical around now",
+      "body": "Many people feel nothing is happening in these weeks. Open your guide to see what is typical."
+    },
+    "sprout": {
+      "title": "First growth is typical around now",
+      "body": "Fine new hairs often start to appear in this phase. Timing varies from person to person."
+    },
+    "grow": {
+      "title": "The growth phase",
+      "body": "Density usually builds gradually. Keep taking same-angle photos to see the change. Individual results vary."
+    },
+    "mature": {
+      "title": "The maturing phase",
+      "body": "Results keep settling over the coming months. Individual results vary."
+    },
+    "final": {
+      "title": "Time for a full review",
+      "body": "Around the one-year mark many people compare their whole photo series. Open your guide."
+    }
+  },
+  "photo": {
+    "title": "Time for a progress photo",
+    "body": "Same angle, same light, a few seconds. Your series is what makes change visible."
+  },
+  "shed": {
+    "title": "Quick shed check",
+    "body": "Log how much you noticed today. Shedding is typical in this phase."
+  },
+  "session": {
+    "title": "PRP session tomorrow",
+    "body": "Your session is on {{date}}. Take a same-angle photo beforehand so you can compare later."
+  }
+}

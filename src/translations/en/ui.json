@@ -1,0 +1,23 @@
+{
+  "a11y": {
+    "close": "Close",
+    "selected": "Selected",
+    "notSelected": "Not selected",
+    "step": "Step {{current}} of {{total}}",
+    "balance_one": "{{count}} credit available",
+    "balance_other": "{{count}} credits available",
+    "wheel": "Gift wheel with four kinds of prizes"
+  },
+  "demoMode": "Demo mode: no real purchases and no real servers",
+  "getCredits": "Get credits",
+  "update": {
+    "title": "Update required",
+    "body": "This version of Kök is no longer supported. Please update to keep going. Your journey stays on your phone.",
+    "cta": "Update"
+  },
+  "notFound": {
+    "title": "This page isn't here",
+    "body": "The link may be old. Nothing was lost.",
+    "cta": "Go to Today"
+  }
+}

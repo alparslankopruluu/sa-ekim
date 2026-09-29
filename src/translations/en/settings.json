@@ -1,0 +1,109 @@
+{
+  "title": "Settings",
+  "sections": {
+    "subscription": "Subscription and credits",
+    "language": "Language",
+    "notifications": "Notifications",
+    "preferences": "Preferences",
+    "data": "Data and privacy",
+    "account": "Account",
+    "legal": "Legal and support",
+    "about": "About",
+    "developer": "Developer"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Free plan",
+    "renews": "Renews {{date}}",
+    "expires": "Ends {{date}}",
+    "manage": "Manage subscription",
+    "restore": "Restore purchases",
+    "upgrade": "Upgrade to Pro",
+    "restoreDone": "Welcome back. Pro is restored.",
+    "restoreNone": "No previous purchases found.",
+    "balance": "Credit balance",
+    "buyCredits": "Get credits",
+    "freeHigh_one": "{{count}} free HD preview",
+    "freeHigh_other": "{{count}} free HD previews"
+  },
+  "language": {
+    "title": "Language",
+    "pickerTitle": "Choose a language",
+    "rtlNote": "Restart Kök to switch the layout direction.",
+    "closePicker": "Close language list"
+  },
+  "notifications": {
+    "previews": "Preview ready",
+    "offers": "Gifts and offers",
+    "reminders": "Journey reminders",
+    "remindersHint": "Care, weekly photo and phase reminders. Phase reminders are part of Pro.",
+    "systemOff": "Notifications are off for Kök in system settings. Tap to open them."
+  },
+  "preferences": {
+    "haptics": "Haptics"
+  },
+  "data": {
+    "wipe": "Delete all my data",
+    "wipeHint": "Removes your journey photos, shed log and previews from this device.",
+    "wipeTitle": "Delete all your data?",
+    "wipeBody": "This permanently removes your operation date, progress photos, shed log and saved previews. Your subscription and credits stay with your account. This can't be undone.",
+    "wipeConfirm": "Delete my data",
+    "wiping": "Deleting…",
+    "wiped": "Your data was deleted from this device."
+  },
+  "account": {
+    "guest": "Anonymous account",
+    "id": "Account ID",
+    "delete": "Delete account",
+    "deleteHint": "Deletes your account, credits and uploaded photos from our servers.",
+    "deleteTitle": "Delete your account?",
+    "deleteBody": "This permanently deletes your account, credits, saved previews and any photo you uploaded, and clears your journey on this device. An active subscription must be canceled separately in your store account settings.",
+    "deleteConfirm": "Delete account",
+    "deleting": "Deleting…",
+    "deleted": "Your account was deleted."
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "ai": "How AI previews work",
+    "support": "Help and support"
+  },
+  "about": {
+    "version": "Version {{version}} ({{build}})",
+    "contact": "Email support",
+    "rate": "Rate Kök",
+    "replay": "Replay onboarding"
+  },
+  "confirm": {
+    "cancel": "Cancel"
+  },
+  "developer": {
+    "open": "Developer tools",
+    "backend": "Backend mode",
+    "replayOnboarding": "Replay onboarding",
+    "offerings": "Store offerings",
+    "purchase": "Purchase result",
+    "wheel": "Gift wheel placement",
+    "failNext": "Fail the next preview",
+    "cohort": "Cohort count for my week",
+    "addCredits": "Grant 50 credits",
+    "reset": "Reset all mock data",
+    "resetDone": "Mock data was reset.",
+    "credits": "Credits granted.",
+    "testCrash": "Send a test crash",
+    "events": "Event log",
+    "empty": "No events yet",
+    "mockOnly": "These switches only exist on the mock backend.",
+    "values": {
+      "ok": "ok",
+      "slow": "slow",
+      "fail": "fail",
+      "empty": "empty",
+      "success": "success",
+      "cancel": "cancel",
+      "home": "home",
+      "onboarding_exit": "onboarding exit",
+      "off": "off"
+    }
+  }
+}

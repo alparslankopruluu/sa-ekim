@@ -1,80 +1,64 @@
 import {
   CREDIT_PACKS,
-  clampSeconds,
   creditsForPack,
-  estimateCreation,
-  MAX_PERFORMANCE_SECONDS,
+  FREE_LIMITS,
+  FREE_PREVIEW,
   PLAN_ALLOWANCE,
-  RESOLUTION_INFO,
-  RESOLUTIONS,
-  renderCost,
-  STEP_COSTS,
+  PREVIEW_COST,
+  PREVIEW_PROVIDER_USD,
+  previewCost,
 } from '@shared/pricing';
+import { packForProductId, planForProductId } from '@shared/products';
 
 describe('pricing', () => {
-  it('clamps seconds to the provider window and rounds up started seconds', () => {
-    expect(clampSeconds(0.2)).toBe(2);
-    expect(clampSeconds(7.1)).toBe(8);
-    expect(clampSeconds(40)).toBe(MAX_PERFORMANCE_SECONDS);
-    expect(clampSeconds(Number.NaN)).toBe(2);
+  it('charges 1 credit for standard and 3 for high', () => {
+    expect(previewCost('standard')).toBe(1);
+    expect(previewCost('high')).toBe(3);
+    expect(PREVIEW_COST).toEqual({ standard: 1, high: 3 });
   });
 
-  it('charges per second by resolution', () => {
-    expect(renderCost('480p', 5)).toBe(10);
-    expect(renderCost('768p', 12)).toBe(48);
-    expect(renderCost('1080p', 15)).toBe(120);
-    expect(renderCost('2k', 15)).toBe(195);
+  it('gives the free onboarding preview as standard and watermarked', () => {
+    expect(FREE_PREVIEW).toEqual({ quality: 'standard', watermarked: true });
   });
 
-  it('keeps every credit worth more than its provider cost (≥ 70% margin at the cheapest pack price)', () => {
-    // Largest pack: $54.99 / 800 credits, 30% store fee → net ≈ $0.048 per credit.
-    const netPerCredit = (54.99 * 0.7) / 800;
-    for (const resolution of RESOLUTIONS) {
-      const info = RESOLUTION_INFO[resolution];
-      const revenuePerSecond = info.creditsPerSecond * netPerCredit;
-      expect(info.providerUsdPerSecond / revenuePerSecond).toBeLessThanOrEqual(0.65);
-    }
-  });
-
-  it('marks HD resolutions pro-only', () => {
-    expect(RESOLUTION_INFO['480p'].proOnly).toBe(false);
-    expect(RESOLUTION_INFO['768p'].proOnly).toBe(false);
-    expect(RESOLUTION_INFO['1080p'].proOnly).toBe(true);
-    expect(RESOLUTION_INFO['2k'].proOnly).toBe(true);
-  });
-
-  it('estimates a creation without double-charging sounds already paid for', () => {
-    const fresh = estimateCreation({
-      resolution: '768p',
-      seconds: 10,
-      withNewPoster: true,
-      soundKind: 'personalSong',
-      soundAlreadyPaid: false,
-    });
-    expect(fresh).toEqual({ render: 40, poster: STEP_COSTS.poster, sound: STEP_COSTS.personalSong, total: 47 });
-
-    const paid = estimateCreation({
-      resolution: '768p',
-      seconds: 10,
-      withNewPoster: false,
-      soundKind: 'voice',
-      soundAlreadyPaid: true,
-    });
-    expect(paid.total).toBe(40);
-
-    const recording = estimateCreation({
-      resolution: '480p',
-      seconds: 4,
-      withNewPoster: false,
-      soundKind: 'recording',
-      soundAlreadyPaid: false,
-    });
-    expect(recording).toEqual({ render: 8, poster: 0, sound: 0, total: 8 });
-  });
-
-  it('knows every pack and nothing else', () => {
+  it('knows exactly the three credit packs', () => {
+    expect(CREDIT_PACKS.map((p) => [p.id, p.credits])).toEqual([
+      ['credits_10', 10],
+      ['credits_25', 25],
+      ['credits_60', 60],
+    ]);
     for (const pack of CREDIT_PACKS) expect(creditsForPack(pack.id)).toBe(pack.credits);
     expect(creditsForPack('credits_999')).toBeNull();
-    expect(PLAN_ALLOWANCE.weekly.credits).toBeGreaterThan(0);
+    expect(creditsForPack('credits_100')).toBeNull();
+  });
+
+  it('grants a plan allowance and there is no trial concept in it', () => {
+    for (const plan of ['weekly', 'monthly', 'annual'] as const) {
+      expect(PLAN_ALLOWANCE[plan].credits).toBeGreaterThan(0);
+    }
+    expect(PLAN_ALLOWANCE.annual.initial).toBeGreaterThan(0);
+    expect(JSON.stringify(PLAN_ALLOWANCE)).not.toMatch(/trial/i);
+  });
+
+  it('bounds the worst-case annual allowance below the plan price', () => {
+    // Every allowance credit spent on the high tier over a year, at provider cost.
+    const credits = PLAN_ALLOWANCE.annual.initial + PLAN_ALLOWANCE.annual.credits * 52;
+    const worstCaseUsd = (credits / PREVIEW_COST.high) * PREVIEW_PROVIDER_USD.high;
+    expect(worstCaseUsd).toBeLessThan(39.99);
+  });
+
+  it('exposes the free limits', () => {
+    expect(FREE_LIMITS.journeyPhotos).toBe(3);
+    expect(FREE_LIMITS.freeGuideDays).toBe(14);
+  });
+
+  it('maps store product ids to plans and packs', () => {
+    expect(planForProductId('com.techtactoe.kok.pro.weekly')).toBe('weekly');
+    expect(planForProductId('com.techtactoe.kok.pro.monthly')).toBe('monthly');
+    expect(planForProductId('com.techtactoe.kok.pro.annual.gift')).toBe('annual');
+    expect(planForProductId('com.techtactoe.kok.credits_10')).toBeNull();
+    expect(packForProductId('com.techtactoe.kok.credits_25')).toBe('credits_25');
+    expect(packForProductId('com.techtactoe.kok.credits_250')).toBeNull();
+    expect(packForProductId('com.techtactoe.kok.pro.weekly')).toBeNull();
   });
 });

@@ -51,7 +51,7 @@ import { Platform } from 'react-native';
 
 import { toBackendError, withTimeout } from './errors';
 import { firebaseRegion } from './mode';
-import { parseGift, parseRender, parseWallet } from './parsers';
+import { parseGift, parsePreview, parseWallet } from './parsers';
 import type { AnalyticsParams, Backend, BackendMode, RemoteValue } from './types';
 
 const EMULATOR_HOST =
@@ -199,9 +199,9 @@ export function createLiveBackend(mode: Exclude<BackendMode, 'mock'>): Backend {
       },
     },
     storage: {
-      async uploadUserFile(uid, localUri, kind, contentType) {
-        const extension = kind === 'photo' ? 'jpg' : 'm4a';
-        const path = `uploads/${uid}/${Crypto.randomUUID()}.${extension}`;
+      async uploadUserFile(uid, localUri, _kind, contentType) {
+        // Only selfies for previews are ever uploaded (journey photos never leave the device).
+        const path = `uploads/${uid}/${Crypto.randomUUID()}.jpg`;
         try {
           await withTimeout(
             Promise.resolve(putFile(ref(storage, path), localUri.replace('file://', ''), { contentType })),
@@ -232,19 +232,19 @@ export function createLiveBackend(mode: Exclude<BackendMode, 'mock'>): Backend {
       },
     },
     data: {
-      watchRenders(uid, onChange, onError) {
-        const rendersQuery = query(
-          collection(firestore, 'users', uid, 'renders'),
+      watchPreviews(uid, onChange, onError) {
+        const previewsQuery = query(
+          collection(firestore, 'users', uid, 'previews'),
           orderBy('createdAt', 'desc'),
           limit(60),
         );
         return onSnapshot(
-          rendersQuery,
+          previewsQuery,
           (snapshot) => {
-            const renders = snapshot.docs
-              .map((d) => parseRender(d.id, d.data()))
-              .filter((r): r is NonNullable<typeof r> => r !== null);
-            onChange(renders);
+            const previews = snapshot.docs
+              .map((d) => parsePreview(d.id, d.data()))
+              .filter((p): p is NonNullable<typeof p> => p !== null);
+            onChange(previews);
           },
           (error) => onError(toBackendError(error)),
         );
@@ -270,7 +270,7 @@ export function createLiveBackend(mode: Exclude<BackendMode, 'mock'>): Backend {
           {
             locale: profile.locale,
             goal: profile.goal,
-            genres: profile.genres.slice(0, 3),
+            stage: profile.stage,
             onboardingVariant: profile.onboardingVariant,
           },
           { merge: true },

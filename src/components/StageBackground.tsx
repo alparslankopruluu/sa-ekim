@@ -60,7 +60,7 @@ function Spotlight({ color, size, x, y, drift, duration, id, animate }: SpotProp
 }
 
 export interface StageBackgroundProps {
-  /** Two accent colors for the spotlights (defaults to the brand magenta/orange). */
+  /** Two accent colors for the spotlights (defaults to the brand copper/gold). */
   accents?: readonly [string, string];
   /** Ambient drift. Keep off on long-lived/list screens to save battery. */
   animated?: boolean;
@@ -74,7 +74,7 @@ export interface StageBackgroundProps {
 export function StageBackground({ accents, animated = true, intensity = 'full' }: StageBackgroundProps) {
   const { width, height } = useWindowDimensions();
   const reduceMotion = useReducedMotion();
-  const [a, b] = accents ?? [colors.primary, colors.orange];
+  const [a, b] = accents ?? [colors.primary, colors.accent];
   const animate = animated && !reduceMotion;
   const big = Math.max(width, height) * (intensity === 'full' ? 0.95 : 0.7);
 

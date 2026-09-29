@@ -29,6 +29,8 @@ function mapFirebaseCode(code: string): ErrorCode | null {
       return 'timeout';
     case 'resource-exhausted':
       return 'rate_limited';
+    case 'already-exists':
+      return 'already_claimed';
     case 'not-found':
     case 'object-not-found':
       return 'not_found';

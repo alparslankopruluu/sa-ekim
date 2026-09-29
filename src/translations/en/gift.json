@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "A welcome gift is waiting",
+    "body": "One free spin: credits, a free HD preview or a Pro discount.",
+    "cta": "Spin",
+    "wonTitle": "Your gift: {{prize}}",
+    "wonBody": "Valid until {{date}}",
+    "use": "Use"
+  },
+  "title": "Your welcome gift",
+  "subtitle": "One free spin. Every prize is real.",
+  "spin": "Spin the wheel",
+  "spinning": "Spinning…",
+  "youWon": "You won",
+  "expires": "Valid until {{date}}",
+  "redeem": "Use my gift",
+  "added": "Added to your account",
+  "done": "Done",
+  "close": "Close",
+  "alreadyClaimed": "You've already spun your welcome gift.",
+  "fairness": "Prizes are drawn on our server. No purchase needed.",
+  "notifyNote": "If notifications are on, we'll remind you once before it ends.",
+  "prizes": {
+    "credits10": {
+      "title": "10 credits",
+      "short": "+10",
+      "body": "Added to your balance for previews."
+    },
+    "credits5": {
+      "title": "5 credits",
+      "short": "+5",
+      "body": "Added to your balance for previews."
+    },
+    "freeHigh": {
+      "title": "A free HD preview",
+      "short": "HD",
+      "body": "Your next HD preview costs no credits."
+    },
+    "discount40": {
+      "title": "40% off Pro",
+      "short": "−40%",
+      "body": "The first year of the yearly plan at a lower price."
+    }
+  },
+  "expired": "This gift ended on {{date}}.",
+  "redeemed": "You've already used this gift.",
+  "tokenNote": "Choose HD when you create your next preview."
+}

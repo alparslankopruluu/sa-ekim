@@ -14,7 +14,7 @@ import {
 import { REQUEST_RECORD_TTL_MS } from '../config.js';
 import type { ErrorCode, WalletDoc } from '../shared/api.js';
 import { db } from './admin.js';
-import type { RequestKind, RequestRecord } from './idempotency.js';
+import type { RequestRecord } from './idempotency.js';
 import { type LedgerEntry, type LedgerReason, normalizeWallet, type WalletCharge } from './ledger.js';
 import { docPaths } from './paths.js';
 
@@ -24,8 +24,7 @@ export const requestRef = (uid: string, key: string) => db().doc(docPaths.reques
 
 export interface WalletChange {
   credits: number;
-  freePosterTokens: number;
-  hdBoostTokens: number;
+  freeHighTokens: number;
   /** Set the preview flag (undefined keeps it). */
   previewUsed?: boolean;
 }
@@ -33,8 +32,7 @@ export interface WalletChange {
 export function chargeChange(charge: WalletCharge): WalletChange {
   return {
     credits: -charge.credits,
-    freePosterTokens: -charge.freePosterTokens,
-    hdBoostTokens: -charge.hdBoostTokens,
+    freeHighTokens: -charge.freeHighTokens,
     ...(charge.previewSlot ? { previewUsed: true } : {}),
   };
 }
@@ -42,14 +40,13 @@ export function chargeChange(charge: WalletCharge): WalletChange {
 export function refundChange(charge: WalletCharge): WalletChange {
   return {
     credits: charge.credits,
-    freePosterTokens: charge.freePosterTokens,
-    hdBoostTokens: charge.hdBoostTokens,
+    freeHighTokens: charge.freeHighTokens,
     ...(charge.previewSlot ? { previewUsed: false } : {}),
   };
 }
 
 export function creditChange(credits: number): WalletChange {
-  return { credits, freePosterTokens: 0, hdBoostTokens: 0 };
+  return { credits, freeHighTokens: 0 };
 }
 
 /** Applies a change and returns the resulting wallet (valid because the snapshot was read in `tx`). */
@@ -63,8 +60,7 @@ export function writeWalletChange(
   const current = normalizeWallet(snapshot.data());
   const next: WalletDoc = {
     balance: current.balance + change.credits,
-    freePosterTokens: current.freePosterTokens + change.freePosterTokens,
-    hdBoostTokens: current.hdBoostTokens + change.hdBoostTokens,
+    freeHighTokens: Math.max(0, current.freeHighTokens + change.freeHighTokens),
     previewUsed: change.previewUsed ?? current.previewUsed,
     updatedAt: now,
   };
@@ -74,8 +70,7 @@ export function writeWalletChange(
   }
   const update: Record<string, unknown> = { updatedAt: now };
   if (change.credits !== 0) update.balance = FieldValue.increment(change.credits);
-  if (change.freePosterTokens !== 0) update.freePosterTokens = FieldValue.increment(change.freePosterTokens);
-  if (change.hdBoostTokens !== 0) update.hdBoostTokens = FieldValue.increment(change.hdBoostTokens);
+  if (change.freeHighTokens !== 0) update.freeHighTokens = FieldValue.increment(change.freeHighTokens);
   if (change.previewUsed !== undefined) update.previewUsed = change.previewUsed;
   tx.update(ref, update);
   return next;
@@ -92,29 +87,33 @@ export function writeLedger(
   tx.create(db().collection(docPaths.ledger(uid)).doc(), doc);
 }
 
-/** Marks (or un-marks) a won token prize as redeemed on the gift document. */
+/**
+ * Marks (or un-marks) a won freeHigh token as redeemed on the gift document. The
+ * `tokenExpiresAt` field exists only while the token is unredeemed and unexpired: the
+ * hourly sweep queries it to take expired tokens out of the wallet.
+ */
 export function writeGiftRedemption(
   tx: Transaction,
   uid: string,
   giftSnapshot: DocumentSnapshot,
-  prize: 'freePoster' | 'hdBoost',
   redeemedAt: number | null,
 ): void {
-  if (!giftSnapshot.exists || giftSnapshot.get('prizeId') !== prize) return;
-  tx.update(giftRef(uid), { redeemedAt });
+  if (!giftSnapshot.exists || giftSnapshot.get('prizeId') !== 'freeHigh') return;
+  const expiresAt = giftSnapshot.get('expiresAt');
+  tx.update(giftRef(uid), {
+    redeemedAt,
+    tokenExpiresAt: redeemedAt === null && typeof expiresAt === 'number' ? expiresAt : null,
+  });
 }
 
 export function newRequestRecord(input: {
-  kind: RequestKind;
-  charge: WalletCharge;
   refId: string;
   response: Record<string, unknown> | null;
   now: number;
 }): RequestRecord & { expireAt: Timestamp } {
   return {
-    kind: input.kind,
+    kind: 'createPreview',
     status: 'pending',
-    charge: input.charge,
     refId: input.refId,
     response: input.response,
     errorCode: null,

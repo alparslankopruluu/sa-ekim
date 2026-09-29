@@ -3,12 +3,7 @@
  * https allowlist, with a byte cap and a timeout, and stored under the owner's
  * prefix; clients get short-lived signed URLs, never public objects.
  */
-import { createWriteStream } from 'node:fs';
-import { mkdtemp, rm } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
-import { Readable, Transform } from 'node:stream';
-import { pipeline } from 'node:stream/promises';
+import { Readable } from 'node:stream';
 import type { ReadableStream as WebReadableStream } from 'node:stream/web';
 
 import { bucket } from './admin.js';
@@ -53,18 +48,7 @@ function bodyStream(response: Response): Readable {
   return Readable.fromWeb(response.body as unknown as WebReadableStream<Uint8Array>);
 }
 
-function byteLimiter(maxBytes: number): Transform {
-  let seen = 0;
-  return new Transform({
-    transform(chunk: Buffer, _encoding, callback) {
-      seen += chunk.length;
-      if (seen > maxBytes) callback(new MediaError('too_large'));
-      else callback(null, chunk);
-    },
-  });
-}
-
-/** Downloads a provider output into memory (images, short audio). */
+/** Downloads a provider output into memory (the edited image). */
 export async function fetchProviderMedia(
   url: string,
   options: { maxBytes: number; timeoutMs: number; typePattern: RegExp },
@@ -81,18 +65,6 @@ export async function fetchProviderMedia(
   }
   if (size === 0) throw new MediaError('empty');
   return { buffer: Buffer.concat(chunks), contentType };
-}
-
-/** Streams a provider output to a local file (videos). */
-export async function downloadProviderMediaToFile(
-  url: string,
-  destination: string,
-  options: { maxBytes: number; timeoutMs: number; typePattern: RegExp },
-): Promise<string> {
-  const response = await fetchAllowed(url, AbortSignal.timeout(options.timeoutMs));
-  const contentType = checkResponse(response, options.maxBytes, options.typePattern);
-  await pipeline(bodyStream(response), byteLimiter(options.maxBytes), createWriteStream(destination));
-  return contentType;
 }
 
 export interface ObjectInfo {
@@ -133,29 +105,18 @@ export async function saveBuffer(path: string, buffer: Buffer, contentType: stri
     .save(buffer, { resumable: false, contentType, metadata: { cacheControl: 'private, max-age=3600' } });
 }
 
-export async function uploadFile(localPath: string, destination: string, contentType: string): Promise<void> {
-  await bucket().upload(localPath, {
-    destination,
-    resumable: false,
-    contentType,
-    metadata: { cacheControl: 'private, max-age=3600' },
-  });
+/** Downloads a Storage object into memory (bounded). */
+export async function downloadObjectBuffer(path: string, maxBytes: number): Promise<Buffer> {
+  const [buffer] = await bucket().file(path).download();
+  if (buffer.length === 0) throw new MediaError('empty');
+  if (buffer.length > maxBytes) throw new MediaError('too_large');
+  return buffer;
 }
 
-export async function downloadObjectToFile(path: string, destination: string): Promise<void> {
-  await bucket().file(path).download({ destination });
+export async function deleteObject(path: string): Promise<void> {
+  await bucket().file(path).delete({ ignoreNotFound: true });
 }
 
 export async function deletePrefix(prefix: string): Promise<void> {
   await bucket().deleteFiles({ prefix, force: true });
-}
-
-/** Runs `work` inside a private temp directory that is always removed. */
-export async function withTempDir<T>(work: (dir: string) => Promise<T>): Promise<T> {
-  const dir = await mkdtemp(join(tmpdir(), 'belto-'));
-  try {
-    return await work(dir);
-  } finally {
-    await rm(dir, { recursive: true, force: true });
-  }
 }

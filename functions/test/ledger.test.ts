@@ -7,175 +7,116 @@ import {
   EMPTY_WALLET,
   isTokenUsable,
   NO_CHARGE,
+  normalizeCharge,
   normalizeWallet,
-  planRenderCharge,
-  planStepCharge,
-  renderReservation,
-  settleRender,
+  planPreviewCharge,
 } from '../src/lib/ledger.js';
 import type { WalletDoc } from '../src/shared/api.js';
-import { renderCost } from '../src/shared/pricing.js';
+import { previewCost } from '../src/shared/pricing.js';
 
 const wallet = (patch: Partial<WalletDoc> = {}): WalletDoc => ({ ...EMPTY_WALLET, ...patch });
+const base = { onboarding: false, useFreeHighToken: false, tokenUsable: true };
 
-test('full renders reserve the 15 s price up front; previews reserve nothing', () => {
-  assert.equal(renderReservation('full', '768p'), 15 * 4);
-  assert.equal(renderReservation('full', '480p'), 15 * 2);
-  assert.equal(renderReservation('full', '2k'), 15 * 13);
-  assert.equal(renderReservation('preview', '480p'), 0);
+test('a standard preview reserves previewCost(standard), a high one previewCost(high)', () => {
+  const standard = planPreviewCharge(wallet({ balance: 10 }), { ...base, quality: 'standard' });
+  assert.deepEqual(standard, { ok: true, charge: { ...NO_CHARGE, credits: previewCost('standard') }, quality: 'standard' });
+  const high = planPreviewCharge(wallet({ balance: 10 }), { ...base, quality: 'high' });
+  assert.deepEqual(high, { ok: true, charge: { ...NO_CHARGE, credits: previewCost('high') }, quality: 'high' });
 });
 
-test('settlement charges the actual seconds and refunds the rest of the reservation', () => {
-  const reserved = renderReservation('full', '768p'); // 60
-  const s = settleRender({
-    purpose: 'full',
-    billingResolution: '768p',
-    reservedCredits: reserved,
-    actualSeconds: 11.2,
-    fallbackSeconds: 15,
-  });
-  assert.equal(s.billedSeconds, 12); // started seconds round up
-  assert.equal(s.chargedCredits, renderCost('768p', 12));
-  assert.equal(s.chargedCredits, 48);
-  assert.equal(s.refundCredits, 12);
-  assert.equal(s.chargedCredits + s.refundCredits, reserved);
-});
-
-test('settlement never charges more than was reserved (audio longer than 15 s)', () => {
-  const reserved = renderReservation('full', '1080p');
-  const s = settleRender({
-    purpose: 'full',
-    billingResolution: '1080p',
-    reservedCredits: reserved,
-    actualSeconds: 42,
-    fallbackSeconds: 15,
-  });
-  assert.equal(s.billedSeconds, 15);
-  assert.equal(s.chargedCredits, reserved);
-  assert.equal(s.refundCredits, 0);
-});
-
-test('settlement clamps very short output to the 2 s minimum', () => {
-  const s = settleRender({
-    purpose: 'full',
-    billingResolution: '480p',
-    reservedCredits: 30,
-    actualSeconds: 0.4,
-    fallbackSeconds: 15,
-  });
-  assert.equal(s.billedSeconds, 2);
-  assert.equal(s.chargedCredits, 4);
-  assert.equal(s.refundCredits, 26);
-});
-
-test('settlement falls back to the expected length when the duration is unknown', () => {
-  const s = settleRender({
-    purpose: 'full',
-    billingResolution: '768p',
-    reservedCredits: 60,
-    actualSeconds: null,
-    fallbackSeconds: 10,
-  });
-  assert.equal(s.billedSeconds, 10);
-  assert.equal(s.chargedCredits, 40);
-  assert.equal(s.refundCredits, 20);
-});
-
-test('hdBoost renders settle at the 768p billing price', () => {
-  const s = settleRender({
-    purpose: 'full',
-    billingResolution: '768p',
-    reservedCredits: renderReservation('full', '768p'),
-    actualSeconds: 12,
-    fallbackSeconds: 15,
-  });
-  assert.equal(s.chargedCredits, 12 * 4);
-});
-
-test('previews are always free', () => {
-  const s = settleRender({
-    purpose: 'preview',
-    billingResolution: '480p',
-    reservedCredits: 0,
-    actualSeconds: 5,
-    fallbackSeconds: 5,
-  });
-  assert.deepEqual([s.chargedCredits, s.refundCredits], [0, 0]);
-});
-
-test('step charges: credits, won token, insufficient balance', () => {
-  assert.deepEqual(planStepCharge(wallet({ balance: 5 }), { cost: 3, useFreePosterToken: false, tokenUsable: true }), {
-    ok: true,
-    charge: { ...NO_CHARGE, credits: 3 },
-  });
-  assert.deepEqual(planStepCharge(wallet({ balance: 2 }), { cost: 3, useFreePosterToken: false, tokenUsable: true }), {
+test('not enough credits is insufficient_credits and nothing is planned', () => {
+  const need = previewCost('high');
+  assert.deepEqual(planPreviewCharge(wallet({ balance: need - 1 }), { ...base, quality: 'high' }), {
     ok: false,
     code: 'insufficient_credits',
   });
-  assert.deepEqual(
-    planStepCharge(wallet({ freePosterTokens: 1 }), { cost: 3, useFreePosterToken: true, tokenUsable: true }),
-    { ok: true, charge: { ...NO_CHARGE, freePosterTokens: 1 } },
-  );
-  assert.deepEqual(planStepCharge(wallet(), { cost: 3, useFreePosterToken: true, tokenUsable: true }), {
+  assert.equal(planPreviewCharge(wallet({ balance: need }), { ...base, quality: 'high' }).ok, true);
+});
+
+test('the onboarding preview is free, standard-only and once per account', () => {
+  const first = planPreviewCharge(wallet(), { ...base, onboarding: true, quality: 'high' });
+  assert.deepEqual(first, { ok: true, charge: { ...NO_CHARGE, previewSlot: true }, quality: 'standard' });
+  assert.deepEqual(planPreviewCharge(wallet({ previewUsed: true, balance: 99 }), { ...base, onboarding: true, quality: 'standard' }), {
     ok: false,
-    code: 'invalid_input',
+    code: 'already_claimed',
   });
+  // Never debits the wallet, even a rich one.
+  const rich = wallet({ balance: 50 });
+  const planned = planPreviewCharge(rich, { ...base, onboarding: true, quality: 'standard' });
+  assert.ok(planned.ok);
+  assert.equal(applyCharge(rich, planned.charge).balance, 50);
+  assert.equal(applyCharge(rich, planned.charge).previewUsed, true);
+});
+
+test('the onboarding preview cannot also spend a free-high token', () => {
   assert.deepEqual(
-    planStepCharge(wallet({ freePosterTokens: 1 }), { cost: 3, useFreePosterToken: true, tokenUsable: false }),
+    planPreviewCharge(wallet({ freeHighTokens: 1 }), { ...base, onboarding: true, useFreeHighToken: true, quality: 'high' }),
     { ok: false, code: 'invalid_input' },
   );
 });
 
-test('render charges: preview once, hdBoost token, balance check', () => {
-  const base = { billingResolution: '768p' as const, useHdBoostToken: false, hdTokenUsable: true };
-  assert.deepEqual(planRenderCharge(wallet(), { ...base, purpose: 'preview' }), {
-    ok: true,
-    charge: { ...NO_CHARGE, previewSlot: true },
-  });
-  assert.deepEqual(planRenderCharge(wallet({ previewUsed: true }), { ...base, purpose: 'preview' }), {
-    ok: false,
-    code: 'already_claimed',
-  });
-  assert.deepEqual(planRenderCharge(wallet({ balance: 59 }), { ...base, purpose: 'full' }), {
-    ok: false,
-    code: 'insufficient_credits',
-  });
-  assert.deepEqual(planRenderCharge(wallet({ balance: 60, hdBoostTokens: 1 }), { ...base, purpose: 'full', useHdBoostToken: true }), {
-    ok: true,
-    charge: { ...NO_CHARGE, credits: 60, hdBoostTokens: 1 },
-  });
-  assert.deepEqual(planRenderCharge(wallet({ balance: 60 }), { ...base, purpose: 'full', useHdBoostToken: true }), {
+test('a free-high token pays for one high preview and only a high one', () => {
+  const planned = planPreviewCharge(wallet({ freeHighTokens: 1 }), { ...base, useFreeHighToken: true, quality: 'high' });
+  assert.deepEqual(planned, { ok: true, charge: { ...NO_CHARGE, freeHighTokens: 1 }, quality: 'high' });
+  assert.deepEqual(planPreviewCharge(wallet({ freeHighTokens: 1 }), { ...base, useFreeHighToken: true, quality: 'standard' }), {
     ok: false,
     code: 'invalid_input',
   });
-});
-
-test('a refund returns exactly what a charge took (credits, tokens, preview slot)', () => {
-  const start = wallet({ balance: 100, freePosterTokens: 1, hdBoostTokens: 1 });
-  const charge = { credits: 60, freePosterTokens: 0, hdBoostTokens: 1, previewSlot: false };
-  const charged = applyCharge(start, charge);
-  assert.equal(charged.balance, 40);
-  assert.equal(charged.hdBoostTokens, 0);
-  assert.deepEqual(applyRefund(charged, charge), start);
-
-  const previewCharge = { ...NO_CHARGE, previewSlot: true };
-  const afterPreview = applyCharge(start, previewCharge);
-  assert.equal(afterPreview.previewUsed, true);
-  assert.equal(applyRefund(afterPreview, previewCharge).previewUsed, false);
-});
-
-test('won tokens expire with their prize; other tokens never do', () => {
-  const now = 1_000_000;
-  assert.equal(isTokenUsable({ prizeId: 'hdBoost', expiresAt: now + 1 }, 'hdBoost', now), true);
-  assert.equal(isTokenUsable({ prizeId: 'hdBoost', expiresAt: now - 1 }, 'hdBoost', now), false);
-  assert.equal(isTokenUsable({ prizeId: 'credits20', expiresAt: now - 1 }, 'hdBoost', now), true);
-  assert.equal(isTokenUsable(undefined, 'freePoster', now), true);
-});
-
-test('wallet normalization tolerates missing or malformed fields', () => {
-  assert.deepEqual(normalizeWallet(undefined), EMPTY_WALLET);
-  assert.deepEqual(normalizeWallet({ balance: 12.9, freePosterTokens: -1, previewUsed: 'yes' }), {
-    ...EMPTY_WALLET,
-    balance: 12,
+  assert.deepEqual(planPreviewCharge(wallet({ freeHighTokens: 0 }), { ...base, useFreeHighToken: true, quality: 'high' }), {
+    ok: false,
+    code: 'invalid_input',
   });
+  assert.deepEqual(
+    planPreviewCharge(wallet({ freeHighTokens: 1 }), { ...base, useFreeHighToken: true, quality: 'high', tokenUsable: false }),
+    { ok: false, code: 'invalid_input' },
+  );
+});
+
+test('a token preview leaves the credit balance untouched', () => {
+  const w = wallet({ balance: 4, freeHighTokens: 1 });
+  const planned = planPreviewCharge(w, { ...base, useFreeHighToken: true, quality: 'high' });
+  assert.ok(planned.ok);
+  const after = applyCharge(w, planned.charge);
+  assert.equal(after.balance, 4);
+  assert.equal(after.freeHighTokens, 0);
+});
+
+test('charge then refund restores the wallet exactly (credits, token and onboarding slot)', () => {
+  const start = wallet({ balance: 7, freeHighTokens: 1, previewUsed: false });
+  for (const charge of [
+    { ...NO_CHARGE, credits: 3 },
+    { ...NO_CHARGE, freeHighTokens: 1 },
+    { ...NO_CHARGE, previewSlot: true },
+  ]) {
+    assert.deepEqual(applyRefund(applyCharge(start, charge), charge), start);
+  }
+});
+
+test('refunding a charge that never used the onboarding slot keeps previewUsed', () => {
+  const used = wallet({ previewUsed: true });
+  assert.equal(applyRefund(used, { ...NO_CHARGE, credits: 1 }).previewUsed, true);
+});
+
+test('normalizeWallet and normalizeCharge tolerate missing, partial and hostile data', () => {
+  assert.deepEqual(normalizeWallet(undefined), EMPTY_WALLET);
+  assert.deepEqual(normalizeWallet({ balance: -5, freeHighTokens: 'x', previewUsed: 'yes', updatedAt: 3.9 }), {
+    balance: 0,
+    freeHighTokens: 0,
+    previewUsed: false,
+    updatedAt: 3,
+  });
+  assert.deepEqual(normalizeCharge({ credits: 2.7, freeHighTokens: -1, previewSlot: true }), {
+    credits: 2,
+    freeHighTokens: 0,
+    previewSlot: true,
+  });
+});
+
+test('a won free-high token is usable until its prize expires; other gifts do not gate it', () => {
+  const now = 1_000_000;
+  assert.equal(isTokenUsable({ prizeId: 'freeHigh', expiresAt: now + 1 }, now), true);
+  assert.equal(isTokenUsable({ prizeId: 'freeHigh', expiresAt: now }, now), false);
+  assert.equal(isTokenUsable({ prizeId: 'freeHigh', expiresAt: now - 5 }, now), false);
+  assert.equal(isTokenUsable({ prizeId: 'credits5', expiresAt: now - 5 }, now), true);
+  assert.equal(isTokenUsable(undefined, now), true);
 });

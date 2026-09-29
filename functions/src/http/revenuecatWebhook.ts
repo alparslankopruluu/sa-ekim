@@ -37,7 +37,7 @@ async function userExists(uid: string): Promise<boolean> {
   }
 }
 
-const OFFERING_PRIZES = new Set(['discount40', 'trial7']);
+const OFFERING_PRIZES = new Set(['discount40']);
 
 async function applyRcAction(action: ApplyAction): Promise<boolean> {
   const { uid } = action;
@@ -72,11 +72,11 @@ async function applyRcAction(action: ApplyAction): Promise<boolean> {
         updatedAt: now,
       };
       if (ent.allowance === null) {
-        Object.assign(update, { allowanceAnchorAt: null, allowanceMonth: 0, nextAllowanceAt: null });
+        Object.assign(update, { allowanceAnchorAt: null, allowanceWeek: 0, nextAllowanceAt: null });
       } else if (ent.allowance) {
         Object.assign(update, {
           allowanceAnchorAt: ent.allowance.anchorAt,
-          allowanceMonth: ent.allowance.month,
+          allowanceWeek: ent.allowance.week,
           nextAllowanceAt: ent.allowance.nextAt,
         });
       }

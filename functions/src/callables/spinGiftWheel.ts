@@ -1,7 +1,9 @@
 /**
  * One honest welcome-gift spin per account: the server draws (crypto random,
  * weights from `config/wheel` or the shared defaults) and grants exactly the
- * labelled prize in the same transaction that records the spin.
+ * labelled prize in the same transaction that records the spin. Credits are granted on the spot,
+ * a free-high token lands in the wallet, and discount40 unlocks the `gift_discount` offering
+ * (the gift document is the unlock); every prize expires 3 days after the spin.
  */
 import { randomBytes } from 'node:crypto';
 
@@ -25,14 +27,8 @@ export function cryptoRandom(): number {
 
 function prizeChange(prize: PrizeDef): WalletChange | null {
   if (prize.kind === 'credits') return creditChange(prize.credits ?? 0);
-  if (prize.kind === 'token') {
-    return {
-      credits: 0,
-      freePosterTokens: prize.token === 'freePoster' ? 1 : 0,
-      hdBoostTokens: prize.token === 'hdBoost' ? 1 : 0,
-    };
-  }
-  return null; // offering prizes unlock a RevenueCat offering in the app
+  if (prize.kind === 'token') return { credits: 0, freeHighTokens: prize.token === 'freeHigh' ? 1 : 0 };
+  return null; // offering prizes (discount40) unlock the `gift_discount` RevenueCat offering in the app
 }
 
 export const spinGiftWheel = onCall(
@@ -68,7 +64,9 @@ export const spinGiftWheel = onCall(
         // Credits are granted on the spot; tokens/offerings are redeemed later.
         redeemedAt: prize.kind === 'credits' ? now : null,
       };
-      tx.create(giftRef(uid), gift);
+      // `tokenExpiresAt` exists only for an unredeemed free-high token: the hourly sweep queries it
+      // to take an expired token out of the wallet.
+      tx.create(giftRef(uid), { ...gift, tokenExpiresAt: prize.kind === 'token' ? expiresAt : null });
       return { prizeId, segmentIndex, expiresAt: new Date(expiresAt).toISOString(), grantedCredits, balance: wallet.balance };
     });
     log.info('wheel.spun', { uid, kind: prizeId, credits: response.grantedCredits });

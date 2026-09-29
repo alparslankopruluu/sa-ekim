@@ -1,13 +1,14 @@
 /**
  * fal queue completion webhook. Two independent checks before any state
- * change: the per-render HMAC token in the URL, and fal's ED25519 signature
+ * change: the per-preview HMAC token in the URL, and fal's ED25519 signature
  * over the raw body. Then:
- *   OK    → claim the render (→ finalizing), store the output URL server-side,
- *           enqueue the `finalizeRender` task (download, watermark, settle, push).
- *           Heavy encoding runs in the task so this endpoint answers fal fast.
- *   ERROR → fail the render and refund the whole reservation.
- * Retries are safe: every transition is status-guarded and the task id is the
- * renderId (Cloud Tasks de-duplicates it).
+ *   OK    → claim the preview (→ finalizing), store the output URL server-side,
+ *           enqueue the `finalizePreview` task (download, quality gate, composite,
+ *           watermark, settle, push). Image work runs in the task so this endpoint
+ *           answers fal fast.
+ *   ERROR → fail the preview and refund the whole reservation.
+ * Retries are safe: every transition is status-guarded and the task id is
+ * `{previewId}-{attempt}` (Cloud Tasks de-duplicates it; the quality-gate retry is attempt 2).
  */
 import { onRequest } from 'firebase-functions/v2/https';
 
@@ -18,11 +19,12 @@ import { canRefreshJwks, getFalJwks } from '../lib/jwks.js';
 import { log } from '../lib/log.js';
 import { isAllowedProviderUrl } from '../lib/media.js';
 import { UID_PATTERN, UUID_PATTERN } from '../lib/paths.js';
-import { classifyWebhookFailure, videoUrlOf } from '../lib/provider.js';
-import { verifyRenderToken } from '../lib/render-token.js';
-import { claimRenderForFinalize, refundRender } from '../lib/renders.js';
+import { classifyWebhookFailure } from '../lib/failures.js';
+import { verifyPreviewToken } from '../lib/preview-token.js';
+import { firstImageUrl } from '../lib/provider.js';
+import { claimPreviewForFinalize, refundPreview } from '../lib/previews.js';
 import { type FalVerifyResult, type HeaderBag, verifyFalWebhookSignature } from '../lib/webhook-signature.js';
-import type { FinalizeRenderTask } from '../tasks/finalizeRender.js';
+import { finalizeTaskId, type FinalizePreviewTask } from '../lib/tasks.js';
 
 const MAX_BODY_BYTES = 1024 * 1024;
 
@@ -34,10 +36,10 @@ async function verifySignature(headers: HeaderBag, rawBody: Buffer): Promise<Fal
   return verifyFalWebhookSignature({ headers, rawBody, keys: await getFalJwks({ forceRefresh: true }), nowSeconds });
 }
 
-async function enqueueFinalize(task: FinalizeRenderTask): Promise<void> {
-  const queue = functionsAdmin().taskQueue<FinalizeRenderTask>(`locations/${REGION}/functions/finalizeRender`);
+async function enqueueFinalize(task: FinalizePreviewTask, attempt: number): Promise<void> {
+  const queue = functionsAdmin().taskQueue<FinalizePreviewTask>(`locations/${REGION}/functions/finalizePreview`);
   try {
-    await queue.enqueue(task, { id: task.renderId, dispatchDeadlineSeconds: 600 });
+    await queue.enqueue(task, { id: finalizeTaskId(task.previewId, attempt), dispatchDeadlineSeconds: 600 });
   } catch (error) {
     const code = error && typeof error === 'object' ? (error as { code?: unknown }).code : undefined;
     if (code === 'functions/task-already-exists') return;
@@ -61,11 +63,11 @@ export const falWebhook = onRequest(
       return;
     }
     const uid = typeof req.query.uid === 'string' ? req.query.uid : '';
-    const renderId = typeof req.query.renderId === 'string' ? req.query.renderId.toLowerCase() : '';
+    const previewId = typeof req.query.previewId === 'string' ? req.query.previewId.toLowerCase() : '';
     if (
       !UID_PATTERN.test(uid) ||
-      !UUID_PATTERN.test(renderId) ||
-      !verifyRenderToken(FAL_WEBHOOK_TOKEN_SALT.value(), uid, renderId, req.query.t)
+      !UUID_PATTERN.test(previewId) ||
+      !verifyPreviewToken(FAL_WEBHOOK_TOKEN_SALT.value(), uid, previewId, req.query.t)
     ) {
       res.status(401).end();
       return;
@@ -80,12 +82,12 @@ export const falWebhook = onRequest(
     try {
       verification = await verifySignature(req.headers, rawBody);
     } catch (error) {
-      log.error('fal_webhook.jwks_unavailable', { renderId, errorName: errorName(error) });
+      log.error('fal_webhook.jwks_unavailable', { previewId, errorName: errorName(error) });
       res.status(503).end(); // fal retries
       return;
     }
     if (!verification.ok) {
-      log.warn('fal_webhook.bad_signature', { uid, renderId, reason: verification.reason });
+      log.warn('fal_webhook.bad_signature', { uid, previewId, reason: verification.reason });
       res.status(401).end();
       return;
     }
@@ -107,38 +109,40 @@ export const falWebhook = onRequest(
 
     try {
       if (body.status === 'OK') {
-        const videoUrl = videoUrlOf(body.payload);
-        if (!isAllowedProviderUrl(videoUrl)) {
-          const outcome = await refundRender(uid, renderId, {
+        const imageUrl = firstImageUrl(body.payload);
+        if (!isAllowedProviderUrl(imageUrl)) {
+          // A completed job without a usable image (e.g. a content-checker rejection): refund in full.
+          const code = classifyWebhookFailure(body.payload, body.error);
+          const outcome = await refundPreview(uid, previewId, {
             fromStatuses: ['queued', 'processing'],
             to: 'failed',
-            errorCode: 'provider_failed',
+            errorCode: code,
             expectedRequestId: requestId,
           });
-          log.warn('fal_webhook.missing_output', { uid, renderId, reason: outcome.changed ? 'refunded' : 'unchanged' });
+          log.warn('fal_webhook.missing_output', { uid, previewId, code, reason: outcome.changed ? 'refunded' : 'unchanged' });
           res.status(200).json({ ok: true });
           return;
         }
-        const claim = await claimRenderForFinalize(uid, renderId, requestId, videoUrl);
-        if (claim === 'claimed' || claim === 'already_finalizing') {
-          await enqueueFinalize({ uid, renderId });
+        const claim = await claimPreviewForFinalize(uid, previewId, requestId, imageUrl);
+        if (claim.outcome === 'claimed' || claim.outcome === 'already_finalizing') {
+          await enqueueFinalize({ uid, previewId }, claim.attempt);
         }
-        log.info('fal_webhook.completed', { uid, renderId, status: claim });
+        log.info('fal_webhook.completed', { uid, previewId, status: claim.outcome });
       } else if (body.status === 'ERROR') {
         const code = classifyWebhookFailure(body.payload, body.error);
-        const outcome = await refundRender(uid, renderId, {
+        const outcome = await refundPreview(uid, previewId, {
           fromStatuses: ['queued', 'processing'],
           to: 'failed',
           errorCode: code,
           expectedRequestId: requestId,
         });
-        log.warn('fal_webhook.failed', { uid, renderId, code, reason: outcome.changed ? 'refunded' : 'unchanged' });
+        log.warn('fal_webhook.failed', { uid, previewId, code, reason: outcome.changed ? 'refunded' : 'unchanged' });
       } else {
-        log.warn('fal_webhook.unknown_status', { uid, renderId });
+        log.warn('fal_webhook.unknown_status', { uid, previewId });
       }
       res.status(200).json({ ok: true });
     } catch (error) {
-      log.error('fal_webhook.processing_error', { uid, renderId, errorName: errorName(error) });
+      log.error('fal_webhook.processing_error', { uid, previewId, errorName: errorName(error) });
       res.status(500).end(); // fal retries; every step above is idempotent
     }
   },

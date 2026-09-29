@@ -4,6 +4,8 @@ import path from 'node:path';
 import { type ConfigPlugin, withAndroidManifest, withAppBuildGradle, withPodfile } from 'expo/config-plugins';
 import type { ConfigContext, ExpoConfig } from 'expo/config';
 
+import locales from './src/translations/locales.json';
+
 /**
  * One config for both store apps (iOS + Android).
  *
@@ -16,10 +18,10 @@ import type { ConfigContext, ExpoConfig } from 'expo/config';
 
 type BackendMode = 'mock' | 'emulator' | 'live';
 
-const APP_NAME = 'Belto';
-const BUNDLE_ID = process.env.BELTO_BUNDLE_ID ?? 'com.techtactoe.belto';
+const APP_NAME = 'Kök';
+const BUNDLE_ID = process.env.KOK_BUNDLE_ID ?? 'com.techtactoe.kok';
 const VERSION = '1.0.0';
-const BUILD_NUMBER = 3;
+const BUILD_NUMBER = 1;
 
 const rawMode = process.env.EXPO_PUBLIC_BACKEND_MODE ?? 'mock';
 const backendMode: BackendMode = rawMode === 'live' || rawMode === 'emulator' ? rawMode : 'mock';
@@ -55,11 +57,11 @@ const withFirebaseCocoaPods: ConfigPlugin = (cfg) =>
   });
 
 // Release builds sign with the Play upload key when the build passes it as Gradle
-// properties (ORG_GRADLE_PROJECT_BELTO_UPLOAD_*); nothing secret lives in the repo.
+// properties (ORG_GRADLE_PROJECT_KOK_UPLOAD_*); nothing secret lives in the repo.
 const withUploadSigning: ConfigPlugin = (cfg) =>
   withAppBuildGradle(cfg, (gradle) => {
     const src = gradle.modResults.contents;
-    if (src.includes('BELTO_UPLOAD_STORE_FILE')) return gradle;
+    if (src.includes('KOK_UPLOAD_STORE_FILE')) return gradle;
     gradle.modResults.contents = src
       // `locales` also emits the iOS-only Info.plist keys as Android strings; they are
       // harmless extras, so don't let lintVital fail the release on them.
@@ -67,25 +69,25 @@ const withUploadSigning: ConfigPlugin = (cfg) =>
       .replace(
         /signingConfigs \{\n/,
         `signingConfigs {
-        if (project.hasProperty('BELTO_UPLOAD_STORE_FILE')) {
+        if (project.hasProperty('KOK_UPLOAD_STORE_FILE')) {
             upload {
-                storeFile file(BELTO_UPLOAD_STORE_FILE)
-                storePassword BELTO_UPLOAD_PASSWORD
-                keyAlias BELTO_UPLOAD_KEY_ALIAS
-                keyPassword BELTO_UPLOAD_PASSWORD
+                storeFile file(KOK_UPLOAD_STORE_FILE)
+                storePassword KOK_UPLOAD_PASSWORD
+                keyAlias KOK_UPLOAD_KEY_ALIAS
+                keyPassword KOK_UPLOAD_PASSWORD
             }
         }
 `,
       )
       .replace(
         /(release \{[^}]*?)signingConfig signingConfigs\.debug/,
-        "$1signingConfig project.hasProperty('BELTO_UPLOAD_STORE_FILE') ? signingConfigs.upload : signingConfigs.debug",
+        "$1signingConfig project.hasProperty('KOK_UPLOAD_STORE_FILE') ? signingConfigs.upload : signingConfigs.debug",
       );
     return gradle;
   });
 
 // expo-notifications and RNFirebase Messaging both declare the default FCM
-// channel; keep ours ("renders") instead of failing the manifest merge.
+// channel; keep ours ("previews") instead of failing the manifest merge.
 const FCM_CHANNEL_META = 'com.google.firebase.messaging.default_notification_channel_id';
 const withFcmChannelOverride: ConfigPlugin = (cfg) =>
   withAndroidManifest(cfg, (manifest) => {
@@ -112,18 +114,18 @@ const firebasePlugins: ExpoConfig['plugins'] = firebaseNative
     ]
   : [];
 
-const NATIVE_LOCALES = ['en', 'tr', 'ar', 'ja', 'zh-Hans', 'ru', 'es', 'pt-BR', 'de', 'ko'] as const;
+const NATIVE_LOCALES = locales as readonly string[];
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: APP_NAME,
-  slug: 'belto',
-  scheme: 'belto',
+  slug: 'kok',
+  scheme: 'kok',
   version: VERSION,
   orientation: 'portrait',
   icon: './assets/images/icon.png',
   userInterfaceStyle: 'dark',
-  backgroundColor: '#07060D',
+  backgroundColor: '#0D0A08',
   locales: Object.fromEntries(
     NATIVE_LOCALES.map((locale) => [locale, `./src/translations/native/${locale}.json`]),
   ),
@@ -142,10 +144,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     ...(hasIosFirebase ? { googleServicesFile: iosFirebaseFile } : {}),
     infoPlist: {
       CFBundleAllowMixedLocalizations: true,
-      NSCameraUsageDescription: 'Belto uses the camera so you can take the photo that will sing.',
-      NSPhotoLibraryUsageDescription: 'Belto opens your photos so you can pick the one that will sing.',
-      NSPhotoLibraryAddUsageDescription: 'Belto saves your finished singing videos to your photo library.',
-      NSMicrophoneUsageDescription: 'Belto records your voice only when you choose to make a photo say your words.',
+      NSCameraUsageDescription: 'Kök uses the camera so you can photograph your progress from the same angle each time.',
+      NSPhotoLibraryUsageDescription: 'Kök opens your photos so you can pick one for a preview or your journey.',
+      NSPhotoLibraryAddUsageDescription: 'Kök saves your previews and comparison images to your photo library.',
+      NSMotionUsageDescription: 'Kök reads the motion sensor to check that your phone is held upright for a consistent photo.',
     },
     privacyManifests: {
       NSPrivacyTracking: false,
@@ -165,15 +167,15 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     package: BUNDLE_ID,
     versionCode: BUILD_NUMBER,
     adaptiveIcon: {
-      backgroundColor: '#07060D',
+      backgroundColor: '#0D0A08',
       foregroundImage: './assets/images/android-icon-foreground.png',
       backgroundImage: './assets/images/android-icon-background.png',
       monochromeImage: './assets/images/android-icon-monochrome.png',
     },
     predictiveBackGestureEnabled: false,
     ...(hasAndroidFirebase ? { googleServicesFile: androidFirebaseFile } : {}),
-    permissions: ['android.permission.RECORD_AUDIO', 'android.permission.POST_NOTIFICATIONS'],
-    // No location; no ad ID (Firebase Analytics adds it, Belto does no tracking); no broad
+    permissions: ['android.permission.CAMERA', 'android.permission.POST_NOTIFICATIONS'],
+    // No location; no ad ID (Firebase Analytics adds it, Kök does no tracking); no broad
     // media reads (Play photo/video policy — photos come from the system picker and saving
     // is write-only, which needs no permission on Android 13+); no overlay window.
     blockedPermissions: [
@@ -187,6 +189,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'android.permission.READ_MEDIA_AUDIO',
       'android.permission.READ_MEDIA_VISUAL_USER_SELECTED',
       'android.permission.SYSTEM_ALERT_WINDOW',
+      'android.permission.RECORD_AUDIO',
     ],
   },
   web: {
@@ -201,7 +204,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-splash-screen',
       {
-        backgroundColor: '#07060D',
+        backgroundColor: '#0D0A08',
         image: './assets/images/splash-icon.png',
         imageWidth: 148,
       },
@@ -209,30 +212,35 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-font',
       {
-        fonts: ['./assets/fonts/Unbounded-Black.ttf', './assets/fonts/Unbounded-Bold.ttf'],
+        fonts: ['./assets/fonts/DMSerifDisplay-Regular.ttf', './assets/fonts/DMSerifDisplay-Italic.ttf'],
       },
     ],
     ['expo-localization', { supportsRTL: true }],
     [
       'expo-image-picker',
       {
-        photosPermission: 'Belto opens your photos so you can pick the one that will sing.',
-        cameraPermission: 'Belto uses the camera so you can take the photo that will sing.',
+        photosPermission: 'Kök opens your photos so you can pick one for a preview or your journey.',
+        cameraPermission: 'Kök uses the camera so you can photograph your progress from the same angle each time.',
         microphonePermission: false,
       },
     ],
     [
-      'expo-audio',
+      'expo-camera',
       {
-        microphonePermission: 'Belto records your voice only when you choose to make a photo say your words.',
-        recordAudioAndroid: true,
+        cameraPermission: 'Kök uses the camera so you can photograph your progress from the same angle each time.',
+        microphonePermission: false,
+        recordAudioAndroid: false,
       },
+    ],
+    [
+      'expo-sensors',
+      { motionPermission: 'Kök reads the motion sensor to check that your phone is held upright for a consistent photo.' },
     ],
     [
       'expo-media-library',
       {
-        photosPermission: 'Belto opens your photos so you can pick the one that will sing.',
-        savePhotosPermission: 'Belto saves your finished singing videos to your photo library.',
+        photosPermission: 'Kök opens your photos so you can pick one for a preview or your journey.',
+        savePhotosPermission: 'Kök saves your previews and comparison images to your photo library.',
         isAccessMediaLocationEnabled: false,
       },
     ],
@@ -240,11 +248,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'expo-notifications',
       {
         icon: './assets/images/notification-icon.png',
-        color: '#FF2E88',
-        defaultChannel: 'renders',
+        color: '#E89A5B',
+        defaultChannel: 'previews',
       },
     ],
-    ['expo-video', { supportsBackgroundPlayback: false, supportsPictureInPicture: false }],
     'expo-web-browser',
     [
       'expo-build-properties',
@@ -272,8 +279,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     backendMode,
     firebaseRegion: 'us-central1',
     legal: {
-      privacyUrl: process.env.EXPO_PUBLIC_PRIVACY_URL ?? 'https://belto-prod.web.app/privacy/',
-      termsUrl: process.env.EXPO_PUBLIC_TERMS_URL ?? 'https://belto-prod.web.app/terms/',
+      privacyUrl: process.env.EXPO_PUBLIC_PRIVACY_URL ?? 'https://kok-prod.web.app/privacy/',
+      termsUrl: process.env.EXPO_PUBLIC_TERMS_URL ?? 'https://kok-prod.web.app/terms/',
       supportEmail: process.env.EXPO_PUBLIC_SUPPORT_EMAIL ?? 'techtactoeappstudio@gmail.com',
     },
     eas: {

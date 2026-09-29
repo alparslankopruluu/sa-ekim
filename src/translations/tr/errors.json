@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Lütfen uygulamayı yeniden başlat ve tekrar dene.",
+  "consent_required": "Lütfen önce yapay zekâ işleme bildirimini incele ve onayla.",
+  "invalid_input": "Girdiğin bilgide bir sorun var gibi. Lütfen kontrol edip tekrar dene.",
+  "content_blocked": "Bu fotoğraf veya metin kullanılamıyor. Lütfen başka bir tane dene.",
+  "insufficient_credits": "Bunun için yeterli kredin yok.",
+  "pro_required": "Bu bir Pro özelliği.",
+  "rate_limited": "Çok hızlı gidiyorsun. Biraz bekleyip tekrar dene.",
+  "already_claimed": "Bunu zaten aldın.",
+  "not_found": "Bunu bulamadık.",
+  "previews_disabled": "Önizlemeler kısa süreliğine durduruldu. Yolculuğun etkilenmez. Lütfen daha sonra tekrar dene.",
+  "provider_failed": "İşlem tamamlanamadı. Lütfen birazdan tekrar dene.",
+  "timeout": "Bu çok uzun sürdü. Lütfen tekrar dene.",
+  "offline": "Çevrimdışı görünüyorsun. Bağlantını kontrol edip tekrar dene.",
+  "unknown": "Bir şeyler ters gitti. Lütfen tekrar dene."
+}

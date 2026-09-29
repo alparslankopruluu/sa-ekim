@@ -1,0 +1,23 @@
+{
+  "title": "Kredi al",
+  "subtitle": "Kredilerin süresi dolmaz. Standart önizleme {{standard}}, HD önizleme {{high}} kredi harcar.",
+  "balance": "Bakiyen",
+  "equivalent": "≈ {{standard}} standart veya {{high}} HD önizleme",
+  "packs": {
+    "credits_10": "Başlangıç",
+    "credits_25": "Plus",
+    "credits_60": "Stüdyo"
+  },
+  "popular": "Popüler",
+  "success": "{{count}} kredi eklendi.",
+  "pending": "Satın alman onay bekliyor.",
+  "failedBody": "Kredi paketleri yüklenemedi. Bağlantını kontrol edip tekrar dene.",
+  "emptyBody": "Kredi paketleri şu anda kullanılamıyor. Lütfen daha sonra tekrar dene.",
+  "freeHigh_one": "{{count}} ücretsiz HD önizleme seni bekliyor",
+  "freeHigh_other": "{{count}} ücretsiz HD önizleme seni bekliyor",
+  "examplesTitle": "Krediler ne kadar gider",
+  "exampleStandard": "Standart önizleme",
+  "exampleHigh": "HD önizleme, filigransız",
+  "proHint": "Pro üyeler her hafta veya ay kredi alır.",
+  "close": "Kredi mağazasını kapat"
+}

@@ -1,0 +1,109 @@
+{
+  "title": "Ayarlar",
+  "sections": {
+    "subscription": "Abonelik ve krediler",
+    "language": "Dil",
+    "notifications": "Bildirimler",
+    "preferences": "Tercihler",
+    "data": "Veri ve gizlilik",
+    "account": "Hesap",
+    "legal": "Yasal ve destek",
+    "about": "Hakkında",
+    "developer": "Geliştirici"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Ücretsiz plan",
+    "renews": "{{date}} tarihinde yenilenir",
+    "expires": "{{date}} tarihinde biter",
+    "manage": "Aboneliği yönet",
+    "restore": "Satın alımları geri yükle",
+    "upgrade": "Pro'ya geç",
+    "restoreDone": "Tekrar hoş geldin. Pro geri yüklendi.",
+    "restoreNone": "Önceki bir satın alma bulunamadı.",
+    "balance": "Kredi bakiyesi",
+    "buyCredits": "Kredi al",
+    "freeHigh_one": "{{count}} ücretsiz HD önizleme",
+    "freeHigh_other": "{{count}} ücretsiz HD önizleme"
+  },
+  "language": {
+    "title": "Dil",
+    "pickerTitle": "Bir dil seç",
+    "rtlNote": "Yerleşim yönünü değiştirmek için Kök'ü yeniden başlat.",
+    "closePicker": "Dil listesini kapat"
+  },
+  "notifications": {
+    "previews": "Önizleme hazır",
+    "offers": "Hediyeler ve teklifler",
+    "reminders": "Yolculuk hatırlatıcıları",
+    "remindersHint": "Bakım, haftalık fotoğraf ve faz hatırlatıcıları. Faz hatırlatıcıları Pro'ya dahildir.",
+    "systemOff": "Kök için bildirimler sistem ayarlarında kapalı. Açmak için dokun."
+  },
+  "preferences": {
+    "haptics": "Titreşimli geri bildirim"
+  },
+  "data": {
+    "wipe": "Tüm verilerimi sil",
+    "wipeHint": "Yolculuk fotoğraflarını, dökülme kaydını ve önizlemelerini bu cihazdan siler.",
+    "wipeTitle": "Tüm verilerin silinsin mi?",
+    "wipeBody": "Bu işlem operasyon tarihini, ilerleme fotoğraflarını, dökülme kaydını ve kayıtlı önizlemeleri kalıcı olarak siler. Aboneliğin ve kredilerin hesabında kalır. Bu işlem geri alınamaz.",
+    "wipeConfirm": "Verilerimi sil",
+    "wiping": "Siliniyor…",
+    "wiped": "Verilerin bu cihazdan silindi."
+  },
+  "account": {
+    "guest": "Anonim hesap",
+    "id": "Hesap kimliği",
+    "delete": "Hesabı sil",
+    "deleteHint": "Hesabını, kredilerini ve yüklediğin fotoğrafları sunucularımızdan siler.",
+    "deleteTitle": "Hesabın silinsin mi?",
+    "deleteBody": "Bu işlem hesabını, kredilerini, kayıtlı önizlemeleri ve yüklediğin tüm fotoğrafları kalıcı olarak siler; bu cihazdaki yolculuğunu da temizler. Aktif bir abonelik, mağaza hesap ayarlarından ayrıca iptal edilmelidir.",
+    "deleteConfirm": "Hesabı sil",
+    "deleting": "Siliniyor…",
+    "deleted": "Hesabın silindi."
+  },
+  "legal": {
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "ai": "Yapay zekâ önizlemeleri nasıl çalışır",
+    "support": "Yardım ve destek"
+  },
+  "about": {
+    "version": "Sürüm {{version}} ({{build}})",
+    "contact": "Destek e-postası",
+    "rate": "Kök'ü puanla",
+    "replay": "Tanıtımı yeniden izle"
+  },
+  "confirm": {
+    "cancel": "Vazgeç"
+  },
+  "developer": {
+    "open": "Geliştirici araçları",
+    "backend": "Sunucu modu",
+    "replayOnboarding": "Tanıtımı yeniden izle",
+    "offerings": "Mağaza teklifleri",
+    "purchase": "Satın alma sonucu",
+    "wheel": "Hediye çarkı yeri",
+    "failNext": "Sonraki önizleme başarısız olsun",
+    "cohort": "Haftam için grup sayısı",
+    "addCredits": "50 kredi ver",
+    "reset": "Tüm sahte verileri sıfırla",
+    "resetDone": "Sahte veriler sıfırlandı.",
+    "credits": "Kredi verildi.",
+    "testCrash": "Test çökmesi gönder",
+    "events": "Olay günlüğü",
+    "empty": "Henüz olay yok",
+    "mockOnly": "Bu anahtarlar yalnızca sahte sunucuda bulunur.",
+    "values": {
+      "ok": "tamam",
+      "slow": "yavaş",
+      "fail": "hata",
+      "empty": "boş",
+      "success": "başarılı",
+      "cancel": "iptal",
+      "home": "ana ekran",
+      "onboarding_exit": "tanıtım çıkışı",
+      "off": "kapalı"
+    }
+  }
+}

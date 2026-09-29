@@ -1,30 +1,11 @@
 /**
- * Output finishing decisions (pure): which label a render gets, the label
- * bitmap, where it goes, and the exact ffmpeg arguments.
- *
- *   preview / free renders → "Made with Belto · AI" watermark (bottom center)
- *   paid renders           → small "AI" disclosure label (top-left corner)
- *   every render           → mp4 `comment` metadata "AI-generated with Belto"
+ * Watermark for the free onboarding preview (pure): a small pixel-type label on a translucent
+ * dark pill in the bottom-right corner. Paid previews carry no watermark. The "AI preview"
+ * wording keeps the output honest wherever it is shared.
  */
 import { GLYPH_HEIGHT, textPixels, textWidthUnits } from './pixel-font.js';
 
-export const BRAND_WATERMARK_TEXT = 'Made with Belto · AI';
-export const AI_LABEL_TEXT = 'AI';
-export const AI_METADATA_COMMENT = 'AI-generated with Belto';
-
-export type OverlayKind = 'brand' | 'ai_label';
-
-export interface FinishDecision {
-  overlay: OverlayKind;
-  /** RenderDoc.watermarked — true only for the brand watermark. */
-  watermarked: boolean;
-}
-
-/** Free output (the onboarding preview, or anything that reserved no credits) carries the brand watermark. */
-export function decideFinish(input: { purpose: 'preview' | 'full'; reservedCredits: number }): FinishDecision {
-  const free = input.purpose === 'preview' || input.reservedCredits <= 0;
-  return free ? { overlay: 'brand', watermarked: true } : { overlay: 'ai_label', watermarked: false };
-}
+export const WATERMARK_TEXT = 'Kok · AI preview';
 
 export interface LabelBitmap {
   width: number;
@@ -37,6 +18,11 @@ const PAD_X_UNITS = 4;
 const PAD_Y_UNITS = 3;
 const BACKGROUND_ALPHA = 0.5;
 const TEXT_ALPHA = 0.95;
+
+/** Which output gets a watermark: only the free onboarding preview. */
+export function shouldWatermark(input: { onboarding: boolean; reservedCredits: number; freeHighTokens: number }): boolean {
+  return input.onboarding && input.reservedCredits <= 0 && input.freeHighTokens <= 0;
+}
 
 /** Label size in font units (text + padding). */
 export function labelUnits(text: string): { width: number; height: number } {
@@ -90,106 +76,55 @@ export function renderLabelBitmap(text: string, scale: number): LabelBitmap {
   return { width, height, rgba };
 }
 
-export interface OverlayLayout {
+export interface WatermarkLayout {
   text: string;
   scale: number;
-  /** Top-left position of the label in video pixels. */
+  /** Top-left position of the label in image pixels. */
   x: number;
   y: number;
+  width: number;
+  height: number;
 }
 
-/** Fallback when the probe cannot read the frame size (portrait 720p). */
-export const DEFAULT_FRAME = { width: 720, height: 1280 } as const;
-
-export function overlayLayout(kind: OverlayKind, frame: { width: number; height: number }): OverlayLayout {
-  const text = kind === 'brand' ? BRAND_WATERMARK_TEXT : AI_LABEL_TEXT;
-  const units = labelUnits(text);
-  const targetShare = kind === 'brand' ? 0.46 : 0.1;
-  const scale = Math.max(1, Math.round((frame.width * targetShare) / units.width));
-  const w = units.width * scale;
-  const h = units.height * scale;
+/** Bottom-right corner, sized to about a third of the image width, never larger than the image. */
+export function watermarkLayout(frame: { width: number; height: number }): WatermarkLayout {
+  const units = labelUnits(WATERMARK_TEXT);
+  const scale = Math.max(1, Math.round((frame.width * 0.34) / units.width));
+  const width = units.width * scale;
+  const height = units.height * scale;
   const margin = Math.round(Math.min(frame.width, frame.height) * 0.04);
-  if (kind === 'brand') {
-    return {
-      text,
-      scale,
-      x: Math.max(0, Math.round((frame.width - w) / 2)),
-      y: Math.max(0, frame.height - h - Math.round(frame.height * 0.07)),
-    };
-  }
-  return { text, scale, x: margin, y: margin };
+  return {
+    text: WATERMARK_TEXT,
+    scale,
+    x: Math.max(0, frame.width - width - margin),
+    y: Math.max(0, frame.height - height - margin),
+    width,
+    height,
+  };
 }
 
-/** ffmpeg arguments: composite the raw RGBA label, re-encode H.264, copy audio, tag metadata. */
-export function buildFinalizeArgs(input: {
-  inputFile: string;
-  overlayFile: string;
-  overlayWidth: number;
-  overlayHeight: number;
-  x: number;
-  y: number;
-  outputFile: string;
-}): string[] {
-  return [
-    '-hide_banner',
-    '-nostdin',
-    '-y',
-    '-i',
-    input.inputFile,
-    '-f',
-    'rawvideo',
-    '-pix_fmt',
-    'rgba',
-    '-s',
-    `${input.overlayWidth}x${input.overlayHeight}`,
-    '-i',
-    input.overlayFile,
-    '-filter_complex',
-    `[0:v][1:v]overlay=x=${input.x}:y=${input.y}:eof_action=repeat[v]`,
-    '-map',
-    '[v]',
-    '-map',
-    '0:a?',
-    '-c:v',
-    'libx264',
-    '-preset',
-    'veryfast',
-    '-crf',
-    '20',
-    '-pix_fmt',
-    'yuv420p',
-    '-c:a',
-    'copy',
-    '-map_metadata',
-    '-1',
-    '-metadata',
-    `comment=${AI_METADATA_COMMENT}`,
-    '-movflags',
-    '+faststart',
-    input.outputFile,
-  ];
-}
-
-export interface ProbeResult {
-  durationSeconds: number | null;
-  width: number | null;
-  height: number | null;
-}
-
-/** Reads duration and frame size from `ffmpeg -i <file>` stderr. */
-export function parseFfmpegProbe(stderr: string): ProbeResult {
-  let durationSeconds: number | null = null;
-  const duration = /Duration:\s*(\d+):(\d{2}):(\d{2}(?:\.\d+)?)/.exec(stderr);
-  if (duration) {
-    const total = Number(duration[1]) * 3600 + Number(duration[2]) * 60 + Number(duration[3]);
-    durationSeconds = Number.isFinite(total) && total > 0 ? total : null;
+/** Alpha-composites `label` onto a raw RGB frame in place (pure; sharp only encodes/decodes). */
+export function blendLabelOntoRgb(
+  rgb: Uint8Array | Buffer,
+  frame: { width: number; height: number },
+  label: LabelBitmap,
+  origin: { x: number; y: number },
+): void {
+  for (let ly = 0; ly < label.height; ly += 1) {
+    const y = origin.y + ly;
+    if (y < 0 || y >= frame.height) continue;
+    for (let lx = 0; lx < label.width; lx += 1) {
+      const x = origin.x + lx;
+      if (x < 0 || x >= frame.width) continue;
+      const li = (ly * label.width + lx) * 4;
+      const alpha = (label.rgba[li + 3] ?? 0) / 255;
+      if (alpha === 0) continue;
+      const pi = (y * frame.width + x) * 3;
+      for (let c = 0; c < 3; c += 1) {
+        const under = rgb[pi + c] ?? 0;
+        const over = label.rgba[li + c] ?? 0;
+        rgb[pi + c] = Math.round(under * (1 - alpha) + over * alpha);
+      }
+    }
   }
-  let width: number | null = null;
-  let height: number | null = null;
-  const video = /Stream #\d+:\d+[^\n]*Video:[^\n]*?\b(\d{2,5})x(\d{2,5})\b/.exec(stderr);
-  if (video) {
-    width = Number(video[1]);
-    height = Number(video[2]);
-  }
-  return { durationSeconds, width, height };
 }

@@ -5,14 +5,13 @@
 import { CALLABLES, type SpinGiftWheelResponse } from '@shared/api';
 import { PRIZES } from '@shared/wheel';
 
-import i18n from '@/lib/i18n';
 import { useAccount } from '@/stores/account';
 import { useSession } from '@/stores/session';
 
 import { track } from './analytics';
 import { getBackend } from './backend';
 import { mockServer } from './backend/mock/mockServer';
-import { cancelScheduled, scheduleGiftReminder } from './notifications';
+import { cancelGiftReminder, scheduleGiftReminder } from './notifications';
 
 export async function refreshGift(): Promise<void> {
   const backend = getBackend();
@@ -36,7 +35,7 @@ export async function spinGiftWheel(source: string): Promise<SpinGiftWheelRespon
   await refreshGift();
   const prize = PRIZES[result.prizeId];
   if (prize.kind === 'offering') {
-    const id = await scheduleGiftReminder(Date.parse(result.expiresAt), i18n.t(`prizes.${result.prizeId}.title`));
+    const id = await scheduleGiftReminder(Date.parse(result.expiresAt));
     useSession.getState().setGiftNotification(id);
   }
   return result;
@@ -47,7 +46,7 @@ export async function markGiftRedeemed(): Promise<void> {
   const gift = useAccount.getState().gift;
   if (!gift) return;
   track('gift_redeem', { prize: gift.prizeId });
-  await cancelScheduled(useSession.getState().giftNotificationId);
+  await cancelGiftReminder(useSession.getState().giftNotificationId);
   useSession.getState().setGiftNotification(null);
   if (getBackend().mode === 'mock') mockServer.markGiftRedeemed();
   useAccount.getState().setGift({ ...gift, redeemedAt: Date.now() });

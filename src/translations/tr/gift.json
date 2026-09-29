@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Bir hoş geldin hediyesi seni bekliyor",
+    "body": "Bir ücretsiz çevirme: kredi, ücretsiz HD önizleme ya da Pro indirimi.",
+    "cta": "Çevir",
+    "wonTitle": "Hediyen: {{prize}}",
+    "wonBody": "{{date}} tarihine kadar geçerli",
+    "use": "Kullan"
+  },
+  "title": "Hoş geldin hediyen",
+  "subtitle": "Bir ücretsiz çevirme. Her ödül gerçek.",
+  "spin": "Çarkı çevir",
+  "spinning": "Dönüyor…",
+  "youWon": "Kazandın",
+  "expires": "{{date}} tarihine kadar geçerli",
+  "redeem": "Hediyemi kullan",
+  "added": "Hesabına eklendi",
+  "done": "Bitti",
+  "close": "Kapat",
+  "alreadyClaimed": "Hoş geldin hediyeni zaten çevirdin.",
+  "fairness": "Ödüller sunucumuzda belirlenir. Satın alma gerekmez.",
+  "notifyNote": "Bildirimler açıksa, bitmeden önce seni bir kez hatırlatırız.",
+  "prizes": {
+    "credits10": {
+      "title": "10 kredi",
+      "short": "+10",
+      "body": "Önizlemeler için bakiyene eklendi."
+    },
+    "credits5": {
+      "title": "5 kredi",
+      "short": "+5",
+      "body": "Önizlemeler için bakiyene eklendi."
+    },
+    "freeHigh": {
+      "title": "Ücretsiz bir HD önizleme",
+      "short": "HD",
+      "body": "Bir sonraki HD önizlemen kredi harcamaz."
+    },
+    "discount40": {
+      "title": "Pro'da %40 indirim",
+      "short": "−%40",
+      "body": "Yıllık planın ilk yılı daha düşük fiyatla."
+    }
+  },
+  "expired": "Bu hediye {{date}} tarihinde sona erdi.",
+  "redeemed": "Bu hediyeyi zaten kullandın.",
+  "tokenNote": "Bir sonraki önizlemeni oluştururken HD'yi seç."
+}

@@ -99,7 +99,7 @@ export function GiftHomeCard() {
     <Animated.View entering={FadeInDown.springify()} style={styles.card}>
       <GiftBox />
       <View style={styles.text}>
-        <AppText variant="headline">{t('gift.card.wonTitle', { prize: t(`prizes.${gift.prizeId}.title`) })}</AppText>
+        <AppText variant="headline">{t('gift.card.wonTitle', { prize: t(`gift.prizes.${gift.prizeId}.title`) })}</AppText>
         <AppText variant="caption" color="textSecondary">
           {t('gift.card.wonBody', { date })}
         </AppText>

@@ -37,6 +37,14 @@ export function annualSavingsPercent(weeklyPrice: number, annualPrice: number): 
   return Math.floor((1 - annualPrice / yearlyAtWeekly) * 100);
 }
 
+/** Percent saved by the annual plan versus paying monthly for 12 months (rounded down). */
+export function annualSavingsVsMonthlyPercent(monthlyPrice: number, annualPrice: number): number {
+  if (!(monthlyPrice > 0) || !(annualPrice > 0)) return 0;
+  const yearlyAtMonthly = monthlyPrice * 12;
+  if (annualPrice >= yearlyAtMonthly) return 0;
+  return Math.floor((1 - annualPrice / yearlyAtMonthly) * 100);
+}
+
 /** Localized currency string for derived values (e.g. annual price per week). */
 export function formatCurrency(amount: number, currencyCode: string, locale: string): string {
   try {

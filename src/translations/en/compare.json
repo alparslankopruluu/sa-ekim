@@ -1,0 +1,44 @@
+{
+  "title": "Compare",
+  "close": "Close",
+  "mode": {
+    "wipe": "Wipe",
+    "side": "Side by side"
+  },
+  "label": {
+    "before": "Before",
+    "week": "Week {{n}}",
+    "none": "Photo"
+  },
+  "picker": {
+    "before": "Earlier photo",
+    "after": "Later photo",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Slider comparing two photos. {{before}} on the left, {{after}} on the right. Adjust to move the divider.",
+  "sideA11y": "{{label}}, {{angle}} photo",
+  "mismatch": "These two photos show different angles. Comparing the same angle works best.",
+  "empty": {
+    "title": "Two photos to compare",
+    "body": "Take at least two photos of the same angle, then compare them here.",
+    "action": "Take a photo"
+  },
+  "locked": {
+    "title": "Compare is part of Pro",
+    "body": "See two photos side by side with the week for each. Your first photo stays visible.",
+    "cta": "Unlock compare"
+  },
+  "share": {
+    "action": "Share",
+    "preparing": "Preparing…",
+    "error": "Couldn't prepare the comparison. Try again.",
+    "unavailable": "Sharing isn't available on this device.",
+    "dialog": "Share your comparison"
+  },
+  "report": {
+    "title": "Photo comparison",
+    "heading": "{{before}} and {{after}}",
+    "disclaimer": "Personal progress record — not a medical document"
+  },
+  "mark": "Kök"
+}

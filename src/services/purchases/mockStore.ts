@@ -1,16 +1,19 @@
 /**
- * Mock store used until the RevenueCat public SDK keys are configured.
- * Prices mirror the proposed launch price points (PRODUCT.md) and are formatted
- * for the device locale exactly like real store price strings. Developer
- * switches exercise every paywall state (slow, failed, empty, cancel, error).
+ * Mock store used until the RevenueCat public SDK keys are configured (mock mode only —
+ * live builds never fall back to it). Prices mirror the owner-fixed price points
+ * (PRODUCT.md: weekly 7.99, monthly 12.99, annual 39.99, gift annual 23.99 first year,
+ * packs 4.99 / 9.99 / 19.99; NO free trial anywhere) and are formatted like real
+ * storefront price strings. Developer switches exercise every paywall state (slow,
+ * failed, empty, cancel, error) and a couple of storefront currencies for layout checks.
+ * Entitlement and credits come from the mock server, exactly like the RevenueCat webhook.
  */
 import * as Crypto from 'expo-crypto';
 
 import { CREDIT_PACKS, type CreditPackId } from '@shared/pricing';
-import { OFFERINGS, type OfferingId, PACKAGES, PRODUCT_SUFFIXES } from '@shared/products';
+import { OFFERINGS, type OfferingId, PACKAGES, type PlanId, PRODUCT_SUFFIXES } from '@shared/products';
 
-import { BackendError } from '../backend/types';
 import { mockServer } from '../backend/mock/mockServer';
+import { BackendError } from '../backend/types';
 import { formatCurrency } from './format';
 import {
   type CreditPackOption,
@@ -23,79 +26,107 @@ import {
   type PurchasesAdapter,
 } from './types';
 
+export type MockStorefront = 'USD' | 'TRY' | 'SAR';
+
 export interface MockStoreFlags {
   offerings: 'ok' | 'slow' | 'fail' | 'empty';
   purchase: 'success' | 'cancel' | 'fail';
+  /** Currency the mock storefront sells in (layout checks with long price strings). */
+  storefront: MockStorefront;
+  /** Show the gift offering even without a won discount (developer preview of the gift paywall). */
+  unlockGiftOffer: boolean;
 }
 
-export const mockStoreFlags: MockStoreFlags = { offerings: 'ok', purchase: 'success' };
+export const mockStoreFlags: MockStoreFlags = {
+  offerings: 'ok',
+  purchase: 'success',
+  storefront: 'USD',
+  unlockGiftOffer: false,
+};
 
-const CURRENCY = 'USD';
-const BUNDLE = 'com.techtactoe.belto';
+interface PriceTable {
+  weekly: number;
+  monthly: number;
+  annual: number;
+  annualGift: number;
+  credits_10: number;
+  credits_25: number;
+  credits_60: number;
+}
 
-const PRICES = {
-  weekly: 7.99,
-  annual: 59.99,
-  annualGift: 35.99,
-  credits_100: 9.99,
-  credits_300: 24.99,
-  credits_800: 54.99,
-} as const;
+/**
+ * USD is the owner-fixed reference tier. TRY and SAR are placeholder tiers that exist only in
+ * this mock to check layouts with longer price strings; real tiers are set in App Store
+ * Connect / Play at catalog time.
+ */
+const PRICE_TABLES: Record<MockStorefront, PriceTable> = {
+  USD: { weekly: 7.99, monthly: 12.99, annual: 39.99, annualGift: 23.99, credits_10: 4.99, credits_25: 9.99, credits_60: 19.99 },
+  TRY: { weekly: 249.99, monthly: 399.99, annual: 1299.99, annualGift: 779.99, credits_10: 149.99, credits_25: 299.99, credits_60: 599.99 },
+  SAR: { weekly: 29.99, monthly: 49.99, annual: 149.99, annualGift: 89.99, credits_10: 18.99, credits_25: 37.99, credits_60: 74.99 },
+};
+
+export const MOCK_BUNDLE_ID = 'com.techtactoe.kok';
+
+const PERIOD: Record<PlanId, PlanOption['period']> = { weekly: 'week', monthly: 'month', annual: 'year' };
+const PLAN_PACKAGE: Record<PlanId, string> = {
+  weekly: PACKAGES.weekly,
+  monthly: PACKAGES.monthly,
+  annual: PACKAGES.annual,
+};
 
 function wait(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 export function createMockStore(getLocale: () => string): PurchasesAdapter {
-  let entitlement: EntitlementState = { ...NO_ENTITLEMENT };
   const listeners = new Set<(state: EntitlementState) => void>();
-  const price = (amount: number) => formatCurrency(amount, CURRENCY, getLocale());
+  const table = () => PRICE_TABLES[mockStoreFlags.storefront];
+  const price = (amount: number) => formatCurrency(amount, mockStoreFlags.storefront, getLocale());
 
-  const plan = (
-    offeringId: OfferingId,
-    id: 'weekly' | 'annual',
-    options: { trialDays?: number; intro?: number } = {},
-  ): PlanOption => {
-    const amount = id === 'weekly' ? PRICES.weekly : PRICES.annual;
-    const suffix =
-      id === 'weekly'
-        ? PRODUCT_SUFFIXES.weekly
-        : offeringId === OFFERINGS.giftDiscount
-          ? PRODUCT_SUFFIXES.annualGiftDiscount
-          : offeringId === OFFERINGS.giftTrial
-            ? PRODUCT_SUFFIXES.annualGiftTrial
-            : PRODUCT_SUFFIXES.annual;
+  const entitlement = (): EntitlementState => {
+    const info = mockServer.proInfo;
+    if (!info.active) return { ...NO_ENTITLEMENT };
+    return { isPro: true, productId: info.productId, willRenew: true, expiresAt: info.expiresAt, isTrial: false };
+  };
+
+  const plan = (offeringId: OfferingId, id: PlanId, gift = false): PlanOption => {
+    const prices = table();
+    const amount = prices[id];
+    const suffix = gift ? PRODUCT_SUFFIXES.annualGiftDiscount : PRODUCT_SUFFIXES[id];
     return {
       id,
       offeringId,
-      packageId: id === 'weekly' ? PACKAGES.weekly : PACKAGES.annual,
-      productId: `${BUNDLE}.${suffix}`,
+      packageId: PLAN_PACKAGE[id],
+      productId: `${MOCK_BUNDLE_ID}.${suffix}`,
       priceString: price(amount),
       price: amount,
-      currencyCode: CURRENCY,
-      period: id === 'weekly' ? 'week' : 'year',
-      trialDays: options.trialDays ?? null,
-      introPriceString: options.intro !== undefined ? price(options.intro) : null,
-      introPrice: options.intro ?? null,
+      currencyCode: mockStoreFlags.storefront,
+      period: PERIOD[id],
+      introPriceString: gift ? price(prices.annualGift) : null,
+      introPrice: gift ? prices.annualGift : null,
     };
   };
 
-  const offers: Record<string, () => PaywallOffer> = {
+  const offers: Record<string, () => PaywallOffer | null> = {
     [OFFERINGS.default]: () => ({
       offeringId: OFFERINGS.default,
-      plans: [plan(OFFERINGS.default, 'annual', { trialDays: 3 }), plan(OFFERINGS.default, 'weekly')],
+      plans: [
+        plan(OFFERINGS.default, 'annual'),
+        plan(OFFERINGS.default, 'monthly'),
+        plan(OFFERINGS.default, 'weekly'),
+      ],
     }),
-    [OFFERINGS.giftDiscount]: () => ({
-      offeringId: OFFERINGS.giftDiscount,
-      plans: [plan(OFFERINGS.giftDiscount, 'annual', { intro: PRICES.annualGift })],
-    }),
-    [OFFERINGS.giftTrial]: () => ({
-      offeringId: OFFERINGS.giftTrial,
-      plans: [plan(OFFERINGS.giftTrial, 'annual', { trialDays: 7 })],
-    }),
+    [OFFERINGS.giftDiscount]: () =>
+      mockServer.giftOfferActive || mockStoreFlags.unlockGiftOffer
+        ? {
+            offeringId: OFFERINGS.giftDiscount,
+            plans: [plan(OFFERINGS.giftDiscount, 'annual', true)],
+          }
+        : null,
   };
 
-  const emit = () => listeners.forEach((listener) => listener({ ...entitlement }));
+  const emit = (state: EntitlementState) => listeners.forEach((listener) => listener({ ...state }));
+  mockServer.watchPro(() => emit(entitlement()));
 
   const simulateNetwork = async () => {
     if (mockStoreFlags.offerings === 'slow') await wait(12000);
@@ -103,74 +134,62 @@ export function createMockStore(getLocale: () => string): PurchasesAdapter {
     if (mockStoreFlags.offerings === 'fail') throw new BackendError('offline');
   };
 
+  const packs = (): CreditPackOption[] =>
+    CREDIT_PACKS.map(
+      (pack): CreditPackOption => ({
+        id: pack.id as CreditPackId,
+        credits: pack.credits,
+        packageId: pack.id,
+        productId: `${MOCK_BUNDLE_ID}.${pack.id}`,
+        priceString: price(table()[pack.id]),
+        price: table()[pack.id],
+        currencyCode: mockStoreFlags.storefront,
+      }),
+    );
+
   return {
     kind: 'mock',
     configure() {},
     async logIn() {
       await mockServer.ready();
-      entitlement = mockServer.isPro ? { ...entitlement, isPro: true } : entitlement;
-      emit();
+      emit(entitlement());
     },
     async getOffer(offeringId) {
       await simulateNetwork();
       if (mockStoreFlags.offerings === 'empty') return null;
-      const build = offers[offeringId];
-      return build ? build() : null;
+      return offers[offeringId]?.() ?? null;
     },
     async getCreditPacks() {
       await simulateNetwork();
       if (mockStoreFlags.offerings === 'empty') return [];
-      return CREDIT_PACKS.map(
-        (pack): CreditPackOption => ({
-          id: pack.id as CreditPackId,
-          credits: pack.credits,
-          packageId: pack.id,
-          productId: `${BUNDLE}.${pack.id}`,
-          priceString: price(PRICES[pack.id]),
-          price: PRICES[pack.id],
-          currencyCode: CURRENCY,
-        }),
-      );
+      return packs();
     },
     async purchase(ref: PackageRef): Promise<PurchaseOutcome> {
       await wait(1100);
+      await mockServer.ready();
       if (mockStoreFlags.purchase === 'cancel') return { status: 'cancelled' };
       if (mockStoreFlags.purchase === 'fail') throw new BackendError('provider_failed');
       const transactionId = Crypto.randomUUID();
-      const pack = CREDIT_PACKS.find((p) => p.id === ref.packageId);
+      const pack = ref.offeringId === OFFERINGS.credits ? packs().find((p) => p.packageId === ref.packageId) : undefined;
       if (pack) {
-        const productId = `${BUNDLE}.${pack.id}`;
-        mockServer.grantPurchase(transactionId, productId);
-        return { status: 'purchased', productId, transactionId, isTrial: false };
+        mockServer.grantPurchase(transactionId, pack.productId);
+        return { status: 'purchased', productId: pack.productId, transactionId };
       }
-      const offer = offers[ref.offeringId]?.();
-      const chosen = offer?.plans.find((p) => p.packageId === ref.packageId);
+      const chosen = offers[ref.offeringId]?.()?.plans.find((p) => p.packageId === ref.packageId);
       if (!chosen) throw new BackendError('not_found');
       mockServer.grantPurchase(transactionId, chosen.productId);
-      const isTrial = chosen.trialDays !== null;
-      entitlement = {
-        isPro: true,
-        productId: chosen.productId,
-        willRenew: true,
-        expiresAt: Date.now() + (chosen.trialDays ?? (chosen.period === 'week' ? 7 : 365)) * 86400000,
-        isTrial,
-      };
-      emit();
-      return { status: 'purchased', productId: chosen.productId, transactionId, isTrial };
+      return { status: 'purchased', productId: chosen.productId, transactionId };
     },
     async restore() {
       await wait(900);
       await mockServer.ready();
-      if (mockServer.isPro && !entitlement.isPro) {
-        entitlement = { ...entitlement, isPro: true, willRenew: true };
-        emit();
-      }
-      return { ...entitlement };
+      const state = entitlement();
+      emit(state);
+      return state;
     },
     async getEntitlement() {
       await mockServer.ready();
-      if (mockServer.isPro && !entitlement.isPro) entitlement = { ...entitlement, isPro: true, willRenew: true };
-      return { ...entitlement };
+      return entitlement();
     },
     onEntitlementChange(listener) {
       listeners.add(listener);

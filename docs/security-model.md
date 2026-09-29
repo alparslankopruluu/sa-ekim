@@ -13,6 +13,18 @@
 | Data / SDK | Classification | Purpose | Owner/location | Retention/deletion | Client access | Privacy label / manifest |
 |---|---|---|---|---|---|---|
 | Journey photos, shed log, sessions (device-local files + persisted store) | public · account · private · sensitive · secret | progress tracking | product owner | until the user deletes; wiped by 'Delete all data' | app only; uploaded only on an explicit preview request | Photos: not collected while local |
+| Preview selfie (Firebase Storage `uploads/{uid}/…`) | sensitive | AI edit request, only when the user taps Create preview | Functions/Storage, us-central1 | deleted by `hourlyMaintenance` within 30 days; earlier on `deletePreview`/`deleteAccount` | owner-only rules; no client list | Photos or Videos: collected, linked to user, not tracking |
+| Preview result image (`users/{uid}/previews/…`) | sensitive | show/save/share | Functions/Storage | deleted with the selfie 30 days after creation (`PreviewDoc.expiresAt`); the UI shows the date and prompts Save to Photos | owner read | same |
+| fal.ai + OpenAI image models (processors) | processor | image editing | provider | provider retention per its terms (named in consent) | server only (`FAL_KEY` in Secret Manager) | Consent names both (5.1.2(i)) |
+| Firebase Auth (anonymous), Firestore wallet/gift/previews | account | ledger, entitlement mirror | Google Cloud | until `deleteAccount` | owner read, server write | Identifiers: user ID |
+| RevenueCat | account | purchases/entitlement | RevenueCat | per its policy; deleted with account | SDK, `app_user_id` = Firebase uid | Purchases; identifiers |
+| Firebase Analytics / Crashlytics / Performance | account | product analytics, crashes | Google | Firebase defaults | events typed in `services/analytics.ts`; no photo, no health free-text | Usage data, diagnostics; not used for tracking |
+| Cohort membership (`cohortMembers/{uid}`) | account | opt-in "same week" count | Firestore | until leave/delete | server only | Other data: operation week, goal (no photo/name) |
+| Push token (`users/{uid}/devices`) | account | opt-in offers and preview-ready pushes (journey reminders are local, D-010) | Firestore | until sign-out/delete | owner write | Identifiers: device ID |
+| Consent record (`users/{uid}/private/consent`) | account | proves the AI-processing disclosure version accepted | Firestore | until `deleteAccount` | server write, owner read | Other data: consent version |
+| Reports (`reports/{autoId}`) | account | user-reported previews for review within 48 h | Firestore | 12 months, then deleted | server only | Other user content: report reason |
+| Idempotency records (`users/{uid}/requests/{key}`) | account | replay protection for paid calls | Firestore | 7-day TTL (`REQUEST_RECORD_TTL_MS`) | server only | none (no content) |
+| Clinic name (journey-setup, optional) | sensitive (health-adjacent) | shown in the clinic PDF | device only | until the user edits or wipes data | app only | Not collected |
 
 ## Trust boundaries and abuse controls
 
@@ -34,7 +46,7 @@ access policy.
 - **Credential rotation route:** FAL_KEY and REVENUECAT_WEBHOOK_AUTH live in Secret Manager: `firebase functions:secrets:set`, then redeploy; owner rotates on suspicion
 - **Kill switches / degraded mode:** `config/runtime.generationEnabled` (server) + Remote Config `previews_enabled`; paywall and journey keep working when previews are off
 - **Account deletion proof:** `deleteAccount` callable removes Firestore, Storage and RevenueCat identity; local 'Delete all data' wipes journey files — tests planned in M3
-- **Reviewer journey/account:** No login. Review notes: onboarding → sample photo path (no camera needed) → preview → paywall; sandbox purchase via StoreKit
+- **Reviewer journey/account:** No login. Review notes: onboarding (the photo step can be skipped) → Today → capture with the camera or library → preview with the reviewer's own photo (a selfie is enough) → paywall; sandbox purchase via StoreKit. No bundled sample face exists; every non-AI feature is reachable without a photo
 - **Privacy-label and permission-inventory evidence:** planned M3: privacy manifest in app.config.ts + App Privacy answers table
 - **Web security headers / CORS evidence:** planned M3: Hosting headers in firebase.json
 - **Repo-history secret scan / rotation owner:** planned M3: history secret scan before the first push; product owner rotates

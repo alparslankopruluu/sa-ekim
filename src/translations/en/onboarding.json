@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Hair transplant companion",
+    "title": "See what's typical for your week of recovery",
+    "subtitle": "Preview a change before surgery, then follow what is typical for each week of your recovery.",
+    "cta": "Get started",
+    "demoLabel": "Example of the before and after slider. Drag to compare.",
+    "demoBefore": "Before",
+    "demoAfter": "After",
+    "demoCaption": "Illustration only. Your own preview comes later.",
+    "legalPrefix": "By continuing you agree to our",
+    "terms": "Terms",
+    "privacy": "Privacy Policy"
+  },
+  "goal": {
+    "title": "What are you working on?",
+    "subtitle": "We will tailor your timeline and your photo angles to it.",
+    "hairline": {
+      "title": "Hairline",
+      "subtitle": "Front and temples"
+    },
+    "crown": {
+      "title": "Crown",
+      "subtitle": "The back and top of the head"
+    },
+    "part": {
+      "title": "Parting",
+      "subtitle": "Density along the part"
+    },
+    "brows": {
+      "title": "Eyebrows",
+      "subtitle": "Brow transplant"
+    },
+    "beard": {
+      "title": "Beard",
+      "subtitle": "Beard and moustache"
+    }
+  },
+  "stage": {
+    "title": "Where are you in the process?",
+    "subtitle": "This decides what we show you first.",
+    "researching": {
+      "title": "Still researching",
+      "subtitle": "Exploring options, nothing booked yet"
+    },
+    "planned": {
+      "title": "Operation booked",
+      "subtitle": "I have a date coming up"
+    },
+    "done": {
+      "title": "Already had it",
+      "subtitle": "I want to follow my recovery"
+    }
+  },
+  "date": {
+    "titlePlanned": "When is your operation?",
+    "titleDone": "When was your operation?",
+    "subtitlePlanned": "We will count down to day 0 and get your first weeks ready.",
+    "subtitleDone": "We will show which phase you are in and what is typical this week.",
+    "wheelDay": "Day",
+    "wheelMonth": "Month",
+    "wheelYear": "Year",
+    "feedbackPast": "Day {{day}} · Week {{week}}",
+    "feedbackToday": "Today is day 0",
+    "feedbackFuture_one": "In {{count}} day",
+    "feedbackFuture_other": "In {{count}} days",
+    "errorMustBeFuture": "Pick today or a later date.",
+    "errorMustBePast": "Pick today or an earlier date.",
+    "errorTooFar": "That date is too far away to follow. Pick a closer one.",
+    "errorInvalid": "That date does not exist.",
+    "skip": "I don't know yet",
+    "skipNote": "You can set or change it later in your journey."
+  },
+  "photo": {
+    "title": "Add a photo for your preview",
+    "subtitleResearching": "See an AI preview of what a change could look like, before you commit to anything.",
+    "subtitlePlanned": "See an AI preview of what your operation could look like.",
+    "subtitleDone": "See an AI preview of what your result could look like as it matures.",
+    "guidanceTitle": "For the best preview",
+    "angle": {
+      "front": "Face the camera straight on, with the phone at eye level.",
+      "top": "Hold the phone above your head, looking down at the top of your head.",
+      "crown": "Photograph the back of your head, ideally with someone's help."
+    },
+    "area": {
+      "hairline": "Pull your hair back so the hairline is clear.",
+      "crown": "Keep the crown uncovered and your hair flat.",
+      "part": "Part your hair the way you normally wear it.",
+      "brows": "Keep your brows clear of hair and glasses.",
+      "beard": "Keep the beard area uncovered and in even light."
+    },
+    "light": "Use daylight, no filters and no hat.",
+    "take": "Take a photo",
+    "library": "Choose from library",
+    "change": "Choose a different photo",
+    "selected": "Your selected photo",
+    "placeholder": "No photo selected yet",
+    "privacy": "Your photo is only sent to create the preview, and only after you agree on the next screen.",
+    "skip": "Skip the preview",
+    "skipNote": "You can create one later from the Previews tab.",
+    "permissionDenied": "We could not open your photos. Check the permission in Settings."
+  },
+  "notify": {
+    "title": "Never miss the moments that matter",
+    "subtitle": "Recovery is slow. A gentle nudge at the right moment does the remembering for you.",
+    "bulletPhase": "We will tell you when a phase changes",
+    "bulletPhoto": "We will tell you when photo day comes",
+    "bulletCare": "Daily care reminders for the first two weeks",
+    "allow": "Turn on reminders",
+    "skip": "Not now",
+    "note": "Care reminders are free. Phase and photo reminders come with Pro. You can change this any time in Settings."
+  },
+  "crafting": {
+    "title": "Creating your preview",
+    "titleDone": "Your preview is ready",
+    "subtitle": "This usually takes under a minute.",
+    "ringLabel": "Preview progress, {{percent}} percent",
+    "lineUpload": "Sending your photo securely",
+    "lineReserve": "Reserving your free preview",
+    "lineEdit": "Editing {{area}}",
+    "lineFinish": "Adding the finishing touches",
+    "stateDone": "done",
+    "stateActive": "in progress",
+    "statePending": "waiting",
+    "area": {
+      "hairline": "your hairline",
+      "crown": "your crown",
+      "part": "your parting",
+      "brows": "your brows",
+      "beard": "your beard"
+    },
+    "skip": "Skip for now",
+    "skipNote": "Your preview keeps rendering and will be waiting in the Previews tab.",
+    "failedTitle": "We could not finish your preview",
+    "failedOffline": "You seem to be offline. Nothing was charged. Check your connection and try again.",
+    "failedGeneric": "Something went wrong on our side. Nothing was charged. You can try again or continue without it.",
+    "failedBlocked": "This photo cannot be used for a preview. Nothing was charged. You can continue and try another photo later.",
+    "skipFailed": "Continue without a preview"
+  },
+  "reveal": {
+    "title": "Here is a preview of what could be",
+    "subtitle": "Drag the handle to compare. It is an illustration made by AI.",
+    "before": "Your photo",
+    "after": "AI preview",
+    "disclaimer": "AI preview — not a prediction of your result",
+    "watermark": "Free previews carry a small watermark.",
+    "wipeLabel": "Before and after comparison of your photo. Drag to compare.",
+    "loading": "Preparing your preview",
+    "loadFailed": "We could not load the preview image. It is saved in your Previews tab.",
+    "cta": "See my plan"
+  }
+}

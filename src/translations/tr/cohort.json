@@ -1,0 +1,28 @@
+{
+  "title": "Haftandaki kişiler",
+  "locked": {
+    "title": "Operasyon haftandaki diğerleri",
+    "body": "Pro ile senin haftanda operasyon olan kişi sayısını görürsün. Yalnızca bir sayı gösterilir.",
+    "cta": "Pro ile gör"
+  },
+  "join": {
+    "title": "Operasyon haftana katıl",
+    "body": "Aynı haftada operasyon olan kişilerle birlikte sayılmayı seçebilirsin. Yalnızca operasyon tarihin, hedefin ve türün paylaşılır. Fotoğraflar, adın ya da kliniğin asla paylaşılmaz.",
+    "switch": "Beni say",
+    "needDate": "Önce operasyon tarihini belirle.",
+    "setDate": "Tarihi belirle"
+  },
+  "joining": "Katılınıyor…",
+  "joined": "Haftana dahilsin",
+  "loading": "Haftan kontrol ediliyor…",
+  "visible": "Haftandaki {{count}} kişiden birisin",
+  "invitation": "Dahilsin. Kimse tek başına belirlenemesin diye sayı, yeterince kişi haftanı paylaştığında görünür.",
+  "privacy": "Yalnızca operasyon tarihin, hedefin ve türün paylaşılır.",
+  "error": {
+    "offline": "Çevrimdışısın. Bağlandığında tekrar dene.",
+    "busy": "Çok fazla istek var. Biraz sonra tekrar dene.",
+    "pro": "Bunun için Pro gerekir.",
+    "generic": "Gruba ulaşılamadı. Tekrar dene.",
+    "retry": "Tekrar dene"
+  }
+}

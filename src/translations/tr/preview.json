@@ -1,0 +1,250 @@
+{
+  "title": "Yeni önizleme",
+  "subtitle": "Bir stil ve bir fotoğraf seç, olası bir görünümü gör.",
+  "aiLabel": "Yapay zeka önizlemesi — sonucunun tahmini değildir",
+  "aiLabelShort": "Yapay zeka önizlemesi",
+  "aiLabelDetail": "Olası bir görünümü gösterir, olacakları göstermez.",
+  "common": {
+    "close": "Kapat",
+    "back": "Geri",
+    "retry": "Tekrar dene",
+    "cancel": "Vazgeç",
+    "delete": "Sil"
+  },
+  "goals": {
+    "label": "Bölge",
+    "hairline": "Saç çizgisi",
+    "crown": "Tepe",
+    "part": "Ayrım",
+    "brows": "Kaş",
+    "beard": "Sakal"
+  },
+  "angles": {
+    "front": "ön fotoğraf",
+    "left": "sol yan fotoğraf",
+    "right": "sağ yan fotoğraf",
+    "top": "baş üstü fotoğrafı",
+    "crown": "tepe fotoğrafı"
+  },
+  "styles": {
+    "label": "Stil",
+    "hairline_soft": {
+      "name": "Daha yumuşak doğal saç çizgisi",
+      "description": "Doğal şeklini koruyan, hafifçe yumuşatılmış bir saç çizgisi."
+    },
+    "hairline_temples": {
+      "name": "Şakak düzenlemesi",
+      "description": "Şakaklar çevresinde daha dengeli bir görünüm."
+    },
+    "hairline_lower": {
+      "name": "Daha alçak, belirgin çizgi",
+      "description": "Biraz daha alçak ve net tanımlı bir saç çizgisi."
+    },
+    "hairline_density": {
+      "name": "Yoğunluk artışı",
+      "description": "Mevcut saç çizgin içinde daha yoğun bir görünüm."
+    },
+    "crown_light": {
+      "name": "Hafif",
+      "description": "Tepe bölgesinde hafif bir kapatma."
+    },
+    "crown_medium": {
+      "name": "Orta",
+      "description": "Tepe bölgesinde orta düzeyde kapatma."
+    },
+    "crown_full": {
+      "name": "Dolgun",
+      "description": "Tepe bölgesinde tam bir kapatma."
+    },
+    "part_light": {
+      "name": "Hafif",
+      "description": "Ayrım çizgisi boyunca hafif bir dolgunluk."
+    },
+    "part_medium": {
+      "name": "Orta",
+      "description": "Ayrım çizgisi boyunca orta düzeyde dolgunluk."
+    },
+    "part_full": {
+      "name": "Dolgun",
+      "description": "Ayrım çizgisi boyunca dolgun bir görünüm."
+    },
+    "brows_natural": {
+      "name": "Doğal",
+      "description": "Kendi şeklini koruyan doğal kaşlar."
+    },
+    "brows_fuller": {
+      "name": "Daha dolgun",
+      "description": "Kendi şeklin, biraz daha dolgun."
+    },
+    "brows_arched": {
+      "name": "Kavisli",
+      "description": "Hafif kavisli, toparlanmış bir kaş çizgisi."
+    },
+    "beard_patch": {
+      "name": "Boşluk doldurma",
+      "description": "Seyrek bölgelerin doldurulduğu bir görünüm."
+    },
+    "beard_full": {
+      "name": "Dolgun sakal",
+      "description": "Çene ve yanaklarda daha dolgun bir sakal."
+    },
+    "beard_moustache": {
+      "name": "Bıyık",
+      "description": "Dudağın üstünde daha dolgun bir görünüm."
+    }
+  },
+  "bestAngle": "En iyi {{angle}} ile çalışır",
+  "density": {
+    "label": "Yoğunluk",
+    "natural": "Doğal",
+    "fuller": "Daha dolgun",
+    "full": "Dolgun"
+  },
+  "quality": {
+    "label": "Kalite",
+    "standard": {
+      "title": "Standart",
+      "description": "Hızlı bir ilk bakış."
+    },
+    "high": {
+      "title": "Yüksek",
+      "description": "Daha fazla ayrıntı."
+    }
+  },
+  "price": {
+    "label": "Bu önizleme",
+    "free": "Ücretsiz",
+    "freeHigh": "Ücretsiz HD önizleme",
+    "credits_one": "{{count}} kredi",
+    "credits_other": "{{count}} kredi",
+    "freeNote": "İlk önizlemen ücretsizdir ve filigran içerir.",
+    "balance_one": "{{count}} kredin var.",
+    "balance_other": "{{count}} kredin var.",
+    "short_one": "{{count}} kredin var, bu önizleme {{cost}} kredi gerektiriyor.",
+    "short_other": "{{count}} kredin var, bu önizleme {{cost}} kredi gerektiriyor.",
+    "useFreeHigh": "Ücretsiz HD önizlememi kullan",
+    "useFreeHighHint_one": "{{count}} ücretsiz HD önizleme hakkın var.",
+    "useFreeHighHint_other": "{{count}} ücretsiz HD önizleme hakkın var."
+  },
+  "photo": {
+    "label": "Fotoğraf",
+    "empty": "Henüz fotoğraf yok",
+    "take": "Fotoğraf çek",
+    "library": "Galeriden seç",
+    "journey": "Son yolculuk fotoğrafını kullan",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Fotoğrafı kaldır",
+    "selected": "Seçilen fotoğraf",
+    "sentNote": "Fotoğrafın yalnızca Oluştur'a dokunduğunda ve yapay zeka işlemeyi onayladıktan sonra gönderilir.",
+    "libraryFailed": "Fotoğraf galerini açamadık."
+  },
+  "cta": {
+    "create": "Önizleme oluştur",
+    "createFree": "Ücretsiz önizleme oluştur",
+    "getCredits": "Kredi al",
+    "continue": "Devam et",
+    "addPhoto": "Devam etmek için fotoğraf ekle",
+    "chooseStyle": "Devam etmek için bir stil seç"
+  },
+  "helper": {
+    "needsConsent": "Fotoğrafın gönderilmeden önce bir kez onayını isteriz.",
+    "needsCredits": "Bu önizleme için daha fazla krediye ihtiyacın var.",
+    "walletError": "Kredilerini yükleyemedik."
+  },
+  "rendering": {
+    "title": "Önizlemen",
+    "status": {
+      "uploading": "Fotoğrafın gönderiliyor",
+      "creating": "Önizleme başlatılıyor",
+      "waiting": "Önizleme başlatılıyor",
+      "queued": "Sıra bekleniyor",
+      "processing": "Önizleme oluşturuluyor",
+      "finalizing": "Son rötuşlar yapılıyor"
+    },
+    "estimate": "Genellikle bir dakikadan kısa sürer.",
+    "background": "Bu ekrandan çıkabilirsin. Biz devam ederiz ve hazır olunca haber veririz.",
+    "notifyMe": "Hazır olunca haber ver",
+    "notifyOn": "Hazır olunca sana haber vereceğiz.",
+    "keepBrowsing": "Gezinmeye devam et",
+    "cancel": "Önizlemeyi iptal et",
+    "cancelHint": "İptal edersen kredilerin iade edilir.",
+    "cancelTooLate": "Önizleme bitmek üzere, şu an iptal edilemiyor.",
+    "failedTitle": "Bu önizleme tamamlanmadı",
+    "canceledTitle": "Önizleme iptal edildi",
+    "offlineTitle": "Çevrimdışısın",
+    "errorTitle": "Önizlemeyi başlatamadık",
+    "refunded_one": "{{count}} kredin iade edildi.",
+    "refunded_other": "{{count}} kredin iade edildi.",
+    "nothingCharged": "Herhangi bir ücret alınmadı.",
+    "retrySafe": "Tekrar denemek güvenlidir: iki kez ücret alınmaz.",
+    "retry": "Tekrar dene",
+    "getCredits": "Kredi al",
+    "reviewConsent": "İncele ve onayla",
+    "seePlans": "Planları gör",
+    "choosePhoto": "Başka bir fotoğraf seç",
+    "backToStyles": "Stillere dön",
+    "close": "Kapat",
+    "photoA11y": "Fotoğrafın",
+    "ringA11y": "Önizleme ilerlemesi, yüzde {{percent}}"
+  },
+  "result": {
+    "title": "Önizlemen",
+    "before": "Fotoğrafın",
+    "after": "Yapay zeka önizlemesi",
+    "watermark": "Kök · Yapay zeka önizlemesi",
+    "wipeA11y": "Önce ve sonra kaydırıcısı. Fotoğrafını yapay zeka önizlemesiyle karşılaştırmak için yukarı veya aşağı kaydır.",
+    "demo": "Demo",
+    "save": "Kaydet",
+    "share": "Paylaş",
+    "report": "Bildir",
+    "delete": "Sil",
+    "saved": "Fotoğraflarına kaydedildi",
+    "saveDenied": "Önizlemeleri kaydetmek için Ayarlar'dan fotoğraf erişimine izin ver.",
+    "unsupported": "Bu önizleme burada kaydedilemez veya paylaşılamaz.",
+    "shareTitle": "Yapay zeka önizlemeni paylaş",
+    "tryAnother": "Başka bir stil dene",
+    "upgradeTitle": "Daha fazla ayrıntı ister misin?",
+    "upgradeBody": "HD önizlemede daha fazla ayrıntı vardır ve filigran yoktur.",
+    "notFound": "Bu önizlemeyi bulamadık. Önizlemeler 30 gün sonra silinir.",
+    "toPreviews": "Önizlemelere dön",
+    "beforeGone": "Orijinal fotoğrafın yalnızca 30 gün saklanır, bu yüzden karşılaştırma artık kullanılamıyor.",
+    "loadFailed": "Bu önizlemeyi yükleyemedik.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "HD önizleme oluştur ({{count}} kredi)",
+    "upgradeTry_other": "HD önizleme oluştur ({{count}} kredi)",
+    "upgradeTryFree": "Ücretsiz HD önizleme oluştur",
+    "availableUntil": "{{date}} tarihine kadar erişilebilir",
+    "saveNudge": "Önizlemeler 30 gün sonra silinir. Bir kopyasını saklamak için fotoğraflarına kaydet.",
+    "saveNudgeSoon": "Bu önizleme yakında silinecek. Bir kopyasını saklamak için fotoğraflarına kaydet.",
+    "expiredTitle": "Bu önizleme 30 gün sonra silindi",
+    "expiredBody": "Önizlemeler ve kullanılan fotoğraflar 30 gün sonra kaldırılır. İstediğin zaman yenisini oluşturabilirsin."
+  },
+  "delete": {
+    "title": "Bu önizleme silinsin mi?",
+    "body": "Önizleme görseli kalıcı olarak silinir. Bu işlem geri alınamaz.",
+    "done": "Önizleme silindi"
+  },
+  "tab": {
+    "title": "Önizlemeler",
+    "new": "Yeni önizleme",
+    "honest": "Önizlemeler, olası bir görünümün yapay zeka ile üretilmiş görüntüleridir.",
+    "emptyTitle": "Henüz önizleme yok",
+    "emptyBody": "Önizleme, olası bir görünümün yapay zeka ile üretilmiş görüntüsüdür, olacakları göstermez. Kendi fotoğrafında bir stil dene ve karşılaştır.",
+    "emptyCta": "Önizleme oluştur",
+    "loadFailed": "Önizlemelerini yükleyemedik.",
+    "menu": "Diğer işlemler",
+    "status": {
+      "queued": "Bekliyor",
+      "processing": "Oluşturuluyor · %{{percent}}",
+      "finalizing": "Son rötuşlar",
+      "failed": "Tamamlanmadı",
+      "canceled": "İptal edildi"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Tekrar dene",
+    "delete": "Sil",
+    "deleteA11y": "Önizlemeyi sil",
+    "availableUntil": "{{date}} tarihine kadar",
+    "expired": "30 gün sonra silindi"
+  }
+}

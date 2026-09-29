@@ -3,185 +3,141 @@ import test from 'node:test';
 
 import { AppError } from '../src/lib/errors.js';
 import {
-  isOwnedMediaPath,
-  parseCancelRender,
-  parseComposeSong,
-  parseCreatePoster,
-  parseCreateRender,
+  isOwnedUploadPath,
+  parseCancelPreview,
+  parseCreatePreview,
+  parseDeletePreview,
+  parseJoinCohort,
   parseRecordConsent,
-  parseSynthesizeVoice,
+  parseReportPreview,
 } from '../src/lib/validate.js';
-import { findSong } from '../src/shared/catalog.js';
-import { PREVIEW, renderCost } from '../src/shared/pricing.js';
+import type { ErrorCode } from '../src/shared/api.js';
 
-const UID = 'user123';
-const KEY = '8a6f2c1e-4b3d-4e5f-9a7b-1c2d3e4f5a6b';
+const UID = 'uid_abc123';
+const PREVIEW_ID = '8a6f2c1e-4b3d-4e5f-9a7b-1c2d3e4f5a6b';
 
-function rejects(fn: () => unknown, code: string): void {
-  assert.throws(fn, (error: unknown) => error instanceof AppError && error.code === code);
+const request = (patch: Record<string, unknown> = {}) => ({
+  idempotencyKey: 'KEY-12345678',
+  photoPath: `uploads/${UID}/selfie.jpg`,
+  goal: 'hairline',
+  styleId: 'hairline_soft',
+  density: 'natural',
+  quality: 'standard',
+  ...patch,
+});
+
+function codeOf(fn: () => unknown): ErrorCode | 'ok' {
+  try {
+    fn();
+    return 'ok';
+  } catch (error) {
+    assert.ok(error instanceof AppError);
+    return error.code;
+  }
 }
 
-test('owned media paths: own prefix, allowed root, exactly root/uid/file', () => {
-  assert.equal(isOwnedMediaPath(`uploads/${UID}/photo.jpg`, UID, ['uploads']), true);
-  assert.equal(isOwnedMediaPath(`uploads/other/photo.jpg`, UID, ['uploads']), false);
-  assert.equal(isOwnedMediaPath(`posters/${UID}/p.png`, UID, ['uploads']), false);
-  assert.equal(isOwnedMediaPath(`uploads/${UID}/a/b.jpg`, UID, ['uploads']), false);
-  assert.equal(isOwnedMediaPath(`uploads/${UID}/../x.jpg`, UID, ['uploads']), false);
-  assert.equal(isOwnedMediaPath(42, UID, ['uploads']), false);
+const square = { points: [{ x: 0.2, y: 0.2 }, { x: 0.6, y: 0.2 }, { x: 0.6, y: 0.5 }, { x: 0.2, y: 0.5 }] };
+
+test('a valid request parses into a plan (idempotency key lower-cased, hint copied)', () => {
+  const plan = parseCreatePreview(request({ regionHint: square }), UID);
+  assert.equal(plan.idempotencyKey, 'key-12345678');
+  assert.equal(plan.goal, 'hairline');
+  assert.equal(plan.useFreeHighToken, false);
+  assert.equal(plan.onboarding, false);
+  assert.deepEqual(plan.regionHint, square);
+  assert.notEqual(plan.regionHint, square);
 });
 
-test('recordConsent: integer version ≥ 1', () => {
+test('goal, style and density must match the catalog', () => {
+  assert.equal(codeOf(() => parseCreatePreview(request({ goal: 'crown' }), UID)), 'invalid_input'); // style belongs to hairline
+  assert.equal(codeOf(() => parseCreatePreview(request({ density: 'full' }), UID)), 'invalid_input'); // hairline_soft: natural|fuller
+  assert.equal(codeOf(() => parseCreatePreview(request({ styleId: 'nope' }), UID)), 'invalid_input');
+  assert.equal(codeOf(() => parseCreatePreview(request({ quality: 'ultra' }), UID)), 'invalid_input');
+  assert.equal(codeOf(() => parseCreatePreview(request({ density: 'fuller' }), UID)), 'ok');
+});
+
+test('the photo must be the caller\'s own upload, exactly uploads/{uid}/{file}', () => {
+  for (const photoPath of [
+    'uploads/other/selfie.jpg',
+    `uploads/${UID}/nested/selfie.jpg`,
+    `users/${UID}/previews/x.jpg`,
+    `uploads/${UID}/selfie.exe`,
+    `uploads/${UID}/../other/a.jpg`,
+    `uploads/${UID}/sp ace.jpg`,
+    42,
+    undefined,
+  ]) {
+    assert.equal(codeOf(() => parseCreatePreview(request({ photoPath }), UID)), 'invalid_input', String(photoPath));
+  }
+  for (const file of ['a.jpg', 'a.JPEG', 'a.png', 'a.heic', 'a.webp']) {
+    assert.equal(isOwnedUploadPath(`uploads/${UID}/${file}`, UID), true, file);
+  }
+});
+
+test('idempotency keys are bounded and path-safe', () => {
+  for (const idempotencyKey of ['short', 'has spaces here', 'x'.repeat(65), '../../etc/passwd', 12345678, undefined]) {
+    assert.equal(codeOf(() => parseCreatePreview(request({ idempotencyKey }), UID)), 'invalid_input');
+  }
+});
+
+test('a region hint must be a valid polygon covering 0.5% to 60% of the frame', () => {
+  assert.equal(codeOf(() => parseCreatePreview(request({ regionHint: { points: [{ x: 0, y: 0 }, { x: 1, y: 1 }] } }), UID)), 'invalid_input');
+  assert.equal(codeOf(() => parseCreatePreview(request({ regionHint: { points: [{ x: 0, y: 0 }, { x: 2, y: 0 }, { x: 1, y: 1 }] } }), UID)), 'invalid_input');
+  assert.equal(codeOf(() => parseCreatePreview(request({ regionHint: 'polygon' }), UID)), 'invalid_input');
+  // Too small (a thin sliver) and too large (the whole frame) are rejected before any spend.
+  const sliver = { points: [{ x: 0.1, y: 0.1 }, { x: 0.12, y: 0.1 }, { x: 0.12, y: 0.12 }] };
+  assert.equal(codeOf(() => parseCreatePreview(request({ regionHint: sliver }), UID)), 'invalid_input');
+  const whole = { points: [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1 }] };
+  assert.equal(codeOf(() => parseCreatePreview(request({ regionHint: whole }), UID)), 'invalid_input');
+  assert.equal(parseCreatePreview(request({ regionHint: null }), UID).regionHint, null);
+});
+
+test('booleans must be booleans', () => {
+  assert.equal(codeOf(() => parseCreatePreview(request({ onboarding: 'yes' }), UID)), 'invalid_input');
+  assert.equal(codeOf(() => parseCreatePreview(request({ useFreeHighToken: 1 }), UID)), 'invalid_input');
+  const plan = parseCreatePreview(request({ onboarding: true, useFreeHighToken: true, quality: 'high' }), UID);
+  assert.ok(plan.onboarding && plan.useFreeHighToken);
+});
+
+test('a request body that is not an object is invalid', () => {
+  for (const body of [null, undefined, 'x', 7, []]) assert.equal(codeOf(() => parseCreatePreview(body, UID)), 'invalid_input');
+});
+
+test('consent versions are positive integers', () => {
   assert.deepEqual(parseRecordConsent({ version: 1 }), { version: 1 });
-  rejects(() => parseRecordConsent({ version: 0 }), 'invalid_input');
-  rejects(() => parseRecordConsent({ version: 1.5 }), 'invalid_input');
-  rejects(() => parseRecordConsent(null), 'invalid_input');
+  for (const version of [0, -1, 1.5, '1', 1001, undefined]) {
+    assert.equal(codeOf(() => parseRecordConsent({ version })), 'invalid_input');
+  }
 });
 
-test('createPoster: owned upload, a real non-original look, a subject', () => {
-  const ok = parseCreatePoster(
-    { idempotencyKey: KEY.toUpperCase(), photoPath: `uploads/${UID}/me.jpg`, lookId: 'rock-legend', subject: 'pet' },
-    UID,
-  );
-  assert.equal(ok.idempotencyKey, KEY);
-  assert.equal(ok.look.id, 'rock-legend');
-  assert.equal(ok.look.proOnly, true);
-  assert.equal(ok.useFreePosterToken, false);
-  const base = { idempotencyKey: KEY, photoPath: `uploads/${UID}/me.jpg`, lookId: 'stage-star', subject: 'person' };
-  rejects(() => parseCreatePoster({ ...base, lookId: 'original' }, UID), 'invalid_input');
-  rejects(() => parseCreatePoster({ ...base, lookId: 'nope' }, UID), 'invalid_input');
-  rejects(() => parseCreatePoster({ ...base, photoPath: `uploads/other/me.jpg` }, UID), 'invalid_input');
-  rejects(() => parseCreatePoster({ ...base, subject: 'robot' }, UID), 'invalid_input');
-  rejects(() => parseCreatePoster({ ...base, idempotencyKey: 'not-a-uuid' }, UID), 'invalid_input');
-  rejects(() => parseCreatePoster({ ...base, useFreePosterToken: 'yes' }, UID), 'invalid_input');
+test('preview ids are UUIDs for cancel, delete and report', () => {
+  assert.deepEqual(parseCancelPreview({ previewId: PREVIEW_ID.toUpperCase() }), { previewId: PREVIEW_ID });
+  assert.deepEqual(parseDeletePreview({ previewId: PREVIEW_ID }), { previewId: PREVIEW_ID });
+  assert.equal(codeOf(() => parseCancelPreview({ previewId: '../users/x' })), 'invalid_input');
+  assert.equal(codeOf(() => parseDeletePreview({})), 'invalid_input');
+  assert.deepEqual(parseReportPreview({ previewId: PREVIEW_ID, reason: 'unsafe' }), { previewId: PREVIEW_ID, reason: 'unsafe' });
+  assert.equal(codeOf(() => parseReportPreview({ previewId: PREVIEW_ID, reason: 'because' })), 'invalid_input');
 });
 
-test('synthesizeVoice: shared text rules, known voice, language tag', () => {
-  const ok = parseSynthesizeVoice({ idempotencyKey: KEY, text: '  Happy birthday!  ', voiceId: 'bright', language: 'pt-BR' }, UID);
-  assert.equal(ok.text, 'Happy birthday!');
-  assert.equal(ok.voice.providerVoiceId, 'Lively_Girl');
-  const base = { idempotencyKey: KEY, text: 'Hello there', voiceId: 'bright', language: 'en' };
-  rejects(() => parseSynthesizeVoice({ ...base, text: 'hi' }, UID), 'invalid_input');
-  rejects(() => parseSynthesizeVoice({ ...base, text: 'x'.repeat(281) }, UID), 'invalid_input');
-  rejects(() => parseSynthesizeVoice({ ...base, text: 'you are a nazi' }, UID), 'content_blocked');
-  rejects(() => parseSynthesizeVoice({ ...base, voiceId: 'nope' }, UID), 'invalid_input');
-  rejects(() => parseSynthesizeVoice({ ...base, language: 'english please' }, UID), 'invalid_input');
-});
-
-test('composeSong: a name (not a prompt), known occasion and genre', () => {
-  const ok = parseComposeSong(
-    { idempotencyKey: KEY, name: "  Zoë   O'Neil ", occasion: 'birthday', genre: 'pop', language: 'en' },
-    UID,
-  );
-  assert.equal(ok.name, "Zoë O'Neil");
-  const base = { idempotencyKey: KEY, name: 'Mia', occasion: 'birthday', genre: 'pop', language: 'en' };
-  rejects(() => parseComposeSong({ ...base, name: '' }, UID), 'invalid_input');
-  rejects(() => parseComposeSong({ ...base, name: 'x'.repeat(25) }, UID), 'invalid_input');
-  rejects(() => parseComposeSong({ ...base, name: 'Mia; sing about' }, UID), 'content_blocked');
-  rejects(() => parseComposeSong({ ...base, occasion: 'wedding' }, UID), 'invalid_input');
-  rejects(() => parseComposeSong({ ...base, genre: 'metal' }, UID), 'invalid_input');
-});
-
-const renderBase = {
-  idempotencyKey: KEY,
-  imagePath: `uploads/${UID}/me.jpg`,
-  sound: { kind: 'song', songId: 'main-character' },
-  resolution: '768p',
-  purpose: 'full',
-  lookId: 'stage-star',
-};
-
-test('createRender: library song → catalog audio + catalog lyrics, singing (no transcription)', () => {
-  const plan = parseCreateRender(renderBase, UID);
-  assert.equal(plan.audioSourcePath, 'catalog/songs/main-character.mp3');
-  assert.equal(plan.soundPath, null);
-  assert.deepEqual(plan.captions, findSong('main-character')?.lyrics);
-  assert.equal(plan.transcription, false);
-  assert.equal(plan.reservedCredits, renderCost('768p', 15));
-  assert.equal(plan.requiresPro, false);
-});
-
-test('createRender: user sounds map to their roots, captions validated, transcription for speech', () => {
-  const recording = parseCreateRender(
-    { ...renderBase, sound: { kind: 'recording', storagePath: `uploads/${UID}/rec.m4a`, seconds: 9 }, captions: ['ignored'] },
-    UID,
-  );
-  assert.equal(recording.soundPath, `uploads/${UID}/rec.m4a`);
-  assert.deepEqual(recording.captions, []);
-  assert.equal(recording.transcription, true);
-
-  const voice = parseCreateRender(
-    { ...renderBase, sound: { kind: 'voice', storagePath: `voices/${UID}/v.mp3`, seconds: 4 }, captions: [' Hello! '] },
-    UID,
-  );
-  assert.deepEqual(voice.captions, ['Hello!']);
-  assert.equal(voice.transcription, true);
-
-  const song = parseCreateRender(
-    {
-      ...renderBase,
-      sound: { kind: 'personalSong', storagePath: `songs/${UID}/s.mp3`, seconds: 12 },
-      captions: ['a', 'b', 'c', 'd', 'e'],
-    },
-    UID,
-  );
-  assert.deepEqual(song.captions, []); // five lines fail checkCaptions → none
-  assert.equal(song.transcription, false);
-
-  rejects(
-    () => parseCreateRender({ ...renderBase, sound: { kind: 'voice', storagePath: `uploads/${UID}/v.mp3`, seconds: 4 } }, UID),
-    'invalid_input',
-  );
-  rejects(
-    () => parseCreateRender({ ...renderBase, sound: { kind: 'recording', storagePath: `uploads/${UID}/r.m4a`, seconds: 16 } }, UID),
-    'invalid_input',
-  );
-  rejects(
-    () => parseCreateRender({ ...renderBase, sound: { kind: 'recording', storagePath: `uploads/${UID}/r.m4a`, seconds: 1 } }, UID),
-    'invalid_input',
-  );
-});
-
-test('createRender: resolutions, Pro gate and the hdBoost token', () => {
-  assert.equal(parseCreateRender({ ...renderBase, resolution: '1080p' }, UID).requiresPro, true);
-  assert.equal(parseCreateRender({ ...renderBase, resolution: '2k' }, UID).requiresPro, true);
-  const boosted = parseCreateRender({ ...renderBase, useHdBoostToken: true }, UID);
-  assert.equal(boosted.renderResolution, '1080p');
-  assert.equal(boosted.billingResolution, '768p');
-  assert.equal(boosted.requiresPro, false);
-  assert.equal(boosted.reservedCredits, renderCost('768p', 15));
-  rejects(() => parseCreateRender({ ...renderBase, resolution: '480p', useHdBoostToken: true }, UID), 'invalid_input');
-  rejects(() => parseCreateRender({ ...renderBase, resolution: '4k' }, UID), 'invalid_input');
-});
-
-test('createRender: previews are forced to the free preview shape', () => {
-  const plan = parseCreateRender({ ...renderBase, purpose: 'preview', resolution: '2k', useHdBoostToken: true }, UID);
-  assert.equal(plan.renderResolution, PREVIEW.resolution);
-  assert.equal(plan.reservedCredits, 0);
-  assert.equal(plan.trimToSeconds, PREVIEW.seconds);
-  assert.equal(plan.requiresPro, false);
-  assert.equal(plan.useHdBoostToken, false);
-});
-
-test('createRender: image must be an owned upload or poster; look must exist', () => {
-  assert.equal(parseCreateRender({ ...renderBase, imagePath: `posters/${UID}/p.png` }, UID).imagePath, `posters/${UID}/p.png`);
-  rejects(() => parseCreateRender({ ...renderBase, imagePath: `voices/${UID}/p.png` }, UID), 'invalid_input');
-  rejects(() => parseCreateRender({ ...renderBase, imagePath: `uploads/other/p.png` }, UID), 'invalid_input');
-  rejects(() => parseCreateRender({ ...renderBase, lookId: 'nope' }, UID), 'invalid_input');
-  rejects(() => parseCreateRender({ ...renderBase, purpose: 'draft' }, UID), 'invalid_input');
-  rejects(() => parseCreateRender({ ...renderBase, sound: { kind: 'song', songId: 'unknown' } }, UID), 'invalid_input');
-});
-
-test('cancelRender: a render id (uuid)', () => {
-  assert.deepEqual(parseCancelRender({ renderId: KEY }), { renderId: KEY });
-  rejects(() => parseCancelRender({ renderId: '../../x' }), 'invalid_input');
-});
-
-test('deleteRender and reportRender accept only a render uuid and a fixed reason', async () => {
-  const { parseDeleteRender, parseReportRender } = await import('../src/lib/validate.js');
-  const id = '0b8f4e5a-3c1d-4e2f-9a7b-1c2d3e4f5a6b';
-  assert.deepEqual(parseDeleteRender({ renderId: id.toUpperCase() }), { renderId: id });
-  assert.deepEqual(parseReportRender({ renderId: id, reason: 'impersonation' }), { renderId: id, reason: 'impersonation' });
-  assert.throws(() => parseDeleteRender({ renderId: '../other' }));
-  assert.throws(() => parseReportRender({ renderId: id, reason: 'free text is not a reason' }));
-  assert.throws(() => parseReportRender({ renderId: id }));
+test('cohort input: a real recent date, a known goal and kind', () => {
+  const now = Date.UTC(2026, 8, 29);
+  assert.deepEqual(parseJoinCohort({ procedureDate: '2026-09-01', goal: 'crown', kind: 'transplant' }, now), {
+    procedureDate: '2026-09-01',
+    goal: 'crown',
+    kind: 'transplant',
+  });
+  for (const patch of [
+    { procedureDate: '2026-02-30' },
+    { procedureDate: 'yesterday' },
+    { procedureDate: '2010-01-01' },
+    { procedureDate: '2031-01-01' },
+    { goal: 'nose' },
+    { kind: 'surgery' },
+  ]) {
+    assert.equal(
+      codeOf(() => parseJoinCohort({ procedureDate: '2026-09-01', goal: 'crown', kind: 'prp', ...patch }, now)),
+      'invalid_input',
+      JSON.stringify(patch),
+    );
+  }
 });

@@ -1,4 +1,4 @@
-# Architecture — {{APP_NAME}}
+# Architecture — Kök
 
 *Living doc. Where code lives and why. Update when a new dependency, service, or pattern is introduced (+ one line in `docs/decisions.md`). Stack conventions live in `docs/stack.md` — this file is project-specific structure only.*
 
@@ -7,7 +7,18 @@
 <!-- Seeded by /new-app from docs/stack.md's canonical tree; kept current as the app grows. -->
 
 ```
-{{FOLDER_TREE}}
+src/app/                 # expo-router routes (see Navigation map)
+src/components/          # shared UI (Button, PressableScale, BeforeAfterWipe, Confetti, …)
+src/features/<feature>/  # onboarding, journey, capture, compare, shed, cohort, report, preview, paywall, gift
+src/lib/                 # pure logic: entitlements, journeyReminders, captureGate, previewFlow, phaseView, i18n
+src/services/            # backend ports (mock|emulator|live), purchases, notifications, analytics, generation, journeyFiles
+src/stores/              # zustand: session, journey (persisted), account (server mirror), previewDraft
+src/theme/               # tokens.ts, motion.ts
+src/translations/        # <locale>/<namespace>.json (20 locales), generated.ts, native/<locale>.json
+functions/               # Firebase Functions (TS, node 22) + shared contracts in functions/src/shared (imported by the app as @shared/*)
+firestore-tests/         # rules tests (IDOR negatives)
+hosting/public/          # privacy / terms / support pages
+scripts/                 # kit scripts + gen/check translations + brand asset renderer
 ```
 
 Every factory app also records these standard surfaces in the concrete tree above:
@@ -39,7 +50,7 @@ a locked atomic `0600` writer; it cannot invoke shell/provider work. An Android 
 | AnalyticsService | event logging façade | Firebase Analytics |
 | AdminOverview | aggregate operational health only | App Check + admin custom claim |
 | PublicAssetWorker | public landing/store media reads | Cloudflare R2 (no public writes) |
-| {{SERVICE}} | {{RESPONSIBILITY}} | {{DEPS}} |
+| BackendPorts (`services/backend`) | auth, Firestore mirror, Storage upload, callables, Remote Config, push, analytics, crash — one mock and one live implementation | @react-native-firebase/* (live) / in-memory (mock) |
 
 ## Deployment boundaries
 
@@ -58,7 +69,7 @@ a locked atomic `0600` writer; it cannot invoke shell/provider work. An Android 
 
 ## State management
 
-{{STATE_APPROACH}}  <!-- e.g. zustand + react-query, or @Observable view models -->
+zustand only. `session` and `journey` are persisted on AsyncStorage (no photos inside; photo files live in documentDirectory/journey). `account` mirrors server documents through snapshot listeners started by `services/session.ts`. `previewDraft` is memory-only. Derived arrays use `useShallow`. No react-query (D-005).  <!-- e.g. zustand + react-query, or @Observable view models -->
 
 Provider SDKs stay behind service façades. Core-flow dependency direction, typed
 failures, retry/idempotency, migration, CI, and operational evidence must satisfy
@@ -66,4 +77,9 @@ failures, retry/idempotency, migration, CI, and operational evidence must satisf
 
 ## Navigation map
 
-{{NAV_MAP}}  <!-- routes/screens; keep as a simple indented list -->
+/                      gate → onboarding | (tabs)
+/onboarding            welcome → goal → stage → date → photo → consent → notify → crafting → reveal → /paywall
+/(tabs)                Today · Journey · Previews · Settings
+/capture /compare /shed /journey-setup /photo/[id] /guide/[phase]
+/preview → /preview/rendering → /preview/result
+/paywall /gift /credits /consent /report /legal/[doc] /developer /update  <!-- routes/screens; keep as a simple indented list -->

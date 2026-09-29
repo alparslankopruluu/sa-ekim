@@ -1,0 +1,84 @@
+{
+  "close": "Kamerayı kapat",
+  "title": "İlerleme fotoğrafı",
+  "angle": {
+    "front": "Ön",
+    "left": "Sol yan",
+    "right": "Sağ yan",
+    "top": "Üst",
+    "crown": "Tepe"
+  },
+  "instruction": {
+    "front": "Saçların kuru ve her zamanki gibi şekillendirilmiş olsun. Yüzünü ovale sığdır, saç çizgin üst kısma yakın olsun.",
+    "left": "Sol tarafını göstermek için dön. Telefonu göz hizasında ve dik tut.",
+    "right": "Sağ tarafını göstermek için dön. Telefonu göz hizasında ve dik tut.",
+    "top": "Telefonu başının üstünde yatay tut, ekran yukarı baksın; arka kamera başının üst kısmına bakar.",
+    "crown": "Telefonu başının arkasında yatay tut, ekran yukarı baksın; arka kamera tepe bölgene bakar."
+  },
+  "cameraNote": {
+    "front": "Çerçeveyi görebilmen için ön kamera kullanılır.",
+    "back": "Arka kamera kullanılır. Telefonu yatay tut ya da birinden çekmesini iste. Telefon düz olduğunda hafif bir titreşim hissedersin."
+  },
+  "guide": {
+    "ghostHide": "Önceki fotoğrafı gizle",
+    "ghostShow": "Önceki fotoğrafı göster",
+    "ghostOverlay": "Önceki {{angle}} fotoğrafının yarı saydam görüntüsü, {{label}}",
+    "frame": "Çerçeve kılavuzlu kamera görüntüsü"
+  },
+  "level": {
+    "ok": "Düz, hazır",
+    "upright": "Telefonu dik tut",
+    "flat": "Telefonu yatay tut, ekran yukarı",
+    "unavailable": "Bu cihazda hareket sensörü yok, bu yüzden denge kontrolü kapalı. Telefonun dik olduğundan kendin emin ol.",
+    "a11yOk": "Telefon düz. Fotoğraf çekebilirsin.",
+    "a11yBlockedUpright": "Telefon henüz dik değil.",
+    "a11yBlockedFlat": "Telefon henüz yatay değil."
+  },
+  "shutter": {
+    "label": "Fotoğraf çek",
+    "blockedUpright": "Fotoğraf çekmek için telefonu dik tut",
+    "blockedFlat": "Fotoğraf çekmek için telefonu yatay tut"
+  },
+  "library": "Galeriden seç",
+  "permission": {
+    "checking": "Kamera izni kontrol ediliyor…",
+    "title": "Kamera erişimi kapalı",
+    "body": "Kök kamerayı yalnızca ilerleme fotoğrafların için kullanır. Fotoğraflar bu cihazda kalır. İstersen galeriden de fotoğraf seçebilirsin.",
+    "allow": "Kameraya izin ver",
+    "settings": "Ayarları aç"
+  },
+  "unavailable": {
+    "title": "Kamera burada kullanılamıyor",
+    "body": "Bunun yerine galeriden bir fotoğraf seçebilirsin."
+  },
+  "review": {
+    "retake": "Yeniden çek",
+    "use": "Fotoğrafı kullan",
+    "saving": "Kaydediliyor…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Bu fotoğraf yalnızca önizlemen için kullanılır. Yolculuğuna eklenmez.",
+    "a11y": "Az önce çektiğin fotoğrafın önizlemesi"
+  },
+  "error": {
+    "save": "Fotoğraf kaydedilemedi. Tekrar dene.",
+    "capture": "Fotoğraf çekilemedi. Tekrar dene.",
+    "pick": "Galeri açılamadı. Tekrar dene."
+  },
+  "saved": "Fotoğraf kaydedildi",
+  "checking": "Planın kontrol ediliyor…",
+  "detail": {
+    "title": "Fotoğraf",
+    "image": "{{angle}} fotoğrafı, {{label}}",
+    "taken": "Çekim tarihi: {{date}}",
+    "compare": "Şununla karşılaştır…",
+    "delete": "Fotoğrafı sil",
+    "confirmTitle": "Bu fotoğraf silinsin mi?",
+    "confirmBody": "Fotoğraf bu cihazdan kaldırılır ve geri getirilemez.",
+    "confirm": "Sil",
+    "cancel": "Vazgeç",
+    "missingTitle": "Bu fotoğraf artık burada değil",
+    "missingBody": "Silinmiş olabilir.",
+    "close": "Kapat",
+    "loadError": "Bu fotoğraf gösterilemiyor."
+  }
+}

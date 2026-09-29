@@ -11,7 +11,7 @@ import Animated, {
 
 import { colors } from '@/theme/tokens';
 
-const PALETTE = [colors.primary, colors.accent, colors.cyan, colors.orange, colors.violet, colors.success];
+const PALETTE = [colors.primary, colors.accent, colors.sage, colors.success, colors.warning, colors.primaryPressed];
 
 interface Particle {
   x: number;

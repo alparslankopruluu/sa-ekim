@@ -24,13 +24,17 @@ export interface PrizeDef {
 }
 
 export const PRIZES: Record<PrizeId, PrizeDef> = {
-  credits10: { id: 'credits10', kind: 'credits', credits: 10, weight: 15 },
-  credits5: { id: 'credits5', kind: 'credits', credits: 5, weight: 35 },
+  credits10: { id: 'credits10', kind: 'credits', credits: 10, weight: 12.5 },
+  credits5: { id: 'credits5', kind: 'credits', credits: 5, weight: 37.5 },
   freeHigh: { id: 'freeHigh', kind: 'token', token: 'freeHigh', weight: 25 },
   discount40: { id: 'discount40', kind: 'offering', offering: 'gift_discount', weight: 25 },
 };
 
-/** Visual order of the 8 wheel segments (clockwise from 12 o'clock). */
+/**
+ * Visual order of the 8 wheel segments (clockwise from 12 o'clock). Segment counts equal the
+ * default weights (credits10 1/8, credits5 3/8, freeHigh 2/8, discount40 2/8) so what the
+ * wheel shows is what it pays.
+ */
 export const WHEEL_SEGMENTS: readonly PrizeId[] = [
   'credits10',
   'discount40',

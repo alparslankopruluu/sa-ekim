@@ -15,6 +15,8 @@ export interface OptionCardProps {
   title: string;
   subtitle?: string;
   emoji?: string;
+  /** Vector icon shown in the leading tile (takes precedence over `emoji`). */
+  icon?: keyof typeof Ionicons.glyphMap;
   selected: boolean;
   onPress: () => void;
   gradient?: readonly [string, string];
@@ -23,7 +25,7 @@ export interface OptionCardProps {
 }
 
 /** Single-tap choice card with an animated check (onboarding goals, subjects, voices). */
-export function OptionCard({ title, subtitle, emoji, selected, onPress, gradient, badge, testID }: OptionCardProps) {
+export function OptionCard({ title, subtitle, emoji, icon, selected, onPress, gradient, badge, testID }: OptionCardProps) {
   const { t } = useTranslation();
   const check = useSharedValue(selected ? 1 : 0);
 
@@ -54,7 +56,17 @@ export function OptionCard({ title, subtitle, emoji, selected, onPress, gradient
           style={StyleSheet.absoluteFill}
         />
       ) : null}
-      {emoji ? (
+      {icon ? (
+        <View style={styles.emojiWrap}>
+          <Ionicons
+            name={icon}
+            size={24}
+            color={selected ? colors.primary : colors.textSecondary}
+            accessibilityElementsHidden
+            importantForAccessibility="no"
+          />
+        </View>
+      ) : emoji ? (
         <View style={styles.emojiWrap}>
           <AppText style={styles.emoji} accessibilityElementsHidden importantForAccessibility="no">
             {emoji}
@@ -76,7 +88,7 @@ export function OptionCard({ title, subtitle, emoji, selected, onPress, gradient
           </AppText>
         </View>
       ) : null}
-      <Animated.View style={[styles.check, checkStyle]} accessibilityLabel={t('a11y.selected')}>
+      <Animated.View style={[styles.check, checkStyle]} accessibilityLabel={t('ui.a11y.selected')}>
         <Ionicons name="checkmark" size={16} color={colors.text} />
       </Animated.View>
     </PressableScale>

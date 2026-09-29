@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "12–18 aylık sürecini hafta hafta takip et",
+    "hairline": "Saç çizgi sürecini hafta hafta takip et",
+    "crown": "Tepe bölgesi sürecini hafta hafta takip et",
+    "part": "Ayrım bölgesi sürecini hafta hafta takip et",
+    "brows": "Kaş sürecini hafta hafta takip et",
+    "beard": "Sakal sürecini hafta hafta takip et"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "İlk önizlemen hazır. Pro, tam zaman çizelgesini ekler: karşılaştırma, faz bandı ve her haftalık rehber."
+    },
+    "settings": {
+      "subtitle": "Bulunduğun hafta için nelerin tipik olduğunu kendi fotoğraflarının yanında gör."
+    },
+    "home_banner": {
+      "subtitle": "Bulunduğun hafta için nelerin tipik olduğunu kendi fotoğraflarının yanında gör."
+    },
+    "notification": {
+      "subtitle": "Bulunduğun hafta için nelerin tipik olduğunu kendi fotoğraflarının yanında gör."
+    },
+    "gift": {
+      "subtitle": "Hediye fiyatın yıllık planın ilk yılına uygulanır."
+    },
+    "locked_compare": {
+      "title": "Fotoğraflarını hafta hafta karşılaştır",
+      "subtitle": "İki fotoğraf arasında kaydır ya da yan yana gör; her biri kendi haftasıyla etiketli."
+    },
+    "locked_band": {
+      "title": "Haftan için tipik aralığı gör",
+      "subtitle": "Fotoğrafın faz bandının yanında. Band tipik bir aralığı gösterir; sonuçlar kişiden kişiye değişir."
+    },
+    "locked_photos": {
+      "title": "Her haftayı kayıt altında tut",
+      "subtitle": "Ücretsiz planda {{count}} ilerleme fotoğrafı saklanır. Pro, 12–18 ayın tamamını saklar."
+    },
+    "locked_report": {
+      "title": "Kliniğinle bir rapor paylaş",
+      "subtitle": "Her açı için ilk ve son fotoğrafın, hafta etiketleri ve dökülme özetinle bir PDF."
+    },
+    "locked_hd": {
+      "title": "HD önizlemeler için daha fazla kredi",
+      "subtitle": "HD önizlemeler kredi harcar ve filigran taşımaz. Pro, bunlara harcayacağın bir kredi hakkı içerir."
+    },
+    "locked_guide": {
+      "title": "Haftalık rehberin tamamı",
+      "subtitle": "Her fazda genellikle neler olur, nelerin normal olduğu ve bu hafta ne yapılır."
+    },
+    "insufficient_credits": {
+      "title": "Bunun için daha fazla krediye ihtiyacın var",
+      "subtitle": "Pro, her hafta veya ay bir kredi hakkı içerir. İstersen kredi paketi de alabilirsin."
+    },
+    "result_upgrade": {
+      "title": "HD olarak gör",
+      "subtitle": "HD önizlemeler filigran taşımaz ve kredi harcar. Pro, bunlara harcayacağın kredi içerir."
+    }
+  },
+  "benefits": {
+    "photos": "Sınırsız ilerleme fotoğrafı",
+    "compare": "Kaydırmalı ve yan yana karşılaştırma",
+    "band": "Fotoğraflarında beklenen faz bandı",
+    "guide": "Her faz için tam rehber",
+    "reminders": "Faz ve fotoğraf hatırlatıcıları",
+    "report": "Klinik için PDF rapor",
+    "cohort": "Aynı haftadaki kişi sayısını gör",
+    "hd": "Dahil krediler HD önizlemelerde de geçerli",
+    "credits": "Önizlemeler için kredi hakkı"
+  },
+  "plans": {
+    "annual": "Yıllık",
+    "monthly": "Aylık",
+    "weekly": "Haftalık",
+    "bestValue": "En iyi değer",
+    "save": "Haftalığa göre %{{percent}} tasarruf",
+    "perWeek": "{{price}}/hafta",
+    "perMonth": "{{price}}/ay",
+    "perYear": "{{price}}/yıl",
+    "firstYear": "İlk yıl {{price}}"
+  },
+  "planCredits": {
+    "weekly": "Her hafta {{count}} kredi dahil",
+    "monthly": "Her ay {{count}} kredi dahil",
+    "annual": "Başlangıçta {{initial}} kredi, sonra her hafta {{count}} kredi dahil"
+  },
+  "cta": {
+    "subscribe": "Devam",
+    "processing": "İşleniyor…"
+  },
+  "disclosure": {
+    "annual": "Yılda {{price}} faturalandırılır. Sen iptal edene kadar otomatik yenilenir. Mağaza hesap ayarlarından istediğin zaman iptal edebilirsin. Gösterilen fiyat, faturalandırılan tutardır.",
+    "monthly": "Ayda {{price}} faturalandırılır. Sen iptal edene kadar otomatik yenilenir. Mağaza hesap ayarlarından istediğin zaman iptal edebilirsin. Gösterilen fiyat, faturalandırılan tutardır.",
+    "weekly": "Haftada {{price}} faturalandırılır. Sen iptal edene kadar otomatik yenilenir. Mağaza hesap ayarlarından istediğin zaman iptal edebilirsin. Gösterilen fiyat, faturalandırılan tutardır.",
+    "intro": "Hediye fiyatın: ilk yıl {{intro}}, sonra yılda {{price}}. Sen iptal edene kadar otomatik yenilenir. Mağaza hesap ayarlarından istediğin zaman iptal edebilirsin."
+  },
+  "restore": "Geri yükle",
+  "restoreNone": "Önceki bir satın alma bulunamadı.",
+  "restoreSuccess": "Tekrar hoş geldin. Pro geri yüklendi.",
+  "privacy": "Gizlilik",
+  "termsLink": "Koşullar",
+  "loading": "Planlar yükleniyor…",
+  "failedTitle": "Planlar yüklenemedi",
+  "failedBody": "Bağlantını kontrol edip tekrar dene.",
+  "emptyBody": "Planlar şu anda kullanılamıyor. Lütfen daha sonra tekrar dene.",
+  "purchaseFailed": "Satın alma tamamlanamadı. Lütfen tekrar dene.",
+  "pending": "Satın alman onay bekliyor.",
+  "success": "Artık Pro'sun. Teşekkürler.",
+  "mockBadge": "Test mağazası · gerçek ödeme yok",
+  "giftBanner": "Hediyen",
+  "creditsLink": "Sadece kredi mi lazım? Kredi paketlerine bak",
+  "closeLabel": "Kapat"
+}

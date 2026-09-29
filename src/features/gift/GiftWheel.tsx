@@ -18,22 +18,26 @@ import Animated, {
 import Svg, { Circle, Defs, G, LinearGradient, Path, Stop, Text as SvgText } from 'react-native-svg';
 import { scheduleOnRN } from 'react-native-worklets';
 
-import { landingRotation, WHEEL_SEGMENTS } from '@shared/wheel';
+import { landingRotation, type PrizeId, WHEEL_SEGMENTS } from '@shared/wheel';
 
 import { currentFeedback } from '@/hooks/useFeedback';
 import { colors, palettes } from '@/theme/tokens';
 import { easings } from '@/theme/motion';
 
-const SEGMENT_COLORS = [
-  colors.primary,
-  colors.violet,
-  colors.orange,
-  palettes.ocean[0],
-  colors.primary,
-  palettes.ember[1],
-  colors.orange,
-  palettes.lime[1],
-];
+/** One colour per prize, so the same prize always looks the same on every slice. */
+const PRIZE_COLORS: Record<PrizeId, string> = {
+  credits10: palettes.gold[1],
+  discount40: palettes.copper[1],
+  credits5: palettes.sage[1],
+  freeHigh: palettes.rose[1],
+};
+/** Light text on the deep slices, dark text on the gold one. */
+const PRIZE_TEXT: Record<PrizeId, string> = {
+  credits10: colors.textOnAccent,
+  discount40: colors.text,
+  credits5: colors.text,
+  freeHigh: colors.text,
+};
 const SEGMENTS = WHEEL_SEGMENTS.length;
 const SEGMENT_ANGLE = 360 / SEGMENTS;
 const VIEW = 300;
@@ -103,9 +107,7 @@ export const GiftWheel = forwardRef<GiftWheelHandle, GiftWheelProps>(function Gi
   }, [lights, reduceMotion]);
 
   const tick = useCallback(() => {
-    const feedback = currentFeedback();
-    feedback.selection();
-    feedback.sound('tick');
+    currentFeedback().selection();
   }, []);
 
   // Pointer kick + haptic tick every time a segment boundary passes the pointer.
@@ -159,13 +161,13 @@ export const GiftWheel = forwardRef<GiftWheelHandle, GiftWheelProps>(function Gi
   const pointerStyle = useAnimatedStyle(() => ({ transform: [{ rotate: `${pointer.value}deg` }] }));
 
   return (
-    <View style={{ width: size, height: size }} accessibilityRole="image" accessibilityLabel={t('a11y.wheel')}>
+    <View style={{ width: size, height: size }} accessibilityRole="image" accessibilityLabel={t('ui.a11y.wheel')}>
       <Animated.View style={[StyleSheet.absoluteFill, wheelStyle]}>
         <Svg width={size} height={size} viewBox={`0 0 ${VIEW} ${VIEW}`}>
           <Defs>
             <LinearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
               <Stop offset="0" stopColor={colors.accent} />
-              <Stop offset="1" stopColor={colors.orange} />
+              <Stop offset="1" stopColor={colors.primaryPressed} />
             </LinearGradient>
           </Defs>
           <Circle cx={C} cy={C} r={R + 16} fill="url(#rim)" />
@@ -173,14 +175,14 @@ export const GiftWheel = forwardRef<GiftWheelHandle, GiftWheelProps>(function Gi
           {WHEEL_SEGMENTS.map((prize, index) => {
             const mid = index * SEGMENT_ANGLE + SEGMENT_ANGLE / 2;
             const label = polar(mid, LABEL_RADIUS);
-            const text = t(`prizes.${prize}.short`);
+            const text = t(`gift.prizes.${prize}.short`);
             return (
               <G key={`${prize}-${index}`}>
-                <Path d={slicePath(index)} fill={SEGMENT_COLORS[index] ?? colors.primary} stroke={colors.bg} strokeWidth={2} />
+                <Path d={slicePath(index)} fill={PRIZE_COLORS[prize]} stroke={colors.bg} strokeWidth={2} />
                 <SvgText
                   x={label.x}
                   y={label.y}
-                  fill={colors.text}
+                  fill={PRIZE_TEXT[prize]}
                   fontSize={labelFontSize(text)}
                   fontWeight="900"
                   textAnchor="middle"
@@ -195,8 +197,8 @@ export const GiftWheel = forwardRef<GiftWheelHandle, GiftWheelProps>(function Gi
           {Array.from({ length: BULBS }, (_, i) => (
             <Bulb key={i} index={i} lights={lights} />
           ))}
-          <Circle cx={C} cy={C} r={30} fill={colors.stickerOuter} />
-          <Circle cx={C} cy={C} r={25} fill={colors.stickerStroke} />
+          <Circle cx={C} cy={C} r={30} fill={colors.bg} />
+          <Circle cx={C} cy={C} r={25} fill={colors.surfaceHigh} />
           <SvgText x={C} y={C + 1} fontSize={24} textAnchor="middle" alignmentBaseline="middle">
             {'🎁'}
           </SvgText>
@@ -204,7 +206,7 @@ export const GiftWheel = forwardRef<GiftWheelHandle, GiftWheelProps>(function Gi
       </Animated.View>
       <Animated.View style={[styles.pointer, { left: size / 2 - 16 }, pointerStyle]}>
         <Svg width={32} height={40} viewBox="0 0 32 40">
-          <Path d="M16 38 L 3 8 Q 16 -2 29 8 Z" fill={colors.text} stroke={colors.stickerOuter} strokeWidth={3} />
+          <Path d="M16 38 L 3 8 Q 16 -2 29 8 Z" fill={colors.text} stroke={colors.bg} strokeWidth={3} />
         </Svg>
       </Animated.View>
     </View>

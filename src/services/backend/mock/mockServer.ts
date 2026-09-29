@@ -1,75 +1,66 @@
 /**
- * On-device simulation of the Belto Cloud Functions (mock mode).
+ * On-device simulation of the Kök Cloud Functions (mock mode).
  *
- * It enforces the same rules as the real server — consent, ownership, credit
- * reservation/settlement/refunds, one free preview, one wheel spin, idempotency —
- * using the very same shared modules, so every screen state (success, failure,
- * insufficient credits, pro-only…) can be exercised with no keys and no network.
- * Nothing here is shipped as a real capability: renders produce a labelled demo
- * performance, not a lip-synced video.
+ * It enforces the same rules the live functions enforce — consent, ownership of uploads,
+ * input validation against the shared catalog, credit reservation / settlement / refunds,
+ * the free onboarding preview (once per account), free-high tokens, idempotency, a per-hour
+ * rate limit, one wheel spin per account — using the very same shared modules, so every
+ * screen state (success, failure, insufficient credits, already claimed…) can be exercised
+ * with no keys and no network. Nothing here is a real capability: a finished preview is the
+ * user's own photo run through a labelled demo variation (see demoResult.ts).
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Crypto from 'expo-crypto';
 
 import {
   CALLABLES,
-  type CancelRenderRequest,
-  type ComposeSongRequest,
-  type ComposeSongResponse,
-  type CreatePosterRequest,
-  type CreatePosterResponse,
-  type CreateRenderRequest,
-  type CreateRenderResponse,
+  type CancelPreviewRequest,
+  type CohortStats,
+  type CreatePreviewRequest,
+  type CreatePreviewResponse,
+  type DeletePreviewRequest,
+  type ErrorCode,
   type GiftDoc,
+  type JoinCohortRequest,
+  PREVIEW_RETENTION_DAYS,
+  type PreviewDoc,
+  REPORT_REASONS,
   type RecordConsentRequest,
-  type RenderDoc,
+  type ReportPreviewRequest,
   type SpinGiftWheelResponse,
-  type SynthesizeVoiceRequest,
-  type SynthesizeVoiceResponse,
   type WalletDoc,
 } from '@shared/api';
-import { findLook, findSong, findVoice, GENRES, OCCASIONS, SONGS } from '@shared/catalog';
-import { personalLyrics, seedFrom } from '@shared/lyrics';
 import {
-  clampSeconds,
-  creditsForPack,
-  MAX_PERFORMANCE_SECONDS,
-  PLAN_ALLOWANCE,
-  PREVIEW,
-  RESOLUTION_INFO,
-  RESOLUTIONS,
-  renderCost,
-  type Resolution,
-  STEP_COSTS,
-} from '@shared/pricing';
-import { packForProductId, planForProductId } from '@shared/products';
-import {
-  checkCaptions,
-  checkSongName,
-  checkVoiceText,
-  isIdempotencyKey,
-  isOwnedPath,
-} from '@shared/validation';
-import { drawPrize, PRIZES, prizeExpiry, segmentForPrize } from '@shared/wheel';
+  getStyle,
+  isDensity,
+  isGoal,
+  isQuality,
+  isStyleId,
+  isValidRegionHint,
+  JOURNEY_KINDS,
+} from '@shared/catalog';
+import { creditsForPack, PLAN_ALLOWANCE, previewCost } from '@shared/pricing';
+import { packForProductId, type PlanId, planForProductId } from '@shared/products';
+import { isIsoDate } from '@shared/timeline';
+import { isValidIdempotencyKey } from '@shared/validation';
+import { drawPrize, PRIZES, type PrizeId, prizeExpiry, segmentForPrize } from '@shared/wheel';
 
-import { BackendError, type DeviceFields, type ProfileFields } from '../types';
+import { BackendError, type DeviceFields, type ProfileFields, type UploadKind } from '../types';
 
-const STORAGE_KEY = 'belto.mock.server.v1';
+const STORAGE_KEY = 'kok.mock.server.v1';
 const CONSENT_MIN_VERSION = 1;
+/** Previews in flight at once. */
+const MAX_ACTIVE_PREVIEWS = 3;
+const HOUR_MS = 60 * 60 * 1000;
+const RETENTION_MS = PREVIEW_RETENTION_DAYS * 24 * HOUR_MS;
 
 /** Where a mock "file" really lives. */
-export type MockFileRef =
-  | { kind: 'local'; uri: string }
-  | { kind: 'song'; songId: string };
+export type MockFileRef = { kind: 'local'; uri: string } | { kind: 'result'; sourcePath: string };
 
-export interface MockPerformance {
-  imagePath: string;
-  lookId: string;
-  sound: MockFileRef;
-  captions: string[];
-  songId: string | null;
-  /** Resolution the credits are billed at (an HD boost renders 1080p at the 768p price). */
-  billedResolution: Resolution;
+/** Server-side bookkeeping the client-visible PreviewDoc does not carry. */
+interface PreviewMeta {
+  /** A `freeHigh` token paid for this preview (restored on failure). */
+  usedToken: boolean;
 }
 
 interface MockState {
@@ -78,20 +69,54 @@ interface MockState {
   consentVersion: number;
   wallet: WalletDoc;
   gift: GiftDoc | null;
-  renders: RenderDoc[];
-  pro: { active: boolean; productId: string | null };
+  previews: PreviewDoc[];
+  meta: Record<string, PreviewMeta>;
+  pro: { active: boolean; productId: string | null; expiresAt: number | null };
   files: Record<string, MockFileRef>;
-  requests: Record<string, unknown>;
-  performances: Record<string, MockPerformance>;
+  requests: Record<string, CreatePreviewResponse>;
+  /** Creation timestamps (ms) inside the rate-limit window. */
+  createLog: number[];
   processedPurchases: string[];
+  reports: { previewId: string; reason: string; at: number }[];
+  cohort: JoinCohortRequest | null;
   profile: ProfileFields | null;
   devices: DeviceFields[];
 }
 
+/** Developer-screen switches. They only exist in mock mode. */
 export interface MockDevFlags {
-  failNextRender: boolean;
-  /** Multiplier for every simulated latency (1 = normal). */
+  /** Make the next preview fail mid-render (with an automatic refund). */
+  failNextPreview: boolean;
+  /** The code the failing preview reports. */
+  failureCode: ErrorCode;
+  /** Multiplier for every simulated latency (1 = normal, 0 = instant). */
   latency: number;
+  /** Server kill switch: `false` makes createPreview answer `previews_disabled`. */
+  generationEnabled: boolean;
+  /** What `getCohort` answers (the live server never fabricates these). */
+  cohortSameWeek: number;
+  cohortSameGoal: number;
+  /** Force the next wheel draw (QA of every prize screen); null draws honestly. */
+  nextPrize: PrizeId | null;
+  /** createPreview calls allowed per rolling hour. */
+  hourlyLimit: number;
+}
+
+export const DEFAULT_MOCK_FLAGS: Readonly<MockDevFlags> = {
+  failNextPreview: false,
+  failureCode: 'provider_failed',
+  latency: 1,
+  generationEnabled: true,
+  cohortSameWeek: 0,
+  cohortSameGoal: 0,
+  nextPrize: null,
+  hourlyLimit: 10,
+};
+
+export interface MockProInfo {
+  active: boolean;
+  productId: string | null;
+  expiresAt: number | null;
 }
 
 type Listener<T> = (value: T) => void;
@@ -111,33 +136,56 @@ function secureRandom(): number {
   return (value >>> 0) / 4294967296;
 }
 
+function isTerminal(status: PreviewDoc['status']): boolean {
+  return status === 'succeeded' || status === 'failed' || status === 'canceled';
+}
+
+/** Credits granted on purchase; annual grants its `initial` allowance, weekly ones follow by cron. */
+export function initialAllowance(plan: PlanId): number {
+  return plan === 'annual' ? PLAN_ALLOWANCE.annual.initial : PLAN_ALLOWANCE[plan].credits;
+}
+
+const PLAN_DURATION_MS: Record<PlanId, number> = {
+  weekly: 7 * 24 * HOUR_MS,
+  monthly: 30 * 24 * HOUR_MS,
+  annual: 365 * 24 * HOUR_MS,
+};
+
 function initialState(): MockState {
   return {
     version: 1,
     uid: `mock-${uuid().slice(0, 8)}`,
     consentVersion: 0,
-    wallet: { balance: 0, freePosterTokens: 0, hdBoostTokens: 0, previewUsed: false, updatedAt: now() },
+    wallet: { balance: 0, freeHighTokens: 0, previewUsed: false, updatedAt: now() },
     gift: null,
-    renders: [],
-    pro: { active: false, productId: null },
+    previews: [],
+    meta: {},
+    pro: { active: false, productId: null, expiresAt: null },
     files: {},
     requests: {},
-    performances: {},
+    createLog: [],
     processedPurchases: [],
+    reports: [],
+    cohort: null,
     profile: null,
     devices: [],
   };
 }
 
+function ownsUpload(path: unknown, uid: string): path is string {
+  return typeof path === 'string' && new RegExp(`^uploads/${uid}/[A-Za-z0-9._-]+$`).test(path) && !path.includes('..');
+}
+
 class MockServer {
   private state: MockState = initialState();
   private loaded: Promise<void> | null = null;
-  private renderListeners = new Set<Listener<RenderDoc[]>>();
+  private previewListeners = new Set<Listener<PreviewDoc[]>>();
   private walletListeners = new Set<Listener<WalletDoc>>();
+  private proListeners = new Set<Listener<MockProInfo>>();
   private timers = new Map<string, ReturnType<typeof setTimeout>>();
   private saveTimer: ReturnType<typeof setTimeout> | null = null;
 
-  readonly flags: MockDevFlags = { failNextRender: false, latency: 1 };
+  readonly flags: MockDevFlags = { ...DEFAULT_MOCK_FLAGS };
 
   ready(): Promise<void> {
     if (!this.loaded) {
@@ -153,7 +201,8 @@ class MockServer {
         } catch {
           this.state = initialState();
         }
-        this.resumeRenders();
+        this.resumePreviews();
+        if (this.purgeExpired()) this.commit();
       })();
     }
     return this.loaded;
@@ -163,7 +212,7 @@ class MockServer {
     return this.state.uid;
   }
 
-  // ---------------------------------------------------------------- persistence
+  // ---------------------------------------------------------------- persistence + emit
 
   private persist(): void {
     if (this.saveTimer) clearTimeout(this.saveTimer);
@@ -173,20 +222,40 @@ class MockServer {
     }, 120);
   }
 
-  private emitRenders(): void {
-    const sorted = [...this.state.renders].sort((a, b) => b.createdAt - a.createdAt);
-    this.renderListeners.forEach((listener) => listener(sorted));
+  private sortedPreviews(): PreviewDoc[] {
+    return [...this.state.previews].sort((a, b) => b.createdAt - a.createdAt);
   }
 
-  private emitWallet(): void {
+  /**
+   * The 30-day retention: a finished preview and its images disappear once `expiresAt` has
+   * passed (the live `hourlyMaintenance` job does the same). Returns whether anything went.
+   */
+  purgeExpired(): boolean {
+    const stamp = now();
+    const expired = this.state.previews.filter((p) => isTerminal(p.status) && p.expiresAt <= stamp);
+    if (expired.length === 0) return false;
+    for (const preview of expired) {
+      delete this.state.files[preview.photoPath];
+      if (preview.resultPath) delete this.state.files[preview.resultPath];
+      delete this.state.meta[preview.id];
+    }
+    const gone = new Set(expired.map((p) => p.id));
+    this.state.previews = this.state.previews.filter((p) => !gone.has(p.id));
+    return true;
+  }
+
+  private commit(): void {
+    this.purgeExpired();
+    this.persist();
+    const previews = this.sortedPreviews();
+    this.previewListeners.forEach((listener) => listener(previews));
     const wallet = { ...this.state.wallet };
     this.walletListeners.forEach((listener) => listener(wallet));
   }
 
-  private commit(): void {
-    this.persist();
-    this.emitRenders();
-    this.emitWallet();
+  private emitPro(): void {
+    const info = this.proInfo;
+    this.proListeners.forEach((listener) => listener(info));
   }
 
   private wait(ms: number): Promise<void> {
@@ -195,11 +264,12 @@ class MockServer {
 
   // ---------------------------------------------------------------- subscriptions
 
-  watchRenders(listener: Listener<RenderDoc[]>): () => void {
-    this.renderListeners.add(listener);
-    listener([...this.state.renders].sort((a, b) => b.createdAt - a.createdAt));
+  watchPreviews(listener: Listener<PreviewDoc[]>): () => void {
+    this.purgeExpired();
+    this.previewListeners.add(listener);
+    listener(this.sortedPreviews());
     return () => {
-      this.renderListeners.delete(listener);
+      this.previewListeners.delete(listener);
     };
   }
 
@@ -211,19 +281,22 @@ class MockServer {
     };
   }
 
+  /** Entitlement changes (purchase, dev toggle, reset) — feeds the mock store listener. */
+  watchPro(listener: Listener<MockProInfo>): () => void {
+    this.proListeners.add(listener);
+    return () => {
+      this.proListeners.delete(listener);
+    };
+  }
+
   getGift(): GiftDoc | null {
     return this.state.gift ? { ...this.state.gift } : null;
   }
 
-  getPerformance(renderId: string): MockPerformance | null {
-    return this.state.performances[renderId] ?? null;
-  }
-
   // ---------------------------------------------------------------- storage
 
-  putLocalFile(kind: 'photo' | 'audio', localUri: string): string {
-    const extension = kind === 'photo' ? 'jpg' : 'm4a';
-    const path = `uploads/${this.state.uid}/${uuid()}.${extension}`;
+  putLocalFile(_kind: UploadKind, localUri: string): string {
+    const path = `uploads/${this.state.uid}/${uuid()}.jpg`;
     this.state.files[path] = { kind: 'local', uri: localUri };
     this.persist();
     return path;
@@ -233,7 +306,7 @@ class MockServer {
     return this.state.files[path] ?? null;
   }
 
-  // ---------------------------------------------------------------- profile/devices
+  // ---------------------------------------------------------------- profile / devices
 
   saveProfile(profile: ProfileFields): void {
     this.state.profile = profile;
@@ -247,16 +320,27 @@ class MockServer {
 
   // ---------------------------------------------------------------- purchases (RevenueCat webhook stand-in)
 
-  setEntitlement(active: boolean, productId: string | null): void {
-    this.state.pro = { active, productId };
-    this.persist();
+  get proInfo(): MockProInfo {
+    const { active, productId, expiresAt } = this.state.pro;
+    const live = active && (expiresAt === null || expiresAt > now());
+    return { active: live, productId: live ? productId : null, expiresAt: live ? expiresAt : null };
   }
 
   get isPro(): boolean {
-    return this.state.pro.active;
+    return this.proInfo.active;
   }
 
-  /** Mirrors the server's RevenueCat webhook grants for a completed mock purchase. */
+  /** Developer switch: force the entitlement without a purchase. */
+  setEntitlement(active: boolean, productId: string | null, expiresAt: number | null = null): void {
+    this.state.pro = { active, productId, expiresAt };
+    this.persist();
+    this.emitPro();
+  }
+
+  /**
+   * Mirrors the server's RevenueCat webhook for one completed mock purchase, exactly once
+   * per transaction: a plan grants `pro` plus its initial allowance, a pack grants its credits.
+   */
   grantPurchase(transactionId: string, productId: string): void {
     if (this.state.processedPurchases.includes(transactionId)) return;
     this.state.processedPurchases.push(transactionId);
@@ -265,10 +349,13 @@ class MockServer {
     if (pack) {
       this.addCredits(creditsForPack(pack) ?? 0);
     } else if (plan) {
-      this.state.pro = { active: true, productId };
-      this.addCredits(PLAN_ALLOWANCE[plan].credits);
+      this.state.pro = { active: true, productId, expiresAt: now() + PLAN_DURATION_MS[plan] };
+      this.addCredits(initialAllowance(plan));
+      // The gift-discount annual product redeems the won prize.
+      if (productId.toLowerCase().endsWith('.gift')) this.markGiftRedeemed();
     }
     this.commit();
+    this.emitPro();
   }
 
   private addCredits(amount: number): void {
@@ -280,9 +367,17 @@ class MockServer {
   async reset(): Promise<void> {
     this.timers.forEach((timer) => clearTimeout(timer));
     this.timers.clear();
+    if (this.saveTimer) clearTimeout(this.saveTimer);
+    this.saveTimer = null;
     this.state = initialState();
     await AsyncStorage.removeItem(STORAGE_KEY);
     this.commit();
+    this.emitPro();
+  }
+
+  /** Restores the developer switches to their defaults (tests and the developer screen). */
+  resetFlags(): void {
+    Object.assign(this.flags, DEFAULT_MOCK_FLAGS);
   }
 
   grantDevCredits(amount: number): void {
@@ -290,34 +385,39 @@ class MockServer {
     this.commit();
   }
 
+  grantDevFreeHigh(count = 1): void {
+    this.state.wallet = {
+      ...this.state.wallet,
+      freeHighTokens: this.state.wallet.freeHighTokens + count,
+      updatedAt: now(),
+    };
+    this.commit();
+  }
+
   // ---------------------------------------------------------------- callables
 
   async handle(name: string, data: unknown): Promise<unknown> {
     await this.ready();
+    if (this.purgeExpired()) this.commit();
     switch (name) {
       case CALLABLES.recordConsent:
         return this.recordConsent(data as RecordConsentRequest);
-      case CALLABLES.createPoster:
-        return this.createPoster(data as CreatePosterRequest);
-      case CALLABLES.synthesizeVoice:
-        return this.synthesizeVoice(data as SynthesizeVoiceRequest);
-      case CALLABLES.composeSong:
-        return this.composeSong(data as ComposeSongRequest);
-      case CALLABLES.createRender:
-        return this.createRender(data as CreateRenderRequest);
-      case CALLABLES.cancelRender:
-        return this.cancelRender(data as CancelRenderRequest);
+      case CALLABLES.createPreview:
+        return this.createPreview(data as CreatePreviewRequest);
+      case CALLABLES.cancelPreview:
+        return this.cancelPreview(data as CancelPreviewRequest);
+      case CALLABLES.deletePreview:
+        return this.deletePreview(data as DeletePreviewRequest);
+      case CALLABLES.reportPreview:
+        return this.reportPreview(data as ReportPreviewRequest);
       case CALLABLES.spinGiftWheel:
         return this.spinGiftWheel();
-      case CALLABLES.deleteRender:
-        return this.deleteRender((data as { renderId?: unknown }).renderId);
-      case CALLABLES.reportRender:
-        await this.wait(400);
-        if (!this.state.renders.some((r) => r.id === (data as { renderId?: unknown }).renderId)) {
-          throw new BackendError('not_found');
-        }
-        return { reported: true };
+      case CALLABLES.joinCohort:
+        return this.joinCohort(data as JoinCohortRequest);
+      case CALLABLES.getCohort:
+        return this.getCohort();
       case CALLABLES.deleteAccount:
+        await this.wait(400);
         await this.reset();
         return { deleted: true };
       default:
@@ -325,26 +425,9 @@ class MockServer {
     }
   }
 
-  private requireConsent(): void {
-    if (this.state.consentVersion < CONSENT_MIN_VERSION) throw new BackendError('consent_required');
-  }
-
-  private replay<T>(key: string): T | null {
-    return (this.state.requests[key] as T | undefined) ?? null;
-  }
-
-  private remember(key: string, response: unknown): void {
-    this.state.requests[key] = response;
-  }
-
-  private charge(amount: number): void {
-    if (this.state.wallet.balance < amount) throw new BackendError('insufficient_credits');
-    this.state.wallet = { ...this.state.wallet, balance: this.state.wallet.balance - amount, updatedAt: now() };
-  }
-
   private async recordConsent(request: RecordConsentRequest): Promise<{ ok: true }> {
     await this.wait(250);
-    if (!Number.isInteger(request.version) || request.version < CONSENT_MIN_VERSION) {
+    if (!request || !Number.isInteger(request.version) || request.version < CONSENT_MIN_VERSION) {
       throw new BackendError('invalid_input');
     }
     this.state.consentVersion = request.version;
@@ -352,325 +435,241 @@ class MockServer {
     return { ok: true };
   }
 
-  private async createPoster(request: CreatePosterRequest): Promise<CreatePosterResponse> {
-    this.requireConsent();
-    if (!isIdempotencyKey(request.idempotencyKey)) throw new BackendError('invalid_input');
-    const replayed = this.replay<CreatePosterResponse>(request.idempotencyKey);
-    if (replayed) return replayed;
-    const look = findLook(request.lookId);
-    const source = this.state.files[request.photoPath];
-    if (!look || !look.prompt || !isOwnedPath(request.photoPath, this.state.uid) || !source) {
+  /** Pure validation of a createPreview payload against the shared catalog. */
+  private validateCreate(request: CreatePreviewRequest): void {
+    const style = isStyleId(request.styleId) ? getStyle(request.styleId) : undefined;
+    const valid =
+      isGoal(request.goal) &&
+      style !== undefined &&
+      style.goal === request.goal &&
+      isDensity(request.density) &&
+      style.densities.includes(request.density) &&
+      isQuality(request.quality) &&
+      ownsUpload(request.photoPath, this.state.uid) &&
+      this.state.files[request.photoPath] !== undefined &&
+      (request.regionHint === undefined || isValidRegionHint(request.regionHint)) &&
+      (request.useFreeHighToken === undefined || typeof request.useFreeHighToken === 'boolean') &&
+      (request.onboarding === undefined || typeof request.onboarding === 'boolean');
+    if (!valid) throw new BackendError('invalid_input');
+    // The free onboarding preview is standard only, and a free-high token only pays for a
+    // high preview outside onboarding.
+    if (request.onboarding === true && request.quality !== 'standard') throw new BackendError('invalid_input');
+    if (request.useFreeHighToken === true && (request.quality !== 'high' || request.onboarding === true)) {
       throw new BackendError('invalid_input');
     }
-    if (look.proOnly && !this.state.pro.active) throw new BackendError('pro_required');
+  }
 
-    const useToken = request.useFreePosterToken === true && this.state.wallet.freePosterTokens > 0;
-    if (useToken) {
+  private async createPreview(request: CreatePreviewRequest): Promise<CreatePreviewResponse> {
+    if (!this.flags.generationEnabled) throw new BackendError('previews_disabled');
+    if (this.state.consentVersion < CONSENT_MIN_VERSION) throw new BackendError('consent_required');
+    if (!request || !isValidIdempotencyKey(request.idempotencyKey)) throw new BackendError('invalid_input');
+    const replayed = this.state.requests[request.idempotencyKey];
+    if (replayed) return { ...replayed };
+    this.validateCreate(request);
+
+    // Rate limits before any money moves.
+    const cutoff = now() - HOUR_MS;
+    this.state.createLog = this.state.createLog.filter((at) => at > cutoff);
+    const active = this.state.previews.filter((p) => !isTerminal(p.status)).length;
+    if (active >= MAX_ACTIVE_PREVIEWS || this.state.createLog.length >= this.flags.hourlyLimit) {
+      throw new BackendError('rate_limited');
+    }
+
+    const onboarding = request.onboarding === true;
+    let reserved = 0;
+    let usedToken = false;
+    if (onboarding) {
+      if (this.state.wallet.previewUsed) throw new BackendError('already_claimed');
+      this.state.wallet = { ...this.state.wallet, previewUsed: true, updatedAt: now() };
+    } else if (request.useFreeHighToken === true) {
+      if (this.state.wallet.freeHighTokens < 1) throw new BackendError('invalid_input');
+      usedToken = true;
       this.state.wallet = {
         ...this.state.wallet,
-        freePosterTokens: this.state.wallet.freePosterTokens - 1,
+        freeHighTokens: this.state.wallet.freeHighTokens - 1,
         updatedAt: now(),
       };
     } else {
-      this.charge(STEP_COSTS.poster);
-    }
-    this.commit();
-    await this.wait(2400);
-
-    // The mock "restyle" keeps the photo; the app draws the look's poster frame around it.
-    const posterPath = `posters/${this.state.uid}/${uuid()}.png`;
-    this.state.files[posterPath] = source;
-    const response: CreatePosterResponse = {
-      posterPath,
-      posterUrl: source.kind === 'local' ? source.uri : '',
-      balance: this.state.wallet.balance,
-    };
-    this.remember(request.idempotencyKey, response);
-    this.commit();
-    return response;
-  }
-
-  private async synthesizeVoice(request: SynthesizeVoiceRequest): Promise<SynthesizeVoiceResponse> {
-    this.requireConsent();
-    if (!isIdempotencyKey(request.idempotencyKey)) throw new BackendError('invalid_input');
-    const replayed = this.replay<SynthesizeVoiceResponse>(request.idempotencyKey);
-    if (replayed) return replayed;
-    const verdict = checkVoiceText(request.text);
-    if (verdict === 'blocked') throw new BackendError('content_blocked');
-    if (verdict !== 'ok' || !findVoice(request.voiceId)) throw new BackendError('invalid_input');
-    this.charge(STEP_COSTS.voiceLine);
-    this.commit();
-    await this.wait(1500);
-
-    // No speech synthesis offline: the demo voice is a catalog placeholder melody.
-    const storagePath = `voices/${this.state.uid}/${uuid()}.wav`;
-    const placeholder = SONGS[Math.abs(seedFrom(request.voiceId)) % SONGS.length] ?? SONGS[0];
-    this.state.files[storagePath] = { kind: 'song', songId: placeholder?.id ?? 'monday-mood' };
-    const seconds = clampSeconds(request.text.trim().length / 14);
-    const response: SynthesizeVoiceResponse = {
-      storagePath,
-      audioUrl: `belto-asset://song/${placeholder?.id ?? 'monday-mood'}`,
-      seconds,
-      balance: this.state.wallet.balance,
-    };
-    this.remember(request.idempotencyKey, response);
-    this.commit();
-    return response;
-  }
-
-  private async composeSong(request: ComposeSongRequest): Promise<ComposeSongResponse> {
-    this.requireConsent();
-    if (!isIdempotencyKey(request.idempotencyKey)) throw new BackendError('invalid_input');
-    const replayed = this.replay<ComposeSongResponse>(request.idempotencyKey);
-    if (replayed) return replayed;
-    const verdict = checkSongName(request.name);
-    if (verdict === 'blocked') throw new BackendError('content_blocked');
-    if (
-      verdict !== 'ok' ||
-      !(OCCASIONS as readonly string[]).includes(request.occasion) ||
-      !(GENRES as readonly string[]).includes(request.genre)
-    ) {
-      throw new BackendError('invalid_input');
-    }
-    if (!this.state.pro.active) throw new BackendError('pro_required');
-    this.charge(STEP_COSTS.personalSong);
-    this.commit();
-    await this.wait(3200);
-
-    const base = SONGS.find((s) => s.genre === request.genre) ?? SONGS[0];
-    const songId = base?.id ?? 'main-character';
-    const storagePath = `songs/${this.state.uid}/${uuid()}.wav`;
-    this.state.files[storagePath] = { kind: 'song', songId };
-    const response: ComposeSongResponse = {
-      storagePath,
-      audioUrl: `belto-asset://song/${songId}`,
-      seconds: base?.seconds ?? 12,
-      lyrics: personalLyrics(request.occasion, request.name, seedFrom(request.idempotencyKey)),
-      balance: this.state.wallet.balance,
-    };
-    this.remember(request.idempotencyKey, response);
-    this.commit();
-    return response;
-  }
-
-  private async createRender(request: CreateRenderRequest): Promise<CreateRenderResponse> {
-    this.requireConsent();
-    if (!isIdempotencyKey(request.idempotencyKey)) throw new BackendError('invalid_input');
-    const replayed = this.replay<CreateRenderResponse>(request.idempotencyKey);
-    if (replayed) return replayed;
-
-    const uid = this.state.uid;
-    const image = this.state.files[request.imagePath];
-    if (!image || !isOwnedPath(request.imagePath, uid) || !(RESOLUTIONS as readonly string[]).includes(request.resolution)) {
-      throw new BackendError('invalid_input');
+      reserved = previewCost(request.quality);
+      if (this.state.wallet.balance < reserved) throw new BackendError('insufficient_credits');
+      this.state.wallet = { ...this.state.wallet, balance: this.state.wallet.balance - reserved, updatedAt: now() };
     }
 
-    let sound: MockFileRef;
-    let seconds: number;
-    let captions: string[] = [];
-    let songId: string | null = null;
-    let soundPath: string | null = null;
-    if (request.sound.kind === 'song') {
-      const song = findSong(request.sound.songId);
-      if (!song) throw new BackendError('invalid_input');
-      sound = { kind: 'song', songId: song.id };
-      seconds = song.seconds;
-      captions = [...song.lyrics];
-      songId = song.id;
-    } else {
-      const file = this.state.files[request.sound.storagePath];
-      if (!file || !isOwnedPath(request.sound.storagePath, uid)) throw new BackendError('invalid_input');
-      sound = file;
-      seconds = clampSeconds(request.sound.seconds);
-      soundPath = request.sound.storagePath;
-      if (request.sound.kind !== 'recording' && request.captions && checkCaptions(request.captions)) {
-        captions = request.captions;
-      }
-    }
-
-    const active = this.state.renders.filter((r) => !isTerminal(r.status)).length;
-    if (active >= 3) throw new BackendError('rate_limited');
-
-    let resolution = request.resolution;
-    let billedResolution: Resolution = request.resolution;
-    let reserved = 0;
-    let watermarked = false;
-    if (request.purpose === 'preview') {
-      if (this.state.wallet.previewUsed) throw new BackendError('already_claimed');
-      resolution = PREVIEW.resolution;
-      billedResolution = PREVIEW.resolution;
-      seconds = Math.min(seconds, PREVIEW.seconds);
-      watermarked = true;
-      this.state.wallet = { ...this.state.wallet, previewUsed: true, updatedAt: now() };
-    } else {
-      const useBoost =
-        request.useHdBoostToken === true && resolution === '768p' && this.state.wallet.hdBoostTokens > 0;
-      if (RESOLUTION_INFO[resolution].proOnly && !this.state.pro.active) throw new BackendError('pro_required');
-      billedResolution = useBoost ? '768p' : resolution;
-      reserved = renderCost(billedResolution, MAX_PERFORMANCE_SECONDS);
-      this.charge(reserved);
-      if (useBoost) {
-        resolution = '1080p';
-        this.state.wallet = {
-          ...this.state.wallet,
-          hdBoostTokens: this.state.wallet.hdBoostTokens - 1,
-          updatedAt: now(),
-        };
-      }
-      watermarked = !this.state.pro.active;
-    }
-
-    const renderId = uuid();
-    const doc: RenderDoc = {
-      id: renderId,
+    const id = uuid();
+    const stamp = now();
+    const doc: PreviewDoc = {
+      id,
       status: 'queued',
-      purpose: request.purpose,
-      resolution,
-      lookId: request.lookId,
-      soundKind: request.sound.kind,
-      songId,
+      goal: request.goal,
+      styleId: request.styleId,
+      density: request.density,
+      quality: request.quality,
       progress: 0,
       reservedCredits: reserved,
       chargedCredits: 0,
-      seconds: null,
-      imagePath: request.imagePath,
-      soundPath,
-      captions,
-      videoPath: null,
-      watermarked,
+      photoPath: request.photoPath,
+      resultPath: null,
+      watermarked: onboarding,
+      onboarding,
       errorCode: null,
-      createdAt: now(),
-      updatedAt: now(),
+      createdAt: stamp,
+      updatedAt: stamp,
+      expiresAt: stamp + RETENTION_MS,
     };
-    this.state.renders.push(doc);
-    this.state.performances[renderId] = {
-      imagePath: request.imagePath,
-      lookId: request.lookId,
-      sound,
-      captions,
-      songId,
-      billedResolution,
-    };
-    const response: CreateRenderResponse = { renderId, reservedCredits: reserved, balance: this.state.wallet.balance };
-    this.remember(request.idempotencyKey, response);
+    this.state.previews.push(doc);
+    this.state.meta[id] = { usedToken };
+    this.state.createLog.push(stamp);
+    const response: CreatePreviewResponse = { previewId: id, reservedCredits: reserved, balance: this.state.wallet.balance };
+    this.state.requests[request.idempotencyKey] = response;
     this.commit();
 
-    const shouldFail = this.flags.failNextRender;
-    this.flags.failNextRender = false;
-    this.scheduleRender(renderId, seconds, shouldFail, request.purpose === 'preview' ? 0.6 : 1);
-    await this.wait(400);
+    const shouldFail = this.flags.failNextPreview;
+    this.flags.failNextPreview = false;
+    this.schedulePipeline(id, shouldFail ? this.flags.failureCode : null);
+    await this.wait(350);
     return response;
   }
 
-  private updateRender(renderId: string, patch: Partial<RenderDoc>): RenderDoc | null {
-    const index = this.state.renders.findIndex((r) => r.id === renderId);
-    const current = this.state.renders[index];
+  private updatePreview(id: string, patch: Partial<PreviewDoc>): PreviewDoc | null {
+    const index = this.state.previews.findIndex((p) => p.id === id);
+    const current = this.state.previews[index];
     if (index < 0 || !current) return null;
     const next = { ...current, ...patch, updatedAt: now() };
-    this.state.renders[index] = next;
+    this.state.previews[index] = next;
     return next;
   }
 
-  private scheduleRender(renderId: string, seconds: number, fail: boolean, speed: number): void {
-    const step = (at: number, fn: () => void) => {
-      const timer = setTimeout(() => {
-        this.timers.delete(`${renderId}:${at}`);
-        fn();
-      }, at * speed * this.flags.latency);
-      this.timers.set(`${renderId}:${at}`, timer);
+  /** Gives back everything a non-succeeded preview took: credits, token, the free claim. */
+  private refund(preview: PreviewDoc): void {
+    const meta = this.state.meta[preview.id];
+    this.state.wallet = {
+      ...this.state.wallet,
+      balance: this.state.wallet.balance + preview.reservedCredits,
+      freeHighTokens: this.state.wallet.freeHighTokens + (meta?.usedToken ? 1 : 0),
+      previewUsed: preview.onboarding ? false : this.state.wallet.previewUsed,
+      updatedAt: now(),
     };
+    if (meta) meta.usedToken = false;
+  }
 
-    step(900, () => {
-      this.updateRender(renderId, { status: 'processing', progress: 0.08 });
+  private clearTimers(id: string): void {
+    this.timers.forEach((timer, key) => {
+      if (key.startsWith(`${id}:`)) {
+        clearTimeout(timer);
+        this.timers.delete(key);
+      }
+    });
+  }
+
+  /** queued → processing (progress) → finalizing → succeeded in about 4 s, or failed + refund. */
+  private schedulePipeline(id: string, failWith: ErrorCode | null): void {
+    const ticks = 6;
+    const step = (label: string, at: number, fn: () => void) => {
+      const key = `${id}:${label}`;
+      this.timers.set(
+        key,
+        setTimeout(() => {
+          this.timers.delete(key);
+          fn();
+        }, at * this.flags.latency),
+      );
+    };
+    const current = (): PreviewDoc | undefined => this.state.previews.find((p) => p.id === id);
+
+    step('start', 500, () => {
+      if (current()?.status !== 'queued') return;
+      this.updatePreview(id, { status: 'processing', progress: 0.1 });
       this.commit();
     });
-    const ticks = 9;
     for (let i = 1; i <= ticks; i += 1) {
-      step(900 + i * 850, () => {
-        const render = this.state.renders.find((r) => r.id === renderId);
-        if (!render || render.status !== 'processing') return;
-        if (fail && i === Math.ceil(ticks / 2)) {
-          this.state.wallet = {
-            ...this.state.wallet,
-            balance: this.state.wallet.balance + render.reservedCredits,
-            updatedAt: now(),
-          };
-          this.updateRender(renderId, { status: 'failed', errorCode: 'provider_failed', progress: render.progress });
+      step(`tick${i}`, 500 + i * 450, () => {
+        const preview = current();
+        if (!preview || preview.status !== 'processing') return;
+        if (failWith && i === Math.ceil(ticks / 2)) {
+          this.refund(preview);
+          this.updatePreview(id, { status: 'failed', errorCode: failWith });
           this.commit();
+          this.clearTimers(id);
           return;
         }
-        this.updateRender(renderId, { progress: Math.min(0.92, 0.08 + (i / ticks) * 0.84) });
+        this.updatePreview(id, { progress: Math.min(0.9, 0.1 + (i / ticks) * 0.8) });
         this.commit();
       });
     }
-    step(900 + (ticks + 1) * 850, () => {
-      const render = this.state.renders.find((r) => r.id === renderId);
-      if (!render || render.status !== 'processing') return;
-      this.updateRender(renderId, { status: 'finalizing', progress: 0.96 });
+    step('finalizing', 500 + (ticks + 1) * 450, () => {
+      if (current()?.status !== 'processing') return;
+      this.updatePreview(id, { status: 'finalizing', progress: 0.95 });
       this.commit();
     });
-    step(900 + (ticks + 2) * 850 + 700, () => {
-      const render = this.state.renders.find((r) => r.id === renderId);
-      if (!render || render.status !== 'finalizing') return;
-      const actual = clampSeconds(seconds);
-      const billed = this.state.performances[renderId]?.billedResolution ?? render.resolution;
-      const charged = render.purpose === 'preview' ? 0 : renderCost(billed, actual);
-      const refund = Math.max(0, render.reservedCredits - charged);
-      this.state.wallet = { ...this.state.wallet, balance: this.state.wallet.balance + refund, updatedAt: now() };
-      this.updateRender(renderId, {
+    step('done', 4000, () => {
+      const preview = current();
+      if (!preview || preview.status !== 'finalizing') return;
+      const resultPath = `results/${this.state.uid}/${id}.jpg`;
+      this.state.files[resultPath] = { kind: 'result', sourcePath: preview.photoPath };
+      this.updatePreview(id, {
         status: 'succeeded',
         progress: 1,
-        seconds: actual,
-        chargedCredits: charged,
-        videoPath: `mock://render/${renderId}`,
+        chargedCredits: preview.reservedCredits,
+        resultPath,
       });
       this.commit();
     });
   }
 
-  private resumeRenders(): void {
+  /** An app restart interrupted the simulation: finish it honestly as a timeout with a refund. */
+  private resumePreviews(): void {
     let changed = false;
-    for (const render of this.state.renders) {
-      if (isTerminal(render.status)) continue;
-      // An app restart interrupted the simulation: finish it honestly as a failure + refund.
-      this.state.wallet = {
-        ...this.state.wallet,
-        balance: this.state.wallet.balance + render.reservedCredits,
-        updatedAt: now(),
-      };
-      render.status = 'failed';
-      render.errorCode = 'timeout';
-      render.updatedAt = now();
+    for (const preview of this.state.previews) {
+      if (isTerminal(preview.status)) continue;
+      this.refund(preview);
+      preview.status = 'failed';
+      preview.errorCode = 'timeout';
+      preview.updatedAt = now();
       changed = true;
     }
     if (changed) this.commit();
   }
 
-  private async cancelRender(request: CancelRenderRequest): Promise<{ canceled: boolean }> {
+  private async cancelPreview(request: CancelPreviewRequest): Promise<{ canceled: boolean }> {
     await this.wait(300);
-    const render = this.state.renders.find((r) => r.id === request.renderId);
-    if (!render) throw new BackendError('not_found');
-    if (render.status !== 'queued' && render.status !== 'processing') return { canceled: false };
-    this.timers.forEach((timer, key) => {
-      if (key.startsWith(`${render.id}:`)) {
-        clearTimeout(timer);
-        this.timers.delete(key);
-      }
-    });
-    this.state.wallet = {
-      ...this.state.wallet,
-      balance: this.state.wallet.balance + render.reservedCredits,
-      updatedAt: now(),
-    };
-    this.updateRender(render.id, { status: 'canceled' });
+    const preview = this.state.previews.find((p) => p.id === request?.previewId);
+    if (!preview) throw new BackendError('not_found');
+    if (preview.status !== 'queued' && preview.status !== 'processing') return { canceled: false };
+    this.clearTimers(preview.id);
+    this.refund(preview);
+    this.updatePreview(preview.id, { status: 'canceled' });
     this.commit();
     return { canceled: true };
+  }
+
+  private async deletePreview(request: DeletePreviewRequest): Promise<{ deleted: true }> {
+    await this.wait(300);
+    const preview = this.state.previews.find((p) => p.id === request?.previewId);
+    if (!preview) throw new BackendError('not_found');
+    if (!isTerminal(preview.status)) throw new BackendError('invalid_input');
+    this.state.previews = this.state.previews.filter((p) => p.id !== preview.id);
+    if (preview.resultPath) delete this.state.files[preview.resultPath];
+    delete this.state.meta[preview.id];
+    this.commit();
+    return { deleted: true };
+  }
+
+  private async reportPreview(request: ReportPreviewRequest): Promise<{ reported: true }> {
+    await this.wait(400);
+    if (!request || !(REPORT_REASONS as readonly string[]).includes(request.reason)) {
+      throw new BackendError('invalid_input');
+    }
+    if (!this.state.previews.some((p) => p.id === request.previewId)) throw new BackendError('not_found');
+    this.state.reports.push({ previewId: request.previewId, reason: request.reason, at: now() });
+    this.persist();
+    return { reported: true };
   }
 
   private async spinGiftWheel(): Promise<SpinGiftWheelResponse> {
     await this.wait(700);
     if (this.state.gift) throw new BackendError('already_claimed');
-    const prizeId = drawPrize(secureRandom);
+    const prizeId = this.flags.nextPrize ?? drawPrize(secureRandom);
+    this.flags.nextPrize = null;
     const segmentIndex = segmentForPrize(prizeId, secureRandom);
     const spunAt = now();
     const expiresAt = prizeExpiry(new Date(spunAt)).getTime();
@@ -680,17 +679,19 @@ class MockServer {
       grantedCredits = prize.credits;
       this.addCredits(prize.credits);
     }
-    if (prize.kind === 'token' && prize.token === 'freePoster') {
-      this.state.wallet = { ...this.state.wallet, freePosterTokens: this.state.wallet.freePosterTokens + 1 };
-    }
-    if (prize.kind === 'token' && prize.token === 'hdBoost') {
-      this.state.wallet = { ...this.state.wallet, hdBoostTokens: this.state.wallet.hdBoostTokens + 1 };
+    if (prize.kind === 'token' && prize.token === 'freeHigh') {
+      this.state.wallet = {
+        ...this.state.wallet,
+        freeHighTokens: this.state.wallet.freeHighTokens + 1,
+        updatedAt: now(),
+      };
     }
     this.state.gift = {
       prizeId,
       segmentIndex,
       spunAt,
       expiresAt,
+      // Credits and tokens are granted on the spot; the discount stays open until it is bought.
       redeemedAt: prize.kind === 'offering' ? null : spunAt,
     };
     this.commit();
@@ -703,15 +704,10 @@ class MockServer {
     };
   }
 
-  private async deleteRender(renderId: unknown): Promise<{ deleted: true }> {
-    await this.wait(300);
-    const render = this.state.renders.find((r) => r.id === renderId);
-    if (!render) throw new BackendError('not_found');
-    if (!isTerminal(render.status)) throw new BackendError('invalid_input');
-    this.state.renders = this.state.renders.filter((r) => r.id !== render.id);
-    delete this.state.performances[render.id];
-    this.commit();
-    return { deleted: true };
+  /** `true` while a won `gift_discount` can still be bought (mock stand-in for the offering override). */
+  get giftOfferActive(): boolean {
+    const gift = this.state.gift;
+    return !!gift && PRIZES[gift.prizeId].kind === 'offering' && gift.redeemedAt === null && gift.expiresAt > now();
   }
 
   markGiftRedeemed(): void {
@@ -720,10 +716,27 @@ class MockServer {
       this.persist();
     }
   }
-}
 
-function isTerminal(status: RenderDoc['status']): boolean {
-  return status === 'succeeded' || status === 'failed' || status === 'canceled';
+  private async joinCohort(request: JoinCohortRequest): Promise<{ joined: true }> {
+    await this.wait(300);
+    if (
+      !request ||
+      !isIsoDate(request.procedureDate) ||
+      !isGoal(request.goal) ||
+      !(JOURNEY_KINDS as readonly string[]).includes(request.kind)
+    ) {
+      throw new BackendError('invalid_input');
+    }
+    // Only these three fields ever leave the device; nothing else is stored.
+    this.state.cohort = { procedureDate: request.procedureDate, goal: request.goal, kind: request.kind };
+    this.persist();
+    return { joined: true };
+  }
+
+  private async getCohort(): Promise<CohortStats> {
+    await this.wait(300);
+    return { sameWeek: this.flags.cohortSameWeek, sameGoal: this.flags.cohortSameGoal };
+  }
 }
 
 export const mockServer = new MockServer();

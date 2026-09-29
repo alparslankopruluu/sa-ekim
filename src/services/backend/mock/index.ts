@@ -2,15 +2,20 @@ import { Platform } from 'react-native';
 
 import { pushDevLog } from '../devLog';
 import { toBackendError, withTimeout } from '../errors';
-import type { Backend, RemoteValue } from '../types';
+import { type Backend, BackendError, type RemoteValue } from '../types';
 
+import { makeDemoResult } from './demoResult';
 import { mockServer } from './mockServer';
 
 const remoteOverrides = new Map<string, RemoteValue>();
 
-/** Developer screen hook: override a Remote Config value in mock mode. */
+/**
+ * Developer screen hook: override a Remote Config value in mock mode. `previews_enabled`
+ * also drives the mock server's kill switch, like the live `generationEnabled` config.
+ */
 export function setMockRemoteValue(key: string, value: RemoteValue): void {
   remoteOverrides.set(key, value);
+  if (key === 'previews_enabled') mockServer.flags.generationEnabled = value === true || value === 'true';
 }
 
 export function createMockBackend(): Backend {
@@ -97,8 +102,12 @@ export function createMockBackend(): Backend {
       async resolveUrl(storagePath) {
         await mockServer.ready();
         const file = mockServer.resolveFile(storagePath);
-        if (!file) return '';
-        return file.kind === 'local' ? file.uri : `belto-asset://song/${file.songId}`;
+        if (!file) throw new BackendError('not_found');
+        if (file.kind === 'local') return file.uri;
+        // A finished preview: the user's photo run through the labelled demo variation.
+        const source = mockServer.resolveFile(file.sourcePath);
+        if (source?.kind !== 'local') throw new BackendError('not_found');
+        return makeDemoResult(source.uri);
       },
     },
     functions: {
@@ -111,8 +120,8 @@ export function createMockBackend(): Backend {
       },
     },
     data: {
-      watchRenders(_uid, onChange) {
-        return mockServer.watchRenders(onChange);
+      watchPreviews(_uid, onChange) {
+        return mockServer.watchPreviews(onChange);
       },
       watchWallet(_uid, onChange) {
         return mockServer.watchWallet(onChange);

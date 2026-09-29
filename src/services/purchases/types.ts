@@ -1,8 +1,9 @@
 import type { CreditPackId } from '@shared/pricing';
-import type { OfferingId } from '@shared/products';
+import type { OfferingId, PlanId } from '@shared/products';
 
-export type PlanId = 'weekly' | 'annual';
+export type { PlanId } from '@shared/products';
 
+/** There is no free trial anywhere in Kök (owner decision, 2026-09-29): no trial fields exist. */
 export interface PlanOption {
   id: PlanId;
   offeringId: OfferingId;
@@ -12,10 +13,8 @@ export interface PlanOption {
   priceString: string;
   price: number;
   currencyCode: string;
-  period: 'week' | 'year';
-  /** Free-trial length in days (null when the plan has no free trial). */
-  trialDays: number | null;
-  /** Discounted first-period price (e.g. gift offer), null otherwise. */
+  period: 'week' | 'month' | 'year';
+  /** Discounted first-period price (the `gift_discount` annual), null otherwise. */
   introPriceString: string | null;
   introPrice: number | null;
 }
@@ -32,6 +31,7 @@ export interface CreditPackOption {
 
 export interface PaywallOffer {
   offeringId: OfferingId;
+  /** Ordered best value first: annual, monthly, weekly. */
   plans: PlanOption[];
   /** Main paywall is serving a seasonal RevenueCat offering (current ≠ `default`). */
   campaign?: boolean;
@@ -43,6 +43,7 @@ export interface EntitlementState {
   willRenew: boolean;
   /** Epoch ms, null for non-expiring or unknown. */
   expiresAt: number | null;
+  /** Always false: kept so stored/legacy shapes stay valid. */
   isTrial: boolean;
 }
 
@@ -55,7 +56,7 @@ export const NO_ENTITLEMENT: EntitlementState = {
 };
 
 export type PurchaseOutcome =
-  | { status: 'purchased'; productId: string; transactionId: string; isTrial: boolean }
+  | { status: 'purchased'; productId: string; transactionId: string }
   | { status: 'cancelled' }
   | { status: 'pending' };
 

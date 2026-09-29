@@ -1,0 +1,84 @@
+{
+  "close": "Close camera",
+  "title": "Progress photo",
+  "angle": {
+    "front": "Front",
+    "left": "Left side",
+    "right": "Right side",
+    "top": "Top",
+    "crown": "Crown"
+  },
+  "instruction": {
+    "front": "Hair dry and styled as usual. Fit your face in the oval with your hairline near the top.",
+    "left": "Turn to show your left side. Keep the phone upright at eye level.",
+    "right": "Turn to show your right side. Keep the phone upright at eye level.",
+    "top": "Hold the phone flat above your head, screen up, so the back camera looks down at the top of your head.",
+    "crown": "Hold the phone flat above the back of your head, screen up, so the back camera looks down at your crown."
+  },
+  "cameraNote": {
+    "front": "Uses the front camera so you can see the frame.",
+    "back": "Uses the back camera. Hold the phone flat, or ask someone to take it. You feel a tap when it is level."
+  },
+  "guide": {
+    "ghostHide": "Hide previous photo",
+    "ghostShow": "Show previous photo",
+    "ghostOverlay": "Overlay of your previous {{angle}} photo, {{label}}",
+    "frame": "Camera view with a framing guide"
+  },
+  "level": {
+    "ok": "Level, ready",
+    "upright": "Hold the phone upright",
+    "flat": "Hold the phone flat, screen up",
+    "unavailable": "This device has no motion sensor, so the level check is off. Make sure the phone is upright yourself.",
+    "a11yOk": "The phone is level. You can take the photo.",
+    "a11yBlockedUpright": "The phone is not upright yet.",
+    "a11yBlockedFlat": "The phone is not flat yet."
+  },
+  "shutter": {
+    "label": "Take photo",
+    "blockedUpright": "Hold your phone upright to take the photo",
+    "blockedFlat": "Hold your phone flat to take the photo"
+  },
+  "library": "Choose from library",
+  "permission": {
+    "checking": "Checking camera access…",
+    "title": "Camera access is off",
+    "body": "Kök uses the camera only for your progress photos. They stay on this device. You can also pick a photo from your library.",
+    "allow": "Allow camera",
+    "settings": "Open settings"
+  },
+  "unavailable": {
+    "title": "The camera isn't available here",
+    "body": "You can pick a photo from your library instead."
+  },
+  "review": {
+    "retake": "Retake",
+    "use": "Use photo",
+    "saving": "Saving…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "This photo is used for your preview only. It isn't added to your journey.",
+    "a11y": "Review of the photo you just took"
+  },
+  "error": {
+    "save": "Couldn't save the photo. Try again.",
+    "capture": "Couldn't take the photo. Try again.",
+    "pick": "Couldn't open your library. Try again."
+  },
+  "saved": "Photo saved",
+  "checking": "Checking your plan…",
+  "detail": {
+    "title": "Photo",
+    "image": "{{angle}} photo, {{label}}",
+    "taken": "Taken {{date}}",
+    "compare": "Compare with…",
+    "delete": "Delete photo",
+    "confirmTitle": "Delete this photo?",
+    "confirmBody": "It is removed from this device and can't be recovered.",
+    "confirm": "Delete",
+    "cancel": "Keep it",
+    "missingTitle": "This photo isn't here anymore",
+    "missingBody": "It may have been deleted.",
+    "close": "Close",
+    "loadError": "This photo can't be shown."
+  }
+}

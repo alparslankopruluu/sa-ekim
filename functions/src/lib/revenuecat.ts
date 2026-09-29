@@ -5,8 +5,9 @@
  */
 import { createHash, timingSafeEqual } from 'node:crypto';
 
-import { creditsForPack, PLAN_ALLOWANCE, TRIAL_ALLOWANCE_CREDITS } from '../shared/pricing.js';
-import { ENTITLEMENT_PRO, PRODUCT_SUFFIXES, packForProductId, planForProductId } from '../shared/products.js';
+import { WEEK_MS } from '../config.js';
+import { creditsForPack, PLAN_ALLOWANCE } from '../shared/pricing.js';
+import { ENTITLEMENT_PRO, PRODUCT_SUFFIXES, packForProductId, type PlanId, planForProductId } from '../shared/products.js';
 import { UID_PATTERN } from './paths.js';
 
 /** `Authorization: Bearer <secret>`, compared in constant time (both sides hashed to 32 bytes). */
@@ -102,17 +103,17 @@ export function parseRcWebhookBody(body: unknown): RcEvent | null {
 export interface EntitlementUpdate {
   pro: boolean;
   productId: string | null;
-  plan: 'weekly' | 'annual' | null;
+  plan: PlanId | null;
   expiresAt: number | null;
   store: string | null;
   environment: string | null;
   /** Ordering guard: an older event never overwrites a newer mirror. */
   lastEventAt: number;
   /**
-   * Annual monthly-allowance schedule. `undefined` keeps the stored schedule;
+   * Annual weekly-allowance schedule. `undefined` keeps the stored schedule;
    * `null` clears it.
    */
-  allowance?: { anchorAt: number; month: number; nextAt: number } | null;
+  allowance?: { anchorAt: number; week: number; nextAt: number } | null;
 }
 
 export type RcAction =
@@ -136,7 +137,7 @@ export type RcAction =
       eventType: string;
       grant: { credits: number; reason: 'plan_allowance' | 'credit_pack'; refId: string } | null;
       entitlement: EntitlementUpdate | null;
-      /** A wheel-prize offering (gift discount / 7-day trial) was purchased. */
+      /** The wheel-prize offering (annual gift discount) was purchased. */
       giftOfferingRedeemed: boolean;
     };
 
@@ -160,20 +161,21 @@ const MIRROR_TYPES = new Set([
   'REFUND_REVERSED',
 ]);
 
-/** Calendar-month addition in UTC, clamping to the last day of shorter months. */
-export function addMonthsUtc(ms: number, months: number): number {
-  const d = new Date(ms);
-  const targetMonthIndex = d.getUTCMonth() + months;
-  const year = d.getUTCFullYear() + Math.floor(targetMonthIndex / 12);
-  const month = ((targetMonthIndex % 12) + 12) % 12;
-  const lastDay = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-  const day = Math.min(d.getUTCDate(), lastDay);
-  return Date.UTC(year, month, day, d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds(), d.getUTCMilliseconds());
+/** Whole-week addition (weeks are 7 × 24 h; the schedule is computed from the anchor, so it never drifts). */
+export function addWeeks(ms: number, weeks: number): number {
+  return ms + weeks * WEEK_MS;
 }
 
 function isGiftOfferingProduct(productId: string): boolean {
-  const id = productId.toLowerCase();
-  return id.includes(PRODUCT_SUFFIXES.annualGiftDiscount) || id.includes(PRODUCT_SUFFIXES.annualGiftTrial);
+  return productId.toLowerCase().includes(PRODUCT_SUFFIXES.annualGiftDiscount);
+}
+
+/**
+ * Credits a plan purchase or renewal grants. There is no trial anywhere: an annual purchase (and its
+ * yearly renewal) grants `initial`, the weekly top-ups follow from `hourlyMaintenance`.
+ */
+export function planGrantCredits(plan: PlanId): number {
+  return plan === 'annual' ? PLAN_ALLOWANCE.annual.initial : PLAN_ALLOWANCE[plan].credits;
 }
 
 export function planRcEvent(event: RcEvent, now: number): RcAction {
@@ -196,9 +198,7 @@ export function planRcEvent(event: RcEvent, now: number): RcAction {
 
   let grant: Extract<RcAction, { kind: 'apply' }>['grant'] = null;
   if (plan && GRANT_PLAN_TYPES.has(event.type)) {
-    const trialStart = event.type === 'INITIAL_PURCHASE' && event.periodType === 'TRIAL';
-    const credits = trialStart ? TRIAL_ALLOWANCE_CREDITS : PLAN_ALLOWANCE[plan].credits;
-    grant = { credits, reason: 'plan_allowance', refId: `rc:${event.id}` };
+    grant = { credits: planGrantCredits(plan), reason: 'plan_allowance', refId: `rc:${event.id}` };
   } else if (!plan && pack && event.type === 'NON_RENEWING_PURCHASE') {
     const credits = creditsForPack(pack);
     if (credits) grant = { credits, reason: 'credit_pack', refId: `rc:${event.id}` };
@@ -213,10 +213,10 @@ export function planRcEvent(event: RcEvent, now: number): RcAction {
     if (!pro || plan !== 'annual') {
       allowance = null;
     } else if (GRANT_PLAN_TYPES.has(event.type)) {
-      // Annual plans get the allowance monthly: this purchase/renewal grants
-      // month 0; hourlyMaintenance grants months 1..11 on this schedule.
+      // Annual plans get a weekly top-up: this purchase/renewal grants the initial amount;
+      // hourlyMaintenance grants weeks 1..51 on this schedule while the year is active.
       const anchorAt = event.purchasedAtMs ?? event.eventTimestampMs ?? now;
-      allowance = { anchorAt, month: 1, nextAt: addMonthsUtc(anchorAt, 1) };
+      allowance = { anchorAt, week: 1, nextAt: addWeeks(anchorAt, 1) };
     }
     entitlement = {
       pro,
@@ -252,10 +252,10 @@ export function shouldMirrorEvent(existingLastEventAt: unknown, eventAt: number)
   return typeof existingLastEventAt !== 'number' || eventAt >= existingLastEventAt;
 }
 
-/** Slack so a monthly grant never lands on the same day as the yearly renewal grant. */
+/** Slack so a weekly top-up never lands on the same day as the yearly renewal grant. */
 const RENEWAL_SLACK_MS = 12 * 60 * 60 * 1000;
 
-/** Annual subscriber whose next monthly allowance is due inside the paid period. */
+/** Annual subscriber whose next weekly top-up is due inside the paid period. */
 export function isAllowanceDue(entitlement: unknown, now: number): boolean {
   if (!entitlement || typeof entitlement !== 'object') return false;
   const e = entitlement as Record<string, unknown>;
@@ -264,16 +264,16 @@ export function isAllowanceDue(entitlement: unknown, now: number): boolean {
   const expiresAt = e.expiresAt;
   if (typeof next !== 'number' || next > now) return false;
   if (typeof expiresAt === 'number' && (expiresAt <= now || next >= expiresAt - RENEWAL_SLACK_MS)) return false;
-  return typeof e.allowanceAnchorAt === 'number' && typeof e.allowanceMonth === 'number';
+  return typeof e.allowanceAnchorAt === 'number' && typeof e.allowanceWeek === 'number';
 }
 
-/** Next step of the monthly schedule (computed from the anchor, so month lengths never drift). */
-export function advanceAllowance(entitlement: { allowanceAnchorAt: number; allowanceMonth: number }): {
-  allowanceMonth: number;
+/** Next step of the weekly schedule (computed from the anchor). */
+export function advanceAllowance(entitlement: { allowanceAnchorAt: number; allowanceWeek: number }): {
+  allowanceWeek: number;
   nextAllowanceAt: number;
 } {
-  const allowanceMonth = entitlement.allowanceMonth + 1;
-  return { allowanceMonth, nextAllowanceAt: addMonthsUtc(entitlement.allowanceAnchorAt, allowanceMonth) };
+  const allowanceWeek = entitlement.allowanceWeek + 1;
+  return { allowanceWeek, nextAllowanceAt: addWeeks(entitlement.allowanceAnchorAt, allowanceWeek) };
 }
 
 /** Mirror fields that move with a TRANSFER (everything but bookkeeping). */
@@ -285,7 +285,7 @@ export const TRANSFERABLE_ENTITLEMENT_FIELDS = [
   'store',
   'environment',
   'allowanceAnchorAt',
-  'allowanceMonth',
+  'allowanceWeek',
   'nextAllowanceAt',
 ] as const;
 

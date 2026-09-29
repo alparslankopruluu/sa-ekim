@@ -1,13 +1,13 @@
 /**
- * Welcome-gift wheel. One free spin per account; the server draws the prize and
- * the wheel animates to it. Always dismissible, no purchase required, no
- * countdown pressure (App Review 5.6) — the expiry is shown once as a plain date.
+ * Welcome-gift wheel. One free spin per account; the server draws the prize and the wheel
+ * only animates to it. Always dismissible, no purchase required, no countdown pressure
+ * (App Review 5.6): the expiry is shown once as a plain date.
  */
 import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, useWindowDimensions, View } from 'react-native';
+import { AccessibilityInfo, StyleSheet, useWindowDimensions, View } from 'react-native';
 import Animated, { FadeIn, FadeInUp, ZoomIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -22,33 +22,43 @@ import { showToast } from '@/components/Toast';
 import { CloseButton } from '@/components/ui';
 import { GiftWheel, type GiftWheelHandle } from '@/features/gift/GiftWheel';
 import { useFeedback } from '@/hooks/useFeedback';
+import { errorCodeOf, useErrorMessage } from '@/lib/errors';
 import { currentLocaleTag } from '@/lib/i18n';
 import { track } from '@/services/analytics';
-import { BackendError } from '@/services/backend';
 import { spinGiftWheel } from '@/services/rewards';
 import { useAccount } from '@/stores/account';
 import { colors, glows, layout, radius, spacing } from '@/theme/tokens';
 
 const PRIZE_ICON: Record<PrizeId, keyof typeof Ionicons.glyphMap> = {
-  credits40: 'flash',
-  credits20: 'flash',
-  freePoster: 'color-palette',
-  hdBoost: 'sparkles',
+  credits10: 'flash',
+  credits5: 'flash',
+  freeHigh: 'sparkles',
   discount40: 'pricetag',
-  trial7: 'calendar',
 };
+
+interface Won {
+  prizeId: PrizeId;
+  expiresAt: number;
+  redeemedAt: number | null;
+}
+
+/** A plain calendar date (never a countdown). */
+function formatDate(epochMs: number): string {
+  return new Date(epochMs).toLocaleDateString(currentLocaleTag(), { month: 'long', day: 'numeric' });
+}
 
 export default function GiftScreen() {
   const { t } = useTranslation();
   const { width } = useWindowDimensions();
   const feedback = useFeedback();
+  const errorMessage = useErrorMessage();
   const params = useLocalSearchParams<{ source?: string }>();
   const source = params.source ?? 'home_card';
   const existing = useAccount((s) => s.gift);
   const wheelRef = useRef<GiftWheelHandle>(null);
   const [spinning, setSpinning] = useState(false);
-  const [result, setResult] = useState<{ prizeId: PrizeId; expiresAt: number } | null>(
-    existing ? { prizeId: existing.prizeId, expiresAt: existing.expiresAt } : null,
+  const [won, setWon] = useState<Won | null>(
+    existing ? { prizeId: existing.prizeId, expiresAt: existing.expiresAt, redeemedAt: existing.redeemedAt } : null,
   );
   const [burst, setBurst] = useState(0);
   const wheelSize = Math.min(width - layout.screenPadding * 2, 340);
@@ -58,7 +68,7 @@ export default function GiftScreen() {
   }, [source]);
 
   const spin = async () => {
-    if (spinning || result) return;
+    if (spinning || won) return;
     setSpinning(true);
     feedback.impact();
     wheelRef.current?.windUp();
@@ -68,24 +78,28 @@ export default function GiftScreen() {
     } catch (error) {
       wheelRef.current?.abort();
       setSpinning(false);
-      const code = error instanceof BackendError ? error.code : 'unknown';
-      showToast(code === 'already_claimed' ? t('gift.alreadyClaimed') : t(`errors.${code}`), 'error');
+      feedback.error();
+      showToast(
+        errorCodeOf(error) === 'already_claimed' ? t('gift.alreadyClaimed') : errorMessage(error),
+        'error',
+      );
       return;
     }
     await wheelRef.current?.landOn(response.segmentIndex);
     setSpinning(false);
-    setResult({ prizeId: response.prizeId, expiresAt: Date.parse(response.expiresAt) });
+    setWon({ prizeId: response.prizeId, expiresAt: Date.parse(response.expiresAt), redeemedAt: null });
     setBurst((b) => b + 1);
     feedback.success();
-    feedback.sound('win');
+    AccessibilityInfo.announceForAccessibility(
+      `${t('gift.youWon')}: ${t(`gift.prizes.${response.prizeId}.title`)}`,
+    );
   };
 
   const close = () => (router.canGoBack() ? router.back() : router.replace('/(tabs)'));
 
-  const prize = result ? PRIZES[result.prizeId] : null;
-  const date = result
-    ? new Date(result.expiresAt).toLocaleDateString(currentLocaleTag(), { month: 'long', day: 'numeric' })
-    : '';
+  const prize = won ? PRIZES[won.prizeId] : null;
+  const isOffer = prize?.kind === 'offering';
+  const offerOpen = !!won && isOffer && won.redeemedAt === null && won.expiresAt > Date.now();
 
   return (
     <View style={styles.root}>
@@ -110,44 +124,61 @@ export default function GiftScreen() {
         </Animated.View>
 
         <View style={styles.footer}>
-          {result && prize ? (
+          {won && prize ? (
             <Animated.View entering={ZoomIn.springify().damping(12)} style={styles.prizeCard} testID="gift-result">
               <View style={styles.prizeIcon}>
-                <Ionicons name={PRIZE_ICON[result.prizeId]} size={26} color={colors.textOnAccent} />
+                <Ionicons name={PRIZE_ICON[won.prizeId]} size={26} color={colors.textOnAccent} />
               </View>
               <AppText variant="micro" color="accent">
                 {t('gift.youWon')}
               </AppText>
               <AppText variant="title2" align="center">
-                {t(`prizes.${result.prizeId}.title`)}
+                {t(`gift.prizes.${won.prizeId}.title`)}
               </AppText>
               <AppText variant="callout" color="textSecondary" align="center">
-                {t(`prizes.${result.prizeId}.body`)}
+                {t(`gift.prizes.${won.prizeId}.body`)}
               </AppText>
-              {prize.kind === 'offering' ? (
-                <>
-                  <AppText variant="caption" color="textTertiary">
-                    {t('gift.expires', { date })}
-                  </AppText>
-                  <Button
-                    label={t('gift.redeem')}
-                    variant="gold"
-                    shine
-                    style={styles.prizeButton}
-                    onPress={() =>
-                      router.replace({ pathname: '/paywall', params: { source: 'gift', offering: prize.offering ?? 'default' } })
-                    }
-                    testID="gift-redeem"
-                  />
-                  <AppText variant="caption" color="textTertiary" align="center">
-                    {t('gift.notifyNote')}
-                  </AppText>
-                </>
+              {isOffer ? (
+                offerOpen ? (
+                  <>
+                    <AppText variant="caption" color="textTertiary">
+                      {t('gift.expires', { date: formatDate(won.expiresAt) })}
+                    </AppText>
+                    <Button
+                      label={t('gift.redeem')}
+                      variant="gold"
+                      shine
+                      style={styles.prizeButton}
+                      onPress={() =>
+                        router.replace({
+                          pathname: '/paywall',
+                          params: { source: 'gift', offering: prize.offering ?? 'default' },
+                        })
+                      }
+                      testID="gift-redeem"
+                    />
+                    <AppText variant="caption" color="textTertiary" align="center">
+                      {t('gift.notifyNote')}
+                    </AppText>
+                  </>
+                ) : (
+                  <>
+                    <AppText variant="caption" color="textTertiary" align="center">
+                      {won.redeemedAt !== null ? t('gift.redeemed') : t('gift.expired', { date: formatDate(won.expiresAt) })}
+                    </AppText>
+                    <Button label={t('gift.done')} onPress={close} style={styles.prizeButton} testID="gift-done" />
+                  </>
+                )
               ) : (
                 <>
                   <AppText variant="caption" color="success">
                     {t('gift.added')}
                   </AppText>
+                  {prize.kind === 'token' ? (
+                    <AppText variant="caption" color="textTertiary" align="center">
+                      {t('gift.tokenNote')}
+                    </AppText>
+                  ) : null}
                   <Button label={t('gift.done')} onPress={close} style={styles.prizeButton} testID="gift-done" />
                 </>
               )}

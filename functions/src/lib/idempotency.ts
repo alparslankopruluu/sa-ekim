@@ -3,19 +3,16 @@
  * the same key returns the stored outcome and never charges twice.
  */
 import { type ErrorCode, isErrorCode } from '../shared/api.js';
-import { normalizeCharge, type WalletCharge } from './ledger.js';
 
-export type RequestKind = 'createPoster' | 'synthesizeVoice' | 'composeSong' | 'createRender';
+export type RequestKind = 'createPreview';
 export type RequestStatus = 'pending' | 'done' | 'failed';
 
 export interface RequestRecord {
   kind: RequestKind;
   status: RequestStatus;
-  /** What was taken from the wallet (paid steps); renders keep theirs in renders_private. */
-  charge: WalletCharge;
-  /** Id of the thing produced (poster/voice/song id, or renderId). */
+  /** Id of the preview this request created. */
   refId: string;
-  /** Stored response, minus short-lived URLs (re-signed on replay). */
+  /** Stored response `{ previewId, reservedCredits }` (the balance is read fresh on replay). */
   response: Record<string, unknown> | null;
   errorCode: ErrorCode | null;
   createdAt: number;
@@ -30,13 +27,11 @@ export type ReplayDecision =
 export function parseRequestRecord(data: unknown): RequestRecord | null {
   if (!data || typeof data !== 'object') return null;
   const d = data as Record<string, unknown>;
-  const kinds: RequestKind[] = ['createPoster', 'synthesizeVoice', 'composeSong', 'createRender'];
   const statuses: RequestStatus[] = ['pending', 'done', 'failed'];
-  if (!kinds.includes(d.kind as RequestKind) || !statuses.includes(d.status as RequestStatus)) return null;
+  if (d.kind !== 'createPreview' || !statuses.includes(d.status as RequestStatus)) return null;
   return {
-    kind: d.kind as RequestKind,
+    kind: 'createPreview',
     status: d.status as RequestStatus,
-    charge: normalizeCharge(d.charge),
     refId: typeof d.refId === 'string' ? d.refId : '',
     response: d.response && typeof d.response === 'object' ? (d.response as Record<string, unknown>) : null,
     errorCode: isErrorCode(d.errorCode) ? d.errorCode : null,
@@ -47,20 +42,14 @@ export function parseRequestRecord(data: unknown): RequestRecord | null {
 
 /**
  * - no record → proceed (charge and run);
- * - done → replay the stored response;
+ * - done or pending with a stored response → replay it (the preview document already exists);
  * - failed → the same failure (the client uses a new key to try again);
- * - pending → still in flight: renders replay (their doc already exists),
- *   other steps ask the client to retry shortly;
- * - a key reused for a different action → invalid input.
+ * - a key that belongs to some other action, or a record without a response → invalid input / unknown.
  */
-export function decideReplay(existing: unknown, kind: RequestKind): ReplayDecision {
+export function decideReplay(existing: unknown): ReplayDecision {
   if (existing === undefined || existing === null) return { action: 'proceed' };
   const record = parseRequestRecord(existing);
-  if (!record || record.kind !== kind) return { action: 'reject', code: 'invalid_input' };
-  if (record.status === 'done') {
-    return record.response ? { action: 'replay', record } : { action: 'reject', code: 'unknown' };
-  }
+  if (!record) return { action: 'reject', code: 'invalid_input' };
   if (record.status === 'failed') return { action: 'reject', code: record.errorCode ?? 'unknown' };
-  if (kind === 'createRender' && record.response) return { action: 'replay', record };
-  return { action: 'reject', code: 'rate_limited' };
+  return record.response ? { action: 'replay', record } : { action: 'reject', code: 'unknown' };
 }

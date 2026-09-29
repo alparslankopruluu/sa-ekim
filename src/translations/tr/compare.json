@@ -1,0 +1,44 @@
+{
+  "title": "Karşılaştır",
+  "close": "Kapat",
+  "mode": {
+    "wipe": "Kaydırıcı",
+    "side": "Yan yana"
+  },
+  "label": {
+    "before": "Öncesi",
+    "week": "{{n}}. hafta",
+    "none": "Fotoğraf"
+  },
+  "picker": {
+    "before": "Önceki fotoğraf",
+    "after": "Sonraki fotoğraf",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "İki fotoğrafı karşılaştıran kaydırıcı. Solda {{before}}, sağda {{after}}. Ayırıcıyı hareket ettirmek için ayarla.",
+  "sideA11y": "{{label}}, {{angle}} fotoğrafı",
+  "mismatch": "Bu iki fotoğraf farklı açıları gösteriyor. Aynı açıyı karşılaştırmak en iyi sonucu verir.",
+  "empty": {
+    "title": "Karşılaştırmak için iki fotoğraf",
+    "body": "Aynı açıdan en az iki fotoğraf çek, sonra burada karşılaştır.",
+    "action": "Fotoğraf çek"
+  },
+  "locked": {
+    "title": "Karşılaştırma Pro ile açılır",
+    "body": "İki fotoğrafı, her birinin haftasıyla birlikte yan yana gör. İlk fotoğrafın görünür kalır.",
+    "cta": "Karşılaştırmayı aç"
+  },
+  "share": {
+    "action": "Paylaş",
+    "preparing": "Hazırlanıyor…",
+    "error": "Karşılaştırma hazırlanamadı. Tekrar dene.",
+    "unavailable": "Bu cihazda paylaşım kullanılamıyor.",
+    "dialog": "Karşılaştırmanı paylaş"
+  },
+  "report": {
+    "title": "Fotoğraf karşılaştırması",
+    "heading": "{{before}} ve {{after}}",
+    "disclaimer": "Kişisel ilerleme kaydı — tıbbi belge değildir"
+  },
+  "mark": "Kök"
+}

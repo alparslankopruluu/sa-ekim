@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
-import { colors, radius, spacing } from '@/theme/tokens';
 import { springs } from '@/theme/motion';
+import { colors, radius, spacing } from '@/theme/tokens';
 
 export interface StepProgressProps {
   current: number;
@@ -28,7 +28,7 @@ export function StepProgress({ current, total, endowed = 0.2 }: StepProgressProp
     <View
       style={styles.track}
       accessibilityRole="progressbar"
-      accessibilityLabel={t('a11y.step', { current: current + 1, total: total + 1 })}
+      accessibilityLabel={t('ui.a11y.step', { current: current + 1, total: total + 1 })}
       accessibilityValue={{ min: 0, max: 100, now: Math.round(target * 100) }}
     >
       <Animated.View style={[styles.fill, style]} />

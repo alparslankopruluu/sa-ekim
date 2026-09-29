@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Önizlemeler",
+    "offers": "Teklifler",
+    "reminders": "Hatırlatıcılar"
+  },
+  "previewReady": {
+    "title": "Önizlemen hazır",
+    "body": "Görmek için Kök'ü aç. Bu bir yapay zekâ önizlemesidir, sonucunun tahmini değildir."
+  },
+  "giftExpiring": {
+    "title": "Hediyen seni bekliyor",
+    "body": "Yıllık plan indiriminin süresi {{date}} tarihinde bitiyor."
+  },
+  "care": {
+    "title": "Bakım planının {{day}}. günü",
+    "body": "Bugünkü adımları aç. Kliniğinin talimatları her zaman önce gelir."
+  },
+  "phase": {
+    "shed": {
+      "title": "{{week}}. hafta — dökülme bu dönemde tipiktir",
+      "body": "Pek çok kişi bu evrede dökülme görür. Nelerin tipik olduğunu görmek için rehberini aç. Sonuçlar kişiden kişiye değişir."
+    },
+    "quiet": {
+      "title": "Sessiz evre bu dönemde tipiktir",
+      "body": "Pek çok kişi bu haftalarda hiçbir şey olmuyormuş gibi hisseder. Nelerin tipik olduğunu görmek için rehberini aç."
+    },
+    "sprout": {
+      "title": "İlk çıkış bu dönemde tipiktir",
+      "body": "İnce yeni saçlar çoğu kez bu evrede görünmeye başlar. Zamanlama kişiden kişiye değişir."
+    },
+    "grow": {
+      "title": "Büyüme evresi",
+      "body": "Yoğunluk genellikle kademeli olarak artar. Değişimi görmek için aynı açıdan fotoğraf çekmeye devam et. Sonuçlar kişiden kişiye değişir."
+    },
+    "mature": {
+      "title": "Olgunlaşma evresi",
+      "body": "Sonuç önümüzdeki aylarda oturmaya devam eder. Sonuçlar kişiden kişiye değişir."
+    },
+    "final": {
+      "title": "Genel değerlendirme zamanı",
+      "body": "Birinci yıl civarında pek çok kişi tüm fotoğraf serisini karşılaştırır. Rehberini aç."
+    }
+  },
+  "photo": {
+    "title": "İlerleme fotoğrafı zamanı",
+    "body": "Aynı açı, aynı ışık, birkaç saniye. Değişimi görünür kılan seridir."
+  },
+  "shed": {
+    "title": "Kısa dökülme kaydı",
+    "body": "Bugün ne kadar döküldüğünü kaydet. Bu evrede dökülme tipiktir."
+  },
+  "session": {
+    "title": "Yarın PRP seansı var",
+    "body": "Seansın {{date}} tarihinde. Sonra karşılaştırabilmek için önce aynı açıdan bir fotoğraf çek."
+  }
+}

@@ -33,7 +33,7 @@ export function ProgressRing({ progress, size = 220, stroke = 10, children }: Pr
         <Defs>
           <LinearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
             <Stop offset="0" stopColor={colors.primary} />
-            <Stop offset="0.55" stopColor={colors.orange} />
+            <Stop offset="0.55" stopColor={colors.primaryPressed} />
             <Stop offset="1" stopColor={colors.accent} />
           </LinearGradient>
         </Defs>

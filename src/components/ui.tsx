@@ -52,7 +52,7 @@ export function IconButton({
 
 export function CloseButton({ onPress, testID }: { onPress: () => void; testID?: string }) {
   const { t } = useTranslation();
-  return <IconButton icon="close" onPress={onPress} label={t('a11y.close')} testID={testID ?? 'close-button'} />;
+  return <IconButton icon="close" onPress={onPress} label={t('ui.a11y.close')} testID={testID ?? 'close-button'} />;
 }
 
 export function SectionHeader({ title, action }: { title: string; action?: { label: string; onPress: () => void } }) {
@@ -206,9 +206,9 @@ export function DemoModeBanner() {
   if (!isMockBackend) return null;
   return (
     <View style={styles.demo} accessibilityRole="text">
-      <Ionicons name="flask-outline" size={16} color={colors.cyan} />
+      <Ionicons name="flask-outline" size={16} color={colors.sage} />
       <AppText variant="caption" color="textSecondary" style={styles.demoText}>
-        {t('home.demoMode')}
+        {t('ui.demoMode')}
       </AppText>
     </View>
   );
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     borderRadius: minTouch / 2,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255,255,255,0.08)',
+    backgroundColor: colors.surfaceHigh,
   },
   sectionHeader: {
     flexDirection: 'row',
@@ -274,9 +274,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
     borderRadius: radius.md,
-    backgroundColor: 'rgba(61,245,255,0.08)',
+    backgroundColor: colors.surface,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: 'rgba(61,245,255,0.25)',
+    borderColor: colors.sageDeep,
   },
   demoText: { flex: 1 },
 });

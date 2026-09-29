@@ -1,0 +1,23 @@
+{
+  "a11y": {
+    "close": "Kapat",
+    "selected": "Seçili",
+    "notSelected": "Seçili değil",
+    "step": "Adım {{current}} / {{total}}",
+    "balance_one": "{{count}} kredi mevcut",
+    "balance_other": "{{count}} kredi mevcut",
+    "wheel": "Dört farklı ödüllü hediye çarkı"
+  },
+  "demoMode": "Demo modu: gerçek satın alma ve gerçek sunucu yok",
+  "getCredits": "Kredi al",
+  "update": {
+    "title": "Güncelleme gerekli",
+    "body": "Kök'ün bu sürümü artık desteklenmiyor. Devam etmek için lütfen güncelle. Yolculuğun telefonunda kalır.",
+    "cta": "Güncelle"
+  },
+  "notFound": {
+    "title": "Bu sayfa burada değil",
+    "body": "Bağlantı eski olabilir. Hiçbir şey kaybolmadı.",
+    "cta": "Bugün'e git"
+  }
+}

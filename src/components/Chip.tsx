@@ -30,7 +30,7 @@ export function Chip({ label, selected, onPress, gradient, disabled, style, test
     >
       {selected ? (
         <LinearGradient
-          colors={gradient ?? [colors.primary, colors.orange]}
+          colors={gradient ?? [colors.primary, colors.primaryPressed]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           style={[StyleSheet.absoluteFill, styles.gradient]}

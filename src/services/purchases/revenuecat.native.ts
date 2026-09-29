@@ -12,11 +12,10 @@ import Purchases, {
   type PurchasesPackage,
 } from 'react-native-purchases';
 
-import { CREDIT_PACKS, type CreditPackId } from '@shared/pricing';
-import { ENTITLEMENT_PRO, OFFERINGS, type OfferingId, PACKAGES } from '@shared/products';
+import { creditsForPack } from '@shared/pricing';
+import { ENTITLEMENT_PRO, OFFERINGS, type OfferingId, PACKAGES, packForProductId, type PlanId } from '@shared/products';
 
 import { BackendError } from '../backend/types';
-import { isoPeriodToDays, periodToDays } from './format';
 import {
   type CreditPackOption,
   type EntitlementState,
@@ -34,7 +33,8 @@ export function hasRevenueCatKey(): boolean {
   return typeof API_KEY === 'string' && API_KEY.length > 0;
 }
 
-function toEntitlement(info: CustomerInfo): EntitlementState {
+/** Exported for tests. There is no trial in Kök: `isTrial` is always false. */
+export function toEntitlement(info: CustomerInfo): EntitlementState {
   const pro = info.entitlements.active[ENTITLEMENT_PRO];
   if (!pro) return { ...NO_ENTITLEMENT };
   return {
@@ -42,7 +42,7 @@ function toEntitlement(info: CustomerInfo): EntitlementState {
     productId: pro.productIdentifier,
     willRenew: pro.willRenew,
     expiresAt: pro.expirationDate ? Date.parse(pro.expirationDate) : null,
-    isTrial: pro.periodType === 'TRIAL',
+    isTrial: false,
   };
 }
 
@@ -59,25 +59,52 @@ function mapError(error: unknown): BackendError {
   }
 }
 
-function planFrom(offeringId: OfferingId, pkg: PurchasesPackage): PlanOption | null {
-  const isWeekly = pkg.identifier === PACKAGES.weekly || pkg.product.subscriptionPeriod === 'P1W';
-  const isAnnual = pkg.identifier === PACKAGES.annual || pkg.product.subscriptionPeriod === 'P1Y';
-  if (!isWeekly && !isAnnual) return null;
+const PLAN_PERIODS: Record<PlanId, { pkg: string; iso: string; period: PlanOption['period'] }> = {
+  weekly: { pkg: PACKAGES.weekly, iso: 'P1W', period: 'week' },
+  monthly: { pkg: PACKAGES.monthly, iso: 'P1M', period: 'month' },
+  annual: { pkg: PACKAGES.annual, iso: 'P1Y', period: 'year' },
+};
+
+const PLAN_ORDER: PlanId[] = ['annual', 'monthly', 'weekly'];
+
+/** Exported for tests: maps a RevenueCat package to a paywall plan (`$rc_weekly|monthly|annual`). */
+export function planFromPackage(offeringId: OfferingId, pkg: PurchasesPackage): PlanOption | null {
+  const id = (Object.keys(PLAN_PERIODS) as PlanId[]).find(
+    (candidate) =>
+      pkg.identifier === PLAN_PERIODS[candidate].pkg || pkg.product.subscriptionPeriod === PLAN_PERIODS[candidate].iso,
+  );
+  if (!id) return null;
+  // A configured free trial is never shown or sold (owner decision: no trial anywhere); only a
+  // paid introductory price (the gift annual) is surfaced.
   const intro = pkg.product.introPrice;
-  const isFreeTrial = intro !== null && intro.price === 0;
-  const trialDays = isFreeTrial ? periodToDays(intro.periodUnit, intro.periodNumberOfUnits) : null;
+  const paidIntro = intro !== null && intro.price > 0 ? intro : null;
   return {
-    id: isWeekly ? 'weekly' : 'annual',
+    id,
     offeringId,
     packageId: pkg.identifier,
     productId: pkg.product.identifier,
     priceString: pkg.product.priceString,
     price: pkg.product.price,
     currencyCode: pkg.product.currencyCode,
-    period: isWeekly ? 'week' : 'year',
-    trialDays: trialDays ?? (isFreeTrial ? isoPeriodToDays(intro.period) : null),
-    introPriceString: intro && !isFreeTrial ? intro.priceString : null,
-    introPrice: intro && !isFreeTrial ? intro.price : null,
+    period: PLAN_PERIODS[id].period,
+    introPriceString: paidIntro ? paidIntro.priceString : null,
+    introPrice: paidIntro ? paidIntro.price : null,
+  };
+}
+
+/** Exported for tests: maps a `credits` offering package to a pack (`credits_10|25|60`). */
+export function creditPackFromPackage(pkg: PurchasesPackage): CreditPackOption | null {
+  const packId = packForProductId(pkg.product.identifier) ?? packForProductId(pkg.identifier);
+  const credits = packId ? creditsForPack(packId) : null;
+  if (!packId || credits === null) return null;
+  return {
+    id: packId,
+    credits,
+    packageId: pkg.identifier,
+    productId: pkg.product.identifier,
+    priceString: pkg.product.priceString,
+    price: pkg.product.price,
+    currencyCode: pkg.product.currencyCode,
   };
 }
 
@@ -120,9 +147,9 @@ export function createRevenueCatAdapter(): PurchasesAdapter | null {
         if (!offering) return null;
         if (offeringId === OFFERINGS.default) offeringCache.set(OFFERINGS.default, offering);
         const plans = offering.availablePackages
-          .map((pkg) => planFrom(offeringId, pkg))
+          .map((pkg) => planFromPackage(offeringId, pkg))
           .filter((p): p is PlanOption => p !== null)
-          .sort((a, b) => (a.id === 'annual' ? -1 : 1) - (b.id === 'annual' ? -1 : 1));
+          .sort((a, b) => PLAN_ORDER.indexOf(a.id) - PLAN_ORDER.indexOf(b.id));
         const campaign = offeringId === OFFERINGS.default && offering.identifier !== OFFERINGS.default;
         return plans.length ? ({ offeringId, plans, campaign } satisfies PaywallOffer) : null;
       } catch (error) {
@@ -135,19 +162,7 @@ export function createRevenueCatAdapter(): PurchasesAdapter | null {
         const offering = offerings.all[OFFERINGS.credits];
         if (!offering) return [];
         return offering.availablePackages
-          .map((pkg): CreditPackOption | null => {
-            const pack = CREDIT_PACKS.find((p) => pkg.product.identifier.includes(p.id) || pkg.identifier === p.id);
-            if (!pack) return null;
-            return {
-              id: pack.id as CreditPackId,
-              credits: pack.credits,
-              packageId: pkg.identifier,
-              productId: pkg.product.identifier,
-              priceString: pkg.product.priceString,
-              price: pkg.product.price,
-              currencyCode: pkg.product.currencyCode,
-            };
-          })
+          .map(creditPackFromPackage)
           .filter((p): p is CreditPackOption => p !== null)
           .sort((a, b) => a.credits - b.credits);
       } catch (error) {
@@ -159,12 +174,10 @@ export function createRevenueCatAdapter(): PurchasesAdapter | null {
       if (!pkg) throw new BackendError('not_found');
       try {
         const result = await Purchases.purchasePackage(pkg);
-        const entitlement = toEntitlement(result.customerInfo);
         return {
           status: 'purchased',
           productId: result.productIdentifier,
           transactionId: result.transaction.transactionIdentifier,
-          isTrial: entitlement.isTrial,
         };
       } catch (error) {
         const code = typeof error === 'object' && error !== null ? (error as { code?: unknown }).code : undefined;

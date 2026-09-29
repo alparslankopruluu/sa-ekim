@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Saç ekimi yol arkadaşın",
+    "title": "Ameliyat sonrası haftana göre nelerin tipik olduğunu gör",
+    "subtitle": "Ameliyattan önce olası bir değişimi gör, sonra iyileşmenin her haftası için nelerin tipik olduğunu takip et.",
+    "cta": "Başlayalım",
+    "demoLabel": "Önce ve sonra kaydırıcısı örneği. Karşılaştırmak için sürükle.",
+    "demoBefore": "Önce",
+    "demoAfter": "Sonra",
+    "demoCaption": "Yalnızca örnek görsel. Kendi önizlemen daha sonra geliyor.",
+    "legalPrefix": "Devam ederek şunları kabul edersin:",
+    "terms": "Kullanım Koşulları",
+    "privacy": "Gizlilik Politikası"
+  },
+  "goal": {
+    "title": "Hangi bölge üzerinde çalışıyorsun?",
+    "subtitle": "Zaman çizelgeni ve fotoğraf açılarını buna göre hazırlayacağız.",
+    "hairline": {
+      "title": "Saç çizgisi",
+      "subtitle": "Ön bölge ve şakaklar"
+    },
+    "crown": {
+      "title": "Tepe",
+      "subtitle": "Başın arkası ve üstü"
+    },
+    "part": {
+      "title": "Ayrım çizgisi",
+      "subtitle": "Ayrım boyunca yoğunluk"
+    },
+    "brows": {
+      "title": "Kaşlar",
+      "subtitle": "Kaş ekimi"
+    },
+    "beard": {
+      "title": "Sakal",
+      "subtitle": "Sakal ve bıyık"
+    }
+  },
+  "stage": {
+    "title": "Sürecin neresindesin?",
+    "subtitle": "Sana önce ne göstereceğimizi bu belirliyor.",
+    "researching": {
+      "title": "Hâlâ araştırıyorum",
+      "subtitle": "Seçenekleri inceliyorum, henüz randevu yok"
+    },
+    "planned": {
+      "title": "Ameliyatım planlı",
+      "subtitle": "Yaklaşan bir tarihim var"
+    },
+    "done": {
+      "title": "Ameliyatı oldum",
+      "subtitle": "İyileşme sürecimi takip etmek istiyorum"
+    }
+  },
+  "date": {
+    "titlePlanned": "Ameliyatın ne zaman?",
+    "titleDone": "Ameliyatın ne zaman oldu?",
+    "subtitlePlanned": "0. güne kadar geri sayacağız ve ilk haftalarını hazırlayacağız.",
+    "subtitleDone": "Hangi evrede olduğunu ve bu hafta nelerin tipik olduğunu göstereceğiz.",
+    "wheelDay": "Gün",
+    "wheelMonth": "Ay",
+    "wheelYear": "Yıl",
+    "feedbackPast": "{{day}}. gün · {{week}}. hafta",
+    "feedbackToday": "Bugün 0. gün",
+    "feedbackFuture_one": "{{count}} gün sonra",
+    "feedbackFuture_other": "{{count}} gün sonra",
+    "errorMustBeFuture": "Bugünü ya da daha ileri bir tarihi seç.",
+    "errorMustBePast": "Bugünü ya da daha önceki bir tarihi seç.",
+    "errorTooFar": "Bu tarih takip etmek için çok uzak. Daha yakın bir tarih seç.",
+    "errorInvalid": "Böyle bir tarih yok.",
+    "skip": "Henüz bilmiyorum",
+    "skipNote": "Daha sonra yolculuğun bölümünden belirleyebilir veya değiştirebilirsin."
+  },
+  "photo": {
+    "title": "Önizleme için bir fotoğraf ekle",
+    "subtitleResearching": "Hiçbir karara bağlı kalmadan, bir değişimin nasıl görünebileceğini yapay zekâ önizlemesiyle gör.",
+    "subtitlePlanned": "Ameliyatının nasıl görünebileceğini yapay zekâ önizlemesiyle gör.",
+    "subtitleDone": "Sonucunun olgunlaştıkça nasıl görünebileceğini yapay zekâ önizlemesiyle gör.",
+    "guidanceTitle": "En iyi önizleme için",
+    "angle": {
+      "front": "Kameraya dik bak, telefon göz hizasında olsun.",
+      "top": "Telefonu başının üstünde tutup tepeye doğru aşağı bak.",
+      "crown": "Başının arkasını çek, mümkünse birinden yardım al."
+    },
+    "area": {
+      "hairline": "Saç çizgisi net görünsün diye saçlarını geriye tara.",
+      "crown": "Tepe açık olsun, saçların düz dursun.",
+      "part": "Saçlarını her zamanki gibi ayır.",
+      "brows": "Kaşların saç ve gözlükten uzak olsun.",
+      "beard": "Sakal bölgesi açık ve eşit ışıkta olsun."
+    },
+    "light": "Gün ışığı kullan; filtre ve şapka olmasın.",
+    "take": "Fotoğraf çek",
+    "library": "Kitaplıktan seç",
+    "change": "Başka bir fotoğraf seç",
+    "selected": "Seçtiğin fotoğraf",
+    "placeholder": "Henüz fotoğraf seçilmedi",
+    "privacy": "Fotoğrafın yalnızca önizleme oluşturmak için ve ancak sonraki ekranda onay verirsen gönderilir.",
+    "skip": "Önizlemeyi atla",
+    "skipNote": "Daha sonra Önizlemeler sekmesinden oluşturabilirsin.",
+    "permissionDenied": "Fotoğraflarına erişemedik. İzni Ayarlar'dan kontrol et."
+  },
+  "notify": {
+    "title": "Önemli anları kaçırma",
+    "subtitle": "İyileşme yavaş ilerler. Doğru anda gelen nazik bir hatırlatma senin yerine hatırlar.",
+    "bulletPhase": "Bir evre değiştiğinde haber vereceğiz",
+    "bulletPhoto": "Fotoğraf günü geldiğinde haber vereceğiz",
+    "bulletCare": "İlk iki hafta için günlük bakım hatırlatmaları",
+    "allow": "Hatırlatmaları aç",
+    "skip": "Şimdi değil",
+    "note": "Bakım hatırlatmaları ücretsizdir. Evre ve fotoğraf hatırlatmaları Pro ile gelir. Bunu istediğin zaman Ayarlar'dan değiştirebilirsin."
+  },
+  "crafting": {
+    "title": "Önizlemen hazırlanıyor",
+    "titleDone": "Önizlemen hazır",
+    "subtitle": "Bu genellikle bir dakikadan kısa sürer.",
+    "ringLabel": "Önizleme ilerlemesi, yüzde {{percent}}",
+    "lineUpload": "Fotoğrafın güvenli şekilde gönderiliyor",
+    "lineReserve": "Ücretsiz önizleme hakkın ayrılıyor",
+    "lineEdit": "{{area}} düzenleniyor",
+    "lineFinish": "Son dokunuşlar ekleniyor",
+    "stateDone": "tamamlandı",
+    "stateActive": "sürüyor",
+    "statePending": "bekliyor",
+    "area": {
+      "hairline": "saç çizgin",
+      "crown": "tepen",
+      "part": "ayrım çizgin",
+      "brows": "kaşların",
+      "beard": "sakalın"
+    },
+    "skip": "Şimdilik atla",
+    "skipNote": "Önizleme arka planda hazırlanmaya devam eder ve Önizlemeler sekmesinde seni bekler.",
+    "failedTitle": "Önizlemeni tamamlayamadık",
+    "failedOffline": "Çevrimdışı görünüyorsun. Hiçbir şey tahsil edilmedi. Bağlantını kontrol edip tekrar dene.",
+    "failedGeneric": "Bizim tarafta bir sorun oluştu. Hiçbir şey tahsil edilmedi. Tekrar deneyebilir veya onsuz devam edebilirsin.",
+    "failedBlocked": "Bu fotoğraf önizleme için kullanılamıyor. Hiçbir şey tahsil edilmedi. Devam edip daha sonra başka bir fotoğraf deneyebilirsin.",
+    "skipFailed": "Önizlemesiz devam et"
+  },
+  "reveal": {
+    "title": "Olabilecek görünümün önizlemesi",
+    "subtitle": "Karşılaştırmak için tutamacı sürükle. Bu, yapay zekâyla üretilmiş bir görseldir.",
+    "before": "Fotoğrafın",
+    "after": "YZ önizlemesi",
+    "disclaimer": "YZ önizlemesi — sonucunun tahmini değildir",
+    "watermark": "Ücretsiz önizlemelerde küçük bir filigran bulunur.",
+    "wipeLabel": "Fotoğrafının önce ve sonra karşılaştırması. Karşılaştırmak için sürükle.",
+    "loading": "Önizlemen hazırlanıyor",
+    "loadFailed": "Önizleme görseli yüklenemedi. Önizlemeler sekmesinde kayıtlı.",
+    "cta": "Planımı gör"
+  }
+}

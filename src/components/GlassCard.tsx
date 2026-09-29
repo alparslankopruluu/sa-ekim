@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     borderColor: colors.strokeStrong,
   },
   fallback: {
-    backgroundColor: 'rgba(34,30,58,0.72)',
+    backgroundColor: 'rgba(42,33,24,0.72)',
   },
   padding: { padding: spacing.lg },
 });

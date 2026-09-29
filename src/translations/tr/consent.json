@@ -1,0 +1,25 @@
+{
+  "title": "Önizlemeni oluşturmadan önce",
+  "body": "Önizleme yapay zekâ görsel modelleriyle üretilir; bu yüzden seçtiğin fotoğrafın telefonundan çıkması gerekir. Olanlar şöyle.",
+  "sent": {
+    "title": "Ne gönderiyoruz",
+    "body": "Yalnızca bu önizleme için seçtiğin fotoğrafı. Galerindeki veya yolculuğundaki başka hiçbir şeyi değil."
+  },
+  "who": {
+    "title": "Kim işliyor",
+    "body": "Görsel düzenlemeyi fal.ai yapar; bunun için OpenAI görsel modellerini kullanır."
+  },
+  "retention": {
+    "title": "Ne kadar saklanır",
+    "body": "Orijinal fotoğrafın ve önizleme sonucu, sunucularımızdan 30 gün içinde silinir. Daha erken silmek için Önizlemeler sekmesini kullanabilirsin."
+  },
+  "choice": {
+    "title": "Karar senin",
+    "body": "Hayır diyebilir ve yolculuğun tamamını kullanmaya devam edebilirsin. Zaman çizelgen için çektiğin fotoğraflar cihazında kalır."
+  },
+  "note": "YZ önizlemeleri bir olasılığı gösterir. Sonucunun tahmini değildir.",
+  "policy": "Gizlilik politikasını oku",
+  "accept": "Kabul et ve devam et",
+  "decline": "Şimdi değil",
+  "error": "Tercihini kaydedemedik. Bağlantını kontrol edip tekrar dene."
+}

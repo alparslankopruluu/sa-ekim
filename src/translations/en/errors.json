@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Please restart the app and try again.",
+  "consent_required": "Please review and accept the AI processing notice first.",
+  "invalid_input": "Something in that didn't look right. Please check it and try again.",
+  "content_blocked": "That photo or text can't be used. Please try another.",
+  "insufficient_credits": "You don't have enough credits for that.",
+  "pro_required": "That is a Pro feature.",
+  "rate_limited": "You're going fast. Wait a moment, then try again.",
+  "already_claimed": "You've already claimed that.",
+  "not_found": "We couldn't find that.",
+  "previews_disabled": "Previews are paused for a short while. Your journey is not affected. Please try again later.",
+  "provider_failed": "That didn't go through. Please try again in a moment.",
+  "timeout": "That took too long. Please try again.",
+  "offline": "You appear to be offline. Check your connection and try again.",
+  "unknown": "Something went wrong. Please try again."
+}

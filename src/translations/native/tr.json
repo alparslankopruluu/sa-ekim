@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök, ilerlemenizi her seferinde aynı açıdan fotoğraflayabilmeniz için kamerayı kullanır.",
+  "NSPhotoLibraryUsageDescription": "Kök, önizleme veya yolculuğunuz için bir fotoğraf seçebilmeniz amacıyla fotoğraflarınızı açar.",
+  "NSPhotoLibraryAddUsageDescription": "Kök, önizlemelerinizi ve karşılaştırma görsellerinizi fotoğraf arşivinize kaydeder.",
+  "NSMotionUsageDescription": "Kök, telefonun tutarlı bir fotoğraf için dik tutulduğunu kontrol etmek amacıyla hareket sensörünü okur."
+}

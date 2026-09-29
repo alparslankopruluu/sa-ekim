@@ -1,112 +1,114 @@
 /**
  * Custom animated paywall (docs/playbooks/paywall.md). Custom means we own the full
- * resilience contract: bounded offerings fetch, distinct failed/empty states with
- * retry, compliance block next to the CTA, restore + legal links, delayed close.
+ * resilience contract: bounded offerings fetch, distinct loading / failed / empty states
+ * with retry, the subscription disclosure next to the CTA, Restore / Terms / Privacy, and a
+ * close button that appears after a Remote Config delay on the onboarding source only.
+ * No free trial exists anywhere: the billed price is the most prominent number.
  */
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ScrollView, StyleSheet, Switch, useWindowDimensions, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown, FadeInUp, ZoomIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { OFFERINGS, type OfferingId } from '@shared/products';
-import { PLAN_ALLOWANCE } from '@shared/pricing';
+import { FREE_LIMITS, PLAN_ALLOWANCE } from '@shared/pricing';
+import { OFFERINGS, type PlanId } from '@shared/products';
 
 import { AppText } from '@/components/AppText';
 import { Button } from '@/components/Button';
 import { Confetti } from '@/components/Confetti';
 import { PressableScale } from '@/components/PressableScale';
 import { StageBackground } from '@/components/StageBackground';
-import { StickerPhoto } from '@/components/StickerPhoto';
 import { showToast } from '@/components/Toast';
 import { CloseButton, ErrorState, Skeleton } from '@/components/ui';
-import { SAMPLE_PHOTOS } from '@/features/demo/samples';
+import {
+  type BenefitId,
+  paywallContent,
+  parseOfferingId,
+  parsePaywallSource,
+} from '@/features/paywall/content';
 import { PlanCard } from '@/features/paywall/PlanCard';
+import { defaultPlanId, disclosureKind, orderPlans, yearlySavingsPercent } from '@/features/paywall/plans';
 import { useFeedback } from '@/hooks/useFeedback';
-import { type PaywallSource, track } from '@/services/analytics';
-import { BackendError } from '@/services/backend';
+import { errorCodeOf } from '@/lib/errors';
+import { startTrace, track } from '@/services/analytics';
 import { purchases } from '@/services/purchases';
-import { annualSavingsPercent } from '@/services/purchases/format';
 import type { PaywallOffer, PlanOption } from '@/services/purchases/types';
-import { remoteFlag, remoteNumber, wheelPlacement } from '@/services/remoteConfig';
+import { remoteNumber, wheelPlacement } from '@/services/remoteConfig';
 import { markGiftRedeemed } from '@/services/rewards';
 import { useAccount } from '@/stores/account';
 import { useSession } from '@/stores/session';
-import { colors, layout, radius, spacing } from '@/theme/tokens';
+import { colors, glows, gradients, layout, radius, spacing } from '@/theme/tokens';
 
 type LoadState = { kind: 'loading' } | { kind: 'ready'; offer: PaywallOffer } | { kind: 'failed'; empty: boolean };
 
-const FEATURES = [
-  { icon: 'videocam', key: 'paywall.features.hd' },
-  { icon: 'musical-notes', key: 'paywall.features.songs' },
-  { icon: 'color-palette', key: 'paywall.features.looks' },
-  { icon: 'ribbon', key: 'paywall.features.noWatermark' },
-] as const;
+const BENEFIT_ICONS: Record<BenefitId, keyof typeof Ionicons.glyphMap> = {
+  photos: 'images-outline',
+  compare: 'git-compare-outline',
+  band: 'analytics-outline',
+  guide: 'book-outline',
+  reminders: 'notifications-outline',
+  report: 'document-text-outline',
+  cohort: 'people-outline',
+  hd: 'sparkles-outline',
+  credits: 'flash-outline',
+};
 
-const SOURCES: readonly PaywallSource[] = [
-  'onboarding',
-  'locked_resolution',
-  'locked_look',
-  'personal_song',
-  'insufficient_credits',
-  'settings',
-  'home_banner',
-  'gift',
-  'result_upgrade',
-  'notification',
-];
+const MAX_CLOSE_DELAY_MS = 10000;
+const SUCCESS_EXIT_MS = 1200;
 
-function Hero() {
-  const { width } = useWindowDimensions();
-  // Compact so the plan cards stay above the pinned purchase footer on 6.1" phones.
-  const size = Math.min(88, width * 0.22);
-  return (
-    <View style={[styles.hero, { height: size * 1.4 }]}>
-      <Animated.View entering={ZoomIn.delay(80).springify()} style={[styles.heroSide, { left: width / 2 - size * 1.45 }]}>
-        <StickerPhoto uri={SAMPLE_PHOTOS.rex} palette="lime" size={size * 0.86} tilt={-12} />
-      </Animated.View>
-      <Animated.View entering={ZoomIn.delay(160).springify()} style={[styles.heroSide, { right: width / 2 - size * 1.45 }]}>
-        <StickerPhoto uri={SAMPLE_PHOTOS.mochi} palette="rose" size={size * 0.86} tilt={12} />
-      </Animated.View>
-      <Animated.View entering={ZoomIn.springify().damping(12)} style={styles.heroCenter}>
-        <StickerPhoto uri={SAMPLE_PHOTOS.nova} palette="magenta" size={size} tilt={0} />
-      </Animated.View>
-    </View>
-  );
+function exitPaywall(): void {
+  if (router.canGoBack()) router.back();
+  else router.replace('/(tabs)');
 }
 
 export default function PaywallScreen() {
   const { t } = useTranslation();
   const feedback = useFeedback();
   const params = useLocalSearchParams<{ source?: string; offering?: string }>();
-  const source: PaywallSource = SOURCES.includes(params.source as PaywallSource) ? (params.source as PaywallSource) : 'settings';
-  const offeringId: OfferingId =
-    params.offering === OFFERINGS.giftDiscount || params.offering === OFFERINGS.giftTrial
-      ? params.offering
-      : OFFERINGS.default;
+  const source = parsePaywallSource(params.source);
+  const offeringId = parseOfferingId(params.offering);
   const goal = useSession((s) => s.goal);
   const gift = useAccount((s) => s.gift);
+  const content = useMemo(() => paywallContent(source, goal), [source, goal]);
+
   const [state, setState] = useState<LoadState>({ kind: 'loading' });
-  const [selectedId, setSelectedId] = useState<'annual' | 'weekly'>('annual');
+  const [selectedId, setSelectedId] = useState<PlanId | null>(null);
   const [buying, setBuying] = useState(false);
+  const [restoring, setRestoring] = useState(false);
   const [canClose, setCanClose] = useState(false);
   const [celebrate, setCelebrate] = useState(0);
-  const shownAt = useRef(0);
+  const shownAt = useRef(Date.now());
+  const viewed = useRef(false);
+  const request = useRef(0);
+  const exitTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchOffer = useCallback(
-    (force = false) => {
+    (force: boolean) => {
+      const id = ++request.current;
+      const trace = startTrace('paywall_offerings_load');
       purchases
         .loadOffer(offeringId, { force })
         .then((offer) => {
+          if (id !== request.current) return;
+          trace.putAttribute('result', 'ok');
+          trace.stop();
           setState({ kind: 'ready', offer });
-          setSelectedId(offer.plans.some((p) => p.id === 'annual') ? 'annual' : (offer.plans[0]?.id ?? 'annual'));
-          track('paywall_view', { source, offering: offer.offeringId });
+          setSelectedId(defaultPlanId(offer.plans) as PlanId | null);
+          if (!viewed.current) {
+            viewed.current = true;
+            track('paywall_view', { source, offering: offer.offeringId });
+          }
         })
         .catch((error: unknown) => {
-          const code = error instanceof BackendError ? error.code : 'unknown';
+          if (id !== request.current) return;
+          const code = errorCodeOf(error);
           const empty = code === 'not_found';
+          trace.putAttribute('result', empty ? 'empty' : 'failed');
+          trace.stop();
           setState({ kind: 'failed', empty });
           track('paywall_state', { state: empty ? 'empty' : 'failed', reason: code });
         });
@@ -114,32 +116,48 @@ export default function PaywallScreen() {
     [offeringId, source],
   );
 
-  const reload = () => {
+  const reload = useCallback(() => {
     setState({ kind: 'loading' });
     fetchOffer(true);
-  };
+  }, [fetchOffer]);
 
   useEffect(() => {
-    shownAt.current = Date.now();
-    fetchOffer();
-    const delay = source === 'onboarding' ? remoteNumber('paywall_close_delay_ms') : 0;
+    fetchOffer(false);
+    return () => {
+      request.current += 1;
+    };
+  }, [fetchOffer]);
+
+  useEffect(() => {
+    // Soft-hard paywall: the close button is delayed on the onboarding source only.
+    const delay =
+      source === 'onboarding' ? Math.min(Math.max(remoteNumber('paywall_close_delay_ms'), 0), MAX_CLOSE_DELAY_MS) : 0;
+    if (delay === 0) {
+      setCanClose(true);
+      return;
+    }
     const timer = setTimeout(() => setCanClose(true), delay);
     return () => clearTimeout(timer);
-  }, [fetchOffer, source]);
+  }, [source]);
+
+  useEffect(
+    () => () => {
+      if (exitTimer.current) clearTimeout(exitTimer.current);
+    },
+    [],
+  );
 
   const offer = state.kind === 'ready' ? state.offer : null;
-  const selected: PlanOption | undefined = offer?.plans.find((p) => p.id === selectedId) ?? offer?.plans[0];
-  const annual = offer?.plans.find((p) => p.id === 'annual');
-  const weekly = offer?.plans.find((p) => p.id === 'weekly');
-  const savings = annual && weekly ? annualSavingsPercent(weekly.price, annual.introPrice ?? annual.price) : 0;
-  const trialToggleVisible = remoteFlag('ff_trial_toggle') && !!annual?.trialDays && !!weekly;
+  const plans = useMemo(() => (offer ? orderPlans(offer.plans) : []), [offer]);
+  const selected: PlanOption | undefined = plans.find((p) => p.id === selectedId) ?? plans[0];
+  const savings = useMemo(() => yearlySavingsPercent(plans), [plans]);
+  const isGiftOffer = offeringId === OFFERINGS.giftDiscount;
 
   const close = useCallback(() => {
     track('paywall_dismiss', { source, viewed_s: Math.round((Date.now() - shownAt.current) / 1000) });
     const showWheel = source === 'onboarding' && wheelPlacement() === 'onboarding_exit' && !gift;
     if (showWheel) router.replace({ pathname: '/gift', params: { source: 'onboarding_exit' } });
-    else if (router.canGoBack()) router.back();
-    else router.replace('/(tabs)');
+    else exitPaywall();
   }, [gift, source]);
 
   const buy = async () => {
@@ -150,9 +168,9 @@ export default function PaywallScreen() {
       if (outcome.status === 'purchased') {
         feedback.success();
         setCelebrate((c) => c + 1);
-        if (offeringId !== OFFERINGS.default) void markGiftRedeemed();
+        if (isGiftOffer) void markGiftRedeemed();
         showToast(t('paywall.success'), 'success');
-        setTimeout(() => (router.canGoBack() ? router.back() : router.replace('/(tabs)')), 1200);
+        exitTimer.current = setTimeout(exitPaywall, SUCCESS_EXIT_MS);
       } else if (outcome.status === 'pending') {
         showToast(t('paywall.pending'), 'info');
       }
@@ -165,40 +183,58 @@ export default function PaywallScreen() {
   };
 
   const restore = async () => {
+    if (restoring) return;
+    setRestoring(true);
     try {
       const restored = await purchases.restore();
       if (restored.isPro) {
+        feedback.success();
         showToast(t('paywall.restoreSuccess'), 'success');
-        setTimeout(close, 900);
+        exitTimer.current = setTimeout(exitPaywall, 900);
       } else {
         showToast(t('paywall.restoreNone'), 'info');
       }
     } catch {
       showToast(t('paywall.failedBody'), 'error');
+    } finally {
+      setRestoring(false);
     }
   };
 
-  const terms = useMemo(() => {
+  const disclosure = useMemo(() => {
     if (!selected) return '';
-    if (selected.introPriceString) {
-      return t('paywall.terms.intro', { intro: selected.introPriceString, price: selected.priceString });
+    const kind = disclosureKind(selected);
+    if (kind === 'intro') {
+      return t('paywall.disclosure.intro', { intro: selected.introPriceString ?? '', price: selected.priceString });
     }
-    if (selected.trialDays) return t('paywall.terms.trial', { days: selected.trialDays, price: selected.priceString });
-    return selected.period === 'year'
-      ? t('paywall.terms.annual', { price: selected.priceString })
-      : t('paywall.terms.weekly', { price: selected.priceString });
+    return t(`paywall.disclosure.${kind}`, { price: selected.priceString });
   }, [selected, t]);
 
-  const allowance = selected ? PLAN_ALLOWANCE[selected.id].credits : 0;
+  const allowance = useMemo(() => {
+    if (!selected) return '';
+    if (selected.id === 'annual') {
+      return t('paywall.planCredits.annual', {
+        initial: PLAN_ALLOWANCE.annual.initial,
+        count: PLAN_ALLOWANCE.annual.credits,
+      });
+    }
+    return t(`paywall.planCredits.${selected.id}`, { count: PLAN_ALLOWANCE[selected.id].credits });
+  }, [selected, t]);
+
+  const headline =
+    content.headline.kind === 'goal'
+      ? t(`paywall.title.${content.headline.goal ?? 'default'}`)
+      : t(`paywall.sources.${content.headline.source}.title`);
+  const subtitle = t(`paywall.sources.${source}.subtitle`, { count: FREE_LIMITS.journeyPhotos });
 
   return (
     <View style={styles.root}>
-      <StageBackground />
+      <StageBackground accents={[colors.primary, colors.accent]} animated={false} />
       <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
         <View style={styles.topBar}>
           {purchases.kind === 'mock' ? (
             <View style={styles.mockBadge}>
-              <AppText variant="micro" color="cyan">
+              <AppText variant="micro" color="sage">
                 {t('paywall.mockBadge')}
               </AppText>
             </View>
@@ -215,33 +251,38 @@ export default function PaywallScreen() {
         </View>
 
         <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-          <Hero />
-          <Animated.View entering={FadeInUp.delay(120).duration(450)} style={styles.headline}>
-            {offeringId !== OFFERINGS.default ? (
-              <View style={styles.giftBanner}>
+          <View style={styles.hero}>
+            <Animated.View entering={ZoomIn.springify().damping(12)} style={styles.heroBadge}>
+              <LinearGradient
+                colors={gradients.cta}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={StyleSheet.absoluteFill}
+              />
+              <Ionicons name={content.icon} size={32} color={colors.textOnAccent} />
+            </Animated.View>
+          </View>
+
+          <Animated.View entering={FadeInUp.delay(100).duration(420)} style={styles.headline}>
+            {isGiftOffer ? (
+              <View style={styles.giftBanner} accessibilityRole="text">
                 <Ionicons name="gift" size={14} color={colors.textOnAccent} />
                 <AppText variant="micro" color="textOnAccent">
                   {t('paywall.giftBanner')}
                 </AppText>
               </View>
-            ) : state.kind === 'ready' && state.offer.campaign ? (
-              <View style={styles.giftBanner}>
-                <Ionicons name="pricetag" size={14} color={colors.textOnAccent} />
-                <AppText variant="micro" color="textOnAccent">
-                  {t('paywall.campaignBanner')}
-                </AppText>
-              </View>
             ) : null}
             <AppText variant="title1" align="center" accessibilityRole="header">
-              {t(`paywall.title.${goal ?? 'default'}`)}
+              {headline}
             </AppText>
             <AppText variant="body" color="textSecondary" align="center">
-              {t('paywall.subtitle')}
+              {subtitle}
             </AppText>
           </Animated.View>
 
           {state.kind === 'loading' ? (
-            <View style={styles.plans} accessibilityLabel={t('paywall.loading')}>
+            <View style={styles.plans} accessibilityLabel={t('paywall.loading')} accessibilityRole="progressbar">
+              <Skeleton style={styles.planSkeleton} />
               <Skeleton style={styles.planSkeleton} />
               <Skeleton style={styles.planSkeleton} />
             </View>
@@ -251,47 +292,31 @@ export default function PaywallScreen() {
               onRetry={reload}
             />
           ) : (
-            <Animated.View entering={FadeInDown.delay(120)} style={styles.plans}>
-              {state.offer.plans.map((plan) => (
+            <Animated.View entering={FadeInDown.delay(120)} style={styles.plans} accessibilityRole="radiogroup">
+              {plans.map((plan) => (
                 <PlanCard
                   key={plan.productId}
                   plan={plan}
                   selected={selected?.id === plan.id}
-                  savingsPercent={plan.id === 'annual' ? savings : 0}
+                  savingsPercent={plan.period === 'year' ? savings : 0}
                   onPress={() => {
                     setSelectedId(plan.id);
                     track('paywall_plan_select', { package: plan.id });
                   }}
                 />
               ))}
-              {trialToggleVisible && annual?.trialDays ? (
-                <View style={styles.trialRow}>
-                  <View style={styles.trialText}>
-                    <AppText variant="bodyStrong">{t('paywall.trialToggle', { days: annual.trialDays })}</AppText>
-                    <AppText variant="caption" color="textSecondary">
-                      {t('paywall.trialToggleHint')}
-                    </AppText>
-                  </View>
-                  <Switch
-                    value={selectedId === 'annual'}
-                    onValueChange={(on) => setSelectedId(on ? 'annual' : 'weekly')}
-                    trackColor={{ true: colors.primary, false: colors.surfacePressed }}
-                    accessibilityLabel={t('paywall.trialToggle', { days: annual.trialDays })}
-                    testID="trial-toggle"
-                    style={styles.switch}
-                  />
-                </View>
-              ) : null}
             </Animated.View>
           )}
 
-          <View style={styles.features}>
-            {FEATURES.map((feature, index) => (
-              <Animated.View key={feature.key} entering={FadeInDown.delay(220 + index * 80)} style={styles.feature}>
-                <View style={styles.featureIcon}>
-                  <Ionicons name={feature.icon} size={16} color={colors.text} />
+          <View style={styles.benefits}>
+            {content.benefits.map((benefit, index) => (
+              <Animated.View key={benefit} entering={FadeInDown.delay(200 + index * 70)} style={styles.benefit}>
+                <View style={styles.benefitIcon}>
+                  <Ionicons name={BENEFIT_ICONS[benefit]} size={16} color={colors.sage} />
                 </View>
-                <AppText variant="bodyStrong">{t(feature.key)}</AppText>
+                <AppText variant="callout" style={styles.benefitText}>
+                  {t(`paywall.benefits.${benefit}`)}
+                </AppText>
               </Animated.View>
             ))}
           </View>
@@ -300,30 +325,31 @@ export default function PaywallScreen() {
         <View style={styles.footer}>
           {selected ? (
             <AppText variant="caption" color="accent" align="center">
-              {t(`paywall.planCredits.${selected.id}`, { count: allowance })}
+              {allowance}
             </AppText>
           ) : null}
           <Button
-            label={
-              buying
-                ? t('paywall.cta.processing')
-                : selected?.trialDays
-                  ? t('paywall.cta.trial')
-                  : t('paywall.cta.subscribe')
-            }
+            label={buying ? t('paywall.cta.processing') : t('paywall.cta.subscribe')}
             onPress={() => void buy()}
             loading={buying}
             disabled={!selected}
             shine
+            accessibilityHint={disclosure || undefined}
             testID="paywall-cta"
           />
           {selected ? (
-            <AppText variant="caption" color="textTertiary" align="center" testID="paywall-terms">
-              {terms}
+            <AppText variant="caption" color="textTertiary" align="center" testID="paywall-disclosure">
+              {disclosure}
             </AppText>
           ) : null}
           <View style={styles.links}>
-            <PressableScale onPress={() => void restore()} style={styles.link} accessibilityLabel={t('paywall.restore')}>
+            <PressableScale
+              onPress={() => void restore()}
+              disabled={restoring}
+              style={styles.link}
+              accessibilityLabel={t('paywall.restore')}
+              testID="paywall-restore"
+            >
               <AppText variant="caption" color="textSecondary">
                 {t('paywall.restore')}
               </AppText>
@@ -349,6 +375,17 @@ export default function PaywallScreen() {
               </AppText>
             </PressableScale>
           </View>
+          <PressableScale
+            onPress={() => router.push({ pathname: '/credits', params: { source: 'paywall' } })}
+            style={styles.creditsLink}
+            accessibilityRole="link"
+            accessibilityLabel={t('paywall.creditsLink')}
+            testID="paywall-credits-link"
+          >
+            <AppText variant="caption" color="accent" align="center">
+              {t('paywall.creditsLink')}
+            </AppText>
+          </PressableScale>
         </View>
       </SafeAreaView>
       <Confetti fireKey={celebrate} />
@@ -357,8 +394,6 @@ export default function PaywallScreen() {
 }
 
 const styles = StyleSheet.create({
-  // RN's Switch defaults to alignSelf: 'flex-start'; keep it centered in its row.
-  switch: { alignSelf: 'center' },
   root: { flex: 1, backgroundColor: colors.bg },
   safe: { flex: 1 },
   topBar: {
@@ -374,7 +409,7 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     borderRadius: radius.pill,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: colors.cyan,
+    borderColor: colors.sage,
   },
   scroll: {
     paddingHorizontal: layout.screenPadding,
@@ -385,8 +420,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   hero: { alignItems: 'center', justifyContent: 'center' },
-  heroSide: { position: 'absolute', top: 14 },
-  heroCenter: { zIndex: 2 },
+  heroBadge: {
+    width: 68,
+    height: 68,
+    borderRadius: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    boxShadow: glows.primary,
+  },
   headline: { gap: spacing.sm, alignItems: 'center' },
   giftBanner: {
     flexDirection: 'row',
@@ -397,28 +439,19 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     backgroundColor: colors.accent,
   },
-  features: { gap: spacing.md, paddingHorizontal: spacing.sm },
-  feature: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
-  featureIcon: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: colors.primary,
-  },
   plans: { gap: spacing.lg, paddingTop: spacing.sm },
   planSkeleton: { height: 72, borderRadius: radius.lg },
-  trialRow: {
-    flexDirection: 'row',
+  benefits: { gap: spacing.md, paddingHorizontal: spacing.xs },
+  benefit: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
+  benefitIcon: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
     alignItems: 'center',
-    gap: spacing.md,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    borderRadius: radius.lg,
-    backgroundColor: colors.surface,
+    justifyContent: 'center',
+    backgroundColor: colors.surfaceHigh,
   },
-  trialText: { flex: 1, gap: 2 },
+  benefitText: { flex: 1 },
   footer: {
     paddingHorizontal: layout.screenPadding,
     paddingTop: spacing.sm,
@@ -429,4 +462,5 @@ const styles = StyleSheet.create({
   },
   links: { flexDirection: 'row', justifyContent: 'center', gap: spacing.lg },
   link: { minHeight: 44, justifyContent: 'center', paddingHorizontal: spacing.xs },
+  creditsLink: { minHeight: 36, justifyContent: 'center', alignItems: 'center' },
 });

@@ -121,7 +121,6 @@ export const purchases = {
     try {
       const outcome = await getAdapter().purchase(ref);
       if (outcome.status === 'purchased') {
-        if (outcome.isTrial) track('trial_start', { package: plan.id });
         track('purchase', { package: plan.id, kind: 'subscription', is_renewal: false });
         publish(await getAdapter().getEntitlement());
       } else if (outcome.status === 'cancelled') {

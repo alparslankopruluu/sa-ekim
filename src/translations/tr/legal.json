@@ -1,0 +1,146 @@
+{
+  "updated": "Son güncelleme: {{date}}",
+  "openWeb": "Web sürümünü aç",
+  "emailSupport": "Destek e-postası gönder",
+  "publisher": "Kök, Techtactoe App Studio tarafından yayımlanır.",
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "sections": [
+      {
+        "heading": "Kısaca",
+        "body": "Yolculuk fotoğrafların telefonunda kalır. Kök, yalnızca yapay zekâ önizlemesi istediğinde bir fotoğraf yükler; bu fotoğraf ve ortaya çıkan önizleme görseli sunucularımızdan 30 gün içinde silinir. Kök reklam göstermez ve verilerini satmaz. Kök tıbbi tavsiye vermez."
+      },
+      {
+        "heading": "Cihazında kalanlar",
+        "body": "Operasyon tarihin, ilerleme fotoğrafların, dökülme kaydın ve klinik adın yalnızca cihazında saklanır. Kök, yolculuk fotoğraflarını asla yüklemez. Açıksa telefonunun kendi yedeğine (iCloud veya Android Otomatik Yedekleme) dahil olurlar."
+      },
+      {
+        "heading": "Neleri topluyoruz",
+        "body": "Anonim bir hesap kimliği (Firebase Authentication); bu yüzden ad veya e-posta vermen gerekmez. Kredi bakiyen ve satın alma durumun. Dil ve bildirim tercihlerin. Kullanım olayları, çökme raporları ve performans verileri (Firebase Analytics, Crashlytics ve Performance Monitoring). Yalnızca bildirimlere izin verirsen bir anlık bildirim jetonu. Önizleme oluşturursan: seçtiğin tek fotoğraf, seçtiğin stil ve kalite ile ortaya çıkan önizleme. İsteğe bağlı aynı hafta grubuna katılırsan: operasyon tarihin, hedefin ve yolculuk türün; başka hiçbir şey değil. Adını, kişilerini veya kesin konumunu toplamayız. Kök seni diğer uygulama veya sitelerde izlemez ve reklam kimliğini kullanmaz."
+      },
+      {
+        "heading": "Yapay zekâ önizlemeleri",
+        "body": "Bir önizleme oluşturduğunda seçtiğin fotoğraf sunucularımıza yüklenir ve bizim adımıza OpenAI görsel modellerini çalıştıran fal.ai tarafından işlenir. Kök, ilk yüklemeden önce onayını ister ve bu bildirimde bu sağlayıcılar adıyla belirtilir. Fotoğraf yalnızca o önizlemeyi üretmek için kullanılır. Fotoğraflarını yapay zekâ modellerini eğitmek için kullanmayız. Yüklenen fotoğraf ve önizleme görseli sunucularımızdan 30 gün içinde silinir; saklamak istersen önizlemeyi fotoğraf kitaplığına kaydet. Her önizleme bir yapay zekâ illüstrasyonudur; sonucunun tahmini değildir."
+      },
+      {
+        "heading": "Hizmet sağlayıcılar",
+        "body": "Verileri yalnızca bizim için işleyen şirketlerle paylaşırız: Google Firebase (hesap, veritabanı, dosya depolama, fonksiyonlar, analitik, çökme raporlama, performans, uzaktan yapılandırma, uygulama bütünlüğü kontrolleri ve anlık bildirimler); fal.ai ve çalıştırdığı OpenAI görsel modelleri (yapay zekâ önizlemeleri); RevenueCat (abonelikler ve satın almalar); Apple ve Google (ödemeler ve uygulama dağıtımı). Kök reklam içermez ve reklamverenlerle veri paylaşmaz."
+      },
+      {
+        "heading": "Verileri ne kadar saklarız",
+        "body": "Yolculuk verileri: sen silene kadar cihazında. Yüklenen önizleme fotoğrafları ve önizleme görselleri: sunucularımızda en fazla 30 gün. Kullanım ve çökme verileri: en fazla 14 ay. Satın alma kayıtları: vergi ve muhasebe mevzuatının gerektirdiği süre kadar. Bir önizleme hakkında gönderdiğin bildirimler: inceleyip işlem yapmak için gereken süre kadar."
+      },
+      {
+        "heading": "Seçimlerin ve silme",
+        "body": "Ayarlar, Veri ve gizlilik altındaki Tüm verilerimi sil, yolculuk fotoğraflarını, dökülme kaydını ve önizlemeleri bu cihazdan siler. Ayarlar, Hesap altındaki Hesabı sil ise hesabını, kredilerini, önizlemeleri ve yüklenen tüm fotoğrafları sunucularımızdan hemen siler ve cihazdaki yolculuğunu temizler. Bildirimleri de oradan kapatabilirsin. Önizleme oluşturmadıkça hiçbir şey yüklenmez. Hesabı silmek aboneliği iptal etmez: aboneliği App Store veya Google Play hesap ayarlarından iptal et. Yaşadığın yere göre (örneğin GDPR, Türkiye'de KVKK veya Kaliforniya'da CCPA kapsamında) verilerine erişme, düzeltme, silme veya dışa aktarma ve onayını geri çekme haklarına sahip olabilirsin. Talep için techtactoeappstudio@gmail.com adresine e-posta gönder."
+      },
+      {
+        "heading": "Çocuklar",
+        "body": "Kök yetişkinler için tasarlanmıştır. 18 yaşın altındaki kişilerden bilerek bilgi toplamayız."
+      },
+      {
+        "heading": "Tıbbi tavsiye değildir",
+        "body": "Kök bir eğitim ve takip aracıdır. Hiçbir şeyi teşhis etmez, tedavi etmez veya tahmin etmez; zaman çizelgesi yalnızca tipik aralıkları gösterir. Herhangi bir endişen olursa kliniğinle veya bir doktorla iletişime geç."
+      },
+      {
+        "heading": "Değişiklikler ve iletişim",
+        "body": "Bu politika değişirse yukarıdaki tarih de değişir. Sorular ve talepler: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "sections": [
+      {
+        "heading": "Kök'ü kullanmak",
+        "body": "Kök, saç ekimi, PRP veya benzeri saç yenileme sürecini kendi fotoğrafların ve tipik bir zaman çizelgesiyle takip etmene yardım eder ve yapay zekâ önizlemeleri oluşturmanı sağlar. Yetişkin olmalı ve bu sözleşmeyi yapabilecek durumda olmalısın. Kök'ü kullanarak bu koşulları kabul edersin."
+      },
+      {
+        "heading": "Tıbbi tavsiye değildir",
+        "body": "Kök bir tıbbi cihaz değildir; tıbbi tavsiye, teşhis veya tedavi sunmaz. Zaman çizelgeleri ve rehberler tipik olanı anlatır, sonucun hakkında söz değildir. Ateş, yayılan kızarıklık, irin, şiddetli ağrı veya yoğun kanama fark edersen kliniğinle veya bir doktorla iletişime geç."
+      },
+      {
+        "heading": "Yapay zekâ önizlemeleri",
+        "body": "Önizleme, fotoğrafından yapılan bir yapay zekâ illüstrasyonudur. Sonucun için bir tahmin, garanti veya plan değildir ve greft sayısı göstermez. Ücretsiz tanıtım önizlemesi filigran taşır. Önizlemeler 30 gün saklanır; korumak istersen fotoğraf kitaplığına kaydet. Önizlemeleri sorumlu kullan ve birini gerçek fotoğraf gibi sunma."
+      },
+      {
+        "heading": "Fotoğraflar ve içerik",
+        "body": "Yalnızca kendi fotoğraflarını veya açıkça izin veren birinin fotoğraflarını kullan. Reşit olmayanları, kamuya mal olmuş kişileri veya cinsel, nefret içeren, taciz edici, aldatıcı ya da yasa dışı hiçbir şeyi yükleme. Bu kuralları ihlal eden içeriği engelleyebilir ve erişimi askıya alabiliriz. Herhangi bir önizlemeyi kendi ekranından bildirebilirsin."
+      },
+      {
+        "heading": "Abonelikler ve krediler",
+        "body": "Kök Pro, mağazanın gösterdiği fiyatla haftalık, aylık veya yıllık abonelik olarak sunulur. Ücretsiz deneme yoktur. Abonelikler, App Store veya Google Play hesap ayarlarından iptal edene kadar otomatik yenilenir; iadeler Apple veya Google kurallarına tabidir. Kredi paketleri tek seferlik satın almalardır. Standart önizleme 1, HD önizleme 3 kredi harcar. Bir önizleme başarısız olursa kredileri otomatik olarak iade edilir. Kredilerin nakit değeri yoktur ve devredilemez. Satın alımları paywall'dan veya Ayarlar'dan geri yükleyebilirsin."
+      },
+      {
+        "heading": "İçeriğin",
+        "body": "Fotoğraflarının ve önizlemelerinin sahibi sen kalırsın. Yüklediklerini yalnızca istediğin hizmeti sunmak için işlememiz üzere bize sınırlı bir izin verirsin."
+      },
+      {
+        "heading": "Kullanılabilirlik ve sorumluluk",
+        "body": "Kök, olduğu gibi ve mevcut haliyle sunulur. Yasaların izin verdiği ölçüde dolaylı veya sonuç olarak ortaya çıkan zararlardan sorumlu değiliz; burada yazanlar, tüketici mevzuatından doğan ve vazgeçilemeyen haklarını sınırlamaz."
+      },
+      {
+        "heading": "Kullanımı sonlandırmak",
+        "body": "Kök'ü kullanmayı bırakabilir ve hesabını istediğin zaman Ayarlar'dan silebilirsin. Bu koşulları değiştirebiliriz; değiştirdiğimizde tarihi güncelleriz."
+      },
+      {
+        "heading": "İletişim",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Yapay zekâ önizlemeleri nasıl çalışır",
+    "sections": [
+      {
+        "heading": "Önizleme nedir",
+        "body": "Önizleme, seçtiğin bir stilin fotoğrafında nasıl görünebileceğine dair bir yapay zekâ illüstrasyonudur. Sonucunun tahmini değildir ve bunu belirten bir etiket her önizlemede görünür kalır."
+      },
+      {
+        "heading": "Ne gönderilir",
+        "body": "Yalnızca o önizleme için seçtiğin tek fotoğraf ile seçtiğin stil ve kalite. Yolculuk fotoğrafların asla yüklenmez. İlk yüklemeden önce Kök onayını ister."
+      },
+      {
+        "heading": "Kim işler",
+        "body": "fal.ai, bizim adımıza OpenAI görsel modellerini çalıştırır. Bunları yalnızca önizlemeni yapmak için kullanırız ve fotoğraflarını yapay zekâ modellerini eğitmek için kullanmayız. Yüklenen fotoğraf ve önizleme görseli sunucularımızdan 30 gün içinde silinir."
+      },
+      {
+        "heading": "Sınırlar",
+        "body": "Sonuçlar kusurlu veya gerçekçi olmayabilir. Ücretsiz tanıtım önizlemesi filigran taşır. Kök hiçbir zaman greft sayısı, evre veya sonuç vaadi göstermez."
+      },
+      {
+        "heading": "Bildirme ve silme",
+        "body": "Bir önizlemeyi kendi ekranından bildirebilirsin; 48 saat içinde inceleriz. Önizlemeyi istediğin zaman silebilirsin; hesabını silmek elimizdeki her şeyi kaldırır."
+      }
+    ]
+  },
+  "support": {
+    "title": "Yardım ve destek",
+    "sections": [
+      {
+        "heading": "Bize ulaş",
+        "body": "techtactoeappstudio@gmail.com adresine e-posta gönder ve uygulama sürümünü (Ayarlar, Hakkında) ekle. Genellikle iki iş günü içinde yanıt veririz."
+      },
+      {
+        "heading": "Önizleme başarısız oldu. Kredi kaybettim mi?",
+        "body": "Hayır. Başarısız veya iptal edilen önizlemenin kredileri otomatik olarak iade edilir."
+      },
+      {
+        "heading": "Aboneliğimi nasıl iptal ederim?",
+        "body": "iPhone'da: Ayarlar, adın, Abonelikler, Kök. Android'de: Google Play, Ödemeler ve abonelikler, Abonelikler. Kök'te Ayarlar, Aboneliği yönet'i de açabilirsin."
+      },
+      {
+        "heading": "Satın alımlarımı nasıl geri yüklerim?",
+        "body": "Paywall'ı veya Ayarlar'ı aç ve Geri yükle'ye dokun."
+      },
+      {
+        "heading": "Verilerimi nasıl silerim?",
+        "body": "Ayarlar, Veri ve gizlilik, Tüm verilerimi sil bu cihazdaki yolculuğunu ve önizlemeleri temizler. Ayarlar, Hesap, Hesabı sil hesabını ve elimizdeki her şeyi siler. Silme talebini bize e-postayla da iletebilirsin."
+      },
+      {
+        "heading": "Bu tıbbi tavsiye mi?",
+        "body": "Hayır. Kök bir eğitim ve takip aracıdır. Endişelendiren bir durum olursa kliniğinle veya bir doktorla iletişime geç."
+      }
+    ]
+  }
+}

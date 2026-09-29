@@ -20,6 +20,6 @@ export const recordConsent = onCall(
       tx.set(ref, { version, acceptedAt: Date.now() });
       return version;
     });
-    return { recorded: true, version: stored };
+    return { ok: true as const, version: stored };
   }),
 );

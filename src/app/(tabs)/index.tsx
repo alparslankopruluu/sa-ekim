@@ -1,185 +1,147 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { rankSongs, rankTemplates } from '@shared/catalog';
-
 import { AppText } from '@/components/AppText';
-import { Button } from '@/components/Button';
-import { CreditPill } from '@/components/CreditPill';
-import { EqualizerBars } from '@/components/EqualizerBars';
 import { PressableScale } from '@/components/PressableScale';
-import { SongRow } from '@/components/SongRow';
 import { StageBackground } from '@/components/StageBackground';
-import { StickerPhoto } from '@/components/StickerPhoto';
-import { Badge, DemoModeBanner, SectionHeader } from '@/components/ui';
-import { SAMPLE_PHOTOS } from '@/features/demo/samples';
+import { Skeleton } from '@/components/ui';
+import { BandCard } from '@/features/journey/BandCard';
+import { DayHero } from '@/features/journey/DayHero';
+import { NextTaskCard } from '@/features/journey/NextTaskCard';
+import { PhaseCard } from '@/features/journey/PhaseCard';
+import { PreOpCard, SetDateCard } from '@/features/journey/PreJourneyCard';
+import { PreviewEntryCard } from '@/features/journey/PreviewEntryCard';
+import { Reveal } from '@/features/journey/Reveal';
+import { ShedPeek } from '@/features/journey/ShedPeek';
+import { useJourneyView } from '@/features/journey/useJourneyView';
+import { usePhaseViewTracking } from '@/features/journey/usePhaseViewTracking';
+import CohortCard from '@/features/cohort/CohortCard';
 import { GiftHomeCard } from '@/features/gift/GiftHomeCard';
-import { TemplateCard } from '@/features/home/TemplateCard';
-import { useSongPreview } from '@/hooks/useSongPreview';
-import { type CreateEntry, track, trackScreen } from '@/services/analytics';
-import { useAccount, useRecentRenders } from '@/stores/account';
-import { useDraft } from '@/stores/draft';
-import { useSession } from '@/stores/session';
-import { colors, glows, gradients, layout, radius, spacing } from '@/theme/tokens';
+import { currentLocaleTag } from '@/lib/i18n';
+import { formatIsoDate, partOfDay } from '@/lib/phaseView';
+import { trackScreen } from '@/services/analytics';
+import { colors, layout, minTouch, radius, spacing } from '@/theme/tokens';
 
-function startCreate(entry: CreateEntry, options: { templateId?: string; songId?: string } = {}) {
-  useDraft.getState().start(entry, options);
-  track('create_start', { entry, template: options.templateId ?? 'none' });
-  router.push('/create');
-}
+const SHED_PEEK_LAST_DAY = 70;
 
-function Hero() {
+export default function TodayScreen() {
   const { t } = useTranslation();
-  const { width } = useWindowDimensions();
-  const cardSize = Math.min(118, width * 0.28);
-  return (
-    <Animated.View entering={FadeInUp.springify().damping(18)}>
-      <PressableScale
-        onPress={() => startCreate('home_hero')}
-        pressedScale={0.98}
-        accessibilityLabel={`${t('home.heroTitle')}. ${t('home.heroSubtitle')}`}
-        style={styles.hero}
-        testID="home-hero"
-      >
-        <LinearGradient colors={gradients.hero} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={StyleSheet.absoluteFill} />
-        <View style={styles.heroText}>
-          <AppText variant="title1" style={styles.heroTitle}>
-            {t('home.heroTitle')}
-          </AppText>
-          <AppText variant="callout" style={styles.heroSubtitle}>
-            {t('home.heroSubtitle')}
-          </AppText>
-          <View style={styles.heroCta}>
-            <Ionicons name="sparkles" size={16} color={colors.primary} />
-            <AppText variant="headline" color="primary">
-              {t('home.heroCta')}
-            </AppText>
-          </View>
-        </View>
-        <View style={[styles.heroArt, { width: cardSize + 24 }]}>
-          <StickerPhoto uri={SAMPLE_PHOTOS.rex} palette="lime" size={cardSize} tilt={8} style={styles.heroBack} />
-          <StickerPhoto uri={SAMPLE_PHOTOS.nova} palette="magenta" size={cardSize} tilt={-6} />
-          <View style={styles.heroEq}>
-            <EqualizerBars bars={5} height={18} color="text" />
-          </View>
-        </View>
-      </PressableScale>
-    </Animated.View>
-  );
-}
-
-export default function HomeScreen() {
-  const { t } = useTranslation();
-  const goal = useSession((s) => s.goal);
-  const genres = useSession((s) => s.genres);
-  const isPro = useAccount((s) => s.entitlement.isPro);
-  const recent = useRecentRenders();
-  const preview = useSongPreview();
-  const templates = useMemo(() => rankTemplates(goal), [goal]);
-  const songs = useMemo(() => rankSongs(goal, genres).slice(0, 5), [goal, genres]);
+  const view = useJourneyView();
+  usePhaseViewTracking(view);
 
   useEffect(() => {
-    trackScreen('home');
+    trackScreen('today');
   }, []);
+
+  const { clock, kind } = view;
+  const locale = currentLocaleTag();
+  const greeting = t(`journey.greeting.${partOfDay(view.now)}`);
+  const subtitle =
+    clock.status === 'unset'
+      ? t('journey.today.subtitleUnset')
+      : clock.status === 'upcoming' && view.procedureDate
+        ? t('journey.today.subtitleUpcoming', { date: formatIsoDate(view.procedureDate, locale, 'long') })
+        : view.now.toLocaleDateString(locale, { weekday: 'long', month: 'long', day: 'numeric' });
 
   return (
     <View style={styles.root}>
       <StageBackground animated={false} intensity="soft" />
       <SafeAreaView edges={['top']} style={styles.safe}>
         <View style={styles.header}>
-          <AppText variant="title1" accessibilityRole="header">
-            {t('brand.name')}
-          </AppText>
-          <View style={styles.headerRight}>
-            {!isPro ? (
-              <Button
-                label={t('home.goPro')}
-                size="sm"
-                variant="gold"
-                onPress={() => router.push({ pathname: '/paywall', params: { source: 'home_banner' } })}
-                testID="go-pro"
-              />
-            ) : (
-              <Badge label={t('common.pro')} />
-            )}
-            <CreditPill onPress={() => router.push({ pathname: '/credits', params: { source: 'home' } })} />
+          <View style={styles.headerText}>
+            <AppText variant="title1" accessibilityRole="header" numberOfLines={2}>
+              {greeting}
+            </AppText>
+            <AppText variant="callout" color="textSecondary">
+              {subtitle}
+            </AppText>
           </View>
+          {clock.status !== 'unset' ? (
+            <PressableScale
+              onPress={() => router.push('/journey-setup')}
+              accessibilityLabel={t('journey.today.editDate')}
+              style={styles.editButton}
+              testID="edit-date"
+            >
+              <Ionicons name="calendar-outline" size={22} color={colors.text} />
+            </PressableScale>
+          ) : null}
         </View>
 
         <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-          <DemoModeBanner />
-          <Hero />
-          <GiftHomeCard />
+          {!view.hydrated ? (
+            <View style={styles.skeletons} accessibilityLabel={t('common.loading')} accessibilityRole="progressbar">
+              <Skeleton style={styles.skelHero} />
+              <Skeleton style={styles.skelCard} />
+              <Skeleton style={styles.skelCard} />
+            </View>
+          ) : (
+            <>
+              {clock.status === 'unset' ? (
+                <Reveal index={0}>
+                  <SetDateCard kind={kind} />
+                </Reveal>
+              ) : (
+                <Reveal index={0}>
+                  <DayHero view={view} />
+                </Reveal>
+              )}
 
-          <View>
-            <SectionHeader title={t('home.templates')} />
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.templates}>
-              {templates.map((template, index) => (
-                <Animated.View key={template.id} entering={FadeInDown.delay(index * 40)}>
-                  <TemplateCard
-                    template={template}
-                    onPress={() => {
-                      track('template_tap', { template: template.id });
-                      startCreate('template', { templateId: template.id });
-                    }}
+              {kind === 'transplant' && clock.status === 'active' ? (
+                <Reveal index={1}>
+                  <PhaseCard
+                    phaseId={clock.phase.id}
+                    anxious={clock.phase.anxious}
+                    nextPhaseId={clock.next?.id ?? null}
+                    daysToNext={clock.daysToNext}
                   />
-                </Animated.View>
-              ))}
-            </ScrollView>
-          </View>
+                </Reveal>
+              ) : null}
 
-          <View>
-            <SectionHeader title={t('home.songs')} />
-            <View style={styles.songs}>
-              {songs.map((song) => (
-                <SongRow
-                  key={song.id}
-                  song={song}
-                  playing={preview.playingId === song.id}
-                  onTogglePlay={() => preview.toggle(song.id)}
-                  onSelect={() => {
-                    preview.stop();
-                    startCreate('song', { songId: song.id });
-                  }}
-                  actionLabel={t('home.heroCta')}
-                />
-              ))}
-            </View>
-          </View>
+              {kind === 'transplant' && clock.status === 'upcoming' ? (
+                <Reveal index={1}>
+                  <PreOpCard />
+                </Reveal>
+              ) : null}
 
-          {recent.length > 0 ? (
-            <View>
-              <SectionHeader
-                title={t('home.recent')}
-                action={{ label: t('home.seeAll'), onPress: () => router.push('/(tabs)/library') }}
-              />
-              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.templates}>
-                {recent.map((render) => (
-                  <PressableScale
-                    key={render.id}
-                    onPress={() => router.push({ pathname: '/create/result', params: { renderId: render.id } })}
-                    accessibilityLabel={t('create.result.title')}
-                    style={styles.recent}
-                  >
-                    <LinearGradient
-                      colors={gradients.hero}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 1, y: 1 }}
-                      style={StyleSheet.absoluteFill}
-                    />
-                    <Ionicons name="play-circle" size={36} color={colors.text} />
-                  </PressableScale>
-                ))}
-              </ScrollView>
-            </View>
-          ) : null}
-          <View style={{ height: layout.tabBarClearance }} />
+              {clock.status !== 'unset' ? <NextTaskCard view={view} index={2} /> : null}
+
+              {kind === 'transplant' &&
+              clock.status === 'active' &&
+              clock.day >= 15 &&
+              clock.day <= SHED_PEEK_LAST_DAY &&
+              view.shed.length > 0 ? (
+                <Reveal index={3}>
+                  <ShedPeek />
+                </Reveal>
+              ) : null}
+
+              {kind === 'transplant' && clock.status === 'active' ? (
+                <Reveal index={4}>
+                  <BandCard view={view} goal={view.goal} title={t('journey.today.bandTitle')} height={120} linkToTimeline />
+                </Reveal>
+              ) : null}
+
+              {clock.status !== 'unset' ? (
+                <Reveal index={5}>
+                  <CohortCard />
+                </Reveal>
+              ) : null}
+
+              <Reveal index={6}>
+                <PreviewEntryCard />
+              </Reveal>
+
+              <Reveal index={7}>
+                <GiftHomeCard />
+              </Reveal>
+            </>
+          )}
+          <View style={styles.bottom} />
         </ScrollView>
       </SafeAreaView>
     </View>
@@ -192,45 +154,32 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    gap: spacing.md,
     paddingHorizontal: layout.screenPadding,
-    paddingVertical: spacing.sm,
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.md,
   },
-  headerRight: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  scroll: { paddingHorizontal: layout.screenPadding, gap: spacing.xxl, paddingTop: spacing.sm },
-  hero: {
-    minHeight: 184,
-    borderRadius: radius.xl,
-    overflow: 'hidden',
-    flexDirection: 'row',
-    padding: spacing.xl,
-    boxShadow: glows.primary,
-  },
-  heroText: { flex: 1, gap: spacing.sm, justifyContent: 'center' },
-  heroTitle: { textShadowColor: 'rgba(0,0,0,0.25)', textShadowRadius: 8 },
-  heroSubtitle: { color: colors.text, opacity: 0.92 },
-  heroCta: {
-    alignSelf: 'flex-start',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.xs,
-    marginTop: spacing.sm,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    borderRadius: radius.pill,
-    backgroundColor: colors.text,
-  },
-  heroArt: { alignItems: 'center', justifyContent: 'center' },
-  heroBack: { position: 'absolute', top: -6, right: -18 },
-  heroEq: { position: 'absolute', bottom: -4, left: 0 },
-  templates: { gap: spacing.md, paddingRight: spacing.lg },
-  songs: { gap: spacing.sm },
-  recent: {
-    width: 96,
-    height: 120,
-    borderRadius: radius.md,
-    overflow: 'hidden',
+  headerText: { flex: 1, gap: spacing.xxs },
+  editButton: {
+    width: minTouch,
+    height: minTouch,
+    borderRadius: minTouch / 2,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: colors.surface,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.stroke,
   },
+  scroll: {
+    paddingHorizontal: layout.screenPadding,
+    gap: spacing.xl,
+    paddingTop: spacing.sm,
+    maxWidth: layout.maxContentWidth,
+    width: '100%',
+    alignSelf: 'center',
+  },
+  skeletons: { gap: spacing.xl },
+  skelHero: { height: 220, borderRadius: radius.xl },
+  skelCard: { height: 150, borderRadius: radius.lg },
+  bottom: { height: layout.tabBarClearance },
 });

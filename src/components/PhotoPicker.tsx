@@ -2,172 +2,119 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
-import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
+import Animated, { FadeIn } from 'react-native-reanimated';
 
-import type { SubjectKind } from '@shared/catalog';
-
-import { SAMPLE_PHOTOS, SAMPLE_SUBJECT, type SampleId, sampleLocalUri } from '@/features/demo/samples';
 import { usePhotoPicker } from '@/hooks/usePhotoPicker';
-import { track } from '@/services/analytics';
-import type { PhotoDraft } from '@/stores/draft';
-import { colors, minTouch, radius, spacing } from '@/theme/tokens';
+import type { PhotoDraft } from '@/stores/previewDraft';
+import { colors, radius, spacing } from '@/theme/tokens';
 
 import { AppText } from './AppText';
 import { Button } from './Button';
-import { Chip } from './Chip';
-import { PressableScale } from './PressableScale';
-import { StickerPhoto } from './StickerPhoto';
-
-const SUBJECTS: readonly SubjectKind[] = ['person', 'pet', 'drawing'];
-const SAMPLE_IDS: readonly SampleId[] = ['nova', 'rex', 'mochi'];
-const TIPS = ['tip1', 'tip2', 'tip3'] as const;
 
 export interface PhotoPickerProps {
   photo: PhotoDraft | null;
+  /** Called with a library photo (no region hint: the gallery has no capture guide). */
   onChange: (photo: PhotoDraft) => void;
+  /** Opens the guided camera (the caller owns navigation to the capture screen). */
+  onCamera: () => void;
+  /** Width of the preview frame; the height follows a 4:5 portrait ratio. */
   previewSize: number;
-  palette?: 'magenta' | 'violet' | 'lime' | 'gold' | 'rose';
+  /** Short, honest guidance lines shown under the frame. */
+  tips?: readonly string[];
 }
 
-/** Photo intake shared by onboarding and the create wizard. */
-export function PhotoPicker({ photo, onChange, previewSize, palette = 'magenta' }: PhotoPickerProps) {
+/** Photo intake for a preview: frame, guidance, take-photo and choose-from-library. */
+export function PhotoPicker({ photo, onChange, onCamera, previewSize, tips = [] }: PhotoPickerProps) {
   const { t } = useTranslation();
-  const { pickFromLibrary, takePhoto } = usePhotoPicker();
+  const { pickFromLibrary } = usePhotoPicker();
 
-  const fromDevice = async (source: 'library' | 'camera') => {
-    const picked = source === 'library' ? await pickFromLibrary() : await takePhoto();
+  const fromLibrary = async () => {
+    const picked = await pickFromLibrary();
     if (!picked) return;
-    const subject = photo?.source !== 'sample' && photo?.subject ? photo.subject : 'person';
-    onChange({ localUri: picked.uri, storagePath: null, subject, source });
-    track('photo_selected', { source, subject });
-  };
-
-  const fromSample = async (id: SampleId) => {
-    const uri = await sampleLocalUri(id);
-    onChange({ localUri: uri, storagePath: null, subject: SAMPLE_SUBJECT[id], source: 'sample', sampleId: id });
-    track('photo_selected', { source: 'sample', subject: SAMPLE_SUBJECT[id] });
+    onChange({ localUri: picked.uri, storagePath: null, source: 'library' });
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.preview}>
-        <StickerPhoto
-          uri={photo?.localUri ?? null}
-          palette={palette}
-          size={previewSize}
-          wiggleKey={photo?.localUri}
-          accessibilityLabel={photo ? t('onboarding.photo.change') : t('onboarding.photo.title')}
+        <View
+          style={[styles.frame, !photo && styles.frameEmpty, { width: previewSize, height: previewSize * 1.25 }]}
+          accessible
+          accessibilityRole="image"
+          accessibilityLabel={photo ? t('onboarding.photo.selected') : t('onboarding.photo.placeholder')}
         >
-          {!photo ? (
+          {photo ? (
+            <Animated.View entering={FadeIn.duration(200)} style={StyleSheet.absoluteFill} key={photo.localUri}>
+              <Image source={{ uri: photo.localUri }} style={StyleSheet.absoluteFill} contentFit="cover" />
+            </Animated.View>
+          ) : (
             <View style={styles.placeholder}>
-              <Ionicons name="person-circle-outline" size={previewSize * 0.4} color={colors.textSecondary} />
+              <Ionicons name="person-outline" size={previewSize * 0.34} color={colors.textTertiary} />
+              <AppText variant="caption" color="textTertiary" align="center">
+                {t('onboarding.photo.placeholder')}
+              </AppText>
             </View>
-          ) : null}
-        </StickerPhoto>
+          )}
+        </View>
       </View>
 
       <View style={styles.actions}>
         <Button
-          label={t('onboarding.photo.library')}
-          icon="images-outline"
-          onPress={() => void fromDevice('library')}
-          variant={photo ? 'secondary' : 'primary'}
-          testID="photo-library"
-        />
-        <Button
-          label={t('onboarding.photo.camera')}
+          label={photo ? t('onboarding.photo.change') : t('onboarding.photo.take')}
           icon="camera-outline"
-          onPress={() => void fromDevice('camera')}
-          variant="secondary"
+          onPress={onCamera}
+          variant={photo ? 'secondary' : 'primary'}
           size="md"
           testID="photo-camera"
         />
+        <Button
+          label={t('onboarding.photo.library')}
+          icon="images-outline"
+          onPress={() => void fromLibrary()}
+          variant="secondary"
+          size="md"
+          testID="photo-library"
+        />
       </View>
 
-      <View style={styles.samples}>
-        <AppText variant="caption" color="textSecondary">
-          {t('onboarding.photo.sample')}
-        </AppText>
-        <View style={styles.sampleRow}>
-          {SAMPLE_IDS.map((id, index) => {
-            const selected = photo?.sampleId === id;
-            return (
-              <Animated.View key={id} entering={FadeInDown.delay(index * 60)}>
-                <PressableScale
-                  onPress={() => void fromSample(id)}
-                  haptic="selection"
-                  accessibilityLabel={t('a11y.character', { name: t(`onboarding.demo.characters.${id}`) })}
-                  accessibilityState={{ selected }}
-                  style={[styles.sample, selected && styles.sampleSelected]}
-                  testID={`sample-${id}`}
-                >
-                  <Image source={SAMPLE_PHOTOS[id]} style={styles.sampleImage} contentFit="cover" />
-                </PressableScale>
-              </Animated.View>
-            );
-          })}
-        </View>
-      </View>
-
-      {photo ? (
-        <Animated.View entering={FadeIn} style={styles.subjects}>
-          <AppText variant="caption" color="textSecondary">
-            {t('onboarding.photo.subjectTitle')}
-          </AppText>
-          <View style={styles.subjectRow}>
-            {SUBJECTS.map((subject) => (
-              <Chip
-                key={subject}
-                label={t(`subjects.${subject}`)}
-                selected={photo.subject === subject}
-                onPress={() => onChange({ ...photo, subject })}
-                testID={`subject-${subject}`}
-              />
-            ))}
-          </View>
-        </Animated.View>
-      ) : (
+      {tips.length > 0 ? (
         <View style={styles.tips}>
-          {TIPS.map((tip) => (
+          <AppText variant="caption" color="textSecondary" accessibilityRole="header">
+            {t('onboarding.photo.guidanceTitle')}
+          </AppText>
+          {tips.map((tip) => (
             <View key={tip} style={styles.tip}>
-              <Ionicons name="checkmark-circle" size={16} color={colors.success} />
-              <AppText variant="caption" color="textSecondary">
-                {t(`onboarding.photo.${tip}`)}
+              <Ionicons name="checkmark-circle" size={16} color={colors.sage} style={styles.tipIcon} />
+              <AppText variant="caption" color="textSecondary" style={styles.tipText}>
+                {tip}
               </AppText>
             </View>
           ))}
         </View>
-      )}
+      ) : null}
 
       <AppText variant="caption" color="textTertiary">
-        {t('onboarding.photo.rights')}
+        {t('onboarding.photo.privacy')}
       </AppText>
     </View>
   );
 }
 
-const SAMPLE_SIZE = 56;
-
 const styles = StyleSheet.create({
   container: { gap: spacing.lg },
-  preview: { alignItems: 'center', paddingVertical: spacing.sm },
-  placeholder: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  actions: { gap: spacing.sm },
-  samples: { gap: spacing.sm },
-  sampleRow: { flexDirection: 'row', gap: spacing.md },
-  sample: {
-    width: SAMPLE_SIZE,
-    height: SAMPLE_SIZE,
-    minWidth: minTouch,
-    borderRadius: radius.md,
+  preview: { alignItems: 'center', paddingVertical: spacing.xs },
+  frame: {
+    borderRadius: radius.lg,
     overflow: 'hidden',
-    borderWidth: 2,
-    borderColor: colors.stroke,
+    backgroundColor: colors.surface,
+    borderWidth: 1.5,
+    borderColor: colors.strokeStrong,
   },
-  sampleSelected: { borderColor: colors.primary },
-  sampleImage: { width: '100%', height: '100%' },
-  subjects: { gap: spacing.sm },
-  subjectRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+  frameEmpty: { borderStyle: 'dashed' },
+  placeholder: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.sm, padding: spacing.lg },
+  actions: { gap: spacing.sm },
   tips: { gap: spacing.xs },
-  tip: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  tip: { flexDirection: 'row', alignItems: 'flex-start', gap: spacing.sm },
+  tipIcon: { marginTop: 1 },
+  tipText: { flex: 1 },
 });

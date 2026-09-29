@@ -1,0 +1,250 @@
+{
+  "title": "New preview",
+  "subtitle": "Pick a style and a photo to see one possible look.",
+  "aiLabel": "AI preview — not a prediction of your result",
+  "aiLabelShort": "AI preview",
+  "aiLabelDetail": "It shows one possible look, not what will happen.",
+  "common": {
+    "close": "Close",
+    "back": "Back",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "delete": "Delete"
+  },
+  "goals": {
+    "label": "Area",
+    "hairline": "Hairline",
+    "crown": "Crown",
+    "part": "Parting",
+    "brows": "Eyebrows",
+    "beard": "Beard"
+  },
+  "angles": {
+    "front": "front photo",
+    "left": "left-side photo",
+    "right": "right-side photo",
+    "top": "top-of-head photo",
+    "crown": "crown photo"
+  },
+  "styles": {
+    "label": "Style",
+    "hairline_soft": {
+      "name": "Softer natural hairline",
+      "description": "A gently softened hairline that keeps a natural shape."
+    },
+    "hairline_temples": {
+      "name": "Temple refinement",
+      "description": "A more balanced look around the temples."
+    },
+    "hairline_lower": {
+      "name": "Lower, more defined line",
+      "description": "A slightly lower, more defined hairline."
+    },
+    "hairline_density": {
+      "name": "Density boost",
+      "description": "A denser look within your current hairline."
+    },
+    "crown_light": {
+      "name": "Light",
+      "description": "Light coverage at the crown."
+    },
+    "crown_medium": {
+      "name": "Medium",
+      "description": "Medium coverage at the crown."
+    },
+    "crown_full": {
+      "name": "Full",
+      "description": "Full coverage at the crown."
+    },
+    "part_light": {
+      "name": "Light",
+      "description": "Light fullness along the parting."
+    },
+    "part_medium": {
+      "name": "Medium",
+      "description": "Medium fullness along the parting."
+    },
+    "part_full": {
+      "name": "Full",
+      "description": "A full look along the parting."
+    },
+    "brows_natural": {
+      "name": "Natural",
+      "description": "Natural brows that keep your own shape."
+    },
+    "brows_fuller": {
+      "name": "Fuller",
+      "description": "Your own shape, a little fuller."
+    },
+    "brows_arched": {
+      "name": "Arched",
+      "description": "A softly arched, tidied brow line."
+    },
+    "beard_patch": {
+      "name": "Patch fill",
+      "description": "Thin patches filled in."
+    },
+    "beard_full": {
+      "name": "Full beard",
+      "description": "A fuller beard across the jaw and cheeks."
+    },
+    "beard_moustache": {
+      "name": "Moustache",
+      "description": "A fuller look above the lip."
+    }
+  },
+  "bestAngle": "Works best with a {{angle}}",
+  "density": {
+    "label": "Density",
+    "natural": "Natural",
+    "fuller": "Fuller",
+    "full": "Full"
+  },
+  "quality": {
+    "label": "Quality",
+    "standard": {
+      "title": "Standard",
+      "description": "A quick first look."
+    },
+    "high": {
+      "title": "High",
+      "description": "More detail."
+    }
+  },
+  "price": {
+    "label": "This preview",
+    "free": "Free",
+    "freeHigh": "Free HD preview",
+    "credits_one": "{{count}} credit",
+    "credits_other": "{{count}} credits",
+    "freeNote": "Your first preview is free and includes a watermark.",
+    "balance_one": "You have {{count}} credit.",
+    "balance_other": "You have {{count}} credits.",
+    "short_one": "You have {{count}} credit, and this preview needs {{cost}}.",
+    "short_other": "You have {{count}} credits, and this preview needs {{cost}}.",
+    "useFreeHigh": "Use my free HD preview",
+    "useFreeHighHint_one": "You have {{count}} free HD preview.",
+    "useFreeHighHint_other": "You have {{count}} free HD previews."
+  },
+  "photo": {
+    "label": "Photo",
+    "empty": "No photo yet",
+    "take": "Take a photo",
+    "library": "Choose from library",
+    "journey": "Use latest journey photo",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Remove photo",
+    "selected": "Selected photo",
+    "sentNote": "Your photo is only sent when you tap Create, after you approve AI processing.",
+    "libraryFailed": "We could not open your photo library."
+  },
+  "cta": {
+    "create": "Create preview",
+    "createFree": "Create free preview",
+    "getCredits": "Get credits",
+    "continue": "Continue",
+    "addPhoto": "Add a photo to continue",
+    "chooseStyle": "Choose a style to continue"
+  },
+  "helper": {
+    "needsConsent": "Before your photo is sent, we ask for your approval once.",
+    "needsCredits": "You need more credits for this preview.",
+    "walletError": "We could not load your credits."
+  },
+  "rendering": {
+    "title": "Your preview",
+    "status": {
+      "uploading": "Sending your photo",
+      "creating": "Starting your preview",
+      "waiting": "Starting your preview",
+      "queued": "Waiting for a free slot",
+      "processing": "Creating your preview",
+      "finalizing": "Finishing up"
+    },
+    "estimate": "Usually under a minute.",
+    "background": "You can leave this screen. We keep going and tell you when it is ready.",
+    "notifyMe": "Notify me when it is ready",
+    "notifyOn": "We will notify you when it is ready.",
+    "keepBrowsing": "Keep browsing",
+    "cancel": "Cancel preview",
+    "cancelHint": "Your credits are returned if you cancel.",
+    "cancelTooLate": "It is already finishing and cannot be canceled now.",
+    "failedTitle": "This preview did not finish",
+    "canceledTitle": "Preview canceled",
+    "offlineTitle": "You are offline",
+    "errorTitle": "We could not start the preview",
+    "refunded_one": "Your {{count}} credit was returned.",
+    "refunded_other": "Your {{count}} credits were returned.",
+    "nothingCharged": "Nothing was charged.",
+    "retrySafe": "Trying again is safe: you will not be charged twice.",
+    "retry": "Try again",
+    "getCredits": "Get credits",
+    "reviewConsent": "Review and approve",
+    "seePlans": "See plans",
+    "choosePhoto": "Choose another photo",
+    "backToStyles": "Back to styles",
+    "close": "Close",
+    "photoA11y": "Your photo",
+    "ringA11y": "Preview progress, {{percent}} percent"
+  },
+  "result": {
+    "title": "Your preview",
+    "before": "Your photo",
+    "after": "AI preview",
+    "watermark": "Kök · AI preview",
+    "wipeA11y": "Before and after slider. Swipe up or down to compare your photo with the AI preview.",
+    "demo": "Demo",
+    "save": "Save",
+    "share": "Share",
+    "report": "Report",
+    "delete": "Delete",
+    "saved": "Saved to your photos",
+    "saveDenied": "Allow photo access in Settings to save previews.",
+    "unsupported": "Saving and sharing are not available for this preview here.",
+    "shareTitle": "Share your AI preview",
+    "tryAnother": "Try another style",
+    "upgradeTitle": "Want more detail?",
+    "upgradeBody": "An HD preview has more detail and no watermark.",
+    "notFound": "We could not find this preview. Previews are deleted after 30 days.",
+    "toPreviews": "Back to previews",
+    "beforeGone": "Your original photo is only kept for 30 days, so the comparison is no longer available.",
+    "loadFailed": "We could not load this preview.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Create an HD preview ({{count}} credit)",
+    "upgradeTry_other": "Create an HD preview ({{count}} credits)",
+    "upgradeTryFree": "Create a free HD preview",
+    "availableUntil": "Available until {{date}}",
+    "saveNudge": "Previews are deleted after 30 days. Save it to your photos to keep a copy.",
+    "saveNudgeSoon": "This preview will be deleted soon. Save it to your photos to keep a copy.",
+    "expiredTitle": "This preview was deleted after 30 days",
+    "expiredBody": "Previews and the photos they came from are removed after 30 days. You can create a new one at any time."
+  },
+  "delete": {
+    "title": "Delete this preview?",
+    "body": "The preview image is deleted for good. This cannot be undone.",
+    "done": "Preview deleted"
+  },
+  "tab": {
+    "title": "Previews",
+    "new": "New preview",
+    "honest": "Previews are AI-made pictures of one possible look.",
+    "emptyTitle": "No previews yet",
+    "emptyBody": "A preview is an AI-made picture of one possible look, not what will happen. Try a style on your own photo and compare.",
+    "emptyCta": "Create a preview",
+    "loadFailed": "We could not load your previews.",
+    "menu": "More actions",
+    "status": {
+      "queued": "Waiting",
+      "processing": "Creating · {{percent}}%",
+      "finalizing": "Finishing up",
+      "failed": "Did not finish",
+      "canceled": "Canceled"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Try again",
+    "delete": "Delete",
+    "deleteA11y": "Delete preview",
+    "availableUntil": "Until {{date}}",
+    "expired": "Deleted after 30 days"
+  }
+}

@@ -10,7 +10,7 @@ import * as logger from 'firebase-functions/logger';
 export interface LogFields {
   /** Raw uid — replaced by a short one-way hash before logging. */
   uid?: string;
-  renderId?: string;
+  previewId?: string;
   code?: string;
   kind?: string;
   status?: string;

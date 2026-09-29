@@ -1,0 +1,25 @@
+{
+  "title": "Before we create your preview",
+  "body": "The preview is made by AI image models, so the photo you chose has to leave your phone. Here is what happens.",
+  "sent": {
+    "title": "What we send",
+    "body": "Only the photo you selected for this preview. Nothing else from your camera roll or your journey."
+  },
+  "who": {
+    "title": "Who processes it",
+    "body": "fal.ai runs the image editing, using OpenAI image models."
+  },
+  "retention": {
+    "title": "How long it stays",
+    "body": "Your original photo and the preview result are both deleted from our servers within 30 days. You can delete them sooner from the Previews tab."
+  },
+  "choice": {
+    "title": "Your choice",
+    "body": "You can say no and still use the whole journey. Photos you take for your timeline stay on your device."
+  },
+  "note": "AI previews show a possibility. They are not a prediction of your result.",
+  "policy": "Read the privacy policy",
+  "accept": "Agree and continue",
+  "decline": "Not now",
+  "error": "We could not save your choice. Check your connection and try again."
+}

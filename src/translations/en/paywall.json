@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Follow your 12–18 month journey, week by week",
+    "hairline": "Follow your hairline journey, week by week",
+    "crown": "Follow your crown journey, week by week",
+    "part": "Follow your parting journey, week by week",
+    "brows": "Follow your eyebrow journey, week by week",
+    "beard": "Follow your beard journey, week by week"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Your first preview is done. Pro adds the full timeline: compare, the phase band and every weekly guide."
+    },
+    "settings": {
+      "subtitle": "See what's typical for your week, next to your own photos."
+    },
+    "home_banner": {
+      "subtitle": "See what's typical for your week, next to your own photos."
+    },
+    "notification": {
+      "subtitle": "See what's typical for your week, next to your own photos."
+    },
+    "gift": {
+      "subtitle": "Your gift price is applied to the first year of the yearly plan."
+    },
+    "locked_compare": {
+      "title": "Compare your photos, week by week",
+      "subtitle": "Slide between two photos or view them side by side, each labeled with its week."
+    },
+    "locked_band": {
+      "title": "See the typical range for your week",
+      "subtitle": "Your photo next to the phase band. It shows a typical range, and individual results vary."
+    },
+    "locked_photos": {
+      "title": "Keep every week on record",
+      "subtitle": "Free keeps {{count}} progress photos. Pro keeps the whole 12–18 months."
+    },
+    "locked_report": {
+      "title": "Share a report with your clinic",
+      "subtitle": "A PDF with your first and latest photo per angle, week labels and your shed summary."
+    },
+    "locked_hd": {
+      "title": "More credits for HD previews",
+      "subtitle": "HD previews use credits and have no watermark. Pro includes a credit allowance to spend on them."
+    },
+    "locked_guide": {
+      "title": "The full weekly guide",
+      "subtitle": "What typically happens in each phase, what is normal, and what to do this week."
+    },
+    "insufficient_credits": {
+      "title": "You need more credits for that",
+      "subtitle": "Pro includes a credit allowance every week or month. You can also buy a credit pack."
+    },
+    "result_upgrade": {
+      "title": "See it in HD",
+      "subtitle": "HD previews have no watermark and use credits. Pro includes credits to spend on them."
+    }
+  },
+  "benefits": {
+    "photos": "Unlimited progress photos",
+    "compare": "Wipe and side-by-side compare",
+    "band": "Expected-phase band on your photos",
+    "guide": "The full guide for every phase",
+    "reminders": "Phase and photo reminders",
+    "report": "Clinic PDF report",
+    "cohort": "See how many are in your same week",
+    "hd": "Included credits work for HD previews",
+    "credits": "A credit allowance for previews"
+  },
+  "plans": {
+    "annual": "Yearly",
+    "monthly": "Monthly",
+    "weekly": "Weekly",
+    "bestValue": "Best value",
+    "save": "Save {{percent}}% vs weekly",
+    "perWeek": "{{price}}/week",
+    "perMonth": "{{price}}/month",
+    "perYear": "{{price}}/year",
+    "firstYear": "{{price}} first year"
+  },
+  "planCredits": {
+    "weekly": "Includes {{count}} credits every week",
+    "monthly": "Includes {{count}} credits every month",
+    "annual": "Includes {{initial}} credits at the start, then {{count}} every week"
+  },
+  "cta": {
+    "subscribe": "Continue",
+    "processing": "Processing…"
+  },
+  "disclosure": {
+    "annual": "Billed {{price}} per year. Renews automatically until you cancel. Cancel anytime in your store account settings. The price shown is the amount you are billed.",
+    "monthly": "Billed {{price}} per month. Renews automatically until you cancel. Cancel anytime in your store account settings. The price shown is the amount you are billed.",
+    "weekly": "Billed {{price}} per week. Renews automatically until you cancel. Cancel anytime in your store account settings. The price shown is the amount you are billed.",
+    "intro": "Your gift price: {{intro}} for the first year, then {{price}} per year. Renews automatically until you cancel. Cancel anytime in your store account settings."
+  },
+  "restore": "Restore",
+  "restoreNone": "No previous purchases found.",
+  "restoreSuccess": "Welcome back. Pro is restored.",
+  "privacy": "Privacy",
+  "termsLink": "Terms",
+  "loading": "Loading plans…",
+  "failedTitle": "Plans didn't load",
+  "failedBody": "Check your connection and try again.",
+  "emptyBody": "Plans aren't available right now. Please try again later.",
+  "purchaseFailed": "The purchase didn't go through. Please try again.",
+  "pending": "Your purchase is waiting for approval.",
+  "success": "You're Pro. Thank you.",
+  "mockBadge": "Test store · no real charges",
+  "giftBanner": "Your gift",
+  "creditsLink": "Only need credits? See credit packs",
+  "closeLabel": "Close"
+}
