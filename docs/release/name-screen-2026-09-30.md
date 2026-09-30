@@ -69,3 +69,12 @@ App Store Search API, 2026-09-30, top 50 results per term:
 
 Decision: keep **Kök** and spend the name field on the top term per locale
 (`metadata/store-names.json`); put `kok` in every keyword field so users without "ö" find it.
+
+## All 20 store names (owner-approved en/tr/ar pattern, 2026-09-30)
+
+Every name is `Kök: <local top term>`; each core term was checked in its own storefront via the
+App Store Search API and returns mostly hair apps (e.g. kr 모발이식 11/11, it trapianto capelli
+11/12, fr greffe de cheveux 12/14, br transplante capilar 14/16, cn 植发 13/20, th ปลูกผม 6/9,
+in "hair transplant" 22/23; weakest: vn cấy tóc 3/19). Full names, subtitles and keywords live in
+`metadata/store-names.json`; `node scripts/check-store-names.mjs` enforces the 30/30/100 limits,
+the brand prefix and no keyword repeating a visible word. Native-speaker review is still required.

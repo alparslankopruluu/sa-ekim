@@ -14,5 +14,90 @@
     "name": "Kök: متابعة زراعة الشعر",
     "subtitle": "مراحل التعافي ومعاينة بالذكاء",
     "keywords": "kok,شعر,بصيلات,تساقط,فو,دي,اتش,آي,لحية,حواجب,بلازما,نمو,صور,تعافي,تركيا,اسطنبول,عملية"
+  },
+  "ja": {
+    "name": "Kök: 植毛の経過記録",
+    "subtitle": "回復タイムラインとAIプレビュー",
+    "keywords": "kok,自毛植毛,薄毛,抜け毛,ショックロス,発毛,育毛,FUE,DHI,PRP,生え際,つむじ,眉毛,ひげ,写真,日記,術後,経過観察,トルコ,クリニック,毛髪移植,hair"
+  },
+  "zh-Hans": {
+    "name": "Kök: 植发恢复记录",
+    "subtitle": "恢复时间线与AI预览",
+    "keywords": "kok,脱发,掉发,毛囊,发际线,头顶,眉毛,胡子,FUE,DHI,PRP,生发,术后,照片,日记,土耳其,毛发移植,种植头发,植发医院,术后护理,发量,hair"
+  },
+  "zh-Hant": {
+    "name": "Kök: 植髮恢復紀錄",
+    "subtitle": "恢復時間軸與AI預覽",
+    "keywords": "kok,掉髮,落髮,毛囊,髮際線,頭頂,眉毛,鬍子,FUE,DHI,PRP,生髮,術後,照片,日記,土耳其,毛髮移植,種髮,植髮診所,術後護理,髮量,hair"
+  },
+  "ru": {
+    "name": "Kök: Пересадка волос",
+    "subtitle": "Этапы восстановления и ИИ",
+    "keywords": "kok,трансплантация,выпадение,графты,fue,dhi,prp,облысение,рост,борода,брови,фото,дневник,турция"
+  },
+  "es-ES": {
+    "name": "Kök: Injerto Capilar",
+    "subtitle": "Recuperación y vista previa IA",
+    "keywords": "kok,trasplante,pelo,caida,cabello,alopecia,fue,dhi,prp,barba,cejas,crecimiento,fotos,turquia"
+  },
+  "pt-BR": {
+    "name": "Kök: Transplante Capilar",
+    "subtitle": "Recuperação e prévia com IA",
+    "keywords": "kok,implante,cabelo,queda,calvicie,enxerto,fue,dhi,prp,barba,sobrancelha,crescimento,fotos,diario"
+  },
+  "de-DE": {
+    "name": "Kök: Haartransplantation",
+    "subtitle": "Heilungsverlauf & KI-Vorschau",
+    "keywords": "kok,haarausfall,grafts,fue,dhi,prp,geheimratsecken,wachstum,bart,augenbrauen,fotos,tagebuch,türkei"
+  },
+  "fr-FR": {
+    "name": "Kök: Greffe de Cheveux",
+    "subtitle": "Suivi de guérison & aperçu IA",
+    "keywords": "kok,implant,capillaire,chute,calvitie,greffons,fue,dhi,prp,barbe,sourcils,repousse,photos,journal"
+  },
+  "it": {
+    "name": "Kök: Trapianto di Capelli",
+    "subtitle": "Recupero e anteprima con IA",
+    "keywords": "kok,caduta,calvizie,innesti,bulbi,fue,dhi,prp,barba,sopracciglia,ricrescita,foto,diario,turchia"
+  },
+  "ko": {
+    "name": "Kök: 모발이식 회복 기록",
+    "subtitle": "회복 타임라인과 AI 미리보기",
+    "keywords": "kok,탈모,쇼크로스,모낭,헤어라인,정수리,눈썹,수염,FUE,DHI,PRP,발모,사진,일기,터키,모발이식후기,헤어라인교정,탈모치료,이식,경과,hair"
+  },
+  "id": {
+    "name": "Kök: Transplantasi Rambut",
+    "subtitle": "Pemulihan & pratinjau AI",
+    "keywords": "kok,tanam,rontok,botak,graft,fue,dhi,prp,jenggot,alis,tumbuh,foto,turki,cangkok,hair,transplant"
+  },
+  "vi": {
+    "name": "Kök: Cấy Tóc – Theo Dõi",
+    "subtitle": "Hồi phục & xem trước bằng AI",
+    "keywords": "kok,rụng,hói,nang,fue,dhi,prp,râu,lông,mày,mọc,ảnh,nhật,ký,thổ,nhĩ,kỳ,ghép,hair,transplant"
+  },
+  "th": {
+    "name": "Kök: ปลูกผม ติดตามผล",
+    "subtitle": "ไทม์ไลน์ฟื้นตัวและพรีวิว AI",
+    "keywords": "kok,ผมร่วง,หัวล้าน,กราฟต์,fue,dhi,prp,หนวด,คิ้ว,ผมขึ้น,รูปภาพ,ปลูกคิ้ว,ปลูกหนวด,hair,transplant"
+  },
+  "hi": {
+    "name": "Kök: हेयर ट्रांसप्लांट",
+    "subtitle": "रिकवरी टाइमलाइन और AI प्रीव्यू",
+    "keywords": "kok,बाल,झड़ना,गंजापन,ग्राफ्ट,fue,dhi,prp,दाढ़ी,भौंह,ग्रोथ,फोटो,hair,transplant"
+  },
+  "nl-NL": {
+    "name": "Kök: Haartransplantatie",
+    "subtitle": "Herstelverloop & AI-voorbeeld",
+    "keywords": "kok,haaruitval,kaalheid,grafts,fue,dhi,prp,baard,wenkbrauwen,groei,fotos,dagboek,turkije"
+  },
+  "pl": {
+    "name": "Kök: Przeszczep Włosów",
+    "subtitle": "Przebieg gojenia i podgląd AI",
+    "keywords": "kok,wypadanie,łysienie,graft,fue,dhi,prp,broda,brwi,odrost,zdjęcia,dziennik,turcja"
+  },
+  "sv": {
+    "name": "Kök: Hårtransplantation",
+    "subtitle": "Läkning & förhandsvisning AI",
+    "keywords": "kok,håravfall,flint,grafts,fue,dhi,prp,skägg,ögonbryn,tillväxt,foton,dagbok,turkiet"
   }
 }
