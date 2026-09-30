@@ -9,15 +9,15 @@
 - [x] Public-only product strategy evidence complete; deterministic Opportunity Score = `go` (76, D-002); honest three-second demo defined (`PRODUCT.md`)
 - [ ] `PRODUCT.md`, product map, growth plan, security model, architecture and design direction agree (re-checked after the 2026-09-29 spec review; tick after the final doc audit)
 - [x] Project scaffold (Expo SDK 57 / TS strict) + git init + first commit
-- [ ] i18n skeleton for 20 locales: infrastructure done (`src/translations/<locale>/<ns>.json`, generated typed resources, parity script, ESLint rule); only `en` and `tr` are written, the other 18 follow in M3
+- [x] i18n skeleton for 20 locales: infrastructure done (`src/translations/<locale>/<ns>.json`, generated typed resources, parity script, ESLint rule); only `en` and `tr` are written, the other 18 follow in M3
 - [x] Design tokens + component foundation ("Warm Clinic Noir", Belto-derived components)
 - [x] Brand assets (icon, adaptive layers, splash, notification icon) rendered by `scripts/render-brand-assets.mjs`
-- [ ] Analytics + Crashlytics wired behind the backend ports; `onboarding_start` visible in the mock analytics log
-- [ ] Anonymous auth on first launch (mock now, Firebase live in phase B)
+- [x] Analytics + Crashlytics wired behind the backend ports; `onboarding_start` visible in the mock analytics log
+- [x] Anonymous auth on first launch (mock now, Firebase live in phase B)
 - [ ] `/factory-setup` doctor green (currently failing: `asc` 4.0.0 unsupported, `maestro` missing, disk under 30 GiB — see decisions D-011)
 - [ ] Firebase projects `kok-dev` / `kok-prod`, RevenueCat SDK keys, ASC record — **phase C, owner approval per write**
 
-**Done when:** `npm run verify` is green and the app boots on iOS simulator/web in mock mode.
+**Done when:** `npm run verify` is green and the app boots on iOS simulator/web in mock mode. *(web: verified 2026-09-30; iOS simulator build pending)*
 
 ## M1 — Core value system, end to end (phase A + B)
 
