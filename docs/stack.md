@@ -95,6 +95,6 @@ distributes it.
   backup and Android Auto Backup cover both; cloud sync is backlog.
 - i18n: `src/translations/<locale>/<namespace>.json`, `en` is the schema, 20 locales,
   parity enforced by `npm run lint:translations`.
-- Fonts: DM Serif Display (OFL) for display/title, system font for body.
+- Fonts: SF Pro / system font only (Apple type ramp in `src/theme/tokens.ts`, D-016). Light + dark follow the device, read at launch.
 - `npm run verify` = typecheck + lint + translation parity + jest. It must be green before any
   milestone is ticked.

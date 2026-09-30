@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök ใช้กล้องเพื่อให้คุณถ่ายภาพความคืบหน้าจากมุมเดิมได้ทุกครั้ง",
+  "NSPhotoLibraryUsageDescription": "Kök เปิดคลังภาพของคุณเพื่อให้เลือกภาพสำหรับตัวอย่างหรือบันทึกเส้นทางของคุณ",
+  "NSPhotoLibraryAddUsageDescription": "Kök บันทึกตัวอย่างและภาพเปรียบเทียบของคุณลงในคลังภาพ",
+  "NSMotionUsageDescription": "Kök อ่านค่าเซนเซอร์การเคลื่อนไหวเพื่อตรวจสอบว่าถือโทรศัพท์ตั้งตรง เพื่อให้ภาพถ่ายสม่ำเสมอ"
+}

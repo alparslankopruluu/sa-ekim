@@ -1,57 +1,103 @@
 /**
- * Kök design tokens — "Warm Clinic Noir".
- * Personality: calm, warm, reassuring and precise — a night-stand companion, not a beauty
- * filter. Deep espresso surfaces, copper (hair) as the action colour, sage for growth and
- * "you are on track", gold for highlights. Screens use these tokens only (no raw
- * colors/spacing — AGENTS.md §4). Dark-only by decision D-007 (see docs/decisions.md).
+ * Kök design tokens — Apple system design language (HIG "Color" + "Typography").
+ *
+ * Values are Apple's iOS semantic system colors (light and dark appearances) and the SF Pro
+ * type ramp (Large Title 34 · Title 1 28 · Title 2 22 · Headline 17 semibold · Body 17 ·
+ * Callout 16 · Footnote 13). Layout follows the grouped style of Health/Settings: a grouped
+ * background, elevated white (or #1C1C1E) cards, separators instead of heavy borders, one
+ * tint colour (systemBlue) for actions, systemGreen for growth.
+ *
+ * The appearance follows the device (like Apple's apps). It is read once at launch, so every
+ * StyleSheet stays static; a change of system appearance applies on the next launch.
+ * Screens use these tokens only (no raw colors/spacing — AGENTS.md §4). Decision D-016.
  */
+import { Appearance } from 'react-native';
+
 import type { StyleDef } from '@shared/catalog';
 
-export const colors = {
-  bg: '#0D0A08',
-  bgElevated: '#151009',
-  surface: '#1D1710',
-  surfaceHigh: '#2A2118',
-  surfacePressed: '#362A1E',
-  stroke: 'rgba(255,244,230,0.09)',
-  strokeStrong: 'rgba(255,244,230,0.2)',
-  scrim: 'rgba(13,10,8,0.74)',
-  text: '#FBF6EF',
-  textSecondary: 'rgba(251,246,239,0.76)',
-  textTertiary: 'rgba(251,246,239,0.56)',
-  textOnAccent: '#1A0F07',
-  primary: '#E89A5B',
-  primaryPressed: '#CC7F42',
-  accent: '#F4CE86',
-  sage: '#8FD3B0',
-  sageDeep: '#3F7D63',
-  success: '#7FD6A5',
-  warning: '#F2B45A',
-  danger: '#F0736B',
+export type Scheme = 'light' | 'dark';
+
+export const scheme: Scheme = Appearance.getColorScheme() === 'dark' ? 'dark' : 'light';
+export const isDark = scheme === 'dark';
+
+/** Apple iOS system colors. Names on the right are the UIKit/SwiftUI semantic names. */
+const LIGHT = {
+  bg: '#F2F2F7', // systemGroupedBackground
+  bgElevated: '#FFFFFF', // secondarySystemGroupedBackground
+  surface: '#FFFFFF', // secondarySystemGroupedBackground (cards)
+  surfaceHigh: '#F2F2F7', // tertiarySystemGroupedBackground / systemGray6 (inset wells)
+  surfacePressed: '#E5E5EA', // systemGray5
+  stroke: 'rgba(60,60,67,0.12)', // separator (hairline strength)
+  strokeStrong: 'rgba(60,60,67,0.29)', // separator
+  scrim: 'rgba(0,0,0,0.4)',
+  text: '#000000', // label
+  textSecondary: 'rgba(60,60,67,0.6)', // secondaryLabel
+  textTertiary: 'rgba(60,60,67,0.46)', // between tertiaryLabel and secondaryLabel (legible at 13 pt)
+  textOnAccent: '#FFFFFF',
+  primary: '#007AFF', // systemBlue
+  primaryPressed: '#0062CC',
+  accent: '#FF9500', // systemOrange
+  sage: '#248A3D', // systemGreen, accessible (text-safe on white)
+  sageDeep: '#34C759', // systemGreen (fills)
+  success: '#34C759',
+  warning: '#FF9500',
+  danger: '#FF3B30', // systemRed
   transparent: 'transparent',
 } as const;
 
-export type ColorToken = keyof typeof colors;
+const DARK: { [K in keyof typeof LIGHT]: string } = {
+  bg: '#000000', // systemGroupedBackground (dark)
+  bgElevated: '#1C1C1E',
+  surface: '#1C1C1E', // secondarySystemGroupedBackground
+  surfaceHigh: '#2C2C2E', // tertiarySystemGroupedBackground
+  surfacePressed: '#3A3A3C', // systemGray4
+  stroke: 'rgba(84,84,88,0.36)',
+  strokeStrong: 'rgba(84,84,88,0.65)', // separator (dark)
+  scrim: 'rgba(0,0,0,0.6)',
+  text: '#FFFFFF',
+  textSecondary: 'rgba(235,235,245,0.6)',
+  textTertiary: 'rgba(235,235,245,0.42)',
+  textOnAccent: '#FFFFFF',
+  primary: '#0A84FF',
+  primaryPressed: '#0071E3',
+  accent: '#FF9F0A',
+  sage: '#30D158',
+  sageDeep: '#30D158',
+  success: '#30D158',
+  warning: '#FF9F0A',
+  danger: '#FF453A',
+  transparent: 'transparent',
+};
+
+export const colors: { readonly [K in keyof typeof LIGHT]: string } = isDark ? DARK : LIGHT;
+
+export type ColorToken = keyof typeof LIGHT;
 
 export type PaletteKey = StyleDef['palette'];
 
-/** Two-stop gradients keyed by the palette a preview style declares in the shared catalog. */
+/** Two-stop gradients keyed by the palette a preview style declares (Apple system hues). */
 export const palettes: Record<PaletteKey, readonly [string, string]> = {
-  copper: ['#F2B27A', '#B4682F'],
-  sage: ['#8FD3B0', '#2F6B52'],
-  gold: ['#F8E0A8', '#C9973F'],
-  rose: ['#F2A6A0', '#8A4A5C'],
-  ink: ['#6E5B4A', '#241B14'],
+  copper: ['#FFB340', '#FF9500'], // systemOrange
+  sage: ['#5CD67F', '#34C759'], // systemGreen
+  gold: ['#FFD60A', '#FFCC00'], // systemYellow
+  rose: ['#FF6482', '#FF2D55'], // systemPink
+  ink: ['#7D7AFF', '#5856D6'], // systemIndigo
 };
 
 export const gradients = {
-  hero: ['#F8E0A8', '#E89A5B', '#B4682F'] as const,
-  cta: ['#F2B27A', '#DA8248'] as const,
-  gold: ['#F8E0A8', '#E9B85E'] as const,
-  sage: ['#8FD3B0', '#4C9A78'] as const,
-  stage: ['#261A12', '#0D0A08'] as const,
-  glass: ['rgba(255,244,230,0.14)', 'rgba(255,244,230,0.04)'] as const,
-  fadeBottom: ['rgba(13,10,8,0)', 'rgba(13,10,8,0.94)'] as const,
+  hero: ['#5AC8FA', '#007AFF', '#5856D6'] as const, // teal → blue → indigo
+  cta: [isDark ? '#1A8FFF' : '#1A88FF', colors.primary] as const,
+  gold: ['#FFB340', '#FF9500'] as const,
+  sage: ['#5CD67F', '#34C759'] as const,
+  stage: [colors.bg, colors.bg] as const,
+  glass: isDark
+    ? (['rgba(255,255,255,0.10)', 'rgba(255,255,255,0.03)'] as const)
+    : (['rgba(255,255,255,0.9)', 'rgba(255,255,255,0.7)'] as const),
+  fadeBottom: isDark
+    ? (['rgba(0,0,0,0)', 'rgba(0,0,0,0.94)'] as const)
+    : (['rgba(242,242,247,0)', 'rgba(242,242,247,0.96)'] as const),
+  /** Fade a wheel/list edge into the grouped background. */
+  edgeFade: isDark ? (['rgba(0,0,0,0)', '#000000'] as const) : (['rgba(255,255,255,0)', '#FFFFFF'] as const),
 };
 
 export const spacing = {
@@ -67,42 +113,47 @@ export const spacing = {
   giant: 56,
 } as const;
 
+/** iOS continuous-corner feel: grouped cells 10–12, cards 16–20, sheets 28. */
 export const radius = {
   xs: 6,
   sm: 10,
-  md: 16,
-  lg: 22,
+  md: 14,
+  lg: 20,
   xl: 28,
   pill: 999,
 } as const;
 
-/** DM Serif Display (OFL) — one weight, used only for display/title; body is the system font. */
-export const fonts = {
-  display: 'DMSerifDisplay-Regular',
-  displayItalic: 'DMSerifDisplay-Italic',
-} as const;
+/** SF Pro is the system font: no custom font family on purpose. */
+export const fonts = {} as const;
 
 export const typography = {
-  display: { fontFamily: fonts.display, fontSize: 36, lineHeight: 42, letterSpacing: -0.4 },
-  title1: { fontFamily: fonts.display, fontSize: 28, lineHeight: 34, letterSpacing: -0.3 },
-  title2: { fontFamily: fonts.display, fontSize: 22, lineHeight: 28, letterSpacing: -0.1 },
-  headline: { fontSize: 17, lineHeight: 22, fontWeight: '700' },
-  body: { fontSize: 16, lineHeight: 23, fontWeight: '400' },
-  bodyStrong: { fontSize: 16, lineHeight: 23, fontWeight: '600' },
-  callout: { fontSize: 15, lineHeight: 21, fontWeight: '500' },
-  caption: { fontSize: 13, lineHeight: 18, fontWeight: '500' },
-  micro: { fontSize: 11, lineHeight: 14, fontWeight: '800', letterSpacing: 0.8, textTransform: 'uppercase' },
+  display: { fontSize: 34, lineHeight: 41, fontWeight: '700', letterSpacing: 0.37 }, // Large Title
+  title1: { fontSize: 28, lineHeight: 34, fontWeight: '700', letterSpacing: 0.36 }, // Title 1
+  title2: { fontSize: 22, lineHeight: 28, fontWeight: '700', letterSpacing: 0.35 }, // Title 2
+  headline: { fontSize: 17, lineHeight: 22, fontWeight: '600', letterSpacing: -0.41 }, // Headline
+  body: { fontSize: 17, lineHeight: 22, fontWeight: '400', letterSpacing: -0.41 }, // Body
+  bodyStrong: { fontSize: 17, lineHeight: 22, fontWeight: '600', letterSpacing: -0.41 },
+  callout: { fontSize: 16, lineHeight: 21, fontWeight: '400', letterSpacing: -0.32 }, // Callout
+  caption: { fontSize: 13, lineHeight: 18, fontWeight: '400', letterSpacing: -0.08 }, // Footnote
+  micro: { fontSize: 12, lineHeight: 16, fontWeight: '600', letterSpacing: 0.2, textTransform: 'uppercase' }, // Caption 1, section header
 } as const;
 
 export type TypographyVariant = keyof typeof typography;
 
-/** Cross-platform glows via the RN `boxShadow` style (New Architecture). */
-export const glows = {
-  primary: '0px 10px 28px rgba(232, 154, 91, 0.38)',
-  gold: '0px 8px 24px rgba(244, 206, 134, 0.34)',
-  sage: '0px 8px 24px rgba(143, 211, 176, 0.32)',
-  soft: '0px 12px 32px rgba(0, 0, 0, 0.5)',
-} as const;
+/** Soft Apple-style elevation (RN `boxShadow`, New Architecture). */
+export const glows = isDark
+  ? {
+      primary: '0px 6px 18px rgba(10,132,255,0.35)',
+      gold: '0px 6px 18px rgba(255,159,10,0.3)',
+      sage: '0px 6px 18px rgba(48,209,88,0.3)',
+      soft: '0px 8px 24px rgba(0,0,0,0.6)',
+    }
+  : {
+      primary: '0px 6px 16px rgba(0,122,255,0.28)',
+      gold: '0px 6px 16px rgba(255,149,0,0.25)',
+      sage: '0px 6px 16px rgba(52,199,89,0.25)',
+      soft: '0px 4px 16px rgba(0,0,0,0.08)',
+    };
 
 export const hitSlop = { top: 10, bottom: 10, left: 10, right: 10 } as const;
 
@@ -110,7 +161,7 @@ export const hitSlop = { top: 10, bottom: 10, left: 10, right: 10 } as const;
 export const minTouch = 44;
 
 export const layout = {
-  screenPadding: spacing.xl,
-  maxContentWidth: 520,
+  screenPadding: spacing.lg,
+  maxContentWidth: 560,
   tabBarClearance: 96,
 } as const;

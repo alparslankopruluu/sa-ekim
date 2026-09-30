@@ -1,0 +1,116 @@
+{
+  "title": "设置",
+  "sections": {
+    "subscription": "订阅与点数",
+    "language": "语言",
+    "notifications": "通知",
+    "preferences": "偏好设置",
+    "data": "数据与隐私",
+    "account": "账户",
+    "legal": "法律与支持",
+    "about": "关于",
+    "developer": "开发者"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "免费方案",
+    "renews": "将于 {{date}} 续订",
+    "expires": "将于 {{date}} 结束",
+    "manage": "管理订阅",
+    "restore": "恢复购买",
+    "upgrade": "升级到 Pro",
+    "restoreDone": "欢迎回来。Pro 已恢复。",
+    "restoreNone": "没有找到之前的购买记录。",
+    "balance": "点数余额",
+    "buyCredits": "获取点数",
+    "freeHigh_other": "{{count}} 次免费高清预览"
+  },
+  "language": {
+    "title": "语言",
+    "pickerTitle": "选择语言",
+    "rtlNote": "重新启动 Kök 以切换布局方向。",
+    "closePicker": "关闭语言列表"
+  },
+  "notifications": {
+    "previews": "预览已准备好",
+    "offers": "礼物和优惠",
+    "reminders": "旅程提醒",
+    "remindersHint": "护理、每周拍照和阶段提醒。阶段提醒属于 Pro 功能。",
+    "systemOff": "系统设置中已关闭 Kök 的通知。点按即可打开系统设置。"
+  },
+  "preferences": {
+    "haptics": "触感反馈"
+  },
+  "data": {
+    "wipe": "删除我的所有数据",
+    "wipeHint": "从这台设备上移除你的旅程照片、脱落记录和预览。",
+    "wipeTitle": "删除你的所有数据？",
+    "wipeBody": "这将永久移除你的手术日期、进展照片、脱落记录和已保存的预览。你的订阅和点数仍保留在你的账户中。此操作无法撤销。",
+    "wipeConfirm": "删除我的数据",
+    "wiping": "正在删除…",
+    "wiped": "你的数据已从这台设备中删除。"
+  },
+  "account": {
+    "guest": "匿名账户",
+    "id": "账户 ID",
+    "delete": "删除账户",
+    "deleteHint": "从我们的服务器上删除你的账户、点数和已上传的照片。",
+    "deleteTitle": "删除你的账户？",
+    "deleteBody": "这将永久删除你的账户、点数、已保存的预览以及你上传的任何照片，并清除这台设备上的旅程内容。有效的订阅需要另行在你的应用商店账户设置中取消。",
+    "deleteConfirm": "删除账户",
+    "deleting": "正在删除…",
+    "deleted": "你的账户已删除。"
+  },
+  "legal": {
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "ai": "AI 预览的工作方式",
+    "support": "帮助与支持"
+  },
+  "about": {
+    "version": "版本 {{version}}（{{build}}）",
+    "contact": "发邮件联系支持",
+    "rate": "为 Kök 评分",
+    "replay": "重新查看引导"
+  },
+  "confirm": {
+    "cancel": "取消"
+  },
+  "developer": {
+    "open": "开发者工具",
+    "backend": "后端模式",
+    "replayOnboarding": "重新查看引导",
+    "offerings": "商店商品",
+    "purchase": "购买结果",
+    "wheel": "礼物转盘位置",
+    "failNext": "让下一次预览失败",
+    "cohort": "我所在这一周的人数",
+    "addCredits": "发放 50 点数",
+    "reset": "重置所有模拟数据",
+    "resetDone": "模拟数据已重置。",
+    "credits": "点数已发放。",
+    "testCrash": "发送测试崩溃",
+    "events": "事件日志",
+    "empty": "还没有事件",
+    "mockOnly": "这些开关仅存在于模拟后端。",
+    "values": {
+      "ok": "正常",
+      "slow": "缓慢",
+      "fail": "失败",
+      "empty": "为空",
+      "success": "成功",
+      "cancel": "取消",
+      "home": "主页",
+      "onboarding_exit": "退出引导",
+      "off": "关"
+    },
+    "storefront": "模拟商店币种",
+    "giftOffer": "显示无奖品的礼物优惠",
+    "forcePro": "Pro 权益",
+    "grantFreeHigh": "发放一次免费高清预览",
+    "previewsEnabled": "预览已启用（紧急开关）",
+    "nextPrize": "下一个转盘奖品",
+    "honest": "公平抽取",
+    "offerCacheNote": "商店的更改会在下次重试订阅页面或五分钟后生效。"
+  }
+}

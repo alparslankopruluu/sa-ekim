@@ -1,0 +1,146 @@
+{
+  "updated": "Ostatnia aktualizacja: {{date}}",
+  "openWeb": "Otwórz wersję internetową",
+  "emailSupport": "Napisz do pomocy technicznej",
+  "publisher": "Kök jest publikowany przez Techtactoe App Studio.",
+  "privacy": {
+    "title": "Polityka prywatności",
+    "sections": [
+      {
+        "heading": "W skrócie",
+        "body": "Zdjęcia z Twojej drogi zostają na Twoim telefonie. Kök przesyła zdjęcie tylko wtedy, gdy poprosisz o podgląd AI, a zarówno to zdjęcie, jak i powstały obraz podglądu są usuwane z naszych serwerów w ciągu 30 dni. Kök nie wyświetla reklam i nie sprzedaje Twoich danych. Kök nie jest poradą medyczną."
+      },
+      {
+        "heading": "Co zostaje na Twoim urządzeniu",
+        "body": "Data zabiegu, zdjęcia postępów, dziennik wypadania i nazwa kliniki są przechowywane wyłącznie na Twoim urządzeniu. Kök nigdy nie przesyła zdjęć z Twojej drogi. Są one uwzględniane w kopii zapasowej samego telefonu (iCloud lub Android Auto Backup), jeśli jest włączona."
+      },
+      {
+        "heading": "Co zbieramy",
+        "body": "Anonimowy identyfikator konta (Firebase Authentication), dzięki czemu nie musisz podawać imienia ani adresu e-mail. Saldo kredytów i status zakupów. Wybrany język i ustawienia powiadomień. Zdarzenia użytkowania, raporty o awariach i dane o wydajności (Firebase Analytics, Crashlytics i Performance Monitoring). Token powiadomień push, tylko jeśli zezwolisz na powiadomienia. Jeśli tworzysz podgląd: jedno wybrane przez Ciebie zdjęcie, wybrany styl i jakość oraz powstały podgląd. Jeśli dołączysz do opcjonalnej grupy z tego samego tygodnia: datę zabiegu, cel i rodzaj drogi, i nic więcej. Nie zbieramy Twojego imienia i nazwiska, kontaktów ani dokładnej lokalizacji. Kök nie śledzi Cię w innych aplikacjach ani witrynach i nie używa Twojego identyfikatora reklamowego."
+      },
+      {
+        "heading": "Podglądy AI",
+        "body": "Gdy tworzysz podgląd, wybrane przez Ciebie zdjęcie jest przesyłane na nasze serwery i przetwarzane przez fal.ai, które w naszym imieniu uruchamia modele obrazu OpenAI. Kök prosi o Twoją zgodę przed pierwszym przesłaniem, a informacja o tym wymienia tych dostawców. Zdjęcie służy wyłącznie do stworzenia tego podglądu. Nie używamy Twoich zdjęć do trenowania modeli AI. Przesłane zdjęcie i obraz podglądu są usuwane z naszych serwerów w ciągu 30 dni, więc zapisz podgląd w bibliotece zdjęć, jeśli chcesz go zachować. Każdy podgląd to ilustracja AI, a nie prognoza Twojego wyniku."
+      },
+      {
+        "heading": "Dostawcy usług",
+        "body": "Udostępniamy dane wyłącznie firmom, które przetwarzają je dla nas: Google Firebase (konto, baza danych, przechowywanie plików, funkcje, analityka, raportowanie awarii, wydajność, zdalna konfiguracja, kontrole integralności aplikacji i powiadomienia push); fal.ai i uruchamiane przez nie modele obrazu OpenAI (podglądy AI); RevenueCat (subskrypcje i zakupy); Apple i Google (płatności i dystrybucja aplikacji). Kök nie zawiera reklam i nie udostępnia danych reklamodawcom."
+      },
+      {
+        "heading": "Jak długo przechowujemy dane",
+        "body": "Dane drogi: na Twoim urządzeniu, dopóki ich nie usuniesz. Przesłane zdjęcia do podglądów i obrazy podglądów: najwyżej 30 dni na naszych serwerach. Dane o użytkowaniu i awariach: do 14 miesięcy. Zapisy zakupów: tak długo, jak wymagają tego przepisy podatkowe i rachunkowe. Zgłoszenia dotyczące podglądu, które wysyłasz: tak długo, jak potrzeba, by je rozpatrzyć i podjąć działania."
+      },
+      {
+        "heading": "Twoje wybory i usuwanie danych",
+        "body": "W Ustawieniach, w sekcji Dane i prywatność, opcja Usuń wszystkie moje dane usuwa z tego urządzenia zdjęcia z Twojej drogi, dziennik wypadania i podglądy. W Ustawieniach, w sekcji Konto, opcja Usuń konto od razu usuwa z naszych serwerów Twoje konto, kredyty, podglądy i wszelkie przesłane zdjęcia oraz czyści Twoją drogę na urządzeniu. Tam możesz też wyłączyć powiadomienia. Nic nie jest przesyłane, dopóki nie utworzysz podglądu. Usunięcie konta nie anuluje subskrypcji: anuluj ją w ustawieniach konta App Store lub Google Play. W zależności od miejsca zamieszkania (na przykład na podstawie RODO, tureckiej ustawy KVKK lub kalifornijskiej CCPA) możesz mieć prawo dostępu do swoich danych, ich poprawiania, usuwania lub eksportu oraz wycofania zgody. Aby złożyć wniosek, napisz na adres techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Dzieci",
+        "body": "Kök jest przeznaczony dla dorosłych. Świadomie nie zbieramy informacji od osób poniżej 18. roku życia."
+      },
+      {
+        "heading": "To nie jest porada medyczna",
+        "body": "Kök to narzędzie edukacyjne i do śledzenia postępów. Niczego nie diagnozuje, nie leczy ani nie przewiduje, a jego oś czasu pokazuje wyłącznie typowe zakresy. W razie jakichkolwiek obaw skontaktuj się ze swoją kliniką lub lekarzem."
+      },
+      {
+        "heading": "Zmiany i kontakt",
+        "body": "Jeśli ta polityka ulegnie zmianie, zmieni się również data powyżej. Pytania lub wnioski: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Warunki korzystania",
+    "sections": [
+      {
+        "heading": "Korzystanie z Kök",
+        "body": "Kök pomaga śledzić przeszczep włosów, PRP lub podobną drogę odbudowy włosów za pomocą Twoich własnych zdjęć i typowej osi czasu oraz pozwala tworzyć podglądy AI. Musisz być osobą dorosłą i mieć zdolność do zawarcia tej umowy. Korzystając z Kök, akceptujesz te warunki."
+      },
+      {
+        "heading": "To nie jest porada medyczna",
+        "body": "Kök nie jest wyrobem medycznym i nie udziela porad medycznych, diagnoz ani leczenia. Osie czasu i przewodniki opisują to, co typowe, i nie są obietnicą dotyczącą Twojego wyniku. Jeśli zauważysz gorączkę, rozszerzające się zaczerwienienie, ropę, silny ból lub obfite krwawienie, skontaktuj się ze swoją kliniką lub lekarzem."
+      },
+      {
+        "heading": "Podglądy AI",
+        "body": "Podgląd to ilustracja AI stworzona na podstawie Twojego zdjęcia. Nie jest prognozą, obietnicą ani planem Twojego wyniku i nie pokazuje liczby przeszczepów. Darmowy podgląd z wprowadzenia ma znak wodny. Podglądy są przechowywane przez 30 dni, więc zapisz podgląd w bibliotece zdjęć, aby go zachować. Korzystaj z podglądów odpowiedzialnie i nie przedstawiaj żadnego z nich jako prawdziwej fotografii."
+      },
+      {
+        "heading": "Zdjęcia i treści",
+        "body": "Używaj wyłącznie zdjęć swoich lub osoby, która wyraźnie się na to zgodziła. Nie przesyłaj zdjęć osób niepełnoletnich, osób publicznych ani niczego o charakterze seksualnym, nienawistnym, nękającym, zwodniczym lub nielegalnym. Możemy blokować treści i zawiesić dostęp w przypadku naruszenia tych zasad. Każdy podgląd możesz zgłosić na jego ekranie."
+      },
+      {
+        "heading": "Subskrypcje i kredyty",
+        "body": "Kök Pro jest oferowany jako subskrypcja tygodniowa, miesięczna lub roczna w cenie pokazanej w Twoim sklepie. Nie ma darmowego okresu próbnego. Subskrypcje odnawiają się automatycznie, dopóki ich nie anulujesz w ustawieniach konta App Store lub Google Play, a zwroty podlegają zasadom Apple lub Google. Pakiety kredytów to zakupy jednorazowe. Podgląd standardowy zużywa 1 kredyt, a podgląd HD zużywa 3. Jeśli podgląd się nie uda, jego kredyty są zwracane automatycznie. Kredyty nie mają wartości pieniężnej i nie można ich przenosić. Zakupy możesz przywrócić z ekranu płatności lub w Ustawieniach."
+      },
+      {
+        "heading": "Twoje treści",
+        "body": "Zachowujesz prawa własności do swoich zdjęć i podglądów. Udzielasz nam ograniczonego zezwolenia na przetwarzanie tego, co przesyłasz, wyłącznie w celu świadczenia usługi, o którą prosisz."
+      },
+      {
+        "heading": "Dostępność i odpowiedzialność",
+        "body": "Kök jest udostępniany w stanie, w jakim jest, i w miarę dostępności. W zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za szkody pośrednie ani następcze, a nic tutaj nie ogranicza praw przysługujących Ci na mocy prawa konsumenckiego, z których nie można zrezygnować."
+      },
+      {
+        "heading": "Zakończenie korzystania",
+        "body": "Możesz w każdej chwili przestać korzystać z Kök i usunąć swoje konto w Ustawieniach. Możemy zmieniać te warunki i wtedy zaktualizujemy datę."
+      },
+      {
+        "heading": "Kontakt",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Jak działają podglądy AI",
+    "sections": [
+      {
+        "heading": "Czym jest podgląd",
+        "body": "Podgląd to ilustracja AI pokazująca, jak wybrany styl mógłby wyglądać na Twoim zdjęciu. Nie jest prognozą Twojego wyniku, a etykieta o tym informująca pozostaje widoczna na każdym podglądzie."
+      },
+      {
+        "heading": "Co jest wysyłane",
+        "body": "Tylko jedno zdjęcie wybrane do tego podglądu oraz wybrany styl i jakość. Zdjęcia z Twojej drogi nigdy nie są przesyłane. Przed pierwszym przesłaniem Kök prosi o Twoją zgodę."
+      },
+      {
+        "heading": "Kto to przetwarza",
+        "body": "fal.ai uruchamia w naszym imieniu modele obrazu OpenAI. Używamy ich wyłącznie do stworzenia Twojego podglądu i nie używamy Twoich zdjęć do trenowania modeli AI. Przesłane zdjęcie i obraz podglądu są usuwane z naszych serwerów w ciągu 30 dni."
+      },
+      {
+        "heading": "Ograniczenia",
+        "body": "Wyniki mogą być niedoskonałe lub nierealistyczne. Darmowy podgląd z wprowadzenia ma znak wodny. Kök nigdy nie pokazuje liczby przeszczepów, stadiów ani obietnic dotyczących wyniku."
+      },
+      {
+        "heading": "Zgłaszanie i usuwanie",
+        "body": "Zgłoś podgląd na jego ekranie, a rozpatrzymy go w ciągu 48 godzin. Możesz usunąć podgląd w dowolnej chwili, a usunięcie konta usuwa wszystko, co przechowujemy."
+      }
+    ]
+  },
+  "support": {
+    "title": "Pomoc i wsparcie",
+    "sections": [
+      {
+        "heading": "Skontaktuj się z nami",
+        "body": "Napisz na adres techtactoeappstudio@gmail.com i podaj wersję aplikacji (Ustawienia, O aplikacji). Zwykle odpowiadamy w ciągu dwóch dni roboczych."
+      },
+      {
+        "heading": "Podgląd się nie udał. Czy kredyty przepadły?",
+        "body": "Nie. Kredyty za nieudany lub anulowany podgląd są zwracane automatycznie."
+      },
+      {
+        "heading": "Jak anulować subskrypcję?",
+        "body": "Na iPhonie: Ustawienia, Twoje imię, Subskrypcje, Kök. Na Androidzie: Google Play, Płatności i subskrypcje, Subskrypcje. Możesz też otworzyć w Kök Ustawienia, Zarządzaj subskrypcją."
+      },
+      {
+        "heading": "Jak przywrócić zakupy?",
+        "body": "Otwórz ekran płatności lub Ustawienia i stuknij Przywróć."
+      },
+      {
+        "heading": "Jak usunąć moje dane?",
+        "body": "Ustawienia, Dane i prywatność, Usuń wszystkie moje dane czyści Twoją drogę i podglądy na tym urządzeniu. Ustawienia, Konto, Usuń konto usuwa Twoje konto i wszystko, co przechowujemy. Możesz też napisać do nas z prośbą o usunięcie."
+      },
+      {
+        "heading": "Czy to jest porada medyczna?",
+        "body": "Nie. Kök to narzędzie edukacyjne i do śledzenia postępów. W razie czegokolwiek niepokojącego skontaktuj się ze swoją kliniką lub lekarzem."
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "title": "설정",
+  "sections": {
+    "subscription": "구독 및 크레딧",
+    "language": "언어",
+    "notifications": "알림",
+    "preferences": "환경설정",
+    "data": "데이터 및 개인정보",
+    "account": "계정",
+    "legal": "법적 고지 및 지원",
+    "about": "정보",
+    "developer": "개발자"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "무료 플랜",
+    "renews": "{{date}}에 갱신",
+    "expires": "{{date}}에 종료",
+    "manage": "구독 관리",
+    "restore": "구매 복원",
+    "upgrade": "Pro로 업그레이드",
+    "restoreDone": "다시 오신 것을 환영해요. Pro가 복원되었어요.",
+    "restoreNone": "이전 구매 내역을 찾을 수 없어요.",
+    "balance": "크레딧 잔액",
+    "buyCredits": "크레딧 받기",
+    "freeHigh_other": "무료 HD 미리보기 {{count}}회"
+  },
+  "language": {
+    "title": "언어",
+    "pickerTitle": "언어 선택",
+    "rtlNote": "레이아웃 방향을 바꾸려면 Kök을 다시 시작해 주세요.",
+    "closePicker": "언어 목록 닫기"
+  },
+  "notifications": {
+    "previews": "미리보기 준비 완료",
+    "offers": "선물 및 혜택",
+    "reminders": "여정 알림",
+    "remindersHint": "관리, 주간 사진, 단계 알림이에요. 단계 알림은 Pro에서 제공돼요.",
+    "systemOff": "시스템 설정에서 Kök의 알림이 꺼져 있어요. 눌러서 설정을 여세요."
+  },
+  "preferences": {
+    "haptics": "햅틱"
+  },
+  "data": {
+    "wipe": "내 데이터 모두 삭제",
+    "wipeHint": "이 기기에서 여정 사진, 탈락 기록, 미리보기를 삭제해요.",
+    "wipeTitle": "모든 데이터를 삭제할까요?",
+    "wipeBody": "수술 날짜, 경과 사진, 탈락 기록, 저장한 미리보기가 영구적으로 삭제돼요. 구독과 크레딧은 계정에 그대로 남아요. 되돌릴 수 없어요.",
+    "wipeConfirm": "내 데이터 삭제",
+    "wiping": "삭제하는 중…",
+    "wiped": "이 기기에서 데이터를 삭제했어요."
+  },
+  "account": {
+    "guest": "익명 계정",
+    "id": "계정 ID",
+    "delete": "계정 삭제",
+    "deleteHint": "서버에서 계정, 크레딧, 업로드한 사진을 삭제해요.",
+    "deleteTitle": "계정을 삭제할까요?",
+    "deleteBody": "계정, 크레딧, 저장한 미리보기, 업로드한 사진이 영구적으로 삭제되고 이 기기의 여정 기록도 지워져요. 진행 중인 구독은 스토어 계정 설정에서 따로 해지해야 해요.",
+    "deleteConfirm": "계정 삭제",
+    "deleting": "삭제하는 중…",
+    "deleted": "계정을 삭제했어요."
+  },
+  "legal": {
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "ai": "AI 미리보기 작동 방식",
+    "support": "도움말 및 지원"
+  },
+  "about": {
+    "version": "버전 {{version}} ({{build}})",
+    "contact": "지원 이메일",
+    "rate": "Kök 평가하기",
+    "replay": "온보딩 다시 보기"
+  },
+  "confirm": {
+    "cancel": "취소"
+  },
+  "developer": {
+    "open": "개발자 도구",
+    "backend": "백엔드 모드",
+    "replayOnboarding": "온보딩 다시 보기",
+    "offerings": "스토어 상품 구성",
+    "purchase": "구매 결과",
+    "wheel": "선물 룰렛 위치",
+    "failNext": "다음 미리보기 실패시키기",
+    "cohort": "내 주차의 집단 인원수",
+    "addCredits": "크레딧 50개 지급",
+    "reset": "모든 목 데이터 초기화",
+    "resetDone": "목 데이터를 초기화했어요.",
+    "credits": "크레딧을 지급했어요.",
+    "testCrash": "테스트 크래시 보내기",
+    "events": "이벤트 로그",
+    "empty": "아직 이벤트가 없어요",
+    "mockOnly": "이 스위치는 목 백엔드에서만 사용할 수 있어요.",
+    "values": {
+      "ok": "ok",
+      "slow": "slow",
+      "fail": "fail",
+      "empty": "empty",
+      "success": "success",
+      "cancel": "cancel",
+      "home": "home",
+      "onboarding_exit": "온보딩 종료",
+      "off": "off"
+    },
+    "storefront": "목 스토어 통화",
+    "giftOffer": "상품 없이 선물 혜택 표시",
+    "forcePro": "Pro 권한",
+    "grantFreeHigh": "무료 HD 미리보기 지급",
+    "previewsEnabled": "미리보기 사용 (킬 스위치)",
+    "nextPrize": "다음 룰렛 상품",
+    "honest": "공정 추첨",
+    "offerCacheNote": "스토어 변경 사항은 다음 페이월 재시도 시 또는 5분 후에 적용돼요."
+  }
+}

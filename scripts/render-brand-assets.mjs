@@ -60,23 +60,25 @@ const page = (w, h, body) =>
 const svg = (w, h, inner) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 1024 1024">${inner}</svg>`;
 
-const bg = `<defs><radialGradient id="bg" cx="0.5" cy="0.38" r="0.8">
-    <stop offset="0" stop-color="#3A2519"/><stop offset="0.55" stop-color="#1B120D"/><stop offset="1" stop-color="#0D0A08"/>
-  </radialGradient>${COPPER}</defs><rect width="1024" height="1024" fill="url(#bg)"/>
-  <circle cx="512" cy="600" r="330" fill="#E89A5B" opacity="0.07"/>`;
+const bg = `<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#5AC8FA"/><stop offset="0.5" stop-color="#007AFF"/><stop offset="1" stop-color="#5856D6"/>
+  </linearGradient>${COPPER}</defs><rect width="1024" height="1024" fill="url(#bg)"/>
+  <circle cx="512" cy="360" r="420" fill="#FFFFFF" opacity="0.08"/>`;
+
+const WHITE = '#FFFFFF';
 
 const jobs = [
-  { file: 'icon.png', size: 1024, body: svg(1024, 1024, `${bg}${mark({ scale: 1.08, dy: -10 })}`), opaque: true },
+  { file: 'icon.png', size: 1024, body: svg(1024, 1024, `${bg}${mark({ fill: WHITE, root: 0.6, scale: 1.08, dy: -10 })}`), opaque: true },
   { file: 'android-icon-background.png', size: 1024, body: svg(1024, 1024, `${bg}`), opaque: true },
-  { file: 'android-icon-foreground.png', size: 1024, body: svg(1024, 1024, `<defs>${COPPER}</defs>${mark({ scale: 0.72, dy: 4 })}`) },
+  { file: 'android-icon-foreground.png', size: 1024, body: svg(1024, 1024, `${mark({ fill: WHITE, root: 0.6, scale: 0.72, dy: 4 })}`) },
   {
     file: 'android-icon-monochrome.png',
     size: 1024,
     body: svg(1024, 1024, `<defs>${COPPER}</defs>${mark({ fill: '#FFFFFF', scale: 0.72, root: 1, dy: 4 })}`),
   },
-  { file: 'splash-icon.png', size: 1024, body: svg(1024, 1024, `<defs>${COPPER}</defs>${mark({ scale: 1.0 })}`) },
+  { file: 'splash-icon.png', size: 1024, body: svg(1024, 1024, `<defs><linearGradient id="sp" gradientUnits="userSpaceOnUse" x1="300" y1="270" x2="720" y2="860"><stop offset="0" stop-color="#5AC8FA"/><stop offset="0.5" stop-color="#007AFF"/><stop offset="1" stop-color="#5856D6"/></linearGradient></defs>${mark({ fill: 'url(#sp)', root: 0.6, scale: 1.0 })}`) },
   { file: 'notification-icon.png', size: 96, body: svg(96, 96, `${mark({ fill: '#FFFFFF', scale: 1.15, root: 1 })}`) },
-  { file: 'favicon.png', size: 48, body: svg(48, 48, `${bg}${mark({ scale: 1.08, dy: -10 })}`), opaque: true },
+  { file: 'favicon.png', size: 48, body: svg(48, 48, `${bg}${mark({ fill: WHITE, root: 0.6, scale: 1.08, dy: -10 })}`), opaque: true },
 ];
 
 const chrome = findChrome();

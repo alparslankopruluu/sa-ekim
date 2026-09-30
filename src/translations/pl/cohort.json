@@ -1,0 +1,28 @@
+{
+  "title": "Osoby z Twojego tygodnia",
+  "locked": {
+    "title": "Inni z Twojego tygodnia zabiegu",
+    "body": "Pro pokazuje, ile osób miało zabieg w tym samym tygodniu co Ty. Widzisz zawsze tylko liczbę.",
+    "cta": "Zobacz z Pro"
+  },
+  "join": {
+    "title": "Dołącz do swojego tygodnia zabiegu",
+    "body": "Zgódź się, by być liczonym razem z osobami, które miały zabieg w tym samym tygodniu. Udostępniana jest tylko data zabiegu, cel i rodzaj. Nigdy zdjęcia, Twoje imię ani klinika.",
+    "switch": "Wliczcie mnie",
+    "needDate": "Najpierw ustaw datę zabiegu.",
+    "setDate": "Ustaw datę"
+  },
+  "joining": "Dołączanie…",
+  "joined": "Liczymy Cię w Twoim tygodniu",
+  "loading": "Sprawdzanie Twojego tygodnia…",
+  "visible": "W Twoim tygodniu jest {{count}} osób",
+  "invitation": "Jesteś w grupie. Liczba pojawi się, gdy Twój tydzień dzieli wystarczająco dużo osób, aby nikt nie był rozpoznawalny.",
+  "privacy": "Udostępniana jest tylko data zabiegu, cel i rodzaj.",
+  "error": {
+    "offline": "Jesteś offline. Spróbuj ponownie po połączeniu z internetem.",
+    "busy": "Zbyt wiele żądań. Spróbuj za chwilę.",
+    "pro": "Wymaga Pro.",
+    "generic": "Nie udało się połączyć z grupą. Spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  }
+}

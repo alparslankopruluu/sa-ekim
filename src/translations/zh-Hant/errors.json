@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "請重新啟動 App 後再試。",
+  "consent_required": "請先閱讀並同意 AI 處理說明。",
+  "invalid_input": "輸入的內容似乎有些問題，請檢查後重試。",
+  "content_blocked": "無法使用這張相片或這段文字，請換一個。",
+  "insufficient_credits": "你的點數不足。",
+  "pro_required": "這是 Pro 功能。",
+  "rate_limited": "操作太快了，請稍候片刻再試。",
+  "already_claimed": "你已經領取過了。",
+  "not_found": "找不到相關內容。",
+  "previews_disabled": "預覽功能暫時停用一小段時間，你的旅程不受影響。請稍後再試。",
+  "provider_failed": "操作未完成，請稍後重試。",
+  "timeout": "等待時間過長，請重試。",
+  "offline": "你似乎已離線。請檢查網路連線後重試。",
+  "unknown": "發生了一些問題，請重試。"
+}

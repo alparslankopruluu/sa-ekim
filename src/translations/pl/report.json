@@ -1,0 +1,39 @@
+{
+  "title": "Zgłoś ten podgląd",
+  "subtitle": "Napisz, co jest nie tak. Rozpatrujemy każde zgłoszenie w ciągu 48 godzin.",
+  "inaccurate": "Wygląda niedokładnie",
+  "unsafe": "Wygląda niebezpiecznie lub nieodpowiednio",
+  "privacy": "Budzi obawy dotyczące prywatności",
+  "other": "Coś innego",
+  "send": "Wyślij zgłoszenie",
+  "sent": "Dziękujemy. Rozpatrzymy je w ciągu 48 godzin.",
+  "clinic": {
+    "action": "Eksportuj zapis postępów",
+    "exporting": "Przygotowywanie…",
+    "title": "Zapis postępów odbudowy włosów",
+    "brand": "Kök",
+    "clinicLine": "Klinika: {{name}}",
+    "operationLine": "Data zabiegu: {{date}}",
+    "generatedLine": "Utworzono {{date}}",
+    "photosHeading": "Zdjęcia",
+    "noPhotos": "Na razie brak zdjęć.",
+    "shedHeading": "Dziennik wypadania",
+    "shedEmpty": "Na razie brak wpisów o wypadaniu.",
+    "col": {
+      "week": "Tydzień",
+      "days": "Dni z wpisem",
+      "average": "Średnia",
+      "max": "Najwyższa"
+    },
+    "weekRow": "Tydzień {{n}}",
+    "overall": "Wszystkie wpisy",
+    "before": "Przed",
+    "week": "Tydzień {{n}}",
+    "disclaimer": "Osobisty zapis postępów — nie dokument medyczny",
+    "dialog": "Udostępnij swój zapis postępów",
+    "failed": "Nie udało się utworzyć raportu. Spróbuj ponownie.",
+    "empty": "Najpierw dodaj zdjęcie lub wpis o wypadaniu.",
+    "unsupported": "Raportów nie można tworzyć w przeglądarce."
+  },
+  "unavailable": "Tego podglądu nie można zgłosić."
+}

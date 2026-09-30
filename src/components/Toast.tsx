@@ -5,7 +5,7 @@ import Animated, { FadeInUp, FadeOutUp } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { create } from 'zustand';
 
-import { colors, radius, spacing } from '@/theme/tokens';
+import { colors, glows, radius, spacing } from '@/theme/tokens';
 
 import { AppText } from './AppText';
 import { PressableScale } from './PressableScale';
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surfaceHigh,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.strokeStrong,
-    boxShadow: '0px 10px 30px rgba(0,0,0,0.45)',
+    boxShadow: glows.soft,
     maxWidth: 520,
   },
   text: { flexShrink: 1 },

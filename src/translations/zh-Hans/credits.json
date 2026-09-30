@@ -1,0 +1,22 @@
+{
+  "title": "获取点数",
+  "subtitle": "点数永不过期。标准预览消耗 {{standard}} 点数，高清预览消耗 {{high}} 点数。",
+  "balance": "你的余额",
+  "equivalent": "约合 {{standard}} 次标准预览或 {{high}} 次高清预览",
+  "packs": {
+    "credits_10": "入门",
+    "credits_25": "进阶",
+    "credits_60": "专业"
+  },
+  "popular": "热门",
+  "success": "已添加 {{count}} 点数。",
+  "pending": "你的购买正在等待批准。",
+  "failedBody": "点数套餐未能加载。请检查网络连接后重试。",
+  "emptyBody": "点数套餐暂时不可用，请稍后再试。",
+  "freeHigh_other": "有 {{count}} 次免费高清预览待使用",
+  "examplesTitle": "点数能用多久",
+  "exampleStandard": "标准预览",
+  "exampleHigh": "高清预览，无水印",
+  "proHint": "Pro 会员每周或每月都会获得点数。",
+  "close": "关闭点数商店"
+}

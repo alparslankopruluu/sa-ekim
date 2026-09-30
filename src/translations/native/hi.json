@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök कैमरे का इस्तेमाल करता है ताकि आप हर बार एक ही एंगल से अपनी प्रगति की फ़ोटो ले सकें।",
+  "NSPhotoLibraryUsageDescription": "Kök आपकी फ़ोटो खोलता है ताकि आप प्रिव्यू या अपने सफ़र के लिए एक फ़ोटो चुन सकें।",
+  "NSPhotoLibraryAddUsageDescription": "Kök आपके प्रिव्यू और तुलना की तस्वीरें आपकी फ़ोटो लाइब्रेरी में सहेजता है।",
+  "NSMotionUsageDescription": "Kök मोशन सेंसर पढ़ता है ताकि यह जाँच सके कि फ़ोन सीधा पकड़ा गया है, जिससे फ़ोटो एक जैसी आएँ।"
+}

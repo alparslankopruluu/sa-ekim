@@ -1,0 +1,84 @@
+{
+  "close": "关闭相机",
+  "title": "进展照片",
+  "angle": {
+    "front": "正面",
+    "left": "左侧",
+    "right": "右侧",
+    "top": "头顶",
+    "crown": "发旋"
+  },
+  "instruction": {
+    "front": "头发保持干燥，并像平时一样造型。让面部位于椭圆框内，发际线靠近顶部。",
+    "left": "转向一侧，露出左侧。手机保持竖直，与视线齐平。",
+    "right": "转向一侧，露出右侧。手机保持竖直，与视线齐平。",
+    "top": "将手机水平举在头顶上方，屏幕朝上，让后置摄像头朝下拍摄头顶。",
+    "crown": "将手机水平举在后脑上方，屏幕朝上，让后置摄像头朝下拍摄发旋。"
+  },
+  "cameraNote": {
+    "front": "使用前置摄像头，方便你查看取景。",
+    "back": "使用后置摄像头。请将手机放平，或请他人帮你拍摄。手机放平时你会感到一下轻微震动。"
+  },
+  "guide": {
+    "ghostHide": "隐藏上一张照片",
+    "ghostShow": "显示上一张照片",
+    "ghostOverlay": "你上一张{{angle}}照片的叠加图，{{label}}",
+    "frame": "带取景参考线的相机画面"
+  },
+  "level": {
+    "ok": "已放平，可以拍摄",
+    "upright": "请将手机竖直",
+    "flat": "请将手机放平，屏幕朝上",
+    "unavailable": "此设备没有运动传感器，因此水平检测已关闭。请自行确认手机是竖直的。",
+    "a11yOk": "手机已放平，可以拍照。",
+    "a11yBlockedUpright": "手机还没有竖直。",
+    "a11yBlockedFlat": "手机还没有放平。"
+  },
+  "shutter": {
+    "label": "拍照",
+    "blockedUpright": "请将手机竖直后再拍照",
+    "blockedFlat": "请将手机放平后再拍照"
+  },
+  "library": "从相册选择",
+  "permission": {
+    "checking": "正在检查相机权限…",
+    "title": "相机权限未开启",
+    "body": "Kök 仅将相机用于拍摄你的进展照片。照片保存在这台设备上。你也可以从相册中选择照片。",
+    "allow": "允许使用相机",
+    "settings": "打开设置"
+  },
+  "unavailable": {
+    "title": "此处无法使用相机",
+    "body": "你可以改为从相册中选择照片。"
+  },
+  "review": {
+    "retake": "重拍",
+    "use": "使用照片",
+    "saving": "正在保存…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "这张照片仅用于生成你的预览，不会添加到你的旅程中。",
+    "a11y": "你刚拍摄的照片预览"
+  },
+  "error": {
+    "save": "无法保存照片，请重试。",
+    "capture": "无法拍摄照片，请重试。",
+    "pick": "无法打开相册，请重试。"
+  },
+  "saved": "照片已保存",
+  "checking": "正在检查你的方案…",
+  "detail": {
+    "title": "照片",
+    "image": "{{angle}}照片，{{label}}",
+    "taken": "拍摄于 {{date}}",
+    "compare": "与其他照片对比…",
+    "delete": "删除照片",
+    "confirmTitle": "删除这张照片？",
+    "confirmBody": "照片将从这台设备中移除，且无法恢复。",
+    "confirm": "删除",
+    "cancel": "保留",
+    "missingTitle": "这张照片已不存在",
+    "missingBody": "它可能已被删除。",
+    "close": "关闭",
+    "loadError": "无法显示这张照片。"
+  }
+}

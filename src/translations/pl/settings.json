@@ -1,0 +1,119 @@
+{
+  "title": "Ustawienia",
+  "sections": {
+    "subscription": "Subskrypcja i kredyty",
+    "language": "Język",
+    "notifications": "Powiadomienia",
+    "preferences": "Preferencje",
+    "data": "Dane i prywatność",
+    "account": "Konto",
+    "legal": "Informacje prawne i pomoc",
+    "about": "O aplikacji",
+    "developer": "Deweloper"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Plan darmowy",
+    "renews": "Odnawia się {{date}}",
+    "expires": "Kończy się {{date}}",
+    "manage": "Zarządzaj subskrypcją",
+    "restore": "Przywróć zakupy",
+    "upgrade": "Przejdź na Pro",
+    "restoreDone": "Witaj ponownie. Pro zostało przywrócone.",
+    "restoreNone": "Nie znaleziono wcześniejszych zakupów.",
+    "balance": "Saldo kredytów",
+    "buyCredits": "Zdobądź kredyty",
+    "freeHigh_one": "{{count}} darmowy podgląd HD",
+    "freeHigh_few": "{{count}} darmowe podglądy HD",
+    "freeHigh_many": "{{count}} darmowych podglądów HD",
+    "freeHigh_other": "{{count}} darmowego podglądu HD"
+  },
+  "language": {
+    "title": "Język",
+    "pickerTitle": "Wybierz język",
+    "rtlNote": "Uruchom Kök ponownie, aby zmienić kierunek układu.",
+    "closePicker": "Zamknij listę języków"
+  },
+  "notifications": {
+    "previews": "Podgląd gotowy",
+    "offers": "Prezenty i oferty",
+    "reminders": "Przypomnienia o drodze",
+    "remindersHint": "Przypomnienia o pielęgnacji, cotygodniowym zdjęciu i fazach. Przypomnienia o fazach są częścią Pro.",
+    "systemOff": "Powiadomienia dla Kök są wyłączone w ustawieniach systemu. Stuknij, aby je otworzyć."
+  },
+  "preferences": {
+    "haptics": "Wibracje dotykowe"
+  },
+  "data": {
+    "wipe": "Usuń wszystkie moje dane",
+    "wipeHint": "Usuwa z tego urządzenia zdjęcia z Twojej drogi, dziennik wypadania i podglądy.",
+    "wipeTitle": "Usunąć wszystkie Twoje dane?",
+    "wipeBody": "To trwale usuwa datę zabiegu, zdjęcia postępów, dziennik wypadania i zapisane podglądy. Subskrypcja i kredyty pozostają przy Twoim koncie. Tej operacji nie można cofnąć.",
+    "wipeConfirm": "Usuń moje dane",
+    "wiping": "Usuwanie…",
+    "wiped": "Twoje dane zostały usunięte z tego urządzenia."
+  },
+  "account": {
+    "guest": "Konto anonimowe",
+    "id": "Identyfikator konta",
+    "delete": "Usuń konto",
+    "deleteHint": "Usuwa z naszych serwerów Twoje konto, kredyty i przesłane zdjęcia.",
+    "deleteTitle": "Usunąć Twoje konto?",
+    "deleteBody": "To trwale usuwa Twoje konto, kredyty, zapisane podglądy i każde przesłane zdjęcie oraz czyści Twoją drogę na tym urządzeniu. Aktywną subskrypcję trzeba anulować osobno w ustawieniach konta w sklepie.",
+    "deleteConfirm": "Usuń konto",
+    "deleting": "Usuwanie…",
+    "deleted": "Twoje konto zostało usunięte."
+  },
+  "legal": {
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki korzystania",
+    "ai": "Jak działają podglądy AI",
+    "support": "Pomoc i wsparcie"
+  },
+  "about": {
+    "version": "Wersja {{version}} ({{build}})",
+    "contact": "Napisz do pomocy technicznej",
+    "rate": "Oceń Kök",
+    "replay": "Powtórz wprowadzenie"
+  },
+  "confirm": {
+    "cancel": "Anuluj"
+  },
+  "developer": {
+    "open": "Narzędzia deweloperskie",
+    "backend": "Tryb backendu",
+    "replayOnboarding": "Powtórz wprowadzenie",
+    "offerings": "Oferty sklepu",
+    "purchase": "Wynik zakupu",
+    "wheel": "Ułożenie koła prezentów",
+    "failNext": "Niech następny podgląd się nie uda",
+    "cohort": "Liczba osób w moim tygodniu",
+    "addCredits": "Przyznaj 50 kredytów",
+    "reset": "Zresetuj wszystkie dane testowe",
+    "resetDone": "Dane testowe zostały zresetowane.",
+    "credits": "Kredyty przyznane.",
+    "testCrash": "Wyślij testową awarię",
+    "events": "Dziennik zdarzeń",
+    "empty": "Na razie brak zdarzeń",
+    "mockOnly": "Te przełączniki istnieją tylko w testowym backendzie.",
+    "values": {
+      "ok": "ok",
+      "slow": "wolno",
+      "fail": "błąd",
+      "empty": "puste",
+      "success": "powodzenie",
+      "cancel": "anuluj",
+      "home": "ekran główny",
+      "onboarding_exit": "wyjście z wprowadzenia",
+      "off": "wył."
+    },
+    "storefront": "Waluta testowego sklepu",
+    "giftOffer": "Pokaż ofertę prezentu bez nagrody",
+    "forcePro": "Uprawnienie Pro",
+    "grantFreeHigh": "Przyznaj darmowy podgląd HD",
+    "previewsEnabled": "Podglądy włączone (wyłącznik awaryjny)",
+    "nextPrize": "Następna nagroda z koła",
+    "honest": "uczciwe losowanie",
+    "offerCacheNote": "Zmiany w sklepie zaczną obowiązywać przy następnej próbie otwarcia ekranu płatności lub po pięciu minutach."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "逐週記錄你 12–18 個月的旅程",
+    "hairline": "逐週記錄你的髮際線旅程",
+    "crown": "逐週記錄你的髮旋旅程",
+    "part": "逐週記錄你的分線旅程",
+    "brows": "逐週記錄你的眉毛旅程",
+    "beard": "逐週記錄你的鬍鬚旅程"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "你的第一次預覽已完成。Pro 提供完整時間軸：比較、階段帶和每週指南。"
+    },
+    "settings": {
+      "subtitle": "在你自己的相片旁，查看你所處的這一週通常是什麼情況。"
+    },
+    "home_banner": {
+      "subtitle": "在你自己的相片旁，查看你所處的這一週通常是什麼情況。"
+    },
+    "notification": {
+      "subtitle": "在你自己的相片旁，查看你所處的這一週通常是什麼情況。"
+    },
+    "gift": {
+      "subtitle": "你的禮物價格適用於年度方案的第一年。"
+    },
+    "locked_compare": {
+      "title": "逐週比較你的相片",
+      "subtitle": "在兩張相片之間滑動，或並排查看，每張都標有對應的週數。"
+    },
+    "locked_band": {
+      "title": "查看你所在這一週的典型範圍",
+      "subtitle": "你的相片與階段帶並排顯示。它呈現的是典型範圍，個人結果各不相同。"
+    },
+    "locked_photos": {
+      "title": "把每一週都記錄下來",
+      "subtitle": "免費版可保存 {{count}} 張進展相片。Pro 可保存整整 12–18 個月的相片。"
+    },
+    "locked_report": {
+      "title": "與你的診所分享報告",
+      "subtitle": "一份 PDF，包含每個角度的首張和最新相片、週數標籤以及你的脫落摘要。"
+    },
+    "locked_hd": {
+      "title": "為高畫質預覽取得更多點數",
+      "subtitle": "高畫質預覽需要消耗點數，且沒有浮水印。Pro 包含一份可用於高畫質預覽的點數額度。"
+    },
+    "locked_guide": {
+      "title": "完整的每週指南",
+      "subtitle": "每個階段通常會發生什麼、哪些情況很常見，以及本週可以做什麼。"
+    },
+    "insufficient_credits": {
+      "title": "你需要更多點數",
+      "subtitle": "Pro 每週或每月包含一份點數額度。你也可以購買點數方案。"
+    },
+    "result_upgrade": {
+      "title": "查看高畫質版本",
+      "subtitle": "高畫質預覽沒有浮水印，需要消耗點數。Pro 包含可用於高畫質預覽的點數。"
+    }
+  },
+  "benefits": {
+    "photos": "無限張進展相片",
+    "compare": "滑動比較和並排比較",
+    "band": "在你的相片上顯示預期階段帶",
+    "guide": "每個階段的完整指南",
+    "reminders": "階段提醒和拍照提醒",
+    "report": "診所 PDF 報告",
+    "cohort": "查看與你同一週的有多少人",
+    "hd": "包含的點數可用於高畫質預覽",
+    "credits": "用於預覽的點數額度"
+  },
+  "plans": {
+    "annual": "按年",
+    "monthly": "按月",
+    "weekly": "按週",
+    "bestValue": "最超值",
+    "save": "比按週訂閱節省 {{percent}}%",
+    "perWeek": "{{price}}/週",
+    "perMonth": "{{price}}/月",
+    "perYear": "{{price}}/年",
+    "firstYear": "第一年 {{price}}"
+  },
+  "planCredits": {
+    "weekly": "每週包含 {{count}} 點數",
+    "monthly": "每月包含 {{count}} 點數",
+    "annual": "開始時包含 {{initial}} 點數，之後每週 {{count}} 點數"
+  },
+  "cta": {
+    "subscribe": "繼續",
+    "processing": "處理中…"
+  },
+  "disclosure": {
+    "annual": "每年收費 {{price}}。在你取消之前會自動續訂。可隨時在應用程式商店的帳號設定中取消。所顯示的價格即為你被收取的金額。",
+    "monthly": "每月收費 {{price}}。在你取消之前會自動續訂。可隨時在應用程式商店的帳號設定中取消。所顯示的價格即為你被收取的金額。",
+    "weekly": "每週收費 {{price}}。在你取消之前會自動續訂。可隨時在應用程式商店的帳號設定中取消。所顯示的價格即為你被收取的金額。",
+    "intro": "你的禮物價格：第一年 {{intro}}，之後每年 {{price}}。在你取消之前會自動續訂。可隨時在應用程式商店的帳號設定中取消。"
+  },
+  "restore": "還原",
+  "restoreNone": "找不到之前的購買紀錄。",
+  "restoreSuccess": "歡迎回來。Pro 已還原。",
+  "privacy": "隱私權",
+  "termsLink": "條款",
+  "loading": "正在載入方案…",
+  "failedTitle": "方案未能載入",
+  "failedBody": "請檢查網路連線後重試。",
+  "emptyBody": "方案暫時無法使用，請稍後再試。",
+  "purchaseFailed": "購買未完成，請重試。",
+  "pending": "你的購買正在等待核准。",
+  "success": "你已成為 Pro 使用者，謝謝。",
+  "mockBadge": "測試商店 · 不會產生真實扣款",
+  "giftBanner": "你的禮物",
+  "creditsLink": "只需要點數？查看點數方案",
+  "closeLabel": "關閉"
+}

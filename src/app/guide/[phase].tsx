@@ -158,7 +158,7 @@ export default function GuideScreen() {
               <AppText variant="micro" color="textTertiary">
                 {t('guide.header.week')}
               </AppText>
-              <AppText variant="title2">{String(weekIndex(def.fromDay))}</AppText>
+              <AppText variant="title2">{String(weekIndex(current && day !== null ? day : def.fromDay))}</AppText>
             </ProgressRing>
             <View style={styles.heroText}>
               <View style={styles.tags}>

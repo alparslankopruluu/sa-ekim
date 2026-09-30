@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Śledź swoją drogę przez 12–18 miesięcy, tydzień po tygodniu",
+    "hairline": "Śledź drogę swojej linii włosów, tydzień po tygodniu",
+    "crown": "Śledź drogę swojego czubka głowy, tydzień po tygodniu",
+    "part": "Śledź drogę swojego przedziałka, tydzień po tygodniu",
+    "brows": "Śledź drogę swoich brwi, tydzień po tygodniu",
+    "beard": "Śledź drogę swojej brody, tydzień po tygodniu"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Twój pierwszy podgląd jest gotowy. Pro dodaje pełną oś czasu: porównanie, pasmo faz i każdy cotygodniowy przewodnik."
+    },
+    "settings": {
+      "subtitle": "Zobacz, co jest typowe dla Twojego tygodnia, obok własnych zdjęć."
+    },
+    "home_banner": {
+      "subtitle": "Zobacz, co jest typowe dla Twojego tygodnia, obok własnych zdjęć."
+    },
+    "notification": {
+      "subtitle": "Zobacz, co jest typowe dla Twojego tygodnia, obok własnych zdjęć."
+    },
+    "gift": {
+      "subtitle": "Cena z prezentu obowiązuje przez pierwszy rok planu rocznego."
+    },
+    "locked_compare": {
+      "title": "Porównuj swoje zdjęcia, tydzień po tygodniu",
+      "subtitle": "Przesuwaj suwak między dwoma zdjęciami lub oglądaj je obok siebie, każde z oznaczeniem tygodnia."
+    },
+    "locked_band": {
+      "title": "Zobacz typowy zakres dla swojego tygodnia",
+      "subtitle": "Twoje zdjęcie obok pasma faz. Pokazuje ono typowy zakres, a wyniki bywają różne."
+    },
+    "locked_photos": {
+      "title": "Zachowaj każdy tydzień w zapisie",
+      "subtitle": "Wersja darmowa zachowuje {{count}} zdjęć postępów. Pro zachowuje całe 12–18 miesięcy."
+    },
+    "locked_report": {
+      "title": "Udostępnij raport swojej klinice",
+      "subtitle": "Plik PDF z Twoim pierwszym i ostatnim zdjęciem z każdego ujęcia, oznaczeniami tygodni i podsumowaniem wypadania."
+    },
+    "locked_hd": {
+      "title": "Więcej kredytów na podglądy HD",
+      "subtitle": "Podglądy HD zużywają kredyty i nie mają znaku wodnego. Pro zawiera pulę kredytów do wydania na nie."
+    },
+    "locked_guide": {
+      "title": "Pełny cotygodniowy przewodnik",
+      "subtitle": "Co zwykle dzieje się w każdej fazie, co jest normalne i co robić w tym tygodniu."
+    },
+    "insufficient_credits": {
+      "title": "Potrzebujesz na to więcej kredytów",
+      "subtitle": "Pro zawiera pulę kredytów co tydzień lub co miesiąc. Możesz też kupić pakiet kredytów."
+    },
+    "result_upgrade": {
+      "title": "Zobacz to w HD",
+      "subtitle": "Podglądy HD nie mają znaku wodnego i zużywają kredyty. Pro zawiera kredyty do wydania na nie."
+    }
+  },
+  "benefits": {
+    "photos": "Nieograniczona liczba zdjęć postępów",
+    "compare": "Porównanie suwakiem i obok siebie",
+    "band": "Pasmo oczekiwanej fazy na Twoich zdjęciach",
+    "guide": "Pełny przewodnik po każdej fazie",
+    "reminders": "Przypomnienia o fazach i zdjęciach",
+    "report": "Raport PDF dla kliniki",
+    "cohort": "Zobacz, ilu osób jest w Twoim tygodniu",
+    "hd": "Zawarte kredyty działają w podglądach HD",
+    "credits": "Pula kredytów na podglądy"
+  },
+  "plans": {
+    "annual": "Rocznie",
+    "monthly": "Miesięcznie",
+    "weekly": "Tygodniowo",
+    "bestValue": "Najlepsza wartość",
+    "save": "Oszczędzasz {{percent}}% w porównaniu z tygodniowym",
+    "perWeek": "{{price}}/tydzień",
+    "perMonth": "{{price}}/miesiąc",
+    "perYear": "{{price}}/rok",
+    "firstYear": "{{price}} za pierwszy rok"
+  },
+  "planCredits": {
+    "weekly": "Kredyty w pakiecie: {{count}} co tydzień",
+    "monthly": "Kredyty w pakiecie: {{count}} co miesiąc",
+    "annual": "Na start {{initial}} kredytów, potem {{count}} co tydzień"
+  },
+  "cta": {
+    "subscribe": "Dalej",
+    "processing": "Przetwarzanie…"
+  },
+  "disclosure": {
+    "annual": "Płatność {{price}} rocznie. Odnawia się automatycznie, dopóki jej nie anulujesz. Anuluj w dowolnej chwili w ustawieniach konta w sklepie. Pokazana cena to kwota, którą zapłacisz.",
+    "monthly": "Płatność {{price}} miesięcznie. Odnawia się automatycznie, dopóki jej nie anulujesz. Anuluj w dowolnej chwili w ustawieniach konta w sklepie. Pokazana cena to kwota, którą zapłacisz.",
+    "weekly": "Płatność {{price}} tygodniowo. Odnawia się automatycznie, dopóki jej nie anulujesz. Anuluj w dowolnej chwili w ustawieniach konta w sklepie. Pokazana cena to kwota, którą zapłacisz.",
+    "intro": "Twoja cena z prezentu: {{intro}} za pierwszy rok, potem {{price}} rocznie. Odnawia się automatycznie, dopóki jej nie anulujesz. Anuluj w dowolnej chwili w ustawieniach konta w sklepie."
+  },
+  "restore": "Przywróć",
+  "restoreNone": "Nie znaleziono wcześniejszych zakupów.",
+  "restoreSuccess": "Witaj ponownie. Pro zostało przywrócone.",
+  "privacy": "Prywatność",
+  "termsLink": "Warunki",
+  "loading": "Ładowanie planów…",
+  "failedTitle": "Nie udało się załadować planów",
+  "failedBody": "Sprawdź połączenie i spróbuj ponownie.",
+  "emptyBody": "Plany są teraz niedostępne. Spróbuj ponownie później.",
+  "purchaseFailed": "Zakup nie został zrealizowany. Spróbuj ponownie.",
+  "pending": "Twój zakup czeka na zatwierdzenie.",
+  "success": "Masz Pro. Dziękujemy.",
+  "mockBadge": "Sklep testowy · bez prawdziwych opłat",
+  "giftBanner": "Twój prezent",
+  "creditsLink": "Potrzebujesz tylko kredytów? Zobacz pakiety kredytów",
+  "closeLabel": "Zamknij"
+}

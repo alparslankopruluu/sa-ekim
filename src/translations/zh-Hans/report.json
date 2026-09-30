@@ -1,0 +1,39 @@
+{
+  "title": "举报此预览",
+  "subtitle": "请告诉我们哪里有问题。我们会在 48 小时内审核每一份举报。",
+  "inaccurate": "看起来不准确",
+  "unsafe": "看起来不安全或不适当",
+  "privacy": "涉及隐私问题",
+  "other": "其他问题",
+  "send": "发送举报",
+  "sent": "谢谢。我们会在 48 小时内审核。",
+  "clinic": {
+    "action": "导出进展记录",
+    "exporting": "正在准备…",
+    "title": "毛发修复进展记录",
+    "brand": "Kök",
+    "clinicLine": "诊所：{{name}}",
+    "operationLine": "手术日期：{{date}}",
+    "generatedLine": "创建于 {{date}}",
+    "photosHeading": "照片",
+    "noPhotos": "还没有照片。",
+    "shedHeading": "脱落记录",
+    "shedEmpty": "还没有脱落记录。",
+    "col": {
+      "week": "周",
+      "days": "记录天数",
+      "average": "平均",
+      "max": "最高"
+    },
+    "weekRow": "第 {{n}} 周",
+    "overall": "全部记录",
+    "before": "之前",
+    "week": "第 {{n}} 周",
+    "disclaimer": "个人进展记录，并非医疗文件",
+    "dialog": "分享你的进展记录",
+    "failed": "无法创建报告，请重试。",
+    "empty": "请先添加一张照片或一条脱落记录。",
+    "unsupported": "无法在浏览器中创建报告。"
+  },
+  "unavailable": "此预览无法被举报。"
+}

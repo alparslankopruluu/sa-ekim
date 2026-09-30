@@ -1,0 +1,22 @@
+{
+  "title": "取得點數",
+  "subtitle": "點數永不過期。標準預覽消耗 {{standard}} 點數，高畫質預覽消耗 {{high}} 點數。",
+  "balance": "你的餘額",
+  "equivalent": "約可進行 {{standard}} 次標準預覽或 {{high}} 次高畫質預覽",
+  "packs": {
+    "credits_10": "入門",
+    "credits_25": "進階",
+    "credits_60": "專業"
+  },
+  "popular": "熱門",
+  "success": "已加入 {{count}} 點數。",
+  "pending": "你的購買正在等待核准。",
+  "failedBody": "點數方案未能載入。請檢查網路連線後重試。",
+  "emptyBody": "點數方案暫時無法使用，請稍後再試。",
+  "freeHigh_other": "有 {{count}} 次免費高畫質預覽待使用",
+  "examplesTitle": "點數能用多久",
+  "exampleStandard": "標準預覽",
+  "exampleHigh": "高畫質預覽，無浮水印",
+  "proHint": "Pro 會員每週或每月都會獲得點數。",
+  "close": "關閉點數商店"
+}

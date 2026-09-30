@@ -124,8 +124,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: VERSION,
   orientation: 'portrait',
   icon: './assets/images/icon.png',
-  userInterfaceStyle: 'dark',
-  backgroundColor: '#0D0A08',
+  userInterfaceStyle: 'automatic',
+  backgroundColor: '#F2F2F7',
   locales: Object.fromEntries(
     NATIVE_LOCALES.map((locale) => [locale, `./src/translations/native/${locale}.json`]),
   ),
@@ -167,7 +167,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     package: BUNDLE_ID,
     versionCode: BUILD_NUMBER,
     adaptiveIcon: {
-      backgroundColor: '#0D0A08',
+      backgroundColor: '#007AFF',
       foregroundImage: './assets/images/android-icon-foreground.png',
       backgroundImage: './assets/images/android-icon-background.png',
       monochromeImage: './assets/images/android-icon-monochrome.png',
@@ -204,15 +204,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-splash-screen',
       {
-        backgroundColor: '#0D0A08',
+        backgroundColor: '#F2F2F7',
         image: './assets/images/splash-icon.png',
         imageWidth: 148,
-      },
-    ],
-    [
-      'expo-font',
-      {
-        fonts: ['./assets/fonts/DMSerifDisplay-Regular.ttf', './assets/fonts/DMSerifDisplay-Italic.ttf'],
+        dark: { backgroundColor: '#000000', image: './assets/images/splash-icon.png' },
       },
     ],
     ['expo-localization', { supportsRTL: true }],
@@ -248,7 +243,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'expo-notifications',
       {
         icon: './assets/images/notification-icon.png',
-        color: '#E89A5B',
+        color: '#007AFF',
         defaultChannel: 'previews',
       },
     ],

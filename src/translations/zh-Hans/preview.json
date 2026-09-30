@@ -1,0 +1,244 @@
+{
+  "title": "新建预览",
+  "subtitle": "选择一种风格和一张照片，查看一种可能的样子。",
+  "aiLabel": "AI 预览，并不是对你结果的预测",
+  "aiLabelShort": "AI 预览",
+  "aiLabelDetail": "它展示的是一种可能的样子，而不是将会发生的情况。",
+  "common": {
+    "close": "关闭",
+    "back": "返回",
+    "retry": "重试",
+    "cancel": "取消",
+    "delete": "删除"
+  },
+  "goals": {
+    "label": "部位",
+    "hairline": "发际线",
+    "crown": "发旋",
+    "part": "发缝",
+    "brows": "眉毛",
+    "beard": "胡须"
+  },
+  "angles": {
+    "front": "正面照片",
+    "left": "左侧照片",
+    "right": "右侧照片",
+    "top": "头顶照片",
+    "crown": "发旋照片"
+  },
+  "styles": {
+    "label": "风格",
+    "hairline_soft": {
+      "name": "更柔和自然的发际线",
+      "description": "轻轻柔化的发际线，保持自然的形状。"
+    },
+    "hairline_temples": {
+      "name": "鬓角修饰",
+      "description": "让两鬓周围看起来更均衡。"
+    },
+    "hairline_lower": {
+      "name": "更低、更清晰的线条",
+      "description": "略低一些、更清晰的发际线。"
+    },
+    "hairline_density": {
+      "name": "增加密度",
+      "description": "在你目前的发际线范围内呈现更浓密的样子。"
+    },
+    "crown_light": {
+      "name": "轻度",
+      "description": "发旋处的轻度覆盖。"
+    },
+    "crown_medium": {
+      "name": "中度",
+      "description": "发旋处的中度覆盖。"
+    },
+    "crown_full": {
+      "name": "浓密",
+      "description": "发旋处的完整覆盖。"
+    },
+    "part_light": {
+      "name": "轻度",
+      "description": "发缝沿线略显丰盈。"
+    },
+    "part_medium": {
+      "name": "中度",
+      "description": "发缝沿线中等丰盈。"
+    },
+    "part_full": {
+      "name": "浓密",
+      "description": "发缝沿线呈现丰盈的样子。"
+    },
+    "brows_natural": {
+      "name": "自然",
+      "description": "保留你自己形状的自然眉毛。"
+    },
+    "brows_fuller": {
+      "name": "更浓密",
+      "description": "保留你自己的形状，略微更浓密。"
+    },
+    "brows_arched": {
+      "name": "弧形",
+      "description": "柔和上扬、整理过的眉形。"
+    },
+    "beard_patch": {
+      "name": "补全稀疏处",
+      "description": "补全稀疏的部分。"
+    },
+    "beard_full": {
+      "name": "浓密胡须",
+      "description": "下颌和脸颊处更浓密的胡须。"
+    },
+    "beard_moustache": {
+      "name": "髭须",
+      "description": "上唇上方更浓密的样子。"
+    }
+  },
+  "bestAngle": "搭配{{angle}}效果最佳",
+  "density": {
+    "label": "密度",
+    "natural": "自然",
+    "fuller": "更浓密",
+    "full": "浓密"
+  },
+  "quality": {
+    "label": "画质",
+    "standard": {
+      "title": "标准",
+      "description": "快速初看。"
+    },
+    "high": {
+      "title": "高清",
+      "description": "细节更丰富。"
+    }
+  },
+  "price": {
+    "label": "本次预览",
+    "free": "免费",
+    "freeHigh": "免费高清预览",
+    "credits_other": "{{count}} 点数",
+    "freeNote": "你的第一次预览免费，并带有水印。",
+    "balance_other": "你有 {{count}} 点数。",
+    "short_other": "你有 {{count}} 点数，本次预览需要 {{cost}} 点数。",
+    "useFreeHigh": "使用我的免费高清预览",
+    "useFreeHighHint_other": "你有 {{count}} 次免费高清预览。"
+  },
+  "photo": {
+    "label": "照片",
+    "empty": "还没有照片",
+    "take": "拍照",
+    "library": "从相册选择",
+    "journey": "使用最新的旅程照片",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "移除照片",
+    "selected": "已选择的照片",
+    "sentNote": "只有在你批准 AI 处理并点击“创建”后，才会发送你的照片。",
+    "libraryFailed": "无法打开你的相册。"
+  },
+  "cta": {
+    "create": "创建预览",
+    "createFree": "创建免费预览",
+    "getCredits": "获取点数",
+    "continue": "继续",
+    "addPhoto": "添加照片以继续",
+    "chooseStyle": "选择风格以继续"
+  },
+  "helper": {
+    "needsConsent": "在发送你的照片之前，我们会征求一次你的同意。",
+    "needsCredits": "本次预览需要更多点数。",
+    "walletError": "无法加载你的点数。"
+  },
+  "rendering": {
+    "title": "你的预览",
+    "status": {
+      "uploading": "正在发送你的照片",
+      "creating": "正在开始生成预览",
+      "waiting": "正在开始生成预览",
+      "queued": "正在等待空闲名额",
+      "processing": "正在生成你的预览",
+      "finalizing": "即将完成"
+    },
+    "estimate": "通常不到一分钟。",
+    "background": "你可以离开此页面。我们会继续处理，并在预览准备好时通知你。",
+    "notifyMe": "准备好时通知我",
+    "notifyOn": "预览准备好时我们会通知你。",
+    "keepBrowsing": "继续浏览",
+    "cancel": "取消预览",
+    "cancelHint": "取消后，你的点数会退回。",
+    "cancelTooLate": "预览已在收尾阶段，现在无法取消。",
+    "failedTitle": "这次预览没有完成",
+    "canceledTitle": "预览已取消",
+    "offlineTitle": "你已离线",
+    "errorTitle": "无法开始生成预览",
+    "refunded_other": "已退回你的 {{count}} 点数。",
+    "nothingCharged": "没有扣除任何费用。",
+    "retrySafe": "可以放心重试：不会重复扣费。",
+    "retry": "重试",
+    "getCredits": "获取点数",
+    "reviewConsent": "查看并批准",
+    "seePlans": "查看方案",
+    "choosePhoto": "选择另一张照片",
+    "backToStyles": "返回风格列表",
+    "close": "关闭",
+    "photoA11y": "你的照片",
+    "ringA11y": "预览进度，{{percent}}%"
+  },
+  "result": {
+    "title": "你的预览",
+    "before": "你的照片",
+    "after": "AI 预览",
+    "watermark": "Kök · AI 预览",
+    "wipeA11y": "前后对比滑块。上下滑动，将你的照片与 AI 预览进行对比。",
+    "demo": "演示",
+    "save": "保存",
+    "share": "分享",
+    "report": "举报",
+    "delete": "删除",
+    "saved": "已保存到你的相册",
+    "saveDenied": "请在“设置”中允许访问照片，以保存预览。",
+    "unsupported": "此预览在这里无法保存或分享。",
+    "shareTitle": "分享你的 AI 预览",
+    "tryAnother": "试试其他风格",
+    "upgradeTitle": "想要更多细节？",
+    "upgradeBody": "高清预览细节更丰富，且没有水印。",
+    "notFound": "找不到这个预览。预览会在 30 天后删除。",
+    "toPreviews": "返回预览列表",
+    "beforeGone": "你的原始照片只保留 30 天，因此已无法进行对比。",
+    "loadFailed": "无法加载这个预览。",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_other": "创建高清预览（{{count}} 点数）",
+    "upgradeTryFree": "创建免费高清预览",
+    "availableUntil": "可查看至 {{date}}",
+    "saveNudge": "预览会在 30 天后删除。请将它保存到你的相册，留一份副本。",
+    "saveNudgeSoon": "这个预览即将被删除。请将它保存到你的相册，留一份副本。",
+    "expiredTitle": "这个预览已在 30 天后删除",
+    "expiredBody": "预览及其所用的照片会在 30 天后移除。你可以随时创建新的预览。"
+  },
+  "delete": {
+    "title": "删除这个预览？",
+    "body": "预览图将被永久删除，此操作无法撤销。",
+    "done": "预览已删除"
+  },
+  "tab": {
+    "title": "预览",
+    "new": "新建预览",
+    "honest": "预览是 AI 生成的、展示一种可能样子的图片。",
+    "emptyTitle": "还没有预览",
+    "emptyBody": "预览是 AI 生成的、展示一种可能样子的图片，并不是将会发生的情况。在你自己的照片上试试一种风格，并进行对比。",
+    "emptyCta": "创建预览",
+    "loadFailed": "无法加载你的预览。",
+    "menu": "更多操作",
+    "status": {
+      "queued": "等待中",
+      "processing": "生成中 · {{percent}}%",
+      "finalizing": "即将完成",
+      "failed": "未完成",
+      "canceled": "已取消"
+    },
+    "cardA11y": "{{style}}，{{status}}，{{date}}",
+    "retry": "重试",
+    "delete": "删除",
+    "deleteA11y": "删除预览",
+    "availableUntil": "至 {{date}}",
+    "expired": "已在 30 天后删除"
+  }
+}

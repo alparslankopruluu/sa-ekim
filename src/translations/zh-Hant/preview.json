@@ -1,0 +1,244 @@
+{
+  "title": "新增預覽",
+  "subtitle": "選擇一種風格和一張相片，查看一種可能的樣子。",
+  "aiLabel": "AI 預覽，並不是對你結果的預測",
+  "aiLabelShort": "AI 預覽",
+  "aiLabelDetail": "它呈現的是一種可能的樣子，而不是將會發生的情況。",
+  "common": {
+    "close": "關閉",
+    "back": "返回",
+    "retry": "重試",
+    "cancel": "取消",
+    "delete": "刪除"
+  },
+  "goals": {
+    "label": "部位",
+    "hairline": "髮際線",
+    "crown": "髮旋",
+    "part": "分線",
+    "brows": "眉毛",
+    "beard": "鬍鬚"
+  },
+  "angles": {
+    "front": "正面相片",
+    "left": "左側相片",
+    "right": "右側相片",
+    "top": "頭頂相片",
+    "crown": "髮旋相片"
+  },
+  "styles": {
+    "label": "風格",
+    "hairline_soft": {
+      "name": "更柔和自然的髮際線",
+      "description": "輕輕柔化的髮際線，保持自然的形狀。"
+    },
+    "hairline_temples": {
+      "name": "鬢角修飾",
+      "description": "讓兩鬢周圍看起來更均衡。"
+    },
+    "hairline_lower": {
+      "name": "更低、更清晰的線條",
+      "description": "略低一些、更清晰的髮際線。"
+    },
+    "hairline_density": {
+      "name": "增加密度",
+      "description": "在你目前的髮際線範圍內呈現更濃密的樣子。"
+    },
+    "crown_light": {
+      "name": "輕度",
+      "description": "髮旋處的輕度覆蓋。"
+    },
+    "crown_medium": {
+      "name": "中度",
+      "description": "髮旋處的中度覆蓋。"
+    },
+    "crown_full": {
+      "name": "濃密",
+      "description": "髮旋處的完整覆蓋。"
+    },
+    "part_light": {
+      "name": "輕度",
+      "description": "分線沿線略顯豐盈。"
+    },
+    "part_medium": {
+      "name": "中度",
+      "description": "分線沿線中等豐盈。"
+    },
+    "part_full": {
+      "name": "濃密",
+      "description": "分線沿線呈現豐盈的樣子。"
+    },
+    "brows_natural": {
+      "name": "自然",
+      "description": "保留你自己形狀的自然眉毛。"
+    },
+    "brows_fuller": {
+      "name": "更濃密",
+      "description": "保留你自己的形狀，略微更濃密。"
+    },
+    "brows_arched": {
+      "name": "弧形",
+      "description": "柔和上揚、修整過的眉形。"
+    },
+    "beard_patch": {
+      "name": "補全稀疏處",
+      "description": "補全稀疏的部分。"
+    },
+    "beard_full": {
+      "name": "濃密鬍鬚",
+      "description": "下顎和臉頰處更濃密的鬍鬚。"
+    },
+    "beard_moustache": {
+      "name": "小鬍子",
+      "description": "上唇上方更濃密的樣子。"
+    }
+  },
+  "bestAngle": "搭配{{angle}}效果最佳",
+  "density": {
+    "label": "密度",
+    "natural": "自然",
+    "fuller": "更濃密",
+    "full": "濃密"
+  },
+  "quality": {
+    "label": "畫質",
+    "standard": {
+      "title": "標準",
+      "description": "快速初看。"
+    },
+    "high": {
+      "title": "高畫質",
+      "description": "細節更豐富。"
+    }
+  },
+  "price": {
+    "label": "本次預覽",
+    "free": "免費",
+    "freeHigh": "免費高畫質預覽",
+    "credits_other": "{{count}} 點數",
+    "freeNote": "你的第一次預覽免費，並帶有浮水印。",
+    "balance_other": "你有 {{count}} 點數。",
+    "short_other": "你有 {{count}} 點數，本次預覽需要 {{cost}} 點數。",
+    "useFreeHigh": "使用我的免費高畫質預覽",
+    "useFreeHighHint_other": "你有 {{count}} 次免費高畫質預覽。"
+  },
+  "photo": {
+    "label": "相片",
+    "empty": "還沒有相片",
+    "take": "拍照",
+    "library": "從相簿選取",
+    "journey": "使用最新的旅程相片",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "移除相片",
+    "selected": "已選取的相片",
+    "sentNote": "只有在你核准 AI 處理並點一下「建立」後，才會傳送你的相片。",
+    "libraryFailed": "無法開啟你的相簿。"
+  },
+  "cta": {
+    "create": "建立預覽",
+    "createFree": "建立免費預覽",
+    "getCredits": "取得點數",
+    "continue": "繼續",
+    "addPhoto": "新增相片以繼續",
+    "chooseStyle": "選擇風格以繼續"
+  },
+  "helper": {
+    "needsConsent": "在傳送你的相片之前，我們會徵求一次你的同意。",
+    "needsCredits": "本次預覽需要更多點數。",
+    "walletError": "無法載入你的點數。"
+  },
+  "rendering": {
+    "title": "你的預覽",
+    "status": {
+      "uploading": "正在傳送你的相片",
+      "creating": "正在開始產生預覽",
+      "waiting": "正在開始產生預覽",
+      "queued": "正在等待空閒名額",
+      "processing": "正在產生你的預覽",
+      "finalizing": "即將完成"
+    },
+    "estimate": "通常不到一分鐘。",
+    "background": "你可以離開此畫面。我們會繼續處理，並在預覽準備好時通知你。",
+    "notifyMe": "準備好時通知我",
+    "notifyOn": "預覽準備好時我們會通知你。",
+    "keepBrowsing": "繼續瀏覽",
+    "cancel": "取消預覽",
+    "cancelHint": "取消後，你的點數會退回。",
+    "cancelTooLate": "預覽已在收尾階段，現在無法取消。",
+    "failedTitle": "這次預覽沒有完成",
+    "canceledTitle": "預覽已取消",
+    "offlineTitle": "你已離線",
+    "errorTitle": "無法開始產生預覽",
+    "refunded_other": "已退回你的 {{count}} 點數。",
+    "nothingCharged": "沒有扣除任何費用。",
+    "retrySafe": "可以放心重試：不會重複扣款。",
+    "retry": "重試",
+    "getCredits": "取得點數",
+    "reviewConsent": "查看並核准",
+    "seePlans": "查看方案",
+    "choosePhoto": "選擇另一張相片",
+    "backToStyles": "返回風格列表",
+    "close": "關閉",
+    "photoA11y": "你的相片",
+    "ringA11y": "預覽進度，{{percent}}%"
+  },
+  "result": {
+    "title": "你的預覽",
+    "before": "你的相片",
+    "after": "AI 預覽",
+    "watermark": "Kök · AI 預覽",
+    "wipeA11y": "前後比較滑桿。上下滑動，將你的相片與 AI 預覽進行比較。",
+    "demo": "示範",
+    "save": "儲存",
+    "share": "分享",
+    "report": "檢舉",
+    "delete": "刪除",
+    "saved": "已儲存到你的相片",
+    "saveDenied": "請在「設定」中允許存取相片，以儲存預覽。",
+    "unsupported": "此預覽在這裡無法儲存或分享。",
+    "shareTitle": "分享你的 AI 預覽",
+    "tryAnother": "試試其他風格",
+    "upgradeTitle": "想要更多細節？",
+    "upgradeBody": "高畫質預覽細節更豐富，且沒有浮水印。",
+    "notFound": "找不到這個預覽。預覽會在 30 天後刪除。",
+    "toPreviews": "返回預覽列表",
+    "beforeGone": "你的原始相片只保留 30 天，因此已無法進行比較。",
+    "loadFailed": "無法載入這個預覽。",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_other": "建立高畫質預覽（{{count}} 點數）",
+    "upgradeTryFree": "建立免費高畫質預覽",
+    "availableUntil": "可查看至 {{date}}",
+    "saveNudge": "預覽會在 30 天後刪除。請將它儲存到你的相片，留一份備份。",
+    "saveNudgeSoon": "這個預覽即將被刪除。請將它儲存到你的相片，留一份備份。",
+    "expiredTitle": "這個預覽已在 30 天後刪除",
+    "expiredBody": "預覽及其所用的相片會在 30 天後移除。你可以隨時建立新的預覽。"
+  },
+  "delete": {
+    "title": "刪除這個預覽？",
+    "body": "預覽圖將被永久刪除，此操作無法復原。",
+    "done": "預覽已刪除"
+  },
+  "tab": {
+    "title": "預覽",
+    "new": "新增預覽",
+    "honest": "預覽是 AI 產生的、呈現一種可能樣子的圖片。",
+    "emptyTitle": "還沒有預覽",
+    "emptyBody": "預覽是 AI 產生的、呈現一種可能樣子的圖片，並不是將會發生的情況。在你自己的相片上試試一種風格，並進行比較。",
+    "emptyCta": "建立預覽",
+    "loadFailed": "無法載入你的預覽。",
+    "menu": "更多操作",
+    "status": {
+      "queued": "等待中",
+      "processing": "產生中 · {{percent}}%",
+      "finalizing": "即將完成",
+      "failed": "未完成",
+      "canceled": "已取消"
+    },
+    "cardA11y": "{{style}}，{{status}}，{{date}}",
+    "retry": "重試",
+    "delete": "刪除",
+    "deleteA11y": "刪除預覽",
+    "availableUntil": "至 {{date}}",
+    "expired": "已在 30 天後刪除"
+  }
+}

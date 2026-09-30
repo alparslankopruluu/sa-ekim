@@ -1,0 +1,25 @@
+{
+  "title": "Zanim stworzymy Twój podgląd",
+  "body": "Podgląd tworzą modele obrazu AI, więc wybrane przez Ciebie zdjęcie musi opuścić Twój telefon. Oto, co się dzieje.",
+  "sent": {
+    "title": "Co wysyłamy",
+    "body": "Tylko zdjęcie wybrane do tego podglądu. Nic innego z Twojej galerii ani z Twojej drogi."
+  },
+  "who": {
+    "title": "Kto to przetwarza",
+    "body": "fal.ai wykonuje edycję obrazu, korzystając z modeli obrazu OpenAI."
+  },
+  "retention": {
+    "title": "Jak długo to zostaje",
+    "body": "Oryginalne zdjęcie i wynik podglądu są usuwane z naszych serwerów w ciągu 30 dni. Możesz usunąć je wcześniej w zakładce Podglądy."
+  },
+  "choice": {
+    "title": "Twój wybór",
+    "body": "Możesz odmówić i nadal korzystać z całej drogi. Zdjęcia, które robisz do swojej osi czasu, zostają na Twoim urządzeniu."
+  },
+  "note": "Podglądy AI pokazują jedną z możliwości. Nie są prognozą Twojego wyniku.",
+  "policy": "Przeczytaj politykę prywatności",
+  "accept": "Zgadzam się i kontynuuję",
+  "decline": "Nie teraz",
+  "error": "Nie udało się zapisać Twojego wyboru. Sprawdź połączenie i spróbuj ponownie."
+}

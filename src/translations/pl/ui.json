@@ -1,0 +1,25 @@
+{
+  "a11y": {
+    "close": "Zamknij",
+    "selected": "Wybrane",
+    "notSelected": "Niewybrane",
+    "step": "Krok {{current}} z {{total}}",
+    "balance_one": "Dostępny {{count}} kredyt",
+    "balance_few": "Dostępne {{count}} kredyty",
+    "balance_many": "Dostępnych {{count}} kredytów",
+    "balance_other": "Dostępne {{count}} kredytu",
+    "wheel": "Koło prezentów z czterema rodzajami nagród"
+  },
+  "demoMode": "Tryb demo: bez prawdziwych zakupów i prawdziwych serwerów",
+  "getCredits": "Zdobądź kredyty",
+  "update": {
+    "title": "Wymagana aktualizacja",
+    "body": "Ta wersja Kök nie jest już obsługiwana. Zaktualizuj aplikację, aby korzystać dalej. Twoja droga zostaje na Twoim telefonie.",
+    "cta": "Aktualizuj"
+  },
+  "notFound": {
+    "title": "Tej strony tu nie ma",
+    "body": "Link może być stary. Nic nie zostało utracone.",
+    "cta": "Przejdź do Dziś"
+  }
+}

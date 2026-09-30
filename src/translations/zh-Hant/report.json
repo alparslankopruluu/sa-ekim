@@ -1,0 +1,39 @@
+{
+  "title": "檢舉此預覽",
+  "subtitle": "請告訴我們哪裡有問題。我們會在 48 小時內審查每一份檢舉。",
+  "inaccurate": "看起來不準確",
+  "unsafe": "看起來不安全或不適當",
+  "privacy": "涉及隱私問題",
+  "other": "其他問題",
+  "send": "送出檢舉",
+  "sent": "謝謝。我們會在 48 小時內審查。",
+  "clinic": {
+    "action": "匯出進展紀錄",
+    "exporting": "正在準備…",
+    "title": "毛髮修復進展紀錄",
+    "brand": "Kök",
+    "clinicLine": "診所：{{name}}",
+    "operationLine": "手術日期：{{date}}",
+    "generatedLine": "建立於 {{date}}",
+    "photosHeading": "相片",
+    "noPhotos": "還沒有相片。",
+    "shedHeading": "脫落紀錄",
+    "shedEmpty": "還沒有脫落紀錄。",
+    "col": {
+      "week": "週",
+      "days": "記錄天數",
+      "average": "平均",
+      "max": "最高"
+    },
+    "weekRow": "第 {{n}} 週",
+    "overall": "全部紀錄",
+    "before": "之前",
+    "week": "第 {{n}} 週",
+    "disclaimer": "個人進展紀錄，並非醫療文件",
+    "dialog": "分享你的進展紀錄",
+    "failed": "無法建立報告，請重試。",
+    "empty": "請先新增一張相片或一筆脫落紀錄。",
+    "unsupported": "無法在瀏覽器中建立報告。"
+  },
+  "unavailable": "此預覽無法被檢舉。"
+}

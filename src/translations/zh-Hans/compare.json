@@ -1,0 +1,44 @@
+{
+  "title": "对比",
+  "close": "关闭",
+  "mode": {
+    "wipe": "滑动",
+    "side": "并排"
+  },
+  "label": {
+    "before": "之前",
+    "week": "第 {{n}} 周",
+    "none": "照片"
+  },
+  "picker": {
+    "before": "较早的照片",
+    "after": "较晚的照片",
+    "item": "{{angle}}，{{label}}，{{date}}"
+  },
+  "wipeA11y": "用于对比两张照片的滑块。左侧为{{before}}，右侧为{{after}}。调整滑块以移动分隔线。",
+  "sideA11y": "{{label}}，{{angle}}照片",
+  "mismatch": "这两张照片的角度不同。对比相同角度的照片效果最好。",
+  "empty": {
+    "title": "需要两张照片才能对比",
+    "body": "请至少拍摄两张相同角度的照片，然后在这里进行对比。",
+    "action": "拍摄照片"
+  },
+  "locked": {
+    "title": "对比属于 Pro 功能",
+    "body": "并排查看两张照片，并显示各自对应的周数。你的第一张照片始终可见。",
+    "cta": "解锁对比"
+  },
+  "share": {
+    "action": "分享",
+    "preparing": "正在准备…",
+    "error": "无法生成对比图，请重试。",
+    "unavailable": "此设备不支持分享。",
+    "dialog": "分享你的对比"
+  },
+  "report": {
+    "title": "照片对比",
+    "heading": "{{before}}与{{after}}",
+    "disclaimer": "个人进展记录，并非医疗文件"
+  },
+  "mark": "Kök"
+}

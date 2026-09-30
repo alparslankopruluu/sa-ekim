@@ -1,0 +1,151 @@
+{
+  "welcome": {
+    "kicker": "植髮陪伴助手",
+    "title": "瞭解你所處的恢復週通常是什麼情況",
+    "subtitle": "手術前先預覽可能的變化，然後逐週瞭解恢復過程中通常會發生什麼。",
+    "cta": "開始使用",
+    "demoLabel": "前後比較滑桿範例。拖曳即可比較。",
+    "demoBefore": "之前",
+    "demoAfter": "之後",
+    "demoCaption": "僅為示意。你自己的預覽稍後產生。",
+    "legalPrefix": "繼續即表示你同意我們的",
+    "terms": "使用條款",
+    "privacy": "隱私權政策"
+  },
+  "goal": {
+    "title": "你想改善哪個部位？",
+    "subtitle": "我們會據此為你量身打造時間軸和拍照角度。",
+    "hairline": {
+      "title": "髮際線",
+      "subtitle": "前額和兩鬢"
+    },
+    "crown": {
+      "title": "髮旋",
+      "subtitle": "頭的後部和頂部"
+    },
+    "part": {
+      "title": "分線",
+      "subtitle": "分線沿線的密度"
+    },
+    "brows": {
+      "title": "眉毛",
+      "subtitle": "眉毛移植"
+    },
+    "beard": {
+      "title": "鬍鬚",
+      "subtitle": "鬍鬚和小鬍子"
+    }
+  },
+  "stage": {
+    "title": "你現在處於哪個階段？",
+    "subtitle": "這將決定我們先向你展示什麼。",
+    "researching": {
+      "title": "仍在瞭解",
+      "subtitle": "正在瞭解各種選擇，還沒有預約"
+    },
+    "planned": {
+      "title": "已預約手術",
+      "subtitle": "我的手術日期快到了"
+    },
+    "done": {
+      "title": "已經做過手術",
+      "subtitle": "我想記錄我的恢復過程"
+    }
+  },
+  "date": {
+    "titlePlanned": "你的手術是什麼時候？",
+    "titleDone": "你的手術是什麼時候做的？",
+    "subtitlePlanned": "我們會倒數到第 0 天，並為你準備好最初幾週。",
+    "subtitleDone": "我們會顯示你所處的階段，以及本週通常的情況。",
+    "wheelDay": "日",
+    "wheelMonth": "月",
+    "wheelYear": "年",
+    "feedbackPast": "第 {{day}} 天 · 第 {{week}} 週",
+    "feedbackToday": "今天是第 0 天",
+    "feedbackFuture_other": "{{count}} 天後",
+    "errorMustBeFuture": "請選擇今天或之後的日期。",
+    "errorMustBePast": "請選擇今天或之前的日期。",
+    "errorTooFar": "這個日期太遙遠，無法追蹤。請選一個更近的日期。",
+    "errorInvalid": "這個日期不存在。",
+    "skip": "我還不確定",
+    "skipNote": "你可以稍後在旅程中設定或更改。"
+  },
+  "photo": {
+    "title": "新增一張用於預覽的相片",
+    "subtitleResearching": "在你做出任何決定之前，先透過 AI 預覽看看變化可能是什麼樣子。",
+    "subtitlePlanned": "透過 AI 預覽看看你的手術可能呈現的樣子。",
+    "subtitleDone": "透過 AI 預覽看看你的結果隨著成熟可能呈現的樣子。",
+    "guidanceTitle": "為了獲得更好的預覽",
+    "angle": {
+      "front": "正對鏡頭，手機與視線齊平。",
+      "top": "將手機舉在頭頂上方，向下拍攝頭頂。",
+      "crown": "拍攝後腦，最好請他人幫忙。"
+    },
+    "area": {
+      "hairline": "把頭髮向後攏，讓髮際線清晰可見。",
+      "crown": "不要遮擋髮旋，讓頭髮保持平整。",
+      "part": "依你平常的習慣分出分線。",
+      "brows": "不要讓頭髮和眼鏡遮住眉毛。",
+      "beard": "不要遮擋鬍鬚區域，並保持光線均勻。"
+    },
+    "light": "請在自然光下拍攝，不要使用濾鏡，也不要戴帽子。",
+    "take": "拍照",
+    "library": "從相簿選取",
+    "change": "選擇另一張相片",
+    "selected": "你選取的相片",
+    "placeholder": "尚未選取相片",
+    "privacy": "你的相片只會用於產生預覽，並且只有在你於下一個畫面表示同意後才會傳送。",
+    "skip": "略過預覽",
+    "skipNote": "你可以稍後在「預覽」分頁中建立。",
+    "permissionDenied": "無法開啟你的相片。請在「設定」中檢查權限。"
+  },
+  "notify": {
+    "title": "不錯過重要時刻",
+    "subtitle": "恢復是個緩慢的過程。在合適的時間給你一個輕柔的提醒，替你記住這些事。",
+    "bulletPhase": "階段變化時告訴你",
+    "bulletPhoto": "拍照日到來時告訴你",
+    "bulletCare": "前兩週每天的護理提醒",
+    "allow": "開啟提醒",
+    "skip": "稍後再說",
+    "note": "護理提醒免費。階段提醒和拍照提醒需要 Pro。你可以隨時在「設定」中更改。"
+  },
+  "crafting": {
+    "title": "正在產生你的預覽",
+    "titleDone": "你的預覽已準備好",
+    "subtitle": "這通常需要不到一分鐘。",
+    "ringLabel": "預覽進度，{{percent}}%",
+    "lineUpload": "正在安全地傳送你的相片",
+    "lineReserve": "正在為你保留免費預覽",
+    "lineEdit": "正在處理{{area}}",
+    "lineFinish": "正在做最後的潤飾",
+    "stateDone": "已完成",
+    "stateActive": "進行中",
+    "statePending": "等待中",
+    "area": {
+      "hairline": "你的髮際線",
+      "crown": "你的髮旋",
+      "part": "你的分線",
+      "brows": "你的眉毛",
+      "beard": "你的鬍鬚"
+    },
+    "skip": "暫時略過",
+    "skipNote": "你的預覽會繼續產生，並保存在「預覽」分頁中等你查看。",
+    "failedTitle": "我們未能完成你的預覽",
+    "failedOffline": "你似乎已離線。沒有扣除任何費用。請檢查網路連線後重試。",
+    "failedGeneric": "我們這邊發生了一些問題。沒有扣除任何費用。你可以重試，或不使用預覽繼續。",
+    "failedBlocked": "這張相片無法用於預覽。沒有扣除任何費用。你可以繼續，稍後再試其他相片。",
+    "skipFailed": "不使用預覽繼續"
+  },
+  "reveal": {
+    "title": "這是一種可能的樣子的預覽",
+    "subtitle": "拖曳滑桿進行比較。這是 AI 繪製的示意圖。",
+    "before": "你的相片",
+    "after": "AI 預覽",
+    "disclaimer": "AI 預覽，並不是對你結果的預測",
+    "watermark": "免費預覽帶有小浮水印。",
+    "wipeLabel": "你的相片的前後比較。拖曳即可比較。",
+    "loading": "正在準備你的預覽",
+    "loadFailed": "無法載入預覽圖。它已保存在你的「預覽」分頁中。",
+    "cta": "查看我的計畫"
+  }
+}

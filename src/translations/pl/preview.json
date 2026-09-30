@@ -1,0 +1,262 @@
+{
+  "title": "Nowy podgląd",
+  "subtitle": "Wybierz styl i zdjęcie, aby zobaczyć jeden z możliwych wyglądów.",
+  "aiLabel": "Podgląd AI — nie prognoza Twojego wyniku",
+  "aiLabelShort": "Podgląd AI",
+  "aiLabelDetail": "Pokazuje jeden możliwy wygląd, a nie to, co się wydarzy.",
+  "common": {
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "retry": "Spróbuj ponownie",
+    "cancel": "Anuluj",
+    "delete": "Usuń"
+  },
+  "goals": {
+    "label": "Okolica",
+    "hairline": "Linia włosów",
+    "crown": "Czubek głowy",
+    "part": "Przedziałek",
+    "brows": "Brwi",
+    "beard": "Broda"
+  },
+  "angles": {
+    "front": "zdjęcie z przodu",
+    "left": "zdjęcie lewego profilu",
+    "right": "zdjęcie prawego profilu",
+    "top": "zdjęcie głowy z góry",
+    "crown": "zdjęcie czubka głowy"
+  },
+  "styles": {
+    "label": "Styl",
+    "hairline_soft": {
+      "name": "Łagodniejsza naturalna linia włosów",
+      "description": "Delikatnie zmiękczona linia włosów o naturalnym kształcie."
+    },
+    "hairline_temples": {
+      "name": "Dopracowanie skroni",
+      "description": "Bardziej wyważony wygląd w okolicy skroni."
+    },
+    "hairline_lower": {
+      "name": "Niższa, wyraźniejsza linia",
+      "description": "Nieco niższa, bardziej wyraźna linia włosów."
+    },
+    "hairline_density": {
+      "name": "Większa gęstość",
+      "description": "Gęstszy wygląd w obrębie Twojej obecnej linii włosów."
+    },
+    "crown_light": {
+      "name": "Lekkie",
+      "description": "Lekkie pokrycie na czubku głowy."
+    },
+    "crown_medium": {
+      "name": "Średnie",
+      "description": "Średnie pokrycie na czubku głowy."
+    },
+    "crown_full": {
+      "name": "Pełne",
+      "description": "Pełne pokrycie na czubku głowy."
+    },
+    "part_light": {
+      "name": "Lekkie",
+      "description": "Lekka objętość wzdłuż przedziałka."
+    },
+    "part_medium": {
+      "name": "Średnie",
+      "description": "Średnia objętość wzdłuż przedziałka."
+    },
+    "part_full": {
+      "name": "Pełne",
+      "description": "Pełny wygląd wzdłuż przedziałka."
+    },
+    "brows_natural": {
+      "name": "Naturalne",
+      "description": "Naturalne brwi zachowujące Twój własny kształt."
+    },
+    "brows_fuller": {
+      "name": "Pełniejsze",
+      "description": "Twój własny kształt, nieco pełniejszy."
+    },
+    "brows_arched": {
+      "name": "Łukowate",
+      "description": "Delikatnie łukowata, uporządkowana linia brwi."
+    },
+    "beard_patch": {
+      "name": "Wypełnienie rzadkich miejsc",
+      "description": "Wypełnione rzadkie miejsca."
+    },
+    "beard_full": {
+      "name": "Pełna broda",
+      "description": "Pełniejsza broda na szczęce i policzkach."
+    },
+    "beard_moustache": {
+      "name": "Wąsy",
+      "description": "Pełniejszy wygląd nad wargą."
+    }
+  },
+  "bestAngle": "Najlepiej sprawdza się: {{angle}}",
+  "density": {
+    "label": "Gęstość",
+    "natural": "Naturalna",
+    "fuller": "Pełniejsza",
+    "full": "Pełna"
+  },
+  "quality": {
+    "label": "Jakość",
+    "standard": {
+      "title": "Standardowa",
+      "description": "Szybki pierwszy rzut oka."
+    },
+    "high": {
+      "title": "Wysoka",
+      "description": "Więcej szczegółów."
+    }
+  },
+  "price": {
+    "label": "Ten podgląd",
+    "free": "Za darmo",
+    "freeHigh": "Darmowy podgląd HD",
+    "credits_one": "{{count}} kredyt",
+    "credits_few": "{{count}} kredyty",
+    "credits_many": "{{count}} kredytów",
+    "credits_other": "{{count}} kredytu",
+    "freeNote": "Twój pierwszy podgląd jest darmowy i ma znak wodny.",
+    "balance_one": "Masz {{count}} kredyt.",
+    "balance_few": "Masz {{count}} kredyty.",
+    "balance_many": "Masz {{count}} kredytów.",
+    "balance_other": "Masz {{count}} kredytu.",
+    "short_one": "Masz {{count}} kredyt. Koszt tego podglądu: {{cost}}.",
+    "short_few": "Masz {{count}} kredyty. Koszt tego podglądu: {{cost}}.",
+    "short_many": "Masz {{count}} kredytów. Koszt tego podglądu: {{cost}}.",
+    "short_other": "Masz {{count}} kredytu. Koszt tego podglądu: {{cost}}.",
+    "useFreeHigh": "Użyj mojego darmowego podglądu HD",
+    "useFreeHighHint_one": "Masz {{count}} darmowy podgląd HD.",
+    "useFreeHighHint_few": "Masz {{count}} darmowe podglądy HD.",
+    "useFreeHighHint_many": "Masz {{count}} darmowych podglądów HD.",
+    "useFreeHighHint_other": "Masz {{count}} darmowego podglądu HD."
+  },
+  "photo": {
+    "label": "Zdjęcie",
+    "empty": "Na razie brak zdjęcia",
+    "take": "Zrób zdjęcie",
+    "library": "Wybierz z biblioteki",
+    "journey": "Użyj ostatniego zdjęcia z drogi",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Usuń zdjęcie",
+    "selected": "Wybrane zdjęcie",
+    "sentNote": "Twoje zdjęcie jest wysyłane dopiero po stuknięciu Utwórz, po Twojej zgodzie na przetwarzanie przez AI.",
+    "libraryFailed": "Nie udało się otworzyć Twojej biblioteki zdjęć."
+  },
+  "cta": {
+    "create": "Utwórz podgląd",
+    "createFree": "Utwórz darmowy podgląd",
+    "getCredits": "Zdobądź kredyty",
+    "continue": "Dalej",
+    "addPhoto": "Dodaj zdjęcie, aby kontynuować",
+    "chooseStyle": "Wybierz styl, aby kontynuować"
+  },
+  "helper": {
+    "needsConsent": "Zanim Twoje zdjęcie zostanie wysłane, raz poprosimy o Twoją zgodę.",
+    "needsCredits": "Potrzebujesz więcej kredytów na ten podgląd.",
+    "walletError": "Nie udało się załadować Twoich kredytów."
+  },
+  "rendering": {
+    "title": "Twój podgląd",
+    "status": {
+      "uploading": "Wysyłanie Twojego zdjęcia",
+      "creating": "Uruchamianie Twojego podglądu",
+      "waiting": "Uruchamianie Twojego podglądu",
+      "queued": "Oczekiwanie na wolne miejsce",
+      "processing": "Tworzenie Twojego podglądu",
+      "finalizing": "Kończenie"
+    },
+    "estimate": "Zwykle krócej niż minutę.",
+    "background": "Możesz opuścić ten ekran. Działamy dalej i damy znać, gdy będzie gotowy.",
+    "notifyMe": "Powiadom mnie, gdy będzie gotowy",
+    "notifyOn": "Powiadomimy Cię, gdy będzie gotowy.",
+    "keepBrowsing": "Przeglądaj dalej",
+    "cancel": "Anuluj podgląd",
+    "cancelHint": "Jeśli anulujesz, Twoje kredyty zostaną zwrócone.",
+    "cancelTooLate": "Podgląd jest już kończony i nie można go teraz anulować.",
+    "failedTitle": "Ten podgląd nie został ukończony",
+    "canceledTitle": "Podgląd anulowany",
+    "offlineTitle": "Jesteś offline",
+    "errorTitle": "Nie udało się rozpocząć podglądu",
+    "refunded_one": "Zwrócono Ci {{count}} kredyt.",
+    "refunded_few": "Zwrócono Ci {{count}} kredyty.",
+    "refunded_many": "Zwrócono Ci {{count}} kredytów.",
+    "refunded_other": "Zwrócono Ci {{count}} kredytu.",
+    "nothingCharged": "Nic nie zostało pobrane.",
+    "retrySafe": "Ponowna próba jest bezpieczna: nie zapłacisz dwa razy.",
+    "retry": "Spróbuj ponownie",
+    "getCredits": "Zdobądź kredyty",
+    "reviewConsent": "Przejrzyj i zatwierdź",
+    "seePlans": "Zobacz plany",
+    "choosePhoto": "Wybierz inne zdjęcie",
+    "backToStyles": "Wróć do stylów",
+    "close": "Zamknij",
+    "photoA11y": "Twoje zdjęcie",
+    "ringA11y": "Postęp podglądu, {{percent}} procent"
+  },
+  "result": {
+    "title": "Twój podgląd",
+    "before": "Twoje zdjęcie",
+    "after": "Podgląd AI",
+    "watermark": "Kök · podgląd AI",
+    "wipeA11y": "Suwak przed i po. Przesuń w górę lub w dół, aby porównać swoje zdjęcie z podglądem AI.",
+    "demo": "Demo",
+    "save": "Zapisz",
+    "share": "Udostępnij",
+    "report": "Zgłoś",
+    "delete": "Usuń",
+    "saved": "Zapisano w Twoich zdjęciach",
+    "saveDenied": "Zezwól na dostęp do zdjęć w Ustawieniach, aby zapisywać podglądy.",
+    "unsupported": "Zapisywanie i udostępnianie nie są tu dostępne dla tego podglądu.",
+    "shareTitle": "Udostępnij swój podgląd AI",
+    "tryAnother": "Wypróbuj inny styl",
+    "upgradeTitle": "Chcesz więcej szczegółów?",
+    "upgradeBody": "Podgląd HD ma więcej szczegółów i nie ma znaku wodnego.",
+    "notFound": "Nie znaleźliśmy tego podglądu. Podglądy są usuwane po 30 dniach.",
+    "toPreviews": "Wróć do podglądów",
+    "beforeGone": "Twoje oryginalne zdjęcie jest przechowywane tylko przez 30 dni, więc porównanie nie jest już dostępne.",
+    "loadFailed": "Nie udało się załadować tego podglądu.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Utwórz podgląd HD ({{count}} kredyt)",
+    "upgradeTry_few": "Utwórz podgląd HD ({{count}} kredyty)",
+    "upgradeTry_many": "Utwórz podgląd HD ({{count}} kredytów)",
+    "upgradeTry_other": "Utwórz podgląd HD ({{count}} kredytu)",
+    "upgradeTryFree": "Utwórz darmowy podgląd HD",
+    "availableUntil": "Dostępny do {{date}}",
+    "saveNudge": "Podglądy są usuwane po 30 dniach. Zapisz go w swoich zdjęciach, aby zachować kopię.",
+    "saveNudgeSoon": "Ten podgląd wkrótce zostanie usunięty. Zapisz go w swoich zdjęciach, aby zachować kopię.",
+    "expiredTitle": "Ten podgląd został usunięty po 30 dniach",
+    "expiredBody": "Podglądy i zdjęcia, z których powstały, są usuwane po 30 dniach. Nowy możesz utworzyć w dowolnej chwili."
+  },
+  "delete": {
+    "title": "Usunąć ten podgląd?",
+    "body": "Obraz podglądu zostanie usunięty na stałe. Tej operacji nie można cofnąć.",
+    "done": "Podgląd usunięty"
+  },
+  "tab": {
+    "title": "Podglądy",
+    "new": "Nowy podgląd",
+    "honest": "Podglądy to obrazy stworzone przez AI, pokazujące jeden możliwy wygląd.",
+    "emptyTitle": "Na razie brak podglądów",
+    "emptyBody": "Podgląd to obraz stworzony przez AI, pokazujący jeden możliwy wygląd, a nie to, co się wydarzy. Wypróbuj styl na własnym zdjęciu i porównaj.",
+    "emptyCta": "Utwórz podgląd",
+    "loadFailed": "Nie udało się załadować Twoich podglądów.",
+    "menu": "Więcej działań",
+    "status": {
+      "queued": "Oczekuje",
+      "processing": "Tworzenie · {{percent}}%",
+      "finalizing": "Kończenie",
+      "failed": "Nie ukończono",
+      "canceled": "Anulowano"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Spróbuj ponownie",
+    "delete": "Usuń",
+    "deleteA11y": "Usuń podgląd",
+    "availableUntil": "Do {{date}}",
+    "expired": "Usunięto po 30 dniach"
+  }
+}

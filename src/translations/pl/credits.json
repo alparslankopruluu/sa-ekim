@@ -1,0 +1,25 @@
+{
+  "title": "Zdobądź kredyty",
+  "subtitle": "Kredyty nigdy nie wygasają. Podgląd standardowy: {{standard}} kr., podgląd HD: {{high}} kr.",
+  "balance": "Twoje saldo",
+  "equivalent": "≈ {{standard}} podglądów standardowych lub {{high}} HD",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Popularne",
+  "success": "Dodano kredyty: {{count}}.",
+  "pending": "Twój zakup czeka na zatwierdzenie.",
+  "failedBody": "Nie udało się załadować pakietów kredytów. Sprawdź połączenie i spróbuj ponownie.",
+  "emptyBody": "Pakiety kredytów są teraz niedostępne. Spróbuj ponownie później.",
+  "freeHigh_one": "Czeka {{count}} darmowy podgląd HD",
+  "freeHigh_few": "Czekają {{count}} darmowe podglądy HD",
+  "freeHigh_many": "Czeka {{count}} darmowych podglądów HD",
+  "freeHigh_other": "Czeka {{count}} darmowego podglądu HD",
+  "examplesTitle": "Na ile wystarczą kredyty",
+  "exampleStandard": "Podgląd standardowy",
+  "exampleHigh": "Podgląd HD, bez znaku wodnego",
+  "proHint": "Członkowie Pro dostają kredyty co tydzień lub co miesiąc.",
+  "close": "Zamknij sklep z kredytami"
+}

@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "早上好",
+    "afternoon": "下午好",
+    "evening": "晚上好",
+    "night": "夜深了，你好"
+  },
+  "today": {
+    "subtitleUnset": "你的旅程从一个日期开始。",
+    "subtitleUpcoming": "手术日期：{{date}}",
+    "editDate": "编辑你的日期和旅程信息",
+    "bandTitle": "你所在的周在典型时间线上的位置"
+  },
+  "hero": {
+    "day": "天",
+    "dayWeek": "第 {{day}} 天 · 第 {{week}} 周",
+    "monthOf": "第 {{month}} 个月，共约 {{total}} 个月",
+    "complete": "已超出典型的 {{months}} 个月周期",
+    "untilOperation_other": "距离手术还有 {{count}} 天",
+    "daysToGo_other": "天后",
+    "session": "疗程",
+    "ofTotal": "共 {{total}} 次",
+    "prpSession": "第 {{current}} 次，共 {{total}} 次",
+    "prpDone": "已记录全部 {{total}} 次疗程"
+  },
+  "phase": {
+    "rightNow": "现在",
+    "expected": "预期",
+    "normalLabel": "此时的典型情况",
+    "clinicNote": "个体结果各不相同，请遵循你自己诊所的建议。",
+    "nextIn_other": "{{phase}}通常在 {{count}} 天后开始",
+    "last": "这是典型时间线的最后一个阶段。",
+    "openGuide": "打开此阶段的指南"
+  },
+  "band": {
+    "a11y": "生长时间线上的典型范围图表。你目前处于以下阶段：{{phase}}。个体结果各不相同。",
+    "a11yNone": "生长时间线上的典型范围图表。个体结果各不相同。",
+    "a11yLocked": "典型范围图表，需要 Pro 才能使用。",
+    "lockChip": "查看你的位置 · Pro",
+    "lockedHint": "打开 Pro 方案",
+    "start": "手术",
+    "end": "成熟",
+    "disclaimer": "典型范围，个体结果各不相同",
+    "seeTimeline": "时间线"
+  },
+  "care": {
+    "items": {
+      "wash": "按诊所教你的方法轻柔清洗",
+      "sleep": "垫高头部睡觉",
+      "hands": "不要触碰移植区，不要抓挠",
+      "sun": "让该区域避开阳光直射"
+    }
+  },
+  "task": {
+    "eyebrow": "下一步",
+    "photoCta": "拍照",
+    "baseline": {
+      "title": "拍一张“手术前”的照片",
+      "body": "手术前的一张照片，会让之后的每次对比都更清晰。"
+    },
+    "care": {
+      "title": "今日护理清单",
+      "doneTitle": "今日护理已全部勾选",
+      "body": "许多诊所会在前两周给出这些建议。请优先遵循你自己诊所的指导。",
+      "progress": "已完成 {{done}} / {{total}}"
+    },
+    "photo": {
+      "firstTitle": "拍下你的第一张进展照片",
+      "weeklyTitle": "本周的照片",
+      "monthlyTitle": "本月的照片",
+      "weeklyBody": "前三个月每周一次，角度相同、光线相同。",
+      "monthlyBody": "从第四个月起每月一次，角度相同、光线相同。"
+    },
+    "shed": {
+      "title": "记录今天的脱落情况",
+      "body": "第 2–8 周出现脱落较为常见。简单数一数，有助于你看出长期的变化规律。",
+      "cta": "记录脱落"
+    },
+    "prp": {
+      "title": "已计划第 {{current}} 次疗程，共 {{total}} 次",
+      "bodyToday": "今天是计划的日期。疗程前拍一张照片，能让你的照片系列便于对比。",
+      "bodyLate": "计划日期为 {{date}}。完成后请标记为已完成。",
+      "markDone": "标记为已完成"
+    },
+    "caughtUp": {
+      "title": "全部完成",
+      "body": "今天没有需要做的事。",
+      "nextPhoto_other": "{{count}} 天后拍下一张照片。",
+      "nextSession_other": "{{count}} 天后进行下一次疗程。"
+    }
+  },
+  "setDate": {
+    "title": "设置你的手术日期",
+    "body": "Kök 会根据这个日期显示你所处的天数、周数和阶段，并安排拍照提醒。",
+    "prpTitle": "设置你的首次疗程日期",
+    "prpBody": "Kök 会据此为你安排各次疗程，并在每次疗程前一天提醒你。",
+    "cta": "设置日期",
+    "privacy": "仅保存在你的手机上。"
+  },
+  "pre": {
+    "title": "手术之前",
+    "body": "许多人觉得以下事项在手术前几天很有帮助。请优先遵循你诊所的指导。",
+    "tip1": "在光线良好的地方，从正面、头顶和两侧拍摄“手术前”的照片。",
+    "tip2": "向你的诊所索取书面的术后护理说明。",
+    "tip3": "为手术后安排几天安静的时间。",
+    "tip4": "准备一个旅行枕，用于垫高头部睡觉。",
+    "clinicNote": "对药物或你的健康有疑问？请咨询你的诊所或医生。"
+  },
+  "previewCard": {
+    "title": "预览一种发型",
+    "body": "用 AI 预览来探索想法，并不是对你结果的预测。"
+  },
+  "shedPeek": {
+    "title": "近期的脱落情况",
+    "hint": "打开脱落记录",
+    "note": "第 2–8 周出现脱落较为常见。"
+  },
+  "tabs": {
+    "timeline": "时间线",
+    "photos": "照片",
+    "plan": "计划"
+  },
+  "timeline": {
+    "bandTitle": "典型时间线",
+    "phasesTitle": "阶段"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "第 {{from}}–{{to}} 天",
+    "weeks": "第 {{from}}–{{to}} 周",
+    "current": "当前阶段",
+    "past": "已经过去",
+    "upcoming": "接下来",
+    "youAreHere": "你在这里"
+  },
+  "maturation": {
+    "title": "什么时候评估结果？",
+    "note": "头发通常在手术后会持续成熟约 {{months}} 个月。",
+    "evaluate12": "诊所通常在大约 12 个月时评估结果。",
+    "evaluate18": "诊所通常在大约 12 个月时查看结果，而发旋或发缝可能会继续成熟长达 18 个月。",
+    "clinicNote": "个体结果各不相同，你的复查时间由你的诊所决定。"
+  },
+  "photos": {
+    "add": "添加",
+    "count_other": "{{count}} 张照片",
+    "freeCounter_other": "免费照片 {{count}} / {{limit}} 张",
+    "limitReached": "已用完 {{limit}} 张免费照片，Pro 可保存无限张照片",
+    "allAngles": "全部",
+    "before": "手术前",
+    "week": "第 {{week}} 周 · {{date}}",
+    "all": "照片",
+    "compare": "对比",
+    "compareHint": "选择两张照片进行对比。",
+    "selectHint": "请选择两张照片。",
+    "selected_other": "已选 {{count}} / {{max}} 张",
+    "compareCta": "对比",
+    "groupCount_other": "{{count}} 张照片",
+    "thumbLabel": "{{angle}}照片，{{group}}",
+    "missing": "文件缺失",
+    "emptyTitle": "还没有照片",
+    "emptyBody": "每个角度先拍一张。下次拍摄时，一层淡淡的虚影会帮助你对准同样的视角。",
+    "emptyCta": "拍第一张照片",
+    "emptyFilter": "这个角度还没有照片。"
+  },
+  "angles": {
+    "front": "正面",
+    "left": "左侧",
+    "right": "右侧",
+    "top": "头顶",
+    "crown": "发旋"
+  },
+  "plan": {
+    "intro": "在诊所通常会查看的月份设置照片节点。角度相同，光线相同。",
+    "checkpoint": "第 {{month}} 个月",
+    "status": {
+      "done": "已拍照",
+      "due": "现在到期",
+      "upcoming": "即将到来",
+      "missed": "没有照片"
+    },
+    "takePhoto": "拍照",
+    "note": "节点前一周到节点后两周内的任何一张照片，都可算作该节点的照片。"
+  },
+  "prp": {
+    "timelineTitle": "你的 PRP / 中胚层疗法疗程",
+    "timelineBody": "疗程通常安排为间隔几周的若干次治疗，之后进入维持阶段。你自己的方案由你的诊所决定。",
+    "openPlan": "打开计划",
+    "emptyTitle": "规划你的疗程",
+    "emptyBody": "从常见的方案开始：{{sessions}} 次疗程，每次间隔 {{weeks}} 周。每个日期都可以修改。",
+    "createPlan": "创建计划",
+    "intro": "疗程完成后请勾选。每次之前拍一张照片，能让你的照片系列便于对比。",
+    "session": "第 {{number}} 次",
+    "done": "已完成",
+    "due": "到期",
+    "planned": "已计划",
+    "markDoneLabel": "{{date}} 的第 {{number}} 次疗程已完成",
+    "changeDate": "更改日期",
+    "photoBefore": "疗程前拍照",
+    "remove": "移除",
+    "removeTitle": "移除这次疗程？",
+    "removeBody": "它的提醒也会一并移除。",
+    "addSession": "添加一次疗程",
+    "maintenanceTitle": "维持",
+    "maintenanceBody": "许多诊所建议大约 {{months}} 个月后进行一次维持疗程，约在 {{date}}。",
+    "clinicNote": "请遵循你自己诊所的方案。"
+  },
+  "setup": {
+    "title": "你的旅程",
+    "kindTitle": "你要记录什么？",
+    "kind": {
+      "transplant": {
+        "title": "植发手术",
+        "body": "发际线、发旋、发缝、眉毛或胡须"
+      },
+      "prp": {
+        "title": "PRP / 中胚层疗法疗程",
+        "body": "间隔几周的一系列疗程"
+      }
+    },
+    "goalTitle": "哪个部位？",
+    "goals": {
+      "hairline": "发际线",
+      "crown": "发旋",
+      "part": "发缝",
+      "brows": "眉毛",
+      "beard": "胡须"
+    },
+    "dateTitleTransplant": "手术日期",
+    "dateTitlePrp": "首次疗程日期",
+    "day": "日",
+    "month": "月",
+    "year": "年",
+    "relToday": "就是今天，第 0 天",
+    "relPast": "第 {{day}} 天 · 第 {{week}} 周",
+    "relFuture_other": "{{count}} 天后",
+    "clinicTitle": "诊所（可选）",
+    "clinicPlaceholder": "诊所名称",
+    "clinicHint": "仅保存在这部手机上，绝不会上传。",
+    "clinicTooLong": "请控制在 {{max}} 个字符以内。",
+    "clinicBlocked": "请换一个名称。",
+    "save": "保存",
+    "saved": "已保存",
+    "relabelTitle": "更改日期？",
+    "relabelBody": "每张照片的天数和周数标签都会根据新日期重新计算。",
+    "relabelConfirm": "更改日期"
+  }
+}

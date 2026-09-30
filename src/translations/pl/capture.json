@@ -1,0 +1,84 @@
+{
+  "close": "Zamknij aparat",
+  "title": "Zdjęcie postępów",
+  "angle": {
+    "front": "Przód",
+    "left": "Lewa strona",
+    "right": "Prawa strona",
+    "top": "Góra",
+    "crown": "Czubek głowy"
+  },
+  "instruction": {
+    "front": "Włosy suche i ułożone jak zwykle. Ustaw twarz w owalu, a linię włosów blisko górnej krawędzi.",
+    "left": "Obróć się lewą stroną do aparatu. Trzymaj telefon pionowo na wysokości oczu.",
+    "right": "Obróć się prawą stroną do aparatu. Trzymaj telefon pionowo na wysokości oczu.",
+    "top": "Trzymaj telefon poziomo nad głową, ekranem do góry, tak by tylny aparat patrzył z góry na czubek Twojej głowy.",
+    "crown": "Trzymaj telefon poziomo nad tyłem głowy, ekranem do góry, tak by tylny aparat patrzył z góry na Twoje ciemię."
+  },
+  "cameraNote": {
+    "front": "Używa przedniego aparatu, więc widzisz kadr.",
+    "back": "Używa tylnego aparatu. Trzymaj telefon poziomo albo poproś kogoś o zrobienie zdjęcia. Poczujesz stuknięcie, gdy telefon będzie w poziomie."
+  },
+  "guide": {
+    "ghostHide": "Ukryj poprzednie zdjęcie",
+    "ghostShow": "Pokaż poprzednie zdjęcie",
+    "ghostOverlay": "Nakładka poprzedniego zdjęcia: {{angle}}, {{label}}",
+    "frame": "Widok z aparatu z prowadnicą kadru"
+  },
+  "level": {
+    "ok": "Równo, gotowe",
+    "upright": "Trzymaj telefon pionowo",
+    "flat": "Trzymaj telefon poziomo, ekranem do góry",
+    "unavailable": "To urządzenie nie ma czujnika ruchu, więc kontrola poziomu jest wyłączona. Dopilnuj, by telefon był ustawiony pionowo.",
+    "a11yOk": "Telefon jest równo. Możesz zrobić zdjęcie.",
+    "a11yBlockedUpright": "Telefon nie jest jeszcze pionowo.",
+    "a11yBlockedFlat": "Telefon nie jest jeszcze poziomo."
+  },
+  "shutter": {
+    "label": "Zrób zdjęcie",
+    "blockedUpright": "Trzymaj telefon pionowo, aby zrobić zdjęcie",
+    "blockedFlat": "Trzymaj telefon poziomo, aby zrobić zdjęcie"
+  },
+  "library": "Wybierz z biblioteki",
+  "permission": {
+    "checking": "Sprawdzanie dostępu do aparatu…",
+    "title": "Dostęp do aparatu jest wyłączony",
+    "body": "Kök używa aparatu tylko do zdjęć Twoich postępów. Zostają na tym urządzeniu. Możesz też wybrać zdjęcie z biblioteki.",
+    "allow": "Zezwól na aparat",
+    "settings": "Otwórz ustawienia"
+  },
+  "unavailable": {
+    "title": "Aparat jest tu niedostępny",
+    "body": "Zamiast tego możesz wybrać zdjęcie z biblioteki."
+  },
+  "review": {
+    "retake": "Zrób ponownie",
+    "use": "Użyj zdjęcia",
+    "saving": "Zapisywanie…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "To zdjęcie posłuży tylko do podglądu. Nie zostanie dodane do Twojej drogi.",
+    "a11y": "Podgląd zdjęcia, które właśnie zostało zrobione"
+  },
+  "error": {
+    "save": "Nie udało się zapisać zdjęcia. Spróbuj ponownie.",
+    "capture": "Nie udało się zrobić zdjęcia. Spróbuj ponownie.",
+    "pick": "Nie udało się otworzyć biblioteki. Spróbuj ponownie."
+  },
+  "saved": "Zdjęcie zapisane",
+  "checking": "Sprawdzanie Twojego planu…",
+  "detail": {
+    "title": "Zdjęcie",
+    "image": "Zdjęcie: {{angle}}, {{label}}",
+    "taken": "Zrobione {{date}}",
+    "compare": "Porównaj z…",
+    "delete": "Usuń zdjęcie",
+    "confirmTitle": "Usunąć to zdjęcie?",
+    "confirmBody": "Zostanie usunięte z tego urządzenia i nie da się go odzyskać.",
+    "confirm": "Usuń",
+    "cancel": "Zostaw",
+    "missingTitle": "Tego zdjęcia już tu nie ma",
+    "missingBody": "Mogło zostać usunięte.",
+    "close": "Zamknij",
+    "loadError": "Nie można wyświetlić tego zdjęcia."
+  }
+}

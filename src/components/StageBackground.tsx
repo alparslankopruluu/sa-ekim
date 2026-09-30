@@ -12,7 +12,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
 
-import { colors, gradients } from '@/theme/tokens';
+import { colors, gradients, isDark, palettes } from '@/theme/tokens';
 import { durations } from '@/theme/motion';
 
 interface SpotProps {
@@ -25,6 +25,10 @@ interface SpotProps {
   id: string;
   animate: boolean;
 }
+
+/** Apple-style ambient light: a faint tint, never a glow show. */
+const SPOT_PEAK = isDark ? 0.34 : 0.16;
+const INDIGO = palettes.ink[1];
 
 function Spotlight({ color, size, x, y, drift, duration, id, animate }: SpotProps) {
   const t = useSharedValue(0);
@@ -48,8 +52,8 @@ function Spotlight({ color, size, x, y, drift, duration, id, animate }: SpotProp
       <Svg width={size} height={size}>
         <Defs>
           <RadialGradient id={id} cx="50%" cy="50%" r="50%">
-            <Stop offset="0%" stopColor={color} stopOpacity={0.55} />
-            <Stop offset="55%" stopColor={color} stopOpacity={0.14} />
+            <Stop offset="0%" stopColor={color} stopOpacity={SPOT_PEAK} />
+            <Stop offset="55%" stopColor={color} stopOpacity={SPOT_PEAK * 0.3} />
             <Stop offset="100%" stopColor={color} stopOpacity={0} />
           </RadialGradient>
         </Defs>
@@ -68,13 +72,13 @@ export interface StageBackgroundProps {
 }
 
 /**
- * Night-stage backdrop: deep gradient + two soft spotlights that drift slowly
+ * Grouped backdrop with two faint tinted lights that drift slowly
  * (transform-only, UI thread). Frozen under Reduce Motion.
  */
 export function StageBackground({ accents, animated = true, intensity = 'full' }: StageBackgroundProps) {
   const { width, height } = useWindowDimensions();
   const reduceMotion = useReducedMotion();
-  const [a, b] = accents ?? [colors.primary, colors.accent];
+  const [a, b] = accents ?? [colors.primary, INDIGO];
   const animate = animated && !reduceMotion;
   const big = Math.max(width, height) * (intensity === 'full' ? 0.95 : 0.7);
 

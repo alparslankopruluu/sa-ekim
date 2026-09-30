@@ -1,0 +1,22 @@
+{
+  "a11y": {
+    "close": "关闭",
+    "selected": "已选择",
+    "notSelected": "未选择",
+    "step": "第 {{current}} 步，共 {{total}} 步",
+    "balance_other": "可用 {{count}} 点数",
+    "wheel": "包含四类奖品的礼物转盘"
+  },
+  "demoMode": "演示模式：没有真实购买，也没有连接真实服务器",
+  "getCredits": "获取点数",
+  "update": {
+    "title": "需要更新",
+    "body": "此版本的 Kök 已不再受支持。请更新后继续使用。你的旅程记录仍保存在你的手机上。",
+    "cta": "更新"
+  },
+  "notFound": {
+    "title": "找不到这个页面",
+    "body": "链接可能已经过期。没有任何内容丢失。",
+    "cta": "前往“今天”"
+  }
+}

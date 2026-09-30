@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Co się dzieje",
+    "normal": "Co jest typowe",
+    "todo": "Na ten tydzień",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli…",
+    "care": "Dzień po dniu",
+    "wash": "Mycie",
+    "sleep": "Sen",
+    "avoid": "Czego unikać"
+  },
+  "header": {
+    "week": "Tydzień",
+    "days": "Dni {{from}}–{{to}}",
+    "weeks": "tygodnie {{from}}–{{to}}",
+    "current": "Jesteś tutaj",
+    "past": "Za Tobą",
+    "upcoming": "Przed Tobą"
+  },
+  "lock": {
+    "title": "Pełny przewodnik po fazach jest częścią Pro",
+    "body": "Co zwykle się dzieje, co robić w tym tygodniu i wskazówki dzień po dniu — dla każdej fazy.",
+    "cta": "Zobacz Pro",
+    "redflagsNote": "Informacje o tym, kiedy skontaktować się z kliniką, pozostają bezpłatne dla wszystkich — poniżej."
+  },
+  "notFound": {
+    "title": "Nie znaleziono przewodnika",
+    "body": "Ta strona może pochodzić ze starszego linku.",
+    "cta": "Wróć"
+  },
+  "flags": {
+    "fever": "Gorączka lub dreszcze",
+    "redness": "Zaczerwienienie lub obrzęk, który się rozszerza albo stale narasta",
+    "pus": "Ropa, żółta wydzielina lub nieprzyjemny zapach",
+    "pain": "Silny lub narastający ból",
+    "bleeding": "Obfite krwawienie albo krwawienie, które nie ustaje po delikatnym ucisku",
+    "contact": "Jeśli zauważysz cokolwiek z tego, skontaktuj się z kliniką lub lekarzem. W nagłym przypadku zadzwoń pod lokalny numer alarmowy."
+  },
+  "disclaimer": "Ogólna wiedza oparta na typowych osiach czasu stosowanych w klinikach — to nie porada medyczna ani prognoza. Wyniki bywają różne; zalecenia Twojej kliniki są najważniejsze.",
+  "care": {
+    "title": "Pierwsze dwa tygodnie",
+    "tagline": "Ochrona przeszczepów, gdy się przyjmują",
+    "happening": "Nowe przeszczepy stabilizują się na swoim miejscu. Wokół każdego z nich zwykle tworzą się małe strupki, które najczęściej odpadają w ciągu około 7–14 dni. W pierwszych dniach często widać też lekki obrzęk czoła i zaczerwienienie.",
+    "normal": "Zwykle w pierwszych dwóch tygodniach spotyka się małe strupki, lekkie zaczerwienienie, niewielki obrzęk i uczucie napięcia skóry.",
+    "todo1": "Stosuj się do sposobu mycia, który pokazała Ci klinika.",
+    "todo2": "W pierwsze noce śpij z uniesioną głową, jeśli tak zaleca Twoja klinika.",
+    "todo3": "Pozwól strupkom odpaść samym — bez zdrapywania i drapania.",
+    "todo4": "Odpuść intensywny wysiłek, sauny, pływanie i bezpośrednie słońce, dopóki klinika nie zdecyduje inaczej.",
+    "redflags": "Trochę zaczerwienienia i obrzęku jest teraz częste. Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:",
+    "days": {
+      "intro": "Wiele klinik zaleca poniższe. Najpierw stosuj się do zaleceń własnej kliniki.",
+      "d0_3": {
+        "title": "Dni 0–3",
+        "wash": "Wiele klinik samodzielnie wykonuje pierwsze mycie lub robi to w 1.–2. dniu, a potem zaleca bardzo delikatne spłukiwanie bez pocierania.",
+        "sleep": "Wiele klinik zaleca spanie na plecach z uniesioną głową, na przykład na dwóch poduszkach lub na poduszce podróżnej.",
+        "avoid": "Wiele klinik zaleca unikanie schylania się, podnoszenia ciężarów, dotykania przeszczepów, alkoholu i palenia."
+      },
+      "d4_7": {
+        "title": "Dni 4–7",
+        "wash": "Wiele klinik zaleca codzienne delikatne mycie produktami otrzymanymi od kliniki, z osuszaniem przeszczepów przez przykładanie ręcznika — nigdy przez pocieranie.",
+        "sleep": "Uniesiona głowa nadal jest często zalecana; obrzęk zwykle zmniejsza się mniej więcej w tych dniach.",
+        "avoid": "Wiele klinik zaleca unikanie ciasnych czapek, intensywnego pocenia się, bezpośredniego słońca i drapania."
+      },
+      "d8_14": {
+        "title": "Dni 8–14",
+        "wash": "Wiele klinik pozwala teraz na nieco mocniejsze mycie, aby strupki mogły delikatnie odpaść.",
+        "sleep": "Wiele osób może mniej więcej teraz wrócić do zwykłej pozycji podczas snu, jeśli klinika się zgodzi.",
+        "avoid": "Wiele klinik zaleca unikanie basenów, saun, intensywnych treningów i zdrapywania ostatnich strupków."
+      }
+    }
+  },
+  "shed": {
+    "title": "Faza wypadania",
+    "tagline": "Przeszczepione włosy często wypadają — cebulki zwykle zostają",
+    "happening": "Między 2. a 8. tygodniem wiele przeszczepionych włosów zwykle wypada. Kliniki często nazywają to wypadaniem szokowym. Mieszki pod skórą zwykle pozostają na miejscu i odpoczywają, zanim wyrosną nowe włosy.",
+    "normal": "Zwykle wyraźne wypadanie w tygodniach 2–8 jest częste — kliniki opisują je jako typowy etap osi czasu.",
+    "todo1": "Rób cotygodniowe zdjęcie z tego samego ujęcia; seria pokazuje zmiany lepiej niż lustro.",
+    "todo2": "Zapisuj w kilku dniach, ile włosów wypada — liczbę łatwiej omówić niż wrażenie.",
+    "todo3": "Nadal myj głowę delikatnie, tak jak zaleca Twoja klinika.",
+    "todo4": "Zapisuj pytania na kolejną wizytę kontrolną w klinice.",
+    "redflags": "Samo wypadanie jest w tych tygodniach częste. Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  },
+  "quiet": {
+    "title": "Spokojne miesiące",
+    "tagline": "Na powierzchni wydaje się, że dzieje się niewiele",
+    "happening": "Miesiące od 2. do 4. są często nazywane fazą „brzydkiego kaczątka”. Mieszki zwykle odpoczywają i przygotowują nowe włosy, więc okolica może wyglądać podobnie jak przed zabiegiem.",
+    "normal": "Zwykle bardzo niewielki widoczny wzrost w miesiącach 2–4 jest częsty.",
+    "todo1": "Porównuj miesiące, a nie dni — Twoja seria zdjęć daje najuczciwszy obraz.",
+    "todo2": "Gdy nowe włosy się przebijają, mogą pojawić się małe grudki; zapytaj klinikę, jeśli masz wątpliwości.",
+    "todo3": "Chroń skórę głowy przed mocnym słońcem, tak jak zaleca klinika.",
+    "todo4": "Do każdego zdjęcia zachowaj to samo ujęcie i to samo światło.",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  },
+  "sprout": {
+    "title": "Pierwszy wzrost",
+    "tagline": "Zwykle zaczynają pojawiać się cienkie nowe włosy",
+    "happening": "Około 3.–4. miesiąca zwykle pojawiają się pierwsze nowe włosy. Na początku często są cienkie, jasne i nierówne, a niektóre mogą być kręcone lub falowane.",
+    "normal": "Zwykle pierwsze włosy są cienkie, rozproszone i rosną w różnym tempie.",
+    "todo1": "Zdjęcia kontrolne rób przy tym samym świetle i z tego samego ujęcia.",
+    "todo2": "Daj cienkim lub nierównym włosom czas — grubość zwykle narasta w kolejnych miesiącach.",
+    "todo3": "Zapytaj klinikę, kiedy strzyżenie, farbowanie i kosmetyki do stylizacji będą dla Ciebie w porządku.",
+    "todo4": "Wracaj do swoich wcześniejszych zdjęć zamiast patrzeć na wyniki innych osób.",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  },
+  "grow": {
+    "title": "Rosnąca gęstość",
+    "tagline": "Włosy zwykle stają się grubsze i gęstsze",
+    "happening": "Między 6. a 9. miesiącem nowe włosy zwykle stają się grubsze i dłuższe, a okolica często wygląda z miesiąca na miesiąc pełniej.",
+    "normal": "Zwykle gęstość rośnie przez miesiące 6–9, a wygląd może się w tym czasie mocno zmieniać.",
+    "todo1": "Zrób zdjęcia kontrolne po 6 i 9 miesiącach.",
+    "todo2": "Porównuj ze swoimi pierwszymi zdjęciami, a nie z cudzymi.",
+    "todo3": "Zapytaj klinikę o kontrolę, którą zwykle oferuje mniej więcej w tym czasie.",
+    "todo4": "Nadal chroń skórę głowy przed mocnym słońcem.",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  },
+  "mature": {
+    "title": "Dojrzewanie",
+    "tagline": "Struktura i gęstość zwykle się stabilizują",
+    "happening": "Miesiące od 9. do 12. to zwykle czas dojrzewania: włosy nadal grubieją, a ich struktura się ustala. Kliniki zwykle oceniają efekt linii włosów około 12. miesiąca.",
+    "normal": "Zwykle w miesiącach 9–12 zmiany stają się wolniejsze i subtelniejsze.",
+    "todo1": "Zrób zdjęcie kontrolne po 12 miesiącach, ze wszystkich ujęć.",
+    "todo2": "Przed wizytą w klinice zestaw obok siebie pierwsze i najnowsze zdjęcia.",
+    "todo3": "Zapisz pytania, które chcesz zadać podczas oceny.",
+    "todo4": "Pamiętaj, że ciemię i przedziałek zwykle potrzebują więcej czasu.",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  },
+  "final": {
+    "title": "Końcowe dojrzewanie",
+    "tagline": "Ciemię i przedziałek mogą dojrzewać dalej",
+    "happening": "Po 12 miesiącach większość zmian jest zwykle niewielka. Ciemię, przedziałek i wiele efektów u kobiet często dojrzewa nawet do 18 miesięcy.",
+    "normal": "Zwykle powolna, stopniowa zmiana po 12. miesiącu jest częsta, zwłaszcza na ciemieniu.",
+    "todo1": "Rób zdjęcie co miesiąc lub co dwa miesiące.",
+    "todo2": "Umów się na ocenę, którą zaleca Twoja klinika.",
+    "todo3": "Jeśli chcesz, zabierz serię zdjęć, by pokazać ją klinice.",
+    "todo4": "Zachowaj to samo ujęcie i światło, aby porównanie było uczciwe.",
+    "redflags": "Skontaktuj się z kliniką lub lekarzem, jeśli zauważysz:"
+  }
+}

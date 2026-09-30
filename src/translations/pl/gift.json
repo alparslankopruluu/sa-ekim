@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Czeka na Ciebie prezent powitalny",
+    "body": "Jedno darmowe losowanie: kredyty, darmowy podgląd HD albo zniżka na Pro.",
+    "cta": "Losuj",
+    "wonTitle": "Twój prezent: {{prize}}",
+    "wonBody": "Ważny do {{date}}",
+    "use": "Użyj"
+  },
+  "title": "Twój prezent powitalny",
+  "subtitle": "Jedno darmowe losowanie. Każda nagroda jest prawdziwa.",
+  "spin": "Zakręć kołem",
+  "spinning": "Kręcenie…",
+  "youWon": "Twoja wygrana",
+  "expires": "Ważny do {{date}}",
+  "redeem": "Użyj mojego prezentu",
+  "added": "Dodano do Twojego konta",
+  "done": "Gotowe",
+  "close": "Zamknij",
+  "alreadyClaimed": "Twój prezent powitalny został już wylosowany.",
+  "fairness": "Nagrody są losowane na naszym serwerze. Zakup nie jest wymagany.",
+  "notifyNote": "Jeśli powiadomienia są włączone, przypomnimy Ci raz przed końcem ważności.",
+  "prizes": {
+    "credits10": {
+      "title": "10 kredytów",
+      "short": "+10",
+      "body": "Dodane do Twojego salda na podglądy."
+    },
+    "credits5": {
+      "title": "5 kredytów",
+      "short": "+5",
+      "body": "Dodane do Twojego salda na podglądy."
+    },
+    "freeHigh": {
+      "title": "Darmowy podgląd HD",
+      "short": "HD",
+      "body": "Twój następny podgląd HD nie kosztuje kredytów."
+    },
+    "discount40": {
+      "title": "40% zniżki na Pro",
+      "short": "−40%",
+      "body": "Pierwszy rok planu rocznego w niższej cenie."
+    }
+  },
+  "expired": "Ten prezent wygasł {{date}}.",
+  "redeemed": "Ten prezent został już wykorzystany.",
+  "tokenNote": "Wybierz HD, gdy będziesz tworzyć kolejny podgląd."
+}

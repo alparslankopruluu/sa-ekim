@@ -1,0 +1,43 @@
+{
+  "title": "Dziennik wypadania",
+  "close": "Zamknij",
+  "subtitle": "Zapisz z grubsza, ile włosów widzisz na poduszce lub w odpływie. Przybliżona liczba wystarczy.",
+  "typical": "Wypadanie w tygodniach 2–8 jest typowe.",
+  "phaseNow": "Jesteś w {{week}}. tygodniu po zabiegu.",
+  "today": "Dziś",
+  "input": {
+    "label": "Zauważone dziś włosy",
+    "placeholder": "0",
+    "hint": "Liczba całkowita od 0 do 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Dodaj {{count}}",
+  "save": "Zapisz",
+  "update": "Zaktualizuj",
+  "saved": "Zapisano",
+  "invalid": "Wpisz liczbę całkowitą od 0 do 999.",
+  "chart": {
+    "title": "Ostatnie 30 dni",
+    "a11y": "Dziennik wypadania z ostatnich 30 dni",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nic nie zapisano",
+    "barToday": "Dziś, {{date}}: {{count}}",
+    "barTodayEmpty": "Dziś, {{date}}: nic nie zapisano",
+    "window": "Typowy okres wypadania",
+    "todayLegend": "Dziś",
+    "missing": "Brak wpisu"
+  },
+  "average": "Średnia z ostatnich 7 dni: {{count}}",
+  "averageEmpty": "Nic nie zapisano w ciągu ostatnich 7 dni.",
+  "empty": {
+    "title": "Na razie nic nie zapisano",
+    "body": "Zapisuj liczbę, gdy zauważysz włosy. Po kilku tygodniach wykres pokaże Twój własny wzór."
+  },
+  "note": "Do własnego użytku. Liczby zmieniają się z dnia na dzień, a wyniki bywają różne.",
+  "mini": {
+    "title": "Dziennik wypadania",
+    "empty": "Zapisz dzisiejszą liczbę",
+    "a11y": "Dziennik wypadania, ostatnie {{days}} dni. Otwiera dziennik.",
+    "a11yEmpty": "Dziennik wypadania. Na razie nic nie zapisano. Otwiera dziennik."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök 使用相機，讓你每次都能從相同的角度拍攝自己的進展相片。",
+  "NSPhotoLibraryUsageDescription": "Kök 會開啟你的相片，讓你可以選取一張用於預覽或旅程紀錄。",
+  "NSPhotoLibraryAddUsageDescription": "Kök 會將你的預覽和比較圖儲存到你的相簿。",
+  "NSMotionUsageDescription": "Kök 會讀取動作感測器，以確認你的手機是直立握持的，從而拍出一致的相片。"
+}

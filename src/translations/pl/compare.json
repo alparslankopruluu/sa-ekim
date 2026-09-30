@@ -1,0 +1,44 @@
+{
+  "title": "Porównaj",
+  "close": "Zamknij",
+  "mode": {
+    "wipe": "Suwak",
+    "side": "Obok siebie"
+  },
+  "label": {
+    "before": "Przed",
+    "week": "Tydzień {{n}}",
+    "none": "Zdjęcie"
+  },
+  "picker": {
+    "before": "Wcześniejsze zdjęcie",
+    "after": "Późniejsze zdjęcie",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Suwak porównujący dwa zdjęcia. {{before}} po lewej, {{after}} po prawej. Przesuń, aby zmienić położenie linii podziału.",
+  "sideA11y": "{{label}}, zdjęcie: {{angle}}",
+  "mismatch": "Te dwa zdjęcia pokazują różne ujęcia. Najlepiej porównywać to samo ujęcie.",
+  "empty": {
+    "title": "Dwa zdjęcia do porównania",
+    "body": "Zrób co najmniej dwa zdjęcia z tego samego ujęcia, a potem porównaj je tutaj.",
+    "action": "Zrób zdjęcie"
+  },
+  "locked": {
+    "title": "Porównanie jest częścią Pro",
+    "body": "Zobacz dwa zdjęcia obok siebie wraz z tygodniem każdego z nich. Twoje pierwsze zdjęcie pozostaje widoczne.",
+    "cta": "Odblokuj porównanie"
+  },
+  "share": {
+    "action": "Udostępnij",
+    "preparing": "Przygotowywanie…",
+    "error": "Nie udało się przygotować porównania. Spróbuj ponownie.",
+    "unavailable": "Udostępnianie nie jest dostępne na tym urządzeniu.",
+    "dialog": "Udostępnij swoje porównanie"
+  },
+  "report": {
+    "title": "Porównanie zdjęć",
+    "heading": "{{before}} i {{after}}",
+    "disclaimer": "Osobisty zapis postępów — nie dokument medyczny"
+  },
+  "mark": "Kök"
+}

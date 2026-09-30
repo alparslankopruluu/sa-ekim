@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Podglądy",
+    "offers": "Oferty",
+    "reminders": "Przypomnienia"
+  },
+  "previewReady": {
+    "title": "Twój podgląd jest gotowy",
+    "body": "Otwórz Kök, aby go zobaczyć. To podgląd AI, nie prognoza Twojego wyniku."
+  },
+  "giftExpiring": {
+    "title": "Twój prezent wciąż czeka",
+    "body": "Zniżka na plan roczny kończy się {{date}}."
+  },
+  "care": {
+    "title": "Dzień {{day}} Twojego planu pielęgnacji",
+    "body": "Otwórz dzisiejsze kroki. Zalecenia Twojej kliniki zawsze są najważniejsze."
+  },
+  "phase": {
+    "shed": {
+      "title": "Tydzień {{week}} — wypadanie jest typowe mniej więcej teraz",
+      "body": "Wiele osób obserwuje wypadanie w tej fazie. Otwórz przewodnik, by zobaczyć, co jest typowe. Wyniki bywają różne."
+    },
+    "quiet": {
+      "title": "Cicha faza jest typowa mniej więcej teraz",
+      "body": "Wiele osób ma w tych tygodniach wrażenie, że nic się nie dzieje. Otwórz przewodnik, by zobaczyć, co jest typowe."
+    },
+    "sprout": {
+      "title": "Pierwszy wzrost jest typowy mniej więcej teraz",
+      "body": "Cienkie nowe włosy często zaczynają się pojawiać w tej fazie. Czas bywa różny u różnych osób."
+    },
+    "grow": {
+      "title": "Faza wzrostu",
+      "body": "Gęstość zwykle narasta stopniowo. Rób dalej zdjęcia z tego samego ujęcia, by zobaczyć zmianę. Wyniki bywają różne."
+    },
+    "mature": {
+      "title": "Faza dojrzewania",
+      "body": "Wynik ustala się jeszcze przez kolejne miesiące. Wyniki bywają różne."
+    },
+    "final": {
+      "title": "Czas na pełny przegląd",
+      "body": "Około roku po zabiegu wiele osób porównuje całą serię zdjęć. Otwórz przewodnik."
+    }
+  },
+  "photo": {
+    "title": "Czas na zdjęcie postępów",
+    "body": "To samo ujęcie, to samo światło, kilka sekund. To seria sprawia, że zmiana staje się widoczna."
+  },
+  "shed": {
+    "title": "Szybka kontrola wypadania",
+    "body": "Zapisz, ile włosów wypadło dziś. Wypadanie jest typowe w tej fazie."
+  },
+  "session": {
+    "title": "Jutro sesja PRP",
+    "body": "Twoja sesja jest {{date}}. Zrób wcześniej zdjęcie z tego samego ujęcia, aby móc porównać je później."
+  }
+}

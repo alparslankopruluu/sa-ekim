@@ -1,0 +1,39 @@
+{
+  "title": "이 미리보기 신고",
+  "subtitle": "무엇이 문제인지 알려 주세요. 모든 신고는 48시간 이내에 검토해요.",
+  "inaccurate": "부정확해 보여요",
+  "unsafe": "안전하지 않거나 부적절해 보여요",
+  "privacy": "개인정보 문제가 우려돼요",
+  "other": "기타",
+  "send": "신고 보내기",
+  "sent": "감사해요. 48시간 이내에 검토할게요.",
+  "clinic": {
+    "action": "경과 기록 내보내기",
+    "exporting": "준비하는 중…",
+    "title": "모발 회복 경과 기록",
+    "brand": "Kök",
+    "clinicLine": "병원: {{name}}",
+    "operationLine": "수술 날짜: {{date}}",
+    "generatedLine": "작성일 {{date}}",
+    "photosHeading": "사진",
+    "noPhotos": "아직 사진이 없어요.",
+    "shedHeading": "탈락 기록",
+    "shedEmpty": "아직 탈락 기록이 없어요.",
+    "col": {
+      "week": "주차",
+      "days": "기록한 일수",
+      "average": "평균",
+      "max": "최고"
+    },
+    "weekRow": "{{n}}주차",
+    "overall": "전체 기록",
+    "before": "수술 전",
+    "week": "{{n}}주차",
+    "disclaimer": "개인 경과 기록이며 의료 문서가 아니에요",
+    "dialog": "경과 기록 공유",
+    "failed": "리포트를 만들지 못했어요. 다시 시도해 주세요.",
+    "empty": "먼저 사진이나 탈락 기록을 추가해 주세요.",
+    "unsupported": "브라우저에서는 리포트를 만들 수 없어요."
+  },
+  "unavailable": "이 미리보기는 신고할 수 없어요."
+}

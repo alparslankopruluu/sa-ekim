@@ -73,6 +73,8 @@ export default function PaywallScreen() {
   const offeringId = parseOfferingId(params.offering);
   const goal = useSession((s) => s.goal);
   const gift = useAccount((s) => s.gift);
+  // "Your first preview is done" is only true when the onboarding preview actually succeeded.
+  const hadOnboardingPreview = useAccount((s) => s.previews.some((p) => p.onboarding && p.status === 'succeeded'));
   const content = useMemo(() => paywallContent(source, goal), [source, goal]);
 
   const [state, setState] = useState<LoadState>({ kind: 'loading' });
@@ -225,7 +227,8 @@ export default function PaywallScreen() {
     content.headline.kind === 'goal'
       ? t(`paywall.title.${content.headline.goal ?? 'default'}`)
       : t(`paywall.sources.${content.headline.source}.title`);
-  const subtitle = t(`paywall.sources.${source}.subtitle`, { count: FREE_LIMITS.journeyPhotos });
+  const subtitleSource = source === 'onboarding' && !hadOnboardingPreview ? 'settings' : source;
+  const subtitle = t(`paywall.sources.${subtitleSource}.subtitle`, { count: FREE_LIMITS.journeyPhotos });
 
   return (
     <View style={styles.root}>

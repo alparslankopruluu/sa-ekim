@@ -13,7 +13,7 @@ import {
 
 import { AppText } from '@/components/AppText';
 import { useFeedback } from '@/hooks/useFeedback';
-import { colors, radius, spacing } from '@/theme/tokens';
+import { colors, gradients, radius, spacing } from '@/theme/tokens';
 
 export interface WheelItem {
   value: number;
@@ -172,12 +172,12 @@ export function DateWheel({ items, value, onChange, label, testID }: DateWheelPr
       </ScrollView>
       <LinearGradient
         pointerEvents="none"
-        colors={[colors.bg, 'rgba(13,10,8,0)']}
+        colors={[gradients.fadeBottom[1], gradients.fadeBottom[0]]}
         style={[styles.fade, styles.fadeTop]}
       />
       <LinearGradient
         pointerEvents="none"
-        colors={['rgba(13,10,8,0)', colors.bg]}
+        colors={[gradients.fadeBottom[0], gradients.fadeBottom[1]]}
         style={[styles.fade, styles.fadeBottom]}
       />
     </View>

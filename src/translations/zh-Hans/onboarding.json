@@ -1,0 +1,151 @@
+{
+  "welcome": {
+    "kicker": "植发陪伴助手",
+    "title": "了解你所处的恢复周通常是什么情况",
+    "subtitle": "手术前先预览可能的变化，然后逐周了解恢复过程中通常会发生什么。",
+    "cta": "开始使用",
+    "demoLabel": "前后对比滑块示例。拖动即可对比。",
+    "demoBefore": "之前",
+    "demoAfter": "之后",
+    "demoCaption": "仅为示意。你自己的预览稍后生成。",
+    "legalPrefix": "继续即表示你同意我们的",
+    "terms": "使用条款",
+    "privacy": "隐私政策"
+  },
+  "goal": {
+    "title": "你想改善哪个部位？",
+    "subtitle": "我们会据此为你定制时间线和拍照角度。",
+    "hairline": {
+      "title": "发际线",
+      "subtitle": "前额和两鬓"
+    },
+    "crown": {
+      "title": "发旋",
+      "subtitle": "头的后部和顶部"
+    },
+    "part": {
+      "title": "发缝",
+      "subtitle": "发缝沿线的密度"
+    },
+    "brows": {
+      "title": "眉毛",
+      "subtitle": "眉毛移植"
+    },
+    "beard": {
+      "title": "胡须",
+      "subtitle": "胡须和髭须"
+    }
+  },
+  "stage": {
+    "title": "你现在处于哪个阶段？",
+    "subtitle": "这将决定我们先向你展示什么。",
+    "researching": {
+      "title": "仍在了解",
+      "subtitle": "正在了解各种选择，还没有预约"
+    },
+    "planned": {
+      "title": "已预约手术",
+      "subtitle": "我的手术日期快到了"
+    },
+    "done": {
+      "title": "已经做过手术",
+      "subtitle": "我想记录我的恢复过程"
+    }
+  },
+  "date": {
+    "titlePlanned": "你的手术是什么时候？",
+    "titleDone": "你的手术是什么时候做的？",
+    "subtitlePlanned": "我们会倒数到第 0 天，并为你准备好最初几周。",
+    "subtitleDone": "我们会显示你所处的阶段，以及本周通常的情况。",
+    "wheelDay": "日",
+    "wheelMonth": "月",
+    "wheelYear": "年",
+    "feedbackPast": "第 {{day}} 天 · 第 {{week}} 周",
+    "feedbackToday": "今天是第 0 天",
+    "feedbackFuture_other": "{{count}} 天后",
+    "errorMustBeFuture": "请选择今天或之后的日期。",
+    "errorMustBePast": "请选择今天或之前的日期。",
+    "errorTooFar": "这个日期太遥远，无法跟踪。请选一个更近的日期。",
+    "errorInvalid": "这个日期不存在。",
+    "skip": "我还不确定",
+    "skipNote": "你可以稍后在旅程中设置或更改。"
+  },
+  "photo": {
+    "title": "添加一张用于预览的照片",
+    "subtitleResearching": "在你做出任何决定之前，先通过 AI 预览看看变化可能是什么样子。",
+    "subtitlePlanned": "通过 AI 预览看看你的手术可能呈现的样子。",
+    "subtitleDone": "通过 AI 预览看看你的结果随着成熟可能呈现的样子。",
+    "guidanceTitle": "为了获得更好的预览",
+    "angle": {
+      "front": "正对镜头，手机与视线齐平。",
+      "top": "将手机举在头顶上方，向下拍摄头顶。",
+      "crown": "拍摄后脑，最好请他人帮忙。"
+    },
+    "area": {
+      "hairline": "把头发向后拢，让发际线清晰可见。",
+      "crown": "不要遮挡发旋，让头发保持平整。",
+      "part": "按你平时的习惯分出发缝。",
+      "brows": "不要让头发和眼镜遮住眉毛。",
+      "beard": "不要遮挡胡须区域，并保持光线均匀。"
+    },
+    "light": "请在自然光下拍摄，不要使用滤镜，也不要戴帽子。",
+    "take": "拍照",
+    "library": "从相册选择",
+    "change": "选择另一张照片",
+    "selected": "你选择的照片",
+    "placeholder": "尚未选择照片",
+    "privacy": "你的照片只会用于生成预览，并且只有在你于下一个页面表示同意后才会发送。",
+    "skip": "跳过预览",
+    "skipNote": "你可以稍后在“预览”标签页中生成。",
+    "permissionDenied": "无法打开你的照片。请在“设置”中检查权限。"
+  },
+  "notify": {
+    "title": "不错过重要时刻",
+    "subtitle": "恢复是个缓慢的过程。在合适的时间给你一个轻柔的提醒，替你记住这些事。",
+    "bulletPhase": "阶段变化时告诉你",
+    "bulletPhoto": "拍照日到来时告诉你",
+    "bulletCare": "前两周每天的护理提醒",
+    "allow": "开启提醒",
+    "skip": "以后再说",
+    "note": "护理提醒免费。阶段提醒和拍照提醒需要 Pro。你可以随时在“设置”中更改。"
+  },
+  "crafting": {
+    "title": "正在生成你的预览",
+    "titleDone": "你的预览已准备好",
+    "subtitle": "这通常需要不到一分钟。",
+    "ringLabel": "预览进度，{{percent}}%",
+    "lineUpload": "正在安全地发送你的照片",
+    "lineReserve": "正在为你预留免费预览",
+    "lineEdit": "正在处理{{area}}",
+    "lineFinish": "正在做最后的润色",
+    "stateDone": "已完成",
+    "stateActive": "进行中",
+    "statePending": "等待中",
+    "area": {
+      "hairline": "你的发际线",
+      "crown": "你的发旋",
+      "part": "你的发缝",
+      "brows": "你的眉毛",
+      "beard": "你的胡须"
+    },
+    "skip": "暂时跳过",
+    "skipNote": "你的预览会继续生成，并保存在“预览”标签页中等你查看。",
+    "failedTitle": "我们未能完成你的预览",
+    "failedOffline": "你似乎已离线。没有扣除任何费用。请检查网络连接后重试。",
+    "failedGeneric": "我们这边出了点问题。没有扣除任何费用。你可以重试，或不使用预览继续。",
+    "failedBlocked": "这张照片无法用于预览。没有扣除任何费用。你可以继续，稍后再试其他照片。",
+    "skipFailed": "不使用预览继续"
+  },
+  "reveal": {
+    "title": "这是一种可能的样子的预览",
+    "subtitle": "拖动手柄进行对比。这是 AI 绘制的示意图。",
+    "before": "你的照片",
+    "after": "AI 预览",
+    "disclaimer": "AI 预览，并不是对你结果的预测",
+    "watermark": "免费预览带有小水印。",
+    "wipeLabel": "你的照片的前后对比。拖动即可对比。",
+    "loading": "正在准备你的预览",
+    "loadFailed": "无法加载预览图。它已保存在你的“预览”标签页中。",
+    "cta": "查看我的计划"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "close": "關閉相機",
+  "title": "進展相片",
+  "angle": {
+    "front": "正面",
+    "left": "左側",
+    "right": "右側",
+    "top": "頭頂",
+    "crown": "髮旋"
+  },
+  "instruction": {
+    "front": "頭髮保持乾燥，並像平常一樣造型。讓臉部位於橢圓框內，髮際線靠近頂部。",
+    "left": "轉向一側，露出左側。手機保持直立，與視線齊平。",
+    "right": "轉向一側，露出右側。手機保持直立，與視線齊平。",
+    "top": "將手機水平舉在頭頂上方，螢幕朝上，讓後鏡頭朝下拍攝頭頂。",
+    "crown": "將手機水平舉在後腦上方，螢幕朝上，讓後鏡頭朝下拍攝髮旋。"
+  },
+  "cameraNote": {
+    "front": "使用前鏡頭，方便你查看取景。",
+    "back": "使用後鏡頭。請將手機放平，或請他人幫你拍攝。手機放平時你會感覺到輕微震動一下。"
+  },
+  "guide": {
+    "ghostHide": "隱藏上一張相片",
+    "ghostShow": "顯示上一張相片",
+    "ghostOverlay": "你上一張{{angle}}相片的疊加圖，{{label}}",
+    "frame": "附有取景參考線的相機畫面"
+  },
+  "level": {
+    "ok": "已放平，可以拍攝",
+    "upright": "請將手機直立",
+    "flat": "請將手機放平，螢幕朝上",
+    "unavailable": "此裝置沒有動作感測器，因此水平檢查已關閉。請自行確認手機是直立的。",
+    "a11yOk": "手機已放平，可以拍照。",
+    "a11yBlockedUpright": "手機還沒有直立。",
+    "a11yBlockedFlat": "手機還沒有放平。"
+  },
+  "shutter": {
+    "label": "拍照",
+    "blockedUpright": "請將手機直立後再拍照",
+    "blockedFlat": "請將手機放平後再拍照"
+  },
+  "library": "從相簿選取",
+  "permission": {
+    "checking": "正在檢查相機權限…",
+    "title": "相機權限未開啟",
+    "body": "Kök 僅將相機用於拍攝你的進展相片。相片會保存在這台裝置上。你也可以從相簿中挑選相片。",
+    "allow": "允許使用相機",
+    "settings": "開啟設定"
+  },
+  "unavailable": {
+    "title": "此處無法使用相機",
+    "body": "你可以改為從相簿中挑選相片。"
+  },
+  "review": {
+    "retake": "重拍",
+    "use": "使用相片",
+    "saving": "正在儲存…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "這張相片僅用於產生你的預覽，不會加入你的旅程。",
+    "a11y": "你剛拍攝的相片預覽"
+  },
+  "error": {
+    "save": "無法儲存相片，請重試。",
+    "capture": "無法拍攝相片，請重試。",
+    "pick": "無法開啟相簿，請重試。"
+  },
+  "saved": "相片已儲存",
+  "checking": "正在檢查你的方案…",
+  "detail": {
+    "title": "相片",
+    "image": "{{angle}}相片，{{label}}",
+    "taken": "拍攝於 {{date}}",
+    "compare": "與其他相片比較…",
+    "delete": "刪除相片",
+    "confirmTitle": "刪除這張相片？",
+    "confirmBody": "相片將從這台裝置中移除，且無法復原。",
+    "confirm": "刪除",
+    "cancel": "保留",
+    "missingTitle": "這張相片已不存在",
+    "missingBody": "它可能已被刪除。",
+    "close": "關閉",
+    "loadError": "無法顯示這張相片。"
+  }
+}

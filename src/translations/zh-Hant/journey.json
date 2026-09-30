@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "早安",
+    "afternoon": "午安",
+    "evening": "晚安",
+    "night": "夜深了，你好"
+  },
+  "today": {
+    "subtitleUnset": "你的旅程從一個日期開始。",
+    "subtitleUpcoming": "手術日期：{{date}}",
+    "editDate": "編輯你的日期和旅程資訊",
+    "bandTitle": "你所在的週在典型時間軸上的位置"
+  },
+  "hero": {
+    "day": "天",
+    "dayWeek": "第 {{day}} 天 · 第 {{week}} 週",
+    "monthOf": "第 {{month}} 個月，共約 {{total}} 個月",
+    "complete": "已超出典型的 {{months}} 個月週期",
+    "untilOperation_other": "距離手術還有 {{count}} 天",
+    "daysToGo_other": "天後",
+    "session": "療程",
+    "ofTotal": "共 {{total}} 次",
+    "prpSession": "第 {{current}} 次，共 {{total}} 次",
+    "prpDone": "已記錄全部 {{total}} 次療程"
+  },
+  "phase": {
+    "rightNow": "現在",
+    "expected": "預期",
+    "normalLabel": "此時的典型情況",
+    "clinicNote": "個人結果各不相同，請遵循你自己診所的建議。",
+    "nextIn_other": "{{phase}}通常在 {{count}} 天後開始",
+    "last": "這是典型時間軸的最後一個階段。",
+    "openGuide": "開啟此階段的指南"
+  },
+  "band": {
+    "a11y": "生長時間軸上的典型範圍圖表。你目前處於以下階段：{{phase}}。個人結果各不相同。",
+    "a11yNone": "生長時間軸上的典型範圍圖表。個人結果各不相同。",
+    "a11yLocked": "典型範圍圖表，需要 Pro 才能使用。",
+    "lockChip": "查看你的位置 · Pro",
+    "lockedHint": "開啟 Pro 方案",
+    "start": "手術",
+    "end": "成熟",
+    "disclaimer": "典型範圍，個人結果各不相同",
+    "seeTimeline": "時間軸"
+  },
+  "care": {
+    "items": {
+      "wash": "依診所教你的方法輕柔清洗",
+      "sleep": "墊高頭部睡覺",
+      "hands": "不要觸碰移植區，不要抓撓",
+      "sun": "讓該區域避開陽光直射"
+    }
+  },
+  "task": {
+    "eyebrow": "下一步",
+    "photoCta": "拍照",
+    "baseline": {
+      "title": "拍一張「手術前」的相片",
+      "body": "手術前的一張相片，會讓之後的每次比較都更清晰。"
+    },
+    "care": {
+      "title": "今日護理清單",
+      "doneTitle": "今日護理已全部勾選",
+      "body": "許多診所會在前兩週提出這些建議。請優先遵循你自己診所的指示。",
+      "progress": "已完成 {{done}} / {{total}}"
+    },
+    "photo": {
+      "firstTitle": "拍下你的第一張進展相片",
+      "weeklyTitle": "本週的相片",
+      "monthlyTitle": "本月的相片",
+      "weeklyBody": "前三個月每週一次，角度相同、光線相同。",
+      "monthlyBody": "從第四個月起每月一次，角度相同、光線相同。"
+    },
+    "shed": {
+      "title": "記錄今天的脫落情況",
+      "body": "第 2–8 週出現脫落很常見。簡單數一數，有助於你看出長期的變化規律。",
+      "cta": "記錄脫落"
+    },
+    "prp": {
+      "title": "已規劃第 {{current}} 次療程，共 {{total}} 次",
+      "bodyToday": "今天是規劃的日期。療程前拍一張相片，能讓你的相片系列便於比較。",
+      "bodyLate": "規劃日期為 {{date}}。完成後請標記為已完成。",
+      "markDone": "標記為已完成"
+    },
+    "caughtUp": {
+      "title": "全部完成",
+      "body": "今天沒有需要做的事。",
+      "nextPhoto_other": "{{count}} 天後拍下一張相片。",
+      "nextSession_other": "{{count}} 天後進行下一次療程。"
+    }
+  },
+  "setDate": {
+    "title": "設定你的手術日期",
+    "body": "Kök 會根據這個日期顯示你所處的天數、週數和階段，並安排拍照提醒。",
+    "prpTitle": "設定你的首次療程日期",
+    "prpBody": "Kök 會據此為你安排各次療程，並在每次療程前一天提醒你。",
+    "cta": "設定日期",
+    "privacy": "僅保存在你的手機上。"
+  },
+  "pre": {
+    "title": "手術之前",
+    "body": "許多人覺得以下事項在手術前幾天很有幫助。請優先遵循你診所的指示。",
+    "tip1": "在光線良好的地方，從正面、頭頂和兩側拍攝「手術前」的相片。",
+    "tip2": "向你的診所索取書面的術後護理說明。",
+    "tip3": "為手術後安排幾天安靜的時間。",
+    "tip4": "準備一個旅行枕，用於墊高頭部睡覺。",
+    "clinicNote": "對藥物或你的健康有疑問？請詢問你的診所或醫師。"
+  },
+  "previewCard": {
+    "title": "預覽一種髮型",
+    "body": "用 AI 預覽來探索想法，並不是對你結果的預測。"
+  },
+  "shedPeek": {
+    "title": "近期的脫落情況",
+    "hint": "開啟脫落紀錄",
+    "note": "第 2–8 週出現脫落很常見。"
+  },
+  "tabs": {
+    "timeline": "時間軸",
+    "photos": "相片",
+    "plan": "計畫"
+  },
+  "timeline": {
+    "bandTitle": "典型時間軸",
+    "phasesTitle": "階段"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "第 {{from}}–{{to}} 天",
+    "weeks": "第 {{from}}–{{to}} 週",
+    "current": "目前階段",
+    "past": "已經過去",
+    "upcoming": "接下來",
+    "youAreHere": "你在這裡"
+  },
+  "maturation": {
+    "title": "什麼時候評估結果？",
+    "note": "頭髮通常在手術後會持續成熟約 {{months}} 個月。",
+    "evaluate12": "診所通常在大約 12 個月時評估結果。",
+    "evaluate18": "診所通常在大約 12 個月時查看結果，而髮旋或分線可能會持續成熟長達 18 個月。",
+    "clinicNote": "個人結果各不相同，你的複診時間由你的診所決定。"
+  },
+  "photos": {
+    "add": "新增",
+    "count_other": "{{count}} 張相片",
+    "freeCounter_other": "免費相片 {{count}} / {{limit}} 張",
+    "limitReached": "已用完 {{limit}} 張免費相片，Pro 可保存無限張相片",
+    "allAngles": "全部",
+    "before": "手術前",
+    "week": "第 {{week}} 週 · {{date}}",
+    "all": "相片",
+    "compare": "比較",
+    "compareHint": "選取兩張相片進行比較。",
+    "selectHint": "請選取兩張相片。",
+    "selected_other": "已選取 {{count}} / {{max}} 張",
+    "compareCta": "比較",
+    "groupCount_other": "{{count}} 張相片",
+    "thumbLabel": "{{angle}}相片，{{group}}",
+    "missing": "檔案遺失",
+    "emptyTitle": "還沒有相片",
+    "emptyBody": "每個角度先拍一張。下次拍攝時，一層淡淡的虛影會幫助你對準同樣的視角。",
+    "emptyCta": "拍第一張相片",
+    "emptyFilter": "這個角度還沒有相片。"
+  },
+  "angles": {
+    "front": "正面",
+    "left": "左側",
+    "right": "右側",
+    "top": "頭頂",
+    "crown": "髮旋"
+  },
+  "plan": {
+    "intro": "在診所通常會查看的月份設定相片節點。角度相同，光線相同。",
+    "checkpoint": "第 {{month}} 個月",
+    "status": {
+      "done": "已拍照",
+      "due": "現在到期",
+      "upcoming": "即將到來",
+      "missed": "沒有相片"
+    },
+    "takePhoto": "拍照",
+    "note": "節點前一週到節點後兩週內的任何一張相片，都可算作該節點的相片。"
+  },
+  "prp": {
+    "timelineTitle": "你的 PRP / 中胚層療法療程",
+    "timelineBody": "療程通常安排為間隔幾週的若干次治療，之後進入維持階段。你自己的方案由你的診所決定。",
+    "openPlan": "開啟計畫",
+    "emptyTitle": "規劃你的療程",
+    "emptyBody": "從常見的方案開始：{{sessions}} 次療程，每次間隔 {{weeks}} 週。每個日期都可以修改。",
+    "createPlan": "建立計畫",
+    "intro": "療程完成後請勾選。每次之前拍一張相片，能讓你的相片系列便於比較。",
+    "session": "第 {{number}} 次",
+    "done": "已完成",
+    "due": "到期",
+    "planned": "已規劃",
+    "markDoneLabel": "{{date}} 的第 {{number}} 次療程已完成",
+    "changeDate": "更改日期",
+    "photoBefore": "療程前拍照",
+    "remove": "移除",
+    "removeTitle": "移除這次療程？",
+    "removeBody": "它的提醒也會一併移除。",
+    "addSession": "新增一次療程",
+    "maintenanceTitle": "維持",
+    "maintenanceBody": "許多診所建議大約 {{months}} 個月後進行一次維持療程，約在 {{date}}。",
+    "clinicNote": "請遵循你自己診所的方案。"
+  },
+  "setup": {
+    "title": "你的旅程",
+    "kindTitle": "你要記錄什麼？",
+    "kind": {
+      "transplant": {
+        "title": "植髮手術",
+        "body": "髮際線、髮旋、分線、眉毛或鬍鬚"
+      },
+      "prp": {
+        "title": "PRP / 中胚層療法療程",
+        "body": "間隔幾週的一系列療程"
+      }
+    },
+    "goalTitle": "哪個部位？",
+    "goals": {
+      "hairline": "髮際線",
+      "crown": "髮旋",
+      "part": "分線",
+      "brows": "眉毛",
+      "beard": "鬍鬚"
+    },
+    "dateTitleTransplant": "手術日期",
+    "dateTitlePrp": "首次療程日期",
+    "day": "日",
+    "month": "月",
+    "year": "年",
+    "relToday": "就是今天，第 0 天",
+    "relPast": "第 {{day}} 天 · 第 {{week}} 週",
+    "relFuture_other": "{{count}} 天後",
+    "clinicTitle": "診所（選填）",
+    "clinicPlaceholder": "診所名稱",
+    "clinicHint": "僅保存在這支手機上，絕不會上傳。",
+    "clinicTooLong": "請控制在 {{max}} 個字元以內。",
+    "clinicBlocked": "請換一個名稱。",
+    "save": "儲存",
+    "saved": "已儲存",
+    "relabelTitle": "更改日期？",
+    "relabelBody": "每張相片的天數和週數標籤都會根據新日期重新計算。",
+    "relabelConfirm": "更改日期"
+  }
+}

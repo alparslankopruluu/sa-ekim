@@ -3,8 +3,7 @@ import '@/lib/i18n';
 import '@/features/settings/language';
 
 import * as Application from 'expo-application';
-import { useFonts } from 'expo-font';
-import { DarkTheme, router, Stack, ThemeProvider, type ErrorBoundaryProps } from 'expo-router';
+import { DarkTheme, DefaultTheme, router, Stack, ThemeProvider, type ErrorBoundaryProps } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -24,16 +23,18 @@ import { startSession } from '@/services/session';
 import { rebaseJourneyPhotoUris } from '@/services/journeyFiles';
 import { useJourney } from '@/stores/journey';
 import { useSession } from '@/stores/session';
-import { colors, spacing } from '@/theme/tokens';
+import { colors, isDark, spacing } from '@/theme/tokens';
 
 void SplashScreen.preventAutoHideAsync().catch(() => undefined);
 
 const launchTrace = startTrace('app_start_to_onboarding');
 
+const baseTheme = isDark ? DarkTheme : DefaultTheme;
 const navigationTheme = {
-  ...DarkTheme,
+  ...baseTheme,
+  dark: isDark,
   colors: {
-    ...DarkTheme.colors,
+    ...baseTheme.colors,
     primary: colors.primary,
     background: colors.bg,
     card: colors.bgElevated,
@@ -47,11 +48,8 @@ export default function RootLayout() {
   const sessionHydrated = useSession((s) => s.hydrated);
   const journeyHydrated = useJourney((s) => s.hydrated);
   const hydrated = sessionHydrated && journeyHydrated;
-  const [fontsLoaded, fontError] = useFonts({
-    'DMSerifDisplay-Regular': require('../../assets/fonts/DMSerifDisplay-Regular.ttf'),
-    'DMSerifDisplay-Italic': require('../../assets/fonts/DMSerifDisplay-Italic.ttf'),
-  });
-  const ready = hydrated && (fontsLoaded || !!fontError);
+  // SF Pro (system font) only — nothing to load.
+  const ready = hydrated;
 
   useEffect(() => {
     if (!ready) return;
@@ -109,7 +107,7 @@ export default function RootLayout() {
     <GestureHandlerRootView style={styles.root}>
       <SafeAreaProvider>
         <ThemeProvider value={navigationTheme}>
-          <StatusBar style="light" />
+          <StatusBar style={isDark ? 'light' : 'dark'} />
           <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg } }}>
             <Stack.Screen name="index" />
             <Stack.Screen name="onboarding" options={{ gestureEnabled: false, animation: 'fade' }} />

@@ -1,0 +1,44 @@
+{
+  "title": "比較",
+  "close": "關閉",
+  "mode": {
+    "wipe": "滑動",
+    "side": "並排"
+  },
+  "label": {
+    "before": "之前",
+    "week": "第 {{n}} 週",
+    "none": "相片"
+  },
+  "picker": {
+    "before": "較早的相片",
+    "after": "較晚的相片",
+    "item": "{{angle}}，{{label}}，{{date}}"
+  },
+  "wipeA11y": "用於比較兩張相片的滑桿。左側為{{before}}，右側為{{after}}。調整滑桿以移動分隔線。",
+  "sideA11y": "{{label}}，{{angle}}相片",
+  "mismatch": "這兩張相片的角度不同。比較相同角度的相片效果最好。",
+  "empty": {
+    "title": "需要兩張相片才能比較",
+    "body": "請至少拍攝兩張相同角度的相片，然後在這裡進行比較。",
+    "action": "拍攝相片"
+  },
+  "locked": {
+    "title": "比較屬於 Pro 功能",
+    "body": "並排查看兩張相片，並顯示各自對應的週數。你的第一張相片始終可見。",
+    "cta": "解鎖比較"
+  },
+  "share": {
+    "action": "分享",
+    "preparing": "正在準備…",
+    "error": "無法產生比較圖，請重試。",
+    "unavailable": "此裝置不支援分享。",
+    "dialog": "分享你的比較"
+  },
+  "report": {
+    "title": "相片比較",
+    "heading": "{{before}}與{{after}}",
+    "disclaimer": "個人進展紀錄，並非醫療文件"
+  },
+  "mark": "Kök"
+}

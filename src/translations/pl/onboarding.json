@@ -1,0 +1,154 @@
+{
+  "welcome": {
+    "kicker": "Towarzysz po przeszczepie włosów",
+    "title": "Zobacz, co jest typowe dla Twojego tygodnia rekonwalescencji",
+    "subtitle": "Zobacz podgląd zmiany przed zabiegiem, a potem śledź, co jest typowe w każdym tygodniu Twojej rekonwalescencji.",
+    "cta": "Zaczynamy",
+    "demoLabel": "Przykład suwaka przed i po. Przeciągnij, aby porównać.",
+    "demoBefore": "Przed",
+    "demoAfter": "Po",
+    "demoCaption": "Tylko ilustracja. Twój własny podgląd pojawi się później.",
+    "legalPrefix": "Kontynuując, zgadzasz się na nasze",
+    "terms": "Warunki",
+    "privacy": "Politykę prywatności"
+  },
+  "goal": {
+    "title": "Nad czym pracujesz?",
+    "subtitle": "Dopasujemy do tego Twoją oś czasu i ujęcia zdjęć.",
+    "hairline": {
+      "title": "Linia włosów",
+      "subtitle": "Czoło i skronie"
+    },
+    "crown": {
+      "title": "Czubek głowy",
+      "subtitle": "Tył i czubek głowy"
+    },
+    "part": {
+      "title": "Przedziałek",
+      "subtitle": "Gęstość wzdłuż przedziałka"
+    },
+    "brows": {
+      "title": "Brwi",
+      "subtitle": "Przeszczep brwi"
+    },
+    "beard": {
+      "title": "Broda",
+      "subtitle": "Broda i wąsy"
+    }
+  },
+  "stage": {
+    "title": "Na jakim etapie jesteś?",
+    "subtitle": "Od tego zależy, co pokażemy Ci najpierw.",
+    "researching": {
+      "title": "Wciąż szukam informacji",
+      "subtitle": "Poznaję opcje, nic jeszcze nie zarezerwowane"
+    },
+    "planned": {
+      "title": "Zabieg zarezerwowany",
+      "subtitle": "Mam już datę"
+    },
+    "done": {
+      "title": "Już po zabiegu",
+      "subtitle": "Chcę śledzić swoją rekonwalescencję"
+    }
+  },
+  "date": {
+    "titlePlanned": "Kiedy masz zabieg?",
+    "titleDone": "Kiedy odbył się zabieg?",
+    "subtitlePlanned": "Odliczymy do dnia 0 i przygotujemy Twoje pierwsze tygodnie.",
+    "subtitleDone": "Pokażemy, w jakiej fazie jesteś i co jest typowe w tym tygodniu.",
+    "wheelDay": "Dzień",
+    "wheelMonth": "Miesiąc",
+    "wheelYear": "Rok",
+    "feedbackPast": "Dzień {{day}} · Tydzień {{week}}",
+    "feedbackToday": "Dziś jest dzień 0",
+    "feedbackFuture_one": "Za {{count}} dzień",
+    "feedbackFuture_few": "Za {{count}} dni",
+    "feedbackFuture_many": "Za {{count}} dni",
+    "feedbackFuture_other": "Za {{count}} dnia",
+    "errorMustBeFuture": "Wybierz dzisiejszą lub późniejszą datę.",
+    "errorMustBePast": "Wybierz dzisiejszą lub wcześniejszą datę.",
+    "errorTooFar": "Ta data jest zbyt odległa, by ją śledzić. Wybierz bliższą.",
+    "errorInvalid": "Taka data nie istnieje.",
+    "skip": "Jeszcze nie wiem",
+    "skipNote": "Możesz ją ustawić lub zmienić później w swojej drodze."
+  },
+  "photo": {
+    "title": "Dodaj zdjęcie do podglądu",
+    "subtitleResearching": "Zobacz podgląd AI tego, jak mogłaby wyglądać zmiana, zanim się na cokolwiek zdecydujesz.",
+    "subtitlePlanned": "Zobacz podgląd AI tego, jak mógłby wyglądać Twój zabieg.",
+    "subtitleDone": "Zobacz podgląd AI tego, jak Twój wynik mógłby wyglądać w miarę dojrzewania.",
+    "guidanceTitle": "Dla najlepszego podglądu",
+    "angle": {
+      "front": "Ustaw się twarzą prosto do aparatu, z telefonem na wysokości oczu.",
+      "top": "Trzymaj telefon nad głową, skierowany w dół na czubek głowy.",
+      "crown": "Zrób zdjęcie tyłu głowy, najlepiej z czyjąś pomocą."
+    },
+    "area": {
+      "hairline": "Odgarnij włosy do tyłu, aby linia włosów była widoczna.",
+      "crown": "Zostaw czubek głowy odsłonięty, a włosy płasko ułożone.",
+      "part": "Zrób przedziałek tak, jak zwykle nosisz włosy.",
+      "brows": "Zadbaj, by brwi nie były zasłonięte włosami ani okularami.",
+      "beard": "Zostaw okolicę brody odsłoniętą i w równym świetle."
+    },
+    "light": "Użyj światła dziennego, bez filtrów i bez czapki.",
+    "take": "Zrób zdjęcie",
+    "library": "Wybierz z biblioteki",
+    "change": "Wybierz inne zdjęcie",
+    "selected": "Twoje wybrane zdjęcie",
+    "placeholder": "Nie wybrano jeszcze zdjęcia",
+    "privacy": "Twoje zdjęcie jest wysyłane tylko po to, by stworzyć podgląd, i to dopiero po Twojej zgodzie na następnym ekranie.",
+    "skip": "Pomiń podgląd",
+    "skipNote": "Możesz go utworzyć później w zakładce Podglądy.",
+    "permissionDenied": "Nie udało się otworzyć Twoich zdjęć. Sprawdź zezwolenie w Ustawieniach."
+  },
+  "notify": {
+    "title": "Nie przegap ważnych momentów",
+    "subtitle": "Rekonwalescencja trwa długo. Delikatne przypomnienie w odpowiednim momencie pamięta za Ciebie.",
+    "bulletPhase": "Powiadomimy Cię, gdy zmieni się faza",
+    "bulletPhoto": "Powiadomimy Cię, gdy nadejdzie dzień zdjęcia",
+    "bulletCare": "Codzienne przypomnienia o pielęgnacji przez pierwsze dwa tygodnie",
+    "allow": "Włącz przypomnienia",
+    "skip": "Nie teraz",
+    "note": "Przypomnienia o pielęgnacji są bezpłatne. Przypomnienia o fazach i zdjęciach są w Pro. Możesz to zmienić w dowolnej chwili w Ustawieniach."
+  },
+  "crafting": {
+    "title": "Tworzenie Twojego podglądu",
+    "titleDone": "Twój podgląd jest gotowy",
+    "subtitle": "Zwykle trwa to krócej niż minutę.",
+    "ringLabel": "Postęp podglądu, {{percent}} procent",
+    "lineUpload": "Bezpieczne wysyłanie Twojego zdjęcia",
+    "lineReserve": "Rezerwowanie Twojego darmowego podglądu",
+    "lineEdit": "Edytowanie: {{area}}",
+    "lineFinish": "Dodawanie ostatnich szlifów",
+    "stateDone": "gotowe",
+    "stateActive": "w toku",
+    "statePending": "oczekuje",
+    "area": {
+      "hairline": "Twoja linia włosów",
+      "crown": "Twój czubek głowy",
+      "part": "Twój przedziałek",
+      "brows": "Twoje brwi",
+      "beard": "Twoja broda"
+    },
+    "skip": "Pomiń na razie",
+    "skipNote": "Twój podgląd nadal się tworzy i będzie czekać w zakładce Podglądy.",
+    "failedTitle": "Nie udało się dokończyć Twojego podglądu",
+    "failedOffline": "Wygląda na to, że jesteś offline. Nic nie zostało pobrane. Sprawdź połączenie i spróbuj ponownie.",
+    "failedGeneric": "Po naszej stronie coś poszło nie tak. Nic nie zostało pobrane. Możesz spróbować ponownie lub kontynuować bez niego.",
+    "failedBlocked": "Tego zdjęcia nie można użyć do podglądu. Nic nie zostało pobrane. Możesz kontynuować i spróbować z innym zdjęciem później.",
+    "skipFailed": "Kontynuuj bez podglądu"
+  },
+  "reveal": {
+    "title": "Oto podgląd tego, co mogłoby być",
+    "subtitle": "Przeciągnij uchwyt, aby porównać. To ilustracja stworzona przez AI.",
+    "before": "Twoje zdjęcie",
+    "after": "Podgląd AI",
+    "disclaimer": "Podgląd AI — nie prognoza Twojego wyniku",
+    "watermark": "Darmowe podglądy mają mały znak wodny.",
+    "wipeLabel": "Porównanie Twojego zdjęcia przed i po. Przeciągnij, aby porównać.",
+    "loading": "Przygotowywanie Twojego podglądu",
+    "loadFailed": "Nie udało się załadować obrazu podglądu. Jest zapisany w zakładce Podglądy.",
+    "cta": "Zobacz mój plan"
+  }
+}

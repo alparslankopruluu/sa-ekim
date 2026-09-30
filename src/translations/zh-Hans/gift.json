@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "一份欢迎礼物正在等你",
+    "body": "免费转一次：点数、免费高清预览或 Pro 折扣。",
+    "cta": "转一转",
+    "wonTitle": "你的礼物：{{prize}}",
+    "wonBody": "有效期至 {{date}}",
+    "use": "使用"
+  },
+  "title": "你的欢迎礼物",
+  "subtitle": "免费转一次，每个奖品都是真的。",
+  "spin": "转动转盘",
+  "spinning": "转动中…",
+  "youWon": "你获得了",
+  "expires": "有效期至 {{date}}",
+  "redeem": "使用我的礼物",
+  "added": "已添加到你的账户",
+  "done": "完成",
+  "close": "关闭",
+  "alreadyClaimed": "你已经转过欢迎礼物了。",
+  "fairness": "奖品在我们的服务器上抽取，无需购买。",
+  "notifyNote": "如果已开启通知，我们会在礼物到期前提醒你一次。",
+  "prizes": {
+    "credits10": {
+      "title": "10 点数",
+      "short": "+10",
+      "body": "已添加到你的余额，可用于预览。"
+    },
+    "credits5": {
+      "title": "5 点数",
+      "short": "+5",
+      "body": "已添加到你的余额，可用于预览。"
+    },
+    "freeHigh": {
+      "title": "一次免费高清预览",
+      "short": "HD",
+      "body": "你的下一次高清预览不消耗点数。"
+    },
+    "discount40": {
+      "title": "Pro 立减 40%",
+      "short": "−40%",
+      "body": "年度方案的第一年以更低价格享用。"
+    }
+  },
+  "expired": "这份礼物已于 {{date}} 到期。",
+  "redeemed": "你已经使用过这份礼物了。",
+  "tokenNote": "创建下一次预览时，请选择高清。"
+}

@@ -1,0 +1,277 @@
+{
+  "greeting": {
+    "morning": "Dzień dobry",
+    "afternoon": "Dzień dobry",
+    "evening": "Dobry wieczór",
+    "night": "Cześć, nocny marku"
+  },
+  "today": {
+    "subtitleUnset": "Twoja droga zaczyna się od jednej daty.",
+    "subtitleUpcoming": "Zabieg: {{date}}",
+    "editDate": "Edytuj datę i szczegóły swojej drogi",
+    "bandTitle": "Twój tydzień na typowej osi czasu"
+  },
+  "hero": {
+    "day": "Dzień",
+    "dayWeek": "Dzień {{day}} · Tydzień {{week}}",
+    "monthOf": "Miesiąc {{month}} z około {{total}}",
+    "complete": "Poza typowym oknem {{months}} mies.",
+    "untilOperation_one": "{{count}} dzień do zabiegu",
+    "untilOperation_few": "{{count}} dni do zabiegu",
+    "untilOperation_many": "{{count}} dni do zabiegu",
+    "untilOperation_other": "{{count}} dnia do zabiegu",
+    "daysToGo_one": "dzień do końca",
+    "daysToGo_few": "dni do końca",
+    "daysToGo_many": "dni do końca",
+    "daysToGo_other": "dnia do końca",
+    "session": "Sesja",
+    "ofTotal": "z {{total}}",
+    "prpSession": "Sesja {{current}} z {{total}}",
+    "prpDone": "Zapisano wszystkie sesje: {{total}}"
+  },
+  "phase": {
+    "rightNow": "Teraz",
+    "expected": "Oczekiwane",
+    "normalLabel": "Typowe teraz",
+    "clinicNote": "Wyniki bywają różne — stosuj się do zaleceń swojej kliniki.",
+    "nextIn_one": "{{phase}} zwykle zaczyna się za {{count}} dzień",
+    "nextIn_few": "{{phase}} zwykle zaczyna się za {{count}} dni",
+    "nextIn_many": "{{phase}} zwykle zaczyna się za {{count}} dni",
+    "nextIn_other": "{{phase}} zwykle zaczyna się za {{count}} dnia",
+    "last": "To ostatnia faza typowej osi czasu.",
+    "openGuide": "Otwiera przewodnik po tej fazie"
+  },
+  "band": {
+    "a11y": "Wykres typowego zakresu na osi czasu wzrostu. Jesteś w fazie: {{phase}}. Wyniki bywają różne.",
+    "a11yNone": "Wykres typowego zakresu na osi czasu wzrostu. Wyniki bywają różne.",
+    "a11yLocked": "Wykres typowego zakresu, dostępny w Pro.",
+    "lockChip": "Zobacz, gdzie jesteś · Pro",
+    "lockedHint": "Otwiera plany Pro",
+    "start": "Zabieg",
+    "end": "Dojrzałość",
+    "disclaimer": "Typowy zakres — wyniki bywają różne",
+    "seeTimeline": "Oś czasu"
+  },
+  "care": {
+    "items": {
+      "wash": "Delikatne mycie, tak jak pokazała Ci klinika",
+      "sleep": "Śpij z uniesioną głową",
+      "hands": "Ręce precz od przeszczepów — bez drapania",
+      "sun": "Chroń tę okolicę przed bezpośrednim słońcem"
+    }
+  },
+  "task": {
+    "eyebrow": "Następny krok",
+    "photoCta": "Zrób zdjęcie",
+    "baseline": {
+      "title": "Zrób zdjęcie „przed”",
+      "body": "Zdjęcie sprzed zabiegu sprawia, że każde późniejsze porównanie jest czytelniejsze."
+    },
+    "care": {
+      "title": "Dzisiejsza lista pielęgnacji",
+      "doneTitle": "Dzisiejsza pielęgnacja odhaczona",
+      "body": "Wiele klinik zaleca to w pierwszych dwóch tygodniach. Zalecenia Twojej kliniki są najważniejsze.",
+      "progress": "Zrobione: {{done}} z {{total}}"
+    },
+    "photo": {
+      "firstTitle": "Zrób pierwsze zdjęcie postępów",
+      "weeklyTitle": "Zdjęcie na ten tydzień",
+      "monthlyTitle": "Zdjęcie na ten miesiąc",
+      "weeklyBody": "Co tydzień przez pierwsze trzy miesiące — to samo ujęcie, to samo światło.",
+      "monthlyBody": "Co miesiąc od czwartego miesiąca — to samo ujęcie, to samo światło."
+    },
+    "shed": {
+      "title": "Zapisz dzisiejsze wypadanie",
+      "body": "Wypadanie w tygodniach 2–8 zdarza się często. Szybkie policzenie pomaga zobaczyć wzór w czasie.",
+      "cta": "Zapisz wypadanie"
+    },
+    "prp": {
+      "title": "Zaplanowano sesję {{current}} z {{total}}",
+      "bodyToday": "Dziś jest zaplanowany dzień. Zdjęcie przed sesją sprawia, że Twoja seria pozostaje porównywalna.",
+      "bodyLate": "Zaplanowana na {{date}}. Oznacz jako wykonaną, gdy się odbędzie.",
+      "markDone": "Oznacz jako wykonaną"
+    },
+    "caughtUp": {
+      "title": "Wszystko na bieżąco",
+      "body": "Dziś nic nie wymaga zrobienia.",
+      "nextPhoto_one": "Następne zdjęcie za {{count}} dzień.",
+      "nextPhoto_few": "Następne zdjęcie za {{count}} dni.",
+      "nextPhoto_many": "Następne zdjęcie za {{count}} dni.",
+      "nextPhoto_other": "Następne zdjęcie za {{count}} dnia.",
+      "nextSession_one": "Następna sesja za {{count}} dzień.",
+      "nextSession_few": "Następna sesja za {{count}} dni.",
+      "nextSession_many": "Następna sesja za {{count}} dni.",
+      "nextSession_other": "Następna sesja za {{count}} dnia."
+    }
+  },
+  "setDate": {
+    "title": "Ustaw datę zabiegu",
+    "body": "Kök używa tej daty, by pokazać Twój dzień, tydzień i fazę oraz zaplanować przypomnienia o zdjęciach.",
+    "prpTitle": "Ustaw datę pierwszej sesji",
+    "prpBody": "Kök planuje na jej podstawie Twoje sesje i przypomina o każdej dzień wcześniej.",
+    "cta": "Ustaw datę",
+    "privacy": "Zostaje na Twoim telefonie."
+  },
+  "pre": {
+    "title": "Przed zabiegiem",
+    "body": "Wiele osób uważa to za pomocne w dniach przed zabiegiem. Zalecenia Twojej kliniki są najważniejsze.",
+    "tip1": "Zrób zdjęcia „przed” z przodu, z góry i z boków w dobrym świetle.",
+    "tip2": "Poproś klinikę o pisemne zalecenia dotyczące pielęgnacji po zabiegu.",
+    "tip3": "Zaplanuj kilka spokojnych dni po zabiegu.",
+    "tip4": "Przygotuj poduszkę podróżną do spania z uniesioną głową.",
+    "clinicNote": "Masz pytania o leki lub zdrowie? Zapytaj swoją klinikę lub lekarza."
+  },
+  "previewCard": {
+    "title": "Zobacz podgląd stylu",
+    "body": "Podgląd AI do odkrywania pomysłów — nie jest prognozą Twojego wyniku."
+  },
+  "shedPeek": {
+    "title": "Ostatnie wypadanie",
+    "hint": "Otwiera dziennik wypadania",
+    "note": "Wypadanie w tygodniach 2–8 zdarza się często."
+  },
+  "tabs": {
+    "timeline": "Oś czasu",
+    "photos": "Zdjęcia",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "Typowa oś czasu",
+    "phasesTitle": "Fazy"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Dni {{from}}–{{to}}",
+    "weeks": "Tygodnie {{from}}–{{to}}",
+    "current": "Obecna faza",
+    "past": "Za Tobą",
+    "upcoming": "Przed Tobą",
+    "youAreHere": "Jesteś tutaj"
+  },
+  "maturation": {
+    "title": "Kiedy ocenia się wynik?",
+    "note": "Włosy zwykle dojrzewają jeszcze przez około {{months}} mies. po zabiegu.",
+    "evaluate12": "Kliniki zwykle oceniają wynik po około 12 miesiącach.",
+    "evaluate18": "Kliniki zwykle oceniają wynik po około 12 miesiącach, a czubek głowy lub przedziałek mogą dojrzewać do 18 miesięcy.",
+    "clinicNote": "Wyniki bywają różne — kontrole ustala Twoja klinika."
+  },
+  "photos": {
+    "add": "Dodaj",
+    "count_one": "{{count}} zdjęcie",
+    "count_few": "{{count}} zdjęcia",
+    "count_many": "{{count}} zdjęć",
+    "count_other": "{{count}} zdjęcia",
+    "freeCounter_one": "{{count}} z {{limit}} darmowych zdjęć",
+    "freeCounter_few": "{{count}} z {{limit}} darmowych zdjęć",
+    "freeCounter_many": "{{count}} z {{limit}} darmowych zdjęć",
+    "freeCounter_other": "{{count}} z {{limit}} darmowych zdjęć",
+    "limitReached": "Wykorzystano {{limit}} darmowych zdjęć — Pro daje nieograniczoną liczbę zdjęć",
+    "allAngles": "Wszystkie",
+    "before": "Przed zabiegiem",
+    "week": "Tydzień {{week}} · {{date}}",
+    "all": "Zdjęcia",
+    "compare": "Porównaj",
+    "compareHint": "Wybierz dwa zdjęcia do porównania.",
+    "selectHint": "Wybierz dwa zdjęcia.",
+    "selected_one": "Wybrano {{count}} z {{max}}",
+    "selected_few": "Wybrano {{count}} z {{max}}",
+    "selected_many": "Wybrano {{count}} z {{max}}",
+    "selected_other": "Wybrano {{count}} z {{max}}",
+    "compareCta": "Porównaj",
+    "groupCount_one": "{{count}} zdjęcie",
+    "groupCount_few": "{{count}} zdjęcia",
+    "groupCount_many": "{{count}} zdjęć",
+    "groupCount_other": "{{count}} zdjęcia",
+    "thumbLabel": "Zdjęcie: {{angle}}, {{group}}",
+    "missing": "Brak pliku",
+    "emptyTitle": "Na razie brak zdjęć",
+    "emptyBody": "Zrób po jednym zdjęciu z każdego ujęcia. Następnym razem jego blady cień pomoże Ci ustawić ten sam widok.",
+    "emptyCta": "Zrób pierwsze zdjęcie",
+    "emptyFilter": "Brak zdjęć z tego ujęcia."
+  },
+  "angles": {
+    "front": "Przód",
+    "left": "Lewa",
+    "right": "Prawa",
+    "top": "Góra",
+    "crown": "Czubek"
+  },
+  "plan": {
+    "intro": "Punkty kontrolne ze zdjęciami w miesiącach, którym zwykle przyglądają się kliniki. To samo ujęcie, to samo światło.",
+    "checkpoint": "Miesiąc {{month}}",
+    "status": {
+      "done": "Zdjęcie zrobione",
+      "due": "Do zrobienia teraz",
+      "upcoming": "Wkrótce",
+      "missed": "Brak zdjęcia"
+    },
+    "takePhoto": "Zrób zdjęcie",
+    "note": "Punkt kontrolny zalicza się każde zdjęcie z okresu od tygodnia przed do dwóch tygodni po nim."
+  },
+  "prp": {
+    "timelineTitle": "Twój kurs PRP / mezoterapii",
+    "timelineBody": "Kursy zwykle planuje się jako kilka sesji w odstępach kilku tygodni, a potem podtrzymanie. Twój plan ustala klinika.",
+    "openPlan": "Otwórz plan",
+    "emptyTitle": "Zaplanuj swoje sesje",
+    "emptyBody": "Zacznij od typowego planu: {{sessions}} sesji w odstępach {{weeks}} tyg. Każdą datę możesz zmienić.",
+    "createPlan": "Utwórz plan",
+    "intro": "Odhacz sesję, gdy się odbędzie. Zdjęcie przed każdą sesją sprawia, że Twoja seria pozostaje porównywalna.",
+    "session": "Sesja {{number}}",
+    "done": "Wykonana",
+    "due": "Do wykonania",
+    "planned": "Zaplanowana",
+    "markDoneLabel": "Sesja {{number}} w dniu {{date}} wykonana",
+    "changeDate": "Zmień datę",
+    "photoBefore": "Zdjęcie przed",
+    "remove": "Usuń",
+    "removeTitle": "Usunąć tę sesję?",
+    "removeBody": "Jej przypomnienie też zostanie usunięte.",
+    "addSession": "Dodaj sesję",
+    "maintenanceTitle": "Podtrzymanie",
+    "maintenanceBody": "Wiele klinik proponuje sesję podtrzymującą po około {{months}} mies. — mniej więcej {{date}}.",
+    "clinicNote": "Stosuj się do planu swojej kliniki."
+  },
+  "setup": {
+    "title": "Twoja droga",
+    "kindTitle": "Co śledzisz?",
+    "kind": {
+      "transplant": {
+        "title": "Przeszczep włosów",
+        "body": "Linia włosów, czubek głowy, przedziałek, brwi lub broda"
+      },
+      "prp": {
+        "title": "Kurs PRP / mezoterapii",
+        "body": "Seria sesji w odstępach kilku tygodni"
+      }
+    },
+    "goalTitle": "Jaka okolica?",
+    "goals": {
+      "hairline": "Linia włosów",
+      "crown": "Czubek głowy",
+      "part": "Przedziałek",
+      "brows": "Brwi",
+      "beard": "Broda"
+    },
+    "dateTitleTransplant": "Data zabiegu",
+    "dateTitlePrp": "Data pierwszej sesji",
+    "day": "Dzień",
+    "month": "Miesiąc",
+    "year": "Rok",
+    "relToday": "To dziś — dzień 0",
+    "relPast": "Dzień {{day}} · tydzień {{week}}",
+    "relFuture_one": "Za {{count}} dzień",
+    "relFuture_few": "Za {{count}} dni",
+    "relFuture_many": "Za {{count}} dni",
+    "relFuture_other": "Za {{count}} dnia",
+    "clinicTitle": "Klinika (opcjonalnie)",
+    "clinicPlaceholder": "Nazwa kliniki",
+    "clinicHint": "Tylko na tym telefonie. Nigdy nie jest przesyłana.",
+    "clinicTooLong": "Użyj maksymalnie {{max}} znaków.",
+    "clinicBlocked": "Użyj innej nazwy.",
+    "save": "Zapisz",
+    "saved": "Zapisano",
+    "relabelTitle": "Zmienić datę?",
+    "relabelBody": "Etykiety dnia i tygodnia każdego zdjęcia zostaną przeliczone od nowa według nowej daty.",
+    "relabelConfirm": "Zmień datę"
+  }
+}

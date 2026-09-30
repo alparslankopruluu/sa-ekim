@@ -1,0 +1,44 @@
+{
+  "title": "비교",
+  "close": "닫기",
+  "mode": {
+    "wipe": "슬라이더",
+    "side": "나란히 보기"
+  },
+  "label": {
+    "before": "수술 전",
+    "week": "{{n}}주차",
+    "none": "사진"
+  },
+  "picker": {
+    "before": "이전 사진",
+    "after": "이후 사진",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "두 사진을 비교하는 슬라이더예요. 왼쪽에 {{before}}, 오른쪽에 {{after}} 사진이 있어요. 조절하면 구분선이 움직여요.",
+  "sideA11y": "{{label}}, {{angle}} 사진",
+  "mismatch": "두 사진의 각도가 달라요. 같은 각도끼리 비교하면 가장 좋아요.",
+  "empty": {
+    "title": "비교할 사진 두 장",
+    "body": "같은 각도의 사진을 두 장 이상 찍은 뒤 여기서 비교해 보세요.",
+    "action": "사진 찍기"
+  },
+  "locked": {
+    "title": "비교는 Pro 기능이에요",
+    "body": "두 사진을 각각의 주차와 함께 나란히 볼 수 있어요. 첫 번째 사진은 계속 볼 수 있어요.",
+    "cta": "비교 잠금 해제"
+  },
+  "share": {
+    "action": "공유",
+    "preparing": "준비하는 중…",
+    "error": "비교 이미지를 준비하지 못했어요. 다시 시도해 주세요.",
+    "unavailable": "이 기기에서는 공유를 사용할 수 없어요.",
+    "dialog": "비교 이미지 공유"
+  },
+  "report": {
+    "title": "사진 비교",
+    "heading": "{{before}} 및 {{after}}",
+    "disclaimer": "개인 경과 기록이며 의료 문서가 아니에요"
+  },
+  "mark": "Kök"
+}

@@ -1,0 +1,151 @@
+{
+  "welcome": {
+    "kicker": "모발 이식 동반자",
+    "title": "회복 주차별로 일반적인 모습을 확인하세요",
+    "subtitle": "수술 전에 변화를 미리 보고, 회복 주차마다 일반적인 모습을 따라가 보세요.",
+    "cta": "시작하기",
+    "demoLabel": "수술 전후 슬라이더 예시예요. 드래그해서 비교해 보세요.",
+    "demoBefore": "수술 전",
+    "demoAfter": "수술 후",
+    "demoCaption": "예시 일러스트예요. 나만의 미리보기는 나중에 만들어요.",
+    "legalPrefix": "계속하면 다음에 동의하는 것으로 봅니다:",
+    "terms": "이용약관",
+    "privacy": "개인정보 처리방침"
+  },
+  "goal": {
+    "title": "어느 부위를 준비하고 있나요?",
+    "subtitle": "이에 맞춰 타임라인과 사진 각도를 안내해 드려요.",
+    "hairline": {
+      "title": "헤어라인",
+      "subtitle": "이마와 관자놀이"
+    },
+    "crown": {
+      "title": "정수리",
+      "subtitle": "머리 뒤쪽과 윗부분"
+    },
+    "part": {
+      "title": "가르마",
+      "subtitle": "가르마 라인의 밀도"
+    },
+    "brows": {
+      "title": "눈썹",
+      "subtitle": "눈썹 이식"
+    },
+    "beard": {
+      "title": "수염",
+      "subtitle": "턱수염과 콧수염"
+    }
+  },
+  "stage": {
+    "title": "지금 어느 단계인가요?",
+    "subtitle": "먼저 보여 드릴 내용이 달라져요.",
+    "researching": {
+      "title": "알아보는 중",
+      "subtitle": "선택지를 살펴보는 중이고, 예약은 아직이에요"
+    },
+    "planned": {
+      "title": "수술 예약함",
+      "subtitle": "예정된 날짜가 있어요"
+    },
+    "done": {
+      "title": "이미 수술했어요",
+      "subtitle": "회복 과정을 기록하고 싶어요"
+    }
+  },
+  "date": {
+    "titlePlanned": "수술은 언제인가요?",
+    "titleDone": "수술은 언제 했나요?",
+    "subtitlePlanned": "0일차까지 카운트다운하고 첫 몇 주를 준비해 드려요.",
+    "subtitleDone": "지금 어느 단계인지, 이번 주에 일반적인 모습이 무엇인지 보여 드려요.",
+    "wheelDay": "일",
+    "wheelMonth": "월",
+    "wheelYear": "년",
+    "feedbackPast": "{{day}}일차 · {{week}}주차",
+    "feedbackToday": "오늘이 0일차예요",
+    "feedbackFuture_other": "{{count}}일 후",
+    "errorMustBeFuture": "오늘 또는 이후 날짜를 선택해 주세요.",
+    "errorMustBePast": "오늘 또는 이전 날짜를 선택해 주세요.",
+    "errorTooFar": "기록하기에는 너무 먼 날짜예요. 더 가까운 날짜를 선택해 주세요.",
+    "errorInvalid": "존재하지 않는 날짜예요.",
+    "skip": "아직 몰라요",
+    "skipNote": "나중에 여정에서 설정하거나 바꿀 수 있어요."
+  },
+  "photo": {
+    "title": "미리보기용 사진 추가",
+    "subtitleResearching": "무언가를 결정하기 전에, 변화가 어떻게 보일 수 있는지 AI 미리보기로 확인해 보세요.",
+    "subtitlePlanned": "수술 후 모습이 어떻게 보일 수 있는지 AI 미리보기로 확인해 보세요.",
+    "subtitleDone": "회복이 진행되면서 결과가 어떻게 보일 수 있는지 AI 미리보기로 확인해 보세요.",
+    "guidanceTitle": "더 좋은 미리보기를 위해",
+    "angle": {
+      "front": "카메라를 정면으로 바라보고, 휴대폰은 눈높이에 두세요.",
+      "top": "휴대폰을 머리 위에 들고 머리 윗부분을 내려다보도록 찍으세요.",
+      "crown": "뒤통수를 찍어 주세요. 다른 사람의 도움을 받으면 좋아요."
+    },
+    "area": {
+      "hairline": "헤어라인이 잘 보이도록 머리를 뒤로 넘기세요.",
+      "crown": "정수리를 가리지 않고 머리카락을 평평하게 하세요.",
+      "part": "평소에 하는 대로 가르마를 타세요.",
+      "brows": "눈썹이 머리카락이나 안경에 가려지지 않게 하세요.",
+      "beard": "수염 부위를 가리지 않고 고른 조명에서 찍으세요."
+    },
+    "light": "자연광에서, 필터와 모자 없이 찍으세요.",
+    "take": "사진 찍기",
+    "library": "보관함에서 선택",
+    "change": "다른 사진 선택",
+    "selected": "선택한 사진",
+    "placeholder": "아직 선택한 사진이 없어요",
+    "privacy": "사진은 미리보기를 만들 때만 전송되며, 다음 화면에서 동의한 뒤에만 전송돼요.",
+    "skip": "미리보기 건너뛰기",
+    "skipNote": "나중에 미리보기 탭에서 만들 수 있어요.",
+    "permissionDenied": "사진을 열지 못했어요. 설정에서 권한을 확인해 주세요."
+  },
+  "notify": {
+    "title": "중요한 순간을 놓치지 마세요",
+    "subtitle": "회복은 더디게 진행돼요. 알맞은 때에 알려 주는 알림이 대신 기억해 줘요.",
+    "bulletPhase": "단계가 바뀔 때 알려 드려요",
+    "bulletPhoto": "사진 찍는 날이 되면 알려 드려요",
+    "bulletCare": "처음 2주 동안 매일 관리 알림을 드려요",
+    "allow": "알림 켜기",
+    "skip": "나중에",
+    "note": "관리 알림은 무료예요. 단계 알림과 사진 알림은 Pro에서 제공돼요. 설정에서 언제든지 바꿀 수 있어요."
+  },
+  "crafting": {
+    "title": "미리보기 만드는 중",
+    "titleDone": "미리보기가 준비되었어요",
+    "subtitle": "보통 1분 이내에 끝나요.",
+    "ringLabel": "미리보기 진행률 {{percent}}퍼센트",
+    "lineUpload": "사진을 안전하게 보내는 중",
+    "lineReserve": "무료 미리보기를 예약하는 중",
+    "lineEdit": "{{area}} 편집 중",
+    "lineFinish": "마무리하는 중",
+    "stateDone": "완료",
+    "stateActive": "진행 중",
+    "statePending": "대기 중",
+    "area": {
+      "hairline": "헤어라인",
+      "crown": "정수리",
+      "part": "가르마",
+      "brows": "눈썹",
+      "beard": "수염"
+    },
+    "skip": "지금은 건너뛰기",
+    "skipNote": "미리보기는 계속 만들어지며 미리보기 탭에서 기다리고 있을 거예요.",
+    "failedTitle": "미리보기를 완성하지 못했어요",
+    "failedOffline": "오프라인 상태인 것 같아요. 비용은 청구되지 않았어요. 연결을 확인한 뒤 다시 시도해 주세요.",
+    "failedGeneric": "저희 쪽에서 문제가 생겼어요. 비용은 청구되지 않았어요. 다시 시도하거나 미리보기 없이 계속할 수 있어요.",
+    "failedBlocked": "이 사진은 미리보기에 사용할 수 없어요. 비용은 청구되지 않았어요. 계속 진행한 뒤 나중에 다른 사진으로 시도할 수 있어요.",
+    "skipFailed": "미리보기 없이 계속"
+  },
+  "reveal": {
+    "title": "이런 모습일 수 있어요",
+    "subtitle": "핸들을 드래그해서 비교해 보세요. AI가 만든 일러스트예요.",
+    "before": "내 사진",
+    "after": "AI 미리보기",
+    "disclaimer": "AI 미리보기 — 결과를 예측하는 것이 아니에요",
+    "watermark": "무료 미리보기에는 작은 워터마크가 들어가요.",
+    "wipeLabel": "내 사진의 전후 비교예요. 드래그해서 비교해 보세요.",
+    "loading": "미리보기 준비 중",
+    "loadFailed": "미리보기 이미지를 불러오지 못했어요. 미리보기 탭에 저장되어 있어요.",
+    "cta": "내 계획 보기"
+  }
+}

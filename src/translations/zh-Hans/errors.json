@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "请重新启动应用后再试。",
+  "consent_required": "请先阅读并同意 AI 处理说明。",
+  "invalid_input": "输入的内容似乎有些问题，请检查后重试。",
+  "content_blocked": "无法使用这张照片或这段文字，请换一个。",
+  "insufficient_credits": "你的点数不足。",
+  "pro_required": "这是 Pro 功能。",
+  "rate_limited": "操作太快了，请稍等片刻再试。",
+  "already_claimed": "你已经领取过了。",
+  "not_found": "没有找到相关内容。",
+  "previews_disabled": "预览功能暂时停用一小段时间，你的旅程不受影响。请稍后再试。",
+  "provider_failed": "操作没有完成，请稍后重试。",
+  "timeout": "等待时间过长，请重试。",
+  "offline": "你似乎已离线。请检查网络连接后重试。",
+  "unknown": "出了点问题，请重试。"
+}

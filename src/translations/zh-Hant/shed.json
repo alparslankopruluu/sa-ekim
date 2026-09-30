@@ -1,0 +1,43 @@
+{
+  "title": "脫落紀錄",
+  "close": "關閉",
+  "subtitle": "大致記下你在枕頭上或排水孔看到的頭髮數量。粗略的數字就可以。",
+  "typical": "第 2–8 週出現脫落很常見。",
+  "phaseNow": "你目前處於術後第 {{week}} 週。",
+  "today": "今天",
+  "input": {
+    "label": "今天注意到的頭髮數量",
+    "placeholder": "0",
+    "hint": "0 到 999 之間的整數"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "增加 {{count}}",
+  "save": "儲存",
+  "update": "更新",
+  "saved": "已儲存",
+  "invalid": "請輸入 0 到 999 之間的整數。",
+  "chart": {
+    "title": "最近 30 天",
+    "a11y": "最近 30 天的脫落紀錄",
+    "bar": "{{date}}：{{count}}",
+    "barEmpty": "{{date}}：未記錄",
+    "barToday": "今天，{{date}}：{{count}}",
+    "barTodayEmpty": "今天，{{date}}：未記錄",
+    "window": "典型的脫落時段",
+    "todayLegend": "今天",
+    "missing": "無紀錄"
+  },
+  "average": "最近 7 天的平均值：{{count}}",
+  "averageEmpty": "最近 7 天沒有紀錄。",
+  "empty": {
+    "title": "還沒有紀錄",
+    "body": "每當你注意到掉髮時，記錄一個數字。幾週之後，圖表就會顯示你自己的規律。"
+  },
+  "note": "僅供你自己參考。每天的數量會有波動，個人結果各不相同。",
+  "mini": {
+    "title": "脫落紀錄",
+    "empty": "記錄今天的數量",
+    "a11y": "脫落紀錄，最近 {{days}} 天。開啟紀錄。",
+    "a11yEmpty": "脫落紀錄。還沒有紀錄。開啟紀錄。"
+  }
+}

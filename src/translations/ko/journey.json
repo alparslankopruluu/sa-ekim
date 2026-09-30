@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "좋은 아침이에요",
+    "afternoon": "좋은 오후예요",
+    "evening": "좋은 저녁이에요",
+    "night": "늦은 밤이에요"
+  },
+  "today": {
+    "subtitleUnset": "날짜 하나로 여정이 시작돼요.",
+    "subtitleUpcoming": "수술일 {{date}}",
+    "editDate": "날짜와 여정 정보 편집",
+    "bandTitle": "일반적인 타임라인에서 나의 주차"
+  },
+  "hero": {
+    "day": "일차",
+    "dayWeek": "{{day}}일차 · {{week}}주차",
+    "monthOf": "약 {{total}}개월 중 {{month}}개월차",
+    "complete": "일반적인 {{months}}개월 기간 이후",
+    "untilOperation_other": "수술까지 {{count}}일",
+    "daysToGo_other": "일 남음",
+    "session": "세션",
+    "ofTotal": "/ {{total}}",
+    "prpSession": "{{total}}회 중 {{current}}회차",
+    "prpDone": "{{total}}회 모두 기록했어요"
+  },
+  "phase": {
+    "rightNow": "지금",
+    "expected": "예상 단계",
+    "normalLabel": "지금 일반적인 모습",
+    "clinicNote": "개인차가 있어요. 다니는 병원의 안내를 따르세요.",
+    "nextIn_other": "다음 단계 ‘{{phase}}’ 시작까지 보통 {{count}}일 남았어요",
+    "last": "일반적인 타임라인의 마지막 단계예요.",
+    "openGuide": "이 단계의 가이드를 열어요"
+  },
+  "band": {
+    "a11y": "성장 타임라인에서 일반적인 범위를 보여 주는 차트예요. 현재 단계는 {{phase}}이에요. 개인차가 있어요.",
+    "a11yNone": "성장 타임라인에서 일반적인 범위를 보여 주는 차트예요. 개인차가 있어요.",
+    "a11yLocked": "일반적인 범위 차트예요. Pro에서 이용할 수 있어요.",
+    "lockChip": "내 위치 보기 · Pro",
+    "lockedHint": "Pro 플랜을 열어요",
+    "start": "수술",
+    "end": "성숙",
+    "disclaimer": "일반적인 범위이며, 개인차가 있어요",
+    "seeTimeline": "타임라인"
+  },
+  "care": {
+    "items": {
+      "wash": "병원에서 알려 준 대로 부드럽게 세척하기",
+      "sleep": "머리를 높이고 자기",
+      "hands": "이식 부위에 손대지 않기 — 긁지 않기",
+      "sun": "이식 부위를 직사광선에서 보호하기"
+    }
+  },
+  "task": {
+    "eyebrow": "다음 할 일",
+    "photoCta": "사진 찍기",
+    "baseline": {
+      "title": "‘수술 전’ 사진 찍기",
+      "body": "수술 전 사진이 있으면 이후의 모든 비교가 더 분명해져요."
+    },
+    "care": {
+      "title": "오늘의 관리 체크리스트",
+      "doneTitle": "오늘의 관리를 모두 체크했어요",
+      "body": "많은 병원에서 첫 2주 동안 이렇게 안내해요. 다니는 병원의 안내가 우선이에요.",
+      "progress": "{{total}}개 중 {{done}}개 완료"
+    },
+    "photo": {
+      "firstTitle": "첫 경과 사진 찍기",
+      "weeklyTitle": "이번 주 사진",
+      "monthlyTitle": "이번 달 사진",
+      "weeklyBody": "처음 3개월 동안은 매주 — 같은 각도, 같은 조명으로 찍어요.",
+      "monthlyBody": "4개월째부터는 매월 — 같은 각도, 같은 조명으로 찍어요."
+    },
+    "shed": {
+      "title": "오늘의 탈락 기록하기",
+      "body": "2~8주차에는 탈락이 흔히 나타나요. 간단히 세어 두면 시간에 따른 패턴을 볼 수 있어요.",
+      "cta": "탈락 기록"
+    },
+    "prp": {
+      "title": "{{total}}회 중 {{current}}회차가 예정되어 있어요",
+      "bodyToday": "오늘이 예정된 날이에요. 시술 전에 사진을 찍어 두면 사진 시리즈를 비교하기 좋아요.",
+      "bodyLate": "{{date}}에 예정되어 있었어요. 진행했다면 완료로 표시하세요.",
+      "markDone": "완료로 표시"
+    },
+    "caughtUp": {
+      "title": "모두 확인했어요",
+      "body": "오늘은 할 일이 없어요.",
+      "nextPhoto_other": "다음 사진은 {{count}}일 후예요.",
+      "nextSession_other": "다음 세션은 {{count}}일 후예요."
+    }
+  },
+  "setDate": {
+    "title": "수술 날짜 설정",
+    "body": "Kök은 이 날짜로 나의 일차, 주차, 단계를 보여 주고 사진 알림을 계획해요.",
+    "prpTitle": "첫 세션 날짜 설정",
+    "prpBody": "Kök은 이 날짜를 기준으로 세션을 계획하고, 각 세션 전날 알려 드려요.",
+    "cta": "날짜 설정",
+    "privacy": "휴대폰에만 저장돼요."
+  },
+  "pre": {
+    "title": "수술 전에",
+    "body": "수술 전 며칠 동안 이런 것들이 도움이 된다고 느끼는 분이 많아요. 병원의 안내가 우선이에요.",
+    "tip1": "밝은 곳에서 정면, 위, 옆면의 ‘수술 전’ 사진을 찍어 두세요.",
+    "tip2": "병원에 서면으로 된 사후 관리 안내문을 요청하세요.",
+    "tip3": "수술 후 조용히 지낼 수 있는 며칠을 계획해 두세요.",
+    "tip4": "머리를 높이고 잘 수 있도록 목베개를 준비해 두세요.",
+    "clinicNote": "약이나 건강에 대해 궁금한 점이 있나요? 병원이나 의사에게 문의하세요."
+  },
+  "previewCard": {
+    "title": "스타일 미리보기",
+    "body": "아이디어를 살펴보기 위한 AI 미리보기이며, 결과를 예측하는 것이 아니에요."
+  },
+  "shedPeek": {
+    "title": "최근 탈락",
+    "hint": "탈락 기록을 열어요",
+    "note": "2~8주차에는 탈락이 흔히 나타나요."
+  },
+  "tabs": {
+    "timeline": "타임라인",
+    "photos": "사진",
+    "plan": "계획"
+  },
+  "timeline": {
+    "bandTitle": "일반적인 타임라인",
+    "phasesTitle": "단계"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "{{from}}–{{to}}일",
+    "weeks": "{{from}}–{{to}}주",
+    "current": "현재 단계",
+    "past": "지나온 단계",
+    "upcoming": "앞으로",
+    "youAreHere": "현재 위치"
+  },
+  "maturation": {
+    "title": "결과는 언제 평가하나요?",
+    "note": "모발은 수술 후 보통 약 {{months}}개월 동안 계속 성숙해요.",
+    "evaluate12": "병원에서는 보통 12개월 무렵에 결과를 평가해요.",
+    "evaluate18": "병원에서는 보통 12개월 무렵에 결과를 살펴보며, 정수리나 가르마 부위는 최대 18개월까지 계속 성숙할 수 있어요.",
+    "clinicNote": "개인차가 있어요. 검진 일정은 다니는 병원에서 정해 드려요."
+  },
+  "photos": {
+    "add": "추가",
+    "count_other": "사진 {{count}}장",
+    "freeCounter_other": "무료 사진 {{limit}}장 중 {{count}}장",
+    "limitReached": "무료 사진 {{limit}}장을 모두 사용했어요 — Pro에서는 사진을 무제한으로 보관해요",
+    "allAngles": "전체",
+    "before": "수술 전",
+    "week": "{{week}}주차 · {{date}}",
+    "all": "사진",
+    "compare": "비교",
+    "compareHint": "비교할 사진 두 장을 고르세요.",
+    "selectHint": "사진 두 장을 선택하세요.",
+    "selected_other": "{{max}}장 중 {{count}}장 선택됨",
+    "compareCta": "비교",
+    "groupCount_other": "사진 {{count}}장",
+    "thumbLabel": "{{angle}} 사진, {{group}}",
+    "missing": "파일 없음",
+    "emptyTitle": "아직 사진이 없어요",
+    "emptyBody": "각도마다 사진을 한 장씩 찍어 보세요. 다음에는 그 사진이 희미하게 겹쳐 보여서 같은 구도를 맞추기 쉬워요.",
+    "emptyCta": "첫 사진 찍기",
+    "emptyFilter": "이 각도의 사진은 아직 없어요."
+  },
+  "angles": {
+    "front": "정면",
+    "left": "왼쪽",
+    "right": "오른쪽",
+    "top": "머리 위",
+    "crown": "정수리"
+  },
+  "plan": {
+    "intro": "병원에서 흔히 살펴보는 시점에 맞춘 사진 체크포인트예요. 같은 각도, 같은 조명으로 찍으세요.",
+    "checkpoint": "{{month}}개월",
+    "status": {
+      "done": "사진 촬영 완료",
+      "due": "지금 촬영",
+      "upcoming": "예정",
+      "missed": "사진 없음"
+    },
+    "takePhoto": "사진 찍기",
+    "note": "체크포인트는 해당 시점 1주 전부터 2주 후까지의 사진이면 인정돼요."
+  },
+  "prp": {
+    "timelineTitle": "나의 PRP / 메조테라피 과정",
+    "timelineBody": "과정은 보통 몇 주 간격의 몇 차례 세션 후 유지 관리로 계획해요. 나의 계획은 병원에서 정해 드려요.",
+    "openPlan": "계획 열기",
+    "emptyTitle": "세션 계획하기",
+    "emptyBody": "일반적인 계획으로 시작해 보세요. {{weeks}}주 간격으로 {{sessions}}회 세션이에요. 모든 날짜는 바꿀 수 있어요.",
+    "createPlan": "계획 만들기",
+    "intro": "세션을 마친 뒤에 체크하세요. 매번 전에 사진을 찍어 두면 사진 시리즈를 비교하기 좋아요.",
+    "session": "{{number}}회차",
+    "done": "완료",
+    "due": "예정일",
+    "planned": "예정",
+    "markDoneLabel": "{{date}}의 {{number}}회차 세션 완료",
+    "changeDate": "날짜 변경",
+    "photoBefore": "시술 전 사진",
+    "remove": "제거",
+    "removeTitle": "이 세션을 제거할까요?",
+    "removeBody": "알림도 함께 제거돼요.",
+    "addSession": "세션 추가",
+    "maintenanceTitle": "유지 관리",
+    "maintenanceBody": "많은 병원에서 약 {{months}}개월 뒤, {{date}} 무렵에 유지 세션을 권해요.",
+    "clinicNote": "다니는 병원의 계획을 따르세요."
+  },
+  "setup": {
+    "title": "나의 여정",
+    "kindTitle": "무엇을 기록하나요?",
+    "kind": {
+      "transplant": {
+        "title": "모발 이식",
+        "body": "헤어라인, 정수리, 가르마, 눈썹 또는 수염"
+      },
+      "prp": {
+        "title": "PRP / 메조테라피 과정",
+        "body": "몇 주 간격으로 이어지는 세션"
+      }
+    },
+    "goalTitle": "어느 부위인가요?",
+    "goals": {
+      "hairline": "헤어라인",
+      "crown": "정수리",
+      "part": "가르마",
+      "brows": "눈썹",
+      "beard": "수염"
+    },
+    "dateTitleTransplant": "수술 날짜",
+    "dateTitlePrp": "첫 세션 날짜",
+    "day": "일",
+    "month": "월",
+    "year": "년",
+    "relToday": "오늘이에요 — 0일차",
+    "relPast": "{{day}}일차 · {{week}}주차",
+    "relFuture_other": "{{count}}일 후",
+    "clinicTitle": "병원 (선택)",
+    "clinicPlaceholder": "병원 이름",
+    "clinicHint": "이 휴대폰에만 저장돼요. 업로드되지 않아요.",
+    "clinicTooLong": "{{max}}자 이내로 입력해 주세요.",
+    "clinicBlocked": "다른 이름을 사용해 주세요.",
+    "save": "저장",
+    "saved": "저장됨",
+    "relabelTitle": "날짜를 변경할까요?",
+    "relabelBody": "모든 사진의 일차와 주차 표시가 새 날짜를 기준으로 다시 계산돼요.",
+    "relabelConfirm": "날짜 변경"
+  }
+}
