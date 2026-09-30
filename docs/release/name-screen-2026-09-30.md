@@ -55,3 +55,17 @@ itunes.apple.com/search?term=kok&entity=software&country=us ·
 itunes.apple.com/search?term=K%C3%B6k&entity=software&country=se · en.wikipedia.org/wiki/K%C3%B6k ·
 en.wikipedia.org/wiki/Kok · crunchbase.com/organization/k%C3%B6k-projekt ·
 turkpatent.gov.tr/arastirma-yap?form=trademark · tmsearch.uspto.gov · branddb.wipo.int · tmdn.org/tmview
+
+## Store-visibility check and final decision (D-019)
+
+App Store Search API, 2026-09-30, top 50 results per term:
+
+| Term | US | TR | SA | Reading |
+|---|---|---|---|---|
+| rootline / graftline / regrowly | 30 / 3 / 1, no hair apps | 2 / 0 / 0 | 3 / 0 / 0 | no demand for these words |
+| regrow | 24 of 29 hair apps | 19 of 23 | 19 of 23 | real hair term, already used by "Regrow: Hair Transplant Care" and "Regrow AI" |
+| kök / kok | unrelated mega-apps | math/Quran apps | unrelated | brand word brings no search traffic; "kok" does not match "Kök" |
+| hair transplant / saç ekimi / زراعة الشعر | 47 of 47 hair | 43 of 47 hair | 10 hair apps, ~0 ratings | this is where visibility comes from |
+
+Decision: keep **Kök** and spend the name field on the top term per locale
+(`metadata/store-names.json`); put `kok` in every keyword field so users without "ö" find it.

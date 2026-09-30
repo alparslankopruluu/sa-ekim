@@ -178,6 +178,7 @@ reviewed by a native-speaker pass before store submission (see `docs/decisions.m
   is typical this week. Lead with the outcome ("see what's typical for your week").
 - **Screenshot 1 benefit:** "See what's typical for your week of recovery"
 - **Screenshot 2 benefit:** "Shedding in week 3? See what's typical"
+- **Store name (D-019):** `Kök: <top search term>` per locale — en "Kök: Hair Transplant Tracker", tr "Kök: Saç Ekimi Takibi", ar "Kök: متابعة زراعة الشعر" (`metadata/store-names.json`).
 - **Supported listing locales:** en-US, tr, ar-SA, ja, zh-Hans, ru, es-ES, pt-BR, de-DE,
   fr-FR, it, ko, zh-Hant, id, vi, th, hi, nl-NL, pl, sv
 - **CPP audience / intent+keyword / creative / deep link / analytics:** planned-surgery

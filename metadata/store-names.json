@@ -1,0 +1,18 @@
+{
+  "_note": "App Store name (≤30), subtitle (≤30), keywords (≤100, comma-separated, no spaces, no words repeated from name/subtitle). D-019. Checked by scripts/check-store-names.mjs.",
+  "en-US": {
+    "name": "Kök: Hair Transplant Tracker",
+    "subtitle": "Recovery timeline & AI preview",
+    "keywords": "kok,regrow,graft,fue,dhi,shedding,shock,loss,growth,progress,photo,journal,prp,beard,eyebrow,crown"
+  },
+  "tr": {
+    "name": "Kök: Saç Ekimi Takibi",
+    "subtitle": "Dökülme, fotoğraf ve önizleme",
+    "keywords": "kok,sac,ekim,şok,greft,fue,dhi,prp,mezoterapi,kaş,sakal,tepe,iyileşme,ameliyat,hair,transplant"
+  },
+  "ar-SA": {
+    "name": "Kök: متابعة زراعة الشعر",
+    "subtitle": "مراحل التعافي ومعاينة بالذكاء",
+    "keywords": "kok,شعر,بصيلات,تساقط,فو,دي,اتش,آي,لحية,حواجب,بلازما,نمو,صور,تعافي,تركيا,اسطنبول,عملية"
+  }
+}
