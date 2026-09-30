@@ -1,0 +1,39 @@
+{
+  "title": "このプレビューを報告",
+  "subtitle": "問題の内容をお知らせください。すべての報告を48時間以内に確認します。",
+  "inaccurate": "不正確に見える",
+  "unsafe": "安全でない、または不適切に見える",
+  "privacy": "プライバシーに関する懸念がある",
+  "other": "その他",
+  "send": "報告を送信",
+  "sent": "ありがとうございます。48時間以内に確認します。",
+  "clinic": {
+    "action": "経過記録を書き出す",
+    "exporting": "準備中…",
+    "title": "発毛治療の経過記録",
+    "brand": "Kök",
+    "clinicLine": "クリニック：{{name}}",
+    "operationLine": "手術日：{{date}}",
+    "generatedLine": "作成日 {{date}}",
+    "photosHeading": "写真",
+    "noPhotos": "まだ写真がありません。",
+    "shedHeading": "抜け毛の記録",
+    "shedEmpty": "まだ抜け毛の記録がありません。",
+    "col": {
+      "week": "週",
+      "days": "記録日数",
+      "average": "平均",
+      "max": "最大"
+    },
+    "weekRow": "{{n}}週目",
+    "overall": "すべての記録",
+    "before": "施術前",
+    "week": "{{n}}週目",
+    "disclaimer": "個人の経過記録です。医療文書ではありません",
+    "dialog": "経過記録を共有",
+    "failed": "レポートを作成できませんでした。もう一度お試しください。",
+    "empty": "先に写真か抜け毛の記録を追加してください。",
+    "unsupported": "ブラウザーではレポートを作成できません。"
+  },
+  "unavailable": "このプレビューは報告できません。"
+}

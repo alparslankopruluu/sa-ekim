@@ -1,0 +1,28 @@
+{
+  "title": "Những người cùng tuần với bạn",
+  "locked": {
+    "title": "Những người cùng tuần phẫu thuật",
+    "body": "Pro cho bạn biết có bao nhiêu người phẫu thuật cùng tuần với bạn. Bạn chỉ thấy một con số.",
+    "cta": "Xem với Pro"
+  },
+  "join": {
+    "title": "Tham gia tuần phẫu thuật của bạn",
+    "body": "Đồng ý để được tính cùng những người phẫu thuật trong cùng tuần. Chỉ ngày phẫu thuật, mục tiêu và loại phẫu thuật được chia sẻ. Không bao giờ chia sẻ ảnh, tên hay phòng khám của bạn.",
+    "switch": "Tính tôi vào",
+    "needDate": "Hãy đặt ngày phẫu thuật trước.",
+    "setDate": "Đặt ngày"
+  },
+  "joining": "Đang tham gia…",
+  "joined": "Bạn đã được tính vào tuần của mình",
+  "loading": "Đang kiểm tra tuần của bạn…",
+  "visible": "Bạn là một trong {{count}} người cùng tuần",
+  "invitation": "Bạn đã tham gia. Con số chỉ hiện khi có đủ người cùng tuần, để không ai bị nhận ra.",
+  "privacy": "Chỉ ngày phẫu thuật, mục tiêu và loại phẫu thuật được chia sẻ.",
+  "error": {
+    "offline": "Bạn đang ngoại tuyến. Hãy thử lại khi có kết nối.",
+    "busy": "Quá nhiều yêu cầu. Hãy thử lại sau giây lát.",
+    "pro": "Tính năng này cần Pro.",
+    "generic": "Không kết nối được với nhóm. Hãy thử lại.",
+    "retry": "Thử lại"
+  }
+}

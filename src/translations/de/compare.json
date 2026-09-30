@@ -1,0 +1,44 @@
+{
+  "title": "Vergleich",
+  "close": "Schließen",
+  "mode": {
+    "wipe": "Schieber",
+    "side": "Nebeneinander"
+  },
+  "label": {
+    "before": "Vorher",
+    "week": "Woche {{n}}",
+    "none": "Foto"
+  },
+  "picker": {
+    "before": "Früheres Foto",
+    "after": "Späteres Foto",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Schieberegler zum Vergleich zweier Fotos. {{before}} links, {{after}} rechts. Verschiebe den Regler, um die Trennlinie zu bewegen.",
+  "sideA11y": "{{label}}, Foto: {{angle}}",
+  "mismatch": "Diese beiden Fotos zeigen unterschiedliche Blickwinkel. Am besten vergleichst du denselben Blickwinkel.",
+  "empty": {
+    "title": "Zwei Fotos zum Vergleichen",
+    "body": "Mach mindestens zwei Fotos aus demselben Blickwinkel und vergleiche sie dann hier.",
+    "action": "Foto aufnehmen"
+  },
+  "locked": {
+    "title": "Der Vergleich gehört zu Pro",
+    "body": "Sieh zwei Fotos nebeneinander, jeweils mit der zugehörigen Woche. Dein erstes Foto bleibt sichtbar.",
+    "cta": "Vergleich freischalten"
+  },
+  "share": {
+    "action": "Teilen",
+    "preparing": "Wird vorbereitet…",
+    "error": "Der Vergleich konnte nicht vorbereitet werden. Versuche es erneut.",
+    "unavailable": "Teilen ist auf diesem Gerät nicht verfügbar.",
+    "dialog": "Deinen Vergleich teilen"
+  },
+  "report": {
+    "title": "Fotovergleich",
+    "heading": "{{before}} und {{after}}",
+    "disclaimer": "Persönliches Fortschrittsprotokoll — kein medizinisches Dokument"
+  },
+  "mark": "Kök"
+}

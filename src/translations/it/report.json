@@ -1,0 +1,39 @@
+{
+  "title": "Segnala questa anteprima",
+  "subtitle": "Dicci cosa non va. Esaminiamo ogni segnalazione entro 48 ore.",
+  "inaccurate": "Sembra inesatta",
+  "unsafe": "Sembra non sicura o inappropriata",
+  "privacy": "Solleva un problema di privacy",
+  "other": "Altro",
+  "send": "Invia la segnalazione",
+  "sent": "Grazie. La esamineremo entro 48 ore.",
+  "clinic": {
+    "action": "Esporta il registro dei progressi",
+    "exporting": "Preparazione…",
+    "title": "Registro dei progressi del ripristino dei capelli",
+    "brand": "Kök",
+    "clinicLine": "Clinica: {{name}}",
+    "operationLine": "Data dell'intervento: {{date}}",
+    "generatedLine": "Creato {{date}}",
+    "photosHeading": "Foto",
+    "noPhotos": "Ancora nessuna foto.",
+    "shedHeading": "Diario della caduta",
+    "shedEmpty": "Ancora nessuna voce nel diario della caduta.",
+    "col": {
+      "week": "Settimana",
+      "days": "Giorni registrati",
+      "average": "Media",
+      "max": "Massimo"
+    },
+    "weekRow": "Settimana {{n}}",
+    "overall": "Tutte le voci",
+    "before": "Prima",
+    "week": "Settimana {{n}}",
+    "disclaimer": "Registro personale dei progressi — non è un documento medico",
+    "dialog": "Condividi il tuo registro dei progressi",
+    "failed": "Non è stato possibile creare il report. Riprova.",
+    "empty": "Aggiungi prima una foto o una voce del diario della caduta.",
+    "unsupported": "I report non possono essere creati nel browser."
+  },
+  "unavailable": "Questa anteprima non è disponibile per la segnalazione."
+}

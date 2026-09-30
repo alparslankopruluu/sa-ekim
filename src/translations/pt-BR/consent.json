@@ -1,0 +1,25 @@
+{
+  "title": "Antes de criarmos sua prévia",
+  "body": "A prévia é feita por modelos de imagem de IA, por isso a foto que você escolheu precisa sair do seu celular. Veja o que acontece.",
+  "sent": {
+    "title": "O que enviamos",
+    "body": "Apenas a foto que você selecionou para esta prévia. Nada mais do seu rolo da câmera ou da sua jornada."
+  },
+  "who": {
+    "title": "Quem processa",
+    "body": "A fal.ai executa a edição de imagem, usando modelos de imagem da OpenAI."
+  },
+  "retention": {
+    "title": "Por quanto tempo fica",
+    "body": "Sua foto original e o resultado da prévia são excluídos dos nossos servidores em até 30 dias. Você pode excluí-los antes, na aba Prévias."
+  },
+  "choice": {
+    "title": "Sua escolha",
+    "body": "Você pode dizer não e ainda usar toda a jornada. As fotos que você tira para a sua linha do tempo ficam no seu aparelho."
+  },
+  "note": "As prévias de IA mostram uma possibilidade. Elas não são uma previsão do seu resultado.",
+  "policy": "Ler a política de privacidade",
+  "accept": "Concordar e continuar",
+  "decline": "Agora não",
+  "error": "Não foi possível salvar sua escolha. Verifique a conexão e tente de novo."
+}

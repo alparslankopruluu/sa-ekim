@@ -1,0 +1,43 @@
+{
+  "title": "Hårfällningslogg",
+  "close": "Stäng",
+  "subtitle": "Anteckna ungefär hur många hårstrån du ser på kudden eller i avloppet. Ett ungefärligt antal räcker.",
+  "typical": "Hårfällning under vecka 2–8 är typiskt.",
+  "phaseNow": "Du är i vecka {{week}} efter din operation.",
+  "today": "Idag",
+  "input": {
+    "label": "Hårstrån du märkt idag",
+    "placeholder": "0",
+    "hint": "Ett heltal från 0 till 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Lägg till {{count}}",
+  "save": "Spara",
+  "update": "Uppdatera",
+  "saved": "Sparat",
+  "invalid": "Ange ett heltal från 0 till 999.",
+  "chart": {
+    "title": "Senaste 30 dagarna",
+    "a11y": "Hårfällningslogg för de senaste 30 dagarna",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: inget loggat",
+    "barToday": "Idag, {{date}}: {{count}}",
+    "barTodayEmpty": "Idag, {{date}}: inget loggat",
+    "window": "Typiskt hårfällningsfönster",
+    "todayLegend": "Idag",
+    "missing": "Ingen post"
+  },
+  "average": "Genomsnitt de senaste 7 dagarna: {{count}}",
+  "averageEmpty": "Inget loggat de senaste 7 dagarna.",
+  "empty": {
+    "title": "Inget loggat ännu",
+    "body": "Logga ett antal när du märker hårstrån. Efter några veckor visar diagrammet ditt eget mönster."
+  },
+  "note": "För eget bruk. Antalet varierar från dag till dag, och individuella resultat varierar.",
+  "mini": {
+    "title": "Hårfällningslogg",
+    "empty": "Logga dagens antal",
+    "a11y": "Hårfällningslogg, senaste {{days}} dagarna. Öppnar loggen.",
+    "a11yEmpty": "Hårfällningslogg. Inget loggat ännu. Öppnar loggen."
+  }
+}

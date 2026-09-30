@@ -1,0 +1,25 @@
+{
+  "title": "Antes de crear tu vista previa",
+  "body": "La vista previa la generan modelos de imagen de IA, así que la foto que elegiste tiene que salir de tu teléfono. Esto es lo que sucede.",
+  "sent": {
+    "title": "Qué enviamos",
+    "body": "Solo la foto que seleccionaste para esta vista previa. Nada más de tu carrete ni de tu recorrido."
+  },
+  "who": {
+    "title": "Quién la procesa",
+    "body": "fal.ai ejecuta la edición de imagen usando modelos de imagen de OpenAI."
+  },
+  "retention": {
+    "title": "Cuánto tiempo se conserva",
+    "body": "Tu foto original y el resultado de la vista previa se eliminan de nuestros servidores en un plazo de 30 días. Puedes eliminarlos antes desde la pestaña Vistas previas."
+  },
+  "choice": {
+    "title": "Tú decides",
+    "body": "Puedes decir que no y seguir usando todo el recorrido. Las fotos que tomas para tu línea de tiempo se quedan en tu dispositivo."
+  },
+  "note": "Las vistas previas de IA muestran una posibilidad. No son una predicción de tu resultado.",
+  "policy": "Leer la política de privacidad",
+  "accept": "Aceptar y continuar",
+  "decline": "Ahora no",
+  "error": "No pudimos guardar tu elección. Revisa tu conexión e inténtalo de nuevo."
+}

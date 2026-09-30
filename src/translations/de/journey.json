@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "Guten Morgen",
+    "afternoon": "Guten Tag",
+    "evening": "Guten Abend",
+    "night": "Hallo, Nachteule"
+  },
+  "today": {
+    "subtitleUnset": "Dein Verlauf beginnt mit einem Datum.",
+    "subtitleUpcoming": "Operation am {{date}}",
+    "editDate": "Datum und Angaben zu deinem Verlauf bearbeiten",
+    "bandTitle": "Deine Woche im typischen Verlauf"
+  },
+  "hero": {
+    "day": "Tag",
+    "dayWeek": "Tag {{day}} · Woche {{week}}",
+    "monthOf": "Monat {{month}} von etwa {{total}}",
+    "complete": "Jenseits des typischen {{months}}-Monats-Fensters",
+    "untilOperation_one": "{{count}} Tag bis zu deiner Operation",
+    "untilOperation_other": "{{count}} Tage bis zu deiner Operation",
+    "daysToGo_one": "Tag übrig",
+    "daysToGo_other": "Tage übrig",
+    "session": "Sitzung",
+    "ofTotal": "von {{total}}",
+    "prpSession": "Sitzung {{current}} von {{total}}",
+    "prpDone": "Alle {{total}} Sitzungen erfasst"
+  },
+  "phase": {
+    "rightNow": "Gerade jetzt",
+    "expected": "Erwartet",
+    "normalLabel": "Typisch für jetzt",
+    "clinicNote": "Individuelle Verläufe unterscheiden sich — folge dem Rat deiner eigenen Klinik.",
+    "nextIn_one": "{{phase}} beginnt typischerweise in {{count}} Tag",
+    "nextIn_other": "{{phase}} beginnt typischerweise in {{count}} Tagen",
+    "last": "Das ist die letzte Phase des typischen Verlaufs.",
+    "openGuide": "Öffnet den Leitfaden für diese Phase"
+  },
+  "band": {
+    "a11y": "Diagramm des typischen Bereichs über den Wachstumsverlauf. Du befindest dich in der Phase: {{phase}}. Individuelle Verläufe unterscheiden sich.",
+    "a11yNone": "Diagramm des typischen Bereichs über den Wachstumsverlauf. Individuelle Verläufe unterscheiden sich.",
+    "a11yLocked": "Diagramm des typischen Bereichs, verfügbar mit Pro.",
+    "lockChip": "Sieh, wo du stehst · Pro",
+    "lockedHint": "Öffnet die Pro-Abos",
+    "start": "Operation",
+    "end": "Reife",
+    "disclaimer": "Typischer Bereich — individuelle Verläufe unterscheiden sich",
+    "seeTimeline": "Zeitleiste"
+  },
+  "care": {
+    "items": {
+      "wash": "Sanft waschen, so wie es dir deine Klinik gezeigt hat",
+      "sleep": "Mit erhöhtem Kopf schlafen",
+      "hands": "Finger weg von den Grafts — nicht kratzen",
+      "sun": "Den Bereich aus der direkten Sonne halten"
+    }
+  },
+  "task": {
+    "eyebrow": "Nächster Schritt",
+    "photoCta": "Foto aufnehmen",
+    "baseline": {
+      "title": "Mach ein „Vorher“-Foto",
+      "body": "Ein Foto vor der Operation macht jeden späteren Vergleich klarer."
+    },
+    "care": {
+      "title": "Pflege-Checkliste für heute",
+      "doneTitle": "Die heutige Pflege ist abgehakt",
+      "body": "Viele Kliniken empfehlen das in den ersten zwei Wochen. Die Anweisungen deiner eigenen Klinik haben Vorrang.",
+      "progress": "{{done}} von {{total}} erledigt"
+    },
+    "photo": {
+      "firstTitle": "Mach dein erstes Fortschrittsfoto",
+      "weeklyTitle": "Das Foto dieser Woche",
+      "monthlyTitle": "Das Foto dieses Monats",
+      "weeklyBody": "Wöchentlich in den ersten drei Monaten — gleicher Blickwinkel, gleiches Licht.",
+      "monthlyBody": "Monatlich ab dem vierten Monat — gleicher Blickwinkel, gleiches Licht."
+    },
+    "shed": {
+      "title": "Heutigen Haarausfall erfassen",
+      "body": "Haarausfall in den Wochen 2–8 ist üblich. Eine kurze Zählung hilft dir, das Muster über die Zeit zu erkennen.",
+      "cta": "Haarausfall erfassen"
+    },
+    "prp": {
+      "title": "Sitzung {{current}} von {{total}} ist geplant",
+      "bodyToday": "Heute ist der geplante Tag. Ein Foto vor der Sitzung hält deine Serie vergleichbar.",
+      "bodyLate": "Geplant für {{date}}. Markiere sie als erledigt, sobald sie stattgefunden hat.",
+      "markDone": "Als erledigt markieren"
+    },
+    "caughtUp": {
+      "title": "Alles erledigt",
+      "body": "Heute ist nichts zu tun.",
+      "nextPhoto_one": "Nächstes Foto in {{count}} Tag.",
+      "nextPhoto_other": "Nächstes Foto in {{count}} Tagen.",
+      "nextSession_one": "Nächste Sitzung in {{count}} Tag.",
+      "nextSession_other": "Nächste Sitzung in {{count}} Tagen."
+    }
+  },
+  "setDate": {
+    "title": "Lege dein OP-Datum fest",
+    "body": "Kök nutzt das Datum, um deinen Tag, deine Woche und deine Phase anzuzeigen und Fotoerinnerungen zu planen.",
+    "prpTitle": "Lege das Datum deiner ersten Sitzung fest",
+    "prpBody": "Kök plant daraus deine Sitzungen und erinnert dich jeweils am Tag davor.",
+    "cta": "Datum festlegen",
+    "privacy": "Bleibt auf deinem Handy."
+  },
+  "pre": {
+    "title": "Vor deiner Operation",
+    "body": "Viele Menschen finden das in den Tagen davor hilfreich. Die Anweisungen deiner Klinik haben Vorrang.",
+    "tip1": "Mach „Vorher“-Fotos von vorne, oben und von den Seiten bei gutem Licht.",
+    "tip2": "Bitte deine Klinik um die schriftlichen Nachsorgeanweisungen.",
+    "tip3": "Plane nach der Operation ein paar ruhige Tage ein.",
+    "tip4": "Halte ein Nackenkissen bereit, um mit erhöhtem Kopf zu schlafen.",
+    "clinicNote": "Fragen zu Medikamenten oder zu deiner Gesundheit? Frag deine Klinik oder einen Arzt."
+  },
+  "previewCard": {
+    "title": "Einen Stil ausprobieren",
+    "body": "Eine KI-Vorschau, um Ideen zu erkunden — keine Vorhersage deines Ergebnisses."
+  },
+  "shedPeek": {
+    "title": "Aktueller Haarausfall",
+    "hint": "Öffnet das Ausfallprotokoll",
+    "note": "Haarausfall in den Wochen 2–8 ist üblich."
+  },
+  "tabs": {
+    "timeline": "Zeitleiste",
+    "photos": "Fotos",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "Der typische Verlauf",
+    "phasesTitle": "Phasen"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Tage {{from}}–{{to}}",
+    "weeks": "Wochen {{from}}–{{to}}",
+    "current": "Aktuelle Phase",
+    "past": "Hinter dir",
+    "upcoming": "Vor dir",
+    "youAreHere": "Du bist hier"
+  },
+  "maturation": {
+    "title": "Wann wird das Ergebnis beurteilt?",
+    "note": "Haare reifen typischerweise etwa {{months}} Monate nach der Operation weiter aus.",
+    "evaluate12": "Kliniken beurteilen das Ergebnis typischerweise nach etwa 12 Monaten.",
+    "evaluate18": "Kliniken betrachten das Ergebnis typischerweise nach etwa 12 Monaten, und Wirbel oder Scheitel können bis zu 18 Monate weiter ausreifen.",
+    "clinicNote": "Individuelle Verläufe unterscheiden sich — deine Klinik legt deine eigenen Kontrolltermine fest."
+  },
+  "photos": {
+    "add": "Hinzufügen",
+    "count_one": "{{count}} Foto",
+    "count_other": "{{count}} Fotos",
+    "freeCounter_one": "{{count}} von {{limit}} kostenlosen Fotos",
+    "freeCounter_other": "{{count}} von {{limit}} kostenlosen Fotos",
+    "limitReached": "{{limit}} kostenlose Fotos genutzt — Pro speichert unbegrenzt viele Fotos",
+    "allAngles": "Alle",
+    "before": "Vor der Operation",
+    "week": "Woche {{week}} · {{date}}",
+    "all": "Fotos",
+    "compare": "Vergleichen",
+    "compareHint": "Wähle zwei Fotos zum Vergleichen aus.",
+    "selectHint": "Wähle zwei Fotos aus.",
+    "selected_one": "{{count}} von {{max}} ausgewählt",
+    "selected_other": "{{count}} von {{max}} ausgewählt",
+    "compareCta": "Vergleichen",
+    "groupCount_one": "{{count}} Foto",
+    "groupCount_other": "{{count}} Fotos",
+    "thumbLabel": "Foto: {{angle}}, {{group}}",
+    "missing": "Datei fehlt",
+    "emptyTitle": "Noch keine Fotos",
+    "emptyBody": "Mach ein Foto pro Blickwinkel. Beim nächsten Mal hilft dir ein schwacher Schatten davon, dieselbe Ansicht zu treffen.",
+    "emptyCta": "Erstes Foto aufnehmen",
+    "emptyFilter": "Noch keine Fotos aus diesem Blickwinkel."
+  },
+  "angles": {
+    "front": "Vorne",
+    "left": "Links",
+    "right": "Rechts",
+    "top": "Oben",
+    "crown": "Wirbel"
+  },
+  "plan": {
+    "intro": "Foto-Kontrollpunkte zu den Monaten, die Kliniken üblicherweise betrachten. Gleicher Blickwinkel, gleiches Licht.",
+    "checkpoint": "Monat {{month}}",
+    "status": {
+      "done": "Foto aufgenommen",
+      "due": "Jetzt fällig",
+      "upcoming": "Bevorstehend",
+      "missed": "Kein Foto"
+    },
+    "takePhoto": "Foto aufnehmen",
+    "note": "Ein Kontrollpunkt zählt mit jedem Foto von einer Woche davor bis zwei Wochen danach."
+  },
+  "prp": {
+    "timelineTitle": "Dein PRP- / Mesotherapie-Kurs",
+    "timelineBody": "Kurse werden üblicherweise als einige Sitzungen im Abstand weniger Wochen geplant, danach folgt die Erhaltung. Deine Klinik legt deinen eigenen Plan fest.",
+    "openPlan": "Plan öffnen",
+    "emptyTitle": "Plane deine Sitzungen",
+    "emptyBody": "Beginne mit einem üblichen Plan: {{sessions}} Sitzungen im Abstand von {{weeks}} Wochen. Du kannst jedes Datum ändern.",
+    "createPlan": "Plan erstellen",
+    "intro": "Hake eine Sitzung ab, sobald sie stattgefunden hat. Ein Foto vor jeder Sitzung hält deine Serie vergleichbar.",
+    "session": "Sitzung {{number}}",
+    "done": "Erledigt",
+    "due": "Fällig",
+    "planned": "Geplant",
+    "markDoneLabel": "Sitzung {{number}} am {{date}} erledigt",
+    "changeDate": "Datum ändern",
+    "photoBefore": "Foto davor",
+    "remove": "Entfernen",
+    "removeTitle": "Diese Sitzung entfernen?",
+    "removeBody": "Ihre Erinnerung wird ebenfalls entfernt.",
+    "addSession": "Sitzung hinzufügen",
+    "maintenanceTitle": "Erhaltung",
+    "maintenanceBody": "Viele Kliniken empfehlen etwa {{months}} Monate später eine Erhaltungssitzung — rund um den {{date}}.",
+    "clinicNote": "Folge dem Plan deiner eigenen Klinik."
+  },
+  "setup": {
+    "title": "Dein Verlauf",
+    "kindTitle": "Was möchtest du verfolgen?",
+    "kind": {
+      "transplant": {
+        "title": "Haartransplantation",
+        "body": "Haaransatz, Wirbel, Scheitel, Augenbrauen oder Bart"
+      },
+      "prp": {
+        "title": "PRP- / Mesotherapie-Kurs",
+        "body": "Eine Reihe von Sitzungen im Abstand weniger Wochen"
+      }
+    },
+    "goalTitle": "Welcher Bereich?",
+    "goals": {
+      "hairline": "Haaransatz",
+      "crown": "Wirbel",
+      "part": "Scheitel",
+      "brows": "Augenbrauen",
+      "beard": "Bart"
+    },
+    "dateTitleTransplant": "OP-Datum",
+    "dateTitlePrp": "Datum der ersten Sitzung",
+    "day": "Tag",
+    "month": "Monat",
+    "year": "Jahr",
+    "relToday": "Das ist heute — Tag 0",
+    "relPast": "Tag {{day}} · Woche {{week}}",
+    "relFuture_one": "In {{count}} Tag",
+    "relFuture_other": "In {{count}} Tagen",
+    "clinicTitle": "Klinik (optional)",
+    "clinicPlaceholder": "Name der Klinik",
+    "clinicHint": "Nur auf diesem Handy. Wird nie hochgeladen.",
+    "clinicTooLong": "Bitte höchstens {{max}} Zeichen.",
+    "clinicBlocked": "Bitte verwende einen anderen Namen.",
+    "save": "Speichern",
+    "saved": "Gespeichert",
+    "relabelTitle": "Datum ändern?",
+    "relabelBody": "Die Tages- und Wochenangabe jedes Fotos wird anhand des neuen Datums neu berechnet.",
+    "relabelConfirm": "Datum ändern"
+  }
+}

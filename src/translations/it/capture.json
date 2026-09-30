@@ -1,0 +1,84 @@
+{
+  "close": "Chiudi la fotocamera",
+  "title": "Foto dei progressi",
+  "angle": {
+    "front": "Frontale",
+    "left": "Lato sinistro",
+    "right": "Lato destro",
+    "top": "Alto",
+    "crown": "Vertice"
+  },
+  "instruction": {
+    "front": "Capelli asciutti e pettinati come al solito. Inquadra il viso nell'ovale, con l'attaccatura dei capelli vicino al bordo superiore.",
+    "left": "Girati per mostrare il lato sinistro. Tieni il telefono in verticale, all'altezza degli occhi.",
+    "right": "Girati per mostrare il lato destro. Tieni il telefono in verticale, all'altezza degli occhi.",
+    "top": "Tieni il telefono in piano sopra la testa, con lo schermo rivolto verso l'alto, in modo che la fotocamera posteriore guardi dall'alto la sommità della testa.",
+    "crown": "Tieni il telefono in piano sopra la parte posteriore della testa, con lo schermo rivolto verso l'alto, in modo che la fotocamera posteriore guardi dall'alto il vertice."
+  },
+  "cameraNote": {
+    "front": "Usa la fotocamera frontale, così puoi vedere l'inquadratura.",
+    "back": "Usa la fotocamera posteriore. Tieni il telefono in piano oppure chiedi a qualcuno di scattare. Senti un tocco quando è in bolla."
+  },
+  "guide": {
+    "ghostHide": "Nascondi la foto precedente",
+    "ghostShow": "Mostra la foto precedente",
+    "ghostOverlay": "Sovrapposizione della tua foto precedente, {{angle}}, {{label}}",
+    "frame": "Vista della fotocamera con una guida di inquadratura"
+  },
+  "level": {
+    "ok": "In bolla, pronto",
+    "upright": "Tieni il telefono in verticale",
+    "flat": "Tieni il telefono in piano, schermo verso l'alto",
+    "unavailable": "Questo dispositivo non ha un sensore di movimento, quindi il controllo della bolla è disattivato. Assicurati tu che il telefono sia in verticale.",
+    "a11yOk": "Il telefono è in bolla. Puoi scattare la foto.",
+    "a11yBlockedUpright": "Il telefono non è ancora in verticale.",
+    "a11yBlockedFlat": "Il telefono non è ancora in piano."
+  },
+  "shutter": {
+    "label": "Scatta la foto",
+    "blockedUpright": "Tieni il telefono in verticale per scattare la foto",
+    "blockedFlat": "Tieni il telefono in piano per scattare la foto"
+  },
+  "library": "Scegli dalla libreria",
+  "permission": {
+    "checking": "Verifica dell'accesso alla fotocamera…",
+    "title": "L'accesso alla fotocamera è disattivato",
+    "body": "Kök usa la fotocamera solo per le tue foto dei progressi. Restano su questo dispositivo. Puoi anche scegliere una foto dalla libreria.",
+    "allow": "Consenti la fotocamera",
+    "settings": "Apri le impostazioni"
+  },
+  "unavailable": {
+    "title": "La fotocamera non è disponibile qui",
+    "body": "Puoi scegliere una foto dalla libreria."
+  },
+  "review": {
+    "retake": "Rifai",
+    "use": "Usa la foto",
+    "saving": "Salvataggio…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Questa foto serve solo per la tua anteprima. Non viene aggiunta al tuo percorso.",
+    "a11y": "Revisione della foto appena scattata"
+  },
+  "error": {
+    "save": "Non è stato possibile salvare la foto. Riprova.",
+    "capture": "Non è stato possibile scattare la foto. Riprova.",
+    "pick": "Non è stato possibile aprire la libreria. Riprova."
+  },
+  "saved": "Foto salvata",
+  "checking": "Verifica del tuo piano…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto {{angle}}, {{label}}",
+    "taken": "Scattata {{date}}",
+    "compare": "Confronta con…",
+    "delete": "Elimina la foto",
+    "confirmTitle": "Eliminare questa foto?",
+    "confirmBody": "Viene rimossa da questo dispositivo e non può essere recuperata.",
+    "confirm": "Elimina",
+    "cancel": "Tienila",
+    "missingTitle": "Questa foto non è più qui",
+    "missingBody": "Potrebbe essere stata eliminata.",
+    "close": "Chiudi",
+    "loadError": "Non è possibile mostrare questa foto."
+  }
+}

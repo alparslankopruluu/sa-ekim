@@ -1,0 +1,39 @@
+{
+  "title": "Báo cáo bản xem trước này",
+  "subtitle": "Hãy cho chúng tôi biết có vấn đề gì. Chúng tôi xem xét mọi báo cáo trong vòng 48 giờ.",
+  "inaccurate": "Trông không chính xác",
+  "unsafe": "Trông không an toàn hoặc không phù hợp",
+  "privacy": "Gây lo ngại về quyền riêng tư",
+  "other": "Lý do khác",
+  "send": "Gửi báo cáo",
+  "sent": "Cảm ơn bạn. Chúng tôi sẽ xem xét trong vòng 48 giờ.",
+  "clinic": {
+    "action": "Xuất hồ sơ tiến trình",
+    "exporting": "Đang chuẩn bị…",
+    "title": "Hồ sơ tiến trình phục hồi tóc",
+    "brand": "Kök",
+    "clinicLine": "Phòng khám: {{name}}",
+    "operationLine": "Ngày phẫu thuật: {{date}}",
+    "generatedLine": "Tạo ngày {{date}}",
+    "photosHeading": "Ảnh",
+    "noPhotos": "Chưa có ảnh nào.",
+    "shedHeading": "Nhật ký rụng tóc",
+    "shedEmpty": "Chưa có mục rụng tóc nào.",
+    "col": {
+      "week": "Tuần",
+      "days": "Số ngày ghi",
+      "average": "Trung bình",
+      "max": "Cao nhất"
+    },
+    "weekRow": "Tuần {{n}}",
+    "overall": "Tất cả các mục",
+    "before": "Trước",
+    "week": "Tuần {{n}}",
+    "disclaimer": "Hồ sơ tiến trình cá nhân, không phải tài liệu y tế",
+    "dialog": "Chia sẻ hồ sơ tiến trình của bạn",
+    "failed": "Không tạo được báo cáo. Hãy thử lại.",
+    "empty": "Hãy thêm một ảnh hoặc một mục rụng tóc trước.",
+    "unsupported": "Không thể tạo báo cáo trên trình duyệt."
+  },
+  "unavailable": "Không thể báo cáo bản xem trước này."
+}

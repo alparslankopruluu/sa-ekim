@@ -1,0 +1,43 @@
+{
+  "title": "Registro de queda",
+  "close": "Fechar",
+  "subtitle": "Anote mais ou menos quantos fios você vê no travesseiro ou no ralo. Um número aproximado basta.",
+  "typical": "A queda nas semanas 2–8 é típica.",
+  "phaseNow": "Você está na semana {{week}} após a operação.",
+  "today": "Hoje",
+  "input": {
+    "label": "Fios notados hoje",
+    "placeholder": "0",
+    "hint": "Um número inteiro de 0 a 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Adicionar {{count}}",
+  "save": "Salvar",
+  "update": "Atualizar",
+  "saved": "Salvo",
+  "invalid": "Digite um número inteiro de 0 a 999.",
+  "chart": {
+    "title": "Últimos 30 dias",
+    "a11y": "Registro de queda dos últimos 30 dias",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nada registrado",
+    "barToday": "Hoje, {{date}}: {{count}}",
+    "barTodayEmpty": "Hoje, {{date}}: nada registrado",
+    "window": "Janela típica de queda",
+    "todayLegend": "Hoje",
+    "missing": "Sem registro"
+  },
+  "average": "Média dos últimos 7 dias: {{count}}",
+  "averageEmpty": "Nada registrado nos últimos 7 dias.",
+  "empty": {
+    "title": "Nada registrado ainda",
+    "body": "Registre um número sempre que notar fios. Depois de algumas semanas, o gráfico mostra o seu próprio padrão."
+  },
+  "note": "Para sua própria referência. As contagens variam de um dia para o outro, e os resultados individuais variam.",
+  "mini": {
+    "title": "Registro de queda",
+    "empty": "Registre a contagem de hoje",
+    "a11y": "Registro de queda, últimos {{days}} dias. Abre o registro.",
+    "a11yEmpty": "Registro de queda. Nada registrado ainda. Abre o registro."
+  }
+}

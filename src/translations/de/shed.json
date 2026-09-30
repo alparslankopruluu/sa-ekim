@@ -1,0 +1,43 @@
+{
+  "title": "Ausfallprotokoll",
+  "close": "Schließen",
+  "subtitle": "Notiere grob, wie viele Haare du auf dem Kopfkissen oder im Abfluss siehst. Eine ungefähre Zahl reicht.",
+  "typical": "Haarausfall in den Wochen 2–8 ist typisch.",
+  "phaseNow": "Du bist in Woche {{week}} nach deiner Operation.",
+  "today": "Heute",
+  "input": {
+    "label": "Heute bemerkte Haare",
+    "placeholder": "0",
+    "hint": "Eine ganze Zahl von 0 bis 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "{{count}} hinzufügen",
+  "save": "Speichern",
+  "update": "Aktualisieren",
+  "saved": "Gespeichert",
+  "invalid": "Gib eine ganze Zahl von 0 bis 999 ein.",
+  "chart": {
+    "title": "Letzte 30 Tage",
+    "a11y": "Ausfallprotokoll der letzten 30 Tage",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nichts erfasst",
+    "barToday": "Heute, {{date}}: {{count}}",
+    "barTodayEmpty": "Heute, {{date}}: nichts erfasst",
+    "window": "Typisches Ausfallfenster",
+    "todayLegend": "Heute",
+    "missing": "Kein Eintrag"
+  },
+  "average": "Durchschnitt der letzten 7 Tage: {{count}}",
+  "averageEmpty": "In den letzten 7 Tagen wurde nichts erfasst.",
+  "empty": {
+    "title": "Noch nichts erfasst",
+    "body": "Trage eine Zahl ein, wann immer dir Haare auffallen. Nach ein paar Wochen zeigt das Diagramm dein eigenes Muster."
+  },
+  "note": "Nur zu deiner eigenen Orientierung. Die Zahlen schwanken von Tag zu Tag, und die individuellen Verläufe unterscheiden sich.",
+  "mini": {
+    "title": "Ausfallprotokoll",
+    "empty": "Heutige Zahl eintragen",
+    "a11y": "Ausfallprotokoll, letzte {{days}} Tage. Öffnet das Protokoll.",
+    "a11yEmpty": "Ausfallprotokoll. Noch nichts erfasst. Öffnet das Protokoll."
+  }
+}

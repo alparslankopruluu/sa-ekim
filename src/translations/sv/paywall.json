@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Följ din 12–18 månader långa resa, vecka för vecka",
+    "hairline": "Följ din hårfästesresa, vecka för vecka",
+    "crown": "Följ din hjässresa, vecka för vecka",
+    "part": "Följ din benresa, vecka för vecka",
+    "brows": "Följ din ögonbrynsresa, vecka för vecka",
+    "beard": "Följ din skäggresa, vecka för vecka"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Din första förhandsvisning är klar. Pro lägger till hela tidslinjen: jämförelse, fasbandet och varje veckoguide."
+    },
+    "settings": {
+      "subtitle": "Se vad som är typiskt för din vecka, bredvid dina egna bilder."
+    },
+    "home_banner": {
+      "subtitle": "Se vad som är typiskt för din vecka, bredvid dina egna bilder."
+    },
+    "notification": {
+      "subtitle": "Se vad som är typiskt för din vecka, bredvid dina egna bilder."
+    },
+    "gift": {
+      "subtitle": "Ditt gåvopris tillämpas på första året av årsplanen."
+    },
+    "locked_compare": {
+      "title": "Jämför dina bilder, vecka för vecka",
+      "subtitle": "Svep mellan två bilder eller se dem sida vid sida, var och en märkt med sin vecka."
+    },
+    "locked_band": {
+      "title": "Se det typiska intervallet för din vecka",
+      "subtitle": "Din bild bredvid fasbandet. Det visar ett typiskt intervall, och individuella resultat varierar."
+    },
+    "locked_photos": {
+      "title": "Ha varje vecka dokumenterad",
+      "subtitle": "Gratis sparar {{count}} framstegsbilder. Pro sparar hela de 12–18 månaderna."
+    },
+    "locked_report": {
+      "title": "Dela en rapport med din klinik",
+      "subtitle": "En PDF med din första och senaste bild per vinkel, veckoetiketter och din sammanfattning av hårfällning."
+    },
+    "locked_hd": {
+      "title": "Fler krediter för HD-förhandsvisningar",
+      "subtitle": "HD-förhandsvisningar använder krediter och har inget vattenmärke. Pro inkluderar en kreditkvot att använda till dem."
+    },
+    "locked_guide": {
+      "title": "Hela veckoguiden",
+      "subtitle": "Vad som typiskt händer i varje fas, vad som är normalt och vad du kan göra den här veckan."
+    },
+    "insufficient_credits": {
+      "title": "Du behöver fler krediter för det",
+      "subtitle": "Pro inkluderar en kreditkvot varje vecka eller månad. Du kan också köpa ett kreditpaket."
+    },
+    "result_upgrade": {
+      "title": "Se den i HD",
+      "subtitle": "HD-förhandsvisningar har inget vattenmärke och använder krediter. Pro inkluderar krediter att använda till dem."
+    }
+  },
+  "benefits": {
+    "photos": "Obegränsat antal framstegsbilder",
+    "compare": "Svep- och sida-vid-sida-jämförelse",
+    "band": "Band för väntad fas på dina bilder",
+    "guide": "Hela guiden för varje fas",
+    "reminders": "Fas- och bildpåminnelser",
+    "report": "PDF-rapport till kliniken",
+    "cohort": "Se hur många som är i samma vecka som du",
+    "hd": "Inkluderade krediter gäller HD-förhandsvisningar",
+    "credits": "En kreditkvot för förhandsvisningar"
+  },
+  "plans": {
+    "annual": "Årsvis",
+    "monthly": "Månadsvis",
+    "weekly": "Veckovis",
+    "bestValue": "Bäst värde",
+    "save": "Spara {{percent}} % jämfört med veckovis",
+    "perWeek": "{{price}}/vecka",
+    "perMonth": "{{price}}/månad",
+    "perYear": "{{price}}/år",
+    "firstYear": "{{price}} första året"
+  },
+  "planCredits": {
+    "weekly": "Inkluderar {{count}} krediter varje vecka",
+    "monthly": "Inkluderar {{count}} krediter varje månad",
+    "annual": "Inkluderar {{initial}} krediter i början, sedan {{count}} varje vecka"
+  },
+  "cta": {
+    "subscribe": "Fortsätt",
+    "processing": "Behandlar…"
+  },
+  "disclosure": {
+    "annual": "Debiteras {{price}} per år. Förnyas automatiskt tills du avslutar. Avsluta när som helst i inställningarna för ditt butikskonto. Priset som visas är det belopp du debiteras.",
+    "monthly": "Debiteras {{price}} per månad. Förnyas automatiskt tills du avslutar. Avsluta när som helst i inställningarna för ditt butikskonto. Priset som visas är det belopp du debiteras.",
+    "weekly": "Debiteras {{price}} per vecka. Förnyas automatiskt tills du avslutar. Avsluta när som helst i inställningarna för ditt butikskonto. Priset som visas är det belopp du debiteras.",
+    "intro": "Ditt gåvopris: {{intro}} för första året, sedan {{price}} per år. Förnyas automatiskt tills du avslutar. Avsluta när som helst i inställningarna för ditt butikskonto."
+  },
+  "restore": "Återställ",
+  "restoreNone": "Inga tidigare köp hittades.",
+  "restoreSuccess": "Välkommen tillbaka. Pro är återställt.",
+  "privacy": "Integritet",
+  "termsLink": "Villkor",
+  "loading": "Laddar planer…",
+  "failedTitle": "Planerna kunde inte laddas",
+  "failedBody": "Kontrollera anslutningen och försök igen.",
+  "emptyBody": "Planer är inte tillgängliga just nu. Försök igen senare.",
+  "purchaseFailed": "Köpet gick inte igenom. Försök igen.",
+  "pending": "Ditt köp väntar på godkännande.",
+  "success": "Du är Pro. Tack.",
+  "mockBadge": "Testbutik · inga riktiga debiteringar",
+  "giftBanner": "Din gåva",
+  "creditsLink": "Behöver du bara krediter? Se kreditpaket",
+  "closeLabel": "Stäng"
+}

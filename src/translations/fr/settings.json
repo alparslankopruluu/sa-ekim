@@ -1,0 +1,117 @@
+{
+  "title": "Réglages",
+  "sections": {
+    "subscription": "Abonnement et crédits",
+    "language": "Langue",
+    "notifications": "Notifications",
+    "preferences": "Préférences",
+    "data": "Données et confidentialité",
+    "account": "Compte",
+    "legal": "Mentions légales et assistance",
+    "about": "À propos",
+    "developer": "Développeur"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Formule gratuite",
+    "renews": "Renouvellement le {{date}}",
+    "expires": "Se termine le {{date}}",
+    "manage": "Gérer l'abonnement",
+    "restore": "Restaurer les achats",
+    "upgrade": "Passer à Pro",
+    "restoreDone": "Content de vous revoir. Pro est restauré.",
+    "restoreNone": "Aucun achat précédent trouvé.",
+    "balance": "Solde de crédits",
+    "buyCredits": "Obtenir des crédits",
+    "freeHigh_one": "{{count}} aperçu HD gratuit",
+    "freeHigh_other": "{{count}} aperçus HD gratuits"
+  },
+  "language": {
+    "title": "Langue",
+    "pickerTitle": "Choisir une langue",
+    "rtlNote": "Redémarrez Kök pour changer le sens de lecture.",
+    "closePicker": "Fermer la liste des langues"
+  },
+  "notifications": {
+    "previews": "Aperçu prêt",
+    "offers": "Cadeaux et offres",
+    "reminders": "Rappels du parcours",
+    "remindersHint": "Rappels de soins, de photo hebdomadaire et de phase. Les rappels de phase font partie de Pro.",
+    "systemOff": "Les notifications sont désactivées pour Kök dans les réglages du système. Touchez pour les ouvrir."
+  },
+  "preferences": {
+    "haptics": "Retour haptique"
+  },
+  "data": {
+    "wipe": "Supprimer toutes mes données",
+    "wipeHint": "Supprime de cet appareil vos photos de parcours, votre journal de chute et vos aperçus.",
+    "wipeTitle": "Supprimer toutes vos données ?",
+    "wipeBody": "Cela supprime définitivement la date de votre opération, vos photos de suivi, votre journal de chute et vos aperçus enregistrés. Votre abonnement et vos crédits restent liés à votre compte. Cette action est irréversible.",
+    "wipeConfirm": "Supprimer mes données",
+    "wiping": "Suppression…",
+    "wiped": "Vos données ont été supprimées de cet appareil."
+  },
+  "account": {
+    "guest": "Compte anonyme",
+    "id": "Identifiant du compte",
+    "delete": "Supprimer le compte",
+    "deleteHint": "Supprime de nos serveurs votre compte, vos crédits et les photos envoyées.",
+    "deleteTitle": "Supprimer votre compte ?",
+    "deleteBody": "Cela supprime définitivement votre compte, vos crédits, vos aperçus enregistrés et toute photo que vous avez envoyée, et efface votre parcours sur cet appareil. Un abonnement actif doit être résilié séparément dans les réglages du compte de votre boutique d'applications.",
+    "deleteConfirm": "Supprimer le compte",
+    "deleting": "Suppression…",
+    "deleted": "Votre compte a été supprimé."
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "ai": "Comment fonctionnent les aperçus IA",
+    "support": "Aide et assistance"
+  },
+  "about": {
+    "version": "Version {{version}} ({{build}})",
+    "contact": "Écrire à l'assistance",
+    "rate": "Noter Kök",
+    "replay": "Revoir la présentation"
+  },
+  "confirm": {
+    "cancel": "Annuler"
+  },
+  "developer": {
+    "open": "Outils développeur",
+    "backend": "Mode backend",
+    "replayOnboarding": "Revoir la présentation",
+    "offerings": "Offres de la boutique",
+    "purchase": "Résultat de l'achat",
+    "wheel": "Emplacement de la roue cadeau",
+    "failNext": "Faire échouer le prochain aperçu",
+    "cohort": "Nombre de personnes de ma semaine",
+    "addCredits": "Accorder 50 crédits",
+    "reset": "Réinitialiser toutes les données fictives",
+    "resetDone": "Les données fictives ont été réinitialisées.",
+    "credits": "Crédits accordés.",
+    "testCrash": "Envoyer un plantage de test",
+    "events": "Journal des événements",
+    "empty": "Aucun événement pour l'instant",
+    "mockOnly": "Ces commutateurs n'existent que sur le backend fictif.",
+    "values": {
+      "ok": "ok",
+      "slow": "lent",
+      "fail": "échec",
+      "empty": "vide",
+      "success": "succès",
+      "cancel": "annulation",
+      "home": "accueil",
+      "onboarding_exit": "sortie de la présentation",
+      "off": "désactivé"
+    },
+    "storefront": "Devise de la boutique fictive",
+    "giftOffer": "Afficher l'offre cadeau sans lot",
+    "forcePro": "Droit d'accès Pro",
+    "grantFreeHigh": "Accorder un aperçu HD gratuit",
+    "previewsEnabled": "Aperçus activés (coupe-circuit)",
+    "nextPrize": "Prochain lot de la roue",
+    "honest": "tirage honnête",
+    "offerCacheNote": "Les changements de la boutique s'appliquent au prochain essai de la page d'abonnement ou après cinq minutes."
+  }
+}

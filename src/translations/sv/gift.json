@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "En välkomstgåva väntar",
+    "body": "Ett gratis snurr: krediter, en gratis HD-förhandsvisning eller en Pro-rabatt.",
+    "cta": "Snurra",
+    "wonTitle": "Din gåva: {{prize}}",
+    "wonBody": "Gäller till {{date}}",
+    "use": "Använd"
+  },
+  "title": "Din välkomstgåva",
+  "subtitle": "Ett gratis snurr. Varje pris är på riktigt.",
+  "spin": "Snurra hjulet",
+  "spinning": "Snurrar…",
+  "youWon": "Du vann",
+  "expires": "Gäller till {{date}}",
+  "redeem": "Använd min gåva",
+  "added": "Tillagd på ditt konto",
+  "done": "Klart",
+  "close": "Stäng",
+  "alreadyClaimed": "Du har redan snurrat din välkomstgåva.",
+  "fairness": "Priserna lottas på vår server. Inget köp krävs.",
+  "notifyNote": "Om aviseringar är på påminner vi dig en gång innan gåvan går ut.",
+  "prizes": {
+    "credits10": {
+      "title": "10 krediter",
+      "short": "+10",
+      "body": "Läggs till på ditt saldo för förhandsvisningar."
+    },
+    "credits5": {
+      "title": "5 krediter",
+      "short": "+5",
+      "body": "Läggs till på ditt saldo för förhandsvisningar."
+    },
+    "freeHigh": {
+      "title": "En gratis HD-förhandsvisning",
+      "short": "HD",
+      "body": "Din nästa HD-förhandsvisning kostar inga krediter."
+    },
+    "discount40": {
+      "title": "40 % rabatt på Pro",
+      "short": "−40 %",
+      "body": "Första året av årsplanen till ett lägre pris."
+    }
+  },
+  "expired": "Den här gåvan gick ut den {{date}}.",
+  "redeemed": "Du har redan använt den här gåvan.",
+  "tokenNote": "Välj HD när du skapar din nästa förhandsvisning."
+}

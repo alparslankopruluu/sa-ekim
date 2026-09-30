@@ -1,0 +1,22 @@
+{
+  "title": "Dapatkan kredit",
+  "subtitle": "Kredit tidak pernah kedaluwarsa. Pratinjau standar memakai {{standard}}, pratinjau HD memakai {{high}}.",
+  "balance": "Saldomu",
+  "equivalent": "≈ {{standard}} pratinjau standar atau {{high}} pratinjau HD",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Populer",
+  "success": "{{count}} kredit ditambahkan.",
+  "pending": "Pembelianmu sedang menunggu persetujuan.",
+  "failedBody": "Paket kredit tidak dapat dimuat. Periksa koneksimu dan coba lagi.",
+  "emptyBody": "Paket kredit sedang tidak tersedia. Silakan coba lagi nanti.",
+  "freeHigh_other": "{{count}} pratinjau HD gratis menunggu",
+  "examplesTitle": "Seberapa jauh kredit bisa dipakai",
+  "exampleStandard": "Pratinjau standar",
+  "exampleHigh": "Pratinjau HD, tanpa watermark",
+  "proHint": "Anggota Pro mendapat kredit setiap minggu atau bulan.",
+  "close": "Tutup toko kredit"
+}

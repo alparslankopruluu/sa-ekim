@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Qué está pasando",
+    "normal": "Qué es habitual",
+    "todo": "Para esta semana",
+    "redflags": "Llama a tu clínica o a un médico si…",
+    "care": "Día a día",
+    "wash": "Lavado",
+    "sleep": "Sueño",
+    "avoid": "Evita"
+  },
+  "header": {
+    "week": "Semana",
+    "days": "Días {{from}}–{{to}}",
+    "weeks": "semanas {{from}}–{{to}}",
+    "current": "Estás aquí",
+    "past": "Ya superadas",
+    "upcoming": "Por delante"
+  },
+  "lock": {
+    "title": "La guía completa de fases forma parte de Pro",
+    "body": "Qué suele ocurrir, qué hacer esta semana y notas día a día — para cada fase.",
+    "cta": "Ver Pro",
+    "redflagsNote": "Cuándo contactar con tu clínica sigue siendo gratis para todos, más abajo."
+  },
+  "notFound": {
+    "title": "Guía no encontrada",
+    "body": "Esta página puede venir de un enlace antiguo.",
+    "cta": "Atrás"
+  },
+  "flags": {
+    "fever": "Fiebre o escalofríos",
+    "redness": "Enrojecimiento o hinchazón que se extiende o sigue empeorando",
+    "pus": "Pus, secreción amarillenta o mal olor",
+    "pain": "Dolor intenso o que va en aumento",
+    "bleeding": "Sangrado abundante, o sangrado que no se detiene con una presión suave",
+    "contact": "Si ocurre alguna de estas cosas, contacta con tu clínica o con un médico. En una emergencia, llama al número de emergencias de tu país."
+  },
+  "disclaimer": "Información educativa general basada en cronologías habituales de clínicas — no es asesoramiento médico ni una predicción. Los resultados individuales varían; las indicaciones de tu propia clínica son lo primero.",
+  "care": {
+    "title": "Primeras dos semanas",
+    "tagline": "Proteger los injertos mientras se asientan",
+    "happening": "Los nuevos injertos se están asentando. Normalmente se forman pequeñas costras alrededor de cada injerto, que suelen caerse en unos 7–14 días. Es habitual ver algo de hinchazón en la frente y enrojecimiento durante los primeros días.",
+    "normal": "Lo habitual en las primeras dos semanas son pequeñas costras, enrojecimiento leve, algo de hinchazón y sensación de tirantez.",
+    "todo1": "Sigue la rutina de lavado que te enseñó tu clínica.",
+    "todo2": "Duerme con la cabeza elevada las primeras noches si tu clínica te lo indica.",
+    "todo3": "Deja que las costras se caigan solas — sin arrancarlas ni rascarte.",
+    "todo4": "Evita el ejercicio intenso, las saunas, la natación y el sol directo hasta que tu clínica te diga lo contrario.",
+    "redflags": "Cierto enrojecimiento e hinchazón son habituales ahora. Contacta con tu clínica o con un médico si notas:",
+    "days": {
+      "intro": "Muchas clínicas aconsejan lo siguiente. Sigue primero las indicaciones de tu propia clínica.",
+      "d0_3": {
+        "title": "Días 0–3",
+        "wash": "Muchas clínicas hacen el primer lavado ellas mismas o el día 1–2, y después aconsejan un aclarado muy suave, sin frotar.",
+        "sleep": "Muchas clínicas aconsejan dormir boca arriba con la cabeza elevada, por ejemplo con dos almohadas o una almohada de viaje.",
+        "avoid": "Muchas clínicas aconsejan evitar agacharte, levantar peso, tocar los injertos, el alcohol y el tabaco."
+      },
+      "d4_7": {
+        "title": "Días 4–7",
+        "wash": "Muchas clínicas aconsejan un lavado suave diario con los productos que te dieron, secando los injertos a toquecitos — nunca frotando.",
+        "sleep": "Sigue siendo habitual aconsejar la cabeza elevada; la hinchazón suele disminuir por estos días.",
+        "avoid": "Muchas clínicas aconsejan evitar gorros ajustados, sudar mucho, el sol directo y rascarte."
+      },
+      "d8_14": {
+        "title": "Días 8–14",
+        "wash": "Muchas clínicas permiten ahora un lavado algo más firme para que las costras se desprendan con suavidad.",
+        "sleep": "Muchas personas pueden volver a su postura habitual para dormir hacia estas fechas, si su clínica está de acuerdo.",
+        "avoid": "Muchas clínicas aconsejan evitar piscinas, saunas, entrenamientos intensos y arrancar las últimas costras."
+      }
+    }
+  },
+  "shed": {
+    "title": "Fase de caída",
+    "tagline": "Los cabellos trasplantados suelen caerse — las raíces normalmente se quedan",
+    "happening": "Entre las semanas 2 y 8, muchos de los tallos de cabello trasplantados suelen caerse. Las clínicas suelen llamarlo caída por shock. Los folículos bajo la piel normalmente permanecen en su sitio y descansan antes de generar cabello nuevo.",
+    "normal": "Lo habitual es que haya una caída notable en las semanas 2–8; las clínicas la describen como una etapa normal de la cronología.",
+    "todo1": "Mantén la foto semanal desde el mismo ángulo; la serie muestra el patrón mejor que el espejo.",
+    "todo2": "Anota cuánto pelo se te cae en algunos días — un número es más fácil de comentar que una sensación.",
+    "todo3": "Sigue lavándote con suavidad, como te aconseja tu clínica.",
+    "todo4": "Apunta tus preguntas para la próxima revisión con tu clínica.",
+    "redflags": "La caída en sí es habitual en estas semanas. Contacta con tu clínica o con un médico si notas:"
+  },
+  "quiet": {
+    "title": "Meses tranquilos",
+    "tagline": "En la superficie parece que pasa poco",
+    "happening": "Los meses 2 a 4 suelen llamarse la fase del «patito feo». Los folículos normalmente están descansando y preparando cabellos nuevos, así que la zona puede verse muy parecida a como estaba antes de la operación.",
+    "normal": "Lo habitual en los meses 2–4 es ver muy poco crecimiento.",
+    "todo1": "Compara meses, no días — tu serie de fotos es la visión más justa.",
+    "todo2": "Pueden aparecer pequeños bultitos cuando los cabellos nuevos empujan hacia fuera; consulta con tu clínica si tienes dudas.",
+    "todo3": "Protege tu cuero cabelludo del sol fuerte, como te aconseja tu clínica.",
+    "todo4": "Mantén el mismo ángulo y la misma luz en cada foto.",
+    "redflags": "Contacta con tu clínica o con un médico si notas:"
+  },
+  "sprout": {
+    "title": "Primer crecimiento",
+    "tagline": "Suelen empezar a aparecer cabellos finos nuevos",
+    "happening": "Hacia los meses 3–4 suelen aparecer los primeros cabellos nuevos. Al principio suelen ser finos, claros e irregulares, y algunos pueden salir rizados u ondulados.",
+    "normal": "Lo habitual es que los primeros cabellos sean finos, con zonas irregulares y crezcan a distinto ritmo.",
+    "todo1": "Toma tus fotos de control con la misma luz y desde el mismo ángulo.",
+    "todo2": "Dale tiempo a los cabellos finos o irregulares — el grosor suele aumentar en los meses siguientes.",
+    "todo3": "Pregunta a tu clínica cuándo puedes cortarte el pelo, teñirlo y usar productos de peinado.",
+    "todo4": "Mira tus primeras fotos en lugar de los resultados de otras personas.",
+    "redflags": "Contacta con tu clínica o con un médico si notas:"
+  },
+  "grow": {
+    "title": "La densidad aumenta",
+    "tagline": "Los cabellos suelen engrosar y rellenar",
+    "happening": "Entre los meses 6 y 9, los cabellos nuevos suelen volverse más gruesos y largos, y la zona suele verse más llena de un mes a otro.",
+    "normal": "Lo habitual es que la densidad siga aumentando durante los meses 6–9, y el aspecto puede cambiar mucho en este tramo.",
+    "todo1": "Toma tus fotos de control de los 6 y 9 meses.",
+    "todo2": "Compara con tus propias primeras fotos, no con las de nadie más.",
+    "todo3": "Pregunta a tu clínica por la revisión que suelen ofrecer hacia esta época.",
+    "todo4": "Sigue protegiendo tu cuero cabelludo del sol fuerte.",
+    "redflags": "Contacta con tu clínica o con un médico si notas:"
+  },
+  "mature": {
+    "title": "Maduración",
+    "tagline": "La textura y la densidad suelen asentarse",
+    "happening": "Los meses 9 a 12 suelen ser una etapa de maduración: los cabellos siguen engrosando y su textura se asienta. Las clínicas suelen evaluar el resultado de la línea frontal hacia los 12 meses.",
+    "normal": "Lo habitual en los meses 9–12 es que los cambios sean más lentos y sutiles.",
+    "todo1": "Toma tu foto de control de los 12 meses desde todos los ángulos.",
+    "todo2": "Pon tu primera foto y la más reciente lado a lado antes de la visita a tu clínica.",
+    "todo3": "Anota las preguntas que quieras hacer en tu evaluación.",
+    "todo4": "Recuerda que la coronilla y la raya suelen tardar más.",
+    "redflags": "Contacta con tu clínica o con un médico si notas:"
+  },
+  "final": {
+    "title": "Maduración final",
+    "tagline": "La coronilla y la raya pueden seguir madurando",
+    "happening": "Pasados los 12 meses, la mayoría de los cambios suelen ser pequeños. La coronilla, la raya y los resultados de muchas mujeres suelen seguir madurando hasta los 18 meses.",
+    "normal": "Lo habitual después del mes 12 es un cambio lento y gradual, sobre todo en la coronilla.",
+    "todo1": "Toma una foto cada uno o dos meses.",
+    "todo2": "Reserva la evaluación que te recomiende tu clínica.",
+    "todo3": "Lleva tu serie de fotos para compartirla con tu clínica, si quieres.",
+    "todo4": "Mantén el mismo ángulo y la misma luz para una comparación justa.",
+    "redflags": "Contacta con tu clínica o con un médico si notas:"
+  }
+}

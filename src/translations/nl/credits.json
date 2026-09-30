@@ -1,0 +1,23 @@
+{
+  "title": "Credits kopen",
+  "subtitle": "Credits verlopen nooit. Een standaardpreview kost {{standard}}, een HD-preview kost {{high}}.",
+  "balance": "Je saldo",
+  "equivalent": "≈ {{standard}} standaard- of {{high}} HD-previews",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Populair",
+  "success": "{{count}} credits toegevoegd.",
+  "pending": "Je aankoop wacht op goedkeuring.",
+  "failedBody": "De creditpakketten zijn niet geladen. Controleer je verbinding en probeer het opnieuw.",
+  "emptyBody": "Creditpakketten zijn nu niet beschikbaar. Probeer het later opnieuw.",
+  "freeHigh_one": "{{count}} gratis HD-preview wacht op je",
+  "freeHigh_other": "{{count}} gratis HD-previews wachten op je",
+  "examplesTitle": "Hoe ver je credits komen",
+  "exampleStandard": "Standaardpreview",
+  "exampleHigh": "HD-preview, zonder watermerk",
+  "proHint": "Pro-leden krijgen elke week of maand credits.",
+  "close": "Creditwinkel sluiten"
+}

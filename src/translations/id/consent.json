@@ -1,0 +1,25 @@
+{
+  "title": "Sebelum kami membuat pratinjaumu",
+  "body": "Pratinjau dibuat oleh model gambar AI, sehingga foto yang kamu pilih harus keluar dari ponselmu. Berikut yang terjadi.",
+  "sent": {
+    "title": "Yang kami kirim",
+    "body": "Hanya foto yang kamu pilih untuk pratinjau ini. Tidak ada yang lain dari galeri kameramu atau perjalananmu."
+  },
+  "who": {
+    "title": "Siapa yang memprosesnya",
+    "body": "fal.ai menjalankan penyuntingan gambar, menggunakan model gambar OpenAI."
+  },
+  "retention": {
+    "title": "Berapa lama disimpan",
+    "body": "Foto aslimu dan hasil pratinjaunya sama-sama dihapus dari server kami dalam waktu 30 hari. Kamu bisa menghapusnya lebih cepat dari tab Pratinjau."
+  },
+  "choice": {
+    "title": "Pilihanmu",
+    "body": "Kamu boleh menolak dan tetap memakai seluruh perjalanan. Foto yang kamu ambil untuk lini masamu tetap ada di perangkatmu."
+  },
+  "note": "Pratinjau AI menunjukkan sebuah kemungkinan. Pratinjau bukan prediksi hasilmu.",
+  "policy": "Baca kebijakan privasi",
+  "accept": "Setuju dan lanjut",
+  "decline": "Nanti saja",
+  "error": "Kami tidak dapat menyimpan pilihanmu. Periksa koneksimu dan coba lagi."
+}

@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "يستخدم Kök الكاميرا لتتمكن من تصوير تقدّمك من الزاوية نفسها في كل مرة.",
+  "NSPhotoLibraryUsageDescription": "يفتح Kök صورك لتتمكن من اختيار صورة للمعاينة أو لرحلتك.",
+  "NSPhotoLibraryAddUsageDescription": "يحفظ Kök معايناتك وصور المقارنة في مكتبة صورك.",
+  "NSMotionUsageDescription": "يقرأ Kök مستشعر الحركة للتحقق من أن هاتفك مُمسَك بوضع مستقيم للحصول على صورة متسقة."
+}

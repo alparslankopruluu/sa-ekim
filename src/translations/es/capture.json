@@ -1,0 +1,84 @@
+{
+  "close": "Cerrar cámara",
+  "title": "Foto de progreso",
+  "angle": {
+    "front": "Frente",
+    "left": "Lado izquierdo",
+    "right": "Lado derecho",
+    "top": "Parte superior",
+    "crown": "Coronilla"
+  },
+  "instruction": {
+    "front": "Con el pelo seco y peinado como siempre. Encaja tu rostro en el óvalo, con la línea frontal cerca del borde superior.",
+    "left": "Gírate para mostrar tu lado izquierdo. Mantén el teléfono en vertical, a la altura de los ojos.",
+    "right": "Gírate para mostrar tu lado derecho. Mantén el teléfono en vertical, a la altura de los ojos.",
+    "top": "Sostén el teléfono en horizontal sobre tu cabeza, con la pantalla hacia arriba, para que la cámara trasera apunte hacia la parte superior de tu cabeza.",
+    "crown": "Sostén el teléfono en horizontal sobre la parte posterior de tu cabeza, con la pantalla hacia arriba, para que la cámara trasera apunte hacia tu coronilla."
+  },
+  "cameraNote": {
+    "front": "Usa la cámara frontal para que puedas ver el encuadre.",
+    "back": "Usa la cámara trasera. Sostén el teléfono en horizontal o pide a alguien que tome la foto. Sentirás un toque cuando esté nivelado."
+  },
+  "guide": {
+    "ghostHide": "Ocultar foto anterior",
+    "ghostShow": "Mostrar foto anterior",
+    "ghostOverlay": "Superposición de tu foto anterior de {{angle}}, {{label}}",
+    "frame": "Vista de la cámara con guía de encuadre"
+  },
+  "level": {
+    "ok": "Nivelado, listo",
+    "upright": "Sostén el teléfono en vertical",
+    "flat": "Sostén el teléfono en horizontal, pantalla arriba",
+    "unavailable": "Este dispositivo no tiene sensor de movimiento, así que la comprobación de nivel está desactivada. Asegúrate tú mismo de que el teléfono esté en vertical.",
+    "a11yOk": "El teléfono está nivelado. Puedes tomar la foto.",
+    "a11yBlockedUpright": "El teléfono aún no está en vertical.",
+    "a11yBlockedFlat": "El teléfono aún no está en horizontal."
+  },
+  "shutter": {
+    "label": "Tomar foto",
+    "blockedUpright": "Sostén el teléfono en vertical para tomar la foto",
+    "blockedFlat": "Sostén el teléfono en horizontal para tomar la foto"
+  },
+  "library": "Elegir de la fototeca",
+  "permission": {
+    "checking": "Comprobando el acceso a la cámara…",
+    "title": "El acceso a la cámara está desactivado",
+    "body": "Kök usa la cámara solo para tus fotos de progreso. Se quedan en este dispositivo. También puedes elegir una foto de tu fototeca.",
+    "allow": "Permitir cámara",
+    "settings": "Abrir ajustes"
+  },
+  "unavailable": {
+    "title": "La cámara no está disponible aquí",
+    "body": "En su lugar, puedes elegir una foto de tu fototeca."
+  },
+  "review": {
+    "retake": "Repetir",
+    "use": "Usar foto",
+    "saving": "Guardando…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Esta foto se usa solo para tu vista previa. No se añade a tu recorrido.",
+    "a11y": "Revisión de la foto que acabas de tomar"
+  },
+  "error": {
+    "save": "No se pudo guardar la foto. Inténtalo de nuevo.",
+    "capture": "No se pudo tomar la foto. Inténtalo de nuevo.",
+    "pick": "No se pudo abrir tu fototeca. Inténtalo de nuevo."
+  },
+  "saved": "Foto guardada",
+  "checking": "Comprobando tu plan…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto de {{angle}}, {{label}}",
+    "taken": "Tomada el {{date}}",
+    "compare": "Comparar con…",
+    "delete": "Eliminar foto",
+    "confirmTitle": "¿Eliminar esta foto?",
+    "confirmBody": "Se elimina de este dispositivo y no se puede recuperar.",
+    "confirm": "Eliminar",
+    "cancel": "Conservar",
+    "missingTitle": "Esta foto ya no está aquí",
+    "missingBody": "Puede que se haya eliminado.",
+    "close": "Cerrar",
+    "loadError": "No se puede mostrar esta foto."
+  }
+}

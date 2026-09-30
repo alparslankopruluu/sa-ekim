@@ -1,0 +1,22 @@
+{
+  "title": "クレジットを入手",
+  "subtitle": "クレジットに有効期限はありません。標準プレビューは{{standard}}、HDプレビューは{{high}}を使います。",
+  "balance": "残高",
+  "equivalent": "≈ 標準プレビュー{{standard}}回、またはHDプレビュー{{high}}回分",
+  "packs": {
+    "credits_10": "スターター",
+    "credits_25": "プラス",
+    "credits_60": "スタジオ"
+  },
+  "popular": "人気",
+  "success": "{{count}}クレジットを追加しました。",
+  "pending": "購入は承認待ちです。",
+  "failedBody": "クレジットパックを読み込めませんでした。接続を確認して、もう一度お試しください。",
+  "emptyBody": "現在、クレジットパックはご利用いただけません。しばらくしてからもう一度お試しください。",
+  "freeHigh_other": "無料のHDプレビューが{{count}}回分あります",
+  "examplesTitle": "クレジットでできること",
+  "exampleStandard": "標準プレビュー",
+  "exampleHigh": "HDプレビュー（透かしなし）",
+  "proHint": "Proメンバーは、毎週または毎月クレジットを受け取れます。",
+  "close": "クレジットストアを閉じる"
+}

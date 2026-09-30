@@ -1,0 +1,250 @@
+{
+  "title": "Neue Vorschau",
+  "subtitle": "Wähle einen Stil und ein Foto, um eine mögliche Optik zu sehen.",
+  "aiLabel": "KI-Vorschau — keine Vorhersage deines Ergebnisses",
+  "aiLabelShort": "KI-Vorschau",
+  "aiLabelDetail": "Sie zeigt eine mögliche Optik, nicht, was passieren wird.",
+  "common": {
+    "close": "Schließen",
+    "back": "Zurück",
+    "retry": "Erneut versuchen",
+    "cancel": "Abbrechen",
+    "delete": "Löschen"
+  },
+  "goals": {
+    "label": "Bereich",
+    "hairline": "Haaransatz",
+    "crown": "Wirbel",
+    "part": "Scheitel",
+    "brows": "Augenbrauen",
+    "beard": "Bart"
+  },
+  "angles": {
+    "front": "Frontfoto",
+    "left": "Foto von links",
+    "right": "Foto von rechts",
+    "top": "Foto von oben",
+    "crown": "Foto vom Wirbel"
+  },
+  "styles": {
+    "label": "Stil",
+    "hairline_soft": {
+      "name": "Weicherer, natürlicher Haaransatz",
+      "description": "Ein sanft abgemilderter Haaransatz, der eine natürliche Form behält."
+    },
+    "hairline_temples": {
+      "name": "Feinschliff an den Schläfen",
+      "description": "Eine ausgewogenere Optik im Schläfenbereich."
+    },
+    "hairline_lower": {
+      "name": "Tiefere, definiertere Linie",
+      "description": "Ein etwas tieferer, definierterer Haaransatz."
+    },
+    "hairline_density": {
+      "name": "Mehr Dichte",
+      "description": "Eine dichtere Optik innerhalb deines bisherigen Haaransatzes."
+    },
+    "crown_light": {
+      "name": "Leicht",
+      "description": "Leichte Abdeckung am Wirbel."
+    },
+    "crown_medium": {
+      "name": "Mittel",
+      "description": "Mittlere Abdeckung am Wirbel."
+    },
+    "crown_full": {
+      "name": "Voll",
+      "description": "Volle Abdeckung am Wirbel."
+    },
+    "part_light": {
+      "name": "Leicht",
+      "description": "Leichte Fülle entlang des Scheitels."
+    },
+    "part_medium": {
+      "name": "Mittel",
+      "description": "Mittlere Fülle entlang des Scheitels."
+    },
+    "part_full": {
+      "name": "Voll",
+      "description": "Eine volle Optik entlang des Scheitels."
+    },
+    "brows_natural": {
+      "name": "Natürlich",
+      "description": "Natürliche Augenbrauen, die deine eigene Form behalten."
+    },
+    "brows_fuller": {
+      "name": "Voller",
+      "description": "Deine eigene Form, etwas voller."
+    },
+    "brows_arched": {
+      "name": "Geschwungen",
+      "description": "Eine sanft geschwungene, gepflegte Brauenlinie."
+    },
+    "beard_patch": {
+      "name": "Lücken füllen",
+      "description": "Dünne Stellen aufgefüllt."
+    },
+    "beard_full": {
+      "name": "Vollbart",
+      "description": "Ein volleres Bartbild an Kiefer und Wangen."
+    },
+    "beard_moustache": {
+      "name": "Schnurrbart",
+      "description": "Eine vollere Optik über der Lippe."
+    }
+  },
+  "bestAngle": "Am besten geeignet: {{angle}}",
+  "density": {
+    "label": "Dichte",
+    "natural": "Natürlich",
+    "fuller": "Voller",
+    "full": "Voll"
+  },
+  "quality": {
+    "label": "Qualität",
+    "standard": {
+      "title": "Standard",
+      "description": "Ein schneller erster Eindruck."
+    },
+    "high": {
+      "title": "Hoch",
+      "description": "Mehr Details."
+    }
+  },
+  "price": {
+    "label": "Diese Vorschau",
+    "free": "Kostenlos",
+    "freeHigh": "Kostenlose HD-Vorschau",
+    "credits_one": "{{count}} Credit",
+    "credits_other": "{{count}} Credits",
+    "freeNote": "Deine erste Vorschau ist kostenlos und enthält ein Wasserzeichen.",
+    "balance_one": "Du hast {{count}} Credit.",
+    "balance_other": "Du hast {{count}} Credits.",
+    "short_one": "Du hast {{count}} Credit, und diese Vorschau braucht {{cost}}.",
+    "short_other": "Du hast {{count}} Credits, und diese Vorschau braucht {{cost}}.",
+    "useFreeHigh": "Meine kostenlose HD-Vorschau nutzen",
+    "useFreeHighHint_one": "Du hast {{count}} kostenlose HD-Vorschau.",
+    "useFreeHighHint_other": "Du hast {{count}} kostenlose HD-Vorschauen."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Noch kein Foto",
+    "take": "Foto aufnehmen",
+    "library": "Aus Mediathek wählen",
+    "journey": "Neuestes Verlaufsfoto nutzen",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Foto entfernen",
+    "selected": "Ausgewähltes Foto",
+    "sentNote": "Dein Foto wird erst gesendet, wenn du auf „Erstellen“ tippst, nachdem du der KI-Verarbeitung zugestimmt hast.",
+    "libraryFailed": "Wir konnten deine Fotomediathek nicht öffnen."
+  },
+  "cta": {
+    "create": "Vorschau erstellen",
+    "createFree": "Kostenlose Vorschau erstellen",
+    "getCredits": "Credits holen",
+    "continue": "Weiter",
+    "addPhoto": "Foto hinzufügen, um fortzufahren",
+    "chooseStyle": "Stil wählen, um fortzufahren"
+  },
+  "helper": {
+    "needsConsent": "Bevor dein Foto gesendet wird, bitten wir einmalig um deine Zustimmung.",
+    "needsCredits": "Du brauchst mehr Credits für diese Vorschau.",
+    "walletError": "Wir konnten deine Credits nicht laden."
+  },
+  "rendering": {
+    "title": "Deine Vorschau",
+    "status": {
+      "uploading": "Dein Foto wird gesendet",
+      "creating": "Deine Vorschau wird gestartet",
+      "waiting": "Deine Vorschau wird gestartet",
+      "queued": "Warten auf einen freien Platz",
+      "processing": "Deine Vorschau wird erstellt",
+      "finalizing": "Fast fertig"
+    },
+    "estimate": "Meist unter einer Minute.",
+    "background": "Du kannst diesen Bildschirm verlassen. Wir machen weiter und sagen dir Bescheid, wenn sie fertig ist.",
+    "notifyMe": "Benachrichtige mich, wenn sie fertig ist",
+    "notifyOn": "Wir benachrichtigen dich, wenn sie fertig ist.",
+    "keepBrowsing": "Weiterstöbern",
+    "cancel": "Vorschau abbrechen",
+    "cancelHint": "Deine Credits werden zurückgegeben, wenn du abbrichst.",
+    "cancelTooLate": "Sie wird bereits abgeschlossen und kann jetzt nicht mehr abgebrochen werden.",
+    "failedTitle": "Diese Vorschau wurde nicht fertig",
+    "canceledTitle": "Vorschau abgebrochen",
+    "offlineTitle": "Du bist offline",
+    "errorTitle": "Wir konnten die Vorschau nicht starten",
+    "refunded_one": "Dein {{count}} Credit wurde zurückgegeben.",
+    "refunded_other": "Deine {{count}} Credits wurden zurückgegeben.",
+    "nothingCharged": "Es wurde nichts berechnet.",
+    "retrySafe": "Ein erneuter Versuch ist sicher: Dir wird nichts doppelt berechnet.",
+    "retry": "Erneut versuchen",
+    "getCredits": "Credits holen",
+    "reviewConsent": "Ansehen und zustimmen",
+    "seePlans": "Abos ansehen",
+    "choosePhoto": "Anderes Foto wählen",
+    "backToStyles": "Zurück zu den Stilen",
+    "close": "Schließen",
+    "photoA11y": "Dein Foto",
+    "ringA11y": "Fortschritt der Vorschau, {{percent}} Prozent"
+  },
+  "result": {
+    "title": "Deine Vorschau",
+    "before": "Dein Foto",
+    "after": "KI-Vorschau",
+    "watermark": "Kök · KI-Vorschau",
+    "wipeA11y": "Vorher-Nachher-Schieber. Wische nach oben oder unten, um dein Foto mit der KI-Vorschau zu vergleichen.",
+    "demo": "Demo",
+    "save": "Speichern",
+    "share": "Teilen",
+    "report": "Melden",
+    "delete": "Löschen",
+    "saved": "In deinen Fotos gespeichert",
+    "saveDenied": "Erlaube in den Einstellungen den Fotozugriff, um Vorschauen zu speichern.",
+    "unsupported": "Speichern und Teilen sind für diese Vorschau hier nicht verfügbar.",
+    "shareTitle": "Teile deine KI-Vorschau",
+    "tryAnother": "Anderen Stil ausprobieren",
+    "upgradeTitle": "Mehr Details gewünscht?",
+    "upgradeBody": "Eine HD-Vorschau hat mehr Details und kein Wasserzeichen.",
+    "notFound": "Wir konnten diese Vorschau nicht finden. Vorschauen werden nach 30 Tagen gelöscht.",
+    "toPreviews": "Zurück zu den Vorschauen",
+    "beforeGone": "Dein Originalfoto wird nur 30 Tage aufbewahrt, daher ist der Vergleich nicht mehr verfügbar.",
+    "loadFailed": "Wir konnten diese Vorschau nicht laden.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "HD-Vorschau erstellen ({{count}} Credit)",
+    "upgradeTry_other": "HD-Vorschau erstellen ({{count}} Credits)",
+    "upgradeTryFree": "Kostenlose HD-Vorschau erstellen",
+    "availableUntil": "Verfügbar bis {{date}}",
+    "saveNudge": "Vorschauen werden nach 30 Tagen gelöscht. Speichere sie in deinen Fotos, um eine Kopie zu behalten.",
+    "saveNudgeSoon": "Diese Vorschau wird bald gelöscht. Speichere sie in deinen Fotos, um eine Kopie zu behalten.",
+    "expiredTitle": "Diese Vorschau wurde nach 30 Tagen gelöscht",
+    "expiredBody": "Vorschauen und die Fotos, aus denen sie entstanden sind, werden nach 30 Tagen entfernt. Du kannst jederzeit eine neue erstellen."
+  },
+  "delete": {
+    "title": "Diese Vorschau löschen?",
+    "body": "Das Vorschaubild wird endgültig gelöscht. Das kann nicht rückgängig gemacht werden.",
+    "done": "Vorschau gelöscht"
+  },
+  "tab": {
+    "title": "Vorschauen",
+    "new": "Neue Vorschau",
+    "honest": "Vorschauen sind KI-Bilder einer möglichen Optik.",
+    "emptyTitle": "Noch keine Vorschauen",
+    "emptyBody": "Eine Vorschau ist ein KI-Bild einer möglichen Optik, nicht dessen, was passieren wird. Probiere einen Stil an deinem eigenen Foto aus und vergleiche.",
+    "emptyCta": "Vorschau erstellen",
+    "loadFailed": "Wir konnten deine Vorschauen nicht laden.",
+    "menu": "Weitere Aktionen",
+    "status": {
+      "queued": "Wartet",
+      "processing": "Wird erstellt · {{percent}} %",
+      "finalizing": "Fast fertig",
+      "failed": "Nicht fertig geworden",
+      "canceled": "Abgebrochen"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Erneut versuchen",
+    "delete": "Löschen",
+    "deleteA11y": "Vorschau löschen",
+    "availableUntil": "Bis {{date}}",
+    "expired": "Nach 30 Tagen gelöscht"
+  }
+}

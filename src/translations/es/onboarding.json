@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Tu compañero del trasplante capilar",
+    "title": "Descubre qué es habitual en tu semana de recuperación",
+    "subtitle": "Previsualiza un cambio antes de la cirugía y después sigue lo que es habitual en cada semana de tu recuperación.",
+    "cta": "Empezar",
+    "demoLabel": "Ejemplo del control deslizante de antes y después. Arrastra para comparar.",
+    "demoBefore": "Antes",
+    "demoAfter": "Después",
+    "demoCaption": "Solo una ilustración. Tu propia vista previa llegará más tarde.",
+    "legalPrefix": "Al continuar aceptas nuestros",
+    "terms": "Términos",
+    "privacy": "Política de privacidad"
+  },
+  "goal": {
+    "title": "¿En qué zona trabajas?",
+    "subtitle": "Adaptaremos tu cronología y los ángulos de tus fotos a ella.",
+    "hairline": {
+      "title": "Línea frontal",
+      "subtitle": "Frente y entradas"
+    },
+    "crown": {
+      "title": "Coronilla",
+      "subtitle": "La parte posterior y superior de la cabeza"
+    },
+    "part": {
+      "title": "Raya",
+      "subtitle": "Densidad a lo largo de la raya"
+    },
+    "brows": {
+      "title": "Cejas",
+      "subtitle": "Trasplante de cejas"
+    },
+    "beard": {
+      "title": "Barba",
+      "subtitle": "Barba y bigote"
+    }
+  },
+  "stage": {
+    "title": "¿En qué punto del proceso estás?",
+    "subtitle": "Esto decide lo primero que te mostramos.",
+    "researching": {
+      "title": "Aún me estoy informando",
+      "subtitle": "Explorando opciones, nada reservado todavía"
+    },
+    "planned": {
+      "title": "Operación reservada",
+      "subtitle": "Tengo una fecha próxima"
+    },
+    "done": {
+      "title": "Ya me operé",
+      "subtitle": "Quiero seguir mi recuperación"
+    }
+  },
+  "date": {
+    "titlePlanned": "¿Cuándo es tu operación?",
+    "titleDone": "¿Cuándo fue tu operación?",
+    "subtitlePlanned": "Haremos la cuenta atrás hasta el día 0 y prepararemos tus primeras semanas.",
+    "subtitleDone": "Te mostraremos en qué fase estás y qué es habitual esta semana.",
+    "wheelDay": "Día",
+    "wheelMonth": "Mes",
+    "wheelYear": "Año",
+    "feedbackPast": "Día {{day}} · Semana {{week}}",
+    "feedbackToday": "Hoy es el día 0",
+    "feedbackFuture_one": "Dentro de {{count}} día",
+    "feedbackFuture_other": "Dentro de {{count}} días",
+    "errorMustBeFuture": "Elige hoy o una fecha posterior.",
+    "errorMustBePast": "Elige hoy o una fecha anterior.",
+    "errorTooFar": "Esa fecha está demasiado lejos para seguirla. Elige una más cercana.",
+    "errorInvalid": "Esa fecha no existe.",
+    "skip": "Aún no lo sé",
+    "skipNote": "Puedes indicarla o cambiarla más tarde en tu recorrido."
+  },
+  "photo": {
+    "title": "Añade una foto para tu vista previa",
+    "subtitleResearching": "Mira una vista previa de IA de cómo podría verse un cambio, antes de comprometerte con nada.",
+    "subtitlePlanned": "Mira una vista previa de IA de cómo podría verse tu operación.",
+    "subtitleDone": "Mira una vista previa de IA de cómo podría verse tu resultado a medida que madura.",
+    "guidanceTitle": "Para una mejor vista previa",
+    "angle": {
+      "front": "Mira a la cámara de frente, con el teléfono a la altura de los ojos.",
+      "top": "Sostén el teléfono sobre tu cabeza, mirando hacia la parte superior de tu cabeza.",
+      "crown": "Fotografía la parte posterior de tu cabeza, idealmente con ayuda de alguien."
+    },
+    "area": {
+      "hairline": "Echa el pelo hacia atrás para que se vea bien la línea frontal.",
+      "crown": "Mantén la coronilla despejada y el pelo liso.",
+      "part": "Haz la raya como la llevas normalmente.",
+      "brows": "Mantén las cejas libres de pelo y de gafas.",
+      "beard": "Mantén la zona de la barba despejada y con luz uniforme."
+    },
+    "light": "Usa luz natural, sin filtros y sin gorro.",
+    "take": "Tomar una foto",
+    "library": "Elegir de la fototeca",
+    "change": "Elegir otra foto",
+    "selected": "Tu foto seleccionada",
+    "placeholder": "Aún no hay foto seleccionada",
+    "privacy": "Tu foto solo se envía para crear la vista previa, y únicamente después de que aceptes en la siguiente pantalla.",
+    "skip": "Omitir la vista previa",
+    "skipNote": "Puedes crear una más tarde desde la pestaña Vistas previas.",
+    "permissionDenied": "No pudimos abrir tus fotos. Revisa el permiso en Ajustes."
+  },
+  "notify": {
+    "title": "No te pierdas los momentos importantes",
+    "subtitle": "La recuperación es lenta. Un aviso suave en el momento justo se encarga de recordar por ti.",
+    "bulletPhase": "Te avisaremos cuando cambie la fase",
+    "bulletPhoto": "Te avisaremos cuando llegue el día de la foto",
+    "bulletCare": "Recordatorios diarios de cuidados durante las dos primeras semanas",
+    "allow": "Activar recordatorios",
+    "skip": "Ahora no",
+    "note": "Los recordatorios de cuidados son gratis. Los de fase y de foto vienen con Pro. Puedes cambiarlo cuando quieras en Ajustes."
+  },
+  "crafting": {
+    "title": "Creando tu vista previa",
+    "titleDone": "Tu vista previa está lista",
+    "subtitle": "Suele tardar menos de un minuto.",
+    "ringLabel": "Progreso de la vista previa, {{percent}} por ciento",
+    "lineUpload": "Enviando tu foto de forma segura",
+    "lineReserve": "Reservando tu vista previa gratuita",
+    "lineEdit": "Editando {{area}}",
+    "lineFinish": "Añadiendo los últimos retoques",
+    "stateDone": "hecho",
+    "stateActive": "en curso",
+    "statePending": "en espera",
+    "area": {
+      "hairline": "tu línea frontal",
+      "crown": "tu coronilla",
+      "part": "tu raya",
+      "brows": "tus cejas",
+      "beard": "tu barba"
+    },
+    "skip": "Omitir por ahora",
+    "skipNote": "Tu vista previa sigue generándose y te esperará en la pestaña Vistas previas.",
+    "failedTitle": "No pudimos terminar tu vista previa",
+    "failedOffline": "Parece que no tienes conexión. No se cobró nada. Revisa tu conexión e inténtalo de nuevo.",
+    "failedGeneric": "Algo salió mal por nuestra parte. No se cobró nada. Puedes intentarlo de nuevo o continuar sin ella.",
+    "failedBlocked": "Esta foto no se puede usar para una vista previa. No se cobró nada. Puedes continuar y probar con otra foto más tarde.",
+    "skipFailed": "Continuar sin vista previa"
+  },
+  "reveal": {
+    "title": "Aquí tienes una vista previa de lo que podría ser",
+    "subtitle": "Arrastra el control para comparar. Es una ilustración hecha por IA.",
+    "before": "Tu foto",
+    "after": "Vista previa de IA",
+    "disclaimer": "Vista previa de IA — no es una predicción de tu resultado",
+    "watermark": "Las vistas previas gratuitas llevan una pequeña marca de agua.",
+    "wipeLabel": "Comparación de antes y después de tu foto. Arrastra para comparar.",
+    "loading": "Preparando tu vista previa",
+    "loadFailed": "No pudimos cargar la imagen de la vista previa. Está guardada en tu pestaña Vistas previas.",
+    "cta": "Ver mi plan"
+  }
+}

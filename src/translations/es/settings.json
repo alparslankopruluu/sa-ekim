@@ -1,0 +1,117 @@
+{
+  "title": "Ajustes",
+  "sections": {
+    "subscription": "Suscripción y créditos",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "preferences": "Preferencias",
+    "data": "Datos y privacidad",
+    "account": "Cuenta",
+    "legal": "Legal y soporte",
+    "about": "Acerca de",
+    "developer": "Desarrollador"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Plan gratuito",
+    "renews": "Se renueva el {{date}}",
+    "expires": "Termina el {{date}}",
+    "manage": "Gestionar suscripción",
+    "restore": "Restaurar compras",
+    "upgrade": "Pasar a Pro",
+    "restoreDone": "Te damos la bienvenida de nuevo. Pro está restaurado.",
+    "restoreNone": "No se encontraron compras anteriores.",
+    "balance": "Saldo de créditos",
+    "buyCredits": "Obtener créditos",
+    "freeHigh_one": "{{count}} vista previa HD gratis",
+    "freeHigh_other": "{{count}} vistas previas HD gratis"
+  },
+  "language": {
+    "title": "Idioma",
+    "pickerTitle": "Elige un idioma",
+    "rtlNote": "Reinicia Kök para cambiar la dirección del diseño.",
+    "closePicker": "Cerrar lista de idiomas"
+  },
+  "notifications": {
+    "previews": "Vista previa lista",
+    "offers": "Regalos y ofertas",
+    "reminders": "Recordatorios del recorrido",
+    "remindersHint": "Recordatorios de cuidados, de foto semanal y de fase. Los recordatorios de fase forman parte de Pro.",
+    "systemOff": "Las notificaciones de Kök están desactivadas en los ajustes del sistema. Toca para abrirlos."
+  },
+  "preferences": {
+    "haptics": "Respuesta háptica"
+  },
+  "data": {
+    "wipe": "Eliminar todos mis datos",
+    "wipeHint": "Elimina de este dispositivo las fotos de tu recorrido, tu registro de caída y tus vistas previas.",
+    "wipeTitle": "¿Eliminar todos tus datos?",
+    "wipeBody": "Esto elimina de forma permanente tu fecha de operación, tus fotos de progreso, tu registro de caída y tus vistas previas guardadas. Tu suscripción y tus créditos permanecen en tu cuenta. Esta acción no se puede deshacer.",
+    "wipeConfirm": "Eliminar mis datos",
+    "wiping": "Eliminando…",
+    "wiped": "Tus datos se eliminaron de este dispositivo."
+  },
+  "account": {
+    "guest": "Cuenta anónima",
+    "id": "ID de cuenta",
+    "delete": "Eliminar cuenta",
+    "deleteHint": "Elimina de nuestros servidores tu cuenta, tus créditos y las fotos subidas.",
+    "deleteTitle": "¿Eliminar tu cuenta?",
+    "deleteBody": "Esto elimina de forma permanente tu cuenta, tus créditos, tus vistas previas guardadas y cualquier foto que hayas subido, y borra tu recorrido en este dispositivo. Una suscripción activa debe cancelarse por separado en los ajustes de tu cuenta de la tienda.",
+    "deleteConfirm": "Eliminar cuenta",
+    "deleting": "Eliminando…",
+    "deleted": "Tu cuenta se eliminó."
+  },
+  "legal": {
+    "privacy": "Política de privacidad",
+    "terms": "Condiciones de uso",
+    "ai": "Cómo funcionan las vistas previas de IA",
+    "support": "Ayuda y soporte"
+  },
+  "about": {
+    "version": "Versión {{version}} ({{build}})",
+    "contact": "Escribir al soporte",
+    "rate": "Valorar Kök",
+    "replay": "Repetir la introducción"
+  },
+  "confirm": {
+    "cancel": "Cancelar"
+  },
+  "developer": {
+    "open": "Herramientas de desarrollador",
+    "backend": "Modo de backend",
+    "replayOnboarding": "Repetir la introducción",
+    "offerings": "Ofertas de la tienda",
+    "purchase": "Resultado de la compra",
+    "wheel": "Ubicación de la ruleta de regalos",
+    "failNext": "Hacer fallar la próxima vista previa",
+    "cohort": "Recuento de cohorte de mi semana",
+    "addCredits": "Conceder 50 créditos",
+    "reset": "Restablecer todos los datos simulados",
+    "resetDone": "Los datos simulados se restablecieron.",
+    "credits": "Créditos concedidos.",
+    "testCrash": "Enviar un fallo de prueba",
+    "events": "Registro de eventos",
+    "empty": "Aún no hay eventos",
+    "mockOnly": "Estos interruptores solo existen en el backend simulado.",
+    "values": {
+      "ok": "ok",
+      "slow": "lento",
+      "fail": "fallo",
+      "empty": "vacío",
+      "success": "éxito",
+      "cancel": "cancelar",
+      "home": "inicio",
+      "onboarding_exit": "salida de la introducción",
+      "off": "desactivado"
+    },
+    "storefront": "Moneda de la tienda simulada",
+    "giftOffer": "Mostrar la oferta de regalo sin premio",
+    "forcePro": "Derecho Pro",
+    "grantFreeHigh": "Conceder una vista previa HD gratis",
+    "previewsEnabled": "Vistas previas activadas (interruptor de emergencia)",
+    "nextPrize": "Próximo premio de la ruleta",
+    "honest": "sorteo real",
+    "offerCacheNote": "Los cambios de la tienda se aplican en el siguiente reintento de la pantalla de suscripción o pasados cinco minutos."
+  }
+}

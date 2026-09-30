@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Suivez votre parcours de 12 à 18 mois, semaine après semaine",
+    "hairline": "Suivez le parcours de votre ligne frontale, semaine après semaine",
+    "crown": "Suivez le parcours de votre vertex, semaine après semaine",
+    "part": "Suivez le parcours de votre raie, semaine après semaine",
+    "brows": "Suivez le parcours de vos sourcils, semaine après semaine",
+    "beard": "Suivez le parcours de votre barbe, semaine après semaine"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Votre premier aperçu est prêt. Pro ajoute le calendrier complet : comparaison, bandeau des phases et chaque guide hebdomadaire."
+    },
+    "settings": {
+      "subtitle": "Voyez ce qui est habituel pour votre semaine, à côté de vos propres photos."
+    },
+    "home_banner": {
+      "subtitle": "Voyez ce qui est habituel pour votre semaine, à côté de vos propres photos."
+    },
+    "notification": {
+      "subtitle": "Voyez ce qui est habituel pour votre semaine, à côté de vos propres photos."
+    },
+    "gift": {
+      "subtitle": "Le prix de votre cadeau s'applique à la première année de l'abonnement annuel."
+    },
+    "locked_compare": {
+      "title": "Comparez vos photos, semaine après semaine",
+      "subtitle": "Faites glisser le curseur entre deux photos ou affichez-les côte à côte, chacune avec sa semaine."
+    },
+    "locked_band": {
+      "title": "Voyez la plage habituelle pour votre semaine",
+      "subtitle": "Votre photo à côté du bandeau des phases. Il montre une plage habituelle, et les résultats varient d'une personne à l'autre."
+    },
+    "locked_photos": {
+      "title": "Gardez chaque semaine en mémoire",
+      "subtitle": "La formule gratuite conserve {{count}} photos de suivi. Pro conserve les 12 à 18 mois."
+    },
+    "locked_report": {
+      "title": "Partagez un rapport avec votre clinique",
+      "subtitle": "Un PDF avec votre première et votre dernière photo par angle, les semaines correspondantes et le résumé de votre chute."
+    },
+    "locked_hd": {
+      "title": "Plus de crédits pour les aperçus HD",
+      "subtitle": "Les aperçus HD utilisent des crédits et n'ont pas de filigrane. Pro inclut une dotation de crédits à dépenser pour eux."
+    },
+    "locked_guide": {
+      "title": "Le guide hebdomadaire complet",
+      "subtitle": "Ce qui se passe habituellement à chaque phase, ce qui est normal et ce qu'il faut faire cette semaine."
+    },
+    "insufficient_credits": {
+      "title": "Il vous faut plus de crédits pour cela",
+      "subtitle": "Pro inclut une dotation de crédits chaque semaine ou chaque mois. Vous pouvez aussi acheter un pack de crédits."
+    },
+    "result_upgrade": {
+      "title": "Voyez-le en HD",
+      "subtitle": "Les aperçus HD n'ont pas de filigrane et utilisent des crédits. Pro inclut des crédits à dépenser pour eux."
+    }
+  },
+  "benefits": {
+    "photos": "Photos de suivi illimitées",
+    "compare": "Comparaison par curseur et côte à côte",
+    "band": "Bandeau de la phase attendue sur vos photos",
+    "guide": "Le guide complet de chaque phase",
+    "reminders": "Rappels de phase et de photo",
+    "report": "Rapport PDF pour la clinique",
+    "cohort": "Voyez combien de personnes sont dans votre semaine",
+    "hd": "Les crédits inclus servent aux aperçus HD",
+    "credits": "Une dotation de crédits pour les aperçus"
+  },
+  "plans": {
+    "annual": "Annuel",
+    "monthly": "Mensuel",
+    "weekly": "Hebdomadaire",
+    "bestValue": "Meilleur rapport",
+    "save": "Économisez {{percent}} % vs hebdomadaire",
+    "perWeek": "{{price}}/semaine",
+    "perMonth": "{{price}}/mois",
+    "perYear": "{{price}}/an",
+    "firstYear": "{{price}} la première année"
+  },
+  "planCredits": {
+    "weekly": "Comprend {{count}} crédits chaque semaine",
+    "monthly": "Comprend {{count}} crédits chaque mois",
+    "annual": "Comprend {{initial}} crédits au départ, puis {{count}} chaque semaine"
+  },
+  "cta": {
+    "subscribe": "Continuer",
+    "processing": "Traitement…"
+  },
+  "disclosure": {
+    "annual": "Facturé {{price}} par an. Se renouvelle automatiquement jusqu'à résiliation. Résiliez à tout moment dans les réglages du compte de votre boutique d'applications. Le prix affiché est le montant qui vous est facturé.",
+    "monthly": "Facturé {{price}} par mois. Se renouvelle automatiquement jusqu'à résiliation. Résiliez à tout moment dans les réglages du compte de votre boutique d'applications. Le prix affiché est le montant qui vous est facturé.",
+    "weekly": "Facturé {{price}} par semaine. Se renouvelle automatiquement jusqu'à résiliation. Résiliez à tout moment dans les réglages du compte de votre boutique d'applications. Le prix affiché est le montant qui vous est facturé.",
+    "intro": "Votre prix cadeau : {{intro}} la première année, puis {{price}} par an. Se renouvelle automatiquement jusqu'à résiliation. Résiliez à tout moment dans les réglages du compte de votre boutique d'applications."
+  },
+  "restore": "Restaurer",
+  "restoreNone": "Aucun achat précédent trouvé.",
+  "restoreSuccess": "Content de vous revoir. Pro est restauré.",
+  "privacy": "Confidentialité",
+  "termsLink": "Conditions",
+  "loading": "Chargement des offres…",
+  "failedTitle": "Les offres n'ont pas pu se charger",
+  "failedBody": "Vérifiez votre connexion et réessayez.",
+  "emptyBody": "Les offres ne sont pas disponibles pour le moment. Veuillez réessayer plus tard.",
+  "purchaseFailed": "L'achat n'a pas abouti. Veuillez réessayer.",
+  "pending": "Votre achat est en attente d'approbation.",
+  "success": "Vous êtes Pro. Merci.",
+  "mockBadge": "Boutique de test · aucun débit réel",
+  "giftBanner": "Votre cadeau",
+  "creditsLink": "Besoin uniquement de crédits ? Voir les packs de crédits",
+  "closeLabel": "Fermer"
+}

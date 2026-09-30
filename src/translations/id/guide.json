@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Apa yang terjadi",
+    "normal": "Yang lazim terjadi",
+    "todo": "Lakukan minggu ini",
+    "redflags": "Hubungi klinik atau dokter jika…",
+    "care": "Hari demi hari",
+    "wash": "Mencuci",
+    "sleep": "Tidur",
+    "avoid": "Hindari"
+  },
+  "header": {
+    "week": "Minggu",
+    "days": "Hari {{from}}–{{to}}",
+    "weeks": "minggu {{from}}–{{to}}",
+    "current": "Kamu di sini",
+    "past": "Sudah dilewati",
+    "upcoming": "Di depan"
+  },
+  "lock": {
+    "title": "Panduan fase lengkap adalah bagian dari Pro",
+    "body": "Apa yang biasanya terjadi, apa yang perlu dilakukan minggu ini, dan catatan hari demi hari — untuk setiap fase.",
+    "cta": "Lihat Pro",
+    "redflagsNote": "Kapan harus menghubungi kliniknya tetap gratis untuk semua orang, di bawah."
+  },
+  "notFound": {
+    "title": "Panduan tidak ditemukan",
+    "body": "Halaman ini mungkin berasal dari tautan lama.",
+    "cta": "Kembali"
+  },
+  "flags": {
+    "fever": "Demam atau menggigil",
+    "redness": "Kemerahan atau bengkak yang menyebar atau terus memburuk",
+    "pus": "Nanah, cairan kekuningan, atau bau tidak sedap",
+    "pain": "Nyeri hebat atau makin bertambah",
+    "bleeding": "Perdarahan hebat, atau perdarahan yang tidak berhenti dengan tekanan lembut",
+    "contact": "Jika salah satu dari ini terjadi, hubungi klinik atau dokter. Dalam keadaan darurat, hubungi nomor darurat setempat."
+  },
+  "disclaimer": "Edukasi umum berdasarkan lini masa klinik yang lazim — bukan saran medis dan bukan prediksi. Hasil tiap orang berbeda; instruksi kliniknya sendiri selalu diutamakan.",
+  "care": {
+    "title": "Dua minggu pertama",
+    "tagline": "Melindungi graft selagi menetap",
+    "happening": "Graft baru sedang menetap di tempatnya. Keropeng kecil biasanya terbentuk di sekitar tiap graft dan umumnya lepas dalam sekitar 7–14 hari. Sedikit pembengkakan di dahi dan kemerahan umum terlihat pada beberapa hari pertama.",
+    "normal": "Biasanya, keropeng kecil, kemerahan ringan, sedikit bengkak, dan rasa tegang lazim terjadi pada dua minggu pertama.",
+    "todo1": "Ikuti rutinitas mencuci yang ditunjukkan klinikmu.",
+    "todo2": "Tidur dengan kepala ditinggikan pada beberapa malam pertama jika klinikmu menyarankannya.",
+    "todo3": "Biarkan keropeng lepas sendiri — jangan dikorek atau digaruk.",
+    "todo4": "Hindari olahraga berat, sauna, berenang, dan sinar matahari langsung sampai klinikmu mengatakan lain.",
+    "redflags": "Sedikit kemerahan dan bengkak lazim terjadi sekarang. Hubungi klinik atau dokter jika kamu melihat:",
+    "days": {
+      "intro": "Banyak klinik menyarankan hal berikut. Ikuti instruksi kliniknya sendiri terlebih dahulu.",
+      "d0_3": {
+        "title": "Hari 0–3",
+        "wash": "Banyak klinik melakukan pencucian pertama sendiri atau pada hari ke-1–2, lalu menyarankan bilasan yang sangat lembut tanpa menggosok.",
+        "sleep": "Banyak klinik menyarankan tidur telentang dengan kepala ditinggikan, misalnya di atas dua bantal atau bantal leher.",
+        "avoid": "Banyak klinik menyarankan menghindari membungkuk, mengangkat beban, menyentuh graft, alkohol, dan merokok."
+      },
+      "d4_7": {
+        "title": "Hari 4–7",
+        "wash": "Banyak klinik menyarankan mencuci lembut setiap hari dengan produk yang mereka berikan, lalu menepuk-nepuk graft hingga kering — jangan digosok.",
+        "sleep": "Kepala yang ditinggikan masih umum disarankan; pembengkakan biasanya mereda sekitar hari-hari ini.",
+        "avoid": "Banyak klinik menyarankan menghindari topi ketat, keringat berlebihan, sinar matahari langsung, dan menggaruk."
+      },
+      "d8_14": {
+        "title": "Hari 8–14",
+        "wash": "Banyak klinik kini mengizinkan mencuci sedikit lebih kuat agar keropeng bisa lepas dengan lembut.",
+        "sleep": "Banyak orang bisa kembali ke posisi tidur biasa sekitar saat ini, jika klinik mereka setuju.",
+        "avoid": "Banyak klinik menyarankan menghindari kolam renang, sauna, olahraga berat, dan mengorek keropeng terakhir."
+      }
+    }
+  },
+  "shed": {
+    "title": "Fase rontok",
+    "tagline": "Rambut hasil transplantasi umumnya rontok — akarnya biasanya tetap",
+    "happening": "Antara minggu ke-2 dan ke-8, banyak batang rambut hasil transplantasi biasanya rontok. Klinik sering menyebutnya shock loss. Folikel di bawah kulit umumnya tetap di tempatnya dan beristirahat sebelum menumbuhkan rambut baru.",
+    "normal": "Biasanya, kerontokan yang terlihat pada minggu ke-2–8 itu lazim — klinik menggambarkannya sebagai tahap yang biasa dalam lini masa.",
+    "todo1": "Tetap ambil foto mingguan dari sudut yang sama; rangkaian foto menunjukkan pola lebih baik daripada cermin.",
+    "todo2": "Catat seberapa banyak rambutmu rontok pada beberapa hari — angka lebih mudah dibicarakan daripada perasaan.",
+    "todo3": "Tetap cuci dengan lembut, sesuai saran klinikmu.",
+    "todo4": "Catat pertanyaanmu untuk pemeriksaan berikutnya di klinik.",
+    "redflags": "Kerontokan itu sendiri lazim pada minggu-minggu ini. Hubungi klinik atau dokter jika kamu melihat:"
+  },
+  "quiet": {
+    "title": "Bulan-bulan tenang",
+    "tagline": "Di permukaan tampaknya hanya sedikit yang terjadi",
+    "happening": "Bulan ke-2 sampai ke-4 sering disebut fase “ugly duckling”. Folikel biasanya sedang beristirahat dan menyiapkan rambut baru, sehingga area ini mungkin tampak mirip seperti sebelum operasi.",
+    "normal": "Biasanya, pertumbuhan yang terlihat sangat sedikit pada bulan ke-2–4 itu lazim.",
+    "todo1": "Bandingkan per bulan, bukan per hari — rangkaian fotomu adalah gambaran yang paling adil.",
+    "todo2": "Benjolan kecil bisa muncul saat rambut baru menembus kulit; tanyakan kepada klinikmu jika kamu ragu.",
+    "todo3": "Lindungi kulit kepalamu dari sinar matahari yang kuat, sesuai saran klinikmu.",
+    "todo4": "Pakai sudut dan pencahayaan yang sama untuk setiap foto.",
+    "redflags": "Hubungi klinik atau dokter jika kamu melihat:"
+  },
+  "sprout": {
+    "title": "Pertumbuhan pertama",
+    "tagline": "Rambut baru yang halus biasanya mulai muncul",
+    "happening": "Sekitar bulan ke-3–4, rambut baru pertama umumnya muncul. Awalnya sering tipis, terang, dan tidak merata, dan sebagian mungkin keriting atau bergelombang.",
+    "normal": "Biasanya, rambut awal itu halus, jarang-jarang, dan tumbuh dengan kecepatan berbeda-beda.",
+    "todo1": "Ambil foto titik pemeriksaanmu dengan pencahayaan dan sudut yang sama.",
+    "todo2": "Beri waktu untuk rambut yang tipis atau tidak merata — ketebalan umumnya bertambah pada bulan-bulan berikutnya.",
+    "todo3": "Tanyakan kepada klinikmu kapan potong rambut, mewarnai, dan memakai produk penata rambut sudah boleh untukmu.",
+    "todo4": "Lihat kembali foto-foto awalmu, bukan hasil orang lain.",
+    "redflags": "Hubungi klinik atau dokter jika kamu melihat:"
+  },
+  "grow": {
+    "title": "Kepadatan bertambah",
+    "tagline": "Rambut biasanya menebal dan mengisi",
+    "happening": "Antara bulan ke-6 dan ke-9, rambut baru biasanya menjadi lebih tebal dan panjang, dan area ini umumnya tampak lebih penuh dari bulan ke bulan.",
+    "normal": "Biasanya, kepadatan terus bertambah sepanjang bulan ke-6–9, dan tampilannya bisa banyak berubah pada masa ini.",
+    "todo1": "Ambil foto titik pemeriksaan bulan ke-6 dan ke-9.",
+    "todo2": "Bandingkan dengan foto pertamamu sendiri, bukan dengan foto orang lain.",
+    "todo3": "Tanyakan kepada klinikmu tentang pemeriksaan yang biasanya mereka tawarkan sekitar saat ini.",
+    "todo4": "Tetap lindungi kulit kepalamu dari sinar matahari yang kuat.",
+    "redflags": "Hubungi klinik atau dokter jika kamu melihat:"
+  },
+  "mature": {
+    "title": "Mematangkan diri",
+    "tagline": "Tekstur dan kepadatan biasanya mulai stabil",
+    "happening": "Bulan ke-9 sampai ke-12 umumnya merupakan masa pematangan: rambut terus menebal dan teksturnya stabil. Klinik biasanya mengevaluasi hasil garis rambut sekitar bulan ke-12.",
+    "normal": "Biasanya, perubahan menjadi lebih lambat dan lebih halus pada bulan ke-9–12.",
+    "todo1": "Ambil foto titik pemeriksaan bulan ke-12 dari setiap sudut.",
+    "todo2": "Letakkan foto pertama dan foto terbarumu berdampingan sebelum kunjungan ke klinik.",
+    "todo3": "Tuliskan pertanyaan yang ingin kamu ajukan saat evaluasi.",
+    "todo4": "Ingat bahwa bagian ubun-ubun dan belahan rambut biasanya butuh waktu lebih lama.",
+    "redflags": "Hubungi klinik atau dokter jika kamu melihat:"
+  },
+  "final": {
+    "title": "Pematangan akhir",
+    "tagline": "Ubun-ubun dan belahan rambut bisa terus mematang",
+    "happening": "Setelah 12 bulan, sebagian besar perubahan biasanya kecil. Ubun-ubun, belahan rambut, dan hasil pada banyak perempuan umumnya terus mematang hingga 18 bulan.",
+    "normal": "Biasanya, perubahan yang lambat dan bertahap setelah bulan ke-12 itu lazim, terutama di bagian ubun-ubun.",
+    "todo1": "Ambil foto setiap satu sampai dua bulan.",
+    "todo2": "Buat jadwal evaluasi yang direkomendasikan klinikmu.",
+    "todo3": "Bawa rangkaian fotomu untuk dibagikan kepada klinikmu jika kamu mau.",
+    "todo4": "Pakai sudut dan pencahayaan yang sama agar perbandingannya adil.",
+    "redflags": "Hubungi klinik atau dokter jika kamu melihat:"
+  }
+}

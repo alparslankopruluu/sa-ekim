@@ -1,0 +1,250 @@
+{
+  "title": "Nouvel aperçu",
+  "subtitle": "Choisissez un style et une photo pour voir un rendu possible.",
+  "aiLabel": "Aperçu IA — pas une prédiction de votre résultat",
+  "aiLabelShort": "Aperçu IA",
+  "aiLabelDetail": "Il montre un rendu possible, pas ce qui arrivera.",
+  "common": {
+    "close": "Fermer",
+    "back": "Retour",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "delete": "Supprimer"
+  },
+  "goals": {
+    "label": "Zone",
+    "hairline": "Ligne frontale",
+    "crown": "Vertex",
+    "part": "Raie",
+    "brows": "Sourcils",
+    "beard": "Barbe"
+  },
+  "angles": {
+    "front": "photo de face",
+    "left": "photo du côté gauche",
+    "right": "photo du côté droit",
+    "top": "photo du dessus de la tête",
+    "crown": "photo du vertex"
+  },
+  "styles": {
+    "label": "Style",
+    "hairline_soft": {
+      "name": "Ligne frontale plus douce et naturelle",
+      "description": "Une ligne frontale légèrement adoucie qui garde une forme naturelle."
+    },
+    "hairline_temples": {
+      "name": "Affinement des tempes",
+      "description": "Un rendu plus équilibré autour des tempes."
+    },
+    "hairline_lower": {
+      "name": "Ligne plus basse et mieux définie",
+      "description": "Une ligne frontale légèrement plus basse et mieux définie."
+    },
+    "hairline_density": {
+      "name": "Plus de densité",
+      "description": "Un rendu plus dense dans votre ligne frontale actuelle."
+    },
+    "crown_light": {
+      "name": "Léger",
+      "description": "Une couverture légère au niveau du vertex."
+    },
+    "crown_medium": {
+      "name": "Moyen",
+      "description": "Une couverture moyenne au niveau du vertex."
+    },
+    "crown_full": {
+      "name": "Complet",
+      "description": "Une couverture complète au niveau du vertex."
+    },
+    "part_light": {
+      "name": "Léger",
+      "description": "Un peu de fournissage le long de la raie."
+    },
+    "part_medium": {
+      "name": "Moyen",
+      "description": "Un fournissage moyen le long de la raie."
+    },
+    "part_full": {
+      "name": "Complet",
+      "description": "Un rendu fourni le long de la raie."
+    },
+    "brows_natural": {
+      "name": "Naturels",
+      "description": "Des sourcils naturels qui gardent votre propre forme."
+    },
+    "brows_fuller": {
+      "name": "Plus fournis",
+      "description": "Votre propre forme, un peu plus fournie."
+    },
+    "brows_arched": {
+      "name": "Arqués",
+      "description": "Une ligne de sourcil légèrement arquée et soignée."
+    },
+    "beard_patch": {
+      "name": "Comblement des zones clairsemées",
+      "description": "Les zones clairsemées sont comblées."
+    },
+    "beard_full": {
+      "name": "Barbe fournie",
+      "description": "Une barbe plus fournie sur la mâchoire et les joues."
+    },
+    "beard_moustache": {
+      "name": "Moustache",
+      "description": "Un rendu plus fourni au-dessus de la lèvre."
+    }
+  },
+  "bestAngle": "Fonctionne mieux avec une {{angle}}",
+  "density": {
+    "label": "Densité",
+    "natural": "Naturelle",
+    "fuller": "Plus fournie",
+    "full": "Complète"
+  },
+  "quality": {
+    "label": "Qualité",
+    "standard": {
+      "title": "Standard",
+      "description": "Un premier aperçu rapide."
+    },
+    "high": {
+      "title": "Haute",
+      "description": "Plus de détails."
+    }
+  },
+  "price": {
+    "label": "Cet aperçu",
+    "free": "Gratuit",
+    "freeHigh": "Aperçu HD gratuit",
+    "credits_one": "{{count}} crédit",
+    "credits_other": "{{count}} crédits",
+    "freeNote": "Votre premier aperçu est gratuit et comporte un filigrane.",
+    "balance_one": "Vous avez {{count}} crédit.",
+    "balance_other": "Vous avez {{count}} crédits.",
+    "short_one": "Vous avez {{count}} crédit, et cet aperçu en nécessite {{cost}}.",
+    "short_other": "Vous avez {{count}} crédits, et cet aperçu en nécessite {{cost}}.",
+    "useFreeHigh": "Utiliser mon aperçu HD gratuit",
+    "useFreeHighHint_one": "Vous avez {{count}} aperçu HD gratuit.",
+    "useFreeHighHint_other": "Vous avez {{count}} aperçus HD gratuits."
+  },
+  "photo": {
+    "label": "Photo",
+    "empty": "Aucune photo pour l'instant",
+    "take": "Prendre une photo",
+    "library": "Choisir dans la photothèque",
+    "journey": "Utiliser la dernière photo du parcours",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Retirer la photo",
+    "selected": "Photo sélectionnée",
+    "sentNote": "Votre photo n'est envoyée que lorsque vous touchez Créer, après avoir approuvé le traitement par IA.",
+    "libraryFailed": "Nous n'avons pas pu ouvrir votre photothèque."
+  },
+  "cta": {
+    "create": "Créer l'aperçu",
+    "createFree": "Créer l'aperçu gratuit",
+    "getCredits": "Obtenir des crédits",
+    "continue": "Continuer",
+    "addPhoto": "Ajoutez une photo pour continuer",
+    "chooseStyle": "Choisissez un style pour continuer"
+  },
+  "helper": {
+    "needsConsent": "Avant l'envoi de votre photo, nous demandons votre accord une seule fois.",
+    "needsCredits": "Il vous faut plus de crédits pour cet aperçu.",
+    "walletError": "Nous n'avons pas pu charger vos crédits."
+  },
+  "rendering": {
+    "title": "Votre aperçu",
+    "status": {
+      "uploading": "Envoi de votre photo",
+      "creating": "Démarrage de votre aperçu",
+      "waiting": "Démarrage de votre aperçu",
+      "queued": "En attente d'une place libre",
+      "processing": "Création de votre aperçu",
+      "finalizing": "Finalisation"
+    },
+    "estimate": "Généralement moins d'une minute.",
+    "background": "Vous pouvez quitter cet écran. Nous continuons et vous prévenons quand il est prêt.",
+    "notifyMe": "Me prévenir quand il est prêt",
+    "notifyOn": "Nous vous préviendrons quand il sera prêt.",
+    "keepBrowsing": "Continuer à naviguer",
+    "cancel": "Annuler l'aperçu",
+    "cancelHint": "Vos crédits vous sont rendus si vous annulez.",
+    "cancelTooLate": "Il est déjà en cours de finalisation et ne peut plus être annulé.",
+    "failedTitle": "Cet aperçu n'a pas abouti",
+    "canceledTitle": "Aperçu annulé",
+    "offlineTitle": "Vous êtes hors ligne",
+    "errorTitle": "Nous n'avons pas pu démarrer l'aperçu",
+    "refunded_one": "{{count}} crédit vous a été rendu.",
+    "refunded_other": "{{count}} crédits vous ont été rendus.",
+    "nothingCharged": "Rien n'a été débité.",
+    "retrySafe": "Réessayer est sans risque : vous ne serez pas débité deux fois.",
+    "retry": "Réessayer",
+    "getCredits": "Obtenir des crédits",
+    "reviewConsent": "Lire et approuver",
+    "seePlans": "Voir les offres",
+    "choosePhoto": "Choisir une autre photo",
+    "backToStyles": "Retour aux styles",
+    "close": "Fermer",
+    "photoA11y": "Votre photo",
+    "ringA11y": "Progression de l'aperçu, {{percent}} pour cent"
+  },
+  "result": {
+    "title": "Votre aperçu",
+    "before": "Votre photo",
+    "after": "Aperçu IA",
+    "watermark": "Kök · Aperçu IA",
+    "wipeA11y": "Curseur avant et après. Balayez vers le haut ou vers le bas pour comparer votre photo avec l'aperçu IA.",
+    "demo": "Démo",
+    "save": "Enregistrer",
+    "share": "Partager",
+    "report": "Signaler",
+    "delete": "Supprimer",
+    "saved": "Enregistré dans vos photos",
+    "saveDenied": "Autorisez l'accès aux photos dans les Réglages pour enregistrer les aperçus.",
+    "unsupported": "L'enregistrement et le partage ne sont pas disponibles ici pour cet aperçu.",
+    "shareTitle": "Partager votre aperçu IA",
+    "tryAnother": "Essayer un autre style",
+    "upgradeTitle": "Envie de plus de détails ?",
+    "upgradeBody": "Un aperçu HD offre plus de détails et n'a pas de filigrane.",
+    "notFound": "Nous n'avons pas trouvé cet aperçu. Les aperçus sont supprimés après 30 jours.",
+    "toPreviews": "Retour aux aperçus",
+    "beforeGone": "Votre photo d'origine n'est conservée que 30 jours ; la comparaison n'est donc plus disponible.",
+    "loadFailed": "Nous n'avons pas pu charger cet aperçu.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Créer un aperçu HD ({{count}} crédit)",
+    "upgradeTry_other": "Créer un aperçu HD ({{count}} crédits)",
+    "upgradeTryFree": "Créer un aperçu HD gratuit",
+    "availableUntil": "Disponible jusqu'au {{date}}",
+    "saveNudge": "Les aperçus sont supprimés après 30 jours. Enregistrez-le dans vos photos pour en garder une copie.",
+    "saveNudgeSoon": "Cet aperçu sera bientôt supprimé. Enregistrez-le dans vos photos pour en garder une copie.",
+    "expiredTitle": "Cet aperçu a été supprimé après 30 jours",
+    "expiredBody": "Les aperçus et les photos dont ils proviennent sont supprimés après 30 jours. Vous pouvez en créer un nouveau à tout moment."
+  },
+  "delete": {
+    "title": "Supprimer cet aperçu ?",
+    "body": "L'image de l'aperçu est supprimée définitivement. Cette action est irréversible.",
+    "done": "Aperçu supprimé"
+  },
+  "tab": {
+    "title": "Aperçus",
+    "new": "Nouvel aperçu",
+    "honest": "Les aperçus sont des images créées par IA d'un rendu possible.",
+    "emptyTitle": "Aucun aperçu pour l'instant",
+    "emptyBody": "Un aperçu est une image créée par IA d'un rendu possible, pas de ce qui arrivera. Essayez un style sur votre propre photo et comparez.",
+    "emptyCta": "Créer un aperçu",
+    "loadFailed": "Nous n'avons pas pu charger vos aperçus.",
+    "menu": "Plus d'actions",
+    "status": {
+      "queued": "En attente",
+      "processing": "Création · {{percent}} %",
+      "finalizing": "Finalisation",
+      "failed": "Non abouti",
+      "canceled": "Annulé"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Réessayer",
+    "delete": "Supprimer",
+    "deleteA11y": "Supprimer l'aperçu",
+    "availableUntil": "Jusqu'au {{date}}",
+    "expired": "Supprimé après 30 jours"
+  }
+}

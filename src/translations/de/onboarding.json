@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Begleiter für Haartransplantation",
+    "title": "Sieh, was in deiner Erholungswoche typisch ist",
+    "subtitle": "Sieh dir vor der Operation eine mögliche Veränderung an und verfolge dann, was in jeder Woche deiner Erholung typisch ist.",
+    "cta": "Los geht’s",
+    "demoLabel": "Beispiel für den Vorher-Nachher-Schieber. Ziehen zum Vergleichen.",
+    "demoBefore": "Vorher",
+    "demoAfter": "Nachher",
+    "demoCaption": "Nur eine Illustration. Deine eigene Vorschau kommt später.",
+    "legalPrefix": "Wenn du fortfährst, akzeptierst du unsere",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung"
+  },
+  "goal": {
+    "title": "Woran arbeitest du?",
+    "subtitle": "Wir stimmen deine Zeitleiste und deine Fotowinkel darauf ab.",
+    "hairline": {
+      "title": "Haaransatz",
+      "subtitle": "Stirn und Geheimratsecken"
+    },
+    "crown": {
+      "title": "Wirbel",
+      "subtitle": "Hinterkopf und Oberkopf"
+    },
+    "part": {
+      "title": "Scheitel",
+      "subtitle": "Dichte entlang des Scheitels"
+    },
+    "brows": {
+      "title": "Augenbrauen",
+      "subtitle": "Augenbrauentransplantation"
+    },
+    "beard": {
+      "title": "Bart",
+      "subtitle": "Bart und Schnurrbart"
+    }
+  },
+  "stage": {
+    "title": "Wo stehst du im Prozess?",
+    "subtitle": "Das entscheidet, was wir dir zuerst zeigen.",
+    "researching": {
+      "title": "Noch in der Recherche",
+      "subtitle": "Ich informiere mich, noch nichts gebucht"
+    },
+    "planned": {
+      "title": "Operation gebucht",
+      "subtitle": "Ich habe einen Termin in Aussicht"
+    },
+    "done": {
+      "title": "Schon erledigt",
+      "subtitle": "Ich möchte meine Erholung verfolgen"
+    }
+  },
+  "date": {
+    "titlePlanned": "Wann ist deine Operation?",
+    "titleDone": "Wann war deine Operation?",
+    "subtitlePlanned": "Wir zählen bis Tag 0 herunter und bereiten deine ersten Wochen vor.",
+    "subtitleDone": "Wir zeigen dir, in welcher Phase du bist und was diese Woche typisch ist.",
+    "wheelDay": "Tag",
+    "wheelMonth": "Monat",
+    "wheelYear": "Jahr",
+    "feedbackPast": "Tag {{day}} · Woche {{week}}",
+    "feedbackToday": "Heute ist Tag 0",
+    "feedbackFuture_one": "In {{count}} Tag",
+    "feedbackFuture_other": "In {{count}} Tagen",
+    "errorMustBeFuture": "Wähle heute oder ein späteres Datum.",
+    "errorMustBePast": "Wähle heute oder ein früheres Datum.",
+    "errorTooFar": "Dieses Datum liegt zu weit entfernt, um es zu verfolgen. Wähle ein näheres.",
+    "errorInvalid": "Dieses Datum gibt es nicht.",
+    "skip": "Ich weiß es noch nicht",
+    "skipNote": "Du kannst es später in deinem Verlauf festlegen oder ändern."
+  },
+  "photo": {
+    "title": "Füge ein Foto für deine Vorschau hinzu",
+    "subtitleResearching": "Sieh dir eine KI-Vorschau an, wie eine Veränderung aussehen könnte, bevor du dich zu irgendetwas entscheidest.",
+    "subtitlePlanned": "Sieh dir eine KI-Vorschau an, wie deine Operation aussehen könnte.",
+    "subtitleDone": "Sieh dir eine KI-Vorschau an, wie dein Ergebnis mit der Reifung aussehen könnte.",
+    "guidanceTitle": "Für die beste Vorschau",
+    "angle": {
+      "front": "Blicke gerade in die Kamera, das Handy auf Augenhöhe.",
+      "top": "Halte das Handy über deinen Kopf und richte es nach unten auf deinen Oberkopf.",
+      "crown": "Fotografiere deinen Hinterkopf, am besten mit Hilfe einer anderen Person."
+    },
+    "area": {
+      "hairline": "Streiche deine Haare zurück, damit der Haaransatz frei ist.",
+      "crown": "Lass den Wirbel unbedeckt und deine Haare flach.",
+      "part": "Scheitle dein Haar so, wie du es normalerweise trägst.",
+      "brows": "Halte deine Augenbrauen frei von Haaren und Brille.",
+      "beard": "Lass den Bartbereich unbedeckt und gleichmäßig beleuchtet."
+    },
+    "light": "Nutze Tageslicht, keine Filter und keine Mütze.",
+    "take": "Foto aufnehmen",
+    "library": "Aus Mediathek wählen",
+    "change": "Anderes Foto wählen",
+    "selected": "Dein ausgewähltes Foto",
+    "placeholder": "Noch kein Foto ausgewählt",
+    "privacy": "Dein Foto wird nur gesendet, um die Vorschau zu erstellen, und erst, nachdem du auf dem nächsten Bildschirm zugestimmt hast.",
+    "skip": "Vorschau überspringen",
+    "skipNote": "Du kannst später im Tab „Vorschauen“ eine erstellen.",
+    "permissionDenied": "Wir konnten deine Fotos nicht öffnen. Prüfe die Berechtigung in den Einstellungen."
+  },
+  "notify": {
+    "title": "Verpasse keinen wichtigen Moment",
+    "subtitle": "Erholung braucht Zeit. Ein sanfter Hinweis im richtigen Moment übernimmt das Erinnern für dich.",
+    "bulletPhase": "Wir sagen dir Bescheid, wenn eine Phase wechselt",
+    "bulletPhoto": "Wir sagen dir Bescheid, wenn der Fototag kommt",
+    "bulletCare": "Tägliche Pflegeerinnerungen für die ersten zwei Wochen",
+    "allow": "Erinnerungen einschalten",
+    "skip": "Nicht jetzt",
+    "note": "Pflegeerinnerungen sind kostenlos. Phasen- und Fotoerinnerungen gibt es mit Pro. Du kannst das jederzeit in den Einstellungen ändern."
+  },
+  "crafting": {
+    "title": "Deine Vorschau wird erstellt",
+    "titleDone": "Deine Vorschau ist fertig",
+    "subtitle": "Das dauert normalerweise weniger als eine Minute.",
+    "ringLabel": "Fortschritt der Vorschau, {{percent}} Prozent",
+    "lineUpload": "Dein Foto wird sicher gesendet",
+    "lineReserve": "Deine kostenlose Vorschau wird reserviert",
+    "lineEdit": "Bearbeite {{area}}",
+    "lineFinish": "Letzte Feinarbeiten",
+    "stateDone": "erledigt",
+    "stateActive": "in Arbeit",
+    "statePending": "wartet",
+    "area": {
+      "hairline": "deinen Haaransatz",
+      "crown": "deinen Wirbel",
+      "part": "deinen Scheitel",
+      "brows": "deine Augenbrauen",
+      "beard": "deinen Bart"
+    },
+    "skip": "Vorerst überspringen",
+    "skipNote": "Deine Vorschau wird weiter erstellt und wartet im Tab „Vorschauen“ auf dich.",
+    "failedTitle": "Wir konnten deine Vorschau nicht fertigstellen",
+    "failedOffline": "Du scheinst offline zu sein. Es wurde nichts berechnet. Prüfe deine Verbindung und versuche es erneut.",
+    "failedGeneric": "Auf unserer Seite ist etwas schiefgelaufen. Es wurde nichts berechnet. Du kannst es erneut versuchen oder ohne fortfahren.",
+    "failedBlocked": "Dieses Foto kann nicht für eine Vorschau verwendet werden. Es wurde nichts berechnet. Du kannst fortfahren und später ein anderes Foto versuchen.",
+    "skipFailed": "Ohne Vorschau fortfahren"
+  },
+  "reveal": {
+    "title": "Hier ist eine Vorschau dessen, was möglich wäre",
+    "subtitle": "Ziehe am Griff, um zu vergleichen. Es ist eine von KI erstellte Illustration.",
+    "before": "Dein Foto",
+    "after": "KI-Vorschau",
+    "disclaimer": "KI-Vorschau — keine Vorhersage deines Ergebnisses",
+    "watermark": "Kostenlose Vorschauen tragen ein kleines Wasserzeichen.",
+    "wipeLabel": "Vorher-Nachher-Vergleich deines Fotos. Ziehen zum Vergleichen.",
+    "loading": "Deine Vorschau wird vorbereitet",
+    "loadFailed": "Wir konnten das Vorschaubild nicht laden. Es ist in deinem Tab „Vorschauen“ gespeichert.",
+    "cta": "Meinen Plan ansehen"
+  }
+}

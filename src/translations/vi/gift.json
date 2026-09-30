@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Một món quà chào mừng đang chờ bạn",
+    "body": "Một lượt quay miễn phí: credit, một bản xem trước HD miễn phí hoặc ưu đãi Pro.",
+    "cta": "Quay",
+    "wonTitle": "Quà của bạn: {{prize}}",
+    "wonBody": "Có hiệu lực đến {{date}}",
+    "use": "Dùng"
+  },
+  "title": "Quà chào mừng của bạn",
+  "subtitle": "Một lượt quay miễn phí. Mọi phần thưởng đều là thật.",
+  "spin": "Quay vòng quay",
+  "spinning": "Đang quay…",
+  "youWon": "Bạn nhận được",
+  "expires": "Có hiệu lực đến {{date}}",
+  "redeem": "Dùng quà của tôi",
+  "added": "Đã thêm vào tài khoản của bạn",
+  "done": "Xong",
+  "close": "Đóng",
+  "alreadyClaimed": "Bạn đã quay quà chào mừng rồi.",
+  "fairness": "Phần thưởng được rút thăm trên máy chủ của chúng tôi. Không cần mua gì.",
+  "notifyNote": "Nếu bật thông báo, chúng tôi sẽ nhắc bạn một lần trước khi quà hết hạn.",
+  "prizes": {
+    "credits10": {
+      "title": "10 credit",
+      "short": "+10",
+      "body": "Được cộng vào số dư của bạn để tạo bản xem trước."
+    },
+    "credits5": {
+      "title": "5 credit",
+      "short": "+5",
+      "body": "Được cộng vào số dư của bạn để tạo bản xem trước."
+    },
+    "freeHigh": {
+      "title": "Một bản xem trước HD miễn phí",
+      "short": "HD",
+      "body": "Bản xem trước HD tiếp theo của bạn không tốn credit."
+    },
+    "discount40": {
+      "title": "Giảm 40% Pro",
+      "short": "−40%",
+      "body": "Năm đầu tiên của gói năm với mức giá thấp hơn."
+    }
+  },
+  "expired": "Quà này đã hết hạn vào {{date}}.",
+  "redeemed": "Bạn đã dùng quà này rồi.",
+  "tokenNote": "Hãy chọn HD khi tạo bản xem trước tiếp theo."
+}

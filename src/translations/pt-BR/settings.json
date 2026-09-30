@@ -1,0 +1,117 @@
+{
+  "title": "Ajustes",
+  "sections": {
+    "subscription": "Assinatura e créditos",
+    "language": "Idioma",
+    "notifications": "Notificações",
+    "preferences": "Preferências",
+    "data": "Dados e privacidade",
+    "account": "Conta",
+    "legal": "Legal e suporte",
+    "about": "Sobre",
+    "developer": "Desenvolvedor"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Plano grátis",
+    "renews": "Renova em {{date}}",
+    "expires": "Termina em {{date}}",
+    "manage": "Gerenciar assinatura",
+    "restore": "Restaurar compras",
+    "upgrade": "Assinar o Pro",
+    "restoreDone": "Que bom ter você de volta. O Pro foi restaurado.",
+    "restoreNone": "Nenhuma compra anterior encontrada.",
+    "balance": "Saldo de créditos",
+    "buyCredits": "Obter créditos",
+    "freeHigh_one": "{{count}} prévia HD grátis",
+    "freeHigh_other": "{{count}} prévias HD grátis"
+  },
+  "language": {
+    "title": "Idioma",
+    "pickerTitle": "Escolha um idioma",
+    "rtlNote": "Reinicie o Kök para mudar a direção do layout.",
+    "closePicker": "Fechar lista de idiomas"
+  },
+  "notifications": {
+    "previews": "Prévia pronta",
+    "offers": "Presentes e ofertas",
+    "reminders": "Lembretes da jornada",
+    "remindersHint": "Lembretes de cuidados, de foto semanal e de fase. Os lembretes de fase fazem parte do Pro.",
+    "systemOff": "As notificações do Kök estão desativadas nos ajustes do sistema. Toque para abri-los."
+  },
+  "preferences": {
+    "haptics": "Vibração tátil"
+  },
+  "data": {
+    "wipe": "Excluir todos os meus dados",
+    "wipeHint": "Remove deste aparelho as fotos da jornada, o registro de queda e as prévias.",
+    "wipeTitle": "Excluir todos os seus dados?",
+    "wipeBody": "Isso remove permanentemente a data da operação, as fotos de progresso, o registro de queda e as prévias salvas. Sua assinatura e seus créditos continuam com a sua conta. Isso não pode ser desfeito.",
+    "wipeConfirm": "Excluir meus dados",
+    "wiping": "Excluindo…",
+    "wiped": "Seus dados foram excluídos deste aparelho."
+  },
+  "account": {
+    "guest": "Conta anônima",
+    "id": "ID da conta",
+    "delete": "Excluir conta",
+    "deleteHint": "Exclui sua conta, seus créditos e as fotos enviadas dos nossos servidores.",
+    "deleteTitle": "Excluir sua conta?",
+    "deleteBody": "Isso exclui permanentemente sua conta, seus créditos, suas prévias salvas e qualquer foto que você enviou, e apaga a sua jornada neste aparelho. Uma assinatura ativa deve ser cancelada separadamente, nos ajustes da sua conta da loja.",
+    "deleteConfirm": "Excluir conta",
+    "deleting": "Excluindo…",
+    "deleted": "Sua conta foi excluída."
+  },
+  "legal": {
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "ai": "Como funcionam as prévias de IA",
+    "support": "Ajuda e suporte"
+  },
+  "about": {
+    "version": "Versão {{version}} ({{build}})",
+    "contact": "Enviar e-mail ao suporte",
+    "rate": "Avaliar o Kök",
+    "replay": "Rever a introdução"
+  },
+  "confirm": {
+    "cancel": "Cancelar"
+  },
+  "developer": {
+    "open": "Ferramentas de desenvolvedor",
+    "backend": "Modo do backend",
+    "replayOnboarding": "Rever a introdução",
+    "offerings": "Ofertas da loja",
+    "purchase": "Resultado da compra",
+    "wheel": "Posição da roleta de presentes",
+    "failNext": "Falhar a próxima prévia",
+    "cohort": "Contagem do grupo da minha semana",
+    "addCredits": "Conceder 50 créditos",
+    "reset": "Redefinir todos os dados simulados",
+    "resetDone": "Os dados simulados foram redefinidos.",
+    "credits": "Créditos concedidos.",
+    "testCrash": "Enviar uma falha de teste",
+    "events": "Registro de eventos",
+    "empty": "Ainda sem eventos",
+    "mockOnly": "Estas opções só existem no backend simulado.",
+    "values": {
+      "ok": "ok",
+      "slow": "lento",
+      "fail": "falha",
+      "empty": "vazio",
+      "success": "sucesso",
+      "cancel": "cancelar",
+      "home": "início",
+      "onboarding_exit": "saída da introdução",
+      "off": "desligado"
+    },
+    "storefront": "Moeda da loja simulada",
+    "giftOffer": "Mostrar a oferta de presente sem prêmio",
+    "forcePro": "Direito de acesso Pro",
+    "grantFreeHigh": "Conceder uma prévia HD grátis",
+    "previewsEnabled": "Prévias ativadas (chave de emergência)",
+    "nextPrize": "Próximo prêmio da roleta",
+    "honest": "sorteio honesto",
+    "offerCacheNote": "As mudanças na loja valem na próxima tentativa da tela de assinatura ou após cinco minutos."
+  }
+}

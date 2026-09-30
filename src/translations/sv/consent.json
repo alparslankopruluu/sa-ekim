@@ -1,0 +1,25 @@
+{
+  "title": "Innan vi skapar din förhandsvisning",
+  "body": "Förhandsvisningen skapas av AI-bildmodeller, så bilden du valt måste lämna din telefon. Så här går det till.",
+  "sent": {
+    "title": "Vad vi skickar",
+    "body": "Bara den bild du valde för den här förhandsvisningen. Inget annat från ditt bildbibliotek eller din resa."
+  },
+  "who": {
+    "title": "Vem som behandlar den",
+    "body": "fal.ai utför bildredigeringen med hjälp av OpenAI-bildmodeller."
+  },
+  "retention": {
+    "title": "Hur länge den finns kvar",
+    "body": "Din originalbild och förhandsvisningen raderas båda från våra servrar inom 30 dagar. Du kan radera dem tidigare från fliken Förhandsvisningar."
+  },
+  "choice": {
+    "title": "Ditt val",
+    "body": "Du kan säga nej och ändå använda hela resan. Bilder du tar för din tidslinje stannar på din enhet."
+  },
+  "note": "AI-förhandsvisningar visar en möjlighet. De är inte en förutsägelse av ditt resultat.",
+  "policy": "Läs integritetspolicyn",
+  "accept": "Godkänn och fortsätt",
+  "decline": "Inte nu",
+  "error": "Vi kunde inte spara ditt val. Kontrollera anslutningen och försök igen."
+}

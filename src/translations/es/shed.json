@@ -1,0 +1,43 @@
+{
+  "title": "Registro de caída",
+  "close": "Cerrar",
+  "subtitle": "Anota más o menos cuántos cabellos ves en la almohada o en el desagüe. Un número aproximado basta.",
+  "typical": "La caída en las semanas 2–8 es habitual.",
+  "phaseNow": "Estás en la semana {{week}} después de tu operación.",
+  "today": "Hoy",
+  "input": {
+    "label": "Cabellos que notaste hoy",
+    "placeholder": "0",
+    "hint": "Un número entero de 0 a 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Añadir {{count}}",
+  "save": "Guardar",
+  "update": "Actualizar",
+  "saved": "Guardado",
+  "invalid": "Introduce un número entero de 0 a 999.",
+  "chart": {
+    "title": "Últimos 30 días",
+    "a11y": "Registro de caída de los últimos 30 días",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nada anotado",
+    "barToday": "Hoy, {{date}}: {{count}}",
+    "barTodayEmpty": "Hoy, {{date}}: nada anotado",
+    "window": "Ventana habitual de caída",
+    "todayLegend": "Hoy",
+    "missing": "Sin entrada"
+  },
+  "average": "Media de los últimos 7 días: {{count}}",
+  "averageEmpty": "No hay nada anotado en los últimos 7 días.",
+  "empty": {
+    "title": "Aún no hay nada anotado",
+    "body": "Anota un número cada vez que notes cabellos. Tras unas semanas, el gráfico muestra tu propio patrón."
+  },
+  "note": "Para tu propia referencia. Los recuentos varían de un día a otro, y los resultados individuales varían.",
+  "mini": {
+    "title": "Registro de caída",
+    "empty": "Anota el recuento de hoy",
+    "a11y": "Registro de caída, últimos {{days}} días. Abre el registro.",
+    "a11yEmpty": "Registro de caída. Aún no hay nada anotado. Abre el registro."
+  }
+}

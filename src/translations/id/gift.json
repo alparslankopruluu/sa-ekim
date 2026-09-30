@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Hadiah selamat datang menunggumu",
+    "body": "Satu putaran gratis: kredit, pratinjau HD gratis, atau diskon Pro.",
+    "cta": "Putar",
+    "wonTitle": "Hadiahmu: {{prize}}",
+    "wonBody": "Berlaku hingga {{date}}",
+    "use": "Pakai"
+  },
+  "title": "Hadiah selamat datangmu",
+  "subtitle": "Satu putaran gratis. Setiap hadiah itu nyata.",
+  "spin": "Putar roda",
+  "spinning": "Memutar…",
+  "youWon": "Kamu mendapat",
+  "expires": "Berlaku hingga {{date}}",
+  "redeem": "Pakai hadiahku",
+  "added": "Ditambahkan ke akunmu",
+  "done": "Selesai",
+  "close": "Tutup",
+  "alreadyClaimed": "Kamu sudah memutar hadiah selamat datangmu.",
+  "fairness": "Hadiah diundi di server kami. Tidak perlu membeli apa pun.",
+  "notifyNote": "Jika notifikasi aktif, kami akan mengingatkanmu sekali sebelum hadiah berakhir.",
+  "prizes": {
+    "credits10": {
+      "title": "10 kredit",
+      "short": "+10",
+      "body": "Ditambahkan ke saldomu untuk pratinjau."
+    },
+    "credits5": {
+      "title": "5 kredit",
+      "short": "+5",
+      "body": "Ditambahkan ke saldomu untuk pratinjau."
+    },
+    "freeHigh": {
+      "title": "Pratinjau HD gratis",
+      "short": "HD",
+      "body": "Pratinjau HD berikutnya tidak memakai kredit."
+    },
+    "discount40": {
+      "title": "Diskon 40% untuk Pro",
+      "short": "−40%",
+      "body": "Tahun pertama paket tahunan dengan harga lebih rendah."
+    }
+  },
+  "expired": "Hadiah ini berakhir pada {{date}}.",
+  "redeemed": "Kamu sudah memakai hadiah ini.",
+  "tokenNote": "Pilih HD saat membuat pratinjau berikutnya."
+}

@@ -1,0 +1,23 @@
+{
+  "a11y": {
+    "close": "Sluiten",
+    "selected": "Geselecteerd",
+    "notSelected": "Niet geselecteerd",
+    "step": "Stap {{current}} van {{total}}",
+    "balance_one": "{{count}} credit beschikbaar",
+    "balance_other": "{{count}} credits beschikbaar",
+    "wheel": "Cadeaurad met vier soorten prijzen"
+  },
+  "demoMode": "Demomodus: geen echte aankopen en geen echte servers",
+  "getCredits": "Credits kopen",
+  "update": {
+    "title": "Update vereist",
+    "body": "Deze versie van Kök wordt niet meer ondersteund. Werk de app bij om verder te gaan. Je traject blijft op je telefoon.",
+    "cta": "Bijwerken"
+  },
+  "notFound": {
+    "title": "Deze pagina is er niet",
+    "body": "De link is mogelijk oud. Er is niets verloren gegaan.",
+    "cta": "Ga naar Vandaag"
+  }
+}

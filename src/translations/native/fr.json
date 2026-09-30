@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök utilise l'appareil photo pour que vous puissiez photographier votre évolution sous le même angle à chaque fois.",
+  "NSPhotoLibraryUsageDescription": "Kök ouvre vos photos pour que vous puissiez en choisir une pour un aperçu ou votre parcours.",
+  "NSPhotoLibraryAddUsageDescription": "Kök enregistre vos aperçus et vos images de comparaison dans votre photothèque.",
+  "NSMotionUsageDescription": "Kök lit le capteur de mouvement pour vérifier que votre téléphone est tenu à la verticale afin d'obtenir des photos cohérentes."
+}

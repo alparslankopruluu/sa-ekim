@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Previews",
+    "offers": "Aanbiedingen",
+    "reminders": "Herinneringen"
+  },
+  "previewReady": {
+    "title": "Je preview is klaar",
+    "body": "Open Kök om hem te bekijken. Het is een AI-preview, geen voorspelling van je resultaat."
+  },
+  "giftExpiring": {
+    "title": "Je cadeau wacht nog op je",
+    "body": "Je korting op het jaarabonnement eindigt op {{date}}."
+  },
+  "care": {
+    "title": "Dag {{day}} van je nazorgplan",
+    "body": "Open de stappen van vandaag. De instructies van je kliniek gaan altijd voor."
+  },
+  "phase": {
+    "shed": {
+      "title": "Week {{week}} — haaruitval is rond nu gebruikelijk",
+      "body": "Veel mensen zien haaruitval in deze fase. Open je gids om te zien wat gebruikelijk is. Individuele resultaten verschillen."
+    },
+    "quiet": {
+      "title": "De rustige fase is rond nu gebruikelijk",
+      "body": "Veel mensen hebben in deze weken het gevoel dat er niets gebeurt. Open je gids om te zien wat gebruikelijk is."
+    },
+    "sprout": {
+      "title": "Eerste groei is rond nu gebruikelijk",
+      "body": "Fijne nieuwe haartjes beginnen in deze fase vaak te verschijnen. Het tijdstip verschilt per persoon."
+    },
+    "grow": {
+      "title": "De groeifase",
+      "body": "De dichtheid neemt gewoonlijk geleidelijk toe. Blijf foto's vanuit dezelfde hoek maken om de verandering te zien. Individuele resultaten verschillen."
+    },
+    "mature": {
+      "title": "De rijpingsfase",
+      "body": "Resultaten blijven de komende maanden tot rust komen. Individuele resultaten verschillen."
+    },
+    "final": {
+      "title": "Tijd voor een volledige terugblik",
+      "body": "Rond de één-jaarsgrens vergelijken veel mensen hun hele fotoreeks. Open je gids."
+    }
+  },
+  "photo": {
+    "title": "Tijd voor een voortgangsfoto",
+    "body": "Dezelfde hoek, hetzelfde licht, een paar seconden. Je reeks maakt verandering zichtbaar."
+  },
+  "shed": {
+    "title": "Snelle uitvalcheck",
+    "body": "Log hoeveel je vandaag hebt gemerkt. Haaruitval is in deze fase gebruikelijk."
+  },
+  "session": {
+    "title": "PRP-sessie morgen",
+    "body": "Je sessie is op {{date}}. Maak vooraf een foto vanuit dezelfde hoek, zodat je later kunt vergelijken."
+  }
+}

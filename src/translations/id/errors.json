@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Silakan mulai ulang aplikasi lalu coba lagi.",
+  "consent_required": "Silakan tinjau dan setujui pemberitahuan pemrosesan AI terlebih dahulu.",
+  "invalid_input": "Ada yang tampak tidak sesuai. Silakan periksa lalu coba lagi.",
+  "content_blocked": "Foto atau teks itu tidak dapat dipakai. Silakan coba yang lain.",
+  "insufficient_credits": "Kreditmu tidak cukup untuk itu.",
+  "pro_required": "Itu fitur Pro.",
+  "rate_limited": "Kamu terlalu cepat. Tunggu sebentar, lalu coba lagi.",
+  "already_claimed": "Kamu sudah mengklaimnya.",
+  "not_found": "Kami tidak dapat menemukannya.",
+  "previews_disabled": "Pratinjau dijeda untuk sementara. Perjalananmu tidak terpengaruh. Silakan coba lagi nanti.",
+  "provider_failed": "Itu tidak berhasil diproses. Silakan coba lagi sebentar lagi.",
+  "timeout": "Itu memakan waktu terlalu lama. Silakan coba lagi.",
+  "offline": "Sepertinya kamu sedang offline. Periksa koneksimu dan coba lagi.",
+  "unknown": "Terjadi kesalahan. Silakan coba lagi."
+}

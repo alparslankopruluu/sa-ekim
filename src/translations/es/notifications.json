@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Vistas previas",
+    "offers": "Ofertas",
+    "reminders": "Recordatorios"
+  },
+  "previewReady": {
+    "title": "Tu vista previa está lista",
+    "body": "Abre Kök para verla. Es una vista previa de IA, no una predicción de tu resultado."
+  },
+  "giftExpiring": {
+    "title": "Tu regalo sigue esperándote",
+    "body": "El descuento de tu plan anual termina el {{date}}."
+  },
+  "care": {
+    "title": "Día {{day}} de tu plan de cuidados",
+    "body": "Abre los pasos de hoy. Las indicaciones de tu clínica son siempre lo primero."
+  },
+  "phase": {
+    "shed": {
+      "title": "Semana {{week}} — la caída es habitual por estas fechas",
+      "body": "Muchas personas notan caída en esta fase. Abre tu guía para ver qué es habitual. Los resultados individuales varían."
+    },
+    "quiet": {
+      "title": "La fase tranquila es habitual por estas fechas",
+      "body": "Muchas personas sienten que no pasa nada en estas semanas. Abre tu guía para ver qué es habitual."
+    },
+    "sprout": {
+      "title": "El primer crecimiento es habitual por estas fechas",
+      "body": "En esta fase suelen empezar a aparecer cabellos finos nuevos. Los tiempos varían de una persona a otra."
+    },
+    "grow": {
+      "title": "La fase de crecimiento",
+      "body": "La densidad suele aumentar de forma gradual. Sigue tomando fotos desde el mismo ángulo para ver el cambio. Los resultados individuales varían."
+    },
+    "mature": {
+      "title": "La fase de maduración",
+      "body": "Los resultados siguen asentándose en los próximos meses. Los resultados individuales varían."
+    },
+    "final": {
+      "title": "Hora de una revisión completa",
+      "body": "Hacia el año, muchas personas comparan toda su serie de fotos. Abre tu guía."
+    }
+  },
+  "photo": {
+    "title": "Hora de una foto de progreso",
+    "body": "Mismo ángulo, misma luz, unos segundos. Tu serie es lo que hace visible el cambio."
+  },
+  "shed": {
+    "title": "Revisión rápida de caída",
+    "body": "Anota cuánto notaste hoy. La caída es habitual en esta fase."
+  },
+  "session": {
+    "title": "Sesión de PRP mañana",
+    "body": "Tu sesión es el {{date}}. Toma antes una foto desde el mismo ángulo para poder comparar después."
+  }
+}

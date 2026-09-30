@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök dùng camera để bạn chụp ảnh tiến trình từ cùng một góc mỗi lần.",
+  "NSPhotoLibraryUsageDescription": "Kök mở thư viện ảnh để bạn chọn một ảnh cho bản xem trước hoặc hành trình.",
+  "NSPhotoLibraryAddUsageDescription": "Kök lưu bản xem trước và ảnh so sánh của bạn vào thư viện ảnh.",
+  "NSMotionUsageDescription": "Kök đọc cảm biến chuyển động để kiểm tra điện thoại được giữ thẳng, giúp ảnh nhất quán."
+}

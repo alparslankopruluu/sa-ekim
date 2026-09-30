@@ -1,0 +1,84 @@
+{
+  "close": "Camera sluiten",
+  "title": "Voortgangsfoto",
+  "angle": {
+    "front": "Voorkant",
+    "left": "Linkerkant",
+    "right": "Rechterkant",
+    "top": "Bovenkant",
+    "crown": "Kruin"
+  },
+  "instruction": {
+    "front": "Haar droog en gestyled zoals altijd. Zet je gezicht in het ovaal met je haarlijn bijna bovenaan.",
+    "left": "Draai je om je linkerkant te laten zien. Houd de telefoon rechtop op ooghoogte.",
+    "right": "Draai je om je rechterkant te laten zien. Houd de telefoon rechtop op ooghoogte.",
+    "top": "Houd de telefoon horizontaal boven je hoofd, scherm omhoog, zodat de camera aan de achterkant naar de bovenkant van je hoofd kijkt.",
+    "crown": "Houd de telefoon horizontaal boven de achterkant van je hoofd, scherm omhoog, zodat de camera aan de achterkant naar je kruin kijkt."
+  },
+  "cameraNote": {
+    "front": "Gebruikt de voorcamera, zodat je het beeld kunt zien.",
+    "back": "Gebruikt de camera aan de achterkant. Houd de telefoon horizontaal of vraag iemand om de foto te maken. Je voelt een tik als de telefoon waterpas is."
+  },
+  "guide": {
+    "ghostHide": "Vorige foto verbergen",
+    "ghostShow": "Vorige foto tonen",
+    "ghostOverlay": "Overlay van je vorige foto ({{angle}}), {{label}}",
+    "frame": "Camerabeeld met een kadreerhulp"
+  },
+  "level": {
+    "ok": "Waterpas, klaar",
+    "upright": "Houd de telefoon rechtop",
+    "flat": "Houd de telefoon horizontaal, scherm omhoog",
+    "unavailable": "Dit apparaat heeft geen bewegingssensor, dus de waterpascontrole staat uit. Zorg zelf dat de telefoon rechtop staat.",
+    "a11yOk": "De telefoon is waterpas. Je kunt de foto maken.",
+    "a11yBlockedUpright": "De telefoon staat nog niet rechtop.",
+    "a11yBlockedFlat": "De telefoon ligt nog niet horizontaal."
+  },
+  "shutter": {
+    "label": "Foto maken",
+    "blockedUpright": "Houd je telefoon rechtop om de foto te maken",
+    "blockedFlat": "Houd je telefoon horizontaal om de foto te maken"
+  },
+  "library": "Kies uit bibliotheek",
+  "permission": {
+    "checking": "Cameratoegang controleren…",
+    "title": "Cameratoegang staat uit",
+    "body": "Kök gebruikt de camera alleen voor je voortgangsfoto's. Ze blijven op dit apparaat. Je kunt ook een foto uit je bibliotheek kiezen.",
+    "allow": "Camera toestaan",
+    "settings": "Instellingen openen"
+  },
+  "unavailable": {
+    "title": "De camera is hier niet beschikbaar",
+    "body": "Je kunt in plaats daarvan een foto uit je bibliotheek kiezen."
+  },
+  "review": {
+    "retake": "Opnieuw",
+    "use": "Foto gebruiken",
+    "saving": "Opslaan…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Deze foto wordt alleen voor je preview gebruikt. Hij wordt niet aan je traject toegevoegd.",
+    "a11y": "Controle van de foto die je net hebt gemaakt"
+  },
+  "error": {
+    "save": "De foto kon niet worden opgeslagen. Probeer het opnieuw.",
+    "capture": "De foto kon niet worden gemaakt. Probeer het opnieuw.",
+    "pick": "Je bibliotheek kon niet worden geopend. Probeer het opnieuw."
+  },
+  "saved": "Foto opgeslagen",
+  "checking": "Je abonnement controleren…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto ({{angle}}), {{label}}",
+    "taken": "Gemaakt op {{date}}",
+    "compare": "Vergelijk met…",
+    "delete": "Foto verwijderen",
+    "confirmTitle": "Deze foto verwijderen?",
+    "confirmBody": "Hij wordt van dit apparaat verwijderd en kan niet worden hersteld.",
+    "confirm": "Verwijderen",
+    "cancel": "Bewaren",
+    "missingTitle": "Deze foto is er niet meer",
+    "missingBody": "Mogelijk is hij verwijderd.",
+    "close": "Sluiten",
+    "loadError": "Deze foto kan niet worden getoond."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "updated": "Terakhir diperbarui: {{date}}",
+  "openWeb": "Buka versi web",
+  "emailSupport": "Email dukungan",
+  "publisher": "Kök diterbitkan oleh Techtactoe App Studio.",
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "sections": [
+      {
+        "heading": "Versi singkat",
+        "body": "Foto perjalananmu tetap ada di ponselmu. Kök hanya mengunggah foto ketika kamu meminta pratinjau AI, dan foto itu beserta gambar pratinjau yang dihasilkan sama-sama dihapus dari server kami dalam waktu 30 hari. Kök tidak menampilkan iklan dan tidak menjual datamu. Kök bukan saran medis."
+      },
+      {
+        "heading": "Yang tetap ada di perangkatmu",
+        "body": "Tanggal operasi, foto progres, catatan kerontokan, dan nama klinikmu hanya disimpan di perangkatmu. Kök tidak pernah mengunggah foto perjalanan. Data tersebut ikut tercakup dalam pencadangan bawaan ponselmu (iCloud atau Android Auto Backup) jika kamu mengaktifkannya."
+      },
+      {
+        "heading": "Yang kami kumpulkan",
+        "body": "ID akun anonim (Firebase Authentication), sehingga kamu tidak perlu memberikan nama atau email. Saldo kredit dan status pembelianmu. Pilihan bahasa dan notifikasimu. Peristiwa penggunaan, laporan crash, dan data performa (Firebase Analytics, Crashlytics, dan Performance Monitoring). Token push, hanya jika kamu mengizinkan notifikasi. Jika kamu membuat pratinjau: satu foto yang kamu pilih, gaya dan kualitas yang kamu pilih, serta pratinjau yang dihasilkan. Jika kamu bergabung dengan grup opsional minggu yang sama: tanggal operasi, tujuan, dan jenis perjalananmu, dan tidak ada yang lain. Kami tidak mengumpulkan namamu, kontakmu, atau lokasi presisimu. Kök tidak melacakmu di aplikasi atau situs web lain dan tidak menggunakan pengenal iklanmu."
+      },
+      {
+        "heading": "Pratinjau AI",
+        "body": "Saat kamu membuat pratinjau, foto yang kamu pilih diunggah ke server kami dan diproses oleh fal.ai, yang menjalankan model gambar OpenAI atas nama kami. Kök meminta persetujuanmu sebelum pengunggahan pertama, dan pemberitahuan itu menyebutkan nama penyedia-penyedia ini. Foto tersebut hanya digunakan untuk menghasilkan pratinjau itu. Kami tidak menggunakan fotomu untuk melatih model AI. Foto yang diunggah dan gambar pratinjau dihapus dari server kami dalam waktu 30 hari, jadi simpan pratinjau ke galeri fotomu jika kamu ingin menyimpannya. Setiap pratinjau adalah ilustrasi AI, bukan prediksi hasilmu."
+      },
+      {
+        "heading": "Penyedia layanan",
+        "body": "Kami hanya membagikan data kepada perusahaan yang memprosesnya untuk kami: Google Firebase (akun, basis data, penyimpanan file, fungsi, analitik, pelaporan crash, performa, konfigurasi jarak jauh, pemeriksaan integritas aplikasi, dan notifikasi push); fal.ai dan model gambar OpenAI yang dijalankannya (pratinjau AI); RevenueCat (langganan dan pembelian); Apple dan Google (pembayaran dan distribusi aplikasi). Kök tidak berisi iklan dan tidak membagikan data kepada pengiklan."
+      },
+      {
+        "heading": "Berapa lama kami menyimpan data",
+        "body": "Data perjalanan: di perangkatmu sampai kamu menghapusnya. Foto pratinjau yang diunggah dan gambar pratinjau: paling lama 30 hari di server kami. Data penggunaan dan crash: hingga 14 bulan. Catatan pembelian: selama diwajibkan oleh hukum pajak dan akuntansi. Laporan yang kamu kirim tentang sebuah pratinjau: selama diperlukan untuk meninjau dan menindaklanjutinya."
+      },
+      {
+        "heading": "Pilihanmu dan penghapusan",
+        "body": "Di Pengaturan, Data dan privasi, Hapus semua data saya akan menghapus foto perjalanan, catatan kerontokan, dan pratinjaumu dari perangkat ini. Di Pengaturan, Akun, Hapus akun akan segera menghapus akun, kredit, pratinjau, dan foto apa pun yang diunggah dari server kami, serta membersihkan perjalananmu di perangkat. Kamu juga bisa mematikan notifikasi di sana. Tidak ada yang diunggah kecuali kamu membuat pratinjau. Menghapus akunmu tidak membatalkan langganan: batalkan langganan di pengaturan akun App Store atau Google Play-mu. Bergantung pada tempat tinggalmu (misalnya berdasarkan GDPR, KVKK Turki, atau CCPA California), kamu mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau mengekspor datamu dan untuk menarik persetujuan. Untuk mengajukan permintaan, kirim email ke techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Anak-anak",
+        "body": "Kök ditujukan untuk orang dewasa. Kami tidak dengan sengaja mengumpulkan informasi dari siapa pun yang berusia di bawah 18 tahun."
+      },
+      {
+        "heading": "Bukan saran medis",
+        "body": "Kök adalah alat edukasi dan pencatatan. Kök tidak mendiagnosis, mengobati, atau memprediksi apa pun, dan lini masanya hanya menunjukkan rentang yang lazim. Untuk kekhawatiran apa pun, hubungi klinik atau dokter."
+      },
+      {
+        "heading": "Perubahan dan kontak",
+        "body": "Jika kebijakan ini berubah, tanggal di atas ikut berubah. Pertanyaan atau permintaan: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Ketentuan Penggunaan",
+    "sections": [
+      {
+        "heading": "Menggunakan Kök",
+        "body": "Kök membantumu mengikuti perjalanan transplantasi rambut, PRP, atau pemulihan rambut serupa dengan fotomu sendiri dan lini masa yang lazim, serta memungkinkanmu membuat pratinjau AI. Kamu harus sudah dewasa dan cakap untuk menyetujui perjanjian ini. Dengan menggunakan Kök, kamu menerima ketentuan ini."
+      },
+      {
+        "heading": "Bukan saran medis",
+        "body": "Kök bukan alat kesehatan dan tidak memberikan saran medis, diagnosis, atau pengobatan. Lini masa dan panduan menggambarkan apa yang lazim dan bukan janji tentang hasilmu. Jika kamu melihat demam, kemerahan yang menyebar, nanah, nyeri hebat, atau perdarahan hebat, hubungi klinik atau dokter."
+      },
+      {
+        "heading": "Pratinjau AI",
+        "body": "Pratinjau adalah ilustrasi AI yang dibuat dari fotomu. Pratinjau bukan prediksi, janji, atau rencana untuk hasilmu, dan tidak menunjukkan jumlah graft. Pratinjau gratis saat orientasi diberi watermark. Pratinjau disimpan selama 30 hari, jadi simpan satu ke galeri fotomu untuk menyimpannya. Gunakan pratinjau dengan bertanggung jawab dan jangan menampilkannya sebagai foto asli."
+      },
+      {
+        "heading": "Foto dan konten",
+        "body": "Gunakan hanya foto dirimu sendiri, atau foto orang yang jelas-jelas menyetujuinya. Jangan mengunggah foto anak di bawah umur, tokoh publik, atau apa pun yang bersifat seksual, penuh kebencian, melecehkan, menipu, atau melanggar hukum. Kami dapat memblokir konten dan menangguhkan akses yang melanggar aturan ini. Kamu dapat melaporkan pratinjau mana pun dari layarnya."
+      },
+      {
+        "heading": "Langganan dan kredit",
+        "body": "Kök Pro ditawarkan sebagai langganan mingguan, bulanan, atau tahunan dengan harga yang ditampilkan toko aplikasimu. Tidak ada uji coba gratis. Langganan diperpanjang otomatis sampai kamu membatalkannya di pengaturan akun App Store atau Google Play-mu, dan pengembalian dana mengikuti aturan Apple atau Google. Paket kredit adalah pembelian sekali bayar. Pratinjau standar memakai 1 kredit dan pratinjau HD memakai 3. Jika sebuah pratinjau gagal, kreditnya dikembalikan secara otomatis. Kredit tidak memiliki nilai tunai dan tidak dapat dipindahtangankan. Kamu dapat memulihkan pembelian dari paywall atau Pengaturan."
+      },
+      {
+        "heading": "Kontenmu",
+        "body": "Kamu tetap memiliki foto dan pratinjaumu. Kamu memberi kami izin terbatas untuk memproses apa yang kamu unggah hanya untuk menyediakan layanan yang kamu minta."
+      },
+      {
+        "heading": "Ketersediaan dan tanggung jawab",
+        "body": "Kök disediakan apa adanya dan sebagaimana tersedia. Sejauh diizinkan hukum, kami tidak bertanggung jawab atas kerugian tidak langsung atau kerugian lanjutan, dan tidak ada yang di sini membatasi hakmu berdasarkan hukum perlindungan konsumen yang tidak dapat dilepaskan."
+      },
+      {
+        "heading": "Mengakhiri penggunaanmu",
+        "body": "Kamu dapat berhenti menggunakan Kök dan menghapus akunmu kapan saja di Pengaturan. Kami dapat mengubah ketentuan ini dan akan memperbarui tanggalnya ketika kami melakukannya."
+      },
+      {
+        "heading": "Kontak",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Cara kerja pratinjau AI",
+    "sections": [
+      {
+        "heading": "Apa itu pratinjau",
+        "body": "Pratinjau adalah ilustrasi AI tentang bagaimana sebuah gaya yang dipilih mungkin tampak pada fotomu. Pratinjau bukan prediksi hasilmu, dan label yang menyatakan hal itu tetap terlihat pada setiap pratinjau."
+      },
+      {
+        "heading": "Yang dikirim",
+        "body": "Hanya satu foto yang kamu pilih untuk pratinjau itu, beserta gaya dan kualitas yang kamu pilih. Foto perjalananmu tidak pernah diunggah. Sebelum pengunggahan pertama, Kök meminta persetujuanmu."
+      },
+      {
+        "heading": "Siapa yang memprosesnya",
+        "body": "fal.ai menjalankan model gambar OpenAI atas nama kami. Kami menggunakannya hanya untuk membuat pratinjaumu dan tidak menggunakan fotomu untuk melatih model AI. Foto yang diunggah dan gambar pratinjau dihapus dari server kami dalam waktu 30 hari."
+      },
+      {
+        "heading": "Batasan",
+        "body": "Hasilnya bisa tidak sempurna atau tidak realistis. Pratinjau gratis saat orientasi diberi watermark. Kök tidak pernah menampilkan jumlah graft, tahapan, atau janji hasil."
+      },
+      {
+        "heading": "Melaporkan dan menghapus",
+        "body": "Laporkan pratinjau dari layarnya dan kami akan meninjaunya dalam 48 jam. Kamu dapat menghapus pratinjau kapan saja, dan menghapus akunmu akan menghapus semua yang kami simpan."
+      }
+    ]
+  },
+  "support": {
+    "title": "Bantuan dan dukungan",
+    "sections": [
+      {
+        "heading": "Hubungi kami",
+        "body": "Kirim email ke techtactoeappstudio@gmail.com dan sertakan versi aplikasimu (Pengaturan, Tentang). Kami biasanya membalas dalam dua hari kerja."
+      },
+      {
+        "heading": "Pratinjau gagal. Apakah kreditku hilang?",
+        "body": "Tidak. Kredit untuk pratinjau yang gagal atau dibatalkan dikembalikan secara otomatis."
+      },
+      {
+        "heading": "Bagaimana cara membatalkan langgananku?",
+        "body": "Di iPhone: Pengaturan, namamu, Langganan, Kök. Di Android: Google Play, Pembayaran dan langganan, Langganan. Kamu juga bisa membuka Pengaturan, Kelola langganan di Kök."
+      },
+      {
+        "heading": "Bagaimana cara memulihkan pembelian?",
+        "body": "Buka paywall atau Pengaturan dan ketuk Pulihkan pembelian."
+      },
+      {
+        "heading": "Bagaimana cara menghapus dataku?",
+        "body": "Pengaturan, Data dan privasi, Hapus semua data saya akan membersihkan perjalanan dan pratinjaumu di perangkat ini. Pengaturan, Akun, Hapus akun akan menghapus akunmu dan semua yang kami simpan. Kamu juga bisa mengirim email kepada kami untuk meminta penghapusan."
+      },
+      {
+        "heading": "Apakah ini saran medis?",
+        "body": "Bukan. Kök adalah alat edukasi dan pencatatan. Untuk hal yang mengkhawatirkan, hubungi klinik atau dokter."
+      }
+    ]
+  }
+}

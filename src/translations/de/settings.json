@@ -1,0 +1,117 @@
+{
+  "title": "Einstellungen",
+  "sections": {
+    "subscription": "Abo und Credits",
+    "language": "Sprache",
+    "notifications": "Mitteilungen",
+    "preferences": "Präferenzen",
+    "data": "Daten und Datenschutz",
+    "account": "Konto",
+    "legal": "Rechtliches und Support",
+    "about": "Info",
+    "developer": "Entwickler"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Kostenloses Abo",
+    "renews": "Verlängert sich am {{date}}",
+    "expires": "Endet am {{date}}",
+    "manage": "Abo verwalten",
+    "restore": "Käufe wiederherstellen",
+    "upgrade": "Auf Pro upgraden",
+    "restoreDone": "Willkommen zurück. Pro ist wiederhergestellt.",
+    "restoreNone": "Keine früheren Käufe gefunden.",
+    "balance": "Credit-Guthaben",
+    "buyCredits": "Credits holen",
+    "freeHigh_one": "{{count}} kostenlose HD-Vorschau",
+    "freeHigh_other": "{{count}} kostenlose HD-Vorschauen"
+  },
+  "language": {
+    "title": "Sprache",
+    "pickerTitle": "Sprache wählen",
+    "rtlNote": "Starte Kök neu, um die Schreibrichtung des Layouts zu wechseln.",
+    "closePicker": "Sprachliste schließen"
+  },
+  "notifications": {
+    "previews": "Vorschau fertig",
+    "offers": "Geschenke und Angebote",
+    "reminders": "Verlaufserinnerungen",
+    "remindersHint": "Pflege-, Wochenfoto- und Phasenerinnerungen. Phasenerinnerungen gehören zu Pro.",
+    "systemOff": "Mitteilungen sind für Kök in den Systemeinstellungen ausgeschaltet. Tippe, um sie zu öffnen."
+  },
+  "preferences": {
+    "haptics": "Haptik"
+  },
+  "data": {
+    "wipe": "Alle meine Daten löschen",
+    "wipeHint": "Entfernt deine Verlaufsfotos, dein Ausfallprotokoll und deine Vorschauen von diesem Gerät.",
+    "wipeTitle": "Alle deine Daten löschen?",
+    "wipeBody": "Dadurch werden dein OP-Datum, deine Fortschrittsfotos, dein Ausfallprotokoll und deine gespeicherten Vorschauen endgültig entfernt. Dein Abo und deine Credits bleiben bei deinem Konto. Das kann nicht rückgängig gemacht werden.",
+    "wipeConfirm": "Meine Daten löschen",
+    "wiping": "Wird gelöscht…",
+    "wiped": "Deine Daten wurden von diesem Gerät gelöscht."
+  },
+  "account": {
+    "guest": "Anonymes Konto",
+    "id": "Konto-ID",
+    "delete": "Konto löschen",
+    "deleteHint": "Löscht dein Konto, deine Credits und hochgeladene Fotos von unseren Servern.",
+    "deleteTitle": "Dein Konto löschen?",
+    "deleteBody": "Dadurch werden dein Konto, deine Credits, gespeicherte Vorschauen und alle von dir hochgeladenen Fotos endgültig gelöscht und dein Verlauf auf diesem Gerät entfernt. Ein aktives Abo muss separat in den Kontoeinstellungen deines Stores gekündigt werden.",
+    "deleteConfirm": "Konto löschen",
+    "deleting": "Wird gelöscht…",
+    "deleted": "Dein Konto wurde gelöscht."
+  },
+  "legal": {
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "ai": "So funktionieren KI-Vorschauen",
+    "support": "Hilfe und Support"
+  },
+  "about": {
+    "version": "Version {{version}} ({{build}})",
+    "contact": "Support per E-Mail",
+    "rate": "Kök bewerten",
+    "replay": "Onboarding wiederholen"
+  },
+  "confirm": {
+    "cancel": "Abbrechen"
+  },
+  "developer": {
+    "open": "Entwicklerwerkzeuge",
+    "backend": "Backend-Modus",
+    "replayOnboarding": "Onboarding wiederholen",
+    "offerings": "Store-Angebote",
+    "purchase": "Kaufergebnis",
+    "wheel": "Platzierung des Glücksrads",
+    "failNext": "Nächste Vorschau fehlschlagen lassen",
+    "cohort": "Gruppenzahl für meine Woche",
+    "addCredits": "50 Credits gutschreiben",
+    "reset": "Alle Mock-Daten zurücksetzen",
+    "resetDone": "Mock-Daten wurden zurückgesetzt.",
+    "credits": "Credits gutgeschrieben.",
+    "testCrash": "Test-Absturz senden",
+    "events": "Ereignisprotokoll",
+    "empty": "Noch keine Ereignisse",
+    "mockOnly": "Diese Schalter gibt es nur im Mock-Backend.",
+    "values": {
+      "ok": "ok",
+      "slow": "langsam",
+      "fail": "Fehler",
+      "empty": "leer",
+      "success": "Erfolg",
+      "cancel": "Abbruch",
+      "home": "Start",
+      "onboarding_exit": "Onboarding-Ausstieg",
+      "off": "aus"
+    },
+    "storefront": "Mock-Store-Währung",
+    "giftOffer": "Geschenkangebot ohne Preis anzeigen",
+    "forcePro": "Pro-Berechtigung",
+    "grantFreeHigh": "Kostenlose HD-Vorschau gutschreiben",
+    "previewsEnabled": "Vorschauen aktiviert (Notausschalter)",
+    "nextPrize": "Nächster Radpreis",
+    "honest": "faire Ziehung",
+    "offerCacheNote": "Store-Änderungen gelten beim nächsten Paywall-Versuch oder nach fünf Minuten."
+  }
+}

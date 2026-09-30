@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Theo dõi hành trình 12–18 tháng của bạn, từng tuần một",
+    "hairline": "Theo dõi hành trình đường chân tóc của bạn, từng tuần một",
+    "crown": "Theo dõi hành trình vùng xoáy tóc của bạn, từng tuần một",
+    "part": "Theo dõi hành trình đường rẽ ngôi của bạn, từng tuần một",
+    "brows": "Theo dõi hành trình lông mày của bạn, từng tuần một",
+    "beard": "Theo dõi hành trình bộ râu của bạn, từng tuần một"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Bản xem trước đầu tiên của bạn đã xong. Pro bổ sung lộ trình đầy đủ: so sánh, dải giai đoạn và mọi hướng dẫn hằng tuần."
+    },
+    "settings": {
+      "subtitle": "Xem điều thường gặp ở tuần của bạn, bên cạnh ảnh của chính bạn."
+    },
+    "home_banner": {
+      "subtitle": "Xem điều thường gặp ở tuần của bạn, bên cạnh ảnh của chính bạn."
+    },
+    "notification": {
+      "subtitle": "Xem điều thường gặp ở tuần của bạn, bên cạnh ảnh của chính bạn."
+    },
+    "gift": {
+      "subtitle": "Giá quà tặng của bạn được áp dụng cho năm đầu tiên của gói năm."
+    },
+    "locked_compare": {
+      "title": "So sánh ảnh của bạn, từng tuần một",
+      "subtitle": "Trượt giữa hai ảnh hoặc xem song song, mỗi ảnh có nhãn tuần tương ứng."
+    },
+    "locked_band": {
+      "title": "Xem khoảng thông thường cho tuần của bạn",
+      "subtitle": "Ảnh của bạn bên cạnh dải giai đoạn. Dải này cho thấy một khoảng thông thường, và kết quả mỗi người khác nhau."
+    },
+    "locked_photos": {
+      "title": "Lưu lại từng tuần",
+      "subtitle": "Gói miễn phí giữ {{count}} ảnh tiến trình. Pro giữ trọn 12–18 tháng."
+    },
+    "locked_report": {
+      "title": "Chia sẻ báo cáo với phòng khám",
+      "subtitle": "Một tệp PDF gồm ảnh đầu tiên và mới nhất của mỗi góc, nhãn tuần và tóm tắt rụng tóc của bạn."
+    },
+    "locked_hd": {
+      "title": "Thêm credit cho bản xem trước HD",
+      "subtitle": "Bản xem trước HD dùng credit và không có watermark. Pro kèm một lượng credit để bạn dùng."
+    },
+    "locked_guide": {
+      "title": "Hướng dẫn đầy đủ hằng tuần",
+      "subtitle": "Điều thường diễn ra ở mỗi giai đoạn, điều gì là bình thường và việc nên làm tuần này."
+    },
+    "insufficient_credits": {
+      "title": "Bạn cần thêm credit cho việc này",
+      "subtitle": "Pro kèm một lượng credit mỗi tuần hoặc mỗi tháng. Bạn cũng có thể mua một gói credit."
+    },
+    "result_upgrade": {
+      "title": "Xem ở chất lượng HD",
+      "subtitle": "Bản xem trước HD không có watermark và dùng credit. Pro kèm credit để bạn dùng."
+    }
+  },
+  "benefits": {
+    "photos": "Ảnh tiến trình không giới hạn",
+    "compare": "So sánh kiểu vuốt và song song",
+    "band": "Dải giai đoạn dự kiến trên ảnh của bạn",
+    "guide": "Hướng dẫn đầy đủ cho mọi giai đoạn",
+    "reminders": "Nhắc nhở theo giai đoạn và chụp ảnh",
+    "report": "Báo cáo PDF cho phòng khám",
+    "cohort": "Xem có bao nhiêu người cùng tuần với bạn",
+    "hd": "Credit đi kèm dùng được cho bản xem trước HD",
+    "credits": "Một lượng credit cho bản xem trước"
+  },
+  "plans": {
+    "annual": "Năm",
+    "monthly": "Tháng",
+    "weekly": "Tuần",
+    "bestValue": "Giá tốt nhất",
+    "save": "Tiết kiệm {{percent}}% so với gói tuần",
+    "perWeek": "{{price}}/tuần",
+    "perMonth": "{{price}}/tháng",
+    "perYear": "{{price}}/năm",
+    "firstYear": "{{price}} năm đầu"
+  },
+  "planCredits": {
+    "weekly": "Kèm {{count}} credit mỗi tuần",
+    "monthly": "Kèm {{count}} credit mỗi tháng",
+    "annual": "Kèm {{initial}} credit lúc bắt đầu, sau đó {{count}} mỗi tuần"
+  },
+  "cta": {
+    "subscribe": "Tiếp tục",
+    "processing": "Đang xử lý…"
+  },
+  "disclosure": {
+    "annual": "Thanh toán {{price}} mỗi năm. Tự động gia hạn cho đến khi bạn hủy. Hủy bất cứ lúc nào trong cài đặt tài khoản cửa hàng của bạn. Giá hiển thị là số tiền bạn được tính.",
+    "monthly": "Thanh toán {{price}} mỗi tháng. Tự động gia hạn cho đến khi bạn hủy. Hủy bất cứ lúc nào trong cài đặt tài khoản cửa hàng của bạn. Giá hiển thị là số tiền bạn được tính.",
+    "weekly": "Thanh toán {{price}} mỗi tuần. Tự động gia hạn cho đến khi bạn hủy. Hủy bất cứ lúc nào trong cài đặt tài khoản cửa hàng của bạn. Giá hiển thị là số tiền bạn được tính.",
+    "intro": "Giá quà tặng của bạn: {{intro}} cho năm đầu tiên, sau đó {{price}} mỗi năm. Tự động gia hạn cho đến khi bạn hủy. Hủy bất cứ lúc nào trong cài đặt tài khoản cửa hàng của bạn."
+  },
+  "restore": "Khôi phục",
+  "restoreNone": "Không tìm thấy giao dịch mua trước đó.",
+  "restoreSuccess": "Chào mừng bạn trở lại. Pro đã được khôi phục.",
+  "privacy": "Quyền riêng tư",
+  "termsLink": "Điều khoản",
+  "loading": "Đang tải các gói…",
+  "failedTitle": "Không tải được các gói",
+  "failedBody": "Hãy kiểm tra kết nối và thử lại.",
+  "emptyBody": "Hiện chưa có gói nào. Vui lòng thử lại sau.",
+  "purchaseFailed": "Giao dịch mua chưa hoàn tất. Vui lòng thử lại.",
+  "pending": "Giao dịch mua của bạn đang chờ phê duyệt.",
+  "success": "Bạn đã là thành viên Pro. Cảm ơn bạn.",
+  "mockBadge": "Cửa hàng thử nghiệm · không tính phí thật",
+  "giftBanner": "Quà của bạn",
+  "creditsLink": "Chỉ cần credit? Xem các gói credit",
+  "closeLabel": "Đóng"
+}

@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Companheiro do transplante capilar",
+    "title": "Veja o que é típico para a sua semana de recuperação",
+    "subtitle": "Veja uma prévia de uma mudança antes da cirurgia e depois acompanhe o que é típico em cada semana da sua recuperação.",
+    "cta": "Começar",
+    "demoLabel": "Exemplo do controle deslizante de antes e depois. Arraste para comparar.",
+    "demoBefore": "Antes",
+    "demoAfter": "Depois",
+    "demoCaption": "Apenas ilustração. Sua própria prévia vem depois.",
+    "legalPrefix": "Ao continuar, você concorda com nossos",
+    "terms": "Termos",
+    "privacy": "Política de Privacidade"
+  },
+  "goal": {
+    "title": "No que você está trabalhando?",
+    "subtitle": "Vamos adaptar a sua linha do tempo e os ângulos das fotos a isso.",
+    "hairline": {
+      "title": "Linha do cabelo",
+      "subtitle": "Frente e têmporas"
+    },
+    "crown": {
+      "title": "Coroa",
+      "subtitle": "A parte de trás e o topo da cabeça"
+    },
+    "part": {
+      "title": "Risca",
+      "subtitle": "Densidade ao longo da risca"
+    },
+    "brows": {
+      "title": "Sobrancelhas",
+      "subtitle": "Transplante de sobrancelha"
+    },
+    "beard": {
+      "title": "Barba",
+      "subtitle": "Barba e bigode"
+    }
+  },
+  "stage": {
+    "title": "Em que etapa do processo você está?",
+    "subtitle": "Isso define o que mostramos primeiro.",
+    "researching": {
+      "title": "Ainda pesquisando",
+      "subtitle": "Explorando opções, nada agendado"
+    },
+    "planned": {
+      "title": "Operação agendada",
+      "subtitle": "Tenho uma data marcada"
+    },
+    "done": {
+      "title": "Já fiz",
+      "subtitle": "Quero acompanhar minha recuperação"
+    }
+  },
+  "date": {
+    "titlePlanned": "Quando é a sua operação?",
+    "titleDone": "Quando foi a sua operação?",
+    "subtitlePlanned": "Vamos fazer a contagem regressiva até o dia 0 e preparar suas primeiras semanas.",
+    "subtitleDone": "Vamos mostrar em que fase você está e o que é típico nesta semana.",
+    "wheelDay": "Dia",
+    "wheelMonth": "Mês",
+    "wheelYear": "Ano",
+    "feedbackPast": "Dia {{day}} · Semana {{week}}",
+    "feedbackToday": "Hoje é o dia 0",
+    "feedbackFuture_one": "Em {{count}} dia",
+    "feedbackFuture_other": "Em {{count}} dias",
+    "errorMustBeFuture": "Escolha hoje ou uma data posterior.",
+    "errorMustBePast": "Escolha hoje ou uma data anterior.",
+    "errorTooFar": "Essa data está longe demais para acompanhar. Escolha uma mais próxima.",
+    "errorInvalid": "Essa data não existe.",
+    "skip": "Ainda não sei",
+    "skipNote": "Você pode definir ou alterar depois, na sua jornada."
+  },
+  "photo": {
+    "title": "Adicione uma foto para a sua prévia",
+    "subtitleResearching": "Veja uma prévia de IA de como uma mudança poderia ficar, antes de se comprometer com qualquer coisa.",
+    "subtitlePlanned": "Veja uma prévia de IA de como a sua operação poderia ficar.",
+    "subtitleDone": "Veja uma prévia de IA de como o seu resultado poderia ficar à medida que amadurece.",
+    "guidanceTitle": "Para a melhor prévia",
+    "angle": {
+      "front": "Fique de frente para a câmera, com o celular na altura dos olhos.",
+      "top": "Segure o celular acima da cabeça, apontando para baixo, para o topo da cabeça.",
+      "crown": "Fotografe a parte de trás da cabeça, de preferência com a ajuda de alguém."
+    },
+    "area": {
+      "hairline": "Puxe o cabelo para trás para deixar a linha do cabelo visível.",
+      "crown": "Deixe a coroa descoberta e o cabelo liso.",
+      "part": "Faça a risca do jeito que você costuma usar.",
+      "brows": "Deixe as sobrancelhas livres de cabelo e de óculos.",
+      "beard": "Deixe a área da barba descoberta e com luz uniforme."
+    },
+    "light": "Use luz natural, sem filtros e sem boné.",
+    "take": "Tirar uma foto",
+    "library": "Escolher da galeria",
+    "change": "Escolher outra foto",
+    "selected": "Sua foto selecionada",
+    "placeholder": "Nenhuma foto selecionada ainda",
+    "privacy": "Sua foto só é enviada para criar a prévia, e somente depois de você concordar na próxima tela.",
+    "skip": "Pular a prévia",
+    "skipNote": "Você pode criar uma depois, na aba Prévias.",
+    "permissionDenied": "Não foi possível abrir suas fotos. Verifique a permissão em Ajustes."
+  },
+  "notify": {
+    "title": "Não perca os momentos que importam",
+    "subtitle": "A recuperação é lenta. Um lembrete gentil na hora certa faz a lembrança por você.",
+    "bulletPhase": "Avisaremos quando uma fase mudar",
+    "bulletPhoto": "Avisaremos quando chegar o dia da foto",
+    "bulletCare": "Lembretes diários de cuidados nas duas primeiras semanas",
+    "allow": "Ativar lembretes",
+    "skip": "Agora não",
+    "note": "Os lembretes de cuidados são gratuitos. Os lembretes de fase e de foto fazem parte do Pro. Você pode alterar isso a qualquer momento em Ajustes."
+  },
+  "crafting": {
+    "title": "Criando sua prévia",
+    "titleDone": "Sua prévia está pronta",
+    "subtitle": "Isso costuma levar menos de um minuto.",
+    "ringLabel": "Progresso da prévia, {{percent}} por cento",
+    "lineUpload": "Enviando sua foto com segurança",
+    "lineReserve": "Reservando sua prévia gratuita",
+    "lineEdit": "Editando {{area}}",
+    "lineFinish": "Dando os toques finais",
+    "stateDone": "concluído",
+    "stateActive": "em andamento",
+    "statePending": "aguardando",
+    "area": {
+      "hairline": "sua linha do cabelo",
+      "crown": "sua coroa",
+      "part": "sua risca",
+      "brows": "suas sobrancelhas",
+      "beard": "sua barba"
+    },
+    "skip": "Pular por enquanto",
+    "skipNote": "Sua prévia continua sendo gerada e estará esperando na aba Prévias.",
+    "failedTitle": "Não conseguimos concluir sua prévia",
+    "failedOffline": "Parece que você está sem conexão. Nada foi cobrado. Verifique a conexão e tente de novo.",
+    "failedGeneric": "Algo deu errado do nosso lado. Nada foi cobrado. Você pode tentar de novo ou continuar sem ela.",
+    "failedBlocked": "Esta foto não pode ser usada em uma prévia. Nada foi cobrado. Você pode continuar e tentar outra foto depois.",
+    "skipFailed": "Continuar sem prévia"
+  },
+  "reveal": {
+    "title": "Aqui está uma prévia do que poderia ser",
+    "subtitle": "Arraste a alça para comparar. É uma ilustração feita por IA.",
+    "before": "Sua foto",
+    "after": "Prévia de IA",
+    "disclaimer": "Prévia de IA — não é uma previsão do seu resultado",
+    "watermark": "As prévias gratuitas levam uma pequena marca d'água.",
+    "wipeLabel": "Comparação de antes e depois da sua foto. Arraste para comparar.",
+    "loading": "Preparando sua prévia",
+    "loadFailed": "Não foi possível carregar a imagem da prévia. Ela está salva na aba Prévias.",
+    "cta": "Ver meu plano"
+  }
+}

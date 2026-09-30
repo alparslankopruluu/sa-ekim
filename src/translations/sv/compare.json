@@ -1,0 +1,44 @@
+{
+  "title": "Jämför",
+  "close": "Stäng",
+  "mode": {
+    "wipe": "Svep",
+    "side": "Sida vid sida"
+  },
+  "label": {
+    "before": "Före",
+    "week": "Vecka {{n}}",
+    "none": "Bild"
+  },
+  "picker": {
+    "before": "Tidigare bild",
+    "after": "Senare bild",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Reglage för att jämföra två bilder. {{before}} till vänster, {{after}} till höger. Justera för att flytta avdelaren.",
+  "sideA11y": "{{label}}, bild ({{angle}})",
+  "mismatch": "De här två bilderna visar olika vinklar. Det fungerar bäst att jämföra samma vinkel.",
+  "empty": {
+    "title": "Två bilder att jämföra",
+    "body": "Ta minst två bilder från samma vinkel och jämför dem sedan här.",
+    "action": "Ta en bild"
+  },
+  "locked": {
+    "title": "Jämförelse ingår i Pro",
+    "body": "Se två bilder sida vid sida med veckan för var och en. Din första bild förblir synlig.",
+    "cta": "Lås upp jämförelse"
+  },
+  "share": {
+    "action": "Dela",
+    "preparing": "Förbereder…",
+    "error": "Det gick inte att förbereda jämförelsen. Försök igen.",
+    "unavailable": "Delning är inte tillgänglig på den här enheten.",
+    "dialog": "Dela din jämförelse"
+  },
+  "report": {
+    "title": "Bildjämförelse",
+    "heading": "{{before}} och {{after}}",
+    "disclaimer": "Personlig framstegsjournal – inte ett medicinskt dokument"
+  },
+  "mark": "Kök"
+}

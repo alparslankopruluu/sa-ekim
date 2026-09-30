@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Was gerade passiert",
+    "normal": "Was typisch ist",
+    "todo": "Für diese Woche",
+    "redflags": "Ruf deine Klinik oder einen Arzt an, wenn…",
+    "care": "Tag für Tag",
+    "wash": "Waschen",
+    "sleep": "Schlafen",
+    "avoid": "Vermeiden"
+  },
+  "header": {
+    "week": "Woche",
+    "days": "Tage {{from}}–{{to}}",
+    "weeks": "Wochen {{from}}–{{to}}",
+    "current": "Du bist hier",
+    "past": "Hinter dir",
+    "upcoming": "Vor dir"
+  },
+  "lock": {
+    "title": "Der vollständige Phasenleitfaden gehört zu Pro",
+    "body": "Was typischerweise passiert, was du diese Woche tun kannst und Hinweise Tag für Tag — für jede Phase.",
+    "cta": "Pro ansehen",
+    "redflagsNote": "Wann du dich an deine Klinik wenden solltest, bleibt für alle kostenlos, weiter unten."
+  },
+  "notFound": {
+    "title": "Leitfaden nicht gefunden",
+    "body": "Diese Seite stammt möglicherweise von einem älteren Link.",
+    "cta": "Zurück"
+  },
+  "flags": {
+    "fever": "Fieber oder Schüttelfrost",
+    "redness": "Rötung oder Schwellung, die sich ausbreitet oder immer stärker wird",
+    "pus": "Eiter, gelbliches Sekret oder ein übler Geruch",
+    "pain": "Starke oder zunehmende Schmerzen",
+    "bleeding": "Starke Blutung oder eine Blutung, die auch bei sanftem Druck nicht aufhört",
+    "contact": "Wenn eines davon auftritt, wende dich an deine Klinik oder einen Arzt. Im Notfall wähle die Notrufnummer deines Landes."
+  },
+  "disclaimer": "Allgemeine Informationen auf Grundlage üblicher Klinikverläufe — keine medizinische Beratung und keine Vorhersage. Individuelle Verläufe unterscheiden sich; die Anweisungen deiner eigenen Klinik haben Vorrang.",
+  "care": {
+    "title": "Die ersten zwei Wochen",
+    "tagline": "Die Grafts schützen, während sie anwachsen",
+    "happening": "Die neuen Grafts setzen sich fest. Um jedes Graft bilden sich typischerweise kleine Krusten, die sich üblicherweise innerhalb von etwa 7–14 Tagen lösen. Eine gewisse Schwellung der Stirn und Rötungen sind in den ersten Tagen üblich.",
+    "normal": "Typischerweise sind in den ersten zwei Wochen kleine Krusten, leichte Rötungen, etwas Schwellung und ein Spannungsgefühl üblich.",
+    "todo1": "Halte dich an die Waschroutine, die dir deine Klinik gezeigt hat.",
+    "todo2": "Schlafe in den ersten Nächten mit erhöhtem Kopf, wenn deine Klinik es empfiehlt.",
+    "todo3": "Lass die Krusten von selbst abfallen — nicht daran kratzen oder pulen.",
+    "todo4": "Verzichte auf intensiven Sport, Sauna, Schwimmen und direkte Sonne, bis deine Klinik etwas anderes sagt.",
+    "redflags": "Etwas Rötung und Schwellung sind jetzt üblich. Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:",
+    "days": {
+      "intro": "Viele Kliniken empfehlen Folgendes. Die Anweisungen deiner eigenen Klinik haben Vorrang.",
+      "d0_3": {
+        "title": "Tage 0–3",
+        "wash": "Viele Kliniken übernehmen die erste Wäsche selbst oder am Tag 1–2 und empfehlen danach ein sehr sanftes Ausspülen ohne Reiben.",
+        "sleep": "Viele Kliniken empfehlen, auf dem Rücken mit erhöhtem Kopf zu schlafen, zum Beispiel auf zwei Kissen oder einem Nackenkissen.",
+        "avoid": "Viele Kliniken empfehlen, Bücken, Heben, Berühren der Grafts, Alkohol und Rauchen zu vermeiden."
+      },
+      "d4_7": {
+        "title": "Tage 4–7",
+        "wash": "Viele Kliniken empfehlen eine tägliche sanfte Wäsche mit den Produkten, die du bekommen hast, und die Grafts trocken zu tupfen — niemals zu reiben.",
+        "sleep": "Ein erhöhter Kopf wird üblicherweise weiter empfohlen; die Schwellung lässt typischerweise um diese Tage nach.",
+        "avoid": "Viele Kliniken empfehlen, enge Mützen, starkes Schwitzen, direkte Sonne und Kratzen zu vermeiden."
+      },
+      "d8_14": {
+        "title": "Tage 8–14",
+        "wash": "Viele Kliniken erlauben jetzt etwas kräftigeres Waschen, damit sich die Krusten sanft lösen können.",
+        "sleep": "Viele Menschen können etwa jetzt wieder in ihrer gewohnten Schlafposition schlafen, wenn die Klinik zustimmt.",
+        "avoid": "Viele Kliniken empfehlen, Pools, Sauna, intensives Training und das Abpulen der letzten Krusten zu vermeiden."
+      }
+    }
+  },
+  "shed": {
+    "title": "Ausfallphase",
+    "tagline": "Die verpflanzten Haare fallen üblicherweise aus — die Wurzeln bleiben typischerweise",
+    "happening": "Zwischen Woche 2 und 8 fallen typischerweise viele der verpflanzten Haarschäfte aus. Kliniken nennen das oft Schockverlust. Die Follikel unter der Haut bleiben üblicherweise an Ort und Stelle und ruhen, bevor sie neues Haar bilden.",
+    "normal": "Typischerweise ist spürbarer Haarausfall in den Wochen 2–8 üblich — Kliniken beschreiben ihn als gewöhnlichen Abschnitt des Verlaufs.",
+    "todo1": "Mach das wöchentliche Foto weiter aus demselben Blickwinkel; die Serie zeigt das Muster besser als der Spiegel.",
+    "todo2": "Notiere an einigen Tagen, wie viele Haare du verlierst — eine Zahl lässt sich leichter besprechen als ein Gefühl.",
+    "todo3": "Wasche weiter sanft, so wie es deine Klinik empfiehlt.",
+    "todo4": "Notiere dir Fragen für den nächsten Kontakttermin bei deiner Klinik.",
+    "redflags": "Haarausfall selbst ist in diesen Wochen üblich. Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  },
+  "quiet": {
+    "title": "Ruhige Monate",
+    "tagline": "An der Oberfläche scheint wenig zu passieren",
+    "happening": "Die Monate 2 bis 4 werden oft als „Phase des hässlichen Entleins“ bezeichnet. Die Follikel ruhen typischerweise und bereiten neue Haare vor, sodass der Bereich ähnlich aussehen kann wie vor der Operation.",
+    "normal": "Typischerweise ist in den Monaten 2–4 nur sehr wenig sichtbares Wachstum üblich.",
+    "todo1": "Vergleiche Monate, nicht Tage — deine Fotoserie ist die fairste Sicht.",
+    "todo2": "Kleine Erhebungen können auftreten, wenn neue Haare durchstoßen; frag deine Klinik, wenn du unsicher bist.",
+    "todo3": "Schütze deine Kopfhaut vor starker Sonne, so wie deine Klinik es empfiehlt.",
+    "todo4": "Behalte für jedes Foto denselben Blickwinkel und dasselbe Licht bei.",
+    "redflags": "Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  },
+  "sprout": {
+    "title": "Erstes Wachstum",
+    "tagline": "Feine neue Haare beginnen typischerweise zu erscheinen",
+    "happening": "Etwa in den Monaten 3–4 erscheinen üblicherweise die ersten neuen Haare. Anfangs sind sie oft dünn, hell und ungleichmäßig, und manche können lockig oder gewellt sein.",
+    "normal": "Typischerweise sind frühe Haare fein, lückenhaft und wachsen unterschiedlich schnell.",
+    "todo1": "Mach deine Kontrollfotos bei gleichem Licht und aus demselben Blickwinkel.",
+    "todo2": "Gib dünnen oder ungleichmäßigen Haaren Zeit — die Dicke nimmt üblicherweise in den späteren Monaten zu.",
+    "todo3": "Frag deine Klinik, wann Haarschnitte, Färben und Stylingprodukte für dich in Ordnung sind.",
+    "todo4": "Schau auf deine frühen Fotos zurück statt auf die Ergebnisse anderer.",
+    "redflags": "Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  },
+  "grow": {
+    "title": "Die Dichte wächst",
+    "tagline": "Die Haare werden typischerweise dicker und füllen sich auf",
+    "happening": "Zwischen Monat 6 und 9 werden die neuen Haare typischerweise dicker und länger, und der Bereich wirkt üblicherweise von Monat zu Monat voller.",
+    "normal": "Typischerweise nimmt die Dichte in den Monaten 6–9 weiter zu, und das Aussehen kann sich in dieser Zeit stark verändern.",
+    "todo1": "Mach deine Kontrollfotos nach 6 und 9 Monaten.",
+    "todo2": "Vergleiche mit deinen eigenen ersten Fotos, nicht mit denen anderer.",
+    "todo3": "Frag deine Klinik nach der Kontrolluntersuchung, die sie etwa jetzt üblicherweise anbietet.",
+    "todo4": "Schütze deine Kopfhaut weiter vor starker Sonne.",
+    "redflags": "Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  },
+  "mature": {
+    "title": "Ausreifung",
+    "tagline": "Struktur und Dichte pendeln sich typischerweise ein",
+    "happening": "Die Monate 9 bis 12 sind üblicherweise eine Zeit der Ausreifung: Die Haare werden weiter dicker und ihre Struktur festigt sich. Kliniken beurteilen ein Ergebnis am Haaransatz typischerweise nach etwa 12 Monaten.",
+    "normal": "Typischerweise werden Veränderungen in den Monaten 9–12 langsamer und feiner.",
+    "todo1": "Mach dein Kontrollfoto nach 12 Monaten aus jedem Blickwinkel.",
+    "todo2": "Leg dein erstes und dein neuestes Foto vor dem Klinikbesuch nebeneinander.",
+    "todo3": "Schreib die Fragen auf, die du bei deiner Beurteilung stellen möchtest.",
+    "todo4": "Denk daran, dass Wirbel und Scheitel typischerweise länger brauchen.",
+    "redflags": "Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  },
+  "final": {
+    "title": "Endgültige Ausreifung",
+    "tagline": "Wirbel und Scheitel können weiter ausreifen",
+    "happening": "Nach 12 Monaten sind die meisten Veränderungen typischerweise klein. Wirbel, Scheitel und die Ergebnisse vieler Frauen reifen üblicherweise bis zu 18 Monate weiter aus.",
+    "normal": "Typischerweise sind langsame, schrittweise Veränderungen nach Monat 12 üblich, besonders am Wirbel.",
+    "todo1": "Mach alle ein bis zwei Monate ein Foto.",
+    "todo2": "Vereinbare die Beurteilung, die deine Klinik empfiehlt.",
+    "todo3": "Bring deine Fotoserie mit, um sie deiner Klinik zu zeigen, wenn du möchtest.",
+    "todo4": "Behalte denselben Blickwinkel und dasselbe Licht für einen fairen Vergleich bei.",
+    "redflags": "Wende dich an deine Klinik oder einen Arzt, wenn dir Folgendes auffällt:"
+  }
+}

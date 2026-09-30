@@ -1,0 +1,44 @@
+{
+  "title": "Comparer",
+  "close": "Fermer",
+  "mode": {
+    "wipe": "Curseur",
+    "side": "Côte à côte"
+  },
+  "label": {
+    "before": "Avant",
+    "week": "Semaine {{n}}",
+    "none": "Photo"
+  },
+  "picker": {
+    "before": "Photo antérieure",
+    "after": "Photo postérieure",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Curseur de comparaison de deux photos. {{before}} à gauche, {{after}} à droite. Ajustez pour déplacer la séparation.",
+  "sideA11y": "{{label}}, photo ({{angle}})",
+  "mismatch": "Ces deux photos montrent des angles différents. La comparaison fonctionne mieux avec le même angle.",
+  "empty": {
+    "title": "Deux photos à comparer",
+    "body": "Prenez au moins deux photos du même angle, puis comparez-les ici.",
+    "action": "Prendre une photo"
+  },
+  "locked": {
+    "title": "La comparaison fait partie de Pro",
+    "body": "Voyez deux photos côte à côte avec la semaine correspondante. Votre première photo reste visible.",
+    "cta": "Débloquer la comparaison"
+  },
+  "share": {
+    "action": "Partager",
+    "preparing": "Préparation…",
+    "error": "Impossible de préparer la comparaison. Réessayez.",
+    "unavailable": "Le partage n'est pas disponible sur cet appareil.",
+    "dialog": "Partager votre comparaison"
+  },
+  "report": {
+    "title": "Comparaison de photos",
+    "heading": "{{before}} et {{after}}",
+    "disclaimer": "Suivi personnel — pas un document médical"
+  },
+  "mark": "Kök"
+}

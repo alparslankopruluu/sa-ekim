@@ -1,0 +1,25 @@
+{
+  "title": "Voordat we je preview maken",
+  "body": "De preview wordt gemaakt door AI-beeldmodellen, dus de foto die je hebt gekozen moet je telefoon verlaten. Zo werkt het.",
+  "sent": {
+    "title": "Wat we versturen",
+    "body": "Alleen de foto die je voor deze preview hebt geselecteerd. Niets anders uit je fotorol of je traject."
+  },
+  "who": {
+    "title": "Wie het verwerkt",
+    "body": "fal.ai verzorgt de beeldbewerking, met OpenAI-beeldmodellen."
+  },
+  "retention": {
+    "title": "Hoe lang het blijft bewaard",
+    "body": "Je originele foto en het previewresultaat worden allebei binnen 30 dagen van onze servers verwijderd. Je kunt ze eerder verwijderen via het tabblad Previews."
+  },
+  "choice": {
+    "title": "Jouw keuze",
+    "body": "Je mag nee zeggen en toch het hele traject gebruiken. Foto's die je voor je tijdlijn maakt, blijven op je apparaat."
+  },
+  "note": "AI-previews tonen een mogelijkheid. Ze zijn geen voorspelling van je resultaat.",
+  "policy": "Lees het privacybeleid",
+  "accept": "Akkoord en doorgaan",
+  "decline": "Niet nu",
+  "error": "We konden je keuze niet opslaan. Controleer je verbinding en probeer het opnieuw."
+}

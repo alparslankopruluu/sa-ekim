@@ -1,0 +1,84 @@
+{
+  "close": "Fechar câmera",
+  "title": "Foto de progresso",
+  "angle": {
+    "front": "Frente",
+    "left": "Lado esquerdo",
+    "right": "Lado direito",
+    "top": "Topo",
+    "crown": "Coroa"
+  },
+  "instruction": {
+    "front": "Cabelo seco e penteado como de costume. Encaixe o rosto no oval, com a linha do cabelo perto do topo.",
+    "left": "Vire para mostrar o lado esquerdo. Mantenha o celular na vertical, na altura dos olhos.",
+    "right": "Vire para mostrar o lado direito. Mantenha o celular na vertical, na altura dos olhos.",
+    "top": "Segure o celular na horizontal acima da cabeça, com a tela para cima, para que a câmera traseira aponte para o topo da cabeça.",
+    "crown": "Segure o celular na horizontal acima da parte de trás da cabeça, com a tela para cima, para que a câmera traseira aponte para a coroa."
+  },
+  "cameraNote": {
+    "front": "Usa a câmera frontal para você ver o enquadramento.",
+    "back": "Usa a câmera traseira. Segure o celular na horizontal ou peça ajuda a alguém. Você sente um toque quando ele estiver nivelado."
+  },
+  "guide": {
+    "ghostHide": "Ocultar foto anterior",
+    "ghostShow": "Mostrar foto anterior",
+    "ghostOverlay": "Sobreposição da sua foto anterior ({{angle}}), {{label}}",
+    "frame": "Visão da câmera com guia de enquadramento"
+  },
+  "level": {
+    "ok": "Nivelado, pronto",
+    "upright": "Segure o celular na vertical",
+    "flat": "Segure o celular na horizontal, com a tela para cima",
+    "unavailable": "Este aparelho não tem sensor de movimento, então a verificação de nível está desativada. Confira você mesmo se o celular está na vertical.",
+    "a11yOk": "O celular está nivelado. Você pode tirar a foto.",
+    "a11yBlockedUpright": "O celular ainda não está na vertical.",
+    "a11yBlockedFlat": "O celular ainda não está na horizontal."
+  },
+  "shutter": {
+    "label": "Tirar foto",
+    "blockedUpright": "Segure o celular na vertical para tirar a foto",
+    "blockedFlat": "Segure o celular na horizontal para tirar a foto"
+  },
+  "library": "Escolher da galeria",
+  "permission": {
+    "checking": "Verificando o acesso à câmera…",
+    "title": "O acesso à câmera está desativado",
+    "body": "O Kök usa a câmera apenas para as suas fotos de progresso. Elas ficam neste aparelho. Você também pode escolher uma foto da galeria.",
+    "allow": "Permitir câmera",
+    "settings": "Abrir ajustes"
+  },
+  "unavailable": {
+    "title": "A câmera não está disponível aqui",
+    "body": "Você pode escolher uma foto da galeria."
+  },
+  "review": {
+    "retake": "Tirar de novo",
+    "use": "Usar foto",
+    "saving": "Salvando…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Esta foto é usada apenas na sua prévia. Ela não é adicionada à sua jornada.",
+    "a11y": "Revisão da foto que você acabou de tirar"
+  },
+  "error": {
+    "save": "Não foi possível salvar a foto. Tente de novo.",
+    "capture": "Não foi possível tirar a foto. Tente de novo.",
+    "pick": "Não foi possível abrir a galeria. Tente de novo."
+  },
+  "saved": "Foto salva",
+  "checking": "Verificando seu plano…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto ({{angle}}), {{label}}",
+    "taken": "Tirada em {{date}}",
+    "compare": "Comparar com…",
+    "delete": "Excluir foto",
+    "confirmTitle": "Excluir esta foto?",
+    "confirmBody": "Ela será removida deste aparelho e não poderá ser recuperada.",
+    "confirm": "Excluir",
+    "cancel": "Manter",
+    "missingTitle": "Esta foto não está mais aqui",
+    "missingBody": "Ela pode ter sido excluída.",
+    "close": "Fechar",
+    "loadError": "Não é possível mostrar esta foto."
+  }
+}

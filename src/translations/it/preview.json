@@ -1,0 +1,250 @@
+{
+  "title": "Nuova anteprima",
+  "subtitle": "Scegli uno stile e una foto per vedere un possibile aspetto.",
+  "aiLabel": "Anteprima IA — non è una previsione del tuo risultato",
+  "aiLabelShort": "Anteprima IA",
+  "aiLabelDetail": "Mostra un possibile aspetto, non ciò che accadrà.",
+  "common": {
+    "close": "Chiudi",
+    "back": "Indietro",
+    "retry": "Riprova",
+    "cancel": "Annulla",
+    "delete": "Elimina"
+  },
+  "goals": {
+    "label": "Zona",
+    "hairline": "Attaccatura",
+    "crown": "Vertice",
+    "part": "Riga",
+    "brows": "Sopracciglia",
+    "beard": "Barba"
+  },
+  "angles": {
+    "front": "foto frontale",
+    "left": "foto del lato sinistro",
+    "right": "foto del lato destro",
+    "top": "foto della sommità della testa",
+    "crown": "foto del vertice"
+  },
+  "styles": {
+    "label": "Stile",
+    "hairline_soft": {
+      "name": "Attaccatura più morbida e naturale",
+      "description": "Un'attaccatura dolcemente ammorbidita che mantiene una forma naturale."
+    },
+    "hairline_temples": {
+      "name": "Rifinitura delle tempie",
+      "description": "Un aspetto più equilibrato intorno alle tempie."
+    },
+    "hairline_lower": {
+      "name": "Linea più bassa e definita",
+      "description": "Un'attaccatura leggermente più bassa e più definita."
+    },
+    "hairline_density": {
+      "name": "Più densità",
+      "description": "Un aspetto più denso entro la tua attaccatura attuale."
+    },
+    "crown_light": {
+      "name": "Leggera",
+      "description": "Copertura leggera sul vertice."
+    },
+    "crown_medium": {
+      "name": "Media",
+      "description": "Copertura media sul vertice."
+    },
+    "crown_full": {
+      "name": "Piena",
+      "description": "Copertura piena sul vertice."
+    },
+    "part_light": {
+      "name": "Leggera",
+      "description": "Leggera pienezza lungo la riga."
+    },
+    "part_medium": {
+      "name": "Media",
+      "description": "Pienezza media lungo la riga."
+    },
+    "part_full": {
+      "name": "Piena",
+      "description": "Un aspetto pieno lungo la riga."
+    },
+    "brows_natural": {
+      "name": "Naturali",
+      "description": "Sopracciglia naturali che mantengono la tua forma."
+    },
+    "brows_fuller": {
+      "name": "Più piene",
+      "description": "La tua forma, un po' più piena."
+    },
+    "brows_arched": {
+      "name": "Arcuate",
+      "description": "Una linea del sopracciglio dolcemente arcuata e ordinata."
+    },
+    "beard_patch": {
+      "name": "Riempimento dei vuoti",
+      "description": "Le zone rade vengono riempite."
+    },
+    "beard_full": {
+      "name": "Barba piena",
+      "description": "Una barba più piena su mascella e guance."
+    },
+    "beard_moustache": {
+      "name": "Baffi",
+      "description": "Un aspetto più pieno sopra il labbro."
+    }
+  },
+  "bestAngle": "Funziona meglio con una {{angle}}",
+  "density": {
+    "label": "Densità",
+    "natural": "Naturale",
+    "fuller": "Più piena",
+    "full": "Piena"
+  },
+  "quality": {
+    "label": "Qualità",
+    "standard": {
+      "title": "Standard",
+      "description": "Un primo sguardo veloce."
+    },
+    "high": {
+      "title": "Alta",
+      "description": "Più dettagli."
+    }
+  },
+  "price": {
+    "label": "Questa anteprima",
+    "free": "Gratis",
+    "freeHigh": "Anteprima HD gratuita",
+    "credits_one": "{{count}} credito",
+    "credits_other": "{{count}} crediti",
+    "freeNote": "La tua prima anteprima è gratuita e include una filigrana.",
+    "balance_one": "Hai {{count}} credito.",
+    "balance_other": "Hai {{count}} crediti.",
+    "short_one": "Hai {{count}} credito e questa anteprima ne richiede {{cost}}.",
+    "short_other": "Hai {{count}} crediti e questa anteprima ne richiede {{cost}}.",
+    "useFreeHigh": "Usa la mia anteprima HD gratuita",
+    "useFreeHighHint_one": "Hai {{count}} anteprima HD gratuita.",
+    "useFreeHighHint_other": "Hai {{count}} anteprime HD gratuite."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Ancora nessuna foto",
+    "take": "Scatta una foto",
+    "library": "Scegli dalla libreria",
+    "journey": "Usa l'ultima foto del percorso",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Rimuovi la foto",
+    "selected": "Foto selezionata",
+    "sentNote": "La tua foto viene inviata solo quando tocchi Crea, dopo che hai approvato l'elaborazione IA.",
+    "libraryFailed": "Non siamo riusciti ad aprire la tua libreria foto."
+  },
+  "cta": {
+    "create": "Crea l'anteprima",
+    "createFree": "Crea l'anteprima gratuita",
+    "getCredits": "Ottieni crediti",
+    "continue": "Continua",
+    "addPhoto": "Aggiungi una foto per continuare",
+    "chooseStyle": "Scegli uno stile per continuare"
+  },
+  "helper": {
+    "needsConsent": "Prima che la tua foto venga inviata, ti chiediamo l'approvazione una sola volta.",
+    "needsCredits": "Ti servono più crediti per questa anteprima.",
+    "walletError": "Non siamo riusciti a caricare i tuoi crediti."
+  },
+  "rendering": {
+    "title": "La tua anteprima",
+    "status": {
+      "uploading": "Invio della tua foto",
+      "creating": "Avvio della tua anteprima",
+      "waiting": "Avvio della tua anteprima",
+      "queued": "In attesa di uno slot libero",
+      "processing": "Creazione della tua anteprima",
+      "finalizing": "Ultimi ritocchi"
+    },
+    "estimate": "Di solito meno di un minuto.",
+    "background": "Puoi lasciare questa schermata. Noi andiamo avanti e ti avvisiamo quando è pronta.",
+    "notifyMe": "Avvisami quando è pronta",
+    "notifyOn": "Ti avviseremo quando sarà pronta.",
+    "keepBrowsing": "Continua a navigare",
+    "cancel": "Annulla l'anteprima",
+    "cancelHint": "I tuoi crediti vengono restituiti se annulli.",
+    "cancelTooLate": "Si sta già completando e ora non può essere annullata.",
+    "failedTitle": "Questa anteprima non è stata completata",
+    "canceledTitle": "Anteprima annullata",
+    "offlineTitle": "Sei offline",
+    "errorTitle": "Non siamo riusciti ad avviare l'anteprima",
+    "refunded_one": "Il tuo {{count}} credito è stato restituito.",
+    "refunded_other": "I tuoi {{count}} crediti sono stati restituiti.",
+    "nothingCharged": "Non è stato addebitato nulla.",
+    "retrySafe": "Riprovare è sicuro: non ti verrà addebitato due volte.",
+    "retry": "Riprova",
+    "getCredits": "Ottieni crediti",
+    "reviewConsent": "Rivedi e approva",
+    "seePlans": "Vedi i piani",
+    "choosePhoto": "Scegli un'altra foto",
+    "backToStyles": "Torna agli stili",
+    "close": "Chiudi",
+    "photoA11y": "La tua foto",
+    "ringA11y": "Avanzamento dell'anteprima, {{percent}} percento"
+  },
+  "result": {
+    "title": "La tua anteprima",
+    "before": "La tua foto",
+    "after": "Anteprima IA",
+    "watermark": "Kök · Anteprima IA",
+    "wipeA11y": "Cursore prima e dopo. Scorri verso l'alto o verso il basso per confrontare la tua foto con l'anteprima IA.",
+    "demo": "Demo",
+    "save": "Salva",
+    "share": "Condividi",
+    "report": "Segnala",
+    "delete": "Elimina",
+    "saved": "Salvata nelle tue foto",
+    "saveDenied": "Consenti l'accesso alle foto in Impostazioni per salvare le anteprime.",
+    "unsupported": "Salvare e condividere non è disponibile qui per questa anteprima.",
+    "shareTitle": "Condividi la tua anteprima IA",
+    "tryAnother": "Prova un altro stile",
+    "upgradeTitle": "Vuoi più dettagli?",
+    "upgradeBody": "Un'anteprima HD ha più dettagli e nessuna filigrana.",
+    "notFound": "Non siamo riusciti a trovare questa anteprima. Le anteprime vengono eliminate dopo 30 giorni.",
+    "toPreviews": "Torna alle anteprime",
+    "beforeGone": "La tua foto originale viene conservata solo per 30 giorni, quindi il confronto non è più disponibile.",
+    "loadFailed": "Non siamo riusciti a caricare questa anteprima.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Crea un'anteprima HD ({{count}} credito)",
+    "upgradeTry_other": "Crea un'anteprima HD ({{count}} crediti)",
+    "upgradeTryFree": "Crea un'anteprima HD gratuita",
+    "availableUntil": "Disponibile fino al {{date}}",
+    "saveNudge": "Le anteprime vengono eliminate dopo 30 giorni. Salvala nelle tue foto per tenerne una copia.",
+    "saveNudgeSoon": "Questa anteprima verrà eliminata a breve. Salvala nelle tue foto per tenerne una copia.",
+    "expiredTitle": "Questa anteprima è stata eliminata dopo 30 giorni",
+    "expiredBody": "Le anteprime e le foto da cui derivano vengono rimosse dopo 30 giorni. Puoi crearne una nuova in qualsiasi momento."
+  },
+  "delete": {
+    "title": "Eliminare questa anteprima?",
+    "body": "L'immagine dell'anteprima viene eliminata definitivamente. Non si può annullare.",
+    "done": "Anteprima eliminata"
+  },
+  "tab": {
+    "title": "Anteprime",
+    "new": "Nuova anteprima",
+    "honest": "Le anteprime sono immagini create dall'IA di un possibile aspetto.",
+    "emptyTitle": "Ancora nessuna anteprima",
+    "emptyBody": "Un'anteprima è un'immagine creata dall'IA di un possibile aspetto, non di ciò che accadrà. Prova uno stile sulla tua foto e confronta.",
+    "emptyCta": "Crea un'anteprima",
+    "loadFailed": "Non siamo riusciti a caricare le tue anteprime.",
+    "menu": "Altre azioni",
+    "status": {
+      "queued": "In attesa",
+      "processing": "Creazione · {{percent}}%",
+      "finalizing": "Ultimi ritocchi",
+      "failed": "Non completata",
+      "canceled": "Annullata"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Riprova",
+    "delete": "Elimina",
+    "deleteA11y": "Elimina l'anteprima",
+    "availableUntil": "Fino al {{date}}",
+    "expired": "Eliminata dopo 30 giorni"
+  }
+}

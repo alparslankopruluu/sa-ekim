@@ -1,0 +1,39 @@
+{
+  "title": "Diese Vorschau melden",
+  "subtitle": "Sag uns, was nicht stimmt. Wir prüfen jede Meldung innerhalb von 48 Stunden.",
+  "inaccurate": "Sie wirkt ungenau",
+  "unsafe": "Sie wirkt unsicher oder unangemessen",
+  "privacy": "Sie wirft ein Datenschutzproblem auf",
+  "other": "Etwas anderes",
+  "send": "Meldung senden",
+  "sent": "Danke. Wir prüfen sie innerhalb von 48 Stunden.",
+  "clinic": {
+    "action": "Fortschrittsprotokoll exportieren",
+    "exporting": "Wird vorbereitet…",
+    "title": "Fortschrittsprotokoll Haarrestauration",
+    "brand": "Kök",
+    "clinicLine": "Klinik: {{name}}",
+    "operationLine": "OP-Datum: {{date}}",
+    "generatedLine": "Erstellt am {{date}}",
+    "photosHeading": "Fotos",
+    "noPhotos": "Noch keine Fotos.",
+    "shedHeading": "Ausfallprotokoll",
+    "shedEmpty": "Noch keine Einträge zum Haarausfall.",
+    "col": {
+      "week": "Woche",
+      "days": "Tage erfasst",
+      "average": "Durchschnitt",
+      "max": "Höchstwert"
+    },
+    "weekRow": "Woche {{n}}",
+    "overall": "Alle Einträge",
+    "before": "Vorher",
+    "week": "Woche {{n}}",
+    "disclaimer": "Persönliches Fortschrittsprotokoll — kein medizinisches Dokument",
+    "dialog": "Dein Fortschrittsprotokoll teilen",
+    "failed": "Der Bericht konnte nicht erstellt werden. Versuche es erneut.",
+    "empty": "Füge zuerst ein Foto oder einen Eintrag zum Haarausfall hinzu.",
+    "unsupported": "Berichte können im Browser nicht erstellt werden."
+  },
+  "unavailable": "Diese Vorschau kann nicht gemeldet werden."
+}

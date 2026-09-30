@@ -8,7 +8,7 @@ import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { I18nManager, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/AppText';
@@ -248,7 +248,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   // Physical order (before on the left) in every language, like the wipe.
-  side: { flexDirection: 'row', direction: 'ltr', gap: spacing.sm },
+  // Physical order (before on the left) in every language: RTL flips `row`, so reverse it back.
+  side: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', gap: spacing.sm },
   sideFrame: {
     borderRadius: radius.md,
     overflow: 'hidden',

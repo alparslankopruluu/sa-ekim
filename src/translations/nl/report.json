@@ -1,0 +1,39 @@
+{
+  "title": "Deze preview melden",
+  "subtitle": "Vertel ons wat er mis is. We beoordelen elke melding binnen 48 uur.",
+  "inaccurate": "Hij ziet er onnauwkeurig uit",
+  "unsafe": "Hij ziet er onveilig of ongepast uit",
+  "privacy": "Hij baart privacyzorgen",
+  "other": "Iets anders",
+  "send": "Melding versturen",
+  "sent": "Bedankt. We beoordelen hem binnen 48 uur.",
+  "clinic": {
+    "action": "Voortgangsoverzicht exporteren",
+    "exporting": "Voorbereiden…",
+    "title": "Voortgangsoverzicht haarherstel",
+    "brand": "Kök",
+    "clinicLine": "Kliniek: {{name}}",
+    "operationLine": "Operatiedatum: {{date}}",
+    "generatedLine": "Gemaakt op {{date}}",
+    "photosHeading": "Foto's",
+    "noPhotos": "Nog geen foto's.",
+    "shedHeading": "Uitvallogboek",
+    "shedEmpty": "Nog geen uitvalnotities.",
+    "col": {
+      "week": "Week",
+      "days": "Gelogde dagen",
+      "average": "Gemiddeld",
+      "max": "Hoogste"
+    },
+    "weekRow": "Week {{n}}",
+    "overall": "Alle notities",
+    "before": "Voor",
+    "week": "Week {{n}}",
+    "disclaimer": "Persoonlijk voortgangsoverzicht — geen medisch document",
+    "dialog": "Deel je voortgangsoverzicht",
+    "failed": "Het rapport kon niet worden gemaakt. Probeer het opnieuw.",
+    "empty": "Voeg eerst een foto of een uitvalnotitie toe.",
+    "unsupported": "Rapporten kunnen niet in de browser worden gemaakt."
+  },
+  "unavailable": "Deze preview kan niet worden gemeld."
+}

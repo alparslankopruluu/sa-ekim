@@ -1,0 +1,117 @@
+{
+  "title": "Instellingen",
+  "sections": {
+    "subscription": "Abonnement en credits",
+    "language": "Taal",
+    "notifications": "Meldingen",
+    "preferences": "Voorkeuren",
+    "data": "Gegevens en privacy",
+    "account": "Account",
+    "legal": "Juridisch en support",
+    "about": "Over",
+    "developer": "Ontwikkelaar"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Gratis abonnement",
+    "renews": "Verlengt op {{date}}",
+    "expires": "Eindigt op {{date}}",
+    "manage": "Abonnement beheren",
+    "restore": "Aankopen herstellen",
+    "upgrade": "Upgraden naar Pro",
+    "restoreDone": "Welkom terug. Pro is hersteld.",
+    "restoreNone": "Geen eerdere aankopen gevonden.",
+    "balance": "Creditsaldo",
+    "buyCredits": "Credits kopen",
+    "freeHigh_one": "{{count}} gratis HD-preview",
+    "freeHigh_other": "{{count}} gratis HD-previews"
+  },
+  "language": {
+    "title": "Taal",
+    "pickerTitle": "Kies een taal",
+    "rtlNote": "Start Kök opnieuw op om de schrijfrichting te wijzigen.",
+    "closePicker": "Talenlijst sluiten"
+  },
+  "notifications": {
+    "previews": "Preview klaar",
+    "offers": "Cadeaus en aanbiedingen",
+    "reminders": "Trajectherinneringen",
+    "remindersHint": "Nazorg-, wekelijkse foto- en faseherinneringen. Faseherinneringen horen bij Pro.",
+    "systemOff": "Meldingen staan uit voor Kök in de systeeminstellingen. Tik om ze te openen."
+  },
+  "preferences": {
+    "haptics": "Haptiek"
+  },
+  "data": {
+    "wipe": "Al mijn gegevens verwijderen",
+    "wipeHint": "Verwijdert je trajectfoto's, uitvallogboek en previews van dit apparaat.",
+    "wipeTitle": "Al je gegevens verwijderen?",
+    "wipeBody": "Dit verwijdert definitief je operatiedatum, voortgangsfoto's, uitvallogboek en opgeslagen previews. Je abonnement en credits blijven bij je account. Dit kan niet ongedaan worden gemaakt.",
+    "wipeConfirm": "Mijn gegevens verwijderen",
+    "wiping": "Verwijderen…",
+    "wiped": "Je gegevens zijn van dit apparaat verwijderd."
+  },
+  "account": {
+    "guest": "Anoniem account",
+    "id": "Account-ID",
+    "delete": "Account verwijderen",
+    "deleteHint": "Verwijdert je account, credits en geüploade foto's van onze servers.",
+    "deleteTitle": "Je account verwijderen?",
+    "deleteBody": "Dit verwijdert definitief je account, credits, opgeslagen previews en elke foto die je hebt geüpload, en wist je traject op dit apparaat. Een actief abonnement moet je apart opzeggen in de accountinstellingen van je store.",
+    "deleteConfirm": "Account verwijderen",
+    "deleting": "Verwijderen…",
+    "deleted": "Je account is verwijderd."
+  },
+  "legal": {
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "ai": "Zo werken AI-previews",
+    "support": "Hulp en support"
+  },
+  "about": {
+    "version": "Versie {{version}} ({{build}})",
+    "contact": "Mail de support",
+    "rate": "Beoordeel Kök",
+    "replay": "Onboarding opnieuw bekijken"
+  },
+  "confirm": {
+    "cancel": "Annuleren"
+  },
+  "developer": {
+    "open": "Ontwikkelaarstools",
+    "backend": "Backendmodus",
+    "replayOnboarding": "Onboarding opnieuw bekijken",
+    "offerings": "Storeaanbod",
+    "purchase": "Aankoopresultaat",
+    "wheel": "Plaatsing van het cadeaurad",
+    "failNext": "Laat de volgende preview mislukken",
+    "cohort": "Groepsaantal voor mijn week",
+    "addCredits": "50 credits toekennen",
+    "reset": "Alle mockgegevens resetten",
+    "resetDone": "Mockgegevens zijn gereset.",
+    "credits": "Credits toegekend.",
+    "testCrash": "Een testcrash versturen",
+    "events": "Gebeurtenislogboek",
+    "empty": "Nog geen gebeurtenissen",
+    "mockOnly": "Deze schakelaars bestaan alleen op de mockbackend.",
+    "values": {
+      "ok": "ok",
+      "slow": "traag",
+      "fail": "mislukt",
+      "empty": "leeg",
+      "success": "gelukt",
+      "cancel": "annuleren",
+      "home": "start",
+      "onboarding_exit": "onboarding-uitgang",
+      "off": "uit"
+    },
+    "storefront": "Valuta van de mockstorefront",
+    "giftOffer": "Toon het cadeauaanbod zonder prijs",
+    "forcePro": "Pro-recht",
+    "grantFreeHigh": "Een gratis HD-preview toekennen",
+    "previewsEnabled": "Previews ingeschakeld (noodschakelaar)",
+    "nextPrize": "Volgende radprijs",
+    "honest": "eerlijke trekking",
+    "offerCacheNote": "Wijzigingen in de store gelden bij de volgende paywall-poging of na vijf minuten."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Volg je traject van 12–18 maanden, week voor week",
+    "hairline": "Volg het traject van je haarlijn, week voor week",
+    "crown": "Volg het traject van je kruin, week voor week",
+    "part": "Volg het traject van je scheiding, week voor week",
+    "brows": "Volg het traject van je wenkbrauwen, week voor week",
+    "beard": "Volg het traject van je baard, week voor week"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Je eerste preview is klaar. Pro voegt de volledige tijdlijn toe: vergelijken, de fasebalk en elke wekelijkse gids."
+    },
+    "settings": {
+      "subtitle": "Zie wat gebruikelijk is voor jouw week, naast je eigen foto's."
+    },
+    "home_banner": {
+      "subtitle": "Zie wat gebruikelijk is voor jouw week, naast je eigen foto's."
+    },
+    "notification": {
+      "subtitle": "Zie wat gebruikelijk is voor jouw week, naast je eigen foto's."
+    },
+    "gift": {
+      "subtitle": "Je cadeauprijs geldt voor het eerste jaar van het jaarabonnement."
+    },
+    "locked_compare": {
+      "title": "Vergelijk je foto's, week voor week",
+      "subtitle": "Schuif tussen twee foto's of bekijk ze naast elkaar, elk met het label van zijn week."
+    },
+    "locked_band": {
+      "title": "Zie het gebruikelijke bereik voor jouw week",
+      "subtitle": "Je foto naast de fasebalk. Die toont een gebruikelijk bereik, en individuele resultaten verschillen."
+    },
+    "locked_photos": {
+      "title": "Bewaar elke week in je overzicht",
+      "subtitle": "Gratis bewaart {{count}} voortgangsfoto's. Pro bewaart de volledige 12–18 maanden."
+    },
+    "locked_report": {
+      "title": "Deel een rapport met je kliniek",
+      "subtitle": "Een pdf met je eerste en nieuwste foto per hoek, weeklabels en je samenvatting van haaruitval."
+    },
+    "locked_hd": {
+      "title": "Meer credits voor HD-previews",
+      "subtitle": "HD-previews gebruiken credits en hebben geen watermerk. Pro bevat een creditbudget om ze aan uit te geven."
+    },
+    "locked_guide": {
+      "title": "De volledige wekelijkse gids",
+      "subtitle": "Wat er gewoonlijk gebeurt in elke fase, wat gebruikelijk is en wat je deze week kunt doen."
+    },
+    "insufficient_credits": {
+      "title": "Je hebt hiervoor meer credits nodig",
+      "subtitle": "Pro bevat elke week of maand een creditbudget. Je kunt ook een creditpakket kopen."
+    },
+    "result_upgrade": {
+      "title": "Bekijk het in HD",
+      "subtitle": "HD-previews hebben geen watermerk en gebruiken credits. Pro bevat credits om ze aan uit te geven."
+    }
+  },
+  "benefits": {
+    "photos": "Onbeperkt voortgangsfoto's",
+    "compare": "Vergelijken met schuif en naast elkaar",
+    "band": "Verwachte fasebalk bij je foto's",
+    "guide": "De volledige gids voor elke fase",
+    "reminders": "Fase- en fotoherinneringen",
+    "report": "Pdf-rapport voor de kliniek",
+    "cohort": "Zie hoeveel mensen in dezelfde week zitten",
+    "hd": "Inbegrepen credits gelden voor HD-previews",
+    "credits": "Een creditbudget voor previews"
+  },
+  "plans": {
+    "annual": "Jaarlijks",
+    "monthly": "Maandelijks",
+    "weekly": "Wekelijks",
+    "bestValue": "Beste prijs",
+    "save": "Bespaar {{percent}}% t.o.v. wekelijks",
+    "perWeek": "{{price}}/week",
+    "perMonth": "{{price}}/maand",
+    "perYear": "{{price}}/jaar",
+    "firstYear": "{{price}} eerste jaar"
+  },
+  "planCredits": {
+    "weekly": "Bevat elke week {{count}} credits",
+    "monthly": "Bevat elke maand {{count}} credits",
+    "annual": "Bevat {{initial}} credits bij de start, daarna {{count}} per week"
+  },
+  "cta": {
+    "subscribe": "Verder",
+    "processing": "Verwerken…"
+  },
+  "disclosure": {
+    "annual": "Je betaalt {{price}} per jaar. Wordt automatisch verlengd totdat je opzegt. Zeg op elk moment op via de accountinstellingen van je store. De getoonde prijs is het bedrag dat je betaalt.",
+    "monthly": "Je betaalt {{price}} per maand. Wordt automatisch verlengd totdat je opzegt. Zeg op elk moment op via de accountinstellingen van je store. De getoonde prijs is het bedrag dat je betaalt.",
+    "weekly": "Je betaalt {{price}} per week. Wordt automatisch verlengd totdat je opzegt. Zeg op elk moment op via de accountinstellingen van je store. De getoonde prijs is het bedrag dat je betaalt.",
+    "intro": "Je cadeauprijs: {{intro}} voor het eerste jaar, daarna {{price}} per jaar. Wordt automatisch verlengd totdat je opzegt. Zeg op elk moment op via de accountinstellingen van je store."
+  },
+  "restore": "Herstellen",
+  "restoreNone": "Geen eerdere aankopen gevonden.",
+  "restoreSuccess": "Welkom terug. Pro is hersteld.",
+  "privacy": "Privacy",
+  "termsLink": "Voorwaarden",
+  "loading": "Abonnementen laden…",
+  "failedTitle": "Abonnementen zijn niet geladen",
+  "failedBody": "Controleer je verbinding en probeer het opnieuw.",
+  "emptyBody": "Abonnementen zijn nu niet beschikbaar. Probeer het later opnieuw.",
+  "purchaseFailed": "De aankoop is niet doorgegaan. Probeer het opnieuw.",
+  "pending": "Je aankoop wacht op goedkeuring.",
+  "success": "Je bent Pro. Bedankt.",
+  "mockBadge": "Teststore · geen echte afschrijvingen",
+  "giftBanner": "Je cadeau",
+  "creditsLink": "Heb je alleen credits nodig? Bekijk creditpakketten",
+  "closeLabel": "Sluiten"
+}

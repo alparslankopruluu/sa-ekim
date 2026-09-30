@@ -1,0 +1,44 @@
+{
+  "title": "Bandingkan",
+  "close": "Tutup",
+  "mode": {
+    "wipe": "Geser",
+    "side": "Berdampingan"
+  },
+  "label": {
+    "before": "Sebelum",
+    "week": "Minggu {{n}}",
+    "none": "Foto"
+  },
+  "picker": {
+    "before": "Foto sebelumnya",
+    "after": "Foto sesudahnya",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Penggeser untuk membandingkan dua foto. {{before}} di kiri, {{after}} di kanan. Geser untuk memindahkan pembatas.",
+  "sideA11y": "{{label}}, foto {{angle}}",
+  "mismatch": "Kedua foto ini menampilkan sudut yang berbeda. Membandingkan sudut yang sama hasilnya paling baik.",
+  "empty": {
+    "title": "Dua foto untuk dibandingkan",
+    "body": "Ambil setidaknya dua foto dengan sudut yang sama, lalu bandingkan di sini.",
+    "action": "Ambil foto"
+  },
+  "locked": {
+    "title": "Bandingkan adalah bagian dari Pro",
+    "body": "Lihat dua foto berdampingan beserta minggu masing-masing. Foto pertamamu tetap terlihat.",
+    "cta": "Buka Bandingkan"
+  },
+  "share": {
+    "action": "Bagikan",
+    "preparing": "Menyiapkan…",
+    "error": "Perbandingan tidak dapat disiapkan. Coba lagi.",
+    "unavailable": "Berbagi tidak tersedia di perangkat ini.",
+    "dialog": "Bagikan perbandinganmu"
+  },
+  "report": {
+    "title": "Perbandingan foto",
+    "heading": "{{before}} dan {{after}}",
+    "disclaimer": "Catatan progres pribadi — bukan dokumen medis"
+  },
+  "mark": "Kök"
+}

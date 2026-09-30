@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök memakai kamera agar kamu bisa memotret progresmu dari sudut yang sama setiap kali.",
+  "NSPhotoLibraryUsageDescription": "Kök membuka fotomu agar kamu bisa memilih satu untuk pratinjau atau perjalananmu.",
+  "NSPhotoLibraryAddUsageDescription": "Kök menyimpan pratinjau dan gambar perbandinganmu ke galeri fotomu.",
+  "NSMotionUsageDescription": "Kök membaca sensor gerak untuk memeriksa apakah ponselmu dipegang tegak agar fotonya konsisten."
+}

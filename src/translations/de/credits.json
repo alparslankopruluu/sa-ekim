@@ -1,0 +1,23 @@
+{
+  "title": "Credits holen",
+  "subtitle": "Credits verfallen nie. Eine Standard-Vorschau kostet {{standard}}, eine HD-Vorschau {{high}}.",
+  "balance": "Dein Guthaben",
+  "equivalent": "≈ {{standard}} Standard- oder {{high}} HD-Vorschauen",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Beliebt",
+  "success": "{{count}} Credits hinzugefügt.",
+  "pending": "Dein Kauf wartet auf Genehmigung.",
+  "failedBody": "Die Credit-Pakete konnten nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+  "emptyBody": "Credit-Pakete sind gerade nicht verfügbar. Bitte versuche es später erneut.",
+  "freeHigh_one": "{{count}} kostenlose HD-Vorschau wartet",
+  "freeHigh_other": "{{count}} kostenlose HD-Vorschauen warten",
+  "examplesTitle": "Wie weit Credits reichen",
+  "exampleStandard": "Standard-Vorschau",
+  "exampleHigh": "HD-Vorschau, ohne Wasserzeichen",
+  "proHint": "Pro-Mitglieder erhalten jede Woche oder jeden Monat Credits.",
+  "close": "Credit-Shop schließen"
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Denunciar esta vista previa",
+  "subtitle": "Cuéntanos qué está mal. Revisamos cada denuncia en un plazo de 48 horas.",
+  "inaccurate": "Parece inexacta",
+  "unsafe": "Parece insegura o inapropiada",
+  "privacy": "Plantea un problema de privacidad",
+  "other": "Otra cosa",
+  "send": "Enviar denuncia",
+  "sent": "Gracias. La revisaremos en un plazo de 48 horas.",
+  "clinic": {
+    "action": "Exportar registro de progreso",
+    "exporting": "Preparando…",
+    "title": "Registro de progreso de restauración capilar",
+    "brand": "Kök",
+    "clinicLine": "Clínica: {{name}}",
+    "operationLine": "Fecha de la operación: {{date}}",
+    "generatedLine": "Creado el {{date}}",
+    "photosHeading": "Fotos",
+    "noPhotos": "Aún no hay fotos.",
+    "shedHeading": "Registro de caída",
+    "shedEmpty": "Aún no hay entradas de caída.",
+    "col": {
+      "week": "Semana",
+      "days": "Días registrados",
+      "average": "Media",
+      "max": "Máximo"
+    },
+    "weekRow": "Semana {{n}}",
+    "overall": "Todas las entradas",
+    "before": "Antes",
+    "week": "Semana {{n}}",
+    "disclaimer": "Registro personal de progreso — no es un documento médico",
+    "dialog": "Comparte tu registro de progreso",
+    "failed": "No se pudo crear el informe. Inténtalo de nuevo.",
+    "empty": "Primero añade una foto o una entrada de caída.",
+    "unsupported": "Los informes no se pueden crear en el navegador."
+  },
+  "unavailable": "Esta vista previa no está disponible para denunciar."
+}

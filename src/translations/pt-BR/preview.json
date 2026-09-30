@@ -1,0 +1,250 @@
+{
+  "title": "Nova prévia",
+  "subtitle": "Escolha um estilo e uma foto para ver um visual possível.",
+  "aiLabel": "Prévia de IA — não é uma previsão do seu resultado",
+  "aiLabelShort": "Prévia de IA",
+  "aiLabelDetail": "Ela mostra um visual possível, não o que vai acontecer.",
+  "common": {
+    "close": "Fechar",
+    "back": "Voltar",
+    "retry": "Tentar de novo",
+    "cancel": "Cancelar",
+    "delete": "Excluir"
+  },
+  "goals": {
+    "label": "Região",
+    "hairline": "Linha do cabelo",
+    "crown": "Coroa",
+    "part": "Risca",
+    "brows": "Sobrancelhas",
+    "beard": "Barba"
+  },
+  "angles": {
+    "front": "foto de frente",
+    "left": "foto do lado esquerdo",
+    "right": "foto do lado direito",
+    "top": "foto do topo da cabeça",
+    "crown": "foto da coroa"
+  },
+  "styles": {
+    "label": "Estilo",
+    "hairline_soft": {
+      "name": "Linha do cabelo natural e suave",
+      "description": "Uma linha do cabelo levemente suavizada, que mantém um formato natural."
+    },
+    "hairline_temples": {
+      "name": "Refinamento das têmporas",
+      "description": "Um visual mais equilibrado ao redor das têmporas."
+    },
+    "hairline_lower": {
+      "name": "Linha mais baixa e definida",
+      "description": "Uma linha do cabelo um pouco mais baixa e mais definida."
+    },
+    "hairline_density": {
+      "name": "Mais densidade",
+      "description": "Um visual mais denso dentro da sua linha do cabelo atual."
+    },
+    "crown_light": {
+      "name": "Leve",
+      "description": "Cobertura leve na coroa."
+    },
+    "crown_medium": {
+      "name": "Média",
+      "description": "Cobertura média na coroa."
+    },
+    "crown_full": {
+      "name": "Total",
+      "description": "Cobertura total na coroa."
+    },
+    "part_light": {
+      "name": "Leve",
+      "description": "Volume leve ao longo da risca."
+    },
+    "part_medium": {
+      "name": "Médio",
+      "description": "Volume médio ao longo da risca."
+    },
+    "part_full": {
+      "name": "Cheio",
+      "description": "Um visual cheio ao longo da risca."
+    },
+    "brows_natural": {
+      "name": "Natural",
+      "description": "Sobrancelhas naturais que mantêm o seu formato."
+    },
+    "brows_fuller": {
+      "name": "Mais cheias",
+      "description": "O seu formato, um pouco mais cheio."
+    },
+    "brows_arched": {
+      "name": "Arqueadas",
+      "description": "Uma linha de sobrancelha suavemente arqueada e alinhada."
+    },
+    "beard_patch": {
+      "name": "Preenchimento de falhas",
+      "description": "Falhas finas preenchidas."
+    },
+    "beard_full": {
+      "name": "Barba cheia",
+      "description": "Uma barba mais cheia no maxilar e nas bochechas."
+    },
+    "beard_moustache": {
+      "name": "Bigode",
+      "description": "Um visual mais cheio acima do lábio."
+    }
+  },
+  "bestAngle": "Funciona melhor com uma {{angle}}",
+  "density": {
+    "label": "Densidade",
+    "natural": "Natural",
+    "fuller": "Mais cheio",
+    "full": "Cheio"
+  },
+  "quality": {
+    "label": "Qualidade",
+    "standard": {
+      "title": "Padrão",
+      "description": "Uma primeira olhada rápida."
+    },
+    "high": {
+      "title": "Alta",
+      "description": "Mais detalhes."
+    }
+  },
+  "price": {
+    "label": "Esta prévia",
+    "free": "Grátis",
+    "freeHigh": "Prévia HD grátis",
+    "credits_one": "{{count}} crédito",
+    "credits_other": "{{count}} créditos",
+    "freeNote": "Sua primeira prévia é grátis e inclui marca d'água.",
+    "balance_one": "Você tem {{count}} crédito.",
+    "balance_other": "Você tem {{count}} créditos.",
+    "short_one": "Você tem {{count}} crédito, e esta prévia precisa de {{cost}}.",
+    "short_other": "Você tem {{count}} créditos, e esta prévia precisa de {{cost}}.",
+    "useFreeHigh": "Usar minha prévia HD grátis",
+    "useFreeHighHint_one": "Você tem {{count}} prévia HD grátis.",
+    "useFreeHighHint_other": "Você tem {{count}} prévias HD grátis."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Ainda sem foto",
+    "take": "Tirar uma foto",
+    "library": "Escolher da galeria",
+    "journey": "Usar a última foto da jornada",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Remover foto",
+    "selected": "Foto selecionada",
+    "sentNote": "Sua foto só é enviada quando você toca em Criar, depois de aprovar o processamento por IA.",
+    "libraryFailed": "Não foi possível abrir a sua galeria de fotos."
+  },
+  "cta": {
+    "create": "Criar prévia",
+    "createFree": "Criar prévia grátis",
+    "getCredits": "Obter créditos",
+    "continue": "Continuar",
+    "addPhoto": "Adicione uma foto para continuar",
+    "chooseStyle": "Escolha um estilo para continuar"
+  },
+  "helper": {
+    "needsConsent": "Antes de a sua foto ser enviada, pedimos a sua aprovação uma vez.",
+    "needsCredits": "Você precisa de mais créditos para esta prévia.",
+    "walletError": "Não foi possível carregar seus créditos."
+  },
+  "rendering": {
+    "title": "Sua prévia",
+    "status": {
+      "uploading": "Enviando sua foto",
+      "creating": "Iniciando sua prévia",
+      "waiting": "Iniciando sua prévia",
+      "queued": "Aguardando uma vaga livre",
+      "processing": "Criando sua prévia",
+      "finalizing": "Finalizando"
+    },
+    "estimate": "Costuma levar menos de um minuto.",
+    "background": "Você pode sair desta tela. Continuamos por aqui e avisamos quando estiver pronta.",
+    "notifyMe": "Avisar quando estiver pronta",
+    "notifyOn": "Avisaremos quando estiver pronta.",
+    "keepBrowsing": "Continuar navegando",
+    "cancel": "Cancelar prévia",
+    "cancelHint": "Seus créditos são devolvidos se você cancelar.",
+    "cancelTooLate": "Ela já está sendo finalizada e não pode mais ser cancelada.",
+    "failedTitle": "Esta prévia não foi concluída",
+    "canceledTitle": "Prévia cancelada",
+    "offlineTitle": "Você está sem conexão",
+    "errorTitle": "Não foi possível iniciar a prévia",
+    "refunded_one": "Seu {{count}} crédito foi devolvido.",
+    "refunded_other": "Seus {{count}} créditos foram devolvidos.",
+    "nothingCharged": "Nada foi cobrado.",
+    "retrySafe": "Tentar de novo é seguro: você não será cobrado duas vezes.",
+    "retry": "Tentar de novo",
+    "getCredits": "Obter créditos",
+    "reviewConsent": "Revisar e aprovar",
+    "seePlans": "Ver planos",
+    "choosePhoto": "Escolher outra foto",
+    "backToStyles": "Voltar aos estilos",
+    "close": "Fechar",
+    "photoA11y": "Sua foto",
+    "ringA11y": "Progresso da prévia, {{percent}} por cento"
+  },
+  "result": {
+    "title": "Sua prévia",
+    "before": "Sua foto",
+    "after": "Prévia de IA",
+    "watermark": "Kök · Prévia de IA",
+    "wipeA11y": "Controle deslizante de antes e depois. Deslize para cima ou para baixo para comparar sua foto com a prévia de IA.",
+    "demo": "Demo",
+    "save": "Salvar",
+    "share": "Compartilhar",
+    "report": "Denunciar",
+    "delete": "Excluir",
+    "saved": "Salva nas suas fotos",
+    "saveDenied": "Permita o acesso às fotos em Ajustes para salvar prévias.",
+    "unsupported": "Salvar e compartilhar não estão disponíveis para esta prévia aqui.",
+    "shareTitle": "Compartilhar sua prévia de IA",
+    "tryAnother": "Testar outro estilo",
+    "upgradeTitle": "Quer mais detalhes?",
+    "upgradeBody": "Uma prévia HD tem mais detalhes e não tem marca d'água.",
+    "notFound": "Não encontramos esta prévia. As prévias são excluídas após 30 dias.",
+    "toPreviews": "Voltar às prévias",
+    "beforeGone": "Sua foto original é mantida por apenas 30 dias, então a comparação não está mais disponível.",
+    "loadFailed": "Não foi possível carregar esta prévia.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Criar uma prévia HD ({{count}} crédito)",
+    "upgradeTry_other": "Criar uma prévia HD ({{count}} créditos)",
+    "upgradeTryFree": "Criar uma prévia HD grátis",
+    "availableUntil": "Disponível até {{date}}",
+    "saveNudge": "As prévias são excluídas após 30 dias. Salve nas suas fotos para guardar uma cópia.",
+    "saveNudgeSoon": "Esta prévia será excluída em breve. Salve nas suas fotos para guardar uma cópia.",
+    "expiredTitle": "Esta prévia foi excluída após 30 dias",
+    "expiredBody": "As prévias e as fotos que deram origem a elas são removidas após 30 dias. Você pode criar uma nova a qualquer momento."
+  },
+  "delete": {
+    "title": "Excluir esta prévia?",
+    "body": "A imagem da prévia é excluída em definitivo. Isso não pode ser desfeito.",
+    "done": "Prévia excluída"
+  },
+  "tab": {
+    "title": "Prévias",
+    "new": "Nova prévia",
+    "honest": "As prévias são imagens feitas por IA de um visual possível.",
+    "emptyTitle": "Ainda sem prévias",
+    "emptyBody": "Uma prévia é uma imagem feita por IA de um visual possível, não do que vai acontecer. Experimente um estilo na sua própria foto e compare.",
+    "emptyCta": "Criar uma prévia",
+    "loadFailed": "Não foi possível carregar suas prévias.",
+    "menu": "Mais ações",
+    "status": {
+      "queued": "Aguardando",
+      "processing": "Criando · {{percent}}%",
+      "finalizing": "Finalizando",
+      "failed": "Não concluída",
+      "canceled": "Cancelada"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Tentar de novo",
+    "delete": "Excluir",
+    "deleteA11y": "Excluir prévia",
+    "availableUntil": "Até {{date}}",
+    "expired": "Excluída após 30 dias"
+  }
+}

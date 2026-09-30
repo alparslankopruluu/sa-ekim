@@ -1,0 +1,28 @@
+{
+  "title": "Andra i din vecka",
+  "locked": {
+    "title": "Andra i din operationsvecka",
+    "body": "Pro visar hur många som opererades samma vecka som du. Du ser alltid bara ett antal.",
+    "cta": "Se med Pro"
+  },
+  "join": {
+    "title": "Gå med i din operationsvecka",
+    "body": "Välj att räknas med dem som opererades samma vecka. Bara ditt operationsdatum, ditt mål och din typ delas. Aldrig bilder, ditt namn eller din klinik.",
+    "switch": "Räkna med mig",
+    "needDate": "Ange först ditt operationsdatum.",
+    "setDate": "Ange datum"
+  },
+  "joining": "Ansluter…",
+  "joined": "Du räknas med i din vecka",
+  "loading": "Kontrollerar din vecka…",
+  "visible": "Du är en av {{count}} personer i din vecka",
+  "invitation": "Du är med. Ett antal visas när tillräckligt många delar din vecka, så att ingen kan pekas ut.",
+  "privacy": "Bara ditt operationsdatum, ditt mål och din typ delas.",
+  "error": {
+    "offline": "Du är offline. Försök igen när du är uppkopplad.",
+    "busy": "För många förfrågningar. Försök igen om en stund.",
+    "pro": "Det här kräver Pro.",
+    "generic": "Det gick inte att nå gruppen. Försök igen.",
+    "retry": "Försök igen"
+  }
+}

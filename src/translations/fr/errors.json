@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Veuillez redémarrer l'application et réessayer.",
+  "consent_required": "Veuillez d'abord lire et accepter l'information sur le traitement par IA.",
+  "invalid_input": "Quelque chose ne semble pas correct. Veuillez vérifier et réessayer.",
+  "content_blocked": "Cette photo ou ce texte ne peut pas être utilisé. Veuillez en essayer un autre.",
+  "insufficient_credits": "Vous n'avez pas assez de crédits pour cela.",
+  "pro_required": "Cette fonction est réservée à Pro.",
+  "rate_limited": "Vous allez un peu vite. Patientez un instant, puis réessayez.",
+  "already_claimed": "Vous l'avez déjà récupéré.",
+  "not_found": "Nous n'avons pas trouvé cela.",
+  "previews_disabled": "Les aperçus sont suspendus pour un court moment. Votre parcours n'est pas affecté. Veuillez réessayer plus tard.",
+  "provider_failed": "L'opération n'a pas abouti. Veuillez réessayer dans un instant.",
+  "timeout": "Cela a pris trop de temps. Veuillez réessayer.",
+  "offline": "Vous semblez être hors ligne. Vérifiez votre connexion et réessayez.",
+  "unknown": "Une erreur s'est produite. Veuillez réessayer."
+}

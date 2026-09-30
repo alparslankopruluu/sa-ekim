@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Ce qui se passe",
+    "normal": "Ce qui est habituel",
+    "todo": "À faire cette semaine",
+    "redflags": "Appelez votre clinique ou un médecin si…",
+    "care": "Jour après jour",
+    "wash": "Lavage",
+    "sleep": "Sommeil",
+    "avoid": "À éviter"
+  },
+  "header": {
+    "week": "Semaine",
+    "days": "Jours {{from}}–{{to}}",
+    "weeks": "semaines {{from}}–{{to}}",
+    "current": "Vous êtes ici",
+    "past": "Derrière vous",
+    "upcoming": "À venir"
+  },
+  "lock": {
+    "title": "Le guide complet des phases fait partie de Pro",
+    "body": "Ce qui se passe habituellement, ce qu'il faut faire cette semaine et des notes jour après jour — pour chaque phase.",
+    "cta": "Découvrir Pro",
+    "redflagsNote": "Quand contacter votre clinique reste gratuit pour tous, ci-dessous."
+  },
+  "notFound": {
+    "title": "Guide introuvable",
+    "body": "Cette page provient peut-être d'un ancien lien.",
+    "cta": "Retour"
+  },
+  "flags": {
+    "fever": "Fièvre ou frissons",
+    "redness": "Rougeur ou gonflement qui s'étend ou ne cesse d'empirer",
+    "pus": "Pus, écoulement jaunâtre ou mauvaise odeur",
+    "pain": "Douleur intense ou qui augmente",
+    "bleeding": "Saignement abondant, ou saignement qui ne s'arrête pas avec une légère pression",
+    "contact": "Si l'un de ces signes apparaît, contactez votre clinique ou un médecin. En cas d'urgence, appelez le numéro d'urgence local."
+  },
+  "disclaimer": "Information générale tirée des calendriers habituels des cliniques — ni un avis médical ni une prédiction. Les résultats varient d'une personne à l'autre ; les consignes de votre propre clinique passent avant tout.",
+  "care": {
+    "title": "Les deux premières semaines",
+    "tagline": "Protéger les greffons pendant qu'ils s'installent",
+    "happening": "Les nouveaux greffons s'installent. De petites croûtes se forment généralement autour de chaque greffon et tombent couramment en 7 à 14 jours environ. Un gonflement du front et des rougeurs sont couramment observés les premiers jours.",
+    "normal": "Habituellement, de petites croûtes, une légère rougeur, un peu de gonflement et une sensation de tiraillement sont courants durant les deux premières semaines.",
+    "todo1": "Suivez la routine de lavage que votre clinique vous a montrée.",
+    "todo2": "Dormez la tête surélevée les premières nuits si votre clinique le conseille.",
+    "todo3": "Laissez les croûtes tomber d'elles-mêmes — sans les gratter ni les arracher.",
+    "todo4": "Évitez les efforts intenses, les saunas, la baignade et le soleil direct jusqu'à ce que votre clinique vous dise le contraire.",
+    "redflags": "Quelques rougeurs et un peu de gonflement sont courants à ce stade. Contactez votre clinique ou un médecin si vous remarquez :",
+    "days": {
+      "intro": "De nombreuses cliniques conseillent ce qui suit. Suivez d'abord les consignes de votre propre clinique.",
+      "d0_3": {
+        "title": "Jours 0–3",
+        "wash": "De nombreuses cliniques effectuent le premier lavage elles-mêmes ou au jour 1–2, puis conseillent un rinçage très doux, sans frotter.",
+        "sleep": "De nombreuses cliniques conseillent de dormir sur le dos, la tête surélevée, par exemple sur deux oreillers ou un coussin de voyage.",
+        "avoid": "De nombreuses cliniques conseillent d'éviter de se pencher, de porter des charges, de toucher les greffons, l'alcool et le tabac."
+      },
+      "d4_7": {
+        "title": "Jours 4–7",
+        "wash": "De nombreuses cliniques conseillent un lavage doux quotidien avec les produits qu'elles vous ont remis, en tamponnant les greffons pour les sécher — sans jamais frotter.",
+        "sleep": "Il est encore couramment conseillé de garder la tête surélevée ; le gonflement s'atténue généralement vers ces jours-là.",
+        "avoid": "De nombreuses cliniques conseillent d'éviter les chapeaux serrés, la transpiration abondante, le soleil direct et le grattage."
+      },
+      "d8_14": {
+        "title": "Jours 8–14",
+        "wash": "De nombreuses cliniques autorisent maintenant un lavage un peu plus appuyé pour que les croûtes puissent tomber en douceur.",
+        "sleep": "Beaucoup de personnes peuvent reprendre leur position de sommeil habituelle vers cette période, si leur clinique est d'accord.",
+        "avoid": "De nombreuses cliniques conseillent d'éviter les piscines, les saunas, les entraînements intenses et de gratter les dernières croûtes."
+      }
+    }
+  },
+  "shed": {
+    "title": "Phase de chute",
+    "tagline": "Les cheveux greffés tombent couramment — les racines restent généralement en place",
+    "happening": "Entre les semaines 2 et 8, beaucoup de tiges de cheveux greffés tombent généralement. Les cliniques appellent souvent cela le « shock loss ». Les follicules sous la peau restent couramment en place et se reposent avant de produire de nouveaux cheveux.",
+    "normal": "Habituellement, une chute visible durant les semaines 2–8 est courante — les cliniques la décrivent comme une étape habituelle du calendrier.",
+    "todo1": "Gardez la photo hebdomadaire sous le même angle ; la série montre mieux l'évolution que le miroir.",
+    "todo2": "Notez l'importance de la chute quelques jours — un chiffre est plus facile à discuter qu'un ressenti.",
+    "todo3": "Continuez à laver en douceur, comme votre clinique le conseille.",
+    "todo4": "Notez vos questions pour le prochain rendez-vous de suivi avec votre clinique.",
+    "redflags": "La chute elle-même est courante durant ces semaines. Contactez votre clinique ou un médecin si vous remarquez :"
+  },
+  "quiet": {
+    "title": "Mois calmes",
+    "tagline": "Il semble se passer peu de choses en surface",
+    "happening": "Les mois 2 à 4 sont souvent appelés la phase du « vilain petit canard ». Les follicules sont généralement au repos et préparent de nouveaux cheveux ; la zone peut donc ressembler beaucoup à ce qu'elle était avant l'opération.",
+    "normal": "Habituellement, très peu de repousse visible durant les mois 2–4 est courant.",
+    "todo1": "Comparez les mois, pas les jours — votre série de photos est le regard le plus juste.",
+    "todo2": "De petits boutons peuvent apparaître lorsque de nouveaux cheveux percent ; demandez à votre clinique en cas de doute.",
+    "todo3": "Protégez votre cuir chevelu du soleil fort, comme votre clinique le conseille.",
+    "todo4": "Gardez le même angle et la même lumière pour chaque photo.",
+    "redflags": "Contactez votre clinique ou un médecin si vous remarquez :"
+  },
+  "sprout": {
+    "title": "Premières repousses",
+    "tagline": "De fins cheveux nouveaux commencent généralement à apparaître",
+    "happening": "Vers les mois 3–4, les premiers nouveaux cheveux apparaissent couramment. Ils sont souvent fins, clairs et irréguliers au début, et certains peuvent être bouclés ou ondulés.",
+    "normal": "Habituellement, les premiers cheveux sont fins, clairsemés et poussent à des vitesses différentes.",
+    "todo1": "Prenez vos photos de repère avec la même lumière et sous le même angle.",
+    "todo2": "Laissez du temps aux cheveux fins ou irréguliers — l'épaisseur se renforce couramment dans les mois suivants.",
+    "todo3": "Demandez à votre clinique quand les coupes, colorations et produits coiffants sont possibles pour vous.",
+    "todo4": "Regardez vos premières photos plutôt que les résultats des autres.",
+    "redflags": "Contactez votre clinique ou un médecin si vous remarquez :"
+  },
+  "grow": {
+    "title": "La densité s'installe",
+    "tagline": "Les cheveux s'épaississent et comblent généralement les vides",
+    "happening": "Entre les mois 6 et 9, les nouveaux cheveux deviennent généralement plus épais et plus longs, et la zone paraît couramment plus fournie de mois en mois.",
+    "normal": "Habituellement, la densité continue de progresser durant les mois 6–9, et l'aspect peut beaucoup changer sur cette période.",
+    "todo1": "Prenez vos photos de repère des 6 et 9 mois.",
+    "todo2": "Comparez avec vos propres premières photos, pas avec celles de quelqu'un d'autre.",
+    "todo3": "Renseignez-vous auprès de votre clinique sur le contrôle qu'elle propose habituellement vers cette période.",
+    "todo4": "Continuez à protéger votre cuir chevelu du soleil fort.",
+    "redflags": "Contactez votre clinique ou un médecin si vous remarquez :"
+  },
+  "mature": {
+    "title": "Maturation",
+    "tagline": "La texture et la densité se stabilisent généralement",
+    "happening": "Les mois 9 à 12 sont couramment une période de maturation : les cheveux continuent de s'épaissir et leur texture se stabilise. Les cliniques évaluent généralement le résultat de la ligne frontale vers 12 mois.",
+    "normal": "Habituellement, les changements deviennent plus lents et plus discrets durant les mois 9–12.",
+    "todo1": "Prenez votre photo de repère des 12 mois sous tous les angles.",
+    "todo2": "Placez votre première photo et la plus récente côte à côte avant votre rendez-vous à la clinique.",
+    "todo3": "Notez les questions que vous souhaitez poser lors de votre évaluation.",
+    "todo4": "Rappelez-vous que le vertex et la raie demandent généralement plus de temps.",
+    "redflags": "Contactez votre clinique ou un médecin si vous remarquez :"
+  },
+  "final": {
+    "title": "Maturation finale",
+    "tagline": "Le vertex et la raie peuvent continuer à mûrir",
+    "happening": "Après 12 mois, la plupart des changements sont généralement légers. Le vertex, la raie et les résultats de nombreuses femmes continuent couramment de mûrir jusqu'à 18 mois.",
+    "normal": "Habituellement, un changement lent et progressif après le mois 12 est courant, surtout au niveau du vertex.",
+    "todo1": "Prenez une photo tous les un à deux mois.",
+    "todo2": "Prenez le rendez-vous d'évaluation que votre clinique recommande.",
+    "todo3": "Apportez votre série de photos pour la partager avec votre clinique si vous le souhaitez.",
+    "todo4": "Gardez le même angle et la même lumière pour une comparaison juste.",
+    "redflags": "Contactez votre clinique ou un médecin si vous remarquez :"
+  }
+}

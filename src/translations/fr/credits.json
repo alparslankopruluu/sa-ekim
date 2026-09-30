@@ -1,0 +1,23 @@
+{
+  "title": "Obtenir des crédits",
+  "subtitle": "Les crédits n'expirent jamais. Un aperçu standard utilise {{standard}}, un aperçu HD utilise {{high}}.",
+  "balance": "Votre solde",
+  "equivalent": "≈ {{standard}} aperçus standard ou {{high}} aperçus HD",
+  "packs": {
+    "credits_10": "Découverte",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Populaire",
+  "success": "{{count}} crédits ajoutés.",
+  "pending": "Votre achat est en attente d'approbation.",
+  "failedBody": "Les packs de crédits n'ont pas pu se charger. Vérifiez votre connexion et réessayez.",
+  "emptyBody": "Les packs de crédits ne sont pas disponibles pour le moment. Veuillez réessayer plus tard.",
+  "freeHigh_one": "{{count}} aperçu HD gratuit en attente",
+  "freeHigh_other": "{{count}} aperçus HD gratuits en attente",
+  "examplesTitle": "Ce que permettent les crédits",
+  "exampleStandard": "Aperçu standard",
+  "exampleHigh": "Aperçu HD, sans filigrane",
+  "proHint": "Les membres Pro reçoivent des crédits chaque semaine ou chaque mois.",
+  "close": "Fermer la boutique de crédits"
+}

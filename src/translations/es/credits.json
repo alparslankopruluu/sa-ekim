@@ -1,0 +1,23 @@
+{
+  "title": "Obtener créditos",
+  "subtitle": "Los créditos no caducan. Una vista previa estándar usa {{standard}}; una vista previa HD usa {{high}}.",
+  "balance": "Tu saldo",
+  "equivalent": "≈ {{standard}} vistas previas estándar o {{high}} HD",
+  "packs": {
+    "credits_10": "Inicial",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Popular",
+  "success": "Se añadieron {{count}} créditos.",
+  "pending": "Tu compra está pendiente de aprobación.",
+  "failedBody": "No se cargaron los paquetes de créditos. Revisa tu conexión e inténtalo de nuevo.",
+  "emptyBody": "Los paquetes de créditos no están disponibles ahora. Inténtalo de nuevo más tarde.",
+  "freeHigh_one": "{{count}} vista previa HD gratis esperándote",
+  "freeHigh_other": "{{count}} vistas previas HD gratis esperándote",
+  "examplesTitle": "Hasta dónde llegan los créditos",
+  "exampleStandard": "Vista previa estándar",
+  "exampleHigh": "Vista previa HD, sin marca de agua",
+  "proHint": "Los miembros Pro reciben créditos cada semana o cada mes.",
+  "close": "Cerrar tienda de créditos"
+}

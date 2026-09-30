@@ -1,0 +1,44 @@
+{
+  "title": "So sánh",
+  "close": "Đóng",
+  "mode": {
+    "wipe": "Vuốt",
+    "side": "Song song"
+  },
+  "label": {
+    "before": "Trước",
+    "week": "Tuần {{n}}",
+    "none": "Ảnh"
+  },
+  "picker": {
+    "before": "Ảnh trước",
+    "after": "Ảnh sau",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Thanh trượt so sánh hai ảnh. {{before}} ở bên trái, {{after}} ở bên phải. Kéo để di chuyển đường phân chia.",
+  "sideA11y": "{{label}}, ảnh {{angle}}",
+  "mismatch": "Hai ảnh này có góc chụp khác nhau. So sánh cùng một góc sẽ cho kết quả tốt nhất.",
+  "empty": {
+    "title": "Cần hai ảnh để so sánh",
+    "body": "Hãy chụp ít nhất hai ảnh cùng một góc, rồi so sánh tại đây.",
+    "action": "Chụp ảnh"
+  },
+  "locked": {
+    "title": "So sánh thuộc gói Pro",
+    "body": "Xem hai ảnh song song kèm tuần tương ứng của mỗi ảnh. Ảnh đầu tiên của bạn vẫn luôn hiển thị.",
+    "cta": "Mở khóa so sánh"
+  },
+  "share": {
+    "action": "Chia sẻ",
+    "preparing": "Đang chuẩn bị…",
+    "error": "Không chuẩn bị được bản so sánh. Hãy thử lại.",
+    "unavailable": "Thiết bị này không hỗ trợ chia sẻ.",
+    "dialog": "Chia sẻ bản so sánh của bạn"
+  },
+  "report": {
+    "title": "So sánh ảnh",
+    "heading": "{{before}} và {{after}}",
+    "disclaimer": "Hồ sơ tiến trình cá nhân, không phải tài liệu y tế"
+  },
+  "mark": "Kök"
+}

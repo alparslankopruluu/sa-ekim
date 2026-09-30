@@ -1,0 +1,151 @@
+{
+  "welcome": {
+    "kicker": "Người bạn đồng hành cấy tóc",
+    "title": "Xem điều thường gặp ở tuần hồi phục của bạn",
+    "subtitle": "Xem trước một thay đổi trước phẫu thuật, rồi theo dõi điều thường gặp ở từng tuần hồi phục của bạn.",
+    "cta": "Bắt đầu",
+    "demoLabel": "Ví dụ thanh trượt trước và sau. Kéo để so sánh.",
+    "demoBefore": "Trước",
+    "demoAfter": "Sau",
+    "demoCaption": "Chỉ là hình minh họa. Bản xem trước của riêng bạn sẽ đến sau.",
+    "legalPrefix": "Khi tiếp tục, bạn đồng ý với",
+    "terms": "Điều khoản",
+    "privacy": "Chính sách quyền riêng tư"
+  },
+  "goal": {
+    "title": "Bạn đang quan tâm đến vùng nào?",
+    "subtitle": "Chúng tôi sẽ điều chỉnh lộ trình và các góc chụp ảnh cho phù hợp.",
+    "hairline": {
+      "title": "Đường chân tóc",
+      "subtitle": "Phía trước và hai bên thái dương"
+    },
+    "crown": {
+      "title": "Xoáy tóc",
+      "subtitle": "Phía sau và đỉnh đầu"
+    },
+    "part": {
+      "title": "Đường rẽ ngôi",
+      "subtitle": "Mật độ dọc đường rẽ"
+    },
+    "brows": {
+      "title": "Lông mày",
+      "subtitle": "Cấy lông mày"
+    },
+    "beard": {
+      "title": "Râu",
+      "subtitle": "Râu và ria mép"
+    }
+  },
+  "stage": {
+    "title": "Bạn đang ở giai đoạn nào?",
+    "subtitle": "Điều này quyết định những gì chúng tôi cho bạn xem trước.",
+    "researching": {
+      "title": "Vẫn đang tìm hiểu",
+      "subtitle": "Đang cân nhắc các lựa chọn, chưa đặt lịch"
+    },
+    "planned": {
+      "title": "Đã đặt lịch phẫu thuật",
+      "subtitle": "Tôi sắp có ngày phẫu thuật"
+    },
+    "done": {
+      "title": "Đã phẫu thuật",
+      "subtitle": "Tôi muốn theo dõi quá trình hồi phục"
+    }
+  },
+  "date": {
+    "titlePlanned": "Khi nào bạn phẫu thuật?",
+    "titleDone": "Bạn đã phẫu thuật khi nào?",
+    "subtitlePlanned": "Chúng tôi sẽ đếm ngược đến ngày 0 và chuẩn bị cho những tuần đầu của bạn.",
+    "subtitleDone": "Chúng tôi sẽ cho bạn biết bạn đang ở giai đoạn nào và điều gì thường gặp trong tuần này.",
+    "wheelDay": "Ngày",
+    "wheelMonth": "Tháng",
+    "wheelYear": "Năm",
+    "feedbackPast": "Ngày {{day}} · Tuần {{week}}",
+    "feedbackToday": "Hôm nay là ngày 0",
+    "feedbackFuture_other": "Sau {{count}} ngày",
+    "errorMustBeFuture": "Hãy chọn hôm nay hoặc một ngày sau đó.",
+    "errorMustBePast": "Hãy chọn hôm nay hoặc một ngày trước đó.",
+    "errorTooFar": "Ngày đó quá xa để theo dõi. Hãy chọn một ngày gần hơn.",
+    "errorInvalid": "Ngày đó không tồn tại.",
+    "skip": "Tôi chưa biết",
+    "skipNote": "Bạn có thể đặt hoặc đổi sau trong hành trình của mình."
+  },
+  "photo": {
+    "title": "Thêm ảnh cho bản xem trước",
+    "subtitleResearching": "Xem bản xem trước AI về việc một thay đổi có thể trông thế nào, trước khi bạn quyết định điều gì.",
+    "subtitlePlanned": "Xem bản xem trước AI về việc ca phẫu thuật của bạn có thể trông thế nào.",
+    "subtitleDone": "Xem bản xem trước AI về việc kết quả của bạn có thể trông thế nào khi tóc dần trưởng thành.",
+    "guidanceTitle": "Để có bản xem trước tốt nhất",
+    "angle": {
+      "front": "Nhìn thẳng vào camera, điện thoại ngang tầm mắt.",
+      "top": "Giữ điện thoại phía trên đầu, hướng xuống đỉnh đầu của bạn.",
+      "crown": "Chụp phần sau đầu, tốt nhất là có người giúp."
+    },
+    "area": {
+      "hairline": "Vuốt tóc ra sau để lộ rõ đường chân tóc.",
+      "crown": "Để lộ vùng xoáy tóc và giữ tóc phẳng.",
+      "part": "Rẽ ngôi như bạn vẫn thường làm.",
+      "brows": "Giữ lông mày không bị tóc hay kính che.",
+      "beard": "Để lộ vùng râu và chụp dưới ánh sáng đều."
+    },
+    "light": "Dùng ánh sáng ban ngày, không bộ lọc và không đội mũ.",
+    "take": "Chụp ảnh",
+    "library": "Chọn từ thư viện",
+    "change": "Chọn ảnh khác",
+    "selected": "Ảnh bạn đã chọn",
+    "placeholder": "Chưa chọn ảnh nào",
+    "privacy": "Ảnh của bạn chỉ được gửi đi để tạo bản xem trước, và chỉ sau khi bạn đồng ý ở màn hình tiếp theo.",
+    "skip": "Bỏ qua bản xem trước",
+    "skipNote": "Bạn có thể tạo sau từ tab Xem trước.",
+    "permissionDenied": "Chúng tôi không mở được ảnh của bạn. Hãy kiểm tra quyền trong Cài đặt."
+  },
+  "notify": {
+    "title": "Đừng bỏ lỡ những khoảnh khắc quan trọng",
+    "subtitle": "Hồi phục diễn ra chậm. Một lời nhắc nhẹ nhàng đúng lúc sẽ nhớ giúp bạn.",
+    "bulletPhase": "Chúng tôi sẽ báo khi giai đoạn thay đổi",
+    "bulletPhoto": "Chúng tôi sẽ báo khi đến ngày chụp ảnh",
+    "bulletCare": "Nhắc chăm sóc hằng ngày trong hai tuần đầu",
+    "allow": "Bật nhắc nhở",
+    "skip": "Để sau",
+    "note": "Nhắc chăm sóc là miễn phí. Nhắc theo giai đoạn và chụp ảnh đi kèm gói Pro. Bạn có thể thay đổi bất cứ lúc nào trong Cài đặt."
+  },
+  "crafting": {
+    "title": "Đang tạo bản xem trước của bạn",
+    "titleDone": "Bản xem trước của bạn đã sẵn sàng",
+    "subtitle": "Thường mất chưa đến một phút.",
+    "ringLabel": "Tiến độ bản xem trước, {{percent}} phần trăm",
+    "lineUpload": "Đang gửi ảnh của bạn một cách an toàn",
+    "lineReserve": "Đang giữ chỗ bản xem trước miễn phí của bạn",
+    "lineEdit": "Đang chỉnh sửa {{area}}",
+    "lineFinish": "Đang hoàn thiện những chi tiết cuối",
+    "stateDone": "xong",
+    "stateActive": "đang thực hiện",
+    "statePending": "đang chờ",
+    "area": {
+      "hairline": "đường chân tóc của bạn",
+      "crown": "vùng xoáy tóc của bạn",
+      "part": "đường rẽ ngôi của bạn",
+      "brows": "lông mày của bạn",
+      "beard": "bộ râu của bạn"
+    },
+    "skip": "Bỏ qua lúc này",
+    "skipNote": "Bản xem trước của bạn vẫn tiếp tục được tạo và sẽ chờ sẵn trong tab Xem trước.",
+    "failedTitle": "Chúng tôi chưa hoàn tất được bản xem trước của bạn",
+    "failedOffline": "Có vẻ bạn đang ngoại tuyến. Bạn chưa bị tính phí. Hãy kiểm tra kết nối và thử lại.",
+    "failedGeneric": "Đã xảy ra sự cố ở phía chúng tôi. Bạn chưa bị tính phí. Bạn có thể thử lại hoặc tiếp tục mà không cần bản xem trước.",
+    "failedBlocked": "Không thể dùng ảnh này cho bản xem trước. Bạn chưa bị tính phí. Bạn có thể tiếp tục và thử một ảnh khác sau.",
+    "skipFailed": "Tiếp tục không cần bản xem trước"
+  },
+  "reveal": {
+    "title": "Đây là bản xem trước về điều có thể xảy ra",
+    "subtitle": "Kéo thanh trượt để so sánh. Đây là hình minh họa do AI tạo ra.",
+    "before": "Ảnh của bạn",
+    "after": "Bản xem trước AI",
+    "disclaimer": "Bản xem trước AI, không phải dự đoán về kết quả của bạn",
+    "watermark": "Bản xem trước miễn phí có một watermark nhỏ.",
+    "wipeLabel": "So sánh trước và sau ảnh của bạn. Kéo để so sánh.",
+    "loading": "Đang chuẩn bị bản xem trước của bạn",
+    "loadFailed": "Chúng tôi không tải được ảnh xem trước. Ảnh đã được lưu trong tab Xem trước của bạn.",
+    "cta": "Xem kế hoạch của tôi"
+  }
+}

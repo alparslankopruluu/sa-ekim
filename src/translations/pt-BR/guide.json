@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "O que está acontecendo",
+    "normal": "O que é comum",
+    "todo": "Faça nesta semana",
+    "redflags": "Ligue para sua clínica ou um médico se…",
+    "care": "Dia a dia",
+    "wash": "Lavagem",
+    "sleep": "Sono",
+    "avoid": "Evite"
+  },
+  "header": {
+    "week": "Semana",
+    "days": "Dias {{from}}–{{to}}",
+    "weeks": "semanas {{from}}–{{to}}",
+    "current": "Você está aqui",
+    "past": "Já passou",
+    "upcoming": "Pela frente"
+  },
+  "lock": {
+    "title": "O guia completo das fases faz parte do Pro",
+    "body": "O que normalmente acontece, o que fazer nesta semana e notas dia a dia — para cada fase.",
+    "cta": "Ver o Pro",
+    "redflagsNote": "Quando entrar em contato com sua clínica continua gratuito para todos, logo abaixo."
+  },
+  "notFound": {
+    "title": "Guia não encontrado",
+    "body": "Esta página pode ser de um link antigo.",
+    "cta": "Voltar"
+  },
+  "flags": {
+    "fever": "Febre ou calafrios",
+    "redness": "Vermelhidão ou inchaço que se espalha ou continua piorando",
+    "pus": "Pus, secreção amarelada ou mau cheiro",
+    "pain": "Dor forte ou que aumenta",
+    "bleeding": "Sangramento intenso ou que não para com pressão suave",
+    "contact": "Se qualquer um desses sinais aparecer, entre em contato com sua clínica ou um médico. Em uma emergência, ligue para o número de emergência da sua região."
+  },
+  "disclaimer": "Conteúdo educativo geral, baseado em cronogramas comuns de clínicas — não é aconselhamento médico nem uma previsão. Os resultados individuais variam; as instruções da sua própria clínica vêm em primeiro lugar.",
+  "care": {
+    "title": "Primeiras duas semanas",
+    "tagline": "Proteger os enxertos enquanto eles se acomodam",
+    "happening": "Os novos enxertos estão se acomodando. Pequenas crostas normalmente se formam ao redor de cada enxerto e geralmente caem em cerca de 7 a 14 dias. Algum inchaço na testa e vermelhidão costumam aparecer nos primeiros dias.",
+    "normal": "Normalmente, pequenas crostas, vermelhidão leve, algum inchaço e sensação de repuxo são comuns nas duas primeiras semanas.",
+    "todo1": "Siga a rotina de lavagem que sua clínica mostrou.",
+    "todo2": "Nas primeiras noites, durma com a cabeça elevada, se sua clínica orientar.",
+    "todo3": "Deixe as crostas caírem sozinhas — sem arrancar nem coçar.",
+    "todo4": "Evite exercícios intensos, saunas, natação e sol direto até sua clínica liberar.",
+    "redflags": "Alguma vermelhidão e inchaço são comuns agora. Entre em contato com sua clínica ou um médico se notar:",
+    "days": {
+      "intro": "Muitas clínicas orientam o seguinte. Siga primeiro as instruções da sua própria clínica.",
+      "d0_3": {
+        "title": "Dias 0–3",
+        "wash": "Muitas clínicas fazem a primeira lavagem elas mesmas ou no dia 1–2 e depois orientam um enxágue bem suave, sem esfregar.",
+        "sleep": "Muitas clínicas orientam dormir de barriga para cima com a cabeça elevada, por exemplo em dois travesseiros ou num travesseiro de viagem.",
+        "avoid": "Muitas clínicas orientam evitar se curvar, levantar peso, tocar nos enxertos, álcool e cigarro."
+      },
+      "d4_7": {
+        "title": "Dias 4–7",
+        "wash": "Muitas clínicas orientam uma lavagem suave diária com os produtos fornecidos por elas, secando os enxertos com toques leves — nunca esfregando.",
+        "sleep": "Manter a cabeça elevada ainda é comumente orientado; o inchaço normalmente diminui por volta desses dias.",
+        "avoid": "Muitas clínicas orientam evitar bonés apertados, suor em excesso, sol direto e coçar."
+      },
+      "d8_14": {
+        "title": "Dias 8–14",
+        "wash": "Muitas clínicas permitem agora uma lavagem um pouco mais firme, para que as crostas saiam com delicadeza.",
+        "sleep": "Muitas pessoas podem voltar à posição habitual de dormir por volta de agora, se a clínica concordar.",
+        "avoid": "Muitas clínicas orientam evitar piscinas, saunas, treinos intensos e mexer nas últimas crostas."
+      }
+    }
+  },
+  "shed": {
+    "title": "Fase de queda",
+    "tagline": "Os fios transplantados comumente caem — as raízes normalmente permanecem",
+    "happening": "Entre as semanas 2 e 8, muitos dos fios transplantados normalmente caem. As clínicas costumam chamar isso de shock loss. Os folículos sob a pele geralmente permanecem no lugar e descansam antes de produzir novos fios.",
+    "normal": "Normalmente, uma queda perceptível nas semanas 2–8 é comum — as clínicas a descrevem como uma etapa habitual do cronograma.",
+    "todo1": "Mantenha a foto semanal do mesmo ângulo; a série mostra o padrão melhor do que o espelho.",
+    "todo2": "Registre a queda em alguns dias — um número é mais fácil de conversar do que uma sensação.",
+    "todo3": "Continue lavando com suavidade, como sua clínica orienta.",
+    "todo4": "Anote suas dúvidas para o próximo retorno na clínica.",
+    "redflags": "A queda em si é comum nessas semanas. Entre em contato com sua clínica ou um médico se notar:"
+  },
+  "quiet": {
+    "title": "Meses de calmaria",
+    "tagline": "Parece que pouco acontece na superfície",
+    "happening": "Os meses 2 a 4 costumam ser chamados de fase do “patinho feio”. Os folículos normalmente estão descansando e preparando novos fios, então a região pode ficar bem parecida com o que era antes da operação.",
+    "normal": "Normalmente, muito pouco crescimento visível nos meses 2–4 é comum.",
+    "todo1": "Compare meses, não dias — sua série de fotos é a visão mais justa.",
+    "todo2": "Pequenas bolinhas podem aparecer quando novos fios despontam; pergunte à sua clínica se tiver dúvida.",
+    "todo3": "Proteja o couro cabeludo do sol forte, como sua clínica orienta.",
+    "todo4": "Mantenha o mesmo ângulo e a mesma luz em todas as fotos.",
+    "redflags": "Entre em contato com sua clínica ou um médico se notar:"
+  },
+  "sprout": {
+    "title": "Primeiro crescimento",
+    "tagline": "Fios novos e finos normalmente começam a aparecer",
+    "happening": "Por volta dos meses 3–4, os primeiros fios novos comumente aparecem. No início, costumam ser finos, claros e irregulares, e alguns podem ser cacheados ou ondulados.",
+    "normal": "Normalmente, os primeiros fios são finos, falhados e crescem em velocidades diferentes.",
+    "todo1": "Tire suas fotos de marco com a mesma luz e do mesmo ângulo.",
+    "todo2": "Dê tempo aos fios finos ou irregulares — a espessura comumente aumenta nos meses seguintes.",
+    "todo3": "Pergunte à sua clínica quando cortes de cabelo, coloração e produtos de finalização estão liberados para você.",
+    "todo4": "Olhe para as suas primeiras fotos, em vez de olhar para os resultados de outras pessoas.",
+    "redflags": "Entre em contato com sua clínica ou um médico se notar:"
+  },
+  "grow": {
+    "title": "A densidade aumenta",
+    "tagline": "Os fios normalmente engrossam e preenchem",
+    "happening": "Entre os meses 6 e 9, os novos fios normalmente ficam mais grossos e mais longos, e a região comumente parece mais cheia de um mês para o outro.",
+    "normal": "Normalmente, a densidade continua aumentando nos meses 6–9, e a aparência pode mudar bastante nesse período.",
+    "todo1": "Tire suas fotos de marco dos 6 e 9 meses.",
+    "todo2": "Compare com as suas próprias primeiras fotos, não com as de outra pessoa.",
+    "todo3": "Pergunte à sua clínica sobre a consulta de acompanhamento que ela costuma oferecer por volta de agora.",
+    "todo4": "Continue protegendo o couro cabeludo do sol forte.",
+    "redflags": "Entre em contato com sua clínica ou um médico se notar:"
+  },
+  "mature": {
+    "title": "Amadurecimento",
+    "tagline": "A textura e a densidade normalmente se estabilizam",
+    "happening": "Os meses 9 a 12 são comumente uma época de amadurecimento: os fios continuam engrossando e a textura se estabiliza. As clínicas normalmente avaliam o resultado da linha do cabelo por volta dos 12 meses.",
+    "normal": "Normalmente, as mudanças ficam mais lentas e sutis nos meses 9–12.",
+    "todo1": "Tire sua foto de marco dos 12 meses de todos os ângulos.",
+    "todo2": "Coloque a primeira e a última foto lado a lado antes da consulta na clínica.",
+    "todo3": "Anote as perguntas que você quer fazer na sua avaliação.",
+    "todo4": "Lembre-se de que a coroa e a risca normalmente levam mais tempo.",
+    "redflags": "Entre em contato com sua clínica ou um médico se notar:"
+  },
+  "final": {
+    "title": "Amadurecimento final",
+    "tagline": "A coroa e a risca podem continuar amadurecendo",
+    "happening": "Após 12 meses, a maioria das mudanças normalmente é pequena. A coroa, a risca e os resultados de muitas mulheres comumente continuam amadurecendo por até 18 meses.",
+    "normal": "Normalmente, uma mudança lenta e gradual após o mês 12 é comum, especialmente na coroa.",
+    "todo1": "Tire uma foto a cada um ou dois meses.",
+    "todo2": "Marque a avaliação que sua clínica recomenda.",
+    "todo3": "Leve sua série de fotos para compartilhar com sua clínica, se quiser.",
+    "todo4": "Mantenha o mesmo ângulo e a mesma luz para uma comparação justa.",
+    "redflags": "Entre em contato com sua clínica ou um médico se notar:"
+  }
+}

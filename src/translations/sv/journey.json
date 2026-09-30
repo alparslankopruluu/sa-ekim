@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "God morgon",
+    "afternoon": "God eftermiddag",
+    "evening": "God kväll",
+    "night": "Hej, nattuggla"
+  },
+  "today": {
+    "subtitleUnset": "Din resa börjar med ett datum.",
+    "subtitleUpcoming": "Operation den {{date}}",
+    "editDate": "Redigera ditt datum och dina reseuppgifter",
+    "bandTitle": "Din vecka på den typiska tidslinjen"
+  },
+  "hero": {
+    "day": "Dag",
+    "dayWeek": "Dag {{day}} · Vecka {{week}}",
+    "monthOf": "Månad {{month}} av ungefär {{total}}",
+    "complete": "Bortom det typiska {{months}}-månadersfönstret",
+    "untilOperation_one": "{{count}} dag till din operation",
+    "untilOperation_other": "{{count}} dagar till din operation",
+    "daysToGo_one": "dag kvar",
+    "daysToGo_other": "dagar kvar",
+    "session": "Behandling",
+    "ofTotal": "av {{total}}",
+    "prpSession": "Behandling {{current}} av {{total}}",
+    "prpDone": "Alla {{total}} behandlingar loggade"
+  },
+  "phase": {
+    "rightNow": "Just nu",
+    "expected": "Väntat",
+    "normalLabel": "Typiskt just nu",
+    "clinicNote": "Individuella resultat varierar – följ din egen kliniks råd.",
+    "nextIn_one": "{{phase}} börjar typiskt om {{count}} dag",
+    "nextIn_other": "{{phase}} börjar typiskt om {{count}} dagar",
+    "last": "Detta är den sista fasen i den typiska tidslinjen.",
+    "openGuide": "Öppnar guiden för den här fasen"
+  },
+  "band": {
+    "a11y": "Diagram över det typiska intervallet längs tillväxttidslinjen. Du befinner dig i fasen: {{phase}}. Individuella resultat varierar.",
+    "a11yNone": "Diagram över det typiska intervallet längs tillväxttidslinjen. Individuella resultat varierar.",
+    "a11yLocked": "Diagram över det typiska intervallet, tillgängligt med Pro.",
+    "lockChip": "Se var du är · Pro",
+    "lockedHint": "Öppnar Pro-planerna",
+    "start": "Operation",
+    "end": "Mognad",
+    "disclaimer": "Typiskt intervall – individuella resultat varierar",
+    "seeTimeline": "Tidslinje"
+  },
+  "care": {
+    "items": {
+      "wash": "Försiktig tvätt, så som din klinik visade",
+      "sleep": "Sov med huvudet högt",
+      "hands": "Händerna borta från transplantaten – ingen kliande",
+      "sun": "Håll området borta från direkt sol"
+    }
+  },
+  "task": {
+    "eyebrow": "Nästa steg",
+    "photoCta": "Ta bild",
+    "baseline": {
+      "title": "Ta en ”före”-bild",
+      "body": "En bild före operationen gör varje senare jämförelse tydligare."
+    },
+    "care": {
+      "title": "Dagens skötsellista",
+      "doneTitle": "Dagens skötsel är avbockad",
+      "body": "Många kliniker rekommenderar dessa de första två veckorna. Din egen kliniks anvisningar gäller först.",
+      "progress": "{{done}} av {{total}} klara"
+    },
+    "photo": {
+      "firstTitle": "Ta din första framstegsbild",
+      "weeklyTitle": "Veckans bild",
+      "monthlyTitle": "Månadens bild",
+      "weeklyBody": "Varje vecka de första tre månaderna – samma vinkel, samma ljus.",
+      "monthlyBody": "Varje månad från månad fyra – samma vinkel, samma ljus."
+    },
+    "shed": {
+      "title": "Logga dagens hårfällning",
+      "body": "Hårfällning under vecka 2–8 är vanligt. Ett snabbt antal hjälper dig se mönstret över tid.",
+      "cta": "Logga hårfällning"
+    },
+    "prp": {
+      "title": "Behandling {{current}} av {{total}} är planerad",
+      "bodyToday": "Idag är den planerade dagen. En bild före behandlingen gör din serie jämförbar.",
+      "bodyLate": "Planerad till {{date}}. Markera den som klar när den har genomförts.",
+      "markDone": "Markera som klar"
+    },
+    "caughtUp": {
+      "title": "Allt är klart",
+      "body": "Inget behöver göras idag.",
+      "nextPhoto_one": "Nästa bild om {{count}} dag.",
+      "nextPhoto_other": "Nästa bild om {{count}} dagar.",
+      "nextSession_one": "Nästa behandling om {{count}} dag.",
+      "nextSession_other": "Nästa behandling om {{count}} dagar."
+    }
+  },
+  "setDate": {
+    "title": "Ange ditt operationsdatum",
+    "body": "Kök använder datumet för att visa din dag, vecka och fas och för att planera bildpåminnelser.",
+    "prpTitle": "Ange datum för din första behandling",
+    "prpBody": "Kök planerar dina behandlingar utifrån det och påminner dig dagen före varje behandling.",
+    "cta": "Ange datumet",
+    "privacy": "Stannar på din telefon."
+  },
+  "pre": {
+    "title": "Före din operation",
+    "body": "Många tycker att det här är till hjälp dagarna innan. Din kliniks anvisningar gäller först.",
+    "tip1": "Ta ”före”-bilder framifrån, ovanifrån och från sidorna i bra ljus.",
+    "tip2": "Be din klinik om deras skriftliga eftervårdsanvisningar.",
+    "tip3": "Planera några lugna dagar efter operationen.",
+    "tip4": "Ha en nackkudde redo för att sova med huvudet högt.",
+    "clinicNote": "Frågor om läkemedel eller din hälsa? Fråga din klinik eller en läkare."
+  },
+  "previewCard": {
+    "title": "Förhandsvisa en stil",
+    "body": "En AI-förhandsvisning för att utforska idéer – inte en förutsägelse av ditt resultat."
+  },
+  "shedPeek": {
+    "title": "Senaste hårfällning",
+    "hint": "Öppnar hårfällningsloggen",
+    "note": "Hårfällning under vecka 2–8 är vanligt."
+  },
+  "tabs": {
+    "timeline": "Tidslinje",
+    "photos": "Bilder",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "Den typiska tidslinjen",
+    "phasesTitle": "Faser"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Dag {{from}}–{{to}}",
+    "weeks": "Vecka {{from}}–{{to}}",
+    "current": "Nuvarande fas",
+    "past": "Bakom dig",
+    "upcoming": "Framför dig",
+    "youAreHere": "Du är här"
+  },
+  "maturation": {
+    "title": "När bedöms resultatet?",
+    "note": "Hår fortsätter typiskt att mogna i ungefär {{months}} månader efter operationen.",
+    "evaluate12": "Kliniker utvärderar typiskt resultatet efter ungefär 12 månader.",
+    "evaluate18": "Kliniker tittar typiskt på resultatet efter ungefär 12 månader, och hjässan eller benan kan fortsätta mogna i upp till 18 månader.",
+    "clinicNote": "Individuella resultat varierar – din klinik bestämmer dina egna kontroller."
+  },
+  "photos": {
+    "add": "Lägg till",
+    "count_one": "{{count}} bild",
+    "count_other": "{{count}} bilder",
+    "freeCounter_one": "{{count}} av {{limit}} gratisbilder",
+    "freeCounter_other": "{{count}} av {{limit}} gratisbilder",
+    "limitReached": "{{limit}} gratisbilder använda – med Pro får du obegränsat antal bilder",
+    "allAngles": "Alla",
+    "before": "Före operationen",
+    "week": "Vecka {{week}} · {{date}}",
+    "all": "Bilder",
+    "compare": "Jämför",
+    "compareHint": "Välj två bilder för att jämföra dem.",
+    "selectHint": "Välj två bilder.",
+    "selected_one": "{{count}} av {{max}} vald",
+    "selected_other": "{{count}} av {{max}} valda",
+    "compareCta": "Jämför",
+    "groupCount_one": "{{count}} bild",
+    "groupCount_other": "{{count}} bilder",
+    "thumbLabel": "Bild ({{angle}}), {{group}}",
+    "missing": "Filen saknas",
+    "emptyTitle": "Inga bilder ännu",
+    "emptyBody": "Ta en bild per vinkel. Nästa gång hjälper en svag skugga av den dig att ställa in samma vy.",
+    "emptyCta": "Ta den första bilden",
+    "emptyFilter": "Inga bilder från den här vinkeln ännu."
+  },
+  "angles": {
+    "front": "Framifrån",
+    "left": "Vänster",
+    "right": "Höger",
+    "top": "Ovanifrån",
+    "crown": "Hjässa"
+  },
+  "plan": {
+    "intro": "Bildkontroller vid de månader som kliniker ofta tittar på. Samma vinkel, samma ljus.",
+    "checkpoint": "Månad {{month}}",
+    "status": {
+      "done": "Bild tagen",
+      "due": "Dags nu",
+      "upcoming": "Kommande",
+      "missed": "Ingen bild"
+    },
+    "takePhoto": "Ta bild",
+    "note": "En kontroll räknas med vilken bild som helst från en vecka före till två veckor efter."
+  },
+  "prp": {
+    "timelineTitle": "Din PRP-/mesoterapikur",
+    "timelineBody": "Kurer planeras ofta som några behandlingar med några veckors mellanrum, följt av underhåll. Din klinik bestämmer din egen plan.",
+    "openPlan": "Öppna planen",
+    "emptyTitle": "Planera dina behandlingar",
+    "emptyBody": "Börja med en vanlig plan: {{sessions}} behandlingar, {{weeks}} veckor emellan. Du kan ändra varje datum.",
+    "createPlan": "Skapa plan",
+    "intro": "Bocka av en behandling när den har genomförts. En bild före varje behandling gör din serie jämförbar.",
+    "session": "Behandling {{number}}",
+    "done": "Klar",
+    "due": "Dags",
+    "planned": "Planerad",
+    "markDoneLabel": "Behandling {{number}} den {{date}} klar",
+    "changeDate": "Ändra datum",
+    "photoBefore": "Bild före",
+    "remove": "Ta bort",
+    "removeTitle": "Ta bort den här behandlingen?",
+    "removeBody": "Dess påminnelse tas också bort.",
+    "addSession": "Lägg till en behandling",
+    "maintenanceTitle": "Underhåll",
+    "maintenanceBody": "Många kliniker föreslår en underhållsbehandling ungefär {{months}} månader senare – runt {{date}}.",
+    "clinicNote": "Följ din egen kliniks plan."
+  },
+  "setup": {
+    "title": "Din resa",
+    "kindTitle": "Vad följer du?",
+    "kind": {
+      "transplant": {
+        "title": "Hårtransplantation",
+        "body": "Hårfäste, hjässa, bena, ögonbryn eller skägg"
+      },
+      "prp": {
+        "title": "PRP-/mesoterapikur",
+        "body": "En serie behandlingar med några veckors mellanrum"
+      }
+    },
+    "goalTitle": "Vilket område?",
+    "goals": {
+      "hairline": "Hårfäste",
+      "crown": "Hjässa",
+      "part": "Bena",
+      "brows": "Ögonbryn",
+      "beard": "Skägg"
+    },
+    "dateTitleTransplant": "Operationsdatum",
+    "dateTitlePrp": "Datum för första behandlingen",
+    "day": "Dag",
+    "month": "Månad",
+    "year": "År",
+    "relToday": "Det är idag – dag 0",
+    "relPast": "Dag {{day}} · vecka {{week}}",
+    "relFuture_one": "Om {{count}} dag",
+    "relFuture_other": "Om {{count}} dagar",
+    "clinicTitle": "Klinik (valfritt)",
+    "clinicPlaceholder": "Kliniknamn",
+    "clinicHint": "Bara på den här telefonen. Laddas aldrig upp.",
+    "clinicTooLong": "Håll det under {{max}} tecken.",
+    "clinicBlocked": "Använd ett annat namn.",
+    "save": "Spara",
+    "saved": "Sparat",
+    "relabelTitle": "Ändra datumet?",
+    "relabelBody": "Varje bilds dag- och veckoetikett räknas om utifrån det nya datumet.",
+    "relabelConfirm": "Ändra datum"
+  }
+}

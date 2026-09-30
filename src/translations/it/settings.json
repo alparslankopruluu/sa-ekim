@@ -1,0 +1,117 @@
+{
+  "title": "Impostazioni",
+  "sections": {
+    "subscription": "Abbonamento e crediti",
+    "language": "Lingua",
+    "notifications": "Notifiche",
+    "preferences": "Preferenze",
+    "data": "Dati e privacy",
+    "account": "Account",
+    "legal": "Note legali e assistenza",
+    "about": "Informazioni",
+    "developer": "Sviluppatore"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Piano gratuito",
+    "renews": "Si rinnova il {{date}}",
+    "expires": "Termina il {{date}}",
+    "manage": "Gestisci l'abbonamento",
+    "restore": "Ripristina gli acquisti",
+    "upgrade": "Passa a Pro",
+    "restoreDone": "Che bello rivederti. Pro è stato ripristinato.",
+    "restoreNone": "Nessun acquisto precedente trovato.",
+    "balance": "Saldo crediti",
+    "buyCredits": "Ottieni crediti",
+    "freeHigh_one": "{{count}} anteprima HD gratuita",
+    "freeHigh_other": "{{count}} anteprime HD gratuite"
+  },
+  "language": {
+    "title": "Lingua",
+    "pickerTitle": "Scegli una lingua",
+    "rtlNote": "Riavvia Kök per cambiare la direzione del layout.",
+    "closePicker": "Chiudi l'elenco delle lingue"
+  },
+  "notifications": {
+    "previews": "Anteprima pronta",
+    "offers": "Regali e offerte",
+    "reminders": "Promemoria del percorso",
+    "remindersHint": "Promemoria per la cura, la foto settimanale e le fasi. I promemoria delle fasi fanno parte di Pro.",
+    "systemOff": "Le notifiche di Kök sono disattivate nelle impostazioni di sistema. Tocca per aprirle."
+  },
+  "preferences": {
+    "haptics": "Feedback tattile"
+  },
+  "data": {
+    "wipe": "Elimina tutti i miei dati",
+    "wipeHint": "Rimuove da questo dispositivo le foto del percorso, il diario della caduta e le anteprime.",
+    "wipeTitle": "Eliminare tutti i tuoi dati?",
+    "wipeBody": "Questo rimuove definitivamente la data dell'intervento, le foto dei progressi, il diario della caduta e le anteprime salvate. L'abbonamento e i crediti restano associati al tuo account. Non si può annullare.",
+    "wipeConfirm": "Elimina i miei dati",
+    "wiping": "Eliminazione…",
+    "wiped": "I tuoi dati sono stati eliminati da questo dispositivo."
+  },
+  "account": {
+    "guest": "Account anonimo",
+    "id": "ID account",
+    "delete": "Elimina l'account",
+    "deleteHint": "Elimina dai nostri server il tuo account, i crediti e le foto caricate.",
+    "deleteTitle": "Eliminare il tuo account?",
+    "deleteBody": "Questo elimina definitivamente il tuo account, i crediti, le anteprime salvate e ogni foto che hai caricato, e cancella il tuo percorso su questo dispositivo. Un abbonamento attivo deve essere annullato separatamente nelle impostazioni del tuo account dello store.",
+    "deleteConfirm": "Elimina l'account",
+    "deleting": "Eliminazione…",
+    "deleted": "Il tuo account è stato eliminato."
+  },
+  "legal": {
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di utilizzo",
+    "ai": "Come funzionano le anteprime IA",
+    "support": "Aiuto e assistenza"
+  },
+  "about": {
+    "version": "Versione {{version}} ({{build}})",
+    "contact": "Scrivi all'assistenza",
+    "rate": "Valuta Kök",
+    "replay": "Rivedi l'introduzione"
+  },
+  "confirm": {
+    "cancel": "Annulla"
+  },
+  "developer": {
+    "open": "Strumenti per sviluppatori",
+    "backend": "Modalità backend",
+    "replayOnboarding": "Rivedi l'introduzione",
+    "offerings": "Offerte dello store",
+    "purchase": "Esito dell'acquisto",
+    "wheel": "Posizione della ruota dei regali",
+    "failNext": "Fai fallire la prossima anteprima",
+    "cohort": "Conteggio del gruppo per la mia settimana",
+    "addCredits": "Assegna 50 crediti",
+    "reset": "Reimposta tutti i dati mock",
+    "resetDone": "I dati mock sono stati reimpostati.",
+    "credits": "Crediti assegnati.",
+    "testCrash": "Invia un crash di prova",
+    "events": "Registro eventi",
+    "empty": "Ancora nessun evento",
+    "mockOnly": "Questi interruttori esistono solo sul backend mock.",
+    "values": {
+      "ok": "ok",
+      "slow": "lento",
+      "fail": "errore",
+      "empty": "vuoto",
+      "success": "successo",
+      "cancel": "annulla",
+      "home": "home",
+      "onboarding_exit": "uscita dall'introduzione",
+      "off": "off"
+    },
+    "storefront": "Valuta dello storefront mock",
+    "giftOffer": "Mostra l'offerta regalo senza un premio",
+    "forcePro": "Diritto Pro",
+    "grantFreeHigh": "Assegna un'anteprima HD gratuita",
+    "previewsEnabled": "Anteprime attive (kill switch)",
+    "nextPrize": "Prossimo premio della ruota",
+    "honest": "estrazione onesta",
+    "offerCacheNote": "Le modifiche allo store si applicano al prossimo nuovo tentativo del paywall o dopo cinque minuti."
+  }
+}

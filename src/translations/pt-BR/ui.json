@@ -1,0 +1,23 @@
+{
+  "a11y": {
+    "close": "Fechar",
+    "selected": "Selecionado",
+    "notSelected": "Não selecionado",
+    "step": "Etapa {{current}} de {{total}}",
+    "balance_one": "{{count}} crédito disponível",
+    "balance_other": "{{count}} créditos disponíveis",
+    "wheel": "Roleta de presentes com quatro tipos de prêmios"
+  },
+  "demoMode": "Modo demonstração: sem compras reais e sem servidores reais",
+  "getCredits": "Obter créditos",
+  "update": {
+    "title": "Atualização necessária",
+    "body": "Esta versão do Kök não é mais compatível. Atualize para continuar. Sua jornada fica no seu celular.",
+    "cta": "Atualizar"
+  },
+  "notFound": {
+    "title": "Esta página não está aqui",
+    "body": "O link pode ser antigo. Nada foi perdido.",
+    "cta": "Ir para Hoje"
+  }
+}

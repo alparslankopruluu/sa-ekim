@@ -1,0 +1,43 @@
+{
+  "title": "Diario della caduta",
+  "close": "Chiudi",
+  "subtitle": "Annota più o meno quanti capelli vedi sul cuscino o nello scarico. Un numero approssimativo va bene.",
+  "typical": "La caduta nelle settimane 2–8 è tipica.",
+  "phaseNow": "Sei alla settimana {{week}} dopo l'intervento.",
+  "today": "Oggi",
+  "input": {
+    "label": "Capelli notati oggi",
+    "placeholder": "0",
+    "hint": "Un numero intero da 0 a 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Aggiungi {{count}}",
+  "save": "Salva",
+  "update": "Aggiorna",
+  "saved": "Salvato",
+  "invalid": "Inserisci un numero intero da 0 a 999.",
+  "chart": {
+    "title": "Ultimi 30 giorni",
+    "a11y": "Diario della caduta degli ultimi 30 giorni",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: nulla registrato",
+    "barToday": "Oggi, {{date}}: {{count}}",
+    "barTodayEmpty": "Oggi, {{date}}: nulla registrato",
+    "window": "Periodo tipico di caduta",
+    "todayLegend": "Oggi",
+    "missing": "Nessuna voce"
+  },
+  "average": "Media degli ultimi 7 giorni: {{count}}",
+  "averageEmpty": "Nulla registrato negli ultimi 7 giorni.",
+  "empty": {
+    "title": "Ancora nulla registrato",
+    "body": "Registra un numero ogni volta che noti dei capelli. Dopo qualche settimana il grafico mostra il tuo andamento personale."
+  },
+  "note": "Solo per tuo riferimento. I conteggi variano da un giorno all'altro e i risultati individuali variano.",
+  "mini": {
+    "title": "Diario della caduta",
+    "empty": "Registra il conteggio di oggi",
+    "a11y": "Diario della caduta, ultimi {{days}} giorni. Apre il diario.",
+    "a11yEmpty": "Diario della caduta. Ancora nulla registrato. Apre il diario."
+  }
+}

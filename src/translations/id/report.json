@@ -1,0 +1,39 @@
+{
+  "title": "Laporkan pratinjau ini",
+  "subtitle": "Beri tahu kami apa yang salah. Kami meninjau setiap laporan dalam 48 jam.",
+  "inaccurate": "Tampak tidak akurat",
+  "unsafe": "Tampak tidak aman atau tidak pantas",
+  "privacy": "Menimbulkan kekhawatiran privasi",
+  "other": "Hal lain",
+  "send": "Kirim laporan",
+  "sent": "Terima kasih. Kami akan meninjaunya dalam 48 jam.",
+  "clinic": {
+    "action": "Ekspor catatan progres",
+    "exporting": "Menyiapkan…",
+    "title": "Catatan progres pemulihan rambut",
+    "brand": "Kök",
+    "clinicLine": "Klinik: {{name}}",
+    "operationLine": "Tanggal operasi: {{date}}",
+    "generatedLine": "Dibuat {{date}}",
+    "photosHeading": "Foto",
+    "noPhotos": "Belum ada foto.",
+    "shedHeading": "Catatan kerontokan",
+    "shedEmpty": "Belum ada catatan kerontokan.",
+    "col": {
+      "week": "Minggu",
+      "days": "Hari tercatat",
+      "average": "Rata-rata",
+      "max": "Tertinggi"
+    },
+    "weekRow": "Minggu {{n}}",
+    "overall": "Semua catatan",
+    "before": "Sebelum",
+    "week": "Minggu {{n}}",
+    "disclaimer": "Catatan progres pribadi — bukan dokumen medis",
+    "dialog": "Bagikan catatan progresmu",
+    "failed": "Laporan tidak dapat dibuat. Coba lagi.",
+    "empty": "Tambahkan foto atau catatan kerontokan terlebih dahulu.",
+    "unsupported": "Laporan tidak dapat dibuat di browser."
+  },
+  "unavailable": "Pratinjau ini tidak tersedia untuk dilaporkan."
+}

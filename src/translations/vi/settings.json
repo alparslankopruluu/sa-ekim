@@ -1,0 +1,116 @@
+{
+  "title": "Cài đặt",
+  "sections": {
+    "subscription": "Gói đăng ký và credit",
+    "language": "Ngôn ngữ",
+    "notifications": "Thông báo",
+    "preferences": "Tùy chọn",
+    "data": "Dữ liệu và quyền riêng tư",
+    "account": "Tài khoản",
+    "legal": "Pháp lý và hỗ trợ",
+    "about": "Giới thiệu",
+    "developer": "Nhà phát triển"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Gói miễn phí",
+    "renews": "Gia hạn {{date}}",
+    "expires": "Kết thúc {{date}}",
+    "manage": "Quản lý gói đăng ký",
+    "restore": "Khôi phục giao dịch mua",
+    "upgrade": "Nâng cấp lên Pro",
+    "restoreDone": "Chào mừng bạn trở lại. Pro đã được khôi phục.",
+    "restoreNone": "Không tìm thấy giao dịch mua trước đó.",
+    "balance": "Số dư credit",
+    "buyCredits": "Mua credit",
+    "freeHigh_other": "{{count}} bản xem trước HD miễn phí"
+  },
+  "language": {
+    "title": "Ngôn ngữ",
+    "pickerTitle": "Chọn ngôn ngữ",
+    "rtlNote": "Hãy khởi động lại Kök để đổi hướng bố cục.",
+    "closePicker": "Đóng danh sách ngôn ngữ"
+  },
+  "notifications": {
+    "previews": "Bản xem trước đã sẵn sàng",
+    "offers": "Quà và ưu đãi",
+    "reminders": "Nhắc nhở hành trình",
+    "remindersHint": "Nhắc chăm sóc, chụp ảnh hằng tuần và các giai đoạn. Nhắc theo giai đoạn thuộc gói Pro.",
+    "systemOff": "Thông báo của Kök đang tắt trong cài đặt hệ thống. Chạm để mở."
+  },
+  "preferences": {
+    "haptics": "Rung phản hồi"
+  },
+  "data": {
+    "wipe": "Xóa toàn bộ dữ liệu của tôi",
+    "wipeHint": "Gỡ ảnh hành trình, nhật ký rụng tóc và các bản xem trước khỏi thiết bị này.",
+    "wipeTitle": "Xóa toàn bộ dữ liệu của bạn?",
+    "wipeBody": "Thao tác này xóa vĩnh viễn ngày phẫu thuật, ảnh tiến trình, nhật ký rụng tóc và các bản xem trước đã lưu của bạn. Gói đăng ký và credit vẫn gắn với tài khoản của bạn. Không thể hoàn tác.",
+    "wipeConfirm": "Xóa dữ liệu của tôi",
+    "wiping": "Đang xóa…",
+    "wiped": "Dữ liệu của bạn đã được xóa khỏi thiết bị này."
+  },
+  "account": {
+    "guest": "Tài khoản ẩn danh",
+    "id": "Mã tài khoản",
+    "delete": "Xóa tài khoản",
+    "deleteHint": "Xóa tài khoản, credit và ảnh đã tải lên của bạn khỏi máy chủ của chúng tôi.",
+    "deleteTitle": "Xóa tài khoản của bạn?",
+    "deleteBody": "Thao tác này xóa vĩnh viễn tài khoản, credit, các bản xem trước đã lưu và mọi ảnh bạn đã tải lên, đồng thời xóa hành trình của bạn trên thiết bị này. Gói đăng ký đang hoạt động phải được hủy riêng trong cài đặt tài khoản cửa hàng của bạn.",
+    "deleteConfirm": "Xóa tài khoản",
+    "deleting": "Đang xóa…",
+    "deleted": "Tài khoản của bạn đã được xóa."
+  },
+  "legal": {
+    "privacy": "Chính sách quyền riêng tư",
+    "terms": "Điều khoản sử dụng",
+    "ai": "Bản xem trước AI hoạt động thế nào",
+    "support": "Trợ giúp và hỗ trợ"
+  },
+  "about": {
+    "version": "Phiên bản {{version}} ({{build}})",
+    "contact": "Gửi email hỗ trợ",
+    "rate": "Đánh giá Kök",
+    "replay": "Xem lại phần làm quen"
+  },
+  "confirm": {
+    "cancel": "Hủy"
+  },
+  "developer": {
+    "open": "Công cụ nhà phát triển",
+    "backend": "Chế độ backend",
+    "replayOnboarding": "Xem lại phần làm quen",
+    "offerings": "Gói trên cửa hàng",
+    "purchase": "Kết quả mua hàng",
+    "wheel": "Vị trí vòng quay quà",
+    "failNext": "Làm lỗi bản xem trước tiếp theo",
+    "cohort": "Số người cùng tuần của tôi",
+    "addCredits": "Tặng 50 credit",
+    "reset": "Đặt lại toàn bộ dữ liệu giả lập",
+    "resetDone": "Dữ liệu giả lập đã được đặt lại.",
+    "credits": "Đã tặng credit.",
+    "testCrash": "Gửi báo cáo lỗi thử",
+    "events": "Nhật ký sự kiện",
+    "empty": "Chưa có sự kiện nào",
+    "mockOnly": "Các công tắc này chỉ có trên backend giả lập.",
+    "values": {
+      "ok": "ok",
+      "slow": "chậm",
+      "fail": "lỗi",
+      "empty": "trống",
+      "success": "thành công",
+      "cancel": "hủy",
+      "home": "trang chủ",
+      "onboarding_exit": "thoát phần làm quen",
+      "off": "tắt"
+    },
+    "storefront": "Tiền tệ cửa hàng giả lập",
+    "giftOffer": "Hiện ưu đãi quà mà không có phần thưởng",
+    "forcePro": "Quyền lợi Pro",
+    "grantFreeHigh": "Tặng một bản xem trước HD miễn phí",
+    "previewsEnabled": "Bật bản xem trước (công tắc khẩn)",
+    "nextPrize": "Phần thưởng vòng quay tiếp theo",
+    "honest": "rút thăm thật",
+    "offerCacheNote": "Thay đổi trên cửa hàng được áp dụng ở lần thử lại màn hình đăng ký tiếp theo hoặc sau năm phút."
+  }
+}

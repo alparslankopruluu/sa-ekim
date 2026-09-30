@@ -1,0 +1,244 @@
+{
+  "title": "Pratinjau baru",
+  "subtitle": "Pilih gaya dan foto untuk melihat satu kemungkinan tampilan.",
+  "aiLabel": "Pratinjau AI — bukan prediksi hasilmu",
+  "aiLabelShort": "Pratinjau AI",
+  "aiLabelDetail": "Ini menunjukkan satu kemungkinan tampilan, bukan apa yang akan terjadi.",
+  "common": {
+    "close": "Tutup",
+    "back": "Kembali",
+    "retry": "Coba lagi",
+    "cancel": "Batal",
+    "delete": "Hapus"
+  },
+  "goals": {
+    "label": "Area",
+    "hairline": "Garis rambut",
+    "crown": "Ubun-ubun",
+    "part": "Belahan",
+    "brows": "Alis",
+    "beard": "Jenggot"
+  },
+  "angles": {
+    "front": "foto depan",
+    "left": "foto sisi kiri",
+    "right": "foto sisi kanan",
+    "top": "foto puncak kepala",
+    "crown": "foto ubun-ubun"
+  },
+  "styles": {
+    "label": "Gaya",
+    "hairline_soft": {
+      "name": "Garis rambut alami yang lebih lembut",
+      "description": "Garis rambut yang dilembutkan dengan halus dan tetap berbentuk alami."
+    },
+    "hairline_temples": {
+      "name": "Penyempurnaan pelipis",
+      "description": "Tampilan yang lebih seimbang di sekitar pelipis."
+    },
+    "hairline_lower": {
+      "name": "Garis lebih rendah dan tegas",
+      "description": "Garis rambut yang sedikit lebih rendah dan lebih tegas."
+    },
+    "hairline_density": {
+      "name": "Penambah kepadatan",
+      "description": "Tampilan yang lebih padat di dalam garis rambutmu saat ini."
+    },
+    "crown_light": {
+      "name": "Tipis",
+      "description": "Cakupan tipis di ubun-ubun."
+    },
+    "crown_medium": {
+      "name": "Sedang",
+      "description": "Cakupan sedang di ubun-ubun."
+    },
+    "crown_full": {
+      "name": "Penuh",
+      "description": "Cakupan penuh di ubun-ubun."
+    },
+    "part_light": {
+      "name": "Tipis",
+      "description": "Kepenuhan tipis di sepanjang belahan."
+    },
+    "part_medium": {
+      "name": "Sedang",
+      "description": "Kepenuhan sedang di sepanjang belahan."
+    },
+    "part_full": {
+      "name": "Penuh",
+      "description": "Tampilan penuh di sepanjang belahan."
+    },
+    "brows_natural": {
+      "name": "Alami",
+      "description": "Alis alami yang mempertahankan bentukmu sendiri."
+    },
+    "brows_fuller": {
+      "name": "Lebih tebal",
+      "description": "Bentukmu sendiri, sedikit lebih tebal."
+    },
+    "brows_arched": {
+      "name": "Melengkung",
+      "description": "Garis alis yang melengkung lembut dan rapi."
+    },
+    "beard_patch": {
+      "name": "Isi bagian jarang",
+      "description": "Bagian yang jarang diisi."
+    },
+    "beard_full": {
+      "name": "Jenggot penuh",
+      "description": "Jenggot yang lebih penuh di rahang dan pipi."
+    },
+    "beard_moustache": {
+      "name": "Kumis",
+      "description": "Tampilan yang lebih penuh di atas bibir."
+    }
+  },
+  "bestAngle": "Paling cocok dengan {{angle}}",
+  "density": {
+    "label": "Kepadatan",
+    "natural": "Alami",
+    "fuller": "Lebih penuh",
+    "full": "Penuh"
+  },
+  "quality": {
+    "label": "Kualitas",
+    "standard": {
+      "title": "Standar",
+      "description": "Gambaran pertama yang cepat."
+    },
+    "high": {
+      "title": "Tinggi",
+      "description": "Lebih detail."
+    }
+  },
+  "price": {
+    "label": "Pratinjau ini",
+    "free": "Gratis",
+    "freeHigh": "Pratinjau HD gratis",
+    "credits_other": "{{count}} kredit",
+    "freeNote": "Pratinjau pertamamu gratis dan diberi watermark.",
+    "balance_other": "Kamu punya {{count}} kredit.",
+    "short_other": "Kamu punya {{count}} kredit, dan pratinjau ini membutuhkan {{cost}}.",
+    "useFreeHigh": "Pakai pratinjau HD gratisku",
+    "useFreeHighHint_other": "Kamu punya {{count}} pratinjau HD gratis."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Belum ada foto",
+    "take": "Ambil foto",
+    "library": "Pilih dari galeri",
+    "journey": "Pakai foto perjalanan terbaru",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Hapus foto",
+    "selected": "Foto yang dipilih",
+    "sentNote": "Fotomu hanya dikirim saat kamu mengetuk Buat, setelah kamu menyetujui pemrosesan AI.",
+    "libraryFailed": "Kami tidak dapat membuka galeri fotomu."
+  },
+  "cta": {
+    "create": "Buat pratinjau",
+    "createFree": "Buat pratinjau gratis",
+    "getCredits": "Dapatkan kredit",
+    "continue": "Lanjut",
+    "addPhoto": "Tambahkan foto untuk lanjut",
+    "chooseStyle": "Pilih gaya untuk lanjut"
+  },
+  "helper": {
+    "needsConsent": "Sebelum fotomu dikirim, kami meminta persetujuanmu satu kali.",
+    "needsCredits": "Kamu butuh lebih banyak kredit untuk pratinjau ini.",
+    "walletError": "Kami tidak dapat memuat kreditmu."
+  },
+  "rendering": {
+    "title": "Pratinjaumu",
+    "status": {
+      "uploading": "Mengirim fotomu",
+      "creating": "Memulai pratinjaumu",
+      "waiting": "Memulai pratinjaumu",
+      "queued": "Menunggu giliran",
+      "processing": "Membuat pratinjaumu",
+      "finalizing": "Menyelesaikan"
+    },
+    "estimate": "Biasanya kurang dari satu menit.",
+    "background": "Kamu bisa meninggalkan layar ini. Kami tetap melanjutkan dan memberi tahu saat sudah siap.",
+    "notifyMe": "Beri tahu saya saat sudah siap",
+    "notifyOn": "Kami akan memberi tahu kamu saat sudah siap.",
+    "keepBrowsing": "Lanjut menjelajah",
+    "cancel": "Batalkan pratinjau",
+    "cancelHint": "Kreditmu dikembalikan jika kamu membatalkan.",
+    "cancelTooLate": "Pratinjau sudah hampir selesai dan tidak dapat dibatalkan sekarang.",
+    "failedTitle": "Pratinjau ini tidak selesai",
+    "canceledTitle": "Pratinjau dibatalkan",
+    "offlineTitle": "Kamu sedang offline",
+    "errorTitle": "Kami tidak dapat memulai pratinjau",
+    "refunded_other": "{{count}} kreditmu dikembalikan.",
+    "nothingCharged": "Tidak ada biaya yang dikenakan.",
+    "retrySafe": "Mencoba lagi aman: kamu tidak akan ditagih dua kali.",
+    "retry": "Coba lagi",
+    "getCredits": "Dapatkan kredit",
+    "reviewConsent": "Tinjau dan setujui",
+    "seePlans": "Lihat paket",
+    "choosePhoto": "Pilih foto lain",
+    "backToStyles": "Kembali ke gaya",
+    "close": "Tutup",
+    "photoA11y": "Fotomu",
+    "ringA11y": "Progres pratinjau, {{percent}} persen"
+  },
+  "result": {
+    "title": "Pratinjaumu",
+    "before": "Fotomu",
+    "after": "Pratinjau AI",
+    "watermark": "Kök · Pratinjau AI",
+    "wipeA11y": "Penggeser sebelum dan sesudah. Geser ke atas atau ke bawah untuk membandingkan fotomu dengan pratinjau AI.",
+    "demo": "Demo",
+    "save": "Simpan",
+    "share": "Bagikan",
+    "report": "Laporkan",
+    "delete": "Hapus",
+    "saved": "Tersimpan ke fotomu",
+    "saveDenied": "Izinkan akses foto di Pengaturan untuk menyimpan pratinjau.",
+    "unsupported": "Menyimpan dan berbagi tidak tersedia untuk pratinjau ini di sini.",
+    "shareTitle": "Bagikan pratinjau AI-mu",
+    "tryAnother": "Coba gaya lain",
+    "upgradeTitle": "Ingin lebih detail?",
+    "upgradeBody": "Pratinjau HD punya lebih banyak detail dan tanpa watermark.",
+    "notFound": "Kami tidak dapat menemukan pratinjau ini. Pratinjau dihapus setelah 30 hari.",
+    "toPreviews": "Kembali ke pratinjau",
+    "beforeGone": "Foto aslimu hanya disimpan selama 30 hari, jadi perbandingannya tidak lagi tersedia.",
+    "loadFailed": "Kami tidak dapat memuat pratinjau ini.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_other": "Buat pratinjau HD ({{count}} kredit)",
+    "upgradeTryFree": "Buat pratinjau HD gratis",
+    "availableUntil": "Tersedia hingga {{date}}",
+    "saveNudge": "Pratinjau dihapus setelah 30 hari. Simpan ke fotomu untuk menyimpan salinannya.",
+    "saveNudgeSoon": "Pratinjau ini akan segera dihapus. Simpan ke fotomu untuk menyimpan salinannya.",
+    "expiredTitle": "Pratinjau ini dihapus setelah 30 hari",
+    "expiredBody": "Pratinjau dan foto asalnya dihapus setelah 30 hari. Kamu bisa membuat yang baru kapan saja."
+  },
+  "delete": {
+    "title": "Hapus pratinjau ini?",
+    "body": "Gambar pratinjau dihapus selamanya. Tindakan ini tidak dapat dibatalkan.",
+    "done": "Pratinjau dihapus"
+  },
+  "tab": {
+    "title": "Pratinjau",
+    "new": "Pratinjau baru",
+    "honest": "Pratinjau adalah gambar buatan AI tentang satu kemungkinan tampilan.",
+    "emptyTitle": "Belum ada pratinjau",
+    "emptyBody": "Pratinjau adalah gambar buatan AI tentang satu kemungkinan tampilan, bukan apa yang akan terjadi. Cobalah sebuah gaya pada fotomu sendiri dan bandingkan.",
+    "emptyCta": "Buat pratinjau",
+    "loadFailed": "Kami tidak dapat memuat pratinjaumu.",
+    "menu": "Tindakan lainnya",
+    "status": {
+      "queued": "Menunggu",
+      "processing": "Membuat · {{percent}}%",
+      "finalizing": "Menyelesaikan",
+      "failed": "Tidak selesai",
+      "canceled": "Dibatalkan"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Coba lagi",
+    "delete": "Hapus",
+    "deleteA11y": "Hapus pratinjau",
+    "availableUntil": "Hingga {{date}}",
+    "expired": "Dihapus setelah 30 hari"
+  }
+}

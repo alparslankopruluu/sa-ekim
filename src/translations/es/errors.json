@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Reinicia la app e inténtalo de nuevo.",
+  "consent_required": "Primero revisa y acepta el aviso de procesamiento con IA.",
+  "invalid_input": "Algo de lo que ingresaste no parece correcto. Revísalo e inténtalo de nuevo.",
+  "content_blocked": "Esa foto o ese texto no se puede usar. Prueba con otro.",
+  "insufficient_credits": "No tienes suficientes créditos para eso.",
+  "pro_required": "Esa es una función Pro.",
+  "rate_limited": "Vas muy rápido. Espera un momento e inténtalo de nuevo.",
+  "already_claimed": "Ya lo reclamaste.",
+  "not_found": "No pudimos encontrarlo.",
+  "previews_disabled": "Las vistas previas están en pausa por un rato. Tu recorrido no se ve afectado. Inténtalo de nuevo más tarde.",
+  "provider_failed": "No se completó. Inténtalo de nuevo en un momento.",
+  "timeout": "Tardó demasiado. Inténtalo de nuevo.",
+  "offline": "Parece que no tienes conexión. Revisa tu conexión e inténtalo de nuevo.",
+  "unknown": "Algo salió mal. Inténtalo de nuevo."
+}

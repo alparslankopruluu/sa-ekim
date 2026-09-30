@@ -1,0 +1,244 @@
+{
+  "title": "Bản xem trước mới",
+  "subtitle": "Chọn một kiểu tóc và một ảnh để xem một diện mạo có thể có.",
+  "aiLabel": "Bản xem trước AI, không phải dự đoán về kết quả của bạn",
+  "aiLabelShort": "Bản xem trước AI",
+  "aiLabelDetail": "Chỉ cho thấy một diện mạo có thể có, không phải điều sẽ xảy ra.",
+  "common": {
+    "close": "Đóng",
+    "back": "Quay lại",
+    "retry": "Thử lại",
+    "cancel": "Hủy",
+    "delete": "Xóa"
+  },
+  "goals": {
+    "label": "Vùng",
+    "hairline": "Đường chân tóc",
+    "crown": "Xoáy tóc",
+    "part": "Đường rẽ ngôi",
+    "brows": "Lông mày",
+    "beard": "Râu"
+  },
+  "angles": {
+    "front": "ảnh chính diện",
+    "left": "ảnh bên trái",
+    "right": "ảnh bên phải",
+    "top": "ảnh đỉnh đầu",
+    "crown": "ảnh vùng xoáy tóc"
+  },
+  "styles": {
+    "label": "Kiểu",
+    "hairline_soft": {
+      "name": "Đường chân tóc mềm tự nhiên",
+      "description": "Đường chân tóc được làm mềm nhẹ nhàng, giữ hình dáng tự nhiên."
+    },
+    "hairline_temples": {
+      "name": "Tinh chỉnh vùng thái dương",
+      "description": "Diện mạo cân đối hơn quanh vùng thái dương."
+    },
+    "hairline_lower": {
+      "name": "Đường thấp hơn, rõ nét hơn",
+      "description": "Đường chân tóc thấp hơn một chút và rõ nét hơn."
+    },
+    "hairline_density": {
+      "name": "Tăng mật độ",
+      "description": "Diện mạo dày hơn bên trong đường chân tóc hiện tại của bạn."
+    },
+    "crown_light": {
+      "name": "Nhẹ",
+      "description": "Độ phủ nhẹ ở vùng xoáy tóc."
+    },
+    "crown_medium": {
+      "name": "Vừa",
+      "description": "Độ phủ vừa ở vùng xoáy tóc."
+    },
+    "crown_full": {
+      "name": "Đầy",
+      "description": "Độ phủ đầy ở vùng xoáy tóc."
+    },
+    "part_light": {
+      "name": "Nhẹ",
+      "description": "Độ dày nhẹ dọc đường rẽ ngôi."
+    },
+    "part_medium": {
+      "name": "Vừa",
+      "description": "Độ dày vừa dọc đường rẽ ngôi."
+    },
+    "part_full": {
+      "name": "Đầy",
+      "description": "Diện mạo đầy đặn dọc đường rẽ ngôi."
+    },
+    "brows_natural": {
+      "name": "Tự nhiên",
+      "description": "Lông mày tự nhiên giữ nguyên hình dáng của bạn."
+    },
+    "brows_fuller": {
+      "name": "Dày hơn",
+      "description": "Hình dáng của bạn, dày hơn một chút."
+    },
+    "brows_arched": {
+      "name": "Cong",
+      "description": "Đường lông mày cong nhẹ, gọn gàng."
+    },
+    "beard_patch": {
+      "name": "Lấp vùng thưa",
+      "description": "Các mảng râu thưa được lấp đầy."
+    },
+    "beard_full": {
+      "name": "Râu đầy",
+      "description": "Bộ râu đầy đặn hơn ở hàm và má."
+    },
+    "beard_moustache": {
+      "name": "Ria mép",
+      "description": "Diện mạo đầy đặn hơn phía trên môi."
+    }
+  },
+  "bestAngle": "Hiệu quả nhất với {{angle}}",
+  "density": {
+    "label": "Mật độ",
+    "natural": "Tự nhiên",
+    "fuller": "Dày hơn",
+    "full": "Đầy"
+  },
+  "quality": {
+    "label": "Chất lượng",
+    "standard": {
+      "title": "Tiêu chuẩn",
+      "description": "Một cái nhìn đầu tiên nhanh chóng."
+    },
+    "high": {
+      "title": "Cao",
+      "description": "Nhiều chi tiết hơn."
+    }
+  },
+  "price": {
+    "label": "Bản xem trước này",
+    "free": "Miễn phí",
+    "freeHigh": "Bản xem trước HD miễn phí",
+    "credits_other": "{{count}} credit",
+    "freeNote": "Bản xem trước đầu tiên của bạn miễn phí và có watermark.",
+    "balance_other": "Bạn có {{count}} credit.",
+    "short_other": "Bạn có {{count}} credit, và bản xem trước này cần {{cost}}.",
+    "useFreeHigh": "Dùng bản xem trước HD miễn phí của tôi",
+    "useFreeHighHint_other": "Bạn có {{count}} bản xem trước HD miễn phí."
+  },
+  "photo": {
+    "label": "Ảnh",
+    "empty": "Chưa có ảnh",
+    "take": "Chụp ảnh",
+    "library": "Chọn từ thư viện",
+    "journey": "Dùng ảnh hành trình mới nhất",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Gỡ ảnh",
+    "selected": "Ảnh đã chọn",
+    "sentNote": "Ảnh của bạn chỉ được gửi khi bạn chạm Tạo, sau khi bạn đồng ý xử lý bằng AI.",
+    "libraryFailed": "Chúng tôi không mở được thư viện ảnh của bạn."
+  },
+  "cta": {
+    "create": "Tạo bản xem trước",
+    "createFree": "Tạo bản xem trước miễn phí",
+    "getCredits": "Mua credit",
+    "continue": "Tiếp tục",
+    "addPhoto": "Thêm ảnh để tiếp tục",
+    "chooseStyle": "Chọn kiểu để tiếp tục"
+  },
+  "helper": {
+    "needsConsent": "Trước khi ảnh của bạn được gửi đi, chúng tôi hỏi sự đồng ý của bạn một lần.",
+    "needsCredits": "Bạn cần thêm credit cho bản xem trước này.",
+    "walletError": "Chúng tôi không tải được số credit của bạn."
+  },
+  "rendering": {
+    "title": "Bản xem trước của bạn",
+    "status": {
+      "uploading": "Đang gửi ảnh của bạn",
+      "creating": "Đang bắt đầu bản xem trước",
+      "waiting": "Đang bắt đầu bản xem trước",
+      "queued": "Đang chờ đến lượt",
+      "processing": "Đang tạo bản xem trước",
+      "finalizing": "Sắp xong"
+    },
+    "estimate": "Thường chưa đến một phút.",
+    "background": "Bạn có thể rời màn hình này. Chúng tôi vẫn tiếp tục và sẽ báo khi bản xem trước sẵn sàng.",
+    "notifyMe": "Báo cho tôi khi sẵn sàng",
+    "notifyOn": "Chúng tôi sẽ báo cho bạn khi sẵn sàng.",
+    "keepBrowsing": "Tiếp tục xem",
+    "cancel": "Hủy bản xem trước",
+    "cancelHint": "Credit của bạn được hoàn lại nếu bạn hủy.",
+    "cancelTooLate": "Bản xem trước đã sắp xong và không thể hủy lúc này.",
+    "failedTitle": "Bản xem trước này chưa hoàn tất",
+    "canceledTitle": "Đã hủy bản xem trước",
+    "offlineTitle": "Bạn đang ngoại tuyến",
+    "errorTitle": "Chúng tôi không thể bắt đầu bản xem trước",
+    "refunded_other": "Đã hoàn lại {{count}} credit của bạn.",
+    "nothingCharged": "Bạn chưa bị tính phí.",
+    "retrySafe": "Thử lại là an toàn: bạn sẽ không bị tính phí hai lần.",
+    "retry": "Thử lại",
+    "getCredits": "Mua credit",
+    "reviewConsent": "Xem lại và đồng ý",
+    "seePlans": "Xem các gói",
+    "choosePhoto": "Chọn ảnh khác",
+    "backToStyles": "Quay lại các kiểu",
+    "close": "Đóng",
+    "photoA11y": "Ảnh của bạn",
+    "ringA11y": "Tiến độ bản xem trước, {{percent}} phần trăm"
+  },
+  "result": {
+    "title": "Bản xem trước của bạn",
+    "before": "Ảnh của bạn",
+    "after": "Bản xem trước AI",
+    "watermark": "Kök · Xem trước AI",
+    "wipeA11y": "Thanh trượt trước và sau. Vuốt lên hoặc xuống để so sánh ảnh của bạn với bản xem trước AI.",
+    "demo": "Demo",
+    "save": "Lưu",
+    "share": "Chia sẻ",
+    "report": "Báo cáo",
+    "delete": "Xóa",
+    "saved": "Đã lưu vào ảnh của bạn",
+    "saveDenied": "Hãy cho phép truy cập ảnh trong Cài đặt để lưu bản xem trước.",
+    "unsupported": "Không thể lưu và chia sẻ bản xem trước này ở đây.",
+    "shareTitle": "Chia sẻ bản xem trước AI của bạn",
+    "tryAnother": "Thử kiểu khác",
+    "upgradeTitle": "Muốn nhiều chi tiết hơn?",
+    "upgradeBody": "Bản xem trước HD có nhiều chi tiết hơn và không có watermark.",
+    "notFound": "Chúng tôi không tìm thấy bản xem trước này. Bản xem trước bị xóa sau 30 ngày.",
+    "toPreviews": "Quay lại các bản xem trước",
+    "beforeGone": "Ảnh gốc của bạn chỉ được giữ 30 ngày, nên không còn bản so sánh nữa.",
+    "loadFailed": "Chúng tôi không tải được bản xem trước này.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_other": "Tạo bản xem trước HD ({{count}} credit)",
+    "upgradeTryFree": "Tạo bản xem trước HD miễn phí",
+    "availableUntil": "Có đến {{date}}",
+    "saveNudge": "Bản xem trước bị xóa sau 30 ngày. Hãy lưu vào ảnh của bạn để giữ một bản sao.",
+    "saveNudgeSoon": "Bản xem trước này sắp bị xóa. Hãy lưu vào ảnh của bạn để giữ một bản sao.",
+    "expiredTitle": "Bản xem trước này đã bị xóa sau 30 ngày",
+    "expiredBody": "Bản xem trước và ảnh gốc của chúng bị gỡ sau 30 ngày. Bạn có thể tạo bản mới bất cứ lúc nào."
+  },
+  "delete": {
+    "title": "Xóa bản xem trước này?",
+    "body": "Ảnh xem trước sẽ bị xóa vĩnh viễn. Không thể hoàn tác.",
+    "done": "Đã xóa bản xem trước"
+  },
+  "tab": {
+    "title": "Xem trước",
+    "new": "Bản xem trước mới",
+    "honest": "Bản xem trước là hình ảnh do AI tạo ra về một diện mạo có thể có.",
+    "emptyTitle": "Chưa có bản xem trước nào",
+    "emptyBody": "Bản xem trước là hình ảnh do AI tạo ra về một diện mạo có thể có, không phải điều sẽ xảy ra. Hãy thử một kiểu trên ảnh của chính bạn và so sánh.",
+    "emptyCta": "Tạo bản xem trước",
+    "loadFailed": "Chúng tôi không tải được các bản xem trước của bạn.",
+    "menu": "Thêm thao tác",
+    "status": {
+      "queued": "Đang chờ",
+      "processing": "Đang tạo · {{percent}}%",
+      "finalizing": "Sắp xong",
+      "failed": "Chưa hoàn tất",
+      "canceled": "Đã hủy"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Thử lại",
+    "delete": "Xóa",
+    "deleteA11y": "Xóa bản xem trước",
+    "availableUntil": "Đến {{date}}",
+    "expired": "Đã xóa sau 30 ngày"
+  }
+}

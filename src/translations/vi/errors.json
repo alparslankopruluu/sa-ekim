@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Vui lòng khởi động lại ứng dụng và thử lại.",
+  "consent_required": "Vui lòng xem và chấp nhận thông báo xử lý AI trước.",
+  "invalid_input": "Có điều gì đó chưa đúng. Vui lòng kiểm tra và thử lại.",
+  "content_blocked": "Không thể dùng ảnh hoặc văn bản đó. Vui lòng thử cái khác.",
+  "insufficient_credits": "Bạn không đủ credit cho việc này.",
+  "pro_required": "Đây là tính năng của Pro.",
+  "rate_limited": "Bạn thao tác hơi nhanh. Hãy đợi một lát rồi thử lại.",
+  "already_claimed": "Bạn đã nhận rồi.",
+  "not_found": "Chúng tôi không tìm thấy mục đó.",
+  "previews_disabled": "Bản xem trước tạm dừng trong thời gian ngắn. Hành trình của bạn không bị ảnh hưởng. Vui lòng thử lại sau.",
+  "provider_failed": "Yêu cầu chưa thực hiện được. Vui lòng thử lại sau giây lát.",
+  "timeout": "Mất quá nhiều thời gian. Vui lòng thử lại.",
+  "offline": "Có vẻ bạn đang ngoại tuyến. Hãy kiểm tra kết nối và thử lại.",
+  "unknown": "Đã xảy ra sự cố. Vui lòng thử lại."
+}

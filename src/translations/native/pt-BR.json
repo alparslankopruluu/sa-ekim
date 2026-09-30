@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "O Kök usa a câmera para você fotografar seu progresso sempre do mesmo ângulo.",
+  "NSPhotoLibraryUsageDescription": "O Kök abre suas fotos para você escolher uma para uma prévia ou para a sua jornada.",
+  "NSPhotoLibraryAddUsageDescription": "O Kök salva suas prévias e imagens de comparação na sua galeria de fotos.",
+  "NSMotionUsageDescription": "O Kök lê o sensor de movimento para verificar se o celular está na vertical e garantir fotos consistentes."
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Les personnes de votre semaine",
+  "locked": {
+    "title": "Les autres opérés de votre semaine",
+    "body": "Pro indique combien de personnes ont été opérées la même semaine que vous. Vous ne voyez jamais qu'un nombre.",
+    "cta": "Voir avec Pro"
+  },
+  "join": {
+    "title": "Rejoindre votre semaine d'opération",
+    "body": "Choisissez d'être compté avec les personnes opérées la même semaine. Seuls la date de votre opération, votre objectif et le type d'intervention sont partagés. Jamais vos photos, votre nom ni votre clinique.",
+    "switch": "Me compter",
+    "needDate": "Indiquez d'abord la date de votre opération.",
+    "setDate": "Définir la date"
+  },
+  "joining": "Inscription…",
+  "joined": "Vous êtes compté dans votre semaine",
+  "loading": "Vérification de votre semaine…",
+  "visible": "Vous faites partie des {{count}} personnes de votre semaine",
+  "invitation": "C'est fait. Un nombre s'affichera lorsque assez de personnes partageront votre semaine, afin que personne ne puisse être identifié.",
+  "privacy": "Seuls la date de votre opération, votre objectif et le type d'intervention sont partagés.",
+  "error": {
+    "offline": "Vous êtes hors ligne. Réessayez une fois connecté.",
+    "busy": "Trop de demandes. Réessayez dans un instant.",
+    "pro": "Cette fonction nécessite Pro.",
+    "generic": "Impossible de joindre le groupe. Réessayez.",
+    "retry": "Réessayer"
+  }
+}

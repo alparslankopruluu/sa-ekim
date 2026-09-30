@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Un cadeau de bienvenue vous attend",
+    "body": "Un tour gratuit : des crédits, un aperçu HD gratuit ou une remise sur Pro.",
+    "cta": "Tourner",
+    "wonTitle": "Votre cadeau : {{prize}}",
+    "wonBody": "Valable jusqu'au {{date}}",
+    "use": "Utiliser"
+  },
+  "title": "Votre cadeau de bienvenue",
+  "subtitle": "Un tour gratuit. Chaque lot est réel.",
+  "spin": "Faire tourner la roue",
+  "spinning": "La roue tourne…",
+  "youWon": "Vous avez gagné",
+  "expires": "Valable jusqu'au {{date}}",
+  "redeem": "Utiliser mon cadeau",
+  "added": "Ajouté à votre compte",
+  "done": "Terminé",
+  "close": "Fermer",
+  "alreadyClaimed": "Vous avez déjà fait tourner la roue de votre cadeau de bienvenue.",
+  "fairness": "Les lots sont tirés au sort sur notre serveur. Aucun achat n'est nécessaire.",
+  "notifyNote": "Si les notifications sont activées, nous vous le rappellerons une fois avant la fin.",
+  "prizes": {
+    "credits10": {
+      "title": "10 crédits",
+      "short": "+10",
+      "body": "Ajoutés à votre solde pour les aperçus."
+    },
+    "credits5": {
+      "title": "5 crédits",
+      "short": "+5",
+      "body": "Ajoutés à votre solde pour les aperçus."
+    },
+    "freeHigh": {
+      "title": "Un aperçu HD gratuit",
+      "short": "HD",
+      "body": "Votre prochain aperçu HD ne coûte aucun crédit."
+    },
+    "discount40": {
+      "title": "−40 % sur Pro",
+      "short": "−40%",
+      "body": "La première année de l'abonnement annuel à prix réduit."
+    }
+  },
+  "expired": "Ce cadeau a pris fin le {{date}}.",
+  "redeemed": "Vous avez déjà utilisé ce cadeau.",
+  "tokenNote": "Choisissez HD lorsque vous créerez votre prochain aperçu."
+}

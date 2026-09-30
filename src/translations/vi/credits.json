@@ -1,0 +1,22 @@
+{
+  "title": "Mua credit",
+  "subtitle": "Credit không bao giờ hết hạn. Một bản xem trước tiêu chuẩn dùng {{standard}}, một bản xem trước HD dùng {{high}}.",
+  "balance": "Số dư của bạn",
+  "equivalent": "≈ {{standard}} bản xem trước tiêu chuẩn hoặc {{high}} bản HD",
+  "packs": {
+    "credits_10": "Khởi đầu",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Phổ biến",
+  "success": "Đã thêm {{count}} credit.",
+  "pending": "Giao dịch mua của bạn đang chờ phê duyệt.",
+  "failedBody": "Không tải được các gói credit. Hãy kiểm tra kết nối và thử lại.",
+  "emptyBody": "Hiện chưa có gói credit nào. Vui lòng thử lại sau.",
+  "freeHigh_other": "Đang có {{count}} bản xem trước HD miễn phí",
+  "examplesTitle": "Credit dùng được bao nhiêu",
+  "exampleStandard": "Bản xem trước tiêu chuẩn",
+  "exampleHigh": "Bản xem trước HD, không watermark",
+  "proHint": "Thành viên Pro nhận credit mỗi tuần hoặc mỗi tháng.",
+  "close": "Đóng cửa hàng credit"
+}

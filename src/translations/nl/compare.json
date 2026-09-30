@@ -1,0 +1,44 @@
+{
+  "title": "Vergelijken",
+  "close": "Sluiten",
+  "mode": {
+    "wipe": "Schuiven",
+    "side": "Naast elkaar"
+  },
+  "label": {
+    "before": "Voor",
+    "week": "Week {{n}}",
+    "none": "Foto"
+  },
+  "picker": {
+    "before": "Eerdere foto",
+    "after": "Latere foto",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Schuifregelaar om twee foto's te vergelijken. {{before}} links, {{after}} rechts. Pas aan om de scheidingslijn te verplaatsen.",
+  "sideA11y": "{{label}}, foto ({{angle}})",
+  "mismatch": "Deze twee foto's tonen verschillende hoeken. Vergelijken werkt het best met dezelfde hoek.",
+  "empty": {
+    "title": "Twee foto's om te vergelijken",
+    "body": "Maak minstens twee foto's van dezelfde hoek en vergelijk ze hier.",
+    "action": "Foto maken"
+  },
+  "locked": {
+    "title": "Vergelijken hoort bij Pro",
+    "body": "Zie twee foto's naast elkaar, met de week van elke foto. Je eerste foto blijft zichtbaar.",
+    "cta": "Vergelijken ontgrendelen"
+  },
+  "share": {
+    "action": "Delen",
+    "preparing": "Voorbereiden…",
+    "error": "De vergelijking kon niet worden voorbereid. Probeer het opnieuw.",
+    "unavailable": "Delen is niet beschikbaar op dit apparaat.",
+    "dialog": "Deel je vergelijking"
+  },
+  "report": {
+    "title": "Fotovergelijking",
+    "heading": "{{before}} en {{after}}",
+    "disclaimer": "Persoonlijk voortgangsoverzicht — geen medisch document"
+  },
+  "mark": "Kök"
+}

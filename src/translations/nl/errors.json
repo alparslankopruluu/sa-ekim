@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Start de app opnieuw op en probeer het nog eens.",
+  "consent_required": "Bekijk eerst de melding over AI-verwerking en ga akkoord.",
+  "invalid_input": "Er klopt iets niet. Controleer het en probeer het opnieuw.",
+  "content_blocked": "Die foto of tekst kan niet worden gebruikt. Probeer een andere.",
+  "insufficient_credits": "Je hebt hiervoor niet genoeg credits.",
+  "pro_required": "Dat is een Pro-functie.",
+  "rate_limited": "Je gaat snel. Wacht even en probeer het dan opnieuw.",
+  "already_claimed": "Je hebt dit al geclaimd.",
+  "not_found": "We konden dat niet vinden.",
+  "previews_disabled": "Previews zijn even gepauzeerd. Je traject wordt hier niet door beïnvloed. Probeer het later opnieuw.",
+  "provider_failed": "Dat is niet gelukt. Probeer het zo meteen opnieuw.",
+  "timeout": "Dat duurde te lang. Probeer het opnieuw.",
+  "offline": "Je lijkt offline te zijn. Controleer je verbinding en probeer het opnieuw.",
+  "unknown": "Er ging iets mis. Probeer het opnieuw."
+}

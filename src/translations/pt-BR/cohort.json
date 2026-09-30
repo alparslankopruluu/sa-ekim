@@ -1,0 +1,28 @@
+{
+  "title": "Pessoas na sua semana",
+  "locked": {
+    "title": "Outras pessoas na sua semana de operação",
+    "body": "O Pro mostra quantas pessoas fizeram a operação na mesma semana que você. Você vê apenas uma contagem.",
+    "cta": "Ver com o Pro"
+  },
+  "join": {
+    "title": "Participe da sua semana de operação",
+    "body": "Ative para ser contado junto com quem fez a operação na mesma semana. Apenas a data da operação, o objetivo e o tipo são compartilhados. Nunca fotos, seu nome ou sua clínica.",
+    "switch": "Me incluir na contagem",
+    "needDate": "Defina antes a data da operação.",
+    "setDate": "Definir data"
+  },
+  "joining": "Entrando…",
+  "joined": "Você está incluído na contagem da sua semana",
+  "loading": "Verificando sua semana…",
+  "visible": "Você é uma das {{count}} pessoas na sua semana",
+  "invitation": "Você está dentro. Um número aparece quando pessoas suficientes compartilham a sua semana, para que ninguém possa ser identificado.",
+  "privacy": "Apenas a data da operação, o objetivo e o tipo são compartilhados.",
+  "error": {
+    "offline": "Você está sem conexão. Tente de novo quando estiver conectado.",
+    "busy": "Muitas solicitações. Tente de novo em instantes.",
+    "pro": "Isto requer o Pro.",
+    "generic": "Não foi possível acessar o grupo. Tente de novo.",
+    "retry": "Tentar de novo"
+  }
+}

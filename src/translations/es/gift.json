@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Te espera un regalo de bienvenida",
+    "body": "Un giro gratis: créditos, una vista previa HD gratis o un descuento en Pro.",
+    "cta": "Girar",
+    "wonTitle": "Tu regalo: {{prize}}",
+    "wonBody": "Válido hasta el {{date}}",
+    "use": "Usar"
+  },
+  "title": "Tu regalo de bienvenida",
+  "subtitle": "Un giro gratis. Todos los premios son reales.",
+  "spin": "Girar la ruleta",
+  "spinning": "Girando…",
+  "youWon": "Has ganado",
+  "expires": "Válido hasta el {{date}}",
+  "redeem": "Usar mi regalo",
+  "added": "Añadido a tu cuenta",
+  "done": "Listo",
+  "close": "Cerrar",
+  "alreadyClaimed": "Ya giraste tu regalo de bienvenida.",
+  "fairness": "Los premios se sortean en nuestro servidor. No hace falta comprar nada.",
+  "notifyNote": "Si las notificaciones están activadas, te lo recordaremos una vez antes de que termine.",
+  "prizes": {
+    "credits10": {
+      "title": "10 créditos",
+      "short": "+10",
+      "body": "Se añaden a tu saldo para vistas previas."
+    },
+    "credits5": {
+      "title": "5 créditos",
+      "short": "+5",
+      "body": "Se añaden a tu saldo para vistas previas."
+    },
+    "freeHigh": {
+      "title": "Una vista previa HD gratis",
+      "short": "HD",
+      "body": "Tu próxima vista previa HD no cuesta créditos."
+    },
+    "discount40": {
+      "title": "40 % de descuento en Pro",
+      "short": "−40%",
+      "body": "El primer año del plan anual a un precio más bajo."
+    }
+  },
+  "expired": "Este regalo terminó el {{date}}.",
+  "redeemed": "Ya usaste este regalo.",
+  "tokenNote": "Elige HD al crear tu próxima vista previa."
+}

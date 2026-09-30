@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Vorschauen",
+    "offers": "Angebote",
+    "reminders": "Erinnerungen"
+  },
+  "previewReady": {
+    "title": "Deine Vorschau ist fertig",
+    "body": "Öffne Kök, um sie zu sehen. Es ist eine KI-Vorschau, keine Vorhersage deines Ergebnisses."
+  },
+  "giftExpiring": {
+    "title": "Dein Geschenk wartet noch",
+    "body": "Dein Rabatt auf das Jahresabo endet am {{date}}."
+  },
+  "care": {
+    "title": "Tag {{day}} deines Pflegeplans",
+    "body": "Öffne die heutigen Schritte. Die Anweisungen deiner Klinik haben immer Vorrang."
+  },
+  "phase": {
+    "shed": {
+      "title": "Woche {{week}} — Haarausfall ist um diese Zeit typisch",
+      "body": "Viele Menschen erleben in dieser Phase Haarausfall. Öffne deinen Leitfaden, um zu sehen, was typisch ist. Individuelle Verläufe unterscheiden sich."
+    },
+    "quiet": {
+      "title": "Die ruhige Phase ist um diese Zeit typisch",
+      "body": "Vielen Menschen kommt es in diesen Wochen vor, als würde nichts passieren. Öffne deinen Leitfaden, um zu sehen, was typisch ist."
+    },
+    "sprout": {
+      "title": "Erstes Wachstum ist um diese Zeit typisch",
+      "body": "Feine neue Haare beginnen in dieser Phase oft zu erscheinen. Der Zeitpunkt ist von Mensch zu Mensch verschieden."
+    },
+    "grow": {
+      "title": "Die Wachstumsphase",
+      "body": "Die Dichte nimmt üblicherweise nach und nach zu. Mach weiter Fotos aus demselben Blickwinkel, um die Veränderung zu sehen. Individuelle Verläufe unterscheiden sich."
+    },
+    "mature": {
+      "title": "Die Ausreifungsphase",
+      "body": "Das Ergebnis pendelt sich in den kommenden Monaten weiter ein. Individuelle Verläufe unterscheiden sich."
+    },
+    "final": {
+      "title": "Zeit für einen Gesamtrückblick",
+      "body": "Rund um das erste Jahr vergleichen viele Menschen ihre gesamte Fotoserie. Öffne deinen Leitfaden."
+    }
+  },
+  "photo": {
+    "title": "Zeit für ein Fortschrittsfoto",
+    "body": "Gleicher Blickwinkel, gleiches Licht, ein paar Sekunden. Deine Serie macht Veränderung sichtbar."
+  },
+  "shed": {
+    "title": "Kurzer Ausfall-Check",
+    "body": "Trage ein, wie viel dir heute aufgefallen ist. Haarausfall ist in dieser Phase typisch."
+  },
+  "session": {
+    "title": "PRP-Sitzung morgen",
+    "body": "Deine Sitzung ist am {{date}}. Mach vorher ein Foto aus demselben Blickwinkel, damit du später vergleichen kannst."
+  }
+}

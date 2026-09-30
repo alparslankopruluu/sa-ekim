@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Pratinjau",
+    "offers": "Penawaran",
+    "reminders": "Pengingat"
+  },
+  "previewReady": {
+    "title": "Pratinjaumu sudah siap",
+    "body": "Buka Kök untuk melihatnya. Ini pratinjau AI, bukan prediksi hasilmu."
+  },
+  "giftExpiring": {
+    "title": "Hadiahmu masih menunggu",
+    "body": "Diskon paket tahunanmu berakhir pada {{date}}."
+  },
+  "care": {
+    "title": "Hari ke-{{day}} rencana perawatanmu",
+    "body": "Buka langkah-langkah hari ini. Instruksi klinikmu selalu diutamakan."
+  },
+  "phase": {
+    "shed": {
+      "title": "Minggu ke-{{week}} — kerontokan lazim terjadi sekitar saat ini",
+      "body": "Banyak orang mengalami kerontokan pada fase ini. Buka panduanmu untuk melihat apa yang lazim. Hasil tiap orang berbeda."
+    },
+    "quiet": {
+      "title": "Fase tenang lazim terjadi sekitar saat ini",
+      "body": "Banyak orang merasa tidak ada yang terjadi pada minggu-minggu ini. Buka panduanmu untuk melihat apa yang lazim."
+    },
+    "sprout": {
+      "title": "Pertumbuhan pertama lazim terjadi sekitar saat ini",
+      "body": "Rambut baru yang halus sering mulai muncul pada fase ini. Waktunya berbeda-beda pada tiap orang."
+    },
+    "grow": {
+      "title": "Fase pertumbuhan",
+      "body": "Kepadatan biasanya bertambah secara bertahap. Terus ambil foto dari sudut yang sama untuk melihat perubahannya. Hasil tiap orang berbeda."
+    },
+    "mature": {
+      "title": "Fase pematangan",
+      "body": "Hasilnya terus menetap selama beberapa bulan ke depan. Hasil tiap orang berbeda."
+    },
+    "final": {
+      "title": "Saatnya tinjauan menyeluruh",
+      "body": "Menjelang satu tahun, banyak orang membandingkan seluruh rangkaian fotonya. Buka panduanmu."
+    }
+  },
+  "photo": {
+    "title": "Saatnya foto progres",
+    "body": "Sudut sama, cahaya sama, hanya beberapa detik. Rangkaian fotomulah yang membuat perubahan terlihat."
+  },
+  "shed": {
+    "title": "Cek kerontokan singkat",
+    "body": "Catat seberapa banyak yang kamu lihat hari ini. Kerontokan lazim terjadi pada fase ini."
+  },
+  "session": {
+    "title": "Sesi PRP besok",
+    "body": "Sesimu pada {{date}}. Ambil foto dari sudut yang sama sebelumnya agar bisa dibandingkan nanti."
+  }
+}

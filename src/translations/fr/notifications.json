@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Aperçus",
+    "offers": "Offres",
+    "reminders": "Rappels"
+  },
+  "previewReady": {
+    "title": "Votre aperçu est prêt",
+    "body": "Ouvrez Kök pour le voir. C'est un aperçu IA, pas une prédiction de votre résultat."
+  },
+  "giftExpiring": {
+    "title": "Votre cadeau vous attend toujours",
+    "body": "La remise sur votre abonnement annuel se termine le {{date}}."
+  },
+  "care": {
+    "title": "Jour {{day}} de votre plan de soins",
+    "body": "Ouvrez les étapes du jour. Les consignes de votre clinique passent toujours avant tout."
+  },
+  "phase": {
+    "shed": {
+      "title": "Semaine {{week}} — la chute est habituelle à cette période",
+      "body": "Beaucoup de personnes observent une chute durant cette phase. Ouvrez votre guide pour voir ce qui est habituel. Les résultats varient d'une personne à l'autre."
+    },
+    "quiet": {
+      "title": "La phase calme est habituelle à cette période",
+      "body": "Beaucoup de personnes ont l'impression que rien ne se passe durant ces semaines. Ouvrez votre guide pour voir ce qui est habituel."
+    },
+    "sprout": {
+      "title": "Les premières repousses sont habituelles à cette période",
+      "body": "De fins cheveux nouveaux commencent souvent à apparaître durant cette phase. Le calendrier varie d'une personne à l'autre."
+    },
+    "grow": {
+      "title": "La phase de croissance",
+      "body": "La densité se construit généralement peu à peu. Continuez à prendre des photos sous le même angle pour voir l'évolution. Les résultats varient d'une personne à l'autre."
+    },
+    "mature": {
+      "title": "La phase de maturation",
+      "body": "Le résultat continue de se stabiliser au fil des prochains mois. Les résultats varient d'une personne à l'autre."
+    },
+    "final": {
+      "title": "L'heure du bilan complet",
+      "body": "Vers la marque d'un an, beaucoup de personnes comparent toute leur série de photos. Ouvrez votre guide."
+    }
+  },
+  "photo": {
+    "title": "C'est l'heure d'une photo de suivi",
+    "body": "Même angle, même lumière, quelques secondes. C'est votre série qui rend l'évolution visible."
+  },
+  "shed": {
+    "title": "Petit point sur la chute",
+    "body": "Notez ce que vous avez remarqué aujourd'hui. La chute est habituelle durant cette phase."
+  },
+  "session": {
+    "title": "Séance de PRP demain",
+    "body": "Votre séance a lieu le {{date}}. Prenez une photo sous le même angle avant, pour pouvoir comparer plus tard."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Förhandsvisningar",
+    "offers": "Erbjudanden",
+    "reminders": "Påminnelser"
+  },
+  "previewReady": {
+    "title": "Din förhandsvisning är klar",
+    "body": "Öppna Kök för att se den. Det är en AI-förhandsvisning, inte en förutsägelse av ditt resultat."
+  },
+  "giftExpiring": {
+    "title": "Din gåva väntar fortfarande",
+    "body": "Din rabatt på årsplanen upphör den {{date}}."
+  },
+  "care": {
+    "title": "Dag {{day}} i din skötselplan",
+    "body": "Öppna dagens steg. Din kliniks anvisningar gäller alltid först."
+  },
+  "phase": {
+    "shed": {
+      "title": "Vecka {{week}} – hårfällning är typiskt ungefär nu",
+      "body": "Många upplever hårfällning i den här fasen. Öppna din guide för att se vad som är typiskt. Individuella resultat varierar."
+    },
+    "quiet": {
+      "title": "Den lugna fasen är typisk ungefär nu",
+      "body": "Många känner att ingenting händer under de här veckorna. Öppna din guide för att se vad som är typiskt."
+    },
+    "sprout": {
+      "title": "Första tillväxten är typisk ungefär nu",
+      "body": "Fina nya hårstrån börjar ofta dyka upp i den här fasen. Tidpunkten varierar från person till person."
+    },
+    "grow": {
+      "title": "Tillväxtfasen",
+      "body": "Tätheten ökar oftast gradvis. Fortsätt ta bilder från samma vinkel för att se förändringen. Individuella resultat varierar."
+    },
+    "mature": {
+      "title": "Mognadsfasen",
+      "body": "Resultatet fortsätter att sätta sig under de kommande månaderna. Individuella resultat varierar."
+    },
+    "final": {
+      "title": "Dags för en helhetsgenomgång",
+      "body": "Runt ettårsdagen jämför många hela sin bildserie. Öppna din guide."
+    }
+  },
+  "photo": {
+    "title": "Dags för en framstegsbild",
+    "body": "Samma vinkel, samma ljus, några sekunder. Det är din serie som gör förändringen synlig."
+  },
+  "shed": {
+    "title": "Snabb hårfällningskoll",
+    "body": "Logga hur mycket du märkte idag. Hårfällning är typiskt i den här fasen."
+  },
+  "session": {
+    "title": "PRP-behandling i morgon",
+    "body": "Din behandling är den {{date}}. Ta en bild från samma vinkel innan så att du kan jämföra senare."
+  }
+}

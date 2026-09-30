@@ -1,0 +1,28 @@
+{
+  "title": "Personas de tu semana",
+  "locked": {
+    "title": "Otras personas de tu semana de operación",
+    "body": "Pro te muestra cuántas personas se operaron la misma semana que tú. Solo ves un número.",
+    "cta": "Ver con Pro"
+  },
+  "join": {
+    "title": "Únete a tu semana de operación",
+    "body": "Participa para que te cuenten junto a quienes se operaron la misma semana. Solo se comparten tu fecha de operación, tu objetivo y el tipo. Nunca tus fotos, tu nombre ni tu clínica.",
+    "switch": "Cuéntame",
+    "needDate": "Primero indica tu fecha de operación.",
+    "setDate": "Indicar fecha"
+  },
+  "joining": "Uniéndote…",
+  "joined": "Estás contado en tu semana",
+  "loading": "Consultando tu semana…",
+  "visible": "Eres una de las {{count}} personas de tu semana",
+  "invitation": "Ya estás dentro. Aparecerá un número cuando haya suficientes personas en tu semana, para que nadie pueda ser identificado.",
+  "privacy": "Solo se comparten tu fecha de operación, tu objetivo y el tipo.",
+  "error": {
+    "offline": "No tienes conexión. Inténtalo de nuevo cuando te conectes.",
+    "busy": "Demasiadas solicitudes. Inténtalo de nuevo en un momento.",
+    "pro": "Esto requiere Pro.",
+    "generic": "No se pudo contactar con el grupo. Inténtalo de nuevo.",
+    "retry": "Reintentar"
+  }
+}

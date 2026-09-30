@@ -1,0 +1,23 @@
+{
+  "title": "Skaffa krediter",
+  "subtitle": "Krediter går aldrig ut. En standardförhandsvisning kostar {{standard}}, en HD-förhandsvisning kostar {{high}}.",
+  "balance": "Ditt saldo",
+  "equivalent": "≈ {{standard}} standard- eller {{high}} HD-förhandsvisningar",
+  "packs": {
+    "credits_10": "Start",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Populär",
+  "success": "{{count}} krediter tillagda.",
+  "pending": "Ditt köp väntar på godkännande.",
+  "failedBody": "Kreditpaketen kunde inte laddas. Kontrollera anslutningen och försök igen.",
+  "emptyBody": "Kreditpaket är inte tillgängliga just nu. Försök igen senare.",
+  "freeHigh_one": "{{count}} gratis HD-förhandsvisning väntar",
+  "freeHigh_other": "{{count}} gratis HD-förhandsvisningar väntar",
+  "examplesTitle": "Så långt räcker krediterna",
+  "exampleStandard": "Standardförhandsvisning",
+  "exampleHigh": "HD-förhandsvisning, utan vattenmärke",
+  "proHint": "Pro-medlemmar får krediter varje vecka eller månad.",
+  "close": "Stäng kreditbutiken"
+}

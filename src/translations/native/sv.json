@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök använder kameran så att du kan fotografera dina framsteg från samma vinkel varje gång.",
+  "NSPhotoLibraryUsageDescription": "Kök öppnar dina bilder så att du kan välja en för en förhandsvisning eller din resa.",
+  "NSPhotoLibraryAddUsageDescription": "Kök sparar dina förhandsvisningar och jämförelsebilder i ditt bildbibliotek.",
+  "NSMotionUsageDescription": "Kök läser rörelsesensorn för att kontrollera att telefonen hålls upprätt för en enhetlig bild."
+}

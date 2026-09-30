@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Il tuo compagno per il trapianto di capelli",
+    "title": "Scopri cosa è tipico per la tua settimana di recupero",
+    "subtitle": "Guarda un'anteprima del cambiamento prima dell'intervento, poi segui cosa è tipico per ogni settimana del tuo recupero.",
+    "cta": "Inizia",
+    "demoLabel": "Esempio del cursore prima e dopo. Trascina per confrontare.",
+    "demoBefore": "Prima",
+    "demoAfter": "Dopo",
+    "demoCaption": "Solo a scopo illustrativo. La tua anteprima arriverà dopo.",
+    "legalPrefix": "Continuando accetti i nostri",
+    "terms": "Termini",
+    "privacy": "Informativa sulla privacy"
+  },
+  "goal": {
+    "title": "Su cosa stai lavorando?",
+    "subtitle": "Adatteremo a questo la tua cronologia e le angolazioni delle foto.",
+    "hairline": {
+      "title": "Attaccatura",
+      "subtitle": "Fronte e tempie"
+    },
+    "crown": {
+      "title": "Vertice",
+      "subtitle": "La parte posteriore e alta della testa"
+    },
+    "part": {
+      "title": "Riga",
+      "subtitle": "Densità lungo la riga"
+    },
+    "brows": {
+      "title": "Sopracciglia",
+      "subtitle": "Trapianto delle sopracciglia"
+    },
+    "beard": {
+      "title": "Barba",
+      "subtitle": "Barba e baffi"
+    }
+  },
+  "stage": {
+    "title": "A che punto sei del percorso?",
+    "subtitle": "Questo decide cosa ti mostriamo per primo.",
+    "researching": {
+      "title": "Sto ancora valutando",
+      "subtitle": "Esploro le opzioni, nulla di prenotato"
+    },
+    "planned": {
+      "title": "Intervento prenotato",
+      "subtitle": "Ho una data in arrivo"
+    },
+    "done": {
+      "title": "Intervento già fatto",
+      "subtitle": "Voglio seguire il mio recupero"
+    }
+  },
+  "date": {
+    "titlePlanned": "Quando è il tuo intervento?",
+    "titleDone": "Quando è stato il tuo intervento?",
+    "subtitlePlanned": "Faremo il conto alla rovescia fino al giorno 0 e prepareremo le tue prime settimane.",
+    "subtitleDone": "Ti mostreremo in quale fase sei e cosa è tipico questa settimana.",
+    "wheelDay": "Giorno",
+    "wheelMonth": "Mese",
+    "wheelYear": "Anno",
+    "feedbackPast": "Giorno {{day}} · Settimana {{week}}",
+    "feedbackToday": "Oggi è il giorno 0",
+    "feedbackFuture_one": "Tra {{count}} giorno",
+    "feedbackFuture_other": "Tra {{count}} giorni",
+    "errorMustBeFuture": "Scegli oggi o una data successiva.",
+    "errorMustBePast": "Scegli oggi o una data precedente.",
+    "errorTooFar": "Quella data è troppo lontana per essere seguita. Scegline una più vicina.",
+    "errorInvalid": "Quella data non esiste.",
+    "skip": "Non lo so ancora",
+    "skipNote": "Potrai impostarla o cambiarla più tardi nel tuo percorso."
+  },
+  "photo": {
+    "title": "Aggiungi una foto per la tua anteprima",
+    "subtitleResearching": "Guarda un'anteprima IA di come potrebbe essere un cambiamento, prima di impegnarti in qualsiasi cosa.",
+    "subtitlePlanned": "Guarda un'anteprima IA di come potrebbe essere il tuo intervento.",
+    "subtitleDone": "Guarda un'anteprima IA di come potrebbe essere il tuo risultato mentre matura.",
+    "guidanceTitle": "Per un'anteprima migliore",
+    "angle": {
+      "front": "Guarda dritto verso la fotocamera, con il telefono all'altezza degli occhi.",
+      "top": "Tieni il telefono sopra la testa, rivolto verso la sommità della testa.",
+      "crown": "Fotografa la parte posteriore della testa, possibilmente con l'aiuto di qualcuno."
+    },
+    "area": {
+      "hairline": "Sposta i capelli indietro in modo che l'attaccatura sia ben visibile.",
+      "crown": "Lascia il vertice scoperto e i capelli piatti.",
+      "part": "Dividi i capelli come fai di solito.",
+      "brows": "Tieni le sopracciglia libere da capelli e occhiali.",
+      "beard": "Lascia scoperta la zona della barba, con una luce uniforme."
+    },
+    "light": "Usa la luce del giorno, niente filtri e niente cappello.",
+    "take": "Scatta una foto",
+    "library": "Scegli dalla libreria",
+    "change": "Scegli un'altra foto",
+    "selected": "La foto che hai selezionato",
+    "placeholder": "Ancora nessuna foto selezionata",
+    "privacy": "La tua foto viene inviata solo per creare l'anteprima, e solo dopo che avrai dato il consenso nella schermata successiva.",
+    "skip": "Salta l'anteprima",
+    "skipNote": "Potrai crearne una più tardi dalla scheda Anteprime.",
+    "permissionDenied": "Non siamo riusciti ad aprire le tue foto. Controlla il permesso in Impostazioni."
+  },
+  "notify": {
+    "title": "Non perdere i momenti che contano",
+    "subtitle": "Il recupero è lento. Un promemoria gentile al momento giusto ricorda le cose al posto tuo.",
+    "bulletPhase": "Ti avviseremo quando cambia una fase",
+    "bulletPhoto": "Ti avviseremo quando arriva il giorno della foto",
+    "bulletCare": "Promemoria quotidiani per la cura nelle prime due settimane",
+    "allow": "Attiva i promemoria",
+    "skip": "Non ora",
+    "note": "I promemoria per la cura sono gratuiti. I promemoria per le fasi e le foto sono inclusi in Pro. Puoi cambiare questa scelta in qualsiasi momento in Impostazioni."
+  },
+  "crafting": {
+    "title": "Creazione della tua anteprima",
+    "titleDone": "La tua anteprima è pronta",
+    "subtitle": "Di solito ci vuole meno di un minuto.",
+    "ringLabel": "Avanzamento dell'anteprima, {{percent}} percento",
+    "lineUpload": "Invio sicuro della tua foto",
+    "lineReserve": "Riserva della tua anteprima gratuita",
+    "lineEdit": "Modifica di {{area}}",
+    "lineFinish": "Ultimi ritocchi",
+    "stateDone": "completato",
+    "stateActive": "in corso",
+    "statePending": "in attesa",
+    "area": {
+      "hairline": "la tua attaccatura",
+      "crown": "il tuo vertice",
+      "part": "la tua riga",
+      "brows": "le tue sopracciglia",
+      "beard": "la tua barba"
+    },
+    "skip": "Salta per ora",
+    "skipNote": "La tua anteprima continua a essere elaborata e ti aspetterà nella scheda Anteprime.",
+    "failedTitle": "Non siamo riusciti a completare la tua anteprima",
+    "failedOffline": "Sembra che tu sia offline. Non è stato addebitato nulla. Controlla la connessione e riprova.",
+    "failedGeneric": "Qualcosa è andato storto da parte nostra. Non è stato addebitato nulla. Puoi riprovare o continuare senza.",
+    "failedBlocked": "Questa foto non può essere usata per un'anteprima. Non è stato addebitato nulla. Puoi continuare e provare un'altra foto più tardi.",
+    "skipFailed": "Continua senza anteprima"
+  },
+  "reveal": {
+    "title": "Ecco un'anteprima di ciò che potrebbe essere",
+    "subtitle": "Trascina il cursore per confrontare. È un'illustrazione creata dall'IA.",
+    "before": "La tua foto",
+    "after": "Anteprima IA",
+    "disclaimer": "Anteprima IA — non è una previsione del tuo risultato",
+    "watermark": "Le anteprime gratuite hanno una piccola filigrana.",
+    "wipeLabel": "Confronto prima e dopo della tua foto. Trascina per confrontare.",
+    "loading": "Preparazione della tua anteprima",
+    "loadFailed": "Non siamo riusciti a caricare l'immagine dell'anteprima. È salvata nella scheda Anteprime.",
+    "cta": "Vedi il mio piano"
+  }
+}

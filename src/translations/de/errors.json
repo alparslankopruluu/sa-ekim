@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Bitte starte die App neu und versuche es erneut.",
+  "consent_required": "Bitte lies zuerst den Hinweis zur KI-Verarbeitung und stimme ihm zu.",
+  "invalid_input": "Da stimmt etwas nicht. Bitte prüfe deine Eingabe und versuche es erneut.",
+  "content_blocked": "Dieses Foto oder dieser Text kann nicht verwendet werden. Bitte wähle etwas anderes.",
+  "insufficient_credits": "Dafür hast du nicht genug Credits.",
+  "pro_required": "Das ist eine Pro-Funktion.",
+  "rate_limited": "Du bist sehr schnell. Warte einen Moment und versuche es dann erneut.",
+  "already_claimed": "Das hast du bereits eingelöst.",
+  "not_found": "Wir konnten das nicht finden.",
+  "previews_disabled": "Vorschauen sind für kurze Zeit pausiert. Dein Verlauf ist nicht betroffen. Bitte versuche es später erneut.",
+  "provider_failed": "Das hat nicht geklappt. Bitte versuche es gleich noch einmal.",
+  "timeout": "Das hat zu lange gedauert. Bitte versuche es erneut.",
+  "offline": "Du scheinst offline zu sein. Prüfe deine Verbindung und versuche es erneut.",
+  "unknown": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+}

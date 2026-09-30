@@ -1,0 +1,84 @@
+{
+  "close": "Đóng camera",
+  "title": "Ảnh tiến trình",
+  "angle": {
+    "front": "Chính diện",
+    "left": "Bên trái",
+    "right": "Bên phải",
+    "top": "Đỉnh đầu",
+    "crown": "Xoáy tóc"
+  },
+  "instruction": {
+    "front": "Tóc khô và tạo kiểu như thường lệ. Đặt khuôn mặt vừa trong hình oval, đường chân tóc gần mép trên.",
+    "left": "Xoay người để lộ bên trái. Giữ điện thoại thẳng đứng ngang tầm mắt.",
+    "right": "Xoay người để lộ bên phải. Giữ điện thoại thẳng đứng ngang tầm mắt.",
+    "top": "Giữ điện thoại nằm ngang phía trên đầu, màn hình hướng lên, để camera sau nhìn xuống đỉnh đầu bạn.",
+    "crown": "Giữ điện thoại nằm ngang phía trên phần sau đầu, màn hình hướng lên, để camera sau nhìn xuống vùng xoáy tóc của bạn."
+  },
+  "cameraNote": {
+    "front": "Dùng camera trước để bạn nhìn thấy khung hình.",
+    "back": "Dùng camera sau. Hãy giữ điện thoại nằm ngang hoặc nhờ người khác chụp. Bạn sẽ cảm nhận một rung nhẹ khi máy đã thăng bằng."
+  },
+  "guide": {
+    "ghostHide": "Ẩn ảnh trước",
+    "ghostShow": "Hiện ảnh trước",
+    "ghostOverlay": "Lớp phủ ảnh {{angle}} trước đó của bạn, {{label}}",
+    "frame": "Khung camera có đường căn chỉnh"
+  },
+  "level": {
+    "ok": "Đã thăng bằng, sẵn sàng",
+    "upright": "Giữ điện thoại thẳng đứng",
+    "flat": "Giữ điện thoại nằm ngang, màn hình hướng lên",
+    "unavailable": "Thiết bị này không có cảm biến chuyển động nên không thể kiểm tra độ thăng bằng. Hãy tự đảm bảo điện thoại thẳng đứng.",
+    "a11yOk": "Điện thoại đã thăng bằng. Bạn có thể chụp ảnh.",
+    "a11yBlockedUpright": "Điện thoại chưa thẳng đứng.",
+    "a11yBlockedFlat": "Điện thoại chưa nằm ngang."
+  },
+  "shutter": {
+    "label": "Chụp ảnh",
+    "blockedUpright": "Giữ điện thoại thẳng đứng để chụp ảnh",
+    "blockedFlat": "Giữ điện thoại nằm ngang để chụp ảnh"
+  },
+  "library": "Chọn từ thư viện",
+  "permission": {
+    "checking": "Đang kiểm tra quyền truy cập camera…",
+    "title": "Quyền truy cập camera đang tắt",
+    "body": "Kök chỉ dùng camera cho ảnh tiến trình của bạn. Ảnh được giữ trên thiết bị này. Bạn cũng có thể chọn ảnh từ thư viện.",
+    "allow": "Cho phép camera",
+    "settings": "Mở cài đặt"
+  },
+  "unavailable": {
+    "title": "Không thể dùng camera ở đây",
+    "body": "Bạn có thể chọn ảnh từ thư viện thay thế."
+  },
+  "review": {
+    "retake": "Chụp lại",
+    "use": "Dùng ảnh này",
+    "saving": "Đang lưu…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Ảnh này chỉ dùng cho bản xem trước của bạn. Ảnh sẽ không được thêm vào hành trình.",
+    "a11y": "Xem lại ảnh bạn vừa chụp"
+  },
+  "error": {
+    "save": "Không lưu được ảnh. Hãy thử lại.",
+    "capture": "Không chụp được ảnh. Hãy thử lại.",
+    "pick": "Không mở được thư viện. Hãy thử lại."
+  },
+  "saved": "Đã lưu ảnh",
+  "checking": "Đang kiểm tra gói của bạn…",
+  "detail": {
+    "title": "Ảnh",
+    "image": "Ảnh {{angle}}, {{label}}",
+    "taken": "Chụp {{date}}",
+    "compare": "So sánh với…",
+    "delete": "Xóa ảnh",
+    "confirmTitle": "Xóa ảnh này?",
+    "confirmBody": "Ảnh sẽ bị xóa khỏi thiết bị này và không thể khôi phục.",
+    "confirm": "Xóa",
+    "cancel": "Giữ lại",
+    "missingTitle": "Ảnh này không còn ở đây",
+    "missingBody": "Có thể ảnh đã bị xóa.",
+    "close": "Đóng",
+    "loadError": "Không thể hiển thị ảnh này."
+  }
+}

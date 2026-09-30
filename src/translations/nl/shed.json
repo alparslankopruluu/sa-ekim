@@ -1,0 +1,43 @@
+{
+  "title": "Uitvallogboek",
+  "close": "Sluiten",
+  "subtitle": "Noteer ongeveer hoeveel haren je op je kussen of in de afvoer ziet. Een grove schatting is prima.",
+  "typical": "Haaruitval in week 2–8 is gebruikelijk.",
+  "phaseNow": "Je zit in week {{week}} na je operatie.",
+  "today": "Vandaag",
+  "input": {
+    "label": "Vandaag opgemerkte haren",
+    "placeholder": "0",
+    "hint": "Een geheel getal van 0 tot 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "{{count}} toevoegen",
+  "save": "Opslaan",
+  "update": "Bijwerken",
+  "saved": "Opgeslagen",
+  "invalid": "Voer een geheel getal in van 0 tot 999.",
+  "chart": {
+    "title": "Laatste 30 dagen",
+    "a11y": "Uitvallogboek van de laatste 30 dagen",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: niets gelogd",
+    "barToday": "Vandaag, {{date}}: {{count}}",
+    "barTodayEmpty": "Vandaag, {{date}}: niets gelogd",
+    "window": "Gebruikelijke uitvalperiode",
+    "todayLegend": "Vandaag",
+    "missing": "Geen notitie"
+  },
+  "average": "Gemiddelde over de laatste 7 dagen: {{count}}",
+  "averageEmpty": "Niets gelogd in de laatste 7 dagen.",
+  "empty": {
+    "title": "Nog niets gelogd",
+    "body": "Log een getal wanneer je haren opmerkt. Na een paar weken toont de grafiek je eigen patroon."
+  },
+  "note": "Voor eigen gebruik. Aantallen verschillen van dag tot dag, en individuele resultaten verschillen.",
+  "mini": {
+    "title": "Uitvallogboek",
+    "empty": "Log het aantal van vandaag",
+    "a11y": "Uitvallogboek, laatste {{days}} dagen. Opent het logboek.",
+    "a11yEmpty": "Uitvallogboek. Nog niets gelogd. Opent het logboek."
+  }
+}

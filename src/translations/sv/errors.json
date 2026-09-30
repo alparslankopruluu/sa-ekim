@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Starta om appen och försök igen.",
+  "consent_required": "Läs och godkänn först informationen om AI-behandling.",
+  "invalid_input": "Något av det du angav såg inte rätt ut. Kontrollera och försök igen.",
+  "content_blocked": "Den bilden eller texten kan inte användas. Prova en annan.",
+  "insufficient_credits": "Du har inte tillräckligt med krediter för det.",
+  "pro_required": "Det är en Pro-funktion.",
+  "rate_limited": "Du går lite för fort fram. Vänta en stund och försök igen.",
+  "already_claimed": "Du har redan hämtat det.",
+  "not_found": "Vi hittade inte det.",
+  "previews_disabled": "Förhandsvisningar är pausade en kort stund. Din resa påverkas inte. Försök igen senare.",
+  "provider_failed": "Det gick inte igenom. Försök igen om en stund.",
+  "timeout": "Det tog för lång tid. Försök igen.",
+  "offline": "Du verkar vara offline. Kontrollera anslutningen och försök igen.",
+  "unknown": "Något gick fel. Försök igen."
+}

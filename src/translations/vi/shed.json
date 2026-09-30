@@ -1,0 +1,43 @@
+{
+  "title": "Nhật ký rụng tóc",
+  "close": "Đóng",
+  "subtitle": "Ghi lại khoảng bao nhiêu sợi tóc bạn thấy trên gối hoặc ở lỗ thoát nước. Con số ước chừng là đủ.",
+  "typical": "Rụng tóc trong tuần 2–8 là điều thường gặp.",
+  "phaseNow": "Bạn đang ở tuần {{week}} sau phẫu thuật.",
+  "today": "Hôm nay",
+  "input": {
+    "label": "Số sợi tóc nhận thấy hôm nay",
+    "placeholder": "0",
+    "hint": "Một số nguyên từ 0 đến 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Thêm {{count}}",
+  "save": "Lưu",
+  "update": "Cập nhật",
+  "saved": "Đã lưu",
+  "invalid": "Hãy nhập một số nguyên từ 0 đến 999.",
+  "chart": {
+    "title": "30 ngày qua",
+    "a11y": "Nhật ký rụng tóc 30 ngày qua",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: chưa ghi gì",
+    "barToday": "Hôm nay, {{date}}: {{count}}",
+    "barTodayEmpty": "Hôm nay, {{date}}: chưa ghi gì",
+    "window": "Khoảng rụng tóc thường gặp",
+    "todayLegend": "Hôm nay",
+    "missing": "Không có mục"
+  },
+  "average": "Trung bình 7 ngày qua: {{count}}",
+  "averageEmpty": "Chưa ghi gì trong 7 ngày qua.",
+  "empty": {
+    "title": "Chưa ghi gì",
+    "body": "Hãy ghi một con số mỗi khi bạn thấy tóc rụng. Sau vài tuần, biểu đồ sẽ cho thấy xu hướng riêng của bạn."
+  },
+  "note": "Để bạn tự tham khảo. Số lượng thay đổi từng ngày, và kết quả mỗi người khác nhau.",
+  "mini": {
+    "title": "Nhật ký rụng tóc",
+    "empty": "Ghi số hôm nay",
+    "a11y": "Nhật ký rụng tóc, {{days}} ngày qua. Mở nhật ký.",
+    "a11yEmpty": "Nhật ký rụng tóc. Chưa ghi gì. Mở nhật ký."
+  }
+}

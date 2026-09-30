@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Acompanhe sua jornada de 12 a 18 meses, semana a semana",
+    "hairline": "Acompanhe a jornada da sua linha do cabelo, semana a semana",
+    "crown": "Acompanhe a jornada da sua coroa, semana a semana",
+    "part": "Acompanhe a jornada da sua risca, semana a semana",
+    "brows": "Acompanhe a jornada das suas sobrancelhas, semana a semana",
+    "beard": "Acompanhe a jornada da sua barba, semana a semana"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Sua primeira prévia está pronta. O Pro adiciona a linha do tempo completa: comparação, a faixa de fases e todos os guias semanais."
+    },
+    "settings": {
+      "subtitle": "Veja o que é típico para a sua semana, ao lado das suas próprias fotos."
+    },
+    "home_banner": {
+      "subtitle": "Veja o que é típico para a sua semana, ao lado das suas próprias fotos."
+    },
+    "notification": {
+      "subtitle": "Veja o que é típico para a sua semana, ao lado das suas próprias fotos."
+    },
+    "gift": {
+      "subtitle": "O preço do seu presente é aplicado ao primeiro ano do plano anual."
+    },
+    "locked_compare": {
+      "title": "Compare suas fotos, semana a semana",
+      "subtitle": "Deslize entre duas fotos ou veja-as lado a lado, cada uma com o rótulo da sua semana."
+    },
+    "locked_band": {
+      "title": "Veja a faixa típica para a sua semana",
+      "subtitle": "Sua foto ao lado da faixa de fases. Ela mostra uma faixa típica, e os resultados individuais variam."
+    },
+    "locked_photos": {
+      "title": "Mantenha cada semana registrada",
+      "subtitle": "O plano grátis guarda {{count}} fotos de progresso. O Pro guarda os 12 a 18 meses inteiros."
+    },
+    "locked_report": {
+      "title": "Compartilhe um relatório com sua clínica",
+      "subtitle": "Um PDF com a primeira e a última foto de cada ângulo, rótulos de semana e o resumo da sua queda."
+    },
+    "locked_hd": {
+      "title": "Mais créditos para prévias HD",
+      "subtitle": "As prévias HD usam créditos e não têm marca d'água. O Pro inclui uma cota de créditos para gastar nelas."
+    },
+    "locked_guide": {
+      "title": "O guia semanal completo",
+      "subtitle": "O que normalmente acontece em cada fase, o que é comum e o que fazer nesta semana."
+    },
+    "insufficient_credits": {
+      "title": "Você precisa de mais créditos para isso",
+      "subtitle": "O Pro inclui uma cota de créditos toda semana ou todo mês. Você também pode comprar um pacote de créditos."
+    },
+    "result_upgrade": {
+      "title": "Veja em HD",
+      "subtitle": "As prévias HD não têm marca d'água e usam créditos. O Pro inclui créditos para gastar nelas."
+    }
+  },
+  "benefits": {
+    "photos": "Fotos de progresso ilimitadas",
+    "compare": "Comparação em cortina e lado a lado",
+    "band": "Faixa da fase esperada nas suas fotos",
+    "guide": "O guia completo de cada fase",
+    "reminders": "Lembretes de fase e de foto",
+    "report": "Relatório em PDF para a clínica",
+    "cohort": "Veja quantas pessoas estão na sua mesma semana",
+    "hd": "Os créditos incluídos valem para prévias HD",
+    "credits": "Uma cota de créditos para prévias"
+  },
+  "plans": {
+    "annual": "Anual",
+    "monthly": "Mensal",
+    "weekly": "Semanal",
+    "bestValue": "Melhor valor",
+    "save": "Economize {{percent}}% em relação ao semanal",
+    "perWeek": "{{price}}/semana",
+    "perMonth": "{{price}}/mês",
+    "perYear": "{{price}}/ano",
+    "firstYear": "{{price}} no primeiro ano"
+  },
+  "planCredits": {
+    "weekly": "Inclui {{count}} créditos toda semana",
+    "monthly": "Inclui {{count}} créditos todo mês",
+    "annual": "Inclui {{initial}} créditos no início, depois {{count}} por semana"
+  },
+  "cta": {
+    "subscribe": "Continuar",
+    "processing": "Processando…"
+  },
+  "disclosure": {
+    "annual": "Cobrança de {{price}} por ano. Renova automaticamente até você cancelar. Cancele quando quiser nos ajustes da sua conta da loja. O preço exibido é o valor que você paga.",
+    "monthly": "Cobrança de {{price}} por mês. Renova automaticamente até você cancelar. Cancele quando quiser nos ajustes da sua conta da loja. O preço exibido é o valor que você paga.",
+    "weekly": "Cobrança de {{price}} por semana. Renova automaticamente até você cancelar. Cancele quando quiser nos ajustes da sua conta da loja. O preço exibido é o valor que você paga.",
+    "intro": "O preço do seu presente: {{intro}} no primeiro ano, depois {{price}} por ano. Renova automaticamente até você cancelar. Cancele quando quiser nos ajustes da sua conta da loja."
+  },
+  "restore": "Restaurar",
+  "restoreNone": "Nenhuma compra anterior encontrada.",
+  "restoreSuccess": "Que bom ter você de volta. O Pro foi restaurado.",
+  "privacy": "Privacidade",
+  "termsLink": "Termos",
+  "loading": "Carregando planos…",
+  "failedTitle": "Os planos não carregaram",
+  "failedBody": "Verifique a conexão e tente de novo.",
+  "emptyBody": "Os planos não estão disponíveis agora. Tente de novo mais tarde.",
+  "purchaseFailed": "A compra não foi concluída. Tente de novo.",
+  "pending": "Sua compra está aguardando aprovação.",
+  "success": "Você é Pro. Obrigado.",
+  "mockBadge": "Loja de teste · sem cobranças reais",
+  "giftBanner": "Seu presente",
+  "creditsLink": "Precisa só de créditos? Veja os pacotes de créditos",
+  "closeLabel": "Fechar"
+}

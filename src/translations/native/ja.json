@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kökはカメラを使用して、毎回同じ角度で経過の写真を撮影できるようにします。",
+  "NSPhotoLibraryUsageDescription": "Kökはお使いの写真を開き、プレビューや経過の記録に使う写真を選べるようにします。",
+  "NSPhotoLibraryAddUsageDescription": "Kökは、プレビューや比較画像をお使いのフォトライブラリに保存します。",
+  "NSMotionUsageDescription": "Kökはモーションセンサーを読み取り、一貫した写真になるようスマートフォンがまっすぐ立っているかを確認します。"
+}

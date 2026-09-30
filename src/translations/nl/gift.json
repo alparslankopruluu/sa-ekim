@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Er wacht een welkomstcadeau",
+    "body": "Eén gratis draai: credits, een gratis HD-preview of korting op Pro.",
+    "cta": "Draaien",
+    "wonTitle": "Je cadeau: {{prize}}",
+    "wonBody": "Geldig tot {{date}}",
+    "use": "Gebruiken"
+  },
+  "title": "Je welkomstcadeau",
+  "subtitle": "Eén gratis draai. Elke prijs is echt.",
+  "spin": "Draai aan het rad",
+  "spinning": "Draaien…",
+  "youWon": "Je hebt gewonnen",
+  "expires": "Geldig tot {{date}}",
+  "redeem": "Mijn cadeau gebruiken",
+  "added": "Toegevoegd aan je account",
+  "done": "Klaar",
+  "close": "Sluiten",
+  "alreadyClaimed": "Je hebt je welkomstcadeau al gedraaid.",
+  "fairness": "Prijzen worden op onze server geloot. Geen aankoop nodig.",
+  "notifyNote": "Als meldingen aanstaan, herinneren we je één keer voordat het afloopt.",
+  "prizes": {
+    "credits10": {
+      "title": "10 credits",
+      "short": "+10",
+      "body": "Toegevoegd aan je saldo voor previews."
+    },
+    "credits5": {
+      "title": "5 credits",
+      "short": "+5",
+      "body": "Toegevoegd aan je saldo voor previews."
+    },
+    "freeHigh": {
+      "title": "Een gratis HD-preview",
+      "short": "HD",
+      "body": "Je volgende HD-preview kost geen credits."
+    },
+    "discount40": {
+      "title": "40% korting op Pro",
+      "short": "−40%",
+      "body": "Het eerste jaar van het jaarabonnement tegen een lagere prijs."
+    }
+  },
+  "expired": "Dit cadeau is verlopen op {{date}}.",
+  "redeemed": "Je hebt dit cadeau al gebruikt.",
+  "tokenNote": "Kies HD wanneer je je volgende preview maakt."
+}

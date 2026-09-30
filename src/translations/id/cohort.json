@@ -1,0 +1,28 @@
+{
+  "title": "Orang-orang di minggumu",
+  "locked": {
+    "title": "Orang lain di minggu operasimu",
+    "body": "Pro menunjukkan berapa banyak orang yang menjalani operasi di minggu yang sama denganmu. Kamu hanya akan melihat jumlahnya.",
+    "cta": "Lihat dengan Pro"
+  },
+  "join": {
+    "title": "Ikut minggu operasimu",
+    "body": "Ikutlah agar dihitung bersama orang-orang yang menjalani operasi di minggu yang sama. Hanya tanggal operasi, tujuan, dan jenis operasimu yang dibagikan. Tidak pernah foto, namamu, atau kliniknya.",
+    "switch": "Hitung saya",
+    "needDate": "Atur tanggal operasimu dulu.",
+    "setDate": "Atur tanggal"
+  },
+  "joining": "Bergabung…",
+  "joined": "Kamu sudah dihitung di minggumu",
+  "loading": "Memeriksa minggumu…",
+  "visible": "Kamu satu dari {{count}} orang di minggumu",
+  "invitation": "Kamu sudah terdaftar. Angka baru muncul setelah cukup banyak orang berbagi minggu yang sama denganmu, sehingga tidak ada yang bisa dikenali.",
+  "privacy": "Hanya tanggal operasi, tujuan, dan jenis operasimu yang dibagikan.",
+  "error": {
+    "offline": "Kamu sedang offline. Coba lagi saat tersambung.",
+    "busy": "Terlalu banyak permintaan. Coba lagi sebentar lagi.",
+    "pro": "Ini membutuhkan Pro.",
+    "generic": "Grup tidak dapat dijangkau. Coba lagi.",
+    "retry": "Coba lagi"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "welcome": {
+    "kicker": "Pendamping transplantasi rambut",
+    "title": "Lihat apa yang lazim untuk minggu pemulihanmu",
+    "subtitle": "Lihat pratinjau perubahan sebelum operasi, lalu ikuti apa yang lazim pada setiap minggu pemulihanmu.",
+    "cta": "Mulai",
+    "demoLabel": "Contoh penggeser sebelum dan sesudah. Geser untuk membandingkan.",
+    "demoBefore": "Sebelum",
+    "demoAfter": "Sesudah",
+    "demoCaption": "Hanya ilustrasi. Pratinjau milikmu sendiri menyusul.",
+    "legalPrefix": "Dengan melanjutkan, kamu menyetujui",
+    "terms": "Ketentuan",
+    "privacy": "Kebijakan Privasi"
+  },
+  "goal": {
+    "title": "Apa yang sedang kamu kerjakan?",
+    "subtitle": "Kami akan menyesuaikan lini masa dan sudut fotomu dengan pilihan ini.",
+    "hairline": {
+      "title": "Garis rambut",
+      "subtitle": "Depan dan pelipis"
+    },
+    "crown": {
+      "title": "Ubun-ubun",
+      "subtitle": "Bagian belakang dan atas kepala"
+    },
+    "part": {
+      "title": "Belahan",
+      "subtitle": "Kepadatan di sepanjang belahan"
+    },
+    "brows": {
+      "title": "Alis",
+      "subtitle": "Transplantasi alis"
+    },
+    "beard": {
+      "title": "Jenggot",
+      "subtitle": "Jenggot dan kumis"
+    }
+  },
+  "stage": {
+    "title": "Di tahap mana kamu dalam prosesnya?",
+    "subtitle": "Ini menentukan apa yang kami tampilkan lebih dulu.",
+    "researching": {
+      "title": "Masih mencari tahu",
+      "subtitle": "Menjajaki pilihan, belum ada yang dipesan"
+    },
+    "planned": {
+      "title": "Operasi sudah dijadwalkan",
+      "subtitle": "Aku punya tanggal yang akan datang"
+    },
+    "done": {
+      "title": "Sudah menjalaninya",
+      "subtitle": "Aku ingin mengikuti pemulihanku"
+    }
+  },
+  "date": {
+    "titlePlanned": "Kapan operasimu?",
+    "titleDone": "Kapan operasimu dilakukan?",
+    "subtitlePlanned": "Kami akan menghitung mundur ke hari ke-0 dan menyiapkan minggu-minggu pertamamu.",
+    "subtitleDone": "Kami akan menunjukkan fase yang sedang kamu jalani dan apa yang lazim minggu ini.",
+    "wheelDay": "Hari",
+    "wheelMonth": "Bulan",
+    "wheelYear": "Tahun",
+    "feedbackPast": "Hari {{day}} · Minggu {{week}}",
+    "feedbackToday": "Hari ini adalah hari ke-0",
+    "feedbackFuture_other": "{{count}} hari lagi",
+    "errorMustBeFuture": "Pilih hari ini atau tanggal yang lebih akhir.",
+    "errorMustBePast": "Pilih hari ini atau tanggal yang lebih awal.",
+    "errorTooFar": "Tanggal itu terlalu jauh untuk diikuti. Pilih yang lebih dekat.",
+    "errorInvalid": "Tanggal itu tidak ada.",
+    "skip": "Aku belum tahu",
+    "skipNote": "Kamu bisa mengatur atau mengubahnya nanti di perjalananmu."
+  },
+  "photo": {
+    "title": "Tambahkan foto untuk pratinjaumu",
+    "subtitleResearching": "Lihat pratinjau AI tentang seperti apa perubahan bisa terlihat, sebelum kamu memutuskan apa pun.",
+    "subtitlePlanned": "Lihat pratinjau AI tentang seperti apa operasimu bisa terlihat.",
+    "subtitleDone": "Lihat pratinjau AI tentang seperti apa hasilmu bisa terlihat seiring rambut mematang.",
+    "guidanceTitle": "Untuk pratinjau terbaik",
+    "angle": {
+      "front": "Hadap kamera lurus, dengan ponsel setinggi mata.",
+      "top": "Pegang ponsel di atas kepalamu, mengarah ke bawah ke puncak kepalamu.",
+      "crown": "Foto bagian belakang kepalamu, sebaiknya dengan bantuan orang lain."
+    },
+    "area": {
+      "hairline": "Sisir rambutmu ke belakang agar garis rambut terlihat jelas.",
+      "crown": "Biarkan ubun-ubun terbuka dan rambutmu rata.",
+      "part": "Belah rambutmu seperti yang biasa kamu pakai.",
+      "brows": "Jaga alismu bebas dari rambut dan kacamata.",
+      "beard": "Biarkan area jenggot terbuka dan dalam cahaya yang merata."
+    },
+    "light": "Gunakan cahaya siang, tanpa filter dan tanpa topi.",
+    "take": "Ambil foto",
+    "library": "Pilih dari galeri",
+    "change": "Pilih foto lain",
+    "selected": "Foto yang kamu pilih",
+    "placeholder": "Belum ada foto yang dipilih",
+    "privacy": "Fotomu hanya dikirim untuk membuat pratinjau, dan hanya setelah kamu setuju di layar berikutnya.",
+    "skip": "Lewati pratinjau",
+    "skipNote": "Kamu bisa membuatnya nanti dari tab Pratinjau.",
+    "permissionDenied": "Kami tidak dapat membuka fotomu. Periksa izinnya di Pengaturan."
+  },
+  "notify": {
+    "title": "Jangan lewatkan momen yang penting",
+    "subtitle": "Pemulihan berjalan lambat. Pengingat lembut di saat yang tepat akan membantumu mengingat.",
+    "bulletPhase": "Kami akan memberi tahu saat fase berganti",
+    "bulletPhoto": "Kami akan memberi tahu saat hari foto tiba",
+    "bulletCare": "Pengingat perawatan harian selama dua minggu pertama",
+    "allow": "Aktifkan pengingat",
+    "skip": "Nanti saja",
+    "note": "Pengingat perawatan gratis. Pengingat fase dan foto tersedia dengan Pro. Kamu bisa mengubahnya kapan saja di Pengaturan."
+  },
+  "crafting": {
+    "title": "Membuat pratinjaumu",
+    "titleDone": "Pratinjaumu sudah siap",
+    "subtitle": "Biasanya kurang dari satu menit.",
+    "ringLabel": "Progres pratinjau, {{percent}} persen",
+    "lineUpload": "Mengirim fotomu dengan aman",
+    "lineReserve": "Menyiapkan pratinjau gratismu",
+    "lineEdit": "Menyunting {{area}}",
+    "lineFinish": "Menambahkan sentuhan akhir",
+    "stateDone": "selesai",
+    "stateActive": "sedang berjalan",
+    "statePending": "menunggu",
+    "area": {
+      "hairline": "garis rambutmu",
+      "crown": "ubun-ubunmu",
+      "part": "belahan rambutmu",
+      "brows": "alismu",
+      "beard": "jenggotmu"
+    },
+    "skip": "Lewati dulu",
+    "skipNote": "Pratinjaumu tetap diproses dan akan menunggu di tab Pratinjau.",
+    "failedTitle": "Kami tidak dapat menyelesaikan pratinjaumu",
+    "failedOffline": "Sepertinya kamu sedang offline. Tidak ada biaya yang dikenakan. Periksa koneksimu dan coba lagi.",
+    "failedGeneric": "Terjadi masalah di pihak kami. Tidak ada biaya yang dikenakan. Kamu bisa mencoba lagi atau melanjutkan tanpa pratinjau.",
+    "failedBlocked": "Foto ini tidak dapat dipakai untuk pratinjau. Tidak ada biaya yang dikenakan. Kamu bisa melanjutkan dan mencoba foto lain nanti.",
+    "skipFailed": "Lanjut tanpa pratinjau"
+  },
+  "reveal": {
+    "title": "Inilah pratinjau tentang apa yang mungkin terjadi",
+    "subtitle": "Geser pegangannya untuk membandingkan. Ini ilustrasi yang dibuat oleh AI.",
+    "before": "Fotomu",
+    "after": "Pratinjau AI",
+    "disclaimer": "Pratinjau AI — bukan prediksi hasilmu",
+    "watermark": "Pratinjau gratis diberi watermark kecil.",
+    "wipeLabel": "Perbandingan sebelum dan sesudah dari fotomu. Geser untuk membandingkan.",
+    "loading": "Menyiapkan pratinjaumu",
+    "loadFailed": "Kami tidak dapat memuat gambar pratinjau. Gambar tersimpan di tab Pratinjaumu.",
+    "cta": "Lihat rencanaku"
+  }
+}

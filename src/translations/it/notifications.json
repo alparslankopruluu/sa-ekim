@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Anteprime",
+    "offers": "Offerte",
+    "reminders": "Promemoria"
+  },
+  "previewReady": {
+    "title": "La tua anteprima è pronta",
+    "body": "Apri Kök per vederla. È un'anteprima IA, non una previsione del tuo risultato."
+  },
+  "giftExpiring": {
+    "title": "Il tuo regalo ti sta ancora aspettando",
+    "body": "Lo sconto sul piano annuale termina il {{date}}."
+  },
+  "care": {
+    "title": "Giorno {{day}} del tuo piano di cura",
+    "body": "Apri i passaggi di oggi. Le indicazioni della tua clinica vengono sempre prima."
+  },
+  "phase": {
+    "shed": {
+      "title": "Settimana {{week}} — la caduta è tipica in questo periodo",
+      "body": "Molte persone notano la caduta in questa fase. Apri la guida per vedere cosa è tipico. I risultati individuali variano."
+    },
+    "quiet": {
+      "title": "La fase di quiete è tipica in questo periodo",
+      "body": "Molte persone sentono che in queste settimane non succede nulla. Apri la guida per vedere cosa è tipico."
+    },
+    "sprout": {
+      "title": "La prima crescita è tipica in questo periodo",
+      "body": "In questa fase spesso iniziano a comparire capelli nuovi e sottili. I tempi variano da persona a persona."
+    },
+    "grow": {
+      "title": "La fase di crescita",
+      "body": "La densità di solito aumenta gradualmente. Continua a scattare foto dalla stessa angolazione per vedere il cambiamento. I risultati individuali variano."
+    },
+    "mature": {
+      "title": "La fase di maturazione",
+      "body": "I risultati continuano ad assestarsi nei prossimi mesi. I risultati individuali variano."
+    },
+    "final": {
+      "title": "È il momento di una revisione completa",
+      "body": "Intorno all'anno molte persone confrontano l'intera serie di foto. Apri la guida."
+    }
+  },
+  "photo": {
+    "title": "È il momento di una foto dei progressi",
+    "body": "Stessa angolazione, stessa luce, pochi secondi. È la tua serie a rendere visibile il cambiamento."
+  },
+  "shed": {
+    "title": "Controllo rapido della caduta",
+    "body": "Registra quanto hai notato oggi. La caduta è tipica in questa fase."
+  },
+  "session": {
+    "title": "Sessione PRP domani",
+    "body": "La tua sessione è il {{date}}. Scatta prima una foto dalla stessa angolazione, così potrai confrontarla dopo."
+  }
+}

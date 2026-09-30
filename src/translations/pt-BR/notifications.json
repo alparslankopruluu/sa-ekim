@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Prévias",
+    "offers": "Ofertas",
+    "reminders": "Lembretes"
+  },
+  "previewReady": {
+    "title": "Sua prévia está pronta",
+    "body": "Abra o Kök para ver. É uma prévia de IA, não uma previsão do seu resultado."
+  },
+  "giftExpiring": {
+    "title": "Seu presente ainda está esperando",
+    "body": "O desconto no seu plano anual termina em {{date}}."
+  },
+  "care": {
+    "title": "Dia {{day}} do seu plano de cuidados",
+    "body": "Abra os passos de hoje. As instruções da sua clínica vêm sempre em primeiro lugar."
+  },
+  "phase": {
+    "shed": {
+      "title": "Semana {{week}} — a queda é típica por volta de agora",
+      "body": "Muitas pessoas notam queda nesta fase. Abra o guia para ver o que é típico. Os resultados individuais variam."
+    },
+    "quiet": {
+      "title": "A fase de calmaria é típica por volta de agora",
+      "body": "Muitas pessoas sentem que nada está acontecendo nestas semanas. Abra o guia para ver o que é típico."
+    },
+    "sprout": {
+      "title": "O primeiro crescimento é típico por volta de agora",
+      "body": "Fios novos e finos costumam começar a aparecer nesta fase. O momento varia de pessoa para pessoa."
+    },
+    "grow": {
+      "title": "A fase de crescimento",
+      "body": "A densidade geralmente aumenta aos poucos. Continue tirando fotos do mesmo ângulo para ver a mudança. Os resultados individuais variam."
+    },
+    "mature": {
+      "title": "A fase de amadurecimento",
+      "body": "Os resultados continuam se estabilizando nos próximos meses. Os resultados individuais variam."
+    },
+    "final": {
+      "title": "Hora de uma revisão completa",
+      "body": "Por volta de um ano, muitas pessoas comparam toda a sua série de fotos. Abra o guia."
+    }
+  },
+  "photo": {
+    "title": "Hora da foto de progresso",
+    "body": "Mesmo ângulo, mesma luz, poucos segundos. É a sua série que torna a mudança visível."
+  },
+  "shed": {
+    "title": "Verificação rápida da queda",
+    "body": "Registre quanto você notou hoje. A queda é típica nesta fase."
+  },
+  "session": {
+    "title": "Sessão de PRP amanhã",
+    "body": "Sua sessão é em {{date}}. Tire uma foto do mesmo ângulo antes, para poder comparar depois."
+  }
+}

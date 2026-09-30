@@ -1,0 +1,116 @@
+{
+  "title": "設定",
+  "sections": {
+    "subscription": "サブスクリプションとクレジット",
+    "language": "言語",
+    "notifications": "通知",
+    "preferences": "環境設定",
+    "data": "データとプライバシー",
+    "account": "アカウント",
+    "legal": "法的情報とサポート",
+    "about": "アプリについて",
+    "developer": "開発者"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "無料プラン",
+    "renews": "{{date}}に更新",
+    "expires": "{{date}}に終了",
+    "manage": "サブスクリプションを管理",
+    "restore": "購入を復元",
+    "upgrade": "Proにアップグレード",
+    "restoreDone": "おかえりなさい。Proを復元しました。",
+    "restoreNone": "以前の購入は見つかりませんでした。",
+    "balance": "クレジット残高",
+    "buyCredits": "クレジットを入手",
+    "freeHigh_other": "無料のHDプレビュー{{count}}回分"
+  },
+  "language": {
+    "title": "言語",
+    "pickerTitle": "言語を選択",
+    "rtlNote": "レイアウトの方向を切り替えるには、Kökを再起動してください。",
+    "closePicker": "言語リストを閉じる"
+  },
+  "notifications": {
+    "previews": "プレビューの完了",
+    "offers": "ギフトと特典",
+    "reminders": "経過のリマインダー",
+    "remindersHint": "ケア、毎週の写真、フェーズのリマインダーです。フェーズのリマインダーはProの機能です。",
+    "systemOff": "システム設定でKökの通知がオフになっています。タップして開いてください。"
+  },
+  "preferences": {
+    "haptics": "触覚フィードバック"
+  },
+  "data": {
+    "wipe": "すべてのデータを削除",
+    "wipeHint": "この端末から、経過の写真、抜け毛の記録、プレビューを削除します。",
+    "wipeTitle": "すべてのデータを削除しますか？",
+    "wipeBody": "手術日、経過写真、抜け毛の記録、保存したプレビューが完全に削除されます。サブスクリプションとクレジットは、アカウントに残ります。元に戻すことはできません。",
+    "wipeConfirm": "データを削除",
+    "wiping": "削除中…",
+    "wiped": "この端末からデータを削除しました。"
+  },
+  "account": {
+    "guest": "匿名アカウント",
+    "id": "アカウントID",
+    "delete": "アカウントを削除",
+    "deleteHint": "アカウント、クレジット、アップロードした写真を当社のサーバーから削除します。",
+    "deleteTitle": "アカウントを削除しますか？",
+    "deleteBody": "アカウント、クレジット、保存したプレビュー、アップロードした写真が完全に削除され、この端末の経過の記録も消去されます。有効なサブスクリプションは、ストアのアカウント設定から別途解約する必要があります。",
+    "deleteConfirm": "アカウントを削除",
+    "deleting": "削除中…",
+    "deleted": "アカウントを削除しました。"
+  },
+  "legal": {
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "ai": "AIプレビューのしくみ",
+    "support": "ヘルプとサポート"
+  },
+  "about": {
+    "version": "バージョン {{version}}（{{build}}）",
+    "contact": "サポートにメールする",
+    "rate": "Kökを評価する",
+    "replay": "オンボーディングをもう一度見る"
+  },
+  "confirm": {
+    "cancel": "キャンセル"
+  },
+  "developer": {
+    "open": "開発者ツール",
+    "backend": "バックエンドモード",
+    "replayOnboarding": "オンボーディングを再生",
+    "offerings": "ストアのオファリング",
+    "purchase": "購入の結果",
+    "wheel": "ギフトホイールの配置",
+    "failNext": "次のプレビューを失敗させる",
+    "cohort": "自分の週のコホート人数",
+    "addCredits": "50クレジットを付与",
+    "reset": "モックデータをすべてリセット",
+    "resetDone": "モックデータをリセットしました。",
+    "credits": "クレジットを付与しました。",
+    "testCrash": "テスト用クラッシュを送信",
+    "events": "イベントログ",
+    "empty": "まだイベントがありません",
+    "mockOnly": "これらのスイッチは、モックバックエンドでのみ存在します。",
+    "values": {
+      "ok": "ok",
+      "slow": "slow",
+      "fail": "fail",
+      "empty": "empty",
+      "success": "success",
+      "cancel": "cancel",
+      "home": "home",
+      "onboarding_exit": "onboarding exit",
+      "off": "off"
+    },
+    "storefront": "モックのストアフロント通貨",
+    "giftOffer": "賞品なしでギフトのオファーを表示",
+    "forcePro": "Proのエンタイトルメント",
+    "grantFreeHigh": "無料のHDプレビューを付与",
+    "previewsEnabled": "プレビューを有効化（キルスイッチ）",
+    "nextPrize": "次のホイールの賞品",
+    "honest": "公正な抽選",
+    "offerCacheNote": "ストアの変更は、次回のペイウォール再試行時、または5分後に反映されます。"
+  }
+}

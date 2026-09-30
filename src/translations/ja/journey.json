@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "おはようございます",
+    "afternoon": "こんにちは",
+    "evening": "こんばんは",
+    "night": "夜更かしのあなたへ"
+  },
+  "today": {
+    "subtitleUnset": "経過の記録は、ひとつの日付から始まります。",
+    "subtitleUpcoming": "手術日：{{date}}",
+    "editDate": "日付と経過の詳細を編集",
+    "bandTitle": "一般的な経過での今週"
+  },
+  "hero": {
+    "day": "経過日",
+    "dayWeek": "{{day}}日目 · {{week}}週目",
+    "monthOf": "約{{total}}か月のうち{{month}}か月目",
+    "complete": "一般的な{{months}}か月の期間を過ぎました",
+    "untilOperation_other": "手術まであと{{count}}日",
+    "daysToGo_other": "日後",
+    "session": "施術",
+    "ofTotal": "全{{total}}回",
+    "prpSession": "{{current}}回目 / 全{{total}}回",
+    "prpDone": "全{{total}}回を記録済み"
+  },
+  "phase": {
+    "rightNow": "現在",
+    "expected": "見込まれる時期",
+    "normalLabel": "現在の一般的な状態",
+    "clinicNote": "結果には個人差があります。ご自身のクリニックの指示に従ってください。",
+    "nextIn_other": "{{phase}}は、一般的に{{count}}日後に始まります",
+    "last": "これが一般的な経過の最後のフェーズです。",
+    "openGuide": "このフェーズのガイドを開きます"
+  },
+  "band": {
+    "a11y": "発毛の経過における一般的な範囲のグラフです。現在のフェーズは{{phase}}です。結果には個人差があります。",
+    "a11yNone": "発毛の経過における一般的な範囲のグラフです。結果には個人差があります。",
+    "a11yLocked": "一般的な範囲のグラフです。Proでご利用いただけます。",
+    "lockChip": "現在地を見る · Pro",
+    "lockedHint": "Proプランを開きます",
+    "start": "手術",
+    "end": "成熟",
+    "disclaimer": "一般的な範囲です。結果には個人差があります",
+    "seeTimeline": "タイムライン"
+  },
+  "care": {
+    "items": {
+      "wash": "クリニックで教わったとおり、やさしく洗う",
+      "sleep": "頭を高くして寝る",
+      "hands": "移植部に触れない、かかない",
+      "sun": "移植部を直射日光にさらさない"
+    }
+  },
+  "task": {
+    "eyebrow": "次のステップ",
+    "photoCta": "写真を撮る",
+    "baseline": {
+      "title": "「施術前」の写真を撮る",
+      "body": "手術前の写真があると、その後の比較がぐっとわかりやすくなります。"
+    },
+    "care": {
+      "title": "今日のケアチェックリスト",
+      "doneTitle": "今日のケアは完了です",
+      "body": "最初の2週間は、多くのクリニックがこれらを案内しています。まずはご自身のクリニックの指示に従ってください。",
+      "progress": "{{total}}件中{{done}}件完了"
+    },
+    "photo": {
+      "firstTitle": "最初の経過写真を撮りましょう",
+      "weeklyTitle": "今週の写真",
+      "monthlyTitle": "今月の写真",
+      "weeklyBody": "最初の3か月は毎週。同じ角度、同じ光で撮ります。",
+      "monthlyBody": "4か月目からは毎月。同じ角度、同じ光で撮ります。"
+    },
+    "shed": {
+      "title": "今日の抜け毛を記録",
+      "body": "2〜8週目の抜け毛はよく見られます。さっと数えておくと、時間をかけて傾向がわかります。",
+      "cta": "抜け毛を記録"
+    },
+    "prp": {
+      "title": "{{total}}回中{{current}}回目の予定があります",
+      "bodyToday": "今日が予定日です。施術前に写真を撮っておくと、記録を比較しやすくなります。",
+      "bodyLate": "{{date}}の予定でした。実施したら完了にしてください。",
+      "markDone": "完了にする"
+    },
+    "caughtUp": {
+      "title": "すべて完了しています",
+      "body": "今日やることはありません。",
+      "nextPhoto_other": "次の写真まであと{{count}}日です。",
+      "nextSession_other": "次の施術まであと{{count}}日です。"
+    }
+  },
+  "setDate": {
+    "title": "手術日を設定",
+    "body": "Kökは日付をもとに、経過日数、週、フェーズを表示し、写真のリマインダーを計画します。",
+    "prpTitle": "初回の施術日を設定",
+    "prpBody": "Kökはその日付から施術の予定を組み、各回の前日にお知らせします。",
+    "cta": "日付を設定",
+    "privacy": "スマートフォン内にのみ保存されます。"
+  },
+  "pre": {
+    "title": "手術の前に",
+    "body": "手術前の数日間に役立つと感じる方が多い内容です。まずはクリニックの指示に従ってください。",
+    "tip1": "明るい場所で、正面、頭頂、側面の「施術前」の写真を撮りましょう。",
+    "tip2": "クリニックに、術後ケアの書面での説明をお願いしましょう。",
+    "tip3": "手術後は、静かに過ごせる日を数日確保しましょう。",
+    "tip4": "頭を高くして寝るために、トラベルピローを用意しておきましょう。",
+    "clinicNote": "薬や健康状態についての疑問は、クリニックまたは医師にご相談ください。"
+  },
+  "previewCard": {
+    "title": "スタイルをプレビュー",
+    "body": "アイデアを探るためのAIプレビューです。結果を予測するものではありません。"
+  },
+  "shedPeek": {
+    "title": "最近の抜け毛",
+    "hint": "抜け毛の記録を開きます",
+    "note": "2〜8週目の抜け毛はよく見られます。"
+  },
+  "tabs": {
+    "timeline": "タイムライン",
+    "photos": "写真",
+    "plan": "プラン"
+  },
+  "timeline": {
+    "bandTitle": "一般的なタイムライン",
+    "phasesTitle": "フェーズ"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "{{from}}〜{{to}}日目",
+    "weeks": "{{from}}〜{{to}}週目",
+    "current": "現在のフェーズ",
+    "past": "過ぎた時期",
+    "upcoming": "これから",
+    "youAreHere": "現在地"
+  },
+  "maturation": {
+    "title": "結果はいつ評価される？",
+    "note": "毛は、手術後およそ{{months}}か月にわたって成熟し続けるのが一般的です。",
+    "evaluate12": "クリニックでは、12か月ごろに結果を評価するのが一般的です。",
+    "evaluate18": "クリニックでは12か月ごろに結果を確認するのが一般的ですが、つむじや分け目は18か月まで成熟が続くことがあります。",
+    "clinicNote": "結果には個人差があります。診察の時期は、クリニックが個別に決めます。"
+  },
+  "photos": {
+    "add": "追加",
+    "count_other": "{{count}}枚",
+    "freeCounter_other": "無料の写真 {{count}} / {{limit}}枚",
+    "limitReached": "無料の写真{{limit}}枚を使い切りました。Proなら無制限に保存できます",
+    "allAngles": "すべて",
+    "before": "手術前",
+    "week": "{{week}}週目 · {{date}}",
+    "all": "写真",
+    "compare": "比較",
+    "compareHint": "比較する2枚の写真を選んでください。",
+    "selectHint": "2枚の写真を選んでください。",
+    "selected_other": "{{max}}枚中{{count}}枚を選択中",
+    "compareCta": "比較",
+    "groupCount_other": "{{count}}枚",
+    "thumbLabel": "{{angle}}の写真、{{group}}",
+    "missing": "ファイルが見つかりません",
+    "emptyTitle": "まだ写真がありません",
+    "emptyBody": "各角度で1枚ずつ撮影してください。次回は、その写真がうっすら重なって表示され、同じ構図に合わせやすくなります。",
+    "emptyCta": "最初の写真を撮る",
+    "emptyFilter": "この角度の写真はまだありません。"
+  },
+  "angles": {
+    "front": "正面",
+    "left": "左",
+    "right": "右",
+    "top": "頭頂",
+    "crown": "つむじ"
+  },
+  "plan": {
+    "intro": "クリニックが一般的に確認する月ごとの写真チェックポイントです。同じ角度、同じ光で撮ります。",
+    "checkpoint": "{{month}}か月目",
+    "status": {
+      "done": "撮影済み",
+      "due": "今が撮影時期",
+      "upcoming": "これから",
+      "missed": "写真なし"
+    },
+    "takePhoto": "写真を撮る",
+    "note": "チェックポイントの写真として認められるのは、その日の1週間前から2週間後までに撮った写真です。"
+  },
+  "prp": {
+    "timelineTitle": "PRP・メソセラピーのコース",
+    "timelineBody": "コースは、数週間おきに数回の施術を行い、その後メンテナンスを行う計画が一般的です。個別の計画はクリニックが決めます。",
+    "openPlan": "プランを開く",
+    "emptyTitle": "施術の計画を立てる",
+    "emptyBody": "一般的な計画から始めましょう。{{weeks}}週間おきに{{sessions}}回です。日付はすべて変更できます。",
+    "createPlan": "プランを作成",
+    "intro": "施術が済んだら、チェックを入れてください。各回の前に写真を撮っておくと、記録を比較しやすくなります。",
+    "session": "{{number}}回目",
+    "done": "完了",
+    "due": "実施予定",
+    "planned": "予定",
+    "markDoneLabel": "{{date}}の{{number}}回目を完了にする",
+    "changeDate": "日付を変更",
+    "photoBefore": "施術前の写真",
+    "remove": "削除",
+    "removeTitle": "この施術を削除しますか？",
+    "removeBody": "リマインダーも一緒に削除されます。",
+    "addSession": "施術を追加",
+    "maintenanceTitle": "メンテナンス",
+    "maintenanceBody": "約{{months}}か月後（{{date}}ごろ）にメンテナンスの施術を勧めるクリニックが多くあります。",
+    "clinicNote": "ご自身のクリニックの計画に従ってください。"
+  },
+  "setup": {
+    "title": "あなたの経過",
+    "kindTitle": "何を記録しますか？",
+    "kind": {
+      "transplant": {
+        "title": "植毛",
+        "body": "生え際、つむじ、分け目、眉毛、ひげ"
+      },
+      "prp": {
+        "title": "PRP・メソセラピーのコース",
+        "body": "数週間おきの一連の施術"
+      }
+    },
+    "goalTitle": "どの部位ですか？",
+    "goals": {
+      "hairline": "生え際",
+      "crown": "つむじ",
+      "part": "分け目",
+      "brows": "眉毛",
+      "beard": "ひげ"
+    },
+    "dateTitleTransplant": "手術日",
+    "dateTitlePrp": "初回の施術日",
+    "day": "日",
+    "month": "月",
+    "year": "年",
+    "relToday": "今日です。0日目",
+    "relPast": "{{day}}日目 · {{week}}週目",
+    "relFuture_other": "{{count}}日後",
+    "clinicTitle": "クリニック（任意）",
+    "clinicPlaceholder": "クリニック名",
+    "clinicHint": "このスマートフォン内にのみ保存され、アップロードされません。",
+    "clinicTooLong": "{{max}}文字以内で入力してください。",
+    "clinicBlocked": "別の名前を使用してください。",
+    "save": "保存",
+    "saved": "保存しました",
+    "relabelTitle": "日付を変更しますか？",
+    "relabelBody": "すべての写真の経過日数と週の表示が、新しい日付から再計算されます。",
+    "relabelConfirm": "日付を変更"
+  }
+}

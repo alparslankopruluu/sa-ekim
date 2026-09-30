@@ -1,0 +1,7 @@
+{
+  "CFBundleDisplayName": "Kök",
+  "NSCameraUsageDescription": "Kök usa la fotocamera per permetterti di fotografare i tuoi progressi sempre dalla stessa angolazione.",
+  "NSPhotoLibraryUsageDescription": "Kök apre le tue foto per permetterti di sceglierne una per un'anteprima o per il tuo percorso.",
+  "NSPhotoLibraryAddUsageDescription": "Kök salva le tue anteprime e le immagini di confronto nella libreria foto.",
+  "NSMotionUsageDescription": "Kök legge il sensore di movimento per verificare che il telefono sia tenuto in verticale, così le foto restano coerenti."
+}

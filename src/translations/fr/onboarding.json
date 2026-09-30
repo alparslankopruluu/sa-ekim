@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Compagnon de greffe capillaire",
+    "title": "Voyez ce qui est habituel pour votre semaine de récupération",
+    "subtitle": "Prévisualisez un changement avant l'opération, puis suivez ce qui est habituel pour chaque semaine de votre récupération.",
+    "cta": "Commencer",
+    "demoLabel": "Exemple du curseur avant et après. Faites glisser pour comparer.",
+    "demoBefore": "Avant",
+    "demoAfter": "Après",
+    "demoCaption": "Illustration uniquement. Votre propre aperçu viendra plus tard.",
+    "legalPrefix": "En continuant, vous acceptez nos",
+    "terms": "Conditions",
+    "privacy": "Politique de confidentialité"
+  },
+  "goal": {
+    "title": "Sur quoi travaillez-vous ?",
+    "subtitle": "Nous adapterons votre calendrier et vos angles de photo en conséquence.",
+    "hairline": {
+      "title": "Ligne frontale",
+      "subtitle": "Front et tempes"
+    },
+    "crown": {
+      "title": "Vertex",
+      "subtitle": "L'arrière et le dessus de la tête"
+    },
+    "part": {
+      "title": "Raie",
+      "subtitle": "Densité le long de la raie"
+    },
+    "brows": {
+      "title": "Sourcils",
+      "subtitle": "Greffe de sourcils"
+    },
+    "beard": {
+      "title": "Barbe",
+      "subtitle": "Barbe et moustache"
+    }
+  },
+  "stage": {
+    "title": "Où en êtes-vous dans le processus ?",
+    "subtitle": "Cela détermine ce que nous vous montrons en premier.",
+    "researching": {
+      "title": "Encore en recherche",
+      "subtitle": "J'explore les options, rien de réservé"
+    },
+    "planned": {
+      "title": "Opération réservée",
+      "subtitle": "J'ai une date à venir"
+    },
+    "done": {
+      "title": "Déjà opéré(e)",
+      "subtitle": "Je veux suivre ma récupération"
+    }
+  },
+  "date": {
+    "titlePlanned": "Quand est votre opération ?",
+    "titleDone": "Quand a eu lieu votre opération ?",
+    "subtitlePlanned": "Nous ferons le décompte jusqu'au jour 0 et préparerons vos premières semaines.",
+    "subtitleDone": "Nous vous montrerons dans quelle phase vous êtes et ce qui est habituel cette semaine.",
+    "wheelDay": "Jour",
+    "wheelMonth": "Mois",
+    "wheelYear": "Année",
+    "feedbackPast": "Jour {{day}} · Semaine {{week}}",
+    "feedbackToday": "Aujourd'hui, c'est le jour 0",
+    "feedbackFuture_one": "Dans {{count}} jour",
+    "feedbackFuture_other": "Dans {{count}} jours",
+    "errorMustBeFuture": "Choisissez aujourd'hui ou une date ultérieure.",
+    "errorMustBePast": "Choisissez aujourd'hui ou une date antérieure.",
+    "errorTooFar": "Cette date est trop lointaine pour être suivie. Choisissez-en une plus proche.",
+    "errorInvalid": "Cette date n'existe pas.",
+    "skip": "Je ne sais pas encore",
+    "skipNote": "Vous pourrez la définir ou la modifier plus tard dans votre parcours."
+  },
+  "photo": {
+    "title": "Ajoutez une photo pour votre aperçu",
+    "subtitleResearching": "Voyez un aperçu IA de ce à quoi un changement pourrait ressembler, avant de vous engager.",
+    "subtitlePlanned": "Voyez un aperçu IA de ce à quoi votre opération pourrait ressembler.",
+    "subtitleDone": "Voyez un aperçu IA de ce à quoi votre résultat pourrait ressembler en mûrissant.",
+    "guidanceTitle": "Pour un meilleur aperçu",
+    "angle": {
+      "front": "Faites face à l'appareil, bien droit, le téléphone à hauteur des yeux.",
+      "top": "Tenez le téléphone au-dessus de votre tête, en regardant vers le dessus du crâne.",
+      "crown": "Photographiez l'arrière de votre tête, idéalement avec l'aide de quelqu'un."
+    },
+    "area": {
+      "hairline": "Dégagez vos cheveux vers l'arrière pour que la ligne frontale soit bien visible.",
+      "crown": "Gardez le vertex découvert et vos cheveux bien plaqués.",
+      "part": "Faites votre raie comme vous la portez habituellement.",
+      "brows": "Gardez vos sourcils dégagés de cheveux et de lunettes.",
+      "beard": "Gardez la zone de la barbe découverte et bien éclairée de façon uniforme."
+    },
+    "light": "Utilisez la lumière du jour, sans filtre et sans chapeau.",
+    "take": "Prendre une photo",
+    "library": "Choisir dans la photothèque",
+    "change": "Choisir une autre photo",
+    "selected": "Votre photo sélectionnée",
+    "placeholder": "Aucune photo sélectionnée pour l'instant",
+    "privacy": "Votre photo est envoyée uniquement pour créer l'aperçu, et seulement après votre accord sur l'écran suivant.",
+    "skip": "Passer l'aperçu",
+    "skipNote": "Vous pourrez en créer un plus tard depuis l'onglet Aperçus.",
+    "permissionDenied": "Nous n'avons pas pu ouvrir vos photos. Vérifiez l'autorisation dans les Réglages."
+  },
+  "notify": {
+    "title": "Ne manquez jamais les moments importants",
+    "subtitle": "La récupération est lente. Un petit rappel au bon moment pense à votre place.",
+    "bulletPhase": "Nous vous prévenons quand une phase change",
+    "bulletPhoto": "Nous vous prévenons quand vient le jour de la photo",
+    "bulletCare": "Rappels de soins quotidiens durant les deux premières semaines",
+    "allow": "Activer les rappels",
+    "skip": "Pas maintenant",
+    "note": "Les rappels de soins sont gratuits. Les rappels de phase et de photo sont inclus dans Pro. Vous pouvez changer cela à tout moment dans les Réglages."
+  },
+  "crafting": {
+    "title": "Création de votre aperçu",
+    "titleDone": "Votre aperçu est prêt",
+    "subtitle": "Cela prend généralement moins d'une minute.",
+    "ringLabel": "Progression de l'aperçu, {{percent}} pour cent",
+    "lineUpload": "Envoi sécurisé de votre photo",
+    "lineReserve": "Réservation de votre aperçu gratuit",
+    "lineEdit": "Retouche de {{area}}",
+    "lineFinish": "Dernières finitions",
+    "stateDone": "terminé",
+    "stateActive": "en cours",
+    "statePending": "en attente",
+    "area": {
+      "hairline": "votre ligne frontale",
+      "crown": "votre vertex",
+      "part": "votre raie",
+      "brows": "vos sourcils",
+      "beard": "votre barbe"
+    },
+    "skip": "Passer pour l'instant",
+    "skipNote": "Votre aperçu continue d'être généré et vous attendra dans l'onglet Aperçus.",
+    "failedTitle": "Nous n'avons pas pu terminer votre aperçu",
+    "failedOffline": "Vous semblez être hors ligne. Rien n'a été débité. Vérifiez votre connexion et réessayez.",
+    "failedGeneric": "Un problème est survenu de notre côté. Rien n'a été débité. Vous pouvez réessayer ou continuer sans lui.",
+    "failedBlocked": "Cette photo ne peut pas être utilisée pour un aperçu. Rien n'a été débité. Vous pouvez continuer et essayer une autre photo plus tard.",
+    "skipFailed": "Continuer sans aperçu"
+  },
+  "reveal": {
+    "title": "Voici un aperçu de ce qui pourrait être",
+    "subtitle": "Faites glisser la poignée pour comparer. C'est une illustration réalisée par IA.",
+    "before": "Votre photo",
+    "after": "Aperçu IA",
+    "disclaimer": "Aperçu IA — pas une prédiction de votre résultat",
+    "watermark": "Les aperçus gratuits portent un petit filigrane.",
+    "wipeLabel": "Comparaison avant et après de votre photo. Faites glisser pour comparer.",
+    "loading": "Préparation de votre aperçu",
+    "loadFailed": "Nous n'avons pas pu charger l'image de l'aperçu. Elle est enregistrée dans votre onglet Aperçus.",
+    "cta": "Voir mon plan"
+  }
+}

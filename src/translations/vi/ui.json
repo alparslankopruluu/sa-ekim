@@ -1,0 +1,22 @@
+{
+  "a11y": {
+    "close": "Đóng",
+    "selected": "Đã chọn",
+    "notSelected": "Chưa chọn",
+    "step": "Bước {{current}} trên {{total}}",
+    "balance_other": "Có {{count}} credit",
+    "wheel": "Vòng quay quà với bốn loại phần thưởng"
+  },
+  "demoMode": "Chế độ demo: không có giao dịch thật và không có máy chủ thật",
+  "getCredits": "Mua credit",
+  "update": {
+    "title": "Cần cập nhật",
+    "body": "Phiên bản Kök này không còn được hỗ trợ. Vui lòng cập nhật để tiếp tục. Hành trình của bạn vẫn nằm trên điện thoại của bạn.",
+    "cta": "Cập nhật"
+  },
+  "notFound": {
+    "title": "Không có trang này",
+    "body": "Liên kết có thể đã cũ. Không có gì bị mất.",
+    "cta": "Về Hôm nay"
+  }
+}

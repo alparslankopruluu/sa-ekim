@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Ikuti perjalananmu selama 12–18 bulan, minggu demi minggu",
+    "hairline": "Ikuti perjalanan garis rambutmu, minggu demi minggu",
+    "crown": "Ikuti perjalanan ubun-ubunmu, minggu demi minggu",
+    "part": "Ikuti perjalanan belahan rambutmu, minggu demi minggu",
+    "brows": "Ikuti perjalanan alismu, minggu demi minggu",
+    "beard": "Ikuti perjalanan jenggotmu, minggu demi minggu"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Pratinjau pertamamu sudah selesai. Pro menambahkan lini masa lengkap: bandingkan, pita fase, dan setiap panduan mingguan."
+    },
+    "settings": {
+      "subtitle": "Lihat apa yang lazim untuk minggumu, di samping fotomu sendiri."
+    },
+    "home_banner": {
+      "subtitle": "Lihat apa yang lazim untuk minggumu, di samping fotomu sendiri."
+    },
+    "notification": {
+      "subtitle": "Lihat apa yang lazim untuk minggumu, di samping fotomu sendiri."
+    },
+    "gift": {
+      "subtitle": "Harga hadiahmu berlaku untuk tahun pertama paket tahunan."
+    },
+    "locked_compare": {
+      "title": "Bandingkan fotomu, minggu demi minggu",
+      "subtitle": "Geser di antara dua foto atau lihat berdampingan, masing-masing diberi label minggunya."
+    },
+    "locked_band": {
+      "title": "Lihat rentang lazim untuk minggumu",
+      "subtitle": "Fotomu di samping pita fase. Pita ini menunjukkan rentang yang lazim, dan hasil tiap orang berbeda."
+    },
+    "locked_photos": {
+      "title": "Simpan setiap minggu dalam catatan",
+      "subtitle": "Gratis menyimpan {{count}} foto progres. Pro menyimpan seluruh 12–18 bulan."
+    },
+    "locked_report": {
+      "title": "Bagikan laporan kepada klinikmu",
+      "subtitle": "PDF berisi foto pertama dan terbarumu per sudut, label minggu, dan ringkasan kerontokanmu."
+    },
+    "locked_hd": {
+      "title": "Lebih banyak kredit untuk pratinjau HD",
+      "subtitle": "Pratinjau HD memakai kredit dan tanpa watermark. Pro menyertakan jatah kredit untuk dipakai di sana."
+    },
+    "locked_guide": {
+      "title": "Panduan mingguan lengkap",
+      "subtitle": "Apa yang biasanya terjadi pada setiap fase, apa yang lazim, dan apa yang perlu dilakukan minggu ini."
+    },
+    "insufficient_credits": {
+      "title": "Kamu butuh lebih banyak kredit untuk itu",
+      "subtitle": "Pro menyertakan jatah kredit setiap minggu atau bulan. Kamu juga bisa membeli paket kredit."
+    },
+    "result_upgrade": {
+      "title": "Lihat dalam HD",
+      "subtitle": "Pratinjau HD tanpa watermark dan memakai kredit. Pro menyertakan kredit untuk dipakai di sana."
+    }
+  },
+  "benefits": {
+    "photos": "Foto progres tanpa batas",
+    "compare": "Bandingkan dengan geser dan berdampingan",
+    "band": "Pita fase yang diharapkan pada fotomu",
+    "guide": "Panduan lengkap untuk setiap fase",
+    "reminders": "Pengingat fase dan foto",
+    "report": "Laporan PDF untuk klinik",
+    "cohort": "Lihat berapa orang di minggu yang sama denganmu",
+    "hd": "Kredit yang disertakan berlaku untuk pratinjau HD",
+    "credits": "Jatah kredit untuk pratinjau"
+  },
+  "plans": {
+    "annual": "Tahunan",
+    "monthly": "Bulanan",
+    "weekly": "Mingguan",
+    "bestValue": "Paling hemat",
+    "save": "Hemat {{percent}}% dibanding mingguan",
+    "perWeek": "{{price}}/minggu",
+    "perMonth": "{{price}}/bulan",
+    "perYear": "{{price}}/tahun",
+    "firstYear": "{{price}} tahun pertama"
+  },
+  "planCredits": {
+    "weekly": "Termasuk {{count}} kredit setiap minggu",
+    "monthly": "Termasuk {{count}} kredit setiap bulan",
+    "annual": "Termasuk {{initial}} kredit di awal, lalu {{count}} setiap minggu"
+  },
+  "cta": {
+    "subscribe": "Lanjut",
+    "processing": "Memproses…"
+  },
+  "disclosure": {
+    "annual": "Ditagih {{price}} per tahun. Diperpanjang otomatis sampai kamu membatalkan. Batalkan kapan saja di pengaturan akun toko aplikasimu. Harga yang ditampilkan adalah jumlah yang ditagihkan kepadamu.",
+    "monthly": "Ditagih {{price}} per bulan. Diperpanjang otomatis sampai kamu membatalkan. Batalkan kapan saja di pengaturan akun toko aplikasimu. Harga yang ditampilkan adalah jumlah yang ditagihkan kepadamu.",
+    "weekly": "Ditagih {{price}} per minggu. Diperpanjang otomatis sampai kamu membatalkan. Batalkan kapan saja di pengaturan akun toko aplikasimu. Harga yang ditampilkan adalah jumlah yang ditagihkan kepadamu.",
+    "intro": "Harga hadiahmu: {{intro}} untuk tahun pertama, lalu {{price}} per tahun. Diperpanjang otomatis sampai kamu membatalkan. Batalkan kapan saja di pengaturan akun toko aplikasimu."
+  },
+  "restore": "Pulihkan",
+  "restoreNone": "Tidak ada pembelian sebelumnya.",
+  "restoreSuccess": "Selamat datang kembali. Pro sudah dipulihkan.",
+  "privacy": "Privasi",
+  "termsLink": "Ketentuan",
+  "loading": "Memuat paket…",
+  "failedTitle": "Paket tidak dapat dimuat",
+  "failedBody": "Periksa koneksimu dan coba lagi.",
+  "emptyBody": "Paket sedang tidak tersedia. Silakan coba lagi nanti.",
+  "purchaseFailed": "Pembelian tidak berhasil diproses. Silakan coba lagi.",
+  "pending": "Pembelianmu sedang menunggu persetujuan.",
+  "success": "Kamu sudah Pro. Terima kasih.",
+  "mockBadge": "Toko uji · tanpa biaya sungguhan",
+  "giftBanner": "Hadiahmu",
+  "creditsLink": "Hanya butuh kredit? Lihat paket kredit",
+  "closeLabel": "Tutup"
+}

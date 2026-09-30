@@ -1,0 +1,57 @@
+{
+  "channels": {
+    "previews": "Bản xem trước",
+    "offers": "Ưu đãi",
+    "reminders": "Nhắc nhở"
+  },
+  "previewReady": {
+    "title": "Bản xem trước của bạn đã sẵn sàng",
+    "body": "Mở Kök để xem. Đây là bản xem trước AI, không phải dự đoán về kết quả của bạn."
+  },
+  "giftExpiring": {
+    "title": "Quà của bạn vẫn đang chờ",
+    "body": "Ưu đãi gói năm của bạn kết thúc vào {{date}}."
+  },
+  "care": {
+    "title": "Ngày {{day}} trong kế hoạch chăm sóc của bạn",
+    "body": "Mở các bước hôm nay. Hướng dẫn của phòng khám luôn được ưu tiên."
+  },
+  "phase": {
+    "shed": {
+      "title": "Tuần {{week}}: rụng tóc thường gặp vào lúc này",
+      "body": "Nhiều người bị rụng tóc trong giai đoạn này. Mở hướng dẫn để xem điều thường gặp. Kết quả mỗi người khác nhau."
+    },
+    "quiet": {
+      "title": "Giai đoạn yên ắng thường gặp vào lúc này",
+      "body": "Nhiều người cảm thấy chẳng có gì thay đổi trong những tuần này. Mở hướng dẫn để xem điều thường gặp."
+    },
+    "sprout": {
+      "title": "Tóc mọc đầu tiên thường gặp vào lúc này",
+      "body": "Những sợi tóc mới mảnh thường bắt đầu xuất hiện trong giai đoạn này. Thời điểm mỗi người mỗi khác."
+    },
+    "grow": {
+      "title": "Giai đoạn phát triển",
+      "body": "Mật độ thường tăng dần dần. Hãy tiếp tục chụp ảnh cùng góc để thấy sự thay đổi. Kết quả mỗi người khác nhau."
+    },
+    "mature": {
+      "title": "Giai đoạn trưởng thành",
+      "body": "Kết quả tiếp tục ổn định dần trong những tháng tới. Kết quả mỗi người khác nhau."
+    },
+    "final": {
+      "title": "Đến lúc xem lại toàn bộ",
+      "body": "Vào khoảng mốc một năm, nhiều người so sánh cả chuỗi ảnh của mình. Mở hướng dẫn của bạn."
+    }
+  },
+  "photo": {
+    "title": "Đến lúc chụp ảnh tiến trình",
+    "body": "Cùng góc, cùng ánh sáng, chỉ vài giây. Chuỗi ảnh của bạn là thứ làm sự thay đổi trở nên rõ ràng."
+  },
+  "shed": {
+    "title": "Kiểm tra rụng tóc nhanh",
+    "body": "Ghi lại mức bạn nhận thấy hôm nay. Rụng tóc thường gặp trong giai đoạn này."
+  },
+  "session": {
+    "title": "Ngày mai có buổi PRP",
+    "body": "Buổi của bạn diễn ra vào {{date}}. Hãy chụp một ảnh cùng góc trước đó để so sánh sau này."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Catatan kerontokan",
+  "close": "Tutup",
+  "subtitle": "Catat kira-kira berapa helai rambut yang kamu lihat di bantal atau di saluran air. Angka kasar sudah cukup.",
+  "typical": "Kerontokan pada minggu ke-2–8 itu lazim.",
+  "phaseNow": "Kamu berada di minggu ke-{{week}} setelah operasimu.",
+  "today": "Hari ini",
+  "input": {
+    "label": "Rambut yang terlihat hari ini",
+    "placeholder": "0",
+    "hint": "Bilangan bulat dari 0 sampai 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Tambah {{count}}",
+  "save": "Simpan",
+  "update": "Perbarui",
+  "saved": "Tersimpan",
+  "invalid": "Masukkan bilangan bulat dari 0 sampai 999.",
+  "chart": {
+    "title": "30 hari terakhir",
+    "a11y": "Catatan kerontokan 30 hari terakhir",
+    "bar": "{{date}}: {{count}}",
+    "barEmpty": "{{date}}: tidak ada catatan",
+    "barToday": "Hari ini, {{date}}: {{count}}",
+    "barTodayEmpty": "Hari ini, {{date}}: tidak ada catatan",
+    "window": "Rentang kerontokan yang lazim",
+    "todayLegend": "Hari ini",
+    "missing": "Tanpa catatan"
+  },
+  "average": "Rata-rata selama 7 hari terakhir: {{count}}",
+  "averageEmpty": "Tidak ada catatan dalam 7 hari terakhir.",
+  "empty": {
+    "title": "Belum ada catatan",
+    "body": "Catat angka setiap kali kamu melihat rambut rontok. Setelah beberapa minggu, grafik menunjukkan polamu sendiri."
+  },
+  "note": "Untuk acuanmu sendiri. Jumlahnya berbeda dari hari ke hari, dan hasil tiap orang berbeda.",
+  "mini": {
+    "title": "Catatan kerontokan",
+    "empty": "Catat jumlah hari ini",
+    "a11y": "Catatan kerontokan, {{days}} hari terakhir. Membuka catatan.",
+    "a11yEmpty": "Catatan kerontokan. Belum ada catatan. Membuka catatan."
+  }
+}

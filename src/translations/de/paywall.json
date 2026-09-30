@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Verfolge deinen 12–18-monatigen Verlauf, Woche für Woche",
+    "hairline": "Verfolge den Verlauf deines Haaransatzes, Woche für Woche",
+    "crown": "Verfolge den Verlauf deines Wirbels, Woche für Woche",
+    "part": "Verfolge den Verlauf deines Scheitels, Woche für Woche",
+    "brows": "Verfolge den Verlauf deiner Augenbrauen, Woche für Woche",
+    "beard": "Verfolge den Verlauf deines Barts, Woche für Woche"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "Deine erste Vorschau ist fertig. Pro ergänzt die vollständige Zeitleiste: Vergleich, das Phasenband und jeden Wochenleitfaden."
+    },
+    "settings": {
+      "subtitle": "Sieh, was in deiner Woche typisch ist, neben deinen eigenen Fotos."
+    },
+    "home_banner": {
+      "subtitle": "Sieh, was in deiner Woche typisch ist, neben deinen eigenen Fotos."
+    },
+    "notification": {
+      "subtitle": "Sieh, was in deiner Woche typisch ist, neben deinen eigenen Fotos."
+    },
+    "gift": {
+      "subtitle": "Dein Geschenkpreis gilt für das erste Jahr des Jahresabos."
+    },
+    "locked_compare": {
+      "title": "Vergleiche deine Fotos, Woche für Woche",
+      "subtitle": "Schiebe zwischen zwei Fotos hin und her oder sieh sie nebeneinander, jeweils mit ihrer Woche beschriftet."
+    },
+    "locked_band": {
+      "title": "Sieh den typischen Bereich für deine Woche",
+      "subtitle": "Dein Foto neben dem Phasenband. Es zeigt einen typischen Bereich, und individuelle Verläufe unterscheiden sich."
+    },
+    "locked_photos": {
+      "title": "Halte jede Woche fest",
+      "subtitle": "Kostenlos speichert {{count}} Fortschrittsfotos. Pro speichert die gesamten 12–18 Monate."
+    },
+    "locked_report": {
+      "title": "Teile einen Bericht mit deiner Klinik",
+      "subtitle": "Ein PDF mit deinem ersten und neuesten Foto pro Blickwinkel, Wochenangaben und deiner Ausfall-Zusammenfassung."
+    },
+    "locked_hd": {
+      "title": "Mehr Credits für HD-Vorschauen",
+      "subtitle": "HD-Vorschauen verbrauchen Credits und haben kein Wasserzeichen. Pro enthält ein Credit-Kontingent, das du dafür nutzen kannst."
+    },
+    "locked_guide": {
+      "title": "Der vollständige Wochenleitfaden",
+      "subtitle": "Was in jeder Phase typischerweise passiert, was üblich ist und was du diese Woche tun kannst."
+    },
+    "insufficient_credits": {
+      "title": "Dafür brauchst du mehr Credits",
+      "subtitle": "Pro enthält jede Woche oder jeden Monat ein Credit-Kontingent. Du kannst auch ein Credit-Paket kaufen."
+    },
+    "result_upgrade": {
+      "title": "Sieh es in HD",
+      "subtitle": "HD-Vorschauen haben kein Wasserzeichen und verbrauchen Credits. Pro enthält Credits, die du dafür nutzen kannst."
+    }
+  },
+  "benefits": {
+    "photos": "Unbegrenzte Fortschrittsfotos",
+    "compare": "Schieber und Vergleich nebeneinander",
+    "band": "Phasenband der erwarteten Phase auf deinen Fotos",
+    "guide": "Der vollständige Leitfaden für jede Phase",
+    "reminders": "Phasen- und Fotoerinnerungen",
+    "report": "PDF-Bericht für die Klinik",
+    "cohort": "Sieh, wie viele in derselben Woche sind",
+    "hd": "Enthaltene Credits gelten für HD-Vorschauen",
+    "credits": "Ein Credit-Kontingent für Vorschauen"
+  },
+  "plans": {
+    "annual": "Jährlich",
+    "monthly": "Monatlich",
+    "weekly": "Wöchentlich",
+    "bestValue": "Bestes Angebot",
+    "save": "{{percent}} % sparen gegenüber wöchentlich",
+    "perWeek": "{{price}}/Woche",
+    "perMonth": "{{price}}/Monat",
+    "perYear": "{{price}}/Jahr",
+    "firstYear": "{{price}} im ersten Jahr"
+  },
+  "planCredits": {
+    "weekly": "Enthält {{count}} Credits pro Woche",
+    "monthly": "Enthält {{count}} Credits pro Monat",
+    "annual": "Enthält {{initial}} Credits zu Beginn, danach {{count}} pro Woche"
+  },
+  "cta": {
+    "subscribe": "Weiter",
+    "processing": "Wird verarbeitet…"
+  },
+  "disclosure": {
+    "annual": "Abgerechnet werden {{price}} pro Jahr. Verlängert sich automatisch, bis du kündigst. Jederzeit kündbar in den Einstellungen deines Store-Kontos. Der angezeigte Preis ist der Betrag, der dir berechnet wird.",
+    "monthly": "Abgerechnet werden {{price}} pro Monat. Verlängert sich automatisch, bis du kündigst. Jederzeit kündbar in den Einstellungen deines Store-Kontos. Der angezeigte Preis ist der Betrag, der dir berechnet wird.",
+    "weekly": "Abgerechnet werden {{price}} pro Woche. Verlängert sich automatisch, bis du kündigst. Jederzeit kündbar in den Einstellungen deines Store-Kontos. Der angezeigte Preis ist der Betrag, der dir berechnet wird.",
+    "intro": "Dein Geschenkpreis: {{intro}} für das erste Jahr, danach {{price}} pro Jahr. Verlängert sich automatisch, bis du kündigst. Jederzeit kündbar in den Einstellungen deines Store-Kontos."
+  },
+  "restore": "Wiederherstellen",
+  "restoreNone": "Keine früheren Käufe gefunden.",
+  "restoreSuccess": "Willkommen zurück. Pro ist wiederhergestellt.",
+  "privacy": "Datenschutz",
+  "termsLink": "Bedingungen",
+  "loading": "Abos werden geladen…",
+  "failedTitle": "Abos wurden nicht geladen",
+  "failedBody": "Prüfe deine Verbindung und versuche es erneut.",
+  "emptyBody": "Abos sind gerade nicht verfügbar. Bitte versuche es später erneut.",
+  "purchaseFailed": "Der Kauf wurde nicht abgeschlossen. Bitte versuche es erneut.",
+  "pending": "Dein Kauf wartet auf Genehmigung.",
+  "success": "Du bist Pro. Danke.",
+  "mockBadge": "Test-Store · keine echten Abbuchungen",
+  "giftBanner": "Dein Geschenk",
+  "creditsLink": "Nur Credits nötig? Credit-Pakete ansehen",
+  "closeLabel": "Schließen"
+}

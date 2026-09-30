@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "Chào buổi sáng",
+    "afternoon": "Chào buổi chiều",
+    "evening": "Chào buổi tối",
+    "night": "Xin chào, cú đêm"
+  },
+  "today": {
+    "subtitleUnset": "Hành trình của bạn bắt đầu từ một ngày.",
+    "subtitleUpcoming": "Phẫu thuật vào {{date}}",
+    "editDate": "Sửa ngày và thông tin hành trình",
+    "bandTitle": "Tuần của bạn trên lộ trình thông thường"
+  },
+  "hero": {
+    "day": "Ngày",
+    "dayWeek": "Ngày {{day}} · Tuần {{week}}",
+    "monthOf": "Tháng {{month}} trên khoảng {{total}}",
+    "complete": "Vượt quá khung {{months}} tháng thông thường",
+    "untilOperation_other": "Còn {{count}} ngày đến ngày phẫu thuật",
+    "daysToGo_other": "ngày nữa",
+    "session": "Buổi",
+    "ofTotal": "trên {{total}}",
+    "prpSession": "Buổi {{current}} trên {{total}}",
+    "prpDone": "Đã ghi nhận cả {{total}} buổi"
+  },
+  "phase": {
+    "rightNow": "Ngay lúc này",
+    "expected": "Dự kiến",
+    "normalLabel": "Thường gặp lúc này",
+    "clinicNote": "Kết quả mỗi người khác nhau, hãy làm theo lời khuyên của phòng khám của bạn.",
+    "nextIn_other": "{{phase}} thường bắt đầu sau {{count}} ngày",
+    "last": "Đây là giai đoạn cuối của lộ trình thông thường.",
+    "openGuide": "Mở hướng dẫn cho giai đoạn này"
+  },
+  "band": {
+    "a11y": "Biểu đồ khoảng thông thường theo lộ trình mọc tóc. Bạn đang ở giai đoạn: {{phase}}. Kết quả mỗi người khác nhau.",
+    "a11yNone": "Biểu đồ khoảng thông thường theo lộ trình mọc tóc. Kết quả mỗi người khác nhau.",
+    "a11yLocked": "Biểu đồ khoảng thông thường, có với Pro.",
+    "lockChip": "Xem bạn đang ở đâu · Pro",
+    "lockedHint": "Mở các gói Pro",
+    "start": "Phẫu thuật",
+    "end": "Trưởng thành",
+    "disclaimer": "Khoảng thông thường, kết quả mỗi người khác nhau",
+    "seeTimeline": "Lộ trình"
+  },
+  "care": {
+    "items": {
+      "wash": "Gội nhẹ nhàng, theo cách phòng khám đã hướng dẫn",
+      "sleep": "Ngủ kê cao đầu",
+      "hands": "Không chạm vào vùng ghép, không gãi",
+      "sun": "Tránh để vùng ghép tiếp xúc nắng trực tiếp"
+    }
+  },
+  "task": {
+    "eyebrow": "Bước tiếp theo",
+    "photoCta": "Chụp ảnh",
+    "baseline": {
+      "title": "Chụp ảnh “trước”",
+      "body": "Một bức ảnh trước phẫu thuật giúp mọi lần so sánh sau này rõ ràng hơn."
+    },
+    "care": {
+      "title": "Danh sách chăm sóc hôm nay",
+      "doneTitle": "Đã đánh dấu xong việc chăm sóc hôm nay",
+      "body": "Nhiều phòng khám khuyên những việc này trong hai tuần đầu. Hướng dẫn của chính phòng khám của bạn được ưu tiên.",
+      "progress": "Đã xong {{done}} trên {{total}}"
+    },
+    "photo": {
+      "firstTitle": "Chụp ảnh tiến trình đầu tiên",
+      "weeklyTitle": "Ảnh của tuần này",
+      "monthlyTitle": "Ảnh của tháng này",
+      "weeklyBody": "Mỗi tuần trong ba tháng đầu, cùng góc chụp, cùng ánh sáng.",
+      "monthlyBody": "Mỗi tháng từ tháng thứ tư, cùng góc chụp, cùng ánh sáng."
+    },
+    "shed": {
+      "title": "Ghi lại tình trạng rụng tóc hôm nay",
+      "body": "Rụng tóc trong tuần 2–8 là điều thường gặp. Đếm nhanh giúp bạn thấy xu hướng theo thời gian.",
+      "cta": "Ghi lại rụng tóc"
+    },
+    "prp": {
+      "title": "Buổi {{current}} trên {{total}} đã được lên lịch",
+      "bodyToday": "Hôm nay là ngày đã lên lịch. Chụp ảnh trước buổi điều trị giúp chuỗi ảnh của bạn dễ so sánh.",
+      "bodyLate": "Đã lên lịch vào {{date}}. Hãy đánh dấu hoàn thành khi buổi đó đã diễn ra.",
+      "markDone": "Đánh dấu xong"
+    },
+    "caughtUp": {
+      "title": "Bạn đã hoàn tất hết",
+      "body": "Hôm nay không có việc gì cần làm.",
+      "nextPhoto_other": "Ảnh tiếp theo sau {{count}} ngày.",
+      "nextSession_other": "Buổi tiếp theo sau {{count}} ngày."
+    }
+  },
+  "setDate": {
+    "title": "Đặt ngày phẫu thuật",
+    "body": "Kök dùng ngày này để hiển thị ngày, tuần và giai đoạn của bạn, đồng thời lên lịch nhắc chụp ảnh.",
+    "prpTitle": "Đặt ngày của buổi đầu tiên",
+    "prpBody": "Kök lên lịch các buổi của bạn từ ngày này và nhắc bạn vào ngày trước mỗi buổi.",
+    "cta": "Đặt ngày",
+    "privacy": "Chỉ lưu trên điện thoại của bạn."
+  },
+  "pre": {
+    "title": "Trước ngày phẫu thuật",
+    "body": "Nhiều người thấy những điều này hữu ích trong những ngày trước đó. Hướng dẫn của phòng khám được ưu tiên.",
+    "tip1": "Chụp ảnh “trước” từ chính diện, đỉnh đầu và hai bên trong ánh sáng tốt.",
+    "tip2": "Xin phòng khám hướng dẫn chăm sóc sau phẫu thuật bằng văn bản.",
+    "tip3": "Dành vài ngày yên tĩnh sau phẫu thuật.",
+    "tip4": "Chuẩn bị sẵn một chiếc gối chữ U để ngủ kê cao đầu.",
+    "clinicNote": "Có thắc mắc về thuốc hoặc sức khỏe của bạn? Hãy hỏi phòng khám hoặc bác sĩ."
+  },
+  "previewCard": {
+    "title": "Xem trước một kiểu tóc",
+    "body": "Bản xem trước AI để khám phá ý tưởng, không phải dự đoán về kết quả của bạn."
+  },
+  "shedPeek": {
+    "title": "Rụng tóc gần đây",
+    "hint": "Mở nhật ký rụng tóc",
+    "note": "Rụng tóc trong tuần 2–8 là điều thường gặp."
+  },
+  "tabs": {
+    "timeline": "Lộ trình",
+    "photos": "Ảnh",
+    "plan": "Kế hoạch"
+  },
+  "timeline": {
+    "bandTitle": "Lộ trình thông thường",
+    "phasesTitle": "Các giai đoạn"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Ngày {{from}}–{{to}}",
+    "weeks": "Tuần {{from}}–{{to}}",
+    "current": "Giai đoạn hiện tại",
+    "past": "Đã qua",
+    "upcoming": "Phía trước",
+    "youAreHere": "Bạn đang ở đây"
+  },
+  "maturation": {
+    "title": "Khi nào đánh giá kết quả?",
+    "note": "Tóc thường tiếp tục trưởng thành trong khoảng {{months}} tháng sau phẫu thuật.",
+    "evaluate12": "Các phòng khám thường đánh giá kết quả vào khoảng tháng thứ 12.",
+    "evaluate18": "Các phòng khám thường xem xét kết quả vào khoảng tháng thứ 12, còn vùng xoáy tóc hoặc đường rẽ ngôi có thể tiếp tục trưởng thành đến 18 tháng.",
+    "clinicNote": "Kết quả mỗi người khác nhau, phòng khám sẽ sắp xếp các lần kiểm tra riêng cho bạn."
+  },
+  "photos": {
+    "add": "Thêm",
+    "count_other": "{{count}} ảnh",
+    "freeCounter_other": "{{count}} trên {{limit}} ảnh miễn phí",
+    "limitReached": "Đã dùng {{limit}} ảnh miễn phí, Pro giúp bạn lưu ảnh không giới hạn",
+    "allAngles": "Tất cả",
+    "before": "Trước phẫu thuật",
+    "week": "Tuần {{week}} · {{date}}",
+    "all": "Ảnh",
+    "compare": "So sánh",
+    "compareHint": "Chọn hai ảnh để so sánh.",
+    "selectHint": "Chọn hai ảnh.",
+    "selected_other": "Đã chọn {{count}} trên {{max}}",
+    "compareCta": "So sánh",
+    "groupCount_other": "{{count}} ảnh",
+    "thumbLabel": "Ảnh {{angle}}, {{group}}",
+    "missing": "Thiếu tệp",
+    "emptyTitle": "Chưa có ảnh nào",
+    "emptyBody": "Hãy chụp một ảnh cho mỗi góc. Lần sau, một lớp bóng mờ của ảnh đó sẽ giúp bạn căn đúng góc nhìn.",
+    "emptyCta": "Chụp ảnh đầu tiên",
+    "emptyFilter": "Chưa có ảnh nào ở góc này."
+  },
+  "angles": {
+    "front": "Chính diện",
+    "left": "Trái",
+    "right": "Phải",
+    "top": "Đỉnh đầu",
+    "crown": "Xoáy tóc"
+  },
+  "plan": {
+    "intro": "Các mốc chụp ảnh vào những tháng mà phòng khám thường xem xét. Cùng góc chụp, cùng ánh sáng.",
+    "checkpoint": "Tháng {{month}}",
+    "status": {
+      "done": "Đã chụp",
+      "due": "Đến hạn",
+      "upcoming": "Sắp tới",
+      "missed": "Chưa có ảnh"
+    },
+    "takePhoto": "Chụp ảnh",
+    "note": "Một mốc được tính với bất kỳ ảnh nào từ một tuần trước đến hai tuần sau mốc đó."
+  },
+  "prp": {
+    "timelineTitle": "Liệu trình PRP / mesotherapy của bạn",
+    "timelineBody": "Liệu trình thường được lên kế hoạch gồm vài buổi cách nhau vài tuần, rồi duy trì. Phòng khám sẽ đặt kế hoạch riêng cho bạn.",
+    "openPlan": "Mở kế hoạch",
+    "emptyTitle": "Lên kế hoạch các buổi",
+    "emptyBody": "Bắt đầu với một kế hoạch phổ biến: {{sessions}} buổi, cách nhau {{weeks}} tuần. Bạn có thể đổi mọi ngày.",
+    "createPlan": "Tạo kế hoạch",
+    "intro": "Đánh dấu một buổi khi buổi đó đã diễn ra. Chụp ảnh trước mỗi buổi giúp chuỗi ảnh của bạn dễ so sánh.",
+    "session": "Buổi {{number}}",
+    "done": "Xong",
+    "due": "Đến hạn",
+    "planned": "Đã lên lịch",
+    "markDoneLabel": "Buổi {{number}} vào {{date}} đã xong",
+    "changeDate": "Đổi ngày",
+    "photoBefore": "Ảnh trước buổi",
+    "remove": "Gỡ",
+    "removeTitle": "Gỡ buổi này?",
+    "removeBody": "Lời nhắc của buổi đó cũng sẽ bị gỡ.",
+    "addSession": "Thêm một buổi",
+    "maintenanceTitle": "Duy trì",
+    "maintenanceBody": "Nhiều phòng khám gợi ý một buổi duy trì sau khoảng {{months}} tháng, vào khoảng {{date}}.",
+    "clinicNote": "Hãy làm theo kế hoạch của phòng khám của bạn."
+  },
+  "setup": {
+    "title": "Hành trình của bạn",
+    "kindTitle": "Bạn đang theo dõi điều gì?",
+    "kind": {
+      "transplant": {
+        "title": "Cấy tóc",
+        "body": "Đường chân tóc, xoáy tóc, đường rẽ ngôi, lông mày hoặc râu"
+      },
+      "prp": {
+        "title": "Liệu trình PRP / mesotherapy",
+        "body": "Một chuỗi các buổi cách nhau vài tuần"
+      }
+    },
+    "goalTitle": "Vùng nào?",
+    "goals": {
+      "hairline": "Đường chân tóc",
+      "crown": "Xoáy tóc",
+      "part": "Đường rẽ ngôi",
+      "brows": "Lông mày",
+      "beard": "Râu"
+    },
+    "dateTitleTransplant": "Ngày phẫu thuật",
+    "dateTitlePrp": "Ngày buổi đầu tiên",
+    "day": "Ngày",
+    "month": "Tháng",
+    "year": "Năm",
+    "relToday": "Đó là hôm nay, ngày 0",
+    "relPast": "Ngày {{day}} · tuần {{week}}",
+    "relFuture_other": "Sau {{count}} ngày",
+    "clinicTitle": "Phòng khám (không bắt buộc)",
+    "clinicPlaceholder": "Tên phòng khám",
+    "clinicHint": "Chỉ lưu trên điện thoại này. Không bao giờ được tải lên.",
+    "clinicTooLong": "Vui lòng giữ dưới {{max}} ký tự.",
+    "clinicBlocked": "Vui lòng dùng tên khác.",
+    "save": "Lưu",
+    "saved": "Đã lưu",
+    "relabelTitle": "Đổi ngày?",
+    "relabelBody": "Nhãn ngày và tuần của mọi ảnh sẽ được tính lại từ ngày mới.",
+    "relabelConfirm": "Đổi ngày"
+  }
+}

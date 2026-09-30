@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Điều đang diễn ra",
+    "normal": "Điều thường gặp",
+    "todo": "Việc nên làm tuần này",
+    "redflags": "Hãy gọi phòng khám hoặc bác sĩ nếu…",
+    "care": "Từng ngày",
+    "wash": "Gội rửa",
+    "sleep": "Giấc ngủ",
+    "avoid": "Nên tránh"
+  },
+  "header": {
+    "week": "Tuần",
+    "days": "Ngày {{from}}–{{to}}",
+    "weeks": "tuần {{from}}–{{to}}",
+    "current": "Bạn đang ở đây",
+    "past": "Đã qua",
+    "upcoming": "Phía trước"
+  },
+  "lock": {
+    "title": "Hướng dẫn đầy đủ theo giai đoạn thuộc gói Pro",
+    "body": "Điều thường diễn ra, việc nên làm tuần này và ghi chú từng ngày, cho mọi giai đoạn.",
+    "cta": "Xem Pro",
+    "redflagsNote": "Khi nào nên liên hệ phòng khám luôn miễn phí cho mọi người, ở bên dưới."
+  },
+  "notFound": {
+    "title": "Không tìm thấy hướng dẫn",
+    "body": "Trang này có thể đến từ một liên kết cũ.",
+    "cta": "Quay lại"
+  },
+  "flags": {
+    "fever": "Sốt hoặc ớn lạnh",
+    "redness": "Đỏ hoặc sưng lan rộng hoặc ngày càng nặng hơn",
+    "pus": "Có mủ, dịch vàng hoặc mùi hôi",
+    "pain": "Đau dữ dội hoặc ngày càng tăng",
+    "bleeding": "Chảy máu nhiều, hoặc chảy máu không cầm được khi ấn nhẹ",
+    "contact": "Nếu xảy ra bất kỳ điều nào trong số này, hãy liên hệ phòng khám hoặc bác sĩ. Trong trường hợp khẩn cấp, hãy gọi số cấp cứu tại địa phương."
+  },
+  "disclaimer": "Thông tin giáo dục chung dựa trên các mốc thời gian phổ biến ở phòng khám, không phải lời khuyên y tế và không phải dự đoán. Kết quả mỗi người khác nhau; hướng dẫn của chính phòng khám của bạn luôn được ưu tiên.",
+  "care": {
+    "title": "Hai tuần đầu",
+    "tagline": "Bảo vệ các nang tóc ghép khi chúng ổn định",
+    "happening": "Các nang tóc mới ghép đang ổn định vị trí. Những vảy nhỏ thường hình thành quanh mỗi nang và thường bong ra trong khoảng 7–14 ngày. Trán hơi sưng và đỏ da thường gặp trong những ngày đầu.",
+    "normal": "Thông thường, vảy nhỏ, hơi đỏ, hơi sưng và cảm giác căng da là điều phổ biến trong hai tuần đầu.",
+    "todo1": "Làm theo cách gội rửa mà phòng khám đã hướng dẫn bạn.",
+    "todo2": "Nằm kê cao đầu trong những đêm đầu nếu phòng khám khuyên như vậy.",
+    "todo3": "Để vảy tự bong, không cạy hay gãi.",
+    "todo4": "Tránh tập nặng, xông hơi, bơi và ánh nắng trực tiếp cho đến khi phòng khám cho phép.",
+    "redflags": "Đỏ và sưng nhẹ là thường gặp lúc này. Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:",
+    "days": {
+      "intro": "Nhiều phòng khám khuyên như sau. Hãy làm theo hướng dẫn của phòng khám của bạn trước.",
+      "d0_3": {
+        "title": "Ngày 0–3",
+        "wash": "Nhiều phòng khám tự gội lần đầu hoặc vào ngày 1–2, rồi khuyên xả nước thật nhẹ, không chà xát.",
+        "sleep": "Nhiều phòng khám khuyên nằm ngửa, kê cao đầu, ví dụ dùng hai chiếc gối hoặc gối chữ U.",
+        "avoid": "Nhiều phòng khám khuyên tránh cúi người, nâng vật nặng, chạm vào vùng ghép, rượu bia và thuốc lá."
+      },
+      "d4_7": {
+        "title": "Ngày 4–7",
+        "wash": "Nhiều phòng khám khuyên gội nhẹ mỗi ngày bằng sản phẩm họ đưa, thấm khô vùng ghép, tuyệt đối không chà xát.",
+        "sleep": "Vẫn thường được khuyên kê cao đầu; tình trạng sưng thường giảm dần quanh những ngày này.",
+        "avoid": "Nhiều phòng khám khuyên tránh mũ chật, ra nhiều mồ hôi, nắng trực tiếp và gãi."
+      },
+      "d8_14": {
+        "title": "Ngày 8–14",
+        "wash": "Nhiều phòng khám cho phép gội mạnh tay hơn một chút lúc này để vảy bong nhẹ nhàng.",
+        "sleep": "Nhiều người có thể trở lại tư thế ngủ quen thuộc vào khoảng này, nếu phòng khám đồng ý.",
+        "avoid": "Nhiều phòng khám khuyên tránh hồ bơi, xông hơi, tập nặng và cạy những vảy cuối cùng."
+      }
+    }
+  },
+  "shed": {
+    "title": "Giai đoạn rụng tóc",
+    "tagline": "Sợi tóc ghép thường rụng, còn chân tóc thường vẫn ở lại",
+    "happening": "Từ tuần 2 đến tuần 8, nhiều sợi tóc ghép thường rụng đi. Các phòng khám hay gọi đây là rụng sốc. Các nang tóc dưới da thường vẫn nằm nguyên và nghỉ ngơi trước khi mọc tóc mới.",
+    "normal": "Thông thường, rụng tóc rõ rệt trong tuần 2–8 là điều phổ biến; các phòng khám mô tả đây là một giai đoạn quen thuộc của lộ trình.",
+    "todo1": "Giữ thói quen chụp ảnh mỗi tuần từ cùng một góc; cả chuỗi ảnh cho thấy xu hướng rõ hơn so với soi gương.",
+    "todo2": "Ghi lại mức độ rụng tóc vào vài ngày, con số dễ trao đổi hơn cảm giác.",
+    "todo3": "Tiếp tục gội nhẹ nhàng theo hướng dẫn của phòng khám.",
+    "todo4": "Ghi lại các câu hỏi cho lần kiểm tra tiếp theo với phòng khám.",
+    "redflags": "Rụng tóc là điều thường gặp trong những tuần này. Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  },
+  "quiet": {
+    "title": "Những tháng yên ắng",
+    "tagline": "Bề ngoài dường như ít thay đổi",
+    "happening": "Tháng thứ 2 đến tháng thứ 4 thường được gọi là giai đoạn “vịt con xấu xí”. Các nang tóc thường đang nghỉ và chuẩn bị mọc tóc mới, nên vùng ghép có thể trông khá giống trước khi phẫu thuật.",
+    "normal": "Thông thường, tóc mọc thấy được rất ít trong tháng 2–4 là điều phổ biến.",
+    "todo1": "So sánh theo tháng, không theo ngày; chuỗi ảnh của bạn là cách nhìn công bằng nhất.",
+    "todo2": "Có thể xuất hiện các nốt nhỏ khi tóc mới nhú lên; hãy hỏi phòng khám nếu bạn chưa yên tâm.",
+    "todo3": "Bảo vệ da đầu khỏi nắng gắt, theo hướng dẫn của phòng khám.",
+    "todo4": "Giữ cùng góc chụp và ánh sáng cho mọi bức ảnh.",
+    "redflags": "Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  },
+  "sprout": {
+    "title": "Tóc mọc đầu tiên",
+    "tagline": "Những sợi tóc mới mảnh thường bắt đầu xuất hiện",
+    "happening": "Vào khoảng tháng 3–4, những sợi tóc mới đầu tiên thường xuất hiện. Lúc đầu chúng thường mảnh, nhạt màu và không đều, và một số sợi có thể xoăn hoặc gợn sóng.",
+    "normal": "Thông thường, tóc mọc sớm thì mảnh, thưa từng mảng và mọc với tốc độ khác nhau.",
+    "todo1": "Chụp ảnh mốc trong cùng điều kiện ánh sáng và từ cùng một góc.",
+    "todo2": "Hãy cho tóc mảnh hoặc không đều thêm thời gian; độ dày thường tăng dần ở những tháng sau.",
+    "todo3": "Hỏi phòng khám khi nào bạn có thể cắt tóc, nhuộm tóc và dùng sản phẩm tạo kiểu.",
+    "todo4": "Hãy nhìn lại những ảnh đầu của chính bạn thay vì kết quả của người khác.",
+    "redflags": "Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  },
+  "grow": {
+    "title": "Mật độ tăng dần",
+    "tagline": "Tóc thường dày lên và lấp đầy dần",
+    "happening": "Từ tháng 6 đến tháng 9, tóc mới thường dày và dài hơn, và vùng ghép thường trông đầy đặn hơn theo từng tháng.",
+    "normal": "Thông thường, mật độ tiếp tục tăng trong tháng 6–9, và diện mạo có thể thay đổi nhiều trong giai đoạn này.",
+    "todo1": "Chụp ảnh mốc tháng thứ 6 và tháng thứ 9.",
+    "todo2": "So sánh với những ảnh đầu tiên của chính bạn, không so với người khác.",
+    "todo3": "Hỏi phòng khám về lần tái khám họ thường mời vào khoảng này.",
+    "todo4": "Tiếp tục bảo vệ da đầu khỏi nắng gắt.",
+    "redflags": "Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  },
+  "mature": {
+    "title": "Trưởng thành dần",
+    "tagline": "Chất tóc và mật độ thường dần ổn định",
+    "happening": "Tháng 9 đến tháng 12 thường là thời kỳ trưởng thành: tóc tiếp tục dày lên và chất tóc dần ổn định. Các phòng khám thường đánh giá kết quả đường chân tóc vào khoảng tháng thứ 12.",
+    "normal": "Thông thường, thay đổi chậm hơn và tinh tế hơn trong tháng 9–12.",
+    "todo1": "Chụp ảnh mốc tháng thứ 12 từ mọi góc.",
+    "todo2": "Đặt ảnh đầu tiên và ảnh mới nhất cạnh nhau trước buổi hẹn với phòng khám.",
+    "todo3": "Viết ra những câu hỏi bạn muốn hỏi trong buổi đánh giá.",
+    "todo4": "Hãy nhớ rằng vùng xoáy tóc và đường rẽ ngôi thường mất nhiều thời gian hơn.",
+    "redflags": "Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  },
+  "final": {
+    "title": "Trưởng thành hoàn toàn",
+    "tagline": "Vùng xoáy tóc và đường rẽ ngôi có thể tiếp tục trưởng thành",
+    "happening": "Sau 12 tháng, hầu hết thay đổi thường nhỏ. Vùng xoáy tóc, đường rẽ ngôi và kết quả của nhiều phụ nữ thường tiếp tục trưởng thành đến tận 18 tháng.",
+    "normal": "Thông thường, thay đổi chậm và dần dần sau tháng thứ 12 là điều phổ biến, nhất là ở vùng xoáy tóc.",
+    "todo1": "Chụp ảnh mỗi một đến hai tháng.",
+    "todo2": "Đặt lịch buổi đánh giá mà phòng khám khuyên.",
+    "todo3": "Nếu muốn, hãy mang chuỗi ảnh của bạn để chia sẻ với phòng khám.",
+    "todo4": "Giữ cùng góc chụp và ánh sáng để so sánh công bằng.",
+    "redflags": "Hãy liên hệ phòng khám hoặc bác sĩ nếu bạn nhận thấy:"
+  }
+}

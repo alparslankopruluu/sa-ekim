@@ -1,0 +1,25 @@
+{
+  "title": "Avant de créer votre aperçu",
+  "body": "L'aperçu est généré par des modèles d'images d'IA : la photo que vous avez choisie doit donc quitter votre téléphone. Voici ce qui se passe.",
+  "sent": {
+    "title": "Ce que nous envoyons",
+    "body": "Uniquement la photo que vous avez sélectionnée pour cet aperçu. Rien d'autre de votre pellicule ni de votre parcours."
+  },
+  "who": {
+    "title": "Qui la traite",
+    "body": "fal.ai réalise la retouche d'image, à l'aide de modèles d'images OpenAI."
+  },
+  "retention": {
+    "title": "Combien de temps elle est conservée",
+    "body": "Votre photo d'origine et le résultat de l'aperçu sont tous deux supprimés de nos serveurs sous 30 jours. Vous pouvez les supprimer plus tôt depuis l'onglet Aperçus."
+  },
+  "choice": {
+    "title": "Votre choix",
+    "body": "Vous pouvez refuser et continuer à utiliser tout le parcours. Les photos que vous prenez pour votre chronologie restent sur votre appareil."
+  },
+  "note": "Les aperçus IA montrent une possibilité. Ils ne sont pas une prédiction de votre résultat.",
+  "policy": "Lire la politique de confidentialité",
+  "accept": "Accepter et continuer",
+  "decline": "Pas maintenant",
+  "error": "Nous n'avons pas pu enregistrer votre choix. Vérifiez votre connexion et réessayez."
+}

@@ -1,0 +1,250 @@
+{
+  "title": "Nieuwe preview",
+  "subtitle": "Kies een stijl en een foto om één mogelijke look te zien.",
+  "aiLabel": "AI-preview — geen voorspelling van je resultaat",
+  "aiLabelShort": "AI-preview",
+  "aiLabelDetail": "Hij toont één mogelijke look, niet wat er gaat gebeuren.",
+  "common": {
+    "close": "Sluiten",
+    "back": "Terug",
+    "retry": "Opnieuw proberen",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen"
+  },
+  "goals": {
+    "label": "Gebied",
+    "hairline": "Haarlijn",
+    "crown": "Kruin",
+    "part": "Scheiding",
+    "brows": "Wenkbrauwen",
+    "beard": "Baard"
+  },
+  "angles": {
+    "front": "voorfoto",
+    "left": "foto van de linkerkant",
+    "right": "foto van de rechterkant",
+    "top": "foto van de bovenkant van het hoofd",
+    "crown": "foto van de kruin"
+  },
+  "styles": {
+    "label": "Stijl",
+    "hairline_soft": {
+      "name": "Zachtere natuurlijke haarlijn",
+      "description": "Een zacht afgeronde haarlijn die een natuurlijke vorm behoudt."
+    },
+    "hairline_temples": {
+      "name": "Verfijning van de slapen",
+      "description": "Een evenwichtiger look rond de slapen."
+    },
+    "hairline_lower": {
+      "name": "Lagere, scherpere lijn",
+      "description": "Een iets lagere, scherper afgetekende haarlijn."
+    },
+    "hairline_density": {
+      "name": "Meer dichtheid",
+      "description": "Een dichtere look binnen je huidige haarlijn."
+    },
+    "crown_light": {
+      "name": "Licht",
+      "description": "Lichte dekking op de kruin."
+    },
+    "crown_medium": {
+      "name": "Gemiddeld",
+      "description": "Gemiddelde dekking op de kruin."
+    },
+    "crown_full": {
+      "name": "Vol",
+      "description": "Volle dekking op de kruin."
+    },
+    "part_light": {
+      "name": "Licht",
+      "description": "Lichte volheid langs de scheiding."
+    },
+    "part_medium": {
+      "name": "Gemiddeld",
+      "description": "Gemiddelde volheid langs de scheiding."
+    },
+    "part_full": {
+      "name": "Vol",
+      "description": "Een volle look langs de scheiding."
+    },
+    "brows_natural": {
+      "name": "Natuurlijk",
+      "description": "Natuurlijke wenkbrauwen die je eigen vorm behouden."
+    },
+    "brows_fuller": {
+      "name": "Voller",
+      "description": "Je eigen vorm, iets voller."
+    },
+    "brows_arched": {
+      "name": "Gebogen",
+      "description": "Een zacht gebogen, verzorgde wenkbrauwlijn."
+    },
+    "beard_patch": {
+      "name": "Kale plekken opvullen",
+      "description": "Dunne plekken opgevuld."
+    },
+    "beard_full": {
+      "name": "Volle baard",
+      "description": "Een voller baard over kaak en wangen."
+    },
+    "beard_moustache": {
+      "name": "Snor",
+      "description": "Een voller uiterlijk boven de lip."
+    }
+  },
+  "bestAngle": "Werkt het best met een {{angle}}",
+  "density": {
+    "label": "Dichtheid",
+    "natural": "Natuurlijk",
+    "fuller": "Voller",
+    "full": "Vol"
+  },
+  "quality": {
+    "label": "Kwaliteit",
+    "standard": {
+      "title": "Standaard",
+      "description": "Een snelle eerste indruk."
+    },
+    "high": {
+      "title": "Hoog",
+      "description": "Meer detail."
+    }
+  },
+  "price": {
+    "label": "Deze preview",
+    "free": "Gratis",
+    "freeHigh": "Gratis HD-preview",
+    "credits_one": "{{count}} credit",
+    "credits_other": "{{count}} credits",
+    "freeNote": "Je eerste preview is gratis en heeft een watermerk.",
+    "balance_one": "Je hebt {{count}} credit.",
+    "balance_other": "Je hebt {{count}} credits.",
+    "short_one": "Je hebt {{count}} credit, en deze preview kost {{cost}}.",
+    "short_other": "Je hebt {{count}} credits, en deze preview kost {{cost}}.",
+    "useFreeHigh": "Mijn gratis HD-preview gebruiken",
+    "useFreeHighHint_one": "Je hebt {{count}} gratis HD-preview.",
+    "useFreeHighHint_other": "Je hebt {{count}} gratis HD-previews."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Nog geen foto",
+    "take": "Foto maken",
+    "library": "Kies uit bibliotheek",
+    "journey": "Nieuwste trajectfoto gebruiken",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Foto verwijderen",
+    "selected": "Geselecteerde foto",
+    "sentNote": "Je foto wordt pas verstuurd als je op Preview maken tikt, nadat je akkoord bent gegaan met AI-verwerking.",
+    "libraryFailed": "We konden je fotobibliotheek niet openen."
+  },
+  "cta": {
+    "create": "Preview maken",
+    "createFree": "Gratis preview maken",
+    "getCredits": "Credits kopen",
+    "continue": "Verder",
+    "addPhoto": "Voeg een foto toe om verder te gaan",
+    "chooseStyle": "Kies een stijl om verder te gaan"
+  },
+  "helper": {
+    "needsConsent": "Voordat je foto wordt verstuurd, vragen we één keer om je goedkeuring.",
+    "needsCredits": "Je hebt meer credits nodig voor deze preview.",
+    "walletError": "We konden je credits niet laden."
+  },
+  "rendering": {
+    "title": "Je preview",
+    "status": {
+      "uploading": "Je foto versturen",
+      "creating": "Je preview starten",
+      "waiting": "Je preview starten",
+      "queued": "Wachten op een vrije plek",
+      "processing": "Je preview maken",
+      "finalizing": "Afronden"
+    },
+    "estimate": "Meestal minder dan een minuut.",
+    "background": "Je kunt dit scherm verlaten. We gaan door en laten het weten als het klaar is.",
+    "notifyMe": "Waarschuw me als het klaar is",
+    "notifyOn": "We waarschuwen je als het klaar is.",
+    "keepBrowsing": "Verder bladeren",
+    "cancel": "Preview annuleren",
+    "cancelHint": "Je credits worden teruggegeven als je annuleert.",
+    "cancelTooLate": "Hij wordt al afgerond en kan nu niet meer worden geannuleerd.",
+    "failedTitle": "Deze preview is niet afgemaakt",
+    "canceledTitle": "Preview geannuleerd",
+    "offlineTitle": "Je bent offline",
+    "errorTitle": "We konden de preview niet starten",
+    "refunded_one": "Je {{count}} credit is teruggegeven.",
+    "refunded_other": "Je {{count}} credits zijn teruggegeven.",
+    "nothingCharged": "Er is niets in rekening gebracht.",
+    "retrySafe": "Opnieuw proberen is veilig: je betaalt niet dubbel.",
+    "retry": "Opnieuw proberen",
+    "getCredits": "Credits kopen",
+    "reviewConsent": "Bekijken en goedkeuren",
+    "seePlans": "Bekijk abonnementen",
+    "choosePhoto": "Kies een andere foto",
+    "backToStyles": "Terug naar stijlen",
+    "close": "Sluiten",
+    "photoA11y": "Je foto",
+    "ringA11y": "Voortgang van de preview, {{percent}} procent"
+  },
+  "result": {
+    "title": "Je preview",
+    "before": "Je foto",
+    "after": "AI-preview",
+    "watermark": "Kök · AI-preview",
+    "wipeA11y": "Voor-en-naschuif. Veeg omhoog of omlaag om je foto met de AI-preview te vergelijken.",
+    "demo": "Demo",
+    "save": "Opslaan",
+    "share": "Delen",
+    "report": "Melden",
+    "delete": "Verwijderen",
+    "saved": "Opgeslagen in je foto's",
+    "saveDenied": "Sta fototoegang toe in Instellingen om previews op te slaan.",
+    "unsupported": "Opslaan en delen zijn hier niet beschikbaar voor deze preview.",
+    "shareTitle": "Deel je AI-preview",
+    "tryAnother": "Probeer een andere stijl",
+    "upgradeTitle": "Meer detail gewenst?",
+    "upgradeBody": "Een HD-preview heeft meer detail en geen watermerk.",
+    "notFound": "We konden deze preview niet vinden. Previews worden na 30 dagen verwijderd.",
+    "toPreviews": "Terug naar previews",
+    "beforeGone": "Je originele foto wordt maar 30 dagen bewaard, dus de vergelijking is niet meer beschikbaar.",
+    "loadFailed": "We konden deze preview niet laden.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Maak een HD-preview ({{count}} credit)",
+    "upgradeTry_other": "Maak een HD-preview ({{count}} credits)",
+    "upgradeTryFree": "Maak een gratis HD-preview",
+    "availableUntil": "Beschikbaar tot {{date}}",
+    "saveNudge": "Previews worden na 30 dagen verwijderd. Bewaar hem in je foto's om een kopie te houden.",
+    "saveNudgeSoon": "Deze preview wordt binnenkort verwijderd. Bewaar hem in je foto's om een kopie te houden.",
+    "expiredTitle": "Deze preview is na 30 dagen verwijderd",
+    "expiredBody": "Previews en de foto's waarvan ze zijn gemaakt, worden na 30 dagen verwijderd. Je kunt op elk moment een nieuwe maken."
+  },
+  "delete": {
+    "title": "Deze preview verwijderen?",
+    "body": "De previewafbeelding wordt definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+    "done": "Preview verwijderd"
+  },
+  "tab": {
+    "title": "Previews",
+    "new": "Nieuwe preview",
+    "honest": "Previews zijn door AI gemaakte beelden van één mogelijke look.",
+    "emptyTitle": "Nog geen previews",
+    "emptyBody": "Een preview is een door AI gemaakt beeld van één mogelijke look, niet van wat er gaat gebeuren. Probeer een stijl op je eigen foto en vergelijk.",
+    "emptyCta": "Maak een preview",
+    "loadFailed": "We konden je previews niet laden.",
+    "menu": "Meer acties",
+    "status": {
+      "queued": "Wachten",
+      "processing": "Maken · {{percent}}%",
+      "finalizing": "Afronden",
+      "failed": "Niet afgemaakt",
+      "canceled": "Geannuleerd"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Opnieuw proberen",
+    "delete": "Verwijderen",
+    "deleteA11y": "Preview verwijderen",
+    "availableUntil": "Tot {{date}}",
+    "expired": "Verwijderd na 30 dagen"
+  }
+}

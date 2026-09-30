@@ -1,0 +1,146 @@
+{
+  "updated": "Dernière mise à jour : {{date}}",
+  "openWeb": "Ouvrir la version web",
+  "emailSupport": "Écrire à l'assistance",
+  "publisher": "Kök est édité par Techtactoe App Studio.",
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "sections": [
+      {
+        "heading": "En bref",
+        "body": "Les photos de votre parcours restent sur votre téléphone. Kök n'envoie une photo que lorsque vous demandez un aperçu IA, et cette photo ainsi que l'image d'aperçu obtenue sont supprimées de nos serveurs sous 30 jours. Kök n'affiche aucune publicité et ne vend pas vos données. Kök ne constitue pas un avis médical."
+      },
+      {
+        "heading": "Ce qui reste sur votre appareil",
+        "body": "La date de votre opération, vos photos de suivi, votre journal de chute et le nom de votre clinique sont stockés uniquement sur votre appareil. Kök n'envoie jamais les photos de parcours. Elles sont incluses dans la sauvegarde propre à votre téléphone (iCloud ou Sauvegarde automatique Android) si vous l'avez activée."
+      },
+      {
+        "heading": "Ce que nous collectons",
+        "body": "Un identifiant de compte anonyme (Firebase Authentication), afin que vous n'ayez pas à fournir de nom ni d'e-mail. Votre solde de crédits et l'état de vos achats. Votre langue et vos choix de notifications. Des événements d'utilisation, des rapports de plantage et des données de performance (Firebase Analytics, Crashlytics et Performance Monitoring). Un jeton de notification push, uniquement si vous autorisez les notifications. Si vous créez un aperçu : l'unique photo que vous choisissez, le style et la qualité que vous sélectionnez, et l'aperçu obtenu. Si vous rejoignez le groupe facultatif de la même semaine : la date de votre opération, votre objectif et le type de parcours, et rien d'autre. Nous ne collectons ni votre nom, ni vos contacts, ni votre position précise. Kök ne vous suit pas dans d'autres applications ou sur d'autres sites web et n'utilise pas votre identifiant publicitaire."
+      },
+      {
+        "heading": "Aperçus IA",
+        "body": "Lorsque vous créez un aperçu, la photo que vous avez choisie est envoyée à nos serveurs et traitée par fal.ai, qui exécute pour notre compte des modèles d'images OpenAI. Kök demande votre accord avant le premier envoi, et cette information nomme ces prestataires. La photo sert uniquement à produire cet aperçu. Nous n'utilisons pas vos photos pour entraîner des modèles d'IA. La photo envoyée et l'image de l'aperçu sont supprimées de nos serveurs sous 30 jours ; enregistrez donc un aperçu dans votre photothèque si vous souhaitez le conserver. Chaque aperçu est une illustration par IA, pas une prédiction de votre résultat."
+      },
+      {
+        "heading": "Prestataires de services",
+        "body": "Nous ne partageons des données qu'avec des sociétés qui les traitent pour nous : Google Firebase (compte, base de données, stockage de fichiers, fonctions, statistiques d'utilisation, rapports de plantage, performance, configuration à distance, contrôles d'intégrité de l'application et notifications push) ; fal.ai et les modèles d'images OpenAI qu'il exécute (aperçus IA) ; RevenueCat (abonnements et achats) ; Apple et Google (paiements et distribution de l'application). Kök ne contient aucune publicité et ne partage aucune donnée avec des annonceurs."
+      },
+      {
+        "heading": "Durée de conservation des données",
+        "body": "Données du parcours : sur votre appareil jusqu'à ce que vous les supprimiez. Photos d'aperçu envoyées et images d'aperçu : 30 jours au maximum sur nos serveurs. Données d'utilisation et de plantage : jusqu'à 14 mois. Justificatifs d'achat : aussi longtemps que l'exigent les lois fiscales et comptables. Signalements que vous envoyez à propos d'un aperçu : aussi longtemps que nécessaire pour les examiner et y donner suite."
+      },
+      {
+        "heading": "Vos choix et la suppression",
+        "body": "Dans Réglages, Données et confidentialité, Supprimer toutes mes données supprime de cet appareil vos photos de parcours, votre journal de chute et vos aperçus. Dans Réglages, Compte, Supprimer le compte supprime immédiatement de nos serveurs votre compte, vos crédits, vos aperçus et toute photo envoyée, et efface votre parcours sur l'appareil. Vous pouvez aussi y désactiver les notifications. Rien n'est envoyé tant que vous ne créez pas d'aperçu. La suppression de votre compte n'annule pas un abonnement : résiliez-le dans les réglages de votre compte App Store ou Google Play. Selon votre lieu de résidence (par exemple au titre du RGPD, de la loi turque KVKK ou du CCPA californien), vous pouvez disposer de droits d'accès, de rectification, de suppression ou d'export de vos données, ainsi que du droit de retirer votre consentement. Pour faire une demande, écrivez à techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Enfants",
+        "body": "Kök est destiné aux adultes. Nous ne collectons pas sciemment d'informations auprès de personnes de moins de 18 ans."
+      },
+      {
+        "heading": "Pas un avis médical",
+        "body": "Kök est un outil d'information et de suivi. Il ne pose aucun diagnostic, ne traite ni ne prédit quoi que ce soit, et son calendrier n'indique que des plages habituelles. Pour toute inquiétude, contactez votre clinique ou un médecin."
+      },
+      {
+        "heading": "Modifications et contact",
+        "body": "Si cette politique change, la date ci-dessus change avec elle. Questions ou demandes : techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "sections": [
+      {
+        "heading": "Utiliser Kök",
+        "body": "Kök vous aide à suivre un parcours de greffe capillaire, de PRP ou de restauration capillaire similaire, avec vos propres photos et un calendrier habituel, et vous permet de créer des aperçus IA. Vous devez être majeur(e) et en capacité de conclure le présent accord. En utilisant Kök, vous acceptez ces conditions."
+      },
+      {
+        "heading": "Pas un avis médical",
+        "body": "Kök n'est pas un dispositif médical et ne donne ni avis médical, ni diagnostic, ni traitement. Les calendriers et les guides décrivent ce qui est habituel et ne sont pas une promesse concernant votre résultat. Si vous remarquez de la fièvre, une rougeur qui s'étend, du pus, une douleur intense ou un saignement abondant, contactez votre clinique ou un médecin."
+      },
+      {
+        "heading": "Aperçus IA",
+        "body": "Un aperçu est une illustration par IA réalisée à partir de votre photo. Ce n'est ni une prédiction, ni une promesse, ni un plan pour votre résultat, et il n'indique pas de nombre de greffons. L'aperçu gratuit de la présentation comporte un filigrane. Les aperçus sont conservés 30 jours ; enregistrez-en donc un dans votre photothèque pour le garder. Utilisez les aperçus de manière responsable et ne présentez pas un aperçu comme une véritable photographie."
+      },
+      {
+        "heading": "Photos et contenus",
+        "body": "N'utilisez que des photos de vous-même, ou de quelqu'un qui a clairement donné son accord. N'envoyez pas de photos de mineurs, de personnalités publiques, ni de contenu à caractère sexuel, haineux, harcelant, trompeur ou illégal. Nous pouvons bloquer des contenus et suspendre l'accès en cas de non-respect de ces règles. Vous pouvez signaler n'importe quel aperçu depuis son écran."
+      },
+      {
+        "heading": "Abonnements et crédits",
+        "body": "Kök Pro est proposé sous forme d'abonnement hebdomadaire, mensuel ou annuel, au prix affiché par votre boutique d'applications. Il n'y a pas d'essai gratuit. Les abonnements se renouvellent automatiquement jusqu'à ce que vous les résiliiez dans les réglages de votre compte App Store ou Google Play, et les remboursements suivent les règles d'Apple ou de Google. Les packs de crédits sont des achats uniques. Un aperçu standard utilise 1 crédit et un aperçu HD en utilise 3. Si un aperçu échoue, ses crédits sont rendus automatiquement. Les crédits n'ont aucune valeur en espèces et ne peuvent pas être transférés. Vous pouvez restaurer vos achats depuis la page d'abonnement ou les Réglages."
+      },
+      {
+        "heading": "Vos contenus",
+        "body": "Vous restez propriétaire de vos photos et de vos aperçus. Vous nous accordez une autorisation limitée de traiter ce que vous envoyez, uniquement pour fournir le service que vous avez demandé."
+      },
+      {
+        "heading": "Disponibilité et responsabilité",
+        "body": "Kök est fourni « en l'état » et selon disponibilité. Dans la mesure permise par la loi, nous ne sommes pas responsables des dommages indirects ou consécutifs, et rien ici ne limite les droits dont vous disposez en vertu du droit de la consommation auxquels il ne peut être renoncé."
+      },
+      {
+        "heading": "Cesser d'utiliser Kök",
+        "body": "Vous pouvez cesser d'utiliser Kök et supprimer votre compte à tout moment dans les Réglages. Nous pouvons modifier ces conditions et mettrons à jour la date lorsque nous le ferons."
+      },
+      {
+        "heading": "Contact",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Comment fonctionnent les aperçus IA",
+    "sections": [
+      {
+        "heading": "Ce qu'est un aperçu",
+        "body": "Un aperçu est une illustration par IA de l'aspect que pourrait avoir un style choisi sur votre photo. Ce n'est pas une prédiction de votre résultat, et une mention le précisant reste visible sur chaque aperçu."
+      },
+      {
+        "heading": "Ce qui est envoyé",
+        "body": "Uniquement la photo que vous choisissez pour cet aperçu, ainsi que le style et la qualité que vous avez sélectionnés. Les photos de votre parcours ne sont jamais envoyées. Avant le premier envoi, Kök demande votre accord."
+      },
+      {
+        "heading": "Qui la traite",
+        "body": "fal.ai exécute pour notre compte des modèles d'images OpenAI. Nous les utilisons uniquement pour créer votre aperçu et n'utilisons pas vos photos pour entraîner des modèles d'IA. La photo envoyée et l'image de l'aperçu sont supprimées de nos serveurs sous 30 jours."
+      },
+      {
+        "heading": "Limites",
+        "body": "Les résultats peuvent être imparfaits ou irréalistes. L'aperçu gratuit de la présentation comporte un filigrane. Kök n'affiche jamais de nombre de greffons, de stades ni de promesses de résultat."
+      },
+      {
+        "heading": "Signaler et supprimer",
+        "body": "Signalez un aperçu depuis son écran et nous l'examinons sous 48 heures. Vous pouvez supprimer un aperçu à tout moment, et la suppression de votre compte efface tout ce que nous détenons."
+      }
+    ]
+  },
+  "support": {
+    "title": "Aide et assistance",
+    "sections": [
+      {
+        "heading": "Nous contacter",
+        "body": "Écrivez à techtactoeappstudio@gmail.com en indiquant la version de votre application (Réglages, À propos). Nous répondons généralement sous deux jours ouvrés."
+      },
+      {
+        "heading": "Un aperçu a échoué. Ai-je perdu des crédits ?",
+        "body": "Non. Les crédits d'un aperçu échoué ou annulé sont rendus automatiquement."
+      },
+      {
+        "heading": "Comment résilier mon abonnement ?",
+        "body": "Sur iPhone : Réglages, votre nom, Abonnements, Kök. Sur Android : Google Play, Paiements et abonnements, Abonnements. Vous pouvez aussi ouvrir Réglages, Gérer l'abonnement dans Kök."
+      },
+      {
+        "heading": "Comment restaurer mes achats ?",
+        "body": "Ouvrez la page d'abonnement ou les Réglages et touchez Restaurer."
+      },
+      {
+        "heading": "Comment supprimer mes données ?",
+        "body": "Réglages, Données et confidentialité, Supprimer toutes mes données efface votre parcours et vos aperçus sur cet appareil. Réglages, Compte, Supprimer le compte supprime votre compte et tout ce que nous détenons. Vous pouvez aussi nous écrire pour demander la suppression."
+      },
+      {
+        "heading": "Est-ce un avis médical ?",
+        "body": "Non. Kök est un outil d'information et de suivi. Pour tout sujet inquiétant, contactez votre clinique ou un médecin."
+      }
+    ]
+  }
+}

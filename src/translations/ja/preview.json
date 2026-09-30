@@ -1,0 +1,244 @@
+{
+  "title": "新しいプレビュー",
+  "subtitle": "スタイルと写真を選んで、ひとつの見た目の可能性を確認しましょう。",
+  "aiLabel": "AIプレビュー：結果の予測ではありません",
+  "aiLabelShort": "AIプレビュー",
+  "aiLabelDetail": "ひとつの見た目の可能性を示すもので、実際にそうなるという意味ではありません。",
+  "common": {
+    "close": "閉じる",
+    "back": "戻る",
+    "retry": "もう一度試す",
+    "cancel": "キャンセル",
+    "delete": "削除"
+  },
+  "goals": {
+    "label": "部位",
+    "hairline": "生え際",
+    "crown": "つむじ",
+    "part": "分け目",
+    "brows": "眉毛",
+    "beard": "ひげ"
+  },
+  "angles": {
+    "front": "正面の写真",
+    "left": "左側面の写真",
+    "right": "右側面の写真",
+    "top": "頭頂部の写真",
+    "crown": "つむじの写真"
+  },
+  "styles": {
+    "label": "スタイル",
+    "hairline_soft": {
+      "name": "自然にやわらかい生え際",
+      "description": "自然な形を保ったまま、やさしくやわらげた生え際です。"
+    },
+    "hairline_temples": {
+      "name": "こめかみの整え",
+      "description": "こめかみまわりのバランスを整えた見た目です。"
+    },
+    "hairline_lower": {
+      "name": "低めではっきりしたライン",
+      "description": "やや低く、輪郭がはっきりした生え際です。"
+    },
+    "hairline_density": {
+      "name": "密度アップ",
+      "description": "現在の生え際の範囲内で、密度を高めた見た目です。"
+    },
+    "crown_light": {
+      "name": "ライト",
+      "description": "つむじを軽くカバーします。"
+    },
+    "crown_medium": {
+      "name": "ミディアム",
+      "description": "つむじを中程度にカバーします。"
+    },
+    "crown_full": {
+      "name": "フル",
+      "description": "つむじをしっかりカバーします。"
+    },
+    "part_light": {
+      "name": "ライト",
+      "description": "分け目まわりを軽くふっくらさせます。"
+    },
+    "part_medium": {
+      "name": "ミディアム",
+      "description": "分け目まわりを中程度にふっくらさせます。"
+    },
+    "part_full": {
+      "name": "フル",
+      "description": "分け目まわりをしっかりとした見た目にします。"
+    },
+    "brows_natural": {
+      "name": "ナチュラル",
+      "description": "ご自身の形を保った自然な眉です。"
+    },
+    "brows_fuller": {
+      "name": "しっかり",
+      "description": "ご自身の形のまま、少し濃くした眉です。"
+    },
+    "brows_arched": {
+      "name": "アーチ",
+      "description": "やわらかなアーチを描く、整った眉のラインです。"
+    },
+    "beard_patch": {
+      "name": "薄い部分を補う",
+      "description": "薄い部分を埋めます。"
+    },
+    "beard_full": {
+      "name": "フルのひげ",
+      "description": "あごと頬にかけて、しっかりとしたひげです。"
+    },
+    "beard_moustache": {
+      "name": "口ひげ",
+      "description": "口の上をしっかりとした見た目にします。"
+    }
+  },
+  "bestAngle": "{{angle}}での利用が最適です",
+  "density": {
+    "label": "密度",
+    "natural": "ナチュラル",
+    "fuller": "しっかり",
+    "full": "フル"
+  },
+  "quality": {
+    "label": "品質",
+    "standard": {
+      "title": "標準",
+      "description": "手早く最初の確認ができます。"
+    },
+    "high": {
+      "title": "高品質",
+      "description": "より細部まで表現します。"
+    }
+  },
+  "price": {
+    "label": "このプレビュー",
+    "free": "無料",
+    "freeHigh": "無料のHDプレビュー",
+    "credits_other": "{{count}}クレジット",
+    "freeNote": "最初のプレビューは無料で、透かしが入ります。",
+    "balance_other": "{{count}}クレジットお持ちです。",
+    "short_other": "{{count}}クレジットお持ちですが、このプレビューには{{cost}}が必要です。",
+    "useFreeHigh": "無料のHDプレビューを使う",
+    "useFreeHighHint_other": "無料のHDプレビューが{{count}}回分あります。"
+  },
+  "photo": {
+    "label": "写真",
+    "empty": "まだ写真がありません",
+    "take": "写真を撮る",
+    "library": "ライブラリから選ぶ",
+    "journey": "最新の経過写真を使う",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "写真を削除",
+    "selected": "選択した写真",
+    "sentNote": "写真は、AI処理を承認したうえで「作成」をタップしたときにのみ送信されます。",
+    "libraryFailed": "フォトライブラリを開けませんでした。"
+  },
+  "cta": {
+    "create": "プレビューを作成",
+    "createFree": "無料のプレビューを作成",
+    "getCredits": "クレジットを入手",
+    "continue": "続ける",
+    "addPhoto": "写真を追加して続ける",
+    "chooseStyle": "スタイルを選んで続ける"
+  },
+  "helper": {
+    "needsConsent": "写真を送信する前に、一度だけ承認をお願いします。",
+    "needsCredits": "このプレビューにはクレジットが足りません。",
+    "walletError": "クレジットを読み込めませんでした。"
+  },
+  "rendering": {
+    "title": "あなたのプレビュー",
+    "status": {
+      "uploading": "写真を送信中",
+      "creating": "プレビューを開始中",
+      "waiting": "プレビューを開始中",
+      "queued": "空きを待っています",
+      "processing": "プレビューを作成中",
+      "finalizing": "仕上げ中"
+    },
+    "estimate": "通常は1分もかかりません。",
+    "background": "この画面を離れても大丈夫です。処理は続き、できあがったらお知らせします。",
+    "notifyMe": "できあがったら通知する",
+    "notifyOn": "できあがったらお知らせします。",
+    "keepBrowsing": "ほかを見る",
+    "cancel": "プレビューをキャンセル",
+    "cancelHint": "キャンセルすると、クレジットは返却されます。",
+    "cancelTooLate": "すでに仕上げの段階のため、いまはキャンセルできません。",
+    "failedTitle": "このプレビューは完了しませんでした",
+    "canceledTitle": "プレビューをキャンセルしました",
+    "offlineTitle": "オフラインです",
+    "errorTitle": "プレビューを開始できませんでした",
+    "refunded_other": "{{count}}クレジットを返却しました。",
+    "nothingCharged": "料金は発生していません。",
+    "retrySafe": "もう一度試しても安全です。二重に請求されることはありません。",
+    "retry": "もう一度試す",
+    "getCredits": "クレジットを入手",
+    "reviewConsent": "確認して承認する",
+    "seePlans": "プランを見る",
+    "choosePhoto": "別の写真を選ぶ",
+    "backToStyles": "スタイルに戻る",
+    "close": "閉じる",
+    "photoA11y": "あなたの写真",
+    "ringA11y": "プレビューの進行状況：{{percent}}パーセント"
+  },
+  "result": {
+    "title": "あなたのプレビュー",
+    "before": "あなたの写真",
+    "after": "AIプレビュー",
+    "watermark": "Kök · AIプレビュー",
+    "wipeA11y": "ビフォーアフターのスライダーです。上下にスワイプして、あなたの写真とAIプレビューを比べます。",
+    "demo": "デモ",
+    "save": "保存",
+    "share": "共有",
+    "report": "報告",
+    "delete": "削除",
+    "saved": "写真に保存しました",
+    "saveDenied": "プレビューを保存するには、設定で写真へのアクセスを許可してください。",
+    "unsupported": "このプレビューは、ここでは保存や共有ができません。",
+    "shareTitle": "AIプレビューを共有",
+    "tryAnother": "別のスタイルを試す",
+    "upgradeTitle": "もっと細部まで見たいですか？",
+    "upgradeBody": "HDプレビューは、より細部まで表現され、透かしも入りません。",
+    "notFound": "このプレビューは見つかりませんでした。プレビューは30日後に削除されます。",
+    "toPreviews": "プレビューに戻る",
+    "beforeGone": "元の写真は30日間しか保管されないため、比較はもうご利用いただけません。",
+    "loadFailed": "このプレビューを読み込めませんでした。",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_other": "HDプレビューを作成（{{count}}クレジット）",
+    "upgradeTryFree": "無料のHDプレビューを作成",
+    "availableUntil": "{{date}}まで利用可能",
+    "saveNudge": "プレビューは30日後に削除されます。写真に保存して、コピーを残しましょう。",
+    "saveNudgeSoon": "このプレビューはまもなく削除されます。写真に保存して、コピーを残しましょう。",
+    "expiredTitle": "このプレビューは30日後に削除されました",
+    "expiredBody": "プレビューと、その元になった写真は30日後に削除されます。新しいプレビューは、いつでも作成できます。"
+  },
+  "delete": {
+    "title": "このプレビューを削除しますか？",
+    "body": "プレビュー画像は完全に削除されます。元に戻すことはできません。",
+    "done": "プレビューを削除しました"
+  },
+  "tab": {
+    "title": "プレビュー",
+    "new": "新しいプレビュー",
+    "honest": "プレビューは、ひとつの見た目の可能性をAIが作成した画像です。",
+    "emptyTitle": "まだプレビューがありません",
+    "emptyBody": "プレビューは、ひとつの見た目の可能性をAIが作成した画像で、実際にそうなるという意味ではありません。ご自身の写真でスタイルを試して、比べてみましょう。",
+    "emptyCta": "プレビューを作成",
+    "loadFailed": "プレビューを読み込めませんでした。",
+    "menu": "その他の操作",
+    "status": {
+      "queued": "待機中",
+      "processing": "作成中 · {{percent}}%",
+      "finalizing": "仕上げ中",
+      "failed": "完了しませんでした",
+      "canceled": "キャンセル済み"
+    },
+    "cardA11y": "{{style}}、{{status}}、{{date}}",
+    "retry": "もう一度試す",
+    "delete": "削除",
+    "deleteA11y": "プレビューを削除",
+    "availableUntil": "{{date}}まで",
+    "expired": "30日後に削除されました"
+  }
+}

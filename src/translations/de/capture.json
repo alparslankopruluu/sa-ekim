@@ -1,0 +1,84 @@
+{
+  "close": "Kamera schließen",
+  "title": "Fortschrittsfoto",
+  "angle": {
+    "front": "Vorne",
+    "left": "Linke Seite",
+    "right": "Rechte Seite",
+    "top": "Oben",
+    "crown": "Wirbel"
+  },
+  "instruction": {
+    "front": "Haare trocken und wie gewohnt gestylt. Bring dein Gesicht in das Oval, mit dem Haaransatz nahe am oberen Rand.",
+    "left": "Dreh dich so, dass deine linke Seite zu sehen ist. Halte das Handy aufrecht auf Augenhöhe.",
+    "right": "Dreh dich so, dass deine rechte Seite zu sehen ist. Halte das Handy aufrecht auf Augenhöhe.",
+    "top": "Halte das Handy waagerecht über deinen Kopf, Display nach oben, sodass die Rückkamera von oben auf deinen Kopf blickt.",
+    "crown": "Halte das Handy waagerecht über dein Hinterhaupt, Display nach oben, sodass die Rückkamera von oben auf deinen Wirbel blickt."
+  },
+  "cameraNote": {
+    "front": "Nutzt die Frontkamera, damit du den Bildausschnitt siehst.",
+    "back": "Nutzt die Rückkamera. Halte das Handy waagerecht oder bitte jemanden, das Foto zu machen. Du spürst ein Tippen, wenn es waagerecht ist."
+  },
+  "guide": {
+    "ghostHide": "Vorheriges Foto ausblenden",
+    "ghostShow": "Vorheriges Foto einblenden",
+    "ghostOverlay": "Überlagerung deines vorherigen Fotos, {{angle}}, {{label}}",
+    "frame": "Kameraansicht mit Ausrichtungshilfe"
+  },
+  "level": {
+    "ok": "Ausgerichtet, bereit",
+    "upright": "Halte das Handy aufrecht",
+    "flat": "Halte das Handy waagerecht, Display nach oben",
+    "unavailable": "Dieses Gerät hat keinen Bewegungssensor, daher ist die Neigungsprüfung aus. Achte selbst darauf, dass das Handy aufrecht ist.",
+    "a11yOk": "Das Handy ist ausgerichtet. Du kannst das Foto aufnehmen.",
+    "a11yBlockedUpright": "Das Handy ist noch nicht aufrecht.",
+    "a11yBlockedFlat": "Das Handy liegt noch nicht waagerecht."
+  },
+  "shutter": {
+    "label": "Foto aufnehmen",
+    "blockedUpright": "Halte dein Handy aufrecht, um das Foto aufzunehmen",
+    "blockedFlat": "Halte dein Handy waagerecht, um das Foto aufzunehmen"
+  },
+  "library": "Aus Mediathek wählen",
+  "permission": {
+    "checking": "Kamerazugriff wird geprüft…",
+    "title": "Kamerazugriff ist aus",
+    "body": "Kök nutzt die Kamera nur für deine Fortschrittsfotos. Sie bleiben auf diesem Gerät. Du kannst auch ein Foto aus deiner Mediathek wählen.",
+    "allow": "Kamera erlauben",
+    "settings": "Einstellungen öffnen"
+  },
+  "unavailable": {
+    "title": "Die Kamera ist hier nicht verfügbar",
+    "body": "Du kannst stattdessen ein Foto aus deiner Mediathek wählen."
+  },
+  "review": {
+    "retake": "Neu aufnehmen",
+    "use": "Foto verwenden",
+    "saving": "Wird gespeichert…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Dieses Foto wird nur für deine Vorschau verwendet. Es wird nicht zu deinem Verlauf hinzugefügt.",
+    "a11y": "Ansicht des soeben aufgenommenen Fotos"
+  },
+  "error": {
+    "save": "Das Foto konnte nicht gespeichert werden. Versuche es erneut.",
+    "capture": "Das Foto konnte nicht aufgenommen werden. Versuche es erneut.",
+    "pick": "Deine Mediathek konnte nicht geöffnet werden. Versuche es erneut."
+  },
+  "saved": "Foto gespeichert",
+  "checking": "Dein Abo wird geprüft…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto: {{angle}}, {{label}}",
+    "taken": "Aufgenommen am {{date}}",
+    "compare": "Vergleichen mit…",
+    "delete": "Foto löschen",
+    "confirmTitle": "Dieses Foto löschen?",
+    "confirmBody": "Es wird von diesem Gerät entfernt und kann nicht wiederhergestellt werden.",
+    "confirm": "Löschen",
+    "cancel": "Behalten",
+    "missingTitle": "Dieses Foto ist nicht mehr da",
+    "missingBody": "Es wurde möglicherweise gelöscht.",
+    "close": "Schließen",
+    "loadError": "Dieses Foto kann nicht angezeigt werden."
+  }
+}

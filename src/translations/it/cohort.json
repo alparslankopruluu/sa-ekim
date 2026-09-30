@@ -1,0 +1,28 @@
+{
+  "title": "Le persone della tua settimana",
+  "locked": {
+    "title": "Altre persone nella tua settimana di intervento",
+    "body": "Pro mostra quante persone hanno fatto l'intervento nella tua stessa settimana. Vedi sempre e solo un numero.",
+    "cta": "Scopri con Pro"
+  },
+  "join": {
+    "title": "Unisciti alla tua settimana di intervento",
+    "body": "Scegli di essere incluso nel conteggio insieme a chi ha fatto l'intervento nella stessa settimana. Vengono condivisi solo la data dell'intervento, l'obiettivo e il tipo. Mai foto, il tuo nome o la tua clinica.",
+    "switch": "Includimi",
+    "needDate": "Imposta prima la data dell'intervento.",
+    "setDate": "Imposta la data"
+  },
+  "joining": "Partecipazione in corso…",
+  "joined": "Fai parte del conteggio della tua settimana",
+  "loading": "Verifica della tua settimana…",
+  "visible": "Sei una delle {{count}} persone della tua settimana",
+  "invitation": "Ci sei. Un numero compare quando abbastanza persone condividono la tua settimana, così nessuno può essere identificato.",
+  "privacy": "Vengono condivisi solo la data dell'intervento, l'obiettivo e il tipo.",
+  "error": {
+    "offline": "Sei offline. Riprova quando torna la connessione.",
+    "busy": "Troppe richieste. Riprova tra un momento.",
+    "pro": "Serve Pro.",
+    "generic": "Non è stato possibile raggiungere il gruppo. Riprova.",
+    "retry": "Riprova"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Cosa sta succedendo",
+    "normal": "Cosa è tipico",
+    "todo": "Da fare questa settimana",
+    "redflags": "Contatta la clinica o un medico se…",
+    "care": "Giorno per giorno",
+    "wash": "Lavaggio",
+    "sleep": "Sonno",
+    "avoid": "Da evitare"
+  },
+  "header": {
+    "week": "Settimana",
+    "days": "Giorni {{from}}–{{to}}",
+    "weeks": "settimane {{from}}–{{to}}",
+    "current": "Sei qui",
+    "past": "Alle tue spalle",
+    "upcoming": "Più avanti"
+  },
+  "lock": {
+    "title": "La guida completa alle fasi fa parte di Pro",
+    "body": "Cosa succede tipicamente, cosa fare questa settimana e le note giorno per giorno — per ogni fase.",
+    "cta": "Scopri Pro",
+    "redflagsNote": "Quando contattare la tua clinica resta gratuito per tutti, qui sotto."
+  },
+  "notFound": {
+    "title": "Guida non trovata",
+    "body": "Questa pagina potrebbe provenire da un link vecchio.",
+    "cta": "Indietro"
+  },
+  "flags": {
+    "fever": "Febbre o brividi",
+    "redness": "Arrossamento o gonfiore che si estende o continua a peggiorare",
+    "pus": "Pus, secrezione gialla o cattivo odore",
+    "pain": "Dolore forte o in aumento",
+    "bleeding": "Sanguinamento abbondante, o che non si ferma con una leggera pressione",
+    "contact": "Se si verifica uno di questi segnali, contatta la tua clinica o un medico. In caso di emergenza, chiama il numero di emergenza locale."
+  },
+  "disclaimer": "Informazioni generali basate sulle cronologie comuni delle cliniche — non sono un parere medico e non sono una previsione. I risultati individuali variano; le indicazioni della tua clinica vengono prima di tutto.",
+  "care": {
+    "title": "Le prime due settimane",
+    "tagline": "Proteggere i graft mentre si assestano",
+    "happening": "I nuovi graft si stanno assestando. Attorno a ogni graft si formano tipicamente piccole crosticine, che di solito cadono entro circa 7–14 giorni. Un po' di gonfiore della fronte e arrossamento sono comuni nei primi giorni.",
+    "normal": "Tipicamente, piccole crosticine, lieve arrossamento, un po' di gonfiore e una sensazione di tensione sono comuni nelle prime due settimane.",
+    "todo1": "Segui la routine di lavaggio che ti ha mostrato la tua clinica.",
+    "todo2": "Dormi con la testa sollevata nelle prime notti se la tua clinica lo consiglia.",
+    "todo3": "Lascia che le crosticine cadano da sole — senza staccarle né grattarle.",
+    "todo4": "Evita attività fisica intensa, saune, nuoto e sole diretto finché la tua clinica non ti dice diversamente.",
+    "redflags": "In questo periodo un po' di arrossamento e gonfiore sono comuni. Contatta la clinica o un medico se noti:",
+    "days": {
+      "intro": "Molte cliniche consigliano quanto segue. Segui prima di tutto le indicazioni della tua clinica.",
+      "d0_3": {
+        "title": "Giorni 0–3",
+        "wash": "Molte cliniche eseguono il primo lavaggio loro stesse o al giorno 1–2, poi consigliano un risciacquo molto delicato, senza strofinare.",
+        "sleep": "Molte cliniche consigliano di dormire sulla schiena con la testa sollevata, ad esempio su due cuscini o con un cuscino da viaggio.",
+        "avoid": "Molte cliniche consigliano di evitare di chinarsi, sollevare pesi, toccare i graft, alcol e fumo."
+      },
+      "d4_7": {
+        "title": "Giorni 4–7",
+        "wash": "Molte cliniche consigliano un lavaggio delicato ogni giorno con i prodotti che ti hanno dato, asciugando i graft con leggeri tamponamenti — mai strofinando.",
+        "sleep": "Si consiglia ancora di solito di tenere la testa sollevata; il gonfiore tipicamente si riduce in questi giorni.",
+        "avoid": "Molte cliniche consigliano di evitare cappelli stretti, sudorazione intensa, sole diretto e grattarsi."
+      },
+      "d8_14": {
+        "title": "Giorni 8–14",
+        "wash": "Molte cliniche ora permettono un lavaggio un po' più energico, così le crosticine possono staccarsi con delicatezza.",
+        "sleep": "Molte persone possono tornare alla posizione abituale per dormire intorno a questo momento, se la clinica è d'accordo.",
+        "avoid": "Molte cliniche consigliano di evitare piscine, saune, allenamenti intensi e di staccare le ultime crosticine."
+      }
+    }
+  },
+  "shed": {
+    "title": "Fase di caduta",
+    "tagline": "I capelli trapiantati spesso cadono — le radici tipicamente restano",
+    "happening": "Tra la settimana 2 e la settimana 8 molti dei fusti dei capelli trapiantati cadono tipicamente. Le cliniche lo chiamano spesso shock loss. I follicoli sotto la pelle di solito restano al loro posto e riposano prima di produrre nuovi capelli.",
+    "normal": "Tipicamente, una caduta evidente nelle settimane 2–8 è comune — le cliniche la descrivono come una tappa consueta della cronologia.",
+    "todo1": "Mantieni la foto settimanale dalla stessa angolazione; la serie mostra l'andamento meglio dello specchio.",
+    "todo2": "Registra quanti capelli cadono in alcuni giorni — un numero è più facile da discutere di una sensazione.",
+    "todo3": "Continua a lavare con delicatezza, come consiglia la tua clinica.",
+    "todo4": "Annota le tue domande per il prossimo controllo con la clinica.",
+    "redflags": "La caduta in sé è comune in queste settimane. Contatta la clinica o un medico se noti:"
+  },
+  "quiet": {
+    "title": "Mesi di quiete",
+    "tagline": "In superficie sembra succedere poco",
+    "happening": "I mesi da 2 a 4 sono spesso chiamati la fase del “brutto anatroccolo”. I follicoli tipicamente riposano e preparano nuovi capelli, quindi la zona può sembrare molto simile a prima dell'intervento.",
+    "normal": "Tipicamente, una crescita visibile molto scarsa nei mesi 2–4 è comune.",
+    "todo1": "Confronta i mesi, non i giorni — la tua serie di foto è il modo più corretto per guardare.",
+    "todo2": "Possono comparire piccoli rilievi quando i nuovi capelli spuntano; chiedi alla tua clinica se hai dubbi.",
+    "todo3": "Proteggi il cuoio capelluto dal sole forte, come consiglia la tua clinica.",
+    "todo4": "Mantieni la stessa angolazione e la stessa luce per ogni foto.",
+    "redflags": "Contatta la clinica o un medico se noti:"
+  },
+  "sprout": {
+    "title": "Prima crescita",
+    "tagline": "Tipicamente iniziano a comparire capelli nuovi e sottili",
+    "happening": "Intorno ai mesi 3–4 compaiono di solito i primi capelli nuovi. All'inizio sono spesso sottili, chiari e irregolari, e alcuni possono essere ricci o mossi.",
+    "normal": "Tipicamente, i primi capelli sono sottili, a chiazze e crescono a velocità diverse.",
+    "todo1": "Scatta le foto dei tuoi punti di controllo con la stessa luce e dalla stessa angolazione.",
+    "todo2": "Dai tempo ai capelli sottili o irregolari — lo spessore di solito aumenta nei mesi successivi.",
+    "todo3": "Chiedi alla tua clinica quando taglio, colore e prodotti per lo styling vanno bene per te.",
+    "todo4": "Guarda le tue prime foto invece dei risultati di altre persone.",
+    "redflags": "Contatta la clinica o un medico se noti:"
+  },
+  "grow": {
+    "title": "La densità aumenta",
+    "tagline": "I capelli tipicamente si ispessiscono e riempiono",
+    "happening": "Tra i mesi 6 e 9 i nuovi capelli diventano tipicamente più spessi e più lunghi, e la zona di solito appare più piena di mese in mese.",
+    "normal": "Tipicamente, la densità continua ad aumentare nei mesi 6–9, e l'aspetto può cambiare molto in questo periodo.",
+    "todo1": "Scatta le foto dei punti di controllo dei 6 e dei 9 mesi.",
+    "todo2": "Confronta con le tue prime foto, non con quelle di qualcun altro.",
+    "todo3": "Chiedi alla tua clinica del controllo che di solito offre in questo periodo.",
+    "todo4": "Continua a proteggere il cuoio capelluto dal sole forte.",
+    "redflags": "Contatta la clinica o un medico se noti:"
+  },
+  "mature": {
+    "title": "Maturazione",
+    "tagline": "Consistenza e densità tipicamente si assestano",
+    "happening": "I mesi da 9 a 12 sono di solito un periodo di maturazione: i capelli continuano a ispessirsi e la loro consistenza si assesta. Le cliniche valutano tipicamente il risultato dell'attaccatura intorno ai 12 mesi.",
+    "normal": "Tipicamente, i cambiamenti diventano più lenti e più sottili nei mesi 9–12.",
+    "todo1": "Scatta la foto del punto di controllo dei 12 mesi da ogni angolazione.",
+    "todo2": "Affianca la prima e l'ultima foto prima della visita in clinica.",
+    "todo3": "Scrivi le domande che vuoi fare durante la valutazione.",
+    "todo4": "Ricorda che il vertice e la riga tipicamente richiedono più tempo.",
+    "redflags": "Contatta la clinica o un medico se noti:"
+  },
+  "final": {
+    "title": "Maturazione finale",
+    "tagline": "Il vertice e la riga possono continuare a maturare",
+    "happening": "Dopo i 12 mesi la maggior parte dei cambiamenti è tipicamente piccola. Il vertice, la riga e i risultati di molte donne continuano di solito a maturare fino a 18 mesi.",
+    "normal": "Tipicamente, un cambiamento lento e graduale dopo il mese 12 è comune, soprattutto sul vertice.",
+    "todo1": "Scatta una foto ogni uno o due mesi.",
+    "todo2": "Prenota la valutazione consigliata dalla tua clinica.",
+    "todo3": "Porta la tua serie di foto da condividere con la clinica, se vuoi.",
+    "todo4": "Mantieni la stessa angolazione e la stessa luce per un confronto corretto.",
+    "redflags": "Contatta la clinica o un medico se noti:"
+  }
+}

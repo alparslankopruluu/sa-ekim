@@ -1,0 +1,146 @@
+{
+  "updated": "Senast uppdaterad: {{date}}",
+  "openWeb": "Öppna webbversionen",
+  "emailSupport": "Mejla support",
+  "publisher": "Kök publiceras av Techtactoe App Studio.",
+  "privacy": {
+    "title": "Integritetspolicy",
+    "sections": [
+      {
+        "heading": "Kortversionen",
+        "body": "Dina bilder från resan stannar på din telefon. Kök laddar bara upp en bild när du ber om en AI-förhandsvisning, och både den bilden och den resulterande förhandsvisningen raderas från våra servrar inom 30 dagar. Kök visar inga annonser och säljer inte dina uppgifter. Kök är inte medicinsk rådgivning."
+      },
+      {
+        "heading": "Vad som stannar på din enhet",
+        "body": "Ditt operationsdatum, dina framstegsbilder, din hårfällningslogg och ditt kliniknamn lagras bara på din enhet. Kök laddar aldrig upp bilder från resan. De ingår i telefonens egen säkerhetskopia (iCloud eller Android Auto Backup) om du har den påslagen."
+      },
+      {
+        "heading": "Vad vi samlar in",
+        "body": "Ett anonymt konto-ID (Firebase Authentication), så att du inte behöver ange något namn eller någon e-postadress. Ditt kreditsaldo och din köpstatus. Dina språk- och aviseringsval. Användningshändelser, kraschrapporter och prestandadata (Firebase Analytics, Crashlytics och Performance Monitoring). En push-token, bara om du tillåter aviseringar. Om du skapar en förhandsvisning: den enda bild du väljer, den stil och kvalitet du väljer samt den resulterande förhandsvisningen. Om du går med i den valfria gruppen för samma vecka: ditt operationsdatum, ditt mål och vilken typ av resa du har, och inget annat. Vi samlar inte in ditt namn, dina kontakter eller din exakta plats. Kök spårar dig inte i andra appar eller på andra webbplatser och använder inte ditt reklam-ID."
+      },
+      {
+        "heading": "AI-förhandsvisningar",
+        "body": "När du skapar en förhandsvisning laddas bilden du valt upp till våra servrar och behandlas av fal.ai, som kör OpenAI-bildmodeller för vår räkning. Kök ber om ditt godkännande före den första uppladdningen, och den informationen nämner dessa leverantörer. Bilden används bara för att skapa just den förhandsvisningen. Vi använder inte dina bilder för att träna AI-modeller. Den uppladdade bilden och förhandsvisningen raderas från våra servrar inom 30 dagar, så spara en förhandsvisning i ditt bildbibliotek om du vill behålla den. Varje förhandsvisning är en AI-illustration, inte en förutsägelse av ditt resultat."
+      },
+      {
+        "heading": "Tjänsteleverantörer",
+        "body": "Vi delar uppgifter bara med företag som behandlar dem åt oss: Google Firebase (konto, databas, fillagring, funktioner, analys, kraschrapportering, prestanda, fjärrkonfiguration, appintegritetskontroller och push-aviseringar); fal.ai och de OpenAI-bildmodeller det kör (AI-förhandsvisningar); RevenueCat (prenumerationer och köp); Apple och Google (betalningar och appdistribution). Kök innehåller ingen reklam och delar inga uppgifter med annonsörer."
+      },
+      {
+        "heading": "Hur länge vi sparar uppgifter",
+        "body": "Reseuppgifter: på din enhet tills du raderar dem. Uppladdade förhandsvisningsbilder och förhandsvisningar: högst 30 dagar på våra servrar. Användnings- och kraschdata: upp till 14 månader. Köpuppgifter: så länge skatte- och bokföringslagstiftningen kräver. Rapporter du skickar om en förhandsvisning: så länge det behövs för att granska dem och agera på dem."
+      },
+      {
+        "heading": "Dina val och radering",
+        "body": "I Inställningar, Data och integritet, tar Radera all min data bort dina bilder från resan, din hårfällningslogg och dina förhandsvisningar från den här enheten. I Inställningar, Konto, tar Radera konto bort ditt konto, dina krediter, dina förhandsvisningar och eventuella uppladdade bilder från våra servrar direkt och rensar din resa på enheten. Där kan du också stänga av aviseringar. Ingenting laddas upp om du inte skapar en förhandsvisning. Att radera ditt konto avslutar inte en prenumeration: avsluta den i inställningarna för ditt App Store- eller Google Play-konto. Beroende på var du bor (till exempel enligt GDPR, Turkiets KVKK eller Kaliforniens CCPA) kan du ha rätt att få tillgång till, rätta, radera eller exportera dina uppgifter och att återkalla ditt samtycke. Om du vill göra en begäran, mejla techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Barn",
+        "body": "Kök är avsett för vuxna. Vi samlar inte medvetet in uppgifter från någon under 18 år."
+      },
+      {
+        "heading": "Inte medicinsk rådgivning",
+        "body": "Kök är ett verktyg för information och uppföljning. Det ställer inga diagnoser, behandlar eller förutspår ingenting, och dess tidslinje visar bara typiska intervall. Vid all oro, kontakta din klinik eller en läkare."
+      },
+      {
+        "heading": "Ändringar och kontakt",
+        "body": "Om den här policyn ändras ändras datumet ovan med den. Frågor eller begäranden: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "sections": [
+      {
+        "heading": "Att använda Kök",
+        "body": "Kök hjälper dig att följa en hårtransplantation, PRP eller en liknande hårresa med dina egna bilder och en typisk tidslinje, och låter dig skapa AI-förhandsvisningar. Du måste vara vuxen och ha rätt att ingå det här avtalet. Genom att använda Kök godkänner du dessa villkor."
+      },
+      {
+        "heading": "Inte medicinsk rådgivning",
+        "body": "Kök är inte en medicinteknisk produkt och ger ingen medicinsk rådgivning, diagnos eller behandling. Tidslinjer och guider beskriver vad som är typiskt och är inget löfte om ditt resultat. Om du märker feber, rodnad som sprider sig, var, svår smärta eller kraftig blödning, kontakta din klinik eller en läkare."
+      },
+      {
+        "heading": "AI-förhandsvisningar",
+        "body": "En förhandsvisning är en AI-illustration som skapats utifrån din bild. Den är ingen förutsägelse, inget löfte och ingen plan för ditt resultat, och den visar inte antal transplantat. Den kostnadsfria förhandsvisningen under introduktionen har ett vattenmärke. Förhandsvisningar sparas i 30 dagar, så spara en i ditt bildbibliotek för att behålla den. Använd förhandsvisningar ansvarsfullt och presentera inte en som ett riktigt fotografi."
+      },
+      {
+        "heading": "Bilder och innehåll",
+        "body": "Använd bara bilder på dig själv, eller på någon som tydligt har samtyckt. Ladda inte upp minderåriga, offentliga personer eller något som är sexuellt, hatfullt, trakasserande, vilseledande eller olagligt. Vi kan blockera innehåll och stänga av åtkomst som bryter mot dessa regler. Du kan rapportera vilken förhandsvisning som helst från dess skärm."
+      },
+      {
+        "heading": "Prenumerationer och krediter",
+        "body": "Kök Pro erbjuds som en vecko-, månads- eller årsprenumeration till det pris som din butik visar. Det finns ingen gratis provperiod. Prenumerationer förnyas automatiskt tills du avslutar dem i inställningarna för ditt App Store- eller Google Play-konto, och återbetalningar följer Apples eller Googles regler. Kreditpaket är engångsköp. En standardförhandsvisning använder 1 kredit och en HD-förhandsvisning använder 3. Om en förhandsvisning misslyckas återförs dess krediter automatiskt. Krediter har inget kontantvärde och kan inte överföras. Du kan återställa köp från betalväggen eller Inställningar."
+      },
+      {
+        "heading": "Ditt innehåll",
+        "body": "Du behåller äganderätten till dina bilder och förhandsvisningar. Du ger oss en begränsad tillåtelse att behandla det du laddar upp, enbart för att tillhandahålla den tjänst du bett om."
+      },
+      {
+        "heading": "Tillgänglighet och ansvar",
+        "body": "Kök tillhandahålls i befintligt skick och i mån av tillgänglighet. I den utsträckning lagen tillåter ansvarar vi inte för indirekta skador eller följdskador, och ingenting här begränsar rättigheter du har enligt konsumentlagstiftning som inte kan avstås från."
+      },
+      {
+        "heading": "Att avsluta din användning",
+        "body": "Du kan sluta använda Kök och radera ditt konto när som helst i Inställningar. Vi kan ändra dessa villkor och uppdaterar datumet när vi gör det."
+      },
+      {
+        "heading": "Kontakt",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Så fungerar AI-förhandsvisningar",
+    "sections": [
+      {
+        "heading": "Vad en förhandsvisning är",
+        "body": "En förhandsvisning är en AI-illustration av hur en vald stil kan se ut på din bild. Den är inte en förutsägelse av ditt resultat, och en etikett som säger det förblir synlig på varje förhandsvisning."
+      },
+      {
+        "heading": "Vad som skickas",
+        "body": "Bara den enda bild du väljer för den förhandsvisningen, plus den stil och kvalitet du valt. Dina bilder från resan laddas aldrig upp. Före den första uppladdningen ber Kök om ditt godkännande."
+      },
+      {
+        "heading": "Vem som behandlar den",
+        "body": "fal.ai kör OpenAI-bildmodeller för vår räkning. Vi använder dem bara för att skapa din förhandsvisning och använder inte dina bilder för att träna AI-modeller. Den uppladdade bilden och förhandsvisningen raderas från våra servrar inom 30 dagar."
+      },
+      {
+        "heading": "Begränsningar",
+        "body": "Resultaten kan vara ofullkomliga eller orealistiska. Den kostnadsfria förhandsvisningen under introduktionen har ett vattenmärke. Kök visar aldrig antal transplantat, stadier eller löften om resultat."
+      },
+      {
+        "heading": "Rapportera och radera",
+        "body": "Rapportera en förhandsvisning från dess skärm så granskar vi den inom 48 timmar. Du kan radera en förhandsvisning när som helst, och om du raderar ditt konto tas allt vi har bort."
+      }
+    ]
+  },
+  "support": {
+    "title": "Hjälp och support",
+    "sections": [
+      {
+        "heading": "Kontakta oss",
+        "body": "Mejla techtactoeappstudio@gmail.com och ange din appversion (Inställningar, Om). Vi svarar vanligtvis inom två arbetsdagar."
+      },
+      {
+        "heading": "En förhandsvisning misslyckades. Förlorade jag krediter?",
+        "body": "Nej. Krediter för en misslyckad eller avbruten förhandsvisning återförs automatiskt."
+      },
+      {
+        "heading": "Hur avslutar jag min prenumeration?",
+        "body": "På iPhone: Inställningar, ditt namn, Prenumerationer, Kök. På Android: Google Play, Betalningar och prenumerationer, Prenumerationer. Du kan också öppna Inställningar, Hantera prenumeration i Kök."
+      },
+      {
+        "heading": "Hur återställer jag köp?",
+        "body": "Öppna betalväggen eller Inställningar och tryck på Återställ."
+      },
+      {
+        "heading": "Hur raderar jag mina uppgifter?",
+        "body": "Inställningar, Data och integritet, Radera all min data rensar din resa och dina förhandsvisningar på den här enheten. Inställningar, Konto, Radera konto raderar ditt konto och allt vi har. Du kan också mejla oss för att begära radering."
+      },
+      {
+        "heading": "Är det här medicinsk rådgivning?",
+        "body": "Nej. Kök är ett verktyg för information och uppföljning. Vid allt som oroar, kontakta din klinik eller en läkare."
+      }
+    ]
+  }
+}

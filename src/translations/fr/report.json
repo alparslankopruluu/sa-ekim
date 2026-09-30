@@ -1,0 +1,39 @@
+{
+  "title": "Signaler cet aperçu",
+  "subtitle": "Dites-nous ce qui ne va pas. Nous examinons chaque signalement sous 48 heures.",
+  "inaccurate": "Il semble inexact",
+  "unsafe": "Il semble dangereux ou inapproprié",
+  "privacy": "Il soulève un problème de confidentialité",
+  "other": "Autre chose",
+  "send": "Envoyer le signalement",
+  "sent": "Merci. Nous l'examinerons sous 48 heures.",
+  "clinic": {
+    "action": "Exporter le dossier de suivi",
+    "exporting": "Préparation…",
+    "title": "Dossier de suivi de restauration capillaire",
+    "brand": "Kök",
+    "clinicLine": "Clinique : {{name}}",
+    "operationLine": "Date de l'opération : {{date}}",
+    "generatedLine": "Créé le {{date}}",
+    "photosHeading": "Photos",
+    "noPhotos": "Aucune photo pour l'instant.",
+    "shedHeading": "Journal de chute",
+    "shedEmpty": "Aucune saisie de chute pour l'instant.",
+    "col": {
+      "week": "Semaine",
+      "days": "Jours notés",
+      "average": "Moyenne",
+      "max": "Maximum"
+    },
+    "weekRow": "Semaine {{n}}",
+    "overall": "Toutes les saisies",
+    "before": "Avant",
+    "week": "Semaine {{n}}",
+    "disclaimer": "Suivi personnel — pas un document médical",
+    "dialog": "Partager votre dossier de suivi",
+    "failed": "Impossible de créer le rapport. Réessayez.",
+    "empty": "Ajoutez d'abord une photo ou une saisie de chute.",
+    "unsupported": "Les rapports ne peuvent pas être créés dans le navigateur."
+  },
+  "unavailable": "Cet aperçu n'est pas disponible pour un signalement."
+}

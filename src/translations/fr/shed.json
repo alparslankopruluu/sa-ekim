@@ -1,0 +1,43 @@
+{
+  "title": "Journal de chute",
+  "close": "Fermer",
+  "subtitle": "Notez à peu près combien de cheveux vous voyez sur l'oreiller ou dans la bonde. Un nombre approximatif suffit.",
+  "typical": "Une chute durant les semaines 2–8 est habituelle.",
+  "phaseNow": "Vous en êtes à la semaine {{week}} après votre opération.",
+  "today": "Aujourd'hui",
+  "input": {
+    "label": "Cheveux remarqués aujourd'hui",
+    "placeholder": "0",
+    "hint": "Un nombre entier de 0 à 999"
+  },
+  "quick": "+{{count}}",
+  "quickA11y": "Ajouter {{count}}",
+  "save": "Enregistrer",
+  "update": "Mettre à jour",
+  "saved": "Enregistré",
+  "invalid": "Saisissez un nombre entier de 0 à 999.",
+  "chart": {
+    "title": "30 derniers jours",
+    "a11y": "Journal de chute des 30 derniers jours",
+    "bar": "{{date}} : {{count}}",
+    "barEmpty": "{{date}} : rien de noté",
+    "barToday": "Aujourd'hui, {{date}} : {{count}}",
+    "barTodayEmpty": "Aujourd'hui, {{date}} : rien de noté",
+    "window": "Période habituelle de chute",
+    "todayLegend": "Aujourd'hui",
+    "missing": "Pas de saisie"
+  },
+  "average": "Moyenne sur les 7 derniers jours : {{count}}",
+  "averageEmpty": "Rien de noté durant les 7 derniers jours.",
+  "empty": {
+    "title": "Rien de noté pour l'instant",
+    "body": "Notez un nombre chaque fois que vous remarquez des cheveux. Après quelques semaines, le graphique montre votre propre évolution."
+  },
+  "note": "Pour votre propre repère. Les chiffres varient d'un jour à l'autre, et les résultats varient d'une personne à l'autre.",
+  "mini": {
+    "title": "Journal de chute",
+    "empty": "Noter le nombre du jour",
+    "a11y": "Journal de chute, {{days}} derniers jours. Ouvre le journal.",
+    "a11yEmpty": "Journal de chute. Rien de noté pour l'instant. Ouvre le journal."
+  }
+}

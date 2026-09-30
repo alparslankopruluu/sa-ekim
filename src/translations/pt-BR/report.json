@@ -1,0 +1,39 @@
+{
+  "title": "Denunciar esta prévia",
+  "subtitle": "Conte o que há de errado. Analisamos todas as denúncias em até 48 horas.",
+  "inaccurate": "Parece imprecisa",
+  "unsafe": "Parece insegura ou inadequada",
+  "privacy": "Levanta uma preocupação com privacidade",
+  "other": "Outro motivo",
+  "send": "Enviar denúncia",
+  "sent": "Obrigado. Vamos analisar em até 48 horas.",
+  "clinic": {
+    "action": "Exportar registro de progresso",
+    "exporting": "Preparando…",
+    "title": "Registro de progresso de restauração capilar",
+    "brand": "Kök",
+    "clinicLine": "Clínica: {{name}}",
+    "operationLine": "Data da operação: {{date}}",
+    "generatedLine": "Criado em {{date}}",
+    "photosHeading": "Fotos",
+    "noPhotos": "Ainda sem fotos.",
+    "shedHeading": "Registro de queda",
+    "shedEmpty": "Ainda sem registros de queda.",
+    "col": {
+      "week": "Semana",
+      "days": "Dias registrados",
+      "average": "Média",
+      "max": "Máximo"
+    },
+    "weekRow": "Semana {{n}}",
+    "overall": "Todos os registros",
+    "before": "Antes",
+    "week": "Semana {{n}}",
+    "disclaimer": "Registro pessoal de progresso — não é um documento médico",
+    "dialog": "Compartilhar seu registro de progresso",
+    "failed": "Não foi possível criar o relatório. Tente de novo.",
+    "empty": "Adicione antes uma foto ou um registro de queda.",
+    "unsupported": "Não é possível criar relatórios no navegador."
+  },
+  "unavailable": "Esta prévia não está disponível para denúncia."
+}

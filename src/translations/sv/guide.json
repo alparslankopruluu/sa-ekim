@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Vad som händer",
+    "normal": "Vad som är typiskt",
+    "todo": "Gör detta den här veckan",
+    "redflags": "Kontakta din klinik eller en läkare om…",
+    "care": "Dag för dag",
+    "wash": "Tvätt",
+    "sleep": "Sömn",
+    "avoid": "Undvik"
+  },
+  "header": {
+    "week": "Vecka",
+    "days": "Dag {{from}}–{{to}}",
+    "weeks": "vecka {{from}}–{{to}}",
+    "current": "Du är här",
+    "past": "Bakom dig",
+    "upcoming": "Framför dig"
+  },
+  "lock": {
+    "title": "Hela fasguiden ingår i Pro",
+    "body": "Vad som typiskt händer, vad du kan göra den här veckan och dag-för-dag-anteckningar – för varje fas.",
+    "cta": "Se Pro",
+    "redflagsNote": "När du ska kontakta din klinik är alltid gratis för alla, nedan."
+  },
+  "notFound": {
+    "title": "Guiden hittades inte",
+    "body": "Den här sidan kan komma från en äldre länk.",
+    "cta": "Tillbaka"
+  },
+  "flags": {
+    "fever": "Feber eller frossa",
+    "redness": "Rodnad eller svullnad som sprider sig eller fortsätter att bli värre",
+    "pus": "Var, gulaktig vätska eller dålig lukt",
+    "pain": "Svår eller tilltagande smärta",
+    "bleeding": "Kraftig blödning, eller blödning som inte upphör med försiktigt tryck",
+    "contact": "Om något av detta inträffar, kontakta din klinik eller en läkare. Vid en nödsituation, ring ditt lokala larmnummer."
+  },
+  "disclaimer": "Allmän information baserad på vanliga kliniska tidslinjer – inte medicinsk rådgivning och inte en förutsägelse. Individuella resultat varierar; din egen kliniks anvisningar gäller alltid först.",
+  "care": {
+    "title": "De första två veckorna",
+    "tagline": "Skydda transplantaten medan de sätter sig",
+    "happening": "De nya transplantaten sätter sig på plats. Små sårskorpor bildas typiskt runt varje transplantat och lossnar ofta inom ungefär 7–14 dagar. Viss svullnad i pannan och rodnad ses ofta de första dagarna.",
+    "normal": "Typiskt är små sårskorpor, lätt rodnad, viss svullnad och en spänd känsla vanligt under de första två veckorna.",
+    "todo1": "Följ den tvättrutin som din klinik visade dig.",
+    "todo2": "Sov med huvudet högt de första nätterna om din klinik rekommenderar det.",
+    "todo3": "Låt sårskorporna lossna av sig själva – ingen pillning eller kliande.",
+    "todo4": "Undvik tung träning, bastu, bad och direkt sol tills din klinik säger något annat.",
+    "redflags": "Viss rodnad och svullnad är vanligt nu. Kontakta din klinik eller en läkare om du märker:",
+    "days": {
+      "intro": "Många kliniker rekommenderar följande. Följ först din egen kliniks anvisningar.",
+      "d0_3": {
+        "title": "Dag 0–3",
+        "wash": "Många kliniker gör den första tvätten själva eller på dag 1–2 och rekommenderar sedan en mycket försiktig sköljning utan gnuggning.",
+        "sleep": "Många kliniker rekommenderar att sova på rygg med huvudet högt, till exempel på två kuddar eller en nackkudde.",
+        "avoid": "Många kliniker rekommenderar att undvika att böja sig ner, lyfta, röra transplantaten, alkohol och rökning."
+      },
+      "d4_7": {
+        "title": "Dag 4–7",
+        "wash": "Många kliniker rekommenderar en försiktig daglig tvätt med produkterna du fått, där du klappar transplantaten torra – aldrig gnuggar.",
+        "sleep": "Högt huvud rekommenderas fortfarande ofta; svullnaden avtar typiskt runt de här dagarna.",
+        "avoid": "Många kliniker rekommenderar att undvika åtsittande mössor, kraftig svettning, direkt sol och kliande."
+      },
+      "d8_14": {
+        "title": "Dag 8–14",
+        "wash": "Många kliniker tillåter något fastare tvättning nu så att sårskorporna kan lossna försiktigt.",
+        "sleep": "Många kan gå tillbaka till sin vanliga sovställning ungefär nu, om kliniken går med på det.",
+        "avoid": "Många kliniker rekommenderar att undvika pooler, bastu, tung träning och att pilla på de sista sårskorporna."
+      }
+    }
+  },
+  "shed": {
+    "title": "Hårfällningsfasen",
+    "tagline": "De transplanterade hårstråna faller ofta av – rötterna stannar typiskt kvar",
+    "happening": "Mellan vecka 2 och 8 fäller många av de transplanterade hårstråna typiskt av sig. Kliniker kallar detta ofta chockfällning. Folliklarna under huden stannar ofta kvar på plats och vilar innan de växer nytt hår.",
+    "normal": "Typiskt är märkbar hårfällning under vecka 2–8 vanlig – kliniker beskriver det som ett vanligt skede i tidslinjen.",
+    "todo1": "Behåll den veckovisa bilden från samma vinkel; bildserien visar mönstret bättre än spegeln.",
+    "todo2": "Logga hur mycket du fäller några dagar – ett antal är lättare att prata om än en känsla.",
+    "todo3": "Fortsätt att tvätta försiktigt, så som din klinik rekommenderar.",
+    "todo4": "Anteckna dina frågor till kliniken inför nästa uppföljning.",
+    "redflags": "Hårfällning i sig är vanlig under de här veckorna. Kontakta din klinik eller en läkare om du märker:"
+  },
+  "quiet": {
+    "title": "De lugna månaderna",
+    "tagline": "Det verkar hända lite på ytan",
+    "happening": "Månad 2 till 4 kallas ofta den ”fula ankungen”-fasen. Folliklarna vilar typiskt och förbereder nya hårstrån, så området kan se ungefär likadant ut som före operationen.",
+    "normal": "Typiskt är det vanligt med mycket lite synlig tillväxt under månad 2–4.",
+    "todo1": "Jämför månader, inte dagar – din bildserie är den rättvisaste bilden.",
+    "todo2": "Små knottror kan dyka upp när nya hårstrån tränger fram; fråga din klinik om du är osäker.",
+    "todo3": "Skydda hårbotten mot stark sol, så som din klinik rekommenderar.",
+    "todo4": "Behåll samma vinkel och ljus för varje bild.",
+    "redflags": "Kontakta din klinik eller en läkare om du märker:"
+  },
+  "sprout": {
+    "title": "Första tillväxten",
+    "tagline": "Fina nya hårstrån börjar typiskt dyka upp",
+    "happening": "Runt månad 3–4 dyker de första nya hårstråna ofta upp. De är ofta tunna, ljusa och ojämna i början, och en del kan vara krulliga eller vågiga.",
+    "normal": "Typiskt är tidiga hårstrån fina, glesa och växer i olika takt.",
+    "todo1": "Ta dina kontrollbilder i samma ljus och från samma vinkel.",
+    "todo2": "Ge tunna eller ojämna hårstrån tid – tjockleken ökar ofta under senare månader.",
+    "todo3": "Fråga din klinik när klippning, färgning och stylingprodukter är okej för dig.",
+    "todo4": "Titta tillbaka på dina första bilder i stället för på andras resultat.",
+    "redflags": "Kontakta din klinik eller en läkare om du märker:"
+  },
+  "grow": {
+    "title": "Tätheten ökar",
+    "tagline": "Hårstrån blir typiskt tjockare och fyller ut",
+    "happening": "Mellan månad 6 och 9 blir de nya hårstråna typiskt tjockare och längre, och området ser ofta fylligare ut från månad till månad.",
+    "normal": "Typiskt fortsätter tätheten att öka under månad 6–9, och utseendet kan förändras mycket under den här perioden.",
+    "todo1": "Ta dina kontrollbilder vid 6 och 9 månader.",
+    "todo2": "Jämför med dina egna första bilder, inte med någon annans.",
+    "todo3": "Fråga din klinik om den uppföljning de brukar erbjuda runt den här tiden.",
+    "todo4": "Fortsätt skydda hårbotten mot stark sol.",
+    "redflags": "Kontakta din klinik eller en läkare om du märker:"
+  },
+  "mature": {
+    "title": "Mognad",
+    "tagline": "Struktur och täthet sätter sig typiskt",
+    "happening": "Månad 9 till 12 är ofta en tid av mognad: hårstråna fortsätter att bli tjockare och deras struktur sätter sig. Kliniker utvärderar typiskt ett hårfästresultat efter ungefär 12 månader.",
+    "normal": "Typiskt blir förändringarna långsammare och subtilare under månad 9–12.",
+    "todo1": "Ta din kontrollbild vid 12 månader från alla vinklar.",
+    "todo2": "Lägg din första och senaste bild bredvid varandra före klinikbesöket.",
+    "todo3": "Skriv ner de frågor du vill ställa vid utvärderingen.",
+    "todo4": "Kom ihåg att hjässan och benan typiskt tar längre tid.",
+    "redflags": "Kontakta din klinik eller en läkare om du märker:"
+  },
+  "final": {
+    "title": "Slutlig mognad",
+    "tagline": "Hjässan och benan kan fortsätta mogna",
+    "happening": "Efter 12 månader är de flesta förändringar typiskt små. Hjässan, benan och många kvinnors resultat fortsätter ofta att mogna i upp till 18 månader.",
+    "normal": "Typiskt är långsam och gradvis förändring efter månad 12 vanlig, särskilt på hjässan.",
+    "todo1": "Ta en bild var eller varannan månad.",
+    "todo2": "Boka den utvärdering som din klinik rekommenderar.",
+    "todo3": "Ta med din bildserie för att dela med kliniken om du vill.",
+    "todo4": "Behåll samma vinkel och ljus för en rättvis jämförelse.",
+    "redflags": "Kontakta din klinik eller en läkare om du märker:"
+  }
+}

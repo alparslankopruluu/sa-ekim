@@ -1,0 +1,84 @@
+{
+  "close": "Fermer l'appareil photo",
+  "title": "Photo de suivi",
+  "angle": {
+    "front": "Face",
+    "left": "Côté gauche",
+    "right": "Côté droit",
+    "top": "Dessus",
+    "crown": "Vertex"
+  },
+  "instruction": {
+    "front": "Cheveux secs et coiffés comme d'habitude. Placez votre visage dans l'ovale, la ligne frontale près du haut.",
+    "left": "Tournez-vous pour montrer votre côté gauche. Gardez le téléphone à la verticale, à hauteur des yeux.",
+    "right": "Tournez-vous pour montrer votre côté droit. Gardez le téléphone à la verticale, à hauteur des yeux.",
+    "top": "Tenez le téléphone à plat au-dessus de votre tête, écran vers le haut, pour que la caméra arrière regarde vers le dessus de votre crâne.",
+    "crown": "Tenez le téléphone à plat au-dessus de l'arrière de votre tête, écran vers le haut, pour que la caméra arrière regarde vers votre vertex."
+  },
+  "cameraNote": {
+    "front": "Utilise la caméra avant pour que vous voyiez le cadre.",
+    "back": "Utilise la caméra arrière. Tenez le téléphone à plat ou demandez à quelqu'un de prendre la photo. Vous sentez un léger tapotement lorsqu'il est de niveau."
+  },
+  "guide": {
+    "ghostHide": "Masquer la photo précédente",
+    "ghostShow": "Afficher la photo précédente",
+    "ghostOverlay": "Superposition de votre photo précédente ({{angle}}), {{label}}",
+    "frame": "Vue de l'appareil photo avec un guide de cadrage"
+  },
+  "level": {
+    "ok": "De niveau, prêt",
+    "upright": "Tenez le téléphone à la verticale",
+    "flat": "Tenez le téléphone à plat, écran vers le haut",
+    "unavailable": "Cet appareil n'a pas de capteur de mouvement : la vérification du niveau est désactivée. Assurez-vous vous-même que le téléphone est à la verticale.",
+    "a11yOk": "Le téléphone est de niveau. Vous pouvez prendre la photo.",
+    "a11yBlockedUpright": "Le téléphone n'est pas encore à la verticale.",
+    "a11yBlockedFlat": "Le téléphone n'est pas encore à plat."
+  },
+  "shutter": {
+    "label": "Prendre la photo",
+    "blockedUpright": "Tenez votre téléphone à la verticale pour prendre la photo",
+    "blockedFlat": "Tenez votre téléphone à plat pour prendre la photo"
+  },
+  "library": "Choisir dans la photothèque",
+  "permission": {
+    "checking": "Vérification de l'accès à l'appareil photo…",
+    "title": "L'accès à l'appareil photo est désactivé",
+    "body": "Kök utilise l'appareil photo uniquement pour vos photos de suivi. Elles restent sur cet appareil. Vous pouvez aussi choisir une photo dans votre photothèque.",
+    "allow": "Autoriser l'appareil photo",
+    "settings": "Ouvrir les réglages"
+  },
+  "unavailable": {
+    "title": "L'appareil photo n'est pas disponible ici",
+    "body": "Vous pouvez choisir une photo dans votre photothèque à la place."
+  },
+  "review": {
+    "retake": "Reprendre",
+    "use": "Utiliser la photo",
+    "saving": "Enregistrement…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Cette photo sert uniquement à votre aperçu. Elle n'est pas ajoutée à votre parcours.",
+    "a11y": "Aperçu de la photo que vous venez de prendre"
+  },
+  "error": {
+    "save": "Impossible d'enregistrer la photo. Réessayez.",
+    "capture": "Impossible de prendre la photo. Réessayez.",
+    "pick": "Impossible d'ouvrir votre photothèque. Réessayez."
+  },
+  "saved": "Photo enregistrée",
+  "checking": "Vérification de votre formule…",
+  "detail": {
+    "title": "Photo",
+    "image": "Photo ({{angle}}), {{label}}",
+    "taken": "Prise le {{date}}",
+    "compare": "Comparer avec…",
+    "delete": "Supprimer la photo",
+    "confirmTitle": "Supprimer cette photo ?",
+    "confirmBody": "Elle sera supprimée de cet appareil et ne pourra pas être récupérée.",
+    "confirm": "Supprimer",
+    "cancel": "La garder",
+    "missingTitle": "Cette photo n'est plus ici",
+    "missingBody": "Elle a peut-être été supprimée.",
+    "close": "Fermer",
+    "loadError": "Cette photo ne peut pas être affichée."
+  }
+}

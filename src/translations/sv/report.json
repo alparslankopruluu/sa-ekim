@@ -1,0 +1,39 @@
+{
+  "title": "Rapportera den här förhandsvisningen",
+  "subtitle": "Berätta vad som är fel. Vi granskar varje rapport inom 48 timmar.",
+  "inaccurate": "Den ser felaktig ut",
+  "unsafe": "Den ser osäker eller olämplig ut",
+  "privacy": "Den väcker oro kring integritet",
+  "other": "Något annat",
+  "send": "Skicka rapport",
+  "sent": "Tack. Vi granskar den inom 48 timmar.",
+  "clinic": {
+    "action": "Exportera framstegsjournal",
+    "exporting": "Förbereder…",
+    "title": "Framstegsjournal för hårtransplantation",
+    "brand": "Kök",
+    "clinicLine": "Klinik: {{name}}",
+    "operationLine": "Operationsdatum: {{date}}",
+    "generatedLine": "Skapad {{date}}",
+    "photosHeading": "Bilder",
+    "noPhotos": "Inga bilder ännu.",
+    "shedHeading": "Hårfällningslogg",
+    "shedEmpty": "Inga hårfällningsposter ännu.",
+    "col": {
+      "week": "Vecka",
+      "days": "Loggade dagar",
+      "average": "Medel",
+      "max": "Högsta"
+    },
+    "weekRow": "Vecka {{n}}",
+    "overall": "Alla poster",
+    "before": "Före",
+    "week": "Vecka {{n}}",
+    "disclaimer": "Personlig framstegsjournal – inte ett medicinskt dokument",
+    "dialog": "Dela din framstegsjournal",
+    "failed": "Det gick inte att skapa rapporten. Försök igen.",
+    "empty": "Lägg först till en bild eller en hårfällningspost.",
+    "unsupported": "Rapporter kan inte skapas i webbläsaren."
+  },
+  "unavailable": "Den här förhandsvisningen går inte att rapportera."
+}

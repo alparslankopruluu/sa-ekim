@@ -1,0 +1,146 @@
+{
+  "updated": "Última actualización: {{date}}",
+  "openWeb": "Abrir versión web",
+  "emailSupport": "Escribir al soporte",
+  "publisher": "Kök está publicada por Techtactoe App Studio.",
+  "privacy": {
+    "title": "Política de privacidad",
+    "sections": [
+      {
+        "heading": "La versión corta",
+        "body": "Las fotos de tu recorrido se quedan en tu teléfono. Kök sube una foto solo cuando pides una vista previa de IA, y tanto esa foto como la imagen de vista previa resultante se eliminan de nuestros servidores en un plazo de 30 días. Kök no muestra anuncios y no vende tus datos. Kök no es asesoramiento médico."
+      },
+      {
+        "heading": "Qué se queda en tu dispositivo",
+        "body": "Tu fecha de operación, tus fotos de progreso, tu registro de caída y el nombre de tu clínica se guardan únicamente en tu dispositivo. Kök nunca sube las fotos del recorrido. Se incluyen en la copia de seguridad del propio teléfono (iCloud o Android Auto Backup) si la tienes activada."
+      },
+      {
+        "heading": "Qué recopilamos",
+        "body": "Un identificador de cuenta anónimo (Firebase Authentication), para que no tengas que dar tu nombre ni tu correo electrónico. Tu saldo de créditos y el estado de tus compras. Tu idioma y tus opciones de notificaciones. Eventos de uso, informes de fallos y datos de rendimiento (Firebase Analytics, Crashlytics y Performance Monitoring). Un token de notificaciones push, solo si permites las notificaciones. Si creas una vista previa: la única foto que eliges, el estilo y la calidad que seleccionas, y la vista previa resultante. Si te unes al grupo opcional de la misma semana: tu fecha de operación, tu objetivo y el tipo de recorrido, y nada más. No recopilamos tu nombre, tus contactos ni tu ubicación precisa. Kök no te rastrea en otras apps ni sitios web y no usa tu identificador de publicidad."
+      },
+      {
+        "heading": "Vistas previas de IA",
+        "body": "Cuando creas una vista previa, la foto que elegiste se sube a nuestros servidores y la procesa fal.ai, que ejecuta modelos de imagen de OpenAI en nuestro nombre. Kök te pide tu conformidad antes de la primera subida, y ese aviso nombra a estos proveedores. La foto se usa únicamente para generar esa vista previa. No usamos tus fotos para entrenar modelos de IA. La foto subida y la imagen de vista previa se eliminan de nuestros servidores en un plazo de 30 días, así que guarda una vista previa en tu fototeca si quieres conservarla. Cada vista previa es una ilustración de IA, no una predicción de tu resultado."
+      },
+      {
+        "heading": "Proveedores de servicios",
+        "body": "Compartimos datos únicamente con empresas que los procesan por nosotros: Google Firebase (cuenta, base de datos, almacenamiento de archivos, funciones, analítica, informes de fallos, rendimiento, configuración remota, comprobaciones de integridad de la app y notificaciones push); fal.ai y los modelos de imagen de OpenAI que ejecuta (vistas previas de IA); RevenueCat (suscripciones y compras); Apple y Google (pagos y distribución de la app). Kök no contiene publicidad y no comparte datos con anunciantes."
+      },
+      {
+        "heading": "Cuánto tiempo conservamos los datos",
+        "body": "Datos del recorrido: en tu dispositivo hasta que los elimines. Fotos subidas para vistas previas e imágenes de vista previa: como máximo 30 días en nuestros servidores. Datos de uso y de fallos: hasta 14 meses. Registros de compras: durante el tiempo que exijan las leyes fiscales y contables. Informes que envías sobre una vista previa: durante el tiempo necesario para revisarlos y actuar en consecuencia."
+      },
+      {
+        "heading": "Tus opciones y la eliminación",
+        "body": "En Ajustes, Datos y privacidad, Eliminar todos mis datos borra de este dispositivo las fotos de tu recorrido, tu registro de caída y tus vistas previas. En Ajustes, Cuenta, Eliminar cuenta se borran de inmediato de nuestros servidores tu cuenta, tus créditos, tus vistas previas y cualquier foto subida, y se limpia tu recorrido en el dispositivo. Ahí también puedes desactivar las notificaciones. No se sube nada a menos que crees una vista previa. Eliminar tu cuenta no cancela una suscripción: cancélala en los ajustes de tu cuenta de App Store o Google Play. Según dónde vivas (por ejemplo, bajo el RGPD, la KVKK de Turquía o la CCPA de California), puedes tener derechos de acceso, rectificación, supresión o exportación de tus datos y de retirada del consentimiento. Para hacer una solicitud, escribe a techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Menores",
+        "body": "Kök está pensada para personas adultas. No recopilamos a sabiendas información de menores de 18 años."
+      },
+      {
+        "heading": "No es asesoramiento médico",
+        "body": "Kök es una herramienta educativa y de seguimiento. No diagnostica, trata ni predice nada, y su cronología muestra solo rangos habituales. Ante cualquier duda, contacta con tu clínica o con un médico."
+      },
+      {
+        "heading": "Cambios y contacto",
+        "body": "Si esta política cambia, la fecha de arriba cambiará con ella. Preguntas o solicitudes: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Condiciones de uso",
+    "sections": [
+      {
+        "heading": "Uso de Kök",
+        "body": "Kök te ayuda a seguir un recorrido de trasplante capilar, PRP u otro tratamiento similar de restauración capilar con tus propias fotos y una cronología habitual, y te permite crear vistas previas de IA. Debes ser una persona adulta y tener capacidad para aceptar este acuerdo. Al usar Kök aceptas estas condiciones."
+      },
+      {
+        "heading": "No es asesoramiento médico",
+        "body": "Kök no es un producto sanitario y no ofrece asesoramiento, diagnóstico ni tratamiento médico. Las cronologías y las guías describen lo que es habitual y no son una promesa sobre tu resultado. Si notas fiebre, enrojecimiento que se extiende, pus, dolor intenso o sangrado abundante, contacta con tu clínica o con un médico."
+      },
+      {
+        "heading": "Vistas previas de IA",
+        "body": "Una vista previa es una ilustración de IA creada a partir de tu foto. No es una predicción, una promesa ni un plan para tu resultado, y no muestra cantidades de injertos. La vista previa gratuita de la introducción lleva una marca de agua. Las vistas previas se conservan 30 días, así que guarda una en tu fototeca para conservarla. Usa las vistas previas con responsabilidad y no presentes ninguna como una fotografía real."
+      },
+      {
+        "heading": "Fotos y contenido",
+        "body": "Usa solo fotos tuyas o de alguien que haya dado su consentimiento de forma clara. No subas fotos de menores, de personas públicas ni nada sexual, de odio, de acoso, engañoso o ilegal. Podemos bloquear contenido y suspender el acceso a quien incumpla estas normas. Puedes denunciar cualquier vista previa desde su pantalla."
+      },
+      {
+        "heading": "Suscripciones y créditos",
+        "body": "Kök Pro se ofrece como suscripción semanal, mensual o anual al precio que muestra tu tienda. No hay prueba gratuita. Las suscripciones se renuevan automáticamente hasta que las canceles en los ajustes de tu cuenta de App Store o Google Play, y los reembolsos se rigen por las normas de Apple o Google. Los paquetes de créditos son compras únicas. Una vista previa estándar usa 1 crédito y una vista previa HD usa 3. Si una vista previa falla, sus créditos se devuelven automáticamente. Los créditos no tienen valor en efectivo y no se pueden transferir. Puedes restaurar tus compras desde la pantalla de suscripción o desde Ajustes."
+      },
+      {
+        "heading": "Tu contenido",
+        "body": "Conservas la propiedad de tus fotos y vistas previas. Nos das un permiso limitado para procesar lo que subes únicamente con el fin de prestar el servicio que solicitaste."
+      },
+      {
+        "heading": "Disponibilidad y responsabilidad",
+        "body": "Kök se ofrece «tal cual» y según disponibilidad. En la medida en que la ley lo permita, no somos responsables de daños indirectos o consecuentes, y nada de lo aquí dispuesto limita los derechos irrenunciables que tengas conforme a la legislación de consumo."
+      },
+      {
+        "heading": "Fin del uso",
+        "body": "Puedes dejar de usar Kök y eliminar tu cuenta en cualquier momento desde Ajustes. Podemos modificar estas condiciones y actualizaremos la fecha cuando lo hagamos."
+      },
+      {
+        "heading": "Contacto",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Cómo funcionan las vistas previas de IA",
+    "sections": [
+      {
+        "heading": "Qué es una vista previa",
+        "body": "Una vista previa es una ilustración de IA de cómo podría verse un estilo elegido en tu foto. No es una predicción de tu resultado, y una etiqueta que lo indica permanece visible en cada vista previa."
+      },
+      {
+        "heading": "Qué se envía",
+        "body": "Solo la foto que eliges para esa vista previa, además del estilo y la calidad que seleccionaste. Las fotos de tu recorrido nunca se suben. Antes de la primera subida, Kök te pide tu conformidad."
+      },
+      {
+        "heading": "Quién la procesa",
+        "body": "fal.ai ejecuta modelos de imagen de OpenAI en nuestro nombre. Los usamos solo para crear tu vista previa y no usamos tus fotos para entrenar modelos de IA. La foto subida y la imagen de vista previa se eliminan de nuestros servidores en un plazo de 30 días."
+      },
+      {
+        "heading": "Límites",
+        "body": "Los resultados pueden ser imperfectos o poco realistas. La vista previa gratuita de la introducción lleva una marca de agua. Kök nunca muestra cantidades de injertos, etapas ni promesas de resultados."
+      },
+      {
+        "heading": "Denuncia y eliminación",
+        "body": "Denuncia una vista previa desde su pantalla y la revisaremos en un plazo de 48 horas. Puedes eliminar una vista previa en cualquier momento, y al eliminar tu cuenta se borra todo lo que conservamos."
+      }
+    ]
+  },
+  "support": {
+    "title": "Ayuda y soporte",
+    "sections": [
+      {
+        "heading": "Contáctanos",
+        "body": "Escribe a techtactoeappstudio@gmail.com e incluye la versión de tu app (Ajustes, Acerca de). Normalmente respondemos en dos días hábiles."
+      },
+      {
+        "heading": "Una vista previa falló. ¿Perdí créditos?",
+        "body": "No. Los créditos de una vista previa fallida o cancelada se devuelven automáticamente."
+      },
+      {
+        "heading": "¿Cómo cancelo mi suscripción?",
+        "body": "En iPhone: Ajustes, tu nombre, Suscripciones, Kök. En Android: Google Play, Pagos y suscripciones, Suscripciones. También puedes abrir Ajustes, Gestionar suscripción en Kök."
+      },
+      {
+        "heading": "¿Cómo restauro mis compras?",
+        "body": "Abre la pantalla de suscripción o Ajustes y toca Restaurar."
+      },
+      {
+        "heading": "¿Cómo elimino mis datos?",
+        "body": "Ajustes, Datos y privacidad, Eliminar todos mis datos borra tu recorrido y tus vistas previas en este dispositivo. Ajustes, Cuenta, Eliminar cuenta elimina tu cuenta y todo lo que conservamos. También puedes escribirnos para solicitar la eliminación."
+      },
+      {
+        "heading": "¿Esto es asesoramiento médico?",
+        "body": "No. Kök es una herramienta educativa y de seguimiento. Ante cualquier cosa que te preocupe, contacta con tu clínica o con un médico."
+      }
+    ]
+  }
+}

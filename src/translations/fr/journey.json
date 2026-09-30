@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "Bonjour",
+    "afternoon": "Bon après-midi",
+    "evening": "Bonsoir",
+    "night": "Bonsoir, oiseau de nuit"
+  },
+  "today": {
+    "subtitleUnset": "Votre parcours commence par une date.",
+    "subtitleUpcoming": "Opération le {{date}}",
+    "editDate": "Modifier votre date et les détails de votre parcours",
+    "bandTitle": "Votre semaine sur le calendrier habituel"
+  },
+  "hero": {
+    "day": "Jour",
+    "dayWeek": "Jour {{day}} · Semaine {{week}}",
+    "monthOf": "Mois {{month}} sur environ {{total}}",
+    "complete": "Au-delà de la fenêtre habituelle de {{months}} mois",
+    "untilOperation_one": "{{count}} jour avant votre opération",
+    "untilOperation_other": "{{count}} jours avant votre opération",
+    "daysToGo_one": "jour restant",
+    "daysToGo_other": "jours restants",
+    "session": "Séance",
+    "ofTotal": "sur {{total}}",
+    "prpSession": "Séance {{current}} sur {{total}}",
+    "prpDone": "Les {{total}} séances sont notées"
+  },
+  "phase": {
+    "rightNow": "En ce moment",
+    "expected": "Attendue",
+    "normalLabel": "Habituel en ce moment",
+    "clinicNote": "Les résultats varient d'une personne à l'autre — suivez les conseils de votre propre clinique.",
+    "nextIn_one": "{{phase}} commence généralement dans {{count}} jour",
+    "nextIn_other": "{{phase}} commence généralement dans {{count}} jours",
+    "last": "C'est la dernière phase du calendrier habituel.",
+    "openGuide": "Ouvre le guide de cette phase"
+  },
+  "band": {
+    "a11y": "Graphique de la plage habituelle sur le calendrier de repousse. Vous êtes dans la phase : {{phase}}. Les résultats varient d'une personne à l'autre.",
+    "a11yNone": "Graphique de la plage habituelle sur le calendrier de repousse. Les résultats varient d'une personne à l'autre.",
+    "a11yLocked": "Graphique de la plage habituelle, disponible avec Pro.",
+    "lockChip": "Voir où vous en êtes · Pro",
+    "lockedHint": "Ouvre les offres Pro",
+    "start": "Opération",
+    "end": "Maturité",
+    "disclaimer": "Plage habituelle — les résultats varient d'une personne à l'autre",
+    "seeTimeline": "Calendrier"
+  },
+  "care": {
+    "items": {
+      "wash": "Lavage doux, comme votre clinique vous l'a montré",
+      "sleep": "Dormir la tête surélevée",
+      "hands": "Ne touchez pas aux greffons — pas de grattage",
+      "sun": "Gardez la zone à l'abri du soleil direct"
+    }
+  },
+  "task": {
+    "eyebrow": "Prochaine étape",
+    "photoCta": "Prendre une photo",
+    "baseline": {
+      "title": "Prenez une photo « avant »",
+      "body": "Une photo avant l'opération rend chaque comparaison ultérieure plus claire."
+    },
+    "care": {
+      "title": "Liste des soins du jour",
+      "doneTitle": "Les soins du jour sont cochés",
+      "body": "De nombreuses cliniques conseillent ces gestes durant les deux premières semaines. Les consignes de votre propre clinique passent avant tout.",
+      "progress": "{{done}} sur {{total}} faits"
+    },
+    "photo": {
+      "firstTitle": "Prenez votre première photo de suivi",
+      "weeklyTitle": "La photo de la semaine",
+      "monthlyTitle": "La photo du mois",
+      "weeklyBody": "Chaque semaine durant les trois premiers mois — même angle, même lumière.",
+      "monthlyBody": "Chaque mois à partir du mois 4 — même angle, même lumière."
+    },
+    "shed": {
+      "title": "Notez la chute du jour",
+      "body": "Une chute durant les semaines 2–8 est couramment observée. Un comptage rapide vous aide à voir l'évolution dans le temps.",
+      "cta": "Noter la chute"
+    },
+    "prp": {
+      "title": "La séance {{current}} sur {{total}} est planifiée",
+      "bodyToday": "Aujourd'hui est le jour prévu. Une photo avant la séance permet de garder votre série comparable.",
+      "bodyLate": "Prévue le {{date}}. Marquez-la comme faite une fois qu'elle a eu lieu.",
+      "markDone": "Marquer comme faite"
+    },
+    "caughtUp": {
+      "title": "Tout est à jour",
+      "body": "Rien à faire aujourd'hui.",
+      "nextPhoto_one": "Prochaine photo dans {{count}} jour.",
+      "nextPhoto_other": "Prochaine photo dans {{count}} jours.",
+      "nextSession_one": "Prochaine séance dans {{count}} jour.",
+      "nextSession_other": "Prochaine séance dans {{count}} jours."
+    }
+  },
+  "setDate": {
+    "title": "Indiquez la date de votre opération",
+    "body": "Kök utilise cette date pour afficher votre jour, votre semaine et votre phase, et pour planifier les rappels de photos.",
+    "prpTitle": "Indiquez la date de votre première séance",
+    "prpBody": "Kök planifie vos séances à partir de cette date et vous rappelle la veille de chacune.",
+    "cta": "Définir la date",
+    "privacy": "Reste sur votre téléphone."
+  },
+  "pre": {
+    "title": "Avant votre opération",
+    "body": "Beaucoup de personnes trouvent ces conseils utiles dans les jours qui précèdent. Les consignes de votre clinique passent avant tout.",
+    "tip1": "Prenez des photos « avant » de face, du dessus et de profil, avec une bonne lumière.",
+    "tip2": "Demandez à votre clinique ses consignes de soins postopératoires écrites.",
+    "tip3": "Prévoyez quelques jours calmes après l'opération.",
+    "tip4": "Ayez un coussin de voyage à portée de main pour dormir la tête surélevée.",
+    "clinicNote": "Des questions sur des médicaments ou sur votre santé ? Demandez à votre clinique ou à un médecin."
+  },
+  "previewCard": {
+    "title": "Prévisualiser une coiffure",
+    "body": "Un aperçu par IA pour explorer des idées — pas une prédiction de votre résultat."
+  },
+  "shedPeek": {
+    "title": "Chute récente",
+    "hint": "Ouvre le journal de chute",
+    "note": "Une chute durant les semaines 2–8 est couramment observée."
+  },
+  "tabs": {
+    "timeline": "Calendrier",
+    "photos": "Photos",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "Le calendrier habituel",
+    "phasesTitle": "Phases"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Jours {{from}}–{{to}}",
+    "weeks": "Semaines {{from}}–{{to}}",
+    "current": "Phase actuelle",
+    "past": "Derrière vous",
+    "upcoming": "À venir",
+    "youAreHere": "Vous êtes ici"
+  },
+  "maturation": {
+    "title": "Quand le résultat est-il évalué ?",
+    "note": "Les cheveux continuent généralement de mûrir pendant environ {{months}} mois après l'opération.",
+    "evaluate12": "Les cliniques évaluent généralement le résultat vers 12 mois.",
+    "evaluate18": "Les cliniques regardent généralement le résultat vers 12 mois, et le vertex ou la raie peuvent continuer à mûrir jusqu'à 18 mois.",
+    "clinicNote": "Les résultats varient d'une personne à l'autre — votre clinique fixe vos propres contrôles."
+  },
+  "photos": {
+    "add": "Ajouter",
+    "count_one": "{{count}} photo",
+    "count_other": "{{count}} photos",
+    "freeCounter_one": "{{count}} sur {{limit}} photos gratuites",
+    "freeCounter_other": "{{count}} sur {{limit}} photos gratuites",
+    "limitReached": "{{limit}} photos gratuites utilisées — Pro permet un nombre illimité de photos",
+    "allAngles": "Tous",
+    "before": "Avant l'opération",
+    "week": "Semaine {{week}} · {{date}}",
+    "all": "Photos",
+    "compare": "Comparer",
+    "compareHint": "Choisissez deux photos pour les comparer.",
+    "selectHint": "Sélectionnez deux photos.",
+    "selected_one": "{{count}} sur {{max}} sélectionnée",
+    "selected_other": "{{count}} sur {{max}} sélectionnées",
+    "compareCta": "Comparer",
+    "groupCount_one": "{{count}} photo",
+    "groupCount_other": "{{count}} photos",
+    "thumbLabel": "Photo ({{angle}}), {{group}}",
+    "missing": "Fichier manquant",
+    "emptyTitle": "Aucune photo pour l'instant",
+    "emptyBody": "Prenez une photo par angle. La prochaine fois, un léger fantôme de celle-ci vous aidera à retrouver la même vue.",
+    "emptyCta": "Prendre la première photo",
+    "emptyFilter": "Aucune photo sous cet angle pour l'instant."
+  },
+  "angles": {
+    "front": "Face",
+    "left": "Gauche",
+    "right": "Droite",
+    "top": "Dessus",
+    "crown": "Vertex"
+  },
+  "plan": {
+    "intro": "Des repères photo aux mois où les cliniques regardent couramment. Même angle, même lumière.",
+    "checkpoint": "Mois {{month}}",
+    "status": {
+      "done": "Photo prise",
+      "due": "À faire maintenant",
+      "upcoming": "À venir",
+      "missed": "Pas de photo"
+    },
+    "takePhoto": "Prendre une photo",
+    "note": "Un repère est validé par toute photo prise d'une semaine avant à deux semaines après."
+  },
+  "prp": {
+    "timelineTitle": "Votre cure de PRP / mésothérapie",
+    "timelineBody": "Les cures sont couramment planifiées en quelques séances espacées de quelques semaines, puis un entretien. Votre clinique fixe votre propre plan.",
+    "openPlan": "Ouvrir le plan",
+    "emptyTitle": "Planifiez vos séances",
+    "emptyBody": "Commencez avec un plan courant : {{sessions}} séances, espacées de {{weeks}} semaines. Vous pouvez modifier chaque date.",
+    "createPlan": "Créer le plan",
+    "intro": "Cochez une séance une fois qu'elle a eu lieu. Une photo avant chacune permet de garder votre série comparable.",
+    "session": "Séance {{number}}",
+    "done": "Faite",
+    "due": "À faire",
+    "planned": "Planifiée",
+    "markDoneLabel": "Séance {{number}} du {{date}} faite",
+    "changeDate": "Changer la date",
+    "photoBefore": "Photo avant",
+    "remove": "Retirer",
+    "removeTitle": "Retirer cette séance ?",
+    "removeBody": "Son rappel est également supprimé.",
+    "addSession": "Ajouter une séance",
+    "maintenanceTitle": "Entretien",
+    "maintenanceBody": "De nombreuses cliniques suggèrent une séance d'entretien environ {{months}} mois plus tard — vers le {{date}}.",
+    "clinicNote": "Suivez le plan de votre propre clinique."
+  },
+  "setup": {
+    "title": "Votre parcours",
+    "kindTitle": "Que suivez-vous ?",
+    "kind": {
+      "transplant": {
+        "title": "Greffe de cheveux",
+        "body": "Ligne frontale, vertex, raie, sourcils ou barbe"
+      },
+      "prp": {
+        "title": "Cure de PRP / mésothérapie",
+        "body": "Une série de séances espacées de quelques semaines"
+      }
+    },
+    "goalTitle": "Quelle zone ?",
+    "goals": {
+      "hairline": "Ligne frontale",
+      "crown": "Vertex",
+      "part": "Raie",
+      "brows": "Sourcils",
+      "beard": "Barbe"
+    },
+    "dateTitleTransplant": "Date de l'opération",
+    "dateTitlePrp": "Date de la première séance",
+    "day": "Jour",
+    "month": "Mois",
+    "year": "Année",
+    "relToday": "C'est aujourd'hui — jour 0",
+    "relPast": "Jour {{day}} · semaine {{week}}",
+    "relFuture_one": "Dans {{count}} jour",
+    "relFuture_other": "Dans {{count}} jours",
+    "clinicTitle": "Clinique (facultatif)",
+    "clinicPlaceholder": "Nom de la clinique",
+    "clinicHint": "Uniquement sur ce téléphone. Jamais envoyé.",
+    "clinicTooLong": "Veuillez utiliser moins de {{max}} caractères.",
+    "clinicBlocked": "Veuillez utiliser un autre nom.",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "relabelTitle": "Changer la date ?",
+    "relabelBody": "Le jour et la semaine de chaque photo seront recalculés à partir de la nouvelle date.",
+    "relabelConfirm": "Changer la date"
+  }
+}

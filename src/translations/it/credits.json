@@ -1,0 +1,23 @@
+{
+  "title": "Ottieni crediti",
+  "subtitle": "I crediti non scadono mai. Un'anteprima standard ne usa {{standard}}, un'anteprima HD ne usa {{high}}.",
+  "balance": "Il tuo saldo",
+  "equivalent": "≈ {{standard}} anteprime standard o {{high}} HD",
+  "packs": {
+    "credits_10": "Starter",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Popolare",
+  "success": "{{count}} crediti aggiunti.",
+  "pending": "Il tuo acquisto è in attesa di approvazione.",
+  "failedBody": "I pacchetti di crediti non si sono caricati. Controlla la connessione e riprova.",
+  "emptyBody": "I pacchetti di crediti non sono disponibili al momento. Riprova più tardi.",
+  "freeHigh_one": "{{count}} anteprima HD gratuita in attesa",
+  "freeHigh_other": "{{count}} anteprime HD gratuite in attesa",
+  "examplesTitle": "Quanto durano i crediti",
+  "exampleStandard": "Anteprima standard",
+  "exampleHigh": "Anteprima HD, senza filigrana",
+  "proHint": "I membri Pro ricevono crediti ogni settimana o ogni mese.",
+  "close": "Chiudi lo store dei crediti"
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Confronta",
+  "close": "Chiudi",
+  "mode": {
+    "wipe": "Cursore",
+    "side": "Affiancate"
+  },
+  "label": {
+    "before": "Prima",
+    "week": "Settimana {{n}}",
+    "none": "Foto"
+  },
+  "picker": {
+    "before": "Foto precedente",
+    "after": "Foto successiva",
+    "item": "{{angle}}, {{label}}, {{date}}"
+  },
+  "wipeA11y": "Cursore per confrontare due foto. {{before}} a sinistra, {{after}} a destra. Regola per spostare il divisore.",
+  "sideA11y": "{{label}}, foto {{angle}}",
+  "mismatch": "Queste due foto mostrano angolazioni diverse. Il confronto funziona meglio con la stessa angolazione.",
+  "empty": {
+    "title": "Due foto da confrontare",
+    "body": "Scatta almeno due foto della stessa angolazione, poi confrontale qui.",
+    "action": "Scatta una foto"
+  },
+  "locked": {
+    "title": "Il confronto fa parte di Pro",
+    "body": "Guarda due foto affiancate, con la settimana di ciascuna. La tua prima foto resta sempre visibile.",
+    "cta": "Sblocca il confronto"
+  },
+  "share": {
+    "action": "Condividi",
+    "preparing": "Preparazione…",
+    "error": "Non è stato possibile preparare il confronto. Riprova.",
+    "unavailable": "La condivisione non è disponibile su questo dispositivo.",
+    "dialog": "Condividi il tuo confronto"
+  },
+  "report": {
+    "title": "Confronto fotografico",
+    "heading": "{{before}} e {{after}}",
+    "disclaimer": "Registro personale dei progressi — non è un documento medico"
+  },
+  "mark": "Kök"
+}

@@ -1,0 +1,48 @@
+{
+  "card": {
+    "title": "Ein Willkommensgeschenk wartet",
+    "body": "Ein Gratis-Dreh: Credits, eine kostenlose HD-Vorschau oder ein Pro-Rabatt.",
+    "cta": "Drehen",
+    "wonTitle": "Dein Geschenk: {{prize}}",
+    "wonBody": "Gültig bis {{date}}",
+    "use": "Nutzen"
+  },
+  "title": "Dein Willkommensgeschenk",
+  "subtitle": "Ein Gratis-Dreh. Jeder Preis ist echt.",
+  "spin": "Rad drehen",
+  "spinning": "Dreht sich…",
+  "youWon": "Du hast gewonnen",
+  "expires": "Gültig bis {{date}}",
+  "redeem": "Geschenk einlösen",
+  "added": "Zu deinem Konto hinzugefügt",
+  "done": "Fertig",
+  "close": "Schließen",
+  "alreadyClaimed": "Du hast dein Willkommensgeschenk schon gedreht.",
+  "fairness": "Die Preise werden auf unserem Server ausgelost. Kein Kauf nötig.",
+  "notifyNote": "Wenn Mitteilungen an sind, erinnern wir dich einmal vor Ablauf.",
+  "prizes": {
+    "credits10": {
+      "title": "10 Credits",
+      "short": "+10",
+      "body": "Zu deinem Guthaben für Vorschauen hinzugefügt."
+    },
+    "credits5": {
+      "title": "5 Credits",
+      "short": "+5",
+      "body": "Zu deinem Guthaben für Vorschauen hinzugefügt."
+    },
+    "freeHigh": {
+      "title": "Eine kostenlose HD-Vorschau",
+      "short": "HD",
+      "body": "Deine nächste HD-Vorschau kostet keine Credits."
+    },
+    "discount40": {
+      "title": "40 % Rabatt auf Pro",
+      "short": "−40%",
+      "body": "Das erste Jahr des Jahresabos zu einem niedrigeren Preis."
+    }
+  },
+  "expired": "Dieses Geschenk ist am {{date}} abgelaufen.",
+  "redeemed": "Du hast dieses Geschenk bereits genutzt.",
+  "tokenNote": "Wähle HD, wenn du deine nächste Vorschau erstellst."
+}

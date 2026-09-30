@@ -1,0 +1,146 @@
+{
+  "updated": "Laatst bijgewerkt: {{date}}",
+  "openWeb": "Webversie openen",
+  "emailSupport": "Mail de support",
+  "publisher": "Kök wordt uitgegeven door Techtactoe App Studio.",
+  "privacy": {
+    "title": "Privacybeleid",
+    "sections": [
+      {
+        "heading": "De korte versie",
+        "body": "Je trajectfoto's blijven op je telefoon. Kök uploadt alleen een foto wanneer je om een AI-preview vraagt, en zowel die foto als de resulterende previewafbeelding worden binnen 30 dagen van onze servers verwijderd. Kök toont geen advertenties en verkoopt je gegevens niet. Kök is geen medisch advies."
+      },
+      {
+        "heading": "Wat op je apparaat blijft",
+        "body": "Je operatiedatum, voortgangsfoto's, uitvallogboek en klinieknaam worden alleen op je apparaat opgeslagen. Kök uploadt nooit trajectfoto's. Ze worden meegenomen in de eigen back-up van je telefoon (iCloud of Android Auto Backup) als je die hebt ingeschakeld."
+      },
+      {
+        "heading": "Wat we verzamelen",
+        "body": "Een anonieme account-ID (Firebase Authentication), zodat je geen naam of e-mailadres hoeft op te geven. Je creditsaldo en aankoopstatus. Je taal- en meldingskeuzes. Gebruiksgebeurtenissen, crashrapporten en prestatiegegevens (Firebase Analytics, Crashlytics en Performance Monitoring). Een pushtoken, alleen als je meldingen toestaat. Als je een preview maakt: de ene foto die je kiest, de stijl en kwaliteit die je selecteert en de resulterende preview. Als je meedoet aan de optionele groep van dezelfde week: je operatiedatum, doel en soort traject, en verder niets. We verzamelen je naam, contacten of exacte locatie niet. Kök volgt je niet in andere apps of op andere websites en gebruikt je advertentie-ID niet."
+      },
+      {
+        "heading": "AI-previews",
+        "body": "Wanneer je een preview maakt, wordt de foto die je hebt gekozen naar onze servers geüpload en verwerkt door fal.ai, dat namens ons OpenAI-beeldmodellen draait. Kök vraagt vóór de eerste upload om je toestemming, en die melding noemt deze partijen. De foto wordt alleen gebruikt om die preview te maken. We gebruiken je foto's niet om AI-modellen te trainen. De geüploade foto en de previewafbeelding worden binnen 30 dagen van onze servers verwijderd, dus bewaar een preview in je fotobibliotheek als je hem wilt houden. Elke preview is een AI-illustratie en geen voorspelling van je resultaat."
+      },
+      {
+        "heading": "Dienstverleners",
+        "body": "We delen gegevens alleen met bedrijven die ze voor ons verwerken: Google Firebase (account, database, bestandsopslag, functies, analyse, crashrapportage, prestaties, externe configuratie, app-integriteitscontroles en pushmeldingen); fal.ai en de OpenAI-beeldmodellen die het draait (AI-previews); RevenueCat (abonnementen en aankopen); Apple en Google (betalingen en app-distributie). Kök bevat geen advertenties en deelt geen gegevens met adverteerders."
+      },
+      {
+        "heading": "Hoe lang we gegevens bewaren",
+        "body": "Trajectgegevens: op je apparaat totdat je ze verwijdert. Geüploade previewfoto's en previewafbeeldingen: maximaal 30 dagen op onze servers. Gebruiks- en crashgegevens: tot 14 maanden. Aankoopgegevens: zolang belasting- en boekhoudwetgeving dat vereist. Meldingen die je over een preview stuurt: zolang nodig is om ze te beoordelen en erop te reageren."
+      },
+      {
+        "heading": "Je keuzes en verwijdering",
+        "body": "Ga in Instellingen naar Gegevens en privacy: Al mijn gegevens verwijderen wist je trajectfoto's, uitvallogboek en previews van dit apparaat. Ga in Instellingen naar Account: Account verwijderen verwijdert je account, credits, previews en eventuele geüploade foto's direct van onze servers en wist je traject op het apparaat. Je kunt daar ook meldingen uitzetten. Er wordt niets geüpload tenzij je een preview maakt. Het verwijderen van je account zegt een abonnement niet op: zeg het op in de accountinstellingen van je App Store of Google Play. Afhankelijk van waar je woont (bijvoorbeeld onder de AVG/GDPR, de Turkse KVKK of de CCPA van Californië) heb je mogelijk rechten om je gegevens in te zien, te corrigeren, te verwijderen of te exporteren en om toestemming in te trekken. Stuur voor een verzoek een e-mail naar techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Kinderen",
+        "body": "Kök is bedoeld voor volwassenen. We verzamelen niet bewust gegevens van personen onder de 18."
+      },
+      {
+        "heading": "Geen medisch advies",
+        "body": "Kök is een hulpmiddel voor voorlichting en bijhouden. Het stelt geen diagnose, behandelt niets en voorspelt niets, en de tijdlijn toont alleen gebruikelijke bereiken. Neem bij elke zorg contact op met je kliniek of een arts."
+      },
+      {
+        "heading": "Wijzigingen en contact",
+        "body": "Als dit beleid verandert, verandert de datum hierboven mee. Vragen of verzoeken: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaarden",
+    "sections": [
+      {
+        "heading": "Kök gebruiken",
+        "body": "Kök helpt je een haartransplantatie, PRP of een vergelijkbaar haarherstelltraject te volgen met je eigen foto's en een gebruikelijke tijdlijn, en laat je AI-previews maken. Je moet volwassen zijn en deze overeenkomst kunnen aangaan. Door Kök te gebruiken ga je akkoord met deze voorwaarden."
+      },
+      {
+        "heading": "Geen medisch advies",
+        "body": "Kök is geen medisch hulpmiddel en geeft geen medisch advies, diagnose of behandeling. Tijdlijnen en gidsen beschrijven wat gebruikelijk is en zijn geen belofte over je resultaat. Merk je koorts, zich uitbreidende roodheid, pus, hevige pijn of hevig bloeden, neem dan contact op met je kliniek of een arts."
+      },
+      {
+        "heading": "AI-previews",
+        "body": "Een preview is een AI-illustratie die van je foto is gemaakt. Het is geen voorspelling, belofte of plan voor je resultaat, en het toont geen aantallen grafts. De gratis preview tijdens de onboarding heeft een watermerk. Previews worden 30 dagen bewaard, dus bewaar er een in je fotobibliotheek om hem te houden. Gebruik previews verantwoord en presenteer er geen als echte foto."
+      },
+      {
+        "heading": "Foto's en inhoud",
+        "body": "Gebruik alleen foto's van jezelf, of van iemand die duidelijk toestemming heeft gegeven. Upload geen minderjarigen, publieke figuren of iets seksueels, haatdragends, intimiderends, misleidends of illegaals. We mogen inhoud blokkeren en de toegang opschorten bij overtreding van deze regels. Je kunt elke preview melden vanaf het bijbehorende scherm."
+      },
+      {
+        "heading": "Abonnementen en credits",
+        "body": "Kök Pro wordt aangeboden als wekelijks, maandelijks of jaarlijks abonnement tegen de prijs die je store toont. Er is geen gratis proefperiode. Abonnementen worden automatisch verlengd totdat je opzegt in de accountinstellingen van je App Store of Google Play, en terugbetalingen volgen de regels van Apple of Google. Creditpakketten zijn eenmalige aankopen. Een standaardpreview kost 1 credit en een HD-preview kost er 3. Als een preview mislukt, worden de credits automatisch teruggegeven. Credits hebben geen geldwaarde en zijn niet overdraagbaar. Je kunt aankopen herstellen via de paywall of Instellingen."
+      },
+      {
+        "heading": "Jouw inhoud",
+        "body": "Je blijft eigenaar van je foto's en previews. Je geeft ons een beperkte toestemming om wat je uploadt alleen te verwerken om de dienst te leveren waar je om vroeg."
+      },
+      {
+        "heading": "Beschikbaarheid en aansprakelijkheid",
+        "body": "Kök wordt geleverd zoals het is en zoals het beschikbaar is. Voor zover de wet dat toestaat zijn wij niet aansprakelijk voor indirecte schade of gevolgschade, en niets hierin beperkt rechten die je op grond van het consumentenrecht hebt en waarvan geen afstand kan worden gedaan."
+      },
+      {
+        "heading": "Je gebruik beëindigen",
+        "body": "Je kunt op elk moment stoppen met het gebruik van Kök en je account verwijderen in Instellingen. We mogen deze voorwaarden wijzigen en passen de datum aan wanneer we dat doen."
+      },
+      {
+        "heading": "Contact",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Zo werken AI-previews",
+    "sections": [
+      {
+        "heading": "Wat een preview is",
+        "body": "Een preview is een AI-illustratie van hoe een gekozen stijl er op je foto uit zou kunnen zien. Het is geen voorspelling van je resultaat, en een label dat dat zegt blijft zichtbaar op elke preview."
+      },
+      {
+        "heading": "Wat wordt verstuurd",
+        "body": "Alleen de ene foto die je voor die preview kiest, plus de stijl en kwaliteit die je hebt geselecteerd. Je trajectfoto's worden nooit geüpload. Vóór de eerste upload vraagt Kök om je toestemming."
+      },
+      {
+        "heading": "Wie het verwerkt",
+        "body": "fal.ai draait namens ons OpenAI-beeldmodellen. We gebruiken ze alleen om je preview te maken en gebruiken je foto's niet om AI-modellen te trainen. De geüploade foto en de previewafbeelding worden binnen 30 dagen van onze servers verwijderd."
+      },
+      {
+        "heading": "Beperkingen",
+        "body": "Resultaten kunnen onvolmaakt of onrealistisch zijn. De gratis preview tijdens de onboarding heeft een watermerk. Kök toont nooit aantallen grafts, stadia of beloftes over uitkomsten."
+      },
+      {
+        "heading": "Melden en verwijderen",
+        "body": "Meld een preview vanaf het bijbehorende scherm en wij beoordelen hem binnen 48 uur. Je kunt een preview op elk moment verwijderen, en als je je account verwijdert, verwijderen we alles wat we van je hebben."
+      }
+    ]
+  },
+  "support": {
+    "title": "Hulp en support",
+    "sections": [
+      {
+        "heading": "Neem contact met ons op",
+        "body": "Stuur een e-mail naar techtactoeappstudio@gmail.com en vermeld je app-versie (Instellingen, Over). We antwoorden gewoonlijk binnen twee werkdagen."
+      },
+      {
+        "heading": "Een preview is mislukt. Ben ik credits kwijt?",
+        "body": "Nee. Credits voor een mislukte of geannuleerde preview worden automatisch teruggegeven."
+      },
+      {
+        "heading": "Hoe zeg ik mijn abonnement op?",
+        "body": "Op iPhone: Instellingen, je naam, Abonnementen, Kök. Op Android: Google Play, Betalingen en abonnementen, Abonnementen. Je kunt ook in Kök Instellingen openen en Abonnement beheren kiezen."
+      },
+      {
+        "heading": "Hoe herstel ik aankopen?",
+        "body": "Open de paywall of Instellingen en tik op Herstellen."
+      },
+      {
+        "heading": "Hoe verwijder ik mijn gegevens?",
+        "body": "Instellingen, Gegevens en privacy, Al mijn gegevens verwijderen wist je traject en previews op dit apparaat. Instellingen, Account, Account verwijderen verwijdert je account en alles wat we hebben. Je kunt ons ook mailen om verwijdering aan te vragen."
+      },
+      {
+        "heading": "Is dit medisch advies?",
+        "body": "Nee. Kök is een hulpmiddel voor voorlichting en bijhouden. Neem bij alles wat je zorgen baart contact op met je kliniek of een arts."
+      }
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "updated": "Ultimo aggiornamento: {{date}}",
+  "openWeb": "Apri la versione web",
+  "emailSupport": "Scrivi all'assistenza",
+  "publisher": "Kök è pubblicata da Techtactoe App Studio.",
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "sections": [
+      {
+        "heading": "In breve",
+        "body": "Le foto del tuo percorso restano sul tuo telefono. Kök carica una foto solo quando richiedi un'anteprima IA, e sia quella foto sia l'immagine dell'anteprima risultante vengono eliminate dai nostri server entro 30 giorni. Kök non mostra pubblicità e non vende i tuoi dati. Kök non è un parere medico."
+      },
+      {
+        "heading": "Cosa resta sul tuo dispositivo",
+        "body": "La data dell'intervento, le foto dei progressi, il diario della caduta e il nome della clinica sono memorizzati solo sul tuo dispositivo. Kök non carica mai le foto del percorso. Sono incluse nel backup del tuo telefono (iCloud o Android Auto Backup) se lo hai attivato."
+      },
+      {
+        "heading": "Cosa raccogliamo",
+        "body": "Un ID account anonimo (Firebase Authentication), così non devi fornire un nome o un'e-mail. Il saldo dei tuoi crediti e lo stato dei tuoi acquisti. La tua lingua e le tue scelte sulle notifiche. Eventi di utilizzo, report di crash e dati sulle prestazioni (Firebase Analytics, Crashlytics e Performance Monitoring). Un token push, solo se consenti le notifiche. Se crei un'anteprima: l'unica foto che scegli, lo stile e la qualità che selezioni e l'anteprima risultante. Se partecipi al gruppo facoltativo della stessa settimana: la data dell'intervento, l'obiettivo e il tipo di percorso, e nient'altro. Non raccogliamo il tuo nome, i tuoi contatti né la tua posizione precisa. Kök non ti traccia su altre app o siti web e non usa il tuo identificatore pubblicitario."
+      },
+      {
+        "heading": "Anteprime IA",
+        "body": "Quando crei un'anteprima, la foto che hai scelto viene caricata sui nostri server ed elaborata da fal.ai, che esegue modelli di immagini di OpenAI per nostro conto. Kök chiede il tuo consenso prima del primo caricamento, e quell'informativa nomina questi fornitori. La foto è usata solo per produrre quell'anteprima. Non usiamo le tue foto per addestrare modelli di IA. La foto caricata e l'immagine dell'anteprima vengono eliminate dai nostri server entro 30 giorni, quindi salva un'anteprima nella libreria foto se vuoi conservarla. Ogni anteprima è un'illustrazione IA, non una previsione del tuo risultato."
+      },
+      {
+        "heading": "Fornitori di servizi",
+        "body": "Condividiamo i dati solo con le società che li trattano per nostro conto: Google Firebase (account, database, archiviazione dei file, funzioni, analisi, segnalazione dei crash, prestazioni, configurazione remota, controlli di integrità dell'app e notifiche push); fal.ai e i modelli di immagini di OpenAI che esegue (anteprime IA); RevenueCat (abbonamenti e acquisti); Apple e Google (pagamenti e distribuzione dell'app). Kök non contiene pubblicità e non condivide dati con gli inserzionisti."
+      },
+      {
+        "heading": "Per quanto tempo conserviamo i dati",
+        "body": "Dati del percorso: sul tuo dispositivo finché non li elimini. Foto delle anteprime caricate e immagini delle anteprime: al massimo 30 giorni sui nostri server. Dati di utilizzo e di crash: fino a 14 mesi. Registri degli acquisti: per il tempo richiesto dalle norme fiscali e contabili. Segnalazioni che invii su un'anteprima: per il tempo necessario a esaminarle e a intervenire."
+      },
+      {
+        "heading": "Le tue scelte e l'eliminazione",
+        "body": "In Impostazioni, Dati e privacy, Elimina tutti i miei dati rimuove da questo dispositivo le foto del percorso, il diario della caduta e le anteprime. In Impostazioni, Account, Elimina l'account rimuove subito dai nostri server il tuo account, i crediti, le anteprime e ogni foto caricata, e cancella il tuo percorso sul dispositivo. Puoi anche disattivare le notifiche da lì. Non viene caricato nulla a meno che tu non crei un'anteprima. Eliminare il tuo account non annulla un abbonamento: annullalo nelle impostazioni del tuo account App Store o Google Play. A seconda di dove vivi (ad esempio ai sensi del GDPR, della KVKK turca o del CCPA californiano) potresti avere il diritto di accedere ai tuoi dati, correggerli, eliminarli o esportarli e di revocare il consenso. Per presentare una richiesta, scrivi a techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Minori",
+        "body": "Kök è destinata agli adulti. Non raccogliamo consapevolmente informazioni da persone di età inferiore a 18 anni."
+      },
+      {
+        "heading": "Non è un parere medico",
+        "body": "Kök è uno strumento di informazione e monitoraggio. Non diagnostica, non tratta e non prevede nulla, e la sua cronologia mostra solo intervalli tipici. Per qualsiasi dubbio, contatta la tua clinica o un medico."
+      },
+      {
+        "heading": "Modifiche e contatti",
+        "body": "Se questa informativa cambia, cambia con essa anche la data indicata sopra. Domande o richieste: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Termini di utilizzo",
+    "sections": [
+      {
+        "heading": "Usare Kök",
+        "body": "Kök ti aiuta a seguire un percorso di trapianto di capelli, PRP o simile ripristino dei capelli con le tue foto e una cronologia tipica, e ti permette di creare anteprime IA. Devi essere maggiorenne e in grado di stipulare questo accordo. Usando Kök accetti questi termini."
+      },
+      {
+        "heading": "Non è un parere medico",
+        "body": "Kök non è un dispositivo medico e non fornisce pareri medici, diagnosi o trattamenti. Le cronologie e le guide descrivono ciò che è tipico e non sono una promessa sul tuo risultato. Se noti febbre, arrossamento che si estende, pus, dolore forte o sanguinamento abbondante, contatta la tua clinica o un medico."
+      },
+      {
+        "heading": "Anteprime IA",
+        "body": "Un'anteprima è un'illustrazione IA creata a partire dalla tua foto. Non è una previsione, una promessa o un piano per il tuo risultato e non mostra il numero di graft. L'anteprima gratuita dell'introduzione ha una filigrana. Le anteprime vengono conservate per 30 giorni, quindi salvane una nella libreria foto per tenerla. Usa le anteprime in modo responsabile e non presentarne una come una fotografia reale."
+      },
+      {
+        "heading": "Foto e contenuti",
+        "body": "Usa solo foto di te o di qualcuno che ha chiaramente acconsentito. Non caricare foto di minori, personaggi pubblici o qualsiasi contenuto sessuale, offensivo, molesto, ingannevole o illegale. Possiamo bloccare i contenuti e sospendere l'accesso a chi viola queste regole. Puoi segnalare qualsiasi anteprima dalla sua schermata."
+      },
+      {
+        "heading": "Abbonamenti e crediti",
+        "body": "Kök Pro è offerto come abbonamento settimanale, mensile o annuale al prezzo mostrato dal tuo store. Non c'è prova gratuita. Gli abbonamenti si rinnovano automaticamente finché non li annulli nelle impostazioni del tuo account App Store o Google Play, e i rimborsi seguono le regole di Apple o di Google. I pacchetti di crediti sono acquisti una tantum. Un'anteprima standard usa 1 credito e un'anteprima HD ne usa 3. Se un'anteprima non va a buon fine, i suoi crediti vengono restituiti automaticamente. I crediti non hanno valore in denaro e non possono essere trasferiti. Puoi ripristinare gli acquisti dal paywall o da Impostazioni."
+      },
+      {
+        "heading": "I tuoi contenuti",
+        "body": "Le tue foto e le tue anteprime restano di tua proprietà. Ci concedi un'autorizzazione limitata a trattare ciò che carichi solo per fornire il servizio che hai richiesto."
+      },
+      {
+        "heading": "Disponibilità e responsabilità",
+        "body": "Kök è fornita così com'è e come disponibile. Nella misura consentita dalla legge, non siamo responsabili per danni indiretti o consequenziali, e nulla qui limita i diritti che hai ai sensi della normativa a tutela dei consumatori e a cui non si può rinunciare."
+      },
+      {
+        "heading": "Interrompere l'utilizzo",
+        "body": "Puoi smettere di usare Kök ed eliminare il tuo account in qualsiasi momento da Impostazioni. Possiamo modificare questi termini e aggiorneremo la data quando lo faremo."
+      },
+      {
+        "heading": "Contatti",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Come funzionano le anteprime IA",
+    "sections": [
+      {
+        "heading": "Cos'è un'anteprima",
+        "body": "Un'anteprima è un'illustrazione IA di come uno stile scelto potrebbe apparire sulla tua foto. Non è una previsione del tuo risultato, e un'etichetta che lo dice resta visibile su ogni anteprima."
+      },
+      {
+        "heading": "Cosa viene inviato",
+        "body": "Solo l'unica foto che scegli per quell'anteprima, oltre allo stile e alla qualità che hai selezionato. Le foto del tuo percorso non vengono mai caricate. Prima del primo caricamento Kök chiede il tuo consenso."
+      },
+      {
+        "heading": "Chi la elabora",
+        "body": "fal.ai esegue modelli di immagini di OpenAI per nostro conto. Li usiamo solo per creare la tua anteprima e non usiamo le tue foto per addestrare modelli di IA. La foto caricata e l'immagine dell'anteprima vengono eliminate dai nostri server entro 30 giorni."
+      },
+      {
+        "heading": "Limiti",
+        "body": "I risultati possono essere imperfetti o poco realistici. L'anteprima gratuita dell'introduzione ha una filigrana. Kök non mostra mai il numero di graft, stadi o promesse sui risultati."
+      },
+      {
+        "heading": "Segnalare ed eliminare",
+        "body": "Segnala un'anteprima dalla sua schermata e la esamineremo entro 48 ore. Puoi eliminare un'anteprima in qualsiasi momento, ed eliminare il tuo account rimuove tutto ciò che conserviamo."
+      }
+    ]
+  },
+  "support": {
+    "title": "Aiuto e assistenza",
+    "sections": [
+      {
+        "heading": "Contattaci",
+        "body": "Scrivi a techtactoeappstudio@gmail.com e indica la versione della tua app (Impostazioni, Informazioni). Di solito rispondiamo entro due giorni lavorativi."
+      },
+      {
+        "heading": "Un'anteprima non è andata a buon fine. Ho perso dei crediti?",
+        "body": "No. I crediti di un'anteprima non riuscita o annullata vengono restituiti automaticamente."
+      },
+      {
+        "heading": "Come annullo il mio abbonamento?",
+        "body": "Su iPhone: Impostazioni, il tuo nome, Abbonamenti, Kök. Su Android: Google Play, Pagamenti e abbonamenti, Abbonamenti. Puoi anche aprire Impostazioni, Gestisci l'abbonamento in Kök."
+      },
+      {
+        "heading": "Come ripristino gli acquisti?",
+        "body": "Apri il paywall o Impostazioni e tocca Ripristina."
+      },
+      {
+        "heading": "Come elimino i miei dati?",
+        "body": "Impostazioni, Dati e privacy, Elimina tutti i miei dati cancella il tuo percorso e le anteprime su questo dispositivo. Impostazioni, Account, Elimina l'account elimina il tuo account e tutto ciò che conserviamo. Puoi anche scriverci per richiedere l'eliminazione."
+      },
+      {
+        "heading": "È un parere medico?",
+        "body": "No. Kök è uno strumento di informazione e monitoraggio. Per qualsiasi cosa ti preoccupi, contatta la tua clinica o un medico."
+      }
+    ]
+  }
+}

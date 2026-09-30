@@ -1,0 +1,22 @@
+{
+  "a11y": {
+    "close": "Tutup",
+    "selected": "Dipilih",
+    "notSelected": "Tidak dipilih",
+    "step": "Langkah {{current}} dari {{total}}",
+    "balance_other": "{{count}} kredit tersedia",
+    "wheel": "Roda hadiah dengan empat jenis hadiah"
+  },
+  "demoMode": "Mode demo: tanpa pembelian sungguhan dan tanpa server sungguhan",
+  "getCredits": "Dapatkan kredit",
+  "update": {
+    "title": "Pembaruan diperlukan",
+    "body": "Versi Kök ini sudah tidak didukung. Silakan perbarui untuk melanjutkan. Perjalananmu tetap ada di ponselmu.",
+    "cta": "Perbarui"
+  },
+  "notFound": {
+    "title": "Halaman ini tidak ada",
+    "body": "Tautannya mungkin sudah lama. Tidak ada yang hilang.",
+    "cta": "Ke Hari Ini"
+  }
+}

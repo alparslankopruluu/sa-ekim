@@ -1,0 +1,23 @@
+{
+  "a11y": {
+    "close": "Stäng",
+    "selected": "Vald",
+    "notSelected": "Inte vald",
+    "step": "Steg {{current}} av {{total}}",
+    "balance_one": "{{count}} kredit tillgänglig",
+    "balance_other": "{{count}} krediter tillgängliga",
+    "wheel": "Gåvohjul med fyra sorters priser"
+  },
+  "demoMode": "Demoläge: inga riktiga köp och inga riktiga servrar",
+  "getCredits": "Skaffa krediter",
+  "update": {
+    "title": "Uppdatering krävs",
+    "body": "Den här versionen av Kök stöds inte längre. Uppdatera för att fortsätta. Din resa finns kvar på din telefon.",
+    "cta": "Uppdatera"
+  },
+  "notFound": {
+    "title": "Den här sidan finns inte",
+    "body": "Länken kan vara gammal. Ingenting har gått förlorat.",
+    "cta": "Gå till Idag"
+  }
+}

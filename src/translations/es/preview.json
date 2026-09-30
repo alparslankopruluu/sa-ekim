@@ -1,0 +1,250 @@
+{
+  "title": "Nueva vista previa",
+  "subtitle": "Elige un estilo y una foto para ver un posible aspecto.",
+  "aiLabel": "Vista previa de IA — no es una predicción de tu resultado",
+  "aiLabelShort": "Vista previa de IA",
+  "aiLabelDetail": "Muestra un posible aspecto, no lo que va a ocurrir.",
+  "common": {
+    "close": "Cerrar",
+    "back": "Atrás",
+    "retry": "Reintentar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar"
+  },
+  "goals": {
+    "label": "Zona",
+    "hairline": "Línea frontal",
+    "crown": "Coronilla",
+    "part": "Raya",
+    "brows": "Cejas",
+    "beard": "Barba"
+  },
+  "angles": {
+    "front": "foto de frente",
+    "left": "foto del lado izquierdo",
+    "right": "foto del lado derecho",
+    "top": "foto de la parte superior de la cabeza",
+    "crown": "foto de la coronilla"
+  },
+  "styles": {
+    "label": "Estilo",
+    "hairline_soft": {
+      "name": "Línea frontal natural y suave",
+      "description": "Una línea frontal ligeramente suavizada que mantiene una forma natural."
+    },
+    "hairline_temples": {
+      "name": "Refinado de las entradas",
+      "description": "Un aspecto más equilibrado alrededor de las sienes."
+    },
+    "hairline_lower": {
+      "name": "Línea más baja y definida",
+      "description": "Una línea frontal algo más baja y más definida."
+    },
+    "hairline_density": {
+      "name": "Más densidad",
+      "description": "Un aspecto más denso dentro de tu línea frontal actual."
+    },
+    "crown_light": {
+      "name": "Ligera",
+      "description": "Cobertura ligera en la coronilla."
+    },
+    "crown_medium": {
+      "name": "Media",
+      "description": "Cobertura media en la coronilla."
+    },
+    "crown_full": {
+      "name": "Completa",
+      "description": "Cobertura completa en la coronilla."
+    },
+    "part_light": {
+      "name": "Ligera",
+      "description": "Algo de volumen a lo largo de la raya."
+    },
+    "part_medium": {
+      "name": "Media",
+      "description": "Volumen medio a lo largo de la raya."
+    },
+    "part_full": {
+      "name": "Completa",
+      "description": "Un aspecto pleno a lo largo de la raya."
+    },
+    "brows_natural": {
+      "name": "Natural",
+      "description": "Cejas naturales que conservan tu propia forma."
+    },
+    "brows_fuller": {
+      "name": "Más pobladas",
+      "description": "Tu propia forma, algo más poblada."
+    },
+    "brows_arched": {
+      "name": "Arqueadas",
+      "description": "Una línea de ceja suavemente arqueada y cuidada."
+    },
+    "beard_patch": {
+      "name": "Relleno de zonas",
+      "description": "Zonas ralas rellenadas."
+    },
+    "beard_full": {
+      "name": "Barba completa",
+      "description": "Una barba más poblada en la mandíbula y las mejillas."
+    },
+    "beard_moustache": {
+      "name": "Bigote",
+      "description": "Un aspecto más poblado sobre el labio."
+    }
+  },
+  "bestAngle": "Funciona mejor con una {{angle}}",
+  "density": {
+    "label": "Densidad",
+    "natural": "Natural",
+    "fuller": "Más llena",
+    "full": "Completa"
+  },
+  "quality": {
+    "label": "Calidad",
+    "standard": {
+      "title": "Estándar",
+      "description": "Un primer vistazo rápido."
+    },
+    "high": {
+      "title": "Alta",
+      "description": "Más detalle."
+    }
+  },
+  "price": {
+    "label": "Esta vista previa",
+    "free": "Gratis",
+    "freeHigh": "Vista previa HD gratis",
+    "credits_one": "{{count}} crédito",
+    "credits_other": "{{count}} créditos",
+    "freeNote": "Tu primera vista previa es gratis e incluye una marca de agua.",
+    "balance_one": "Tienes {{count}} crédito.",
+    "balance_other": "Tienes {{count}} créditos.",
+    "short_one": "Tienes {{count}} crédito y esta vista previa necesita {{cost}}.",
+    "short_other": "Tienes {{count}} créditos y esta vista previa necesita {{cost}}.",
+    "useFreeHigh": "Usar mi vista previa HD gratis",
+    "useFreeHighHint_one": "Tienes {{count}} vista previa HD gratis.",
+    "useFreeHighHint_other": "Tienes {{count}} vistas previas HD gratis."
+  },
+  "photo": {
+    "label": "Foto",
+    "empty": "Aún no hay foto",
+    "take": "Tomar una foto",
+    "library": "Elegir de la fototeca",
+    "journey": "Usar la última foto del recorrido",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Quitar foto",
+    "selected": "Foto seleccionada",
+    "sentNote": "Tu foto solo se envía cuando tocas Crear, después de que apruebes el procesamiento con IA.",
+    "libraryFailed": "No pudimos abrir tu fototeca."
+  },
+  "cta": {
+    "create": "Crear vista previa",
+    "createFree": "Crear vista previa gratis",
+    "getCredits": "Obtener créditos",
+    "continue": "Continuar",
+    "addPhoto": "Añade una foto para continuar",
+    "chooseStyle": "Elige un estilo para continuar"
+  },
+  "helper": {
+    "needsConsent": "Antes de enviar tu foto, te pedimos tu aprobación una sola vez.",
+    "needsCredits": "Necesitas más créditos para esta vista previa.",
+    "walletError": "No pudimos cargar tus créditos."
+  },
+  "rendering": {
+    "title": "Tu vista previa",
+    "status": {
+      "uploading": "Enviando tu foto",
+      "creating": "Iniciando tu vista previa",
+      "waiting": "Iniciando tu vista previa",
+      "queued": "Esperando un hueco libre",
+      "processing": "Creando tu vista previa",
+      "finalizing": "Terminando"
+    },
+    "estimate": "Normalmente menos de un minuto.",
+    "background": "Puedes salir de esta pantalla. Seguimos trabajando y te avisamos cuando esté lista.",
+    "notifyMe": "Avísame cuando esté lista",
+    "notifyOn": "Te avisaremos cuando esté lista.",
+    "keepBrowsing": "Seguir explorando",
+    "cancel": "Cancelar vista previa",
+    "cancelHint": "Si cancelas, se te devuelven los créditos.",
+    "cancelTooLate": "Ya está terminando y no se puede cancelar ahora.",
+    "failedTitle": "Esta vista previa no se completó",
+    "canceledTitle": "Vista previa cancelada",
+    "offlineTitle": "No tienes conexión",
+    "errorTitle": "No pudimos iniciar la vista previa",
+    "refunded_one": "Se te devolvió {{count}} crédito.",
+    "refunded_other": "Se te devolvieron {{count}} créditos.",
+    "nothingCharged": "No se cobró nada.",
+    "retrySafe": "Puedes reintentar con tranquilidad: no se te cobrará dos veces.",
+    "retry": "Reintentar",
+    "getCredits": "Obtener créditos",
+    "reviewConsent": "Revisar y aprobar",
+    "seePlans": "Ver planes",
+    "choosePhoto": "Elegir otra foto",
+    "backToStyles": "Volver a los estilos",
+    "close": "Cerrar",
+    "photoA11y": "Tu foto",
+    "ringA11y": "Progreso de la vista previa, {{percent}} por ciento"
+  },
+  "result": {
+    "title": "Tu vista previa",
+    "before": "Tu foto",
+    "after": "Vista previa de IA",
+    "watermark": "Kök · Vista previa de IA",
+    "wipeA11y": "Control deslizante de antes y después. Desliza hacia arriba o hacia abajo para comparar tu foto con la vista previa de IA.",
+    "demo": "Demo",
+    "save": "Guardar",
+    "share": "Compartir",
+    "report": "Denunciar",
+    "delete": "Eliminar",
+    "saved": "Guardada en tus fotos",
+    "saveDenied": "Permite el acceso a las fotos en Ajustes para guardar vistas previas.",
+    "unsupported": "Guardar y compartir no están disponibles para esta vista previa aquí.",
+    "shareTitle": "Comparte tu vista previa de IA",
+    "tryAnother": "Probar otro estilo",
+    "upgradeTitle": "¿Quieres más detalle?",
+    "upgradeBody": "Una vista previa HD tiene más detalle y no lleva marca de agua.",
+    "notFound": "No pudimos encontrar esta vista previa. Las vistas previas se eliminan tras 30 días.",
+    "toPreviews": "Volver a las vistas previas",
+    "beforeGone": "Tu foto original solo se conserva 30 días, así que la comparación ya no está disponible.",
+    "loadFailed": "No pudimos cargar esta vista previa.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Crear una vista previa HD ({{count}} crédito)",
+    "upgradeTry_other": "Crear una vista previa HD ({{count}} créditos)",
+    "upgradeTryFree": "Crear una vista previa HD gratis",
+    "availableUntil": "Disponible hasta el {{date}}",
+    "saveNudge": "Las vistas previas se eliminan tras 30 días. Guárdala en tus fotos para conservar una copia.",
+    "saveNudgeSoon": "Esta vista previa se eliminará pronto. Guárdala en tus fotos para conservar una copia.",
+    "expiredTitle": "Esta vista previa se eliminó tras 30 días",
+    "expiredBody": "Las vistas previas y las fotos de las que proceden se eliminan tras 30 días. Puedes crear una nueva cuando quieras."
+  },
+  "delete": {
+    "title": "¿Eliminar esta vista previa?",
+    "body": "La imagen de la vista previa se elimina definitivamente. Esta acción no se puede deshacer.",
+    "done": "Vista previa eliminada"
+  },
+  "tab": {
+    "title": "Vistas previas",
+    "new": "Nueva vista previa",
+    "honest": "Las vistas previas son imágenes creadas por IA de un posible aspecto.",
+    "emptyTitle": "Aún no hay vistas previas",
+    "emptyBody": "Una vista previa es una imagen creada por IA de un posible aspecto, no de lo que va a ocurrir. Prueba un estilo en tu propia foto y compara.",
+    "emptyCta": "Crear una vista previa",
+    "loadFailed": "No pudimos cargar tus vistas previas.",
+    "menu": "Más acciones",
+    "status": {
+      "queued": "En espera",
+      "processing": "Creando · {{percent}}%",
+      "finalizing": "Terminando",
+      "failed": "No se completó",
+      "canceled": "Cancelada"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Reintentar",
+    "delete": "Eliminar",
+    "deleteA11y": "Eliminar vista previa",
+    "availableUntil": "Hasta el {{date}}",
+    "expired": "Eliminada tras 30 días"
+  }
+}

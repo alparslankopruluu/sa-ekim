@@ -1,0 +1,146 @@
+{
+  "updated": "Cập nhật lần cuối: {{date}}",
+  "openWeb": "Mở phiên bản web",
+  "emailSupport": "Gửi email hỗ trợ",
+  "publisher": "Kök được phát hành bởi Techtactoe App Studio.",
+  "privacy": {
+    "title": "Chính sách quyền riêng tư",
+    "sections": [
+      {
+        "heading": "Tóm tắt ngắn gọn",
+        "body": "Ảnh hành trình của bạn được giữ trên điện thoại của bạn. Kök chỉ tải ảnh lên khi bạn yêu cầu tạo bản xem trước AI, và cả ảnh đó lẫn ảnh xem trước tạo ra đều bị xóa khỏi máy chủ của chúng tôi trong vòng 30 ngày. Kök không hiển thị quảng cáo và không bán dữ liệu của bạn. Kök không phải lời khuyên y tế."
+      },
+      {
+        "heading": "Những gì ở lại trên thiết bị của bạn",
+        "body": "Ngày phẫu thuật, ảnh tiến trình, nhật ký rụng tóc và tên phòng khám của bạn chỉ được lưu trên thiết bị của bạn. Kök không bao giờ tải ảnh hành trình lên. Những dữ liệu này nằm trong bản sao lưu của chính điện thoại bạn (iCloud hoặc Android Auto Backup) nếu bạn đã bật sao lưu."
+      },
+      {
+        "heading": "Chúng tôi thu thập gì",
+        "body": "Một mã tài khoản ẩn danh (Firebase Authentication), nên bạn không cần cung cấp tên hay email. Số dư credit và trạng thái mua hàng của bạn. Lựa chọn ngôn ngữ và thông báo của bạn. Sự kiện sử dụng, báo cáo lỗi và dữ liệu hiệu năng (Firebase Analytics, Crashlytics và Performance Monitoring). Mã thông báo đẩy, chỉ khi bạn cho phép thông báo. Nếu bạn tạo bản xem trước: một ảnh bạn chọn, kiểu tóc và chất lượng bạn chọn, cùng bản xem trước tạo ra. Nếu bạn tham gia nhóm cùng tuần (không bắt buộc): ngày phẫu thuật, mục tiêu và loại hành trình của bạn, không có gì khác. Chúng tôi không thu thập tên, danh bạ hay vị trí chính xác của bạn. Kök không theo dõi bạn trên các ứng dụng hoặc trang web khác và không dùng mã định danh quảng cáo của bạn."
+      },
+      {
+        "heading": "Bản xem trước AI",
+        "body": "Khi bạn tạo bản xem trước, ảnh bạn đã chọn được tải lên máy chủ của chúng tôi và được xử lý bởi fal.ai, đơn vị chạy các mô hình ảnh của OpenAI thay mặt chúng tôi. Kök hỏi sự đồng ý của bạn trước lần tải lên đầu tiên, và thông báo đó nêu tên các nhà cung cấp này. Ảnh chỉ được dùng để tạo bản xem trước đó. Chúng tôi không dùng ảnh của bạn để huấn luyện các mô hình AI. Ảnh đã tải lên và ảnh xem trước bị xóa khỏi máy chủ của chúng tôi trong vòng 30 ngày, vì vậy hãy lưu bản xem trước vào thư viện ảnh nếu bạn muốn giữ lại. Mỗi bản xem trước là một hình minh họa AI, không phải dự đoán về kết quả của bạn."
+      },
+      {
+        "heading": "Nhà cung cấp dịch vụ",
+        "body": "Chúng tôi chỉ chia sẻ dữ liệu với các công ty xử lý dữ liệu thay chúng tôi: Google Firebase (tài khoản, cơ sở dữ liệu, lưu trữ tệp, chức năng máy chủ, phân tích, báo cáo lỗi, hiệu năng, cấu hình từ xa, kiểm tra tính toàn vẹn ứng dụng và thông báo đẩy); fal.ai và các mô hình ảnh OpenAI mà họ vận hành (bản xem trước AI); RevenueCat (gói đăng ký và giao dịch mua); Apple và Google (thanh toán và phân phối ứng dụng). Kök không chứa quảng cáo và không chia sẻ dữ liệu với nhà quảng cáo."
+      },
+      {
+        "heading": "Chúng tôi lưu dữ liệu bao lâu",
+        "body": "Dữ liệu hành trình: trên thiết bị của bạn cho đến khi bạn xóa. Ảnh tải lên để tạo bản xem trước và ảnh xem trước: tối đa 30 ngày trên máy chủ của chúng tôi. Dữ liệu sử dụng và báo cáo lỗi: tối đa 14 tháng. Hồ sơ mua hàng: trong thời gian luật thuế và kế toán yêu cầu. Báo cáo bạn gửi về một bản xem trước: trong thời gian cần thiết để xem xét và xử lý."
+      },
+      {
+        "heading": "Lựa chọn và việc xóa dữ liệu của bạn",
+        "body": "Trong Cài đặt, Dữ liệu và quyền riêng tư, Xóa toàn bộ dữ liệu của tôi sẽ gỡ ảnh hành trình, nhật ký rụng tóc và các bản xem trước khỏi thiết bị này. Trong Cài đặt, Tài khoản, Xóa tài khoản sẽ gỡ tài khoản, credit, bản xem trước và mọi ảnh đã tải lên khỏi máy chủ của chúng tôi ngay lập tức, đồng thời xóa hành trình của bạn trên thiết bị. Bạn cũng có thể tắt thông báo tại đó. Không có gì được tải lên trừ khi bạn tạo bản xem trước. Xóa tài khoản không hủy gói đăng ký: hãy hủy trong phần cài đặt tài khoản App Store hoặc Google Play của bạn. Tùy nơi bạn sinh sống (ví dụ theo GDPR, KVKK của Thổ Nhĩ Kỳ hoặc CCPA của California), bạn có thể có quyền truy cập, chỉnh sửa, xóa hoặc xuất dữ liệu của mình và quyền rút lại sự đồng ý. Để gửi yêu cầu, hãy email techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Trẻ em",
+        "body": "Kök dành cho người trưởng thành. Chúng tôi không cố ý thu thập thông tin từ bất kỳ ai dưới 18 tuổi."
+      },
+      {
+        "heading": "Không phải lời khuyên y tế",
+        "body": "Kök là công cụ giáo dục và theo dõi. Kök không chẩn đoán, điều trị hay dự đoán bất cứ điều gì, và lộ trình của Kök chỉ cho thấy các khoảng thông thường. Với mọi lo ngại, hãy liên hệ phòng khám hoặc bác sĩ của bạn."
+      },
+      {
+        "heading": "Thay đổi và liên hệ",
+        "body": "Nếu chính sách này thay đổi, ngày ở trên cũng sẽ thay đổi theo. Câu hỏi hoặc yêu cầu: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Điều khoản sử dụng",
+    "sections": [
+      {
+        "heading": "Sử dụng Kök",
+        "body": "Kök giúp bạn theo dõi hành trình cấy tóc, PRP hoặc phục hồi tóc tương tự bằng ảnh của chính bạn và một lộ trình thông thường, đồng thời cho phép bạn tạo bản xem trước AI. Bạn phải là người trưởng thành và đủ khả năng giao kết thỏa thuận này. Khi sử dụng Kök, bạn chấp nhận các điều khoản này."
+      },
+      {
+        "heading": "Không phải lời khuyên y tế",
+        "body": "Kök không phải thiết bị y tế và không đưa ra lời khuyên, chẩn đoán hay điều trị y tế. Lộ trình và hướng dẫn mô tả điều thường gặp và không phải là lời hứa về kết quả của bạn. Nếu bạn thấy sốt, đỏ lan rộng, có mủ, đau dữ dội hoặc chảy máu nhiều, hãy liên hệ phòng khám hoặc bác sĩ của bạn."
+      },
+      {
+        "heading": "Bản xem trước AI",
+        "body": "Bản xem trước là hình minh họa AI được tạo từ ảnh của bạn. Đó không phải dự đoán, lời hứa hay kế hoạch cho kết quả của bạn, và không hiển thị số nang tóc ghép. Bản xem trước miễn phí trong phần làm quen có watermark. Bản xem trước được giữ trong 30 ngày, vì vậy hãy lưu vào thư viện ảnh nếu bạn muốn giữ lại. Hãy sử dụng bản xem trước một cách có trách nhiệm và không trình bày chúng như ảnh chụp thật."
+      },
+      {
+        "heading": "Ảnh và nội dung",
+        "body": "Chỉ dùng ảnh của chính bạn, hoặc của người đã đồng ý rõ ràng. Không tải lên ảnh trẻ vị thành niên, người của công chúng, hay bất cứ nội dung nào mang tính tình dục, thù ghét, quấy rối, lừa dối hoặc bất hợp pháp. Chúng tôi có thể chặn nội dung và đình chỉ quyền truy cập nếu vi phạm các quy tắc này. Bạn có thể báo cáo bất kỳ bản xem trước nào từ màn hình của nó."
+      },
+      {
+        "heading": "Gói đăng ký và credit",
+        "body": "Kök Pro được cung cấp dưới dạng gói đăng ký theo tuần, tháng hoặc năm với mức giá mà cửa hàng ứng dụng hiển thị. Không có dùng thử miễn phí. Gói đăng ký tự động gia hạn cho đến khi bạn hủy trong phần cài đặt tài khoản App Store hoặc Google Play, và việc hoàn tiền tuân theo quy định của Apple hoặc Google. Các gói credit là giao dịch mua một lần. Một bản xem trước tiêu chuẩn dùng 1 credit và một bản xem trước HD dùng 3 credit. Nếu một bản xem trước thất bại, credit của nó được hoàn lại tự động. Credit không có giá trị quy đổi tiền mặt và không thể chuyển nhượng. Bạn có thể khôi phục giao dịch mua từ màn hình đăng ký hoặc Cài đặt."
+      },
+      {
+        "heading": "Nội dung của bạn",
+        "body": "Bạn giữ quyền sở hữu ảnh và bản xem trước của mình. Bạn cấp cho chúng tôi một quyền hạn chế để xử lý những gì bạn tải lên, chỉ nhằm cung cấp dịch vụ bạn yêu cầu."
+      },
+      {
+        "heading": "Tính khả dụng và trách nhiệm",
+        "body": "Kök được cung cấp theo nguyên trạng và theo khả năng sẵn có. Trong phạm vi pháp luật cho phép, chúng tôi không chịu trách nhiệm về các thiệt hại gián tiếp hoặc hệ quả, và không điều gì ở đây hạn chế các quyền của bạn theo luật bảo vệ người tiêu dùng mà không thể từ bỏ."
+      },
+      {
+        "heading": "Chấm dứt sử dụng",
+        "body": "Bạn có thể ngừng sử dụng Kök và xóa tài khoản bất cứ lúc nào trong Cài đặt. Chúng tôi có thể thay đổi các điều khoản này và sẽ cập nhật ngày khi thay đổi."
+      },
+      {
+        "heading": "Liên hệ",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Bản xem trước AI hoạt động thế nào",
+    "sections": [
+      {
+        "heading": "Bản xem trước là gì",
+        "body": "Bản xem trước là hình minh họa AI về việc một kiểu tóc đã chọn có thể trông thế nào trên ảnh của bạn. Đó không phải dự đoán về kết quả của bạn, và nhãn nói rõ điều đó luôn hiển thị trên mọi bản xem trước."
+      },
+      {
+        "heading": "Những gì được gửi đi",
+        "body": "Chỉ một ảnh bạn chọn cho bản xem trước đó, cùng kiểu tóc và chất lượng bạn đã chọn. Ảnh hành trình của bạn không bao giờ được tải lên. Trước lần tải lên đầu tiên, Kök hỏi sự đồng ý của bạn."
+      },
+      {
+        "heading": "Ai xử lý ảnh",
+        "body": "fal.ai chạy các mô hình ảnh của OpenAI thay mặt chúng tôi. Chúng tôi chỉ dùng chúng để tạo bản xem trước của bạn và không dùng ảnh của bạn để huấn luyện các mô hình AI. Ảnh đã tải lên và ảnh xem trước bị xóa khỏi máy chủ của chúng tôi trong vòng 30 ngày."
+      },
+      {
+        "heading": "Giới hạn",
+        "body": "Kết quả có thể chưa hoàn hảo hoặc thiếu thực tế. Bản xem trước miễn phí trong phần làm quen có watermark. Kök không bao giờ hiển thị số nang tóc ghép, các giai đoạn hay lời hứa về kết quả."
+      },
+      {
+        "heading": "Báo cáo và xóa",
+        "body": "Hãy báo cáo bản xem trước từ màn hình của nó và chúng tôi sẽ xem xét trong vòng 48 giờ. Bạn có thể xóa bản xem trước bất cứ lúc nào, và xóa tài khoản sẽ gỡ mọi thứ chúng tôi đang lưu giữ."
+      }
+    ]
+  },
+  "support": {
+    "title": "Trợ giúp và hỗ trợ",
+    "sections": [
+      {
+        "heading": "Liên hệ chúng tôi",
+        "body": "Hãy email techtactoeappstudio@gmail.com và ghi kèm phiên bản ứng dụng của bạn (Cài đặt, Giới thiệu). Chúng tôi thường trả lời trong vòng hai ngày làm việc."
+      },
+      {
+        "heading": "Bản xem trước bị lỗi. Tôi có mất credit không?",
+        "body": "Không. Credit của bản xem trước bị lỗi hoặc bị hủy được hoàn lại tự động."
+      },
+      {
+        "heading": "Làm sao để hủy gói đăng ký?",
+        "body": "Trên iPhone: Cài đặt, tên của bạn, Gói đăng ký, Kök. Trên Android: Google Play, Thanh toán và gói đăng ký, Gói đăng ký. Bạn cũng có thể mở Cài đặt, Quản lý gói đăng ký trong Kök."
+      },
+      {
+        "heading": "Làm sao để khôi phục giao dịch mua?",
+        "body": "Mở màn hình đăng ký hoặc Cài đặt rồi chạm Khôi phục."
+      },
+      {
+        "heading": "Làm sao để xóa dữ liệu của tôi?",
+        "body": "Cài đặt, Dữ liệu và quyền riêng tư, Xóa toàn bộ dữ liệu của tôi sẽ xóa hành trình và các bản xem trước trên thiết bị này. Cài đặt, Tài khoản, Xóa tài khoản sẽ xóa tài khoản của bạn và mọi thứ chúng tôi đang lưu giữ. Bạn cũng có thể email cho chúng tôi để yêu cầu xóa."
+      },
+      {
+        "heading": "Đây có phải lời khuyên y tế không?",
+        "body": "Không. Kök là công cụ giáo dục và theo dõi. Với bất cứ điều gì đáng lo, hãy liên hệ phòng khám hoặc bác sĩ của bạn."
+      }
+    ]
+  }
+}

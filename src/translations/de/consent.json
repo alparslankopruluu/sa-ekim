@@ -1,0 +1,25 @@
+{
+  "title": "Bevor wir deine Vorschau erstellen",
+  "body": "Die Vorschau wird von KI-Bildmodellen erstellt, deshalb muss das von dir gewählte Foto dein Handy verlassen. So läuft es ab.",
+  "sent": {
+    "title": "Was wir senden",
+    "body": "Nur das Foto, das du für diese Vorschau ausgewählt hast. Sonst nichts aus deiner Fotomediathek oder deinem Verlauf."
+  },
+  "who": {
+    "title": "Wer es verarbeitet",
+    "body": "fal.ai übernimmt die Bildbearbeitung und nutzt dafür OpenAI-Bildmodelle."
+  },
+  "retention": {
+    "title": "Wie lange es gespeichert bleibt",
+    "body": "Dein Originalfoto und das Vorschauergebnis werden innerhalb von 30 Tagen von unseren Servern gelöscht. Du kannst sie im Tab „Vorschauen“ auch früher löschen."
+  },
+  "choice": {
+    "title": "Deine Entscheidung",
+    "body": "Du kannst ablehnen und trotzdem den gesamten Verlauf nutzen. Fotos, die du für deine Zeitleiste aufnimmst, bleiben auf deinem Gerät."
+  },
+  "note": "KI-Vorschauen zeigen eine Möglichkeit. Sie sind keine Vorhersage deines Ergebnisses.",
+  "policy": "Datenschutzerklärung lesen",
+  "accept": "Zustimmen und weiter",
+  "decline": "Nicht jetzt",
+  "error": "Deine Auswahl konnte nicht gespeichert werden. Prüfe deine Verbindung und versuche es erneut."
+}

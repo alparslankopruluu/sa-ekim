@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Metgezel bij haartransplantatie",
+    "title": "Zie wat gebruikelijk is voor jouw herstelweek",
+    "subtitle": "Bekijk een verandering vóór de operatie en volg daarna wat gebruikelijk is voor elke week van je herstel.",
+    "cta": "Aan de slag",
+    "demoLabel": "Voorbeeld van de voor-en-nadaschuif. Sleep om te vergelijken.",
+    "demoBefore": "Voor",
+    "demoAfter": "Na",
+    "demoCaption": "Alleen ter illustratie. Je eigen preview komt later.",
+    "legalPrefix": "Door verder te gaan ga je akkoord met onze",
+    "terms": "Voorwaarden",
+    "privacy": "Privacybeleid"
+  },
+  "goal": {
+    "title": "Waar werk je aan?",
+    "subtitle": "We stemmen je tijdlijn en je fotohoeken erop af.",
+    "hairline": {
+      "title": "Haarlijn",
+      "subtitle": "Voorkant en slapen"
+    },
+    "crown": {
+      "title": "Kruin",
+      "subtitle": "De achterkant en bovenkant van het hoofd"
+    },
+    "part": {
+      "title": "Scheiding",
+      "subtitle": "Dichtheid langs de scheiding"
+    },
+    "brows": {
+      "title": "Wenkbrauwen",
+      "subtitle": "Wenkbrauwtransplantatie"
+    },
+    "beard": {
+      "title": "Baard",
+      "subtitle": "Baard en snor"
+    }
+  },
+  "stage": {
+    "title": "Waar sta je in het proces?",
+    "subtitle": "Dit bepaalt wat we je eerst laten zien.",
+    "researching": {
+      "title": "Nog aan het oriënteren",
+      "subtitle": "Opties verkennen, nog niets geboekt"
+    },
+    "planned": {
+      "title": "Operatie geboekt",
+      "subtitle": "Ik heb een datum in het vooruitzicht"
+    },
+    "done": {
+      "title": "Al gehad",
+      "subtitle": "Ik wil mijn herstel volgen"
+    }
+  },
+  "date": {
+    "titlePlanned": "Wanneer is je operatie?",
+    "titleDone": "Wanneer was je operatie?",
+    "subtitlePlanned": "We tellen af tot dag 0 en maken je eerste weken klaar.",
+    "subtitleDone": "We tonen in welke fase je zit en wat deze week gebruikelijk is.",
+    "wheelDay": "Dag",
+    "wheelMonth": "Maand",
+    "wheelYear": "Jaar",
+    "feedbackPast": "Dag {{day}} · Week {{week}}",
+    "feedbackToday": "Vandaag is dag 0",
+    "feedbackFuture_one": "Over {{count}} dag",
+    "feedbackFuture_other": "Over {{count}} dagen",
+    "errorMustBeFuture": "Kies vandaag of een latere datum.",
+    "errorMustBePast": "Kies vandaag of een eerdere datum.",
+    "errorTooFar": "Die datum ligt te ver weg om te volgen. Kies een datum die dichterbij ligt.",
+    "errorInvalid": "Die datum bestaat niet.",
+    "skip": "Weet ik nog niet",
+    "skipNote": "Je kunt hem later instellen of wijzigen in je traject."
+  },
+  "photo": {
+    "title": "Voeg een foto toe voor je preview",
+    "subtitleResearching": "Zie een AI-preview van hoe een verandering eruit zou kunnen zien, voordat je je aan iets verbindt.",
+    "subtitlePlanned": "Zie een AI-preview van hoe je operatie eruit zou kunnen zien.",
+    "subtitleDone": "Zie een AI-preview van hoe je resultaat eruit zou kunnen zien naarmate het rijpt.",
+    "guidanceTitle": "Voor de beste preview",
+    "angle": {
+      "front": "Kijk recht in de camera, met de telefoon op ooghoogte.",
+      "top": "Houd de telefoon boven je hoofd, kijkend naar de bovenkant van je hoofd.",
+      "crown": "Fotografeer de achterkant van je hoofd, bij voorkeur met hulp van iemand."
+    },
+    "area": {
+      "hairline": "Trek je haar naar achteren zodat de haarlijn goed zichtbaar is.",
+      "crown": "Houd de kruin onbedekt en je haar plat.",
+      "part": "Scheid je haar zoals je het normaal draagt.",
+      "brows": "Houd je wenkbrauwen vrij van haar en bril.",
+      "beard": "Houd het baardgebied onbedekt en in gelijkmatig licht."
+    },
+    "light": "Gebruik daglicht, geen filters en geen pet of muts.",
+    "take": "Foto maken",
+    "library": "Kies uit bibliotheek",
+    "change": "Kies een andere foto",
+    "selected": "Je geselecteerde foto",
+    "placeholder": "Nog geen foto geselecteerd",
+    "privacy": "Je foto wordt alleen verstuurd om de preview te maken, en pas nadat je op het volgende scherm akkoord gaat.",
+    "skip": "Preview overslaan",
+    "skipNote": "Je kunt er later een maken via het tabblad Previews.",
+    "permissionDenied": "We konden je foto's niet openen. Controleer de toestemming in Instellingen."
+  },
+  "notify": {
+    "title": "Mis nooit de momenten die ertoe doen",
+    "subtitle": "Herstel gaat langzaam. Een zacht duwtje op het juiste moment onthoudt het voor je.",
+    "bulletPhase": "We laten het weten wanneer een fase verandert",
+    "bulletPhoto": "We laten het weten wanneer het fotodag is",
+    "bulletCare": "Dagelijkse nazorgherinneringen voor de eerste twee weken",
+    "allow": "Herinneringen aanzetten",
+    "skip": "Niet nu",
+    "note": "Nazorgherinneringen zijn gratis. Fase- en fotoherinneringen horen bij Pro. Je kunt dit op elk moment wijzigen in Instellingen."
+  },
+  "crafting": {
+    "title": "Je preview maken",
+    "titleDone": "Je preview is klaar",
+    "subtitle": "Dit duurt meestal minder dan een minuut.",
+    "ringLabel": "Voortgang van de preview, {{percent}} procent",
+    "lineUpload": "Je foto veilig versturen",
+    "lineReserve": "Je gratis preview reserveren",
+    "lineEdit": "{{area}} bewerken",
+    "lineFinish": "De laatste details toevoegen",
+    "stateDone": "klaar",
+    "stateActive": "bezig",
+    "statePending": "wachten",
+    "area": {
+      "hairline": "je haarlijn",
+      "crown": "je kruin",
+      "part": "je scheiding",
+      "brows": "je wenkbrauwen",
+      "beard": "je baard"
+    },
+    "skip": "Nu overslaan",
+    "skipNote": "Je preview wordt gewoon verder gemaakt en staat straks klaar in het tabblad Previews.",
+    "failedTitle": "We konden je preview niet afmaken",
+    "failedOffline": "Je lijkt offline te zijn. Er is niets in rekening gebracht. Controleer je verbinding en probeer het opnieuw.",
+    "failedGeneric": "Er ging iets mis aan onze kant. Er is niets in rekening gebracht. Je kunt het opnieuw proberen of zonder doorgaan.",
+    "failedBlocked": "Deze foto kan niet voor een preview worden gebruikt. Er is niets in rekening gebracht. Je kunt doorgaan en later een andere foto proberen.",
+    "skipFailed": "Doorgaan zonder preview"
+  },
+  "reveal": {
+    "title": "Zo zou het eruit kunnen zien",
+    "subtitle": "Sleep het handvat om te vergelijken. Het is een illustratie gemaakt door AI.",
+    "before": "Je foto",
+    "after": "AI-preview",
+    "disclaimer": "AI-preview — geen voorspelling van je resultaat",
+    "watermark": "Gratis previews hebben een klein watermerk.",
+    "wipeLabel": "Voor-en-navergelijking van je foto. Sleep om te vergelijken.",
+    "loading": "Je preview voorbereiden",
+    "loadFailed": "We konden de previewafbeelding niet laden. Hij staat opgeslagen in je tabblad Previews.",
+    "cta": "Bekijk mijn plan"
+  }
+}

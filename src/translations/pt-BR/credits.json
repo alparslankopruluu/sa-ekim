@@ -1,0 +1,23 @@
+{
+  "title": "Obter créditos",
+  "subtitle": "Os créditos nunca expiram. Uma prévia padrão usa {{standard}}, uma prévia HD usa {{high}}.",
+  "balance": "Seu saldo",
+  "equivalent": "≈ {{standard}} prévias padrão ou {{high}} prévias HD",
+  "packs": {
+    "credits_10": "Inicial",
+    "credits_25": "Plus",
+    "credits_60": "Studio"
+  },
+  "popular": "Popular",
+  "success": "{{count}} créditos adicionados.",
+  "pending": "Sua compra está aguardando aprovação.",
+  "failedBody": "Os pacotes de créditos não carregaram. Verifique a conexão e tente de novo.",
+  "emptyBody": "Os pacotes de créditos não estão disponíveis agora. Tente de novo mais tarde.",
+  "freeHigh_one": "{{count}} prévia HD grátis esperando",
+  "freeHigh_other": "{{count}} prévias HD grátis esperando",
+  "examplesTitle": "Quanto rendem os créditos",
+  "exampleStandard": "Prévia padrão",
+  "exampleHigh": "Prévia HD, sem marca d'água",
+  "proHint": "Assinantes Pro recebem créditos toda semana ou todo mês.",
+  "close": "Fechar loja de créditos"
+}

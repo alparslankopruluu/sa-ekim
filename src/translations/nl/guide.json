@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "happening": "Wat er gebeurt",
+    "normal": "Wat gebruikelijk is",
+    "todo": "Doe dit deze week",
+    "redflags": "Neem contact op met je kliniek of een arts als…",
+    "care": "Dag voor dag",
+    "wash": "Wassen",
+    "sleep": "Slapen",
+    "avoid": "Vermijd"
+  },
+  "header": {
+    "week": "Week",
+    "days": "Dag {{from}}–{{to}}",
+    "weeks": "week {{from}}–{{to}}",
+    "current": "Je bent hier",
+    "past": "Achter je",
+    "upcoming": "Voor je"
+  },
+  "lock": {
+    "title": "De volledige fasegids hoort bij Pro",
+    "body": "Wat er gewoonlijk gebeurt, wat je deze week kunt doen en notities per dag, voor elke fase.",
+    "cta": "Bekijk Pro",
+    "redflagsNote": "Wanneer je contact opneemt met je kliniek blijft voor iedereen gratis, hieronder."
+  },
+  "notFound": {
+    "title": "Gids niet gevonden",
+    "body": "Deze pagina komt mogelijk van een oudere link.",
+    "cta": "Terug"
+  },
+  "flags": {
+    "fever": "Koorts of rillingen",
+    "redness": "Roodheid of zwelling die zich uitbreidt of steeds erger wordt",
+    "pus": "Pus, gele afscheiding of een vieze geur",
+    "pain": "Hevige of toenemende pijn",
+    "bleeding": "Hevig bloeden, of bloeden dat niet stopt met zachte druk",
+    "contact": "Gebeurt er iets hiervan, neem dan contact op met je kliniek of een arts. Bel bij nood het lokale alarmnummer."
+  },
+  "disclaimer": "Algemene voorlichting op basis van gangbare kliniektijdlijnen — geen medisch advies en geen voorspelling. Individuele resultaten verschillen; de instructies van je eigen kliniek gaan voor.",
+  "care": {
+    "title": "De eerste twee weken",
+    "tagline": "De grafts beschermen terwijl ze aanslaan",
+    "happening": "De nieuwe grafts nestelen zich op hun plek. Rond elke graft vormen zich gewoonlijk kleine korstjes, die meestal binnen ongeveer 7–14 dagen loslaten. Enige zwelling van het voorhoofd en roodheid zie je vaak in de eerste dagen.",
+    "normal": "Kleine korstjes, lichte roodheid, wat zwelling en een strak gevoel komen in de eerste twee weken gewoonlijk voor.",
+    "todo1": "Volg de wasroutine die je kliniek je heeft laten zien.",
+    "todo2": "Slaap de eerste nachten met je hoofd omhoog als je kliniek dat adviseert.",
+    "todo3": "Laat de korstjes vanzelf loslaten — niet peuteren of krabben.",
+    "todo4": "Sla zware inspanning, sauna, zwemmen en direct zonlicht over totdat je kliniek anders zegt.",
+    "redflags": "Wat roodheid en zwelling komen nu vaak voor. Neem contact op met je kliniek of een arts als je merkt:",
+    "days": {
+      "intro": "Veel klinieken adviseren het volgende. Volg eerst de instructies van je eigen kliniek.",
+      "d0_3": {
+        "title": "Dag 0–3",
+        "wash": "Veel klinieken doen de eerste wasbeurt zelf of op dag 1–2 en adviseren daarna een heel zachte spoeling zonder wrijven.",
+        "sleep": "Veel klinieken adviseren op je rug te slapen met je hoofd omhoog, bijvoorbeeld op twee kussens of een nekkussen.",
+        "avoid": "Veel klinieken adviseren om bukken, tillen, het aanraken van de grafts, alcohol en roken te vermijden."
+      },
+      "d4_7": {
+        "title": "Dag 4–7",
+        "wash": "Veel klinieken adviseren elke dag zacht te wassen met de producten die ze je hebben meegegeven en de grafts droog te deppen — nooit wrijven.",
+        "sleep": "Een verhoogd hoofd wordt nog vaak geadviseerd; de zwelling zakt gewoonlijk rond deze dagen.",
+        "avoid": "Veel klinieken adviseren strakke petten, hevig zweten, direct zonlicht en krabben te vermijden."
+      },
+      "d8_14": {
+        "title": "Dag 8–14",
+        "wash": "Veel klinieken staan nu iets steviger wassen toe, zodat de korstjes voorzichtig kunnen loslaten.",
+        "sleep": "Veel mensen kunnen rond nu terug naar hun gebruikelijke slaaphouding, als hun kliniek akkoord is.",
+        "avoid": "Veel klinieken adviseren zwembaden, sauna's, zware trainingen en peuteren aan de laatste korstjes te vermijden."
+      }
+    }
+  },
+  "shed": {
+    "title": "Uitvalfase",
+    "tagline": "De getransplanteerde haren vallen gewoonlijk uit — de wortels blijven meestal zitten",
+    "happening": "Tussen week 2 en 8 vallen veel van de getransplanteerde haarschachten gewoonlijk uit. Klinieken noemen dit vaak shockloss. De follikels onder de huid blijven gewoonlijk op hun plek en rusten voordat ze nieuw haar laten groeien.",
+    "normal": "Merkbare haaruitval in week 2–8 komt gewoonlijk voor — klinieken beschrijven het als een gebruikelijke fase van het traject.",
+    "todo1": "Blijf wekelijks een foto vanuit dezelfde hoek maken; de reeks laat het verloop beter zien dan de spiegel.",
+    "todo2": "Noteer op een paar dagen hoeveel haar je verliest — een getal is makkelijker te bespreken dan een gevoel.",
+    "todo3": "Blijf zacht wassen, zoals je kliniek adviseert.",
+    "todo4": "Schrijf je vragen op voor het volgende contactmoment met je kliniek.",
+    "redflags": "Haaruitval zelf komt in deze weken vaak voor. Neem contact op met je kliniek of een arts als je merkt:"
+  },
+  "quiet": {
+    "title": "Rustige maanden",
+    "tagline": "Aan de oppervlakte lijkt er weinig te gebeuren",
+    "happening": "Maand 2 tot 4 wordt vaak de “lelijke eend”-fase genoemd. De follikels rusten gewoonlijk en bereiden nieuwe haren voor, dus het gebied kan er ongeveer uitzien als vóór de operatie.",
+    "normal": "Heel weinig zichtbare groei in maand 2–4 komt gewoonlijk voor.",
+    "todo1": "Vergelijk maanden, geen dagen — je fotoreeks geeft het eerlijkste beeld.",
+    "todo2": "Kleine bultjes kunnen verschijnen als nieuwe haren doorbreken; vraag het je kliniek als je het niet zeker weet.",
+    "todo3": "Bescherm je hoofdhuid tegen sterke zon, zoals je kliniek adviseert.",
+    "todo4": "Gebruik voor elke foto dezelfde hoek en hetzelfde licht.",
+    "redflags": "Neem contact op met je kliniek of een arts als je merkt:"
+  },
+  "sprout": {
+    "title": "Eerste groei",
+    "tagline": "Fijne nieuwe haartjes beginnen gewoonlijk te verschijnen",
+    "happening": "Rond maand 3–4 verschijnen gewoonlijk de eerste nieuwe haren. Ze zijn in het begin vaak dun, licht en ongelijkmatig, en sommige kunnen krullen of golven.",
+    "normal": "Vroege haren zijn gewoonlijk fijn en onregelmatig en groeien in verschillend tempo.",
+    "todo1": "Maak je controlefoto's bij hetzelfde licht en vanuit dezelfde hoek.",
+    "todo2": "Geef dunne of ongelijke haren de tijd — de dikte neemt gewoonlijk in latere maanden toe.",
+    "todo3": "Vraag je kliniek wanneer knippen, kleuren en stylingproducten voor jou goed zijn.",
+    "todo4": "Kijk terug naar je eerste foto's in plaats van naar de resultaten van anderen.",
+    "redflags": "Neem contact op met je kliniek of een arts als je merkt:"
+  },
+  "grow": {
+    "title": "De dichtheid groeit",
+    "tagline": "Haren worden gewoonlijk dikker en vullen aan",
+    "happening": "Tussen maand 6 en 9 worden de nieuwe haren gewoonlijk dikker en langer, en het gebied ziet er van maand tot maand vaak voller uit.",
+    "normal": "De dichtheid neemt gewoonlijk toe gedurende maand 6–9, en het uiterlijk kan in deze periode veel veranderen.",
+    "todo1": "Maak je controlefoto's van maand 6 en 9.",
+    "todo2": "Vergelijk met je eigen eerste foto's, niet met die van een ander.",
+    "todo3": "Vraag je kliniek naar de controle die ze rond nu gewoonlijk aanbieden.",
+    "todo4": "Blijf je hoofdhuid beschermen tegen sterke zon.",
+    "redflags": "Neem contact op met je kliniek of een arts als je merkt:"
+  },
+  "mature": {
+    "title": "Rijping",
+    "tagline": "Structuur en dichtheid komen gewoonlijk tot rust",
+    "happening": "Maand 9 tot 12 is gewoonlijk een periode van rijping: haren blijven dikker worden en hun structuur wordt stabiel. Klinieken beoordelen het resultaat van de haarlijn gewoonlijk rond 12 maanden.",
+    "normal": "Veranderingen worden in maand 9–12 gewoonlijk trager en subtieler.",
+    "todo1": "Maak je controlefoto van maand 12 vanuit elke hoek.",
+    "todo2": "Leg je eerste en je nieuwste foto naast elkaar voor je bezoek aan de kliniek.",
+    "todo3": "Schrijf de vragen op die je bij je beoordeling wilt stellen.",
+    "todo4": "Bedenk dat de kruin en de scheiding gewoonlijk langer duren.",
+    "redflags": "Neem contact op met je kliniek of een arts als je merkt:"
+  },
+  "final": {
+    "title": "Laatste rijping",
+    "tagline": "De kruin en de scheiding kunnen blijven rijpen",
+    "happening": "Na 12 maanden zijn de meeste veranderingen gewoonlijk klein. De kruin, de scheiding en de resultaten van veel vrouwen blijven gewoonlijk tot wel 18 maanden rijpen.",
+    "normal": "Langzame, geleidelijke verandering na maand 12 komt gewoonlijk voor, vooral bij de kruin.",
+    "todo1": "Maak elke één à twee maanden een foto.",
+    "todo2": "Plan de beoordeling die je kliniek aanbeveelt.",
+    "todo3": "Neem je fotoreeks mee om die met je kliniek te delen, als je wilt.",
+    "todo4": "Gebruik dezelfde hoek en hetzelfde licht voor een eerlijke vergelijking.",
+    "redflags": "Neem contact op met je kliniek of een arts als je merkt:"
+  }
+}

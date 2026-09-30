@@ -1,0 +1,112 @@
+{
+  "title": {
+    "default": "Segui il tuo percorso di 12–18 mesi, settimana per settimana",
+    "hairline": "Segui il percorso della tua attaccatura, settimana per settimana",
+    "crown": "Segui il percorso del tuo vertice, settimana per settimana",
+    "part": "Segui il percorso della tua riga, settimana per settimana",
+    "brows": "Segui il percorso delle tue sopracciglia, settimana per settimana",
+    "beard": "Segui il percorso della tua barba, settimana per settimana"
+  },
+  "sources": {
+    "onboarding": {
+      "subtitle": "La tua prima anteprima è pronta. Pro aggiunge la cronologia completa: confronto, banda delle fasi e ogni guida settimanale."
+    },
+    "settings": {
+      "subtitle": "Guarda cosa è tipico per la tua settimana, accanto alle tue foto."
+    },
+    "home_banner": {
+      "subtitle": "Guarda cosa è tipico per la tua settimana, accanto alle tue foto."
+    },
+    "notification": {
+      "subtitle": "Guarda cosa è tipico per la tua settimana, accanto alle tue foto."
+    },
+    "gift": {
+      "subtitle": "Il prezzo del tuo regalo si applica al primo anno del piano annuale."
+    },
+    "locked_compare": {
+      "title": "Confronta le tue foto, settimana per settimana",
+      "subtitle": "Scorri tra due foto o guardale affiancate, ciascuna con la propria settimana."
+    },
+    "locked_band": {
+      "title": "Guarda l'intervallo tipico per la tua settimana",
+      "subtitle": "La tua foto accanto alla banda delle fasi. Mostra un intervallo tipico e i risultati individuali variano."
+    },
+    "locked_photos": {
+      "title": "Conserva ogni settimana",
+      "subtitle": "Il piano gratuito conserva {{count}} foto dei progressi. Pro conserva tutti i 12–18 mesi."
+    },
+    "locked_report": {
+      "title": "Condividi un report con la tua clinica",
+      "subtitle": "Un PDF con la prima e l'ultima foto per ogni angolazione, le etichette delle settimane e il riepilogo della caduta."
+    },
+    "locked_hd": {
+      "title": "Più crediti per le anteprime HD",
+      "subtitle": "Le anteprime HD usano crediti e non hanno filigrana. Pro include una dotazione di crediti da spendere per queste."
+    },
+    "locked_guide": {
+      "title": "La guida settimanale completa",
+      "subtitle": "Cosa succede tipicamente in ogni fase, cosa è normale e cosa fare questa settimana."
+    },
+    "insufficient_credits": {
+      "title": "Ti servono più crediti per questo",
+      "subtitle": "Pro include una dotazione di crediti ogni settimana o ogni mese. Puoi anche acquistare un pacchetto di crediti."
+    },
+    "result_upgrade": {
+      "title": "Guardala in HD",
+      "subtitle": "Le anteprime HD non hanno filigrana e usano crediti. Pro include crediti da spendere per queste."
+    }
+  },
+  "benefits": {
+    "photos": "Foto dei progressi illimitate",
+    "compare": "Confronto a cursore e affiancato",
+    "band": "Banda della fase attesa sulle tue foto",
+    "guide": "La guida completa di ogni fase",
+    "reminders": "Promemoria per le fasi e le foto",
+    "report": "Report PDF per la clinica",
+    "cohort": "Scopri quante persone sono nella tua stessa settimana",
+    "hd": "I crediti inclusi valgono per le anteprime HD",
+    "credits": "Una dotazione di crediti per le anteprime"
+  },
+  "plans": {
+    "annual": "Annuale",
+    "monthly": "Mensile",
+    "weekly": "Settimanale",
+    "bestValue": "Più conveniente",
+    "save": "Risparmi il {{percent}}% rispetto al settimanale",
+    "perWeek": "{{price}}/settimana",
+    "perMonth": "{{price}}/mese",
+    "perYear": "{{price}}/anno",
+    "firstYear": "{{price}} il primo anno"
+  },
+  "planCredits": {
+    "weekly": "Include {{count}} crediti ogni settimana",
+    "monthly": "Include {{count}} crediti ogni mese",
+    "annual": "Include {{initial}} crediti all'inizio, poi {{count}} ogni settimana"
+  },
+  "cta": {
+    "subscribe": "Continua",
+    "processing": "Elaborazione…"
+  },
+  "disclosure": {
+    "annual": "Fatturato {{price}} all'anno. Si rinnova automaticamente finché non annulli. Puoi annullare in qualsiasi momento nelle impostazioni del tuo account dello store. Il prezzo mostrato è l'importo che ti viene addebitato.",
+    "monthly": "Fatturato {{price}} al mese. Si rinnova automaticamente finché non annulli. Puoi annullare in qualsiasi momento nelle impostazioni del tuo account dello store. Il prezzo mostrato è l'importo che ti viene addebitato.",
+    "weekly": "Fatturato {{price}} a settimana. Si rinnova automaticamente finché non annulli. Puoi annullare in qualsiasi momento nelle impostazioni del tuo account dello store. Il prezzo mostrato è l'importo che ti viene addebitato.",
+    "intro": "Il prezzo del tuo regalo: {{intro}} per il primo anno, poi {{price}} all'anno. Si rinnova automaticamente finché non annulli. Puoi annullare in qualsiasi momento nelle impostazioni del tuo account dello store."
+  },
+  "restore": "Ripristina",
+  "restoreNone": "Nessun acquisto precedente trovato.",
+  "restoreSuccess": "Che bello rivederti. Pro è stato ripristinato.",
+  "privacy": "Privacy",
+  "termsLink": "Termini",
+  "loading": "Caricamento dei piani…",
+  "failedTitle": "I piani non si sono caricati",
+  "failedBody": "Controlla la connessione e riprova.",
+  "emptyBody": "I piani non sono disponibili al momento. Riprova più tardi.",
+  "purchaseFailed": "L'acquisto non è andato a buon fine. Riprova.",
+  "pending": "Il tuo acquisto è in attesa di approvazione.",
+  "success": "Ora sei Pro. Grazie.",
+  "mockBadge": "Store di prova · nessun addebito reale",
+  "giftBanner": "Il tuo regalo",
+  "creditsLink": "Ti servono solo crediti? Vedi i pacchetti di crediti",
+  "closeLabel": "Chiudi"
+}

@@ -1,0 +1,116 @@
+{
+  "title": "Pengaturan",
+  "sections": {
+    "subscription": "Langganan dan kredit",
+    "language": "Bahasa",
+    "notifications": "Notifikasi",
+    "preferences": "Preferensi",
+    "data": "Data dan privasi",
+    "account": "Akun",
+    "legal": "Legal dan dukungan",
+    "about": "Tentang",
+    "developer": "Pengembang"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Paket gratis",
+    "renews": "Diperpanjang {{date}}",
+    "expires": "Berakhir {{date}}",
+    "manage": "Kelola langganan",
+    "restore": "Pulihkan pembelian",
+    "upgrade": "Tingkatkan ke Pro",
+    "restoreDone": "Selamat datang kembali. Pro sudah dipulihkan.",
+    "restoreNone": "Tidak ada pembelian sebelumnya.",
+    "balance": "Saldo kredit",
+    "buyCredits": "Dapatkan kredit",
+    "freeHigh_other": "{{count}} pratinjau HD gratis"
+  },
+  "language": {
+    "title": "Bahasa",
+    "pickerTitle": "Pilih bahasa",
+    "rtlNote": "Mulai ulang Kök untuk mengganti arah tata letak.",
+    "closePicker": "Tutup daftar bahasa"
+  },
+  "notifications": {
+    "previews": "Pratinjau siap",
+    "offers": "Hadiah dan penawaran",
+    "reminders": "Pengingat perjalanan",
+    "remindersHint": "Pengingat perawatan, foto mingguan, dan fase. Pengingat fase adalah bagian dari Pro.",
+    "systemOff": "Notifikasi untuk Kök dimatikan di pengaturan sistem. Ketuk untuk membukanya."
+  },
+  "preferences": {
+    "haptics": "Haptik"
+  },
+  "data": {
+    "wipe": "Hapus semua data saya",
+    "wipeHint": "Menghapus foto perjalanan, catatan kerontokan, dan pratinjaumu dari perangkat ini.",
+    "wipeTitle": "Hapus semua datamu?",
+    "wipeBody": "Ini menghapus secara permanen tanggal operasi, foto progres, catatan kerontokan, dan pratinjau tersimpanmu. Langganan dan kreditmu tetap ada pada akunmu. Tindakan ini tidak dapat dibatalkan.",
+    "wipeConfirm": "Hapus data saya",
+    "wiping": "Menghapus…",
+    "wiped": "Datamu telah dihapus dari perangkat ini."
+  },
+  "account": {
+    "guest": "Akun anonim",
+    "id": "ID akun",
+    "delete": "Hapus akun",
+    "deleteHint": "Menghapus akun, kredit, dan foto yang diunggah dari server kami.",
+    "deleteTitle": "Hapus akunmu?",
+    "deleteBody": "Ini menghapus secara permanen akun, kredit, pratinjau tersimpan, dan foto apa pun yang kamu unggah, serta membersihkan perjalananmu di perangkat ini. Langganan yang aktif harus dibatalkan secara terpisah di pengaturan akun toko aplikasimu.",
+    "deleteConfirm": "Hapus akun",
+    "deleting": "Menghapus…",
+    "deleted": "Akunmu telah dihapus."
+  },
+  "legal": {
+    "privacy": "Kebijakan Privasi",
+    "terms": "Ketentuan Penggunaan",
+    "ai": "Cara kerja pratinjau AI",
+    "support": "Bantuan dan dukungan"
+  },
+  "about": {
+    "version": "Versi {{version}} ({{build}})",
+    "contact": "Email dukungan",
+    "rate": "Beri nilai Kök",
+    "replay": "Ulangi orientasi"
+  },
+  "confirm": {
+    "cancel": "Batal"
+  },
+  "developer": {
+    "open": "Alat pengembang",
+    "backend": "Mode backend",
+    "replayOnboarding": "Ulangi orientasi",
+    "offerings": "Penawaran toko",
+    "purchase": "Hasil pembelian",
+    "wheel": "Posisi roda hadiah",
+    "failNext": "Gagalkan pratinjau berikutnya",
+    "cohort": "Jumlah kohort untuk minggu saya",
+    "addCredits": "Beri 50 kredit",
+    "reset": "Reset semua data mock",
+    "resetDone": "Data mock telah direset.",
+    "credits": "Kredit diberikan.",
+    "testCrash": "Kirim crash uji",
+    "events": "Log peristiwa",
+    "empty": "Belum ada peristiwa",
+    "mockOnly": "Sakelar ini hanya ada pada backend mock.",
+    "values": {
+      "ok": "ok",
+      "slow": "lambat",
+      "fail": "gagal",
+      "empty": "kosong",
+      "success": "berhasil",
+      "cancel": "batal",
+      "home": "beranda",
+      "onboarding_exit": "keluar orientasi",
+      "off": "mati"
+    },
+    "storefront": "Mata uang etalase mock",
+    "giftOffer": "Tampilkan penawaran hadiah tanpa hadiah",
+    "forcePro": "Hak akses Pro",
+    "grantFreeHigh": "Beri pratinjau HD gratis",
+    "previewsEnabled": "Pratinjau aktif (kill switch)",
+    "nextPrize": "Hadiah roda berikutnya",
+    "honest": "undian jujur",
+    "offerCacheNote": "Perubahan toko berlaku pada percobaan ulang paywall berikutnya atau setelah lima menit."
+  }
+}

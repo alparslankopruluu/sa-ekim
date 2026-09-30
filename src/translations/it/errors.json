@@ -1,0 +1,16 @@
+{
+  "unauthenticated": "Riavvia l'app e riprova.",
+  "consent_required": "Prima leggi e accetta l'informativa sull'elaborazione IA.",
+  "invalid_input": "Qualcosa non sembrava corretto. Controlla e riprova.",
+  "content_blocked": "Questa foto o questo testo non può essere usato. Provane un altro.",
+  "insufficient_credits": "Non hai crediti sufficienti per questa operazione.",
+  "pro_required": "Questa è una funzione Pro.",
+  "rate_limited": "Stai andando troppo veloce. Aspetta un momento, poi riprova.",
+  "already_claimed": "L'hai già riscattato.",
+  "not_found": "Non siamo riusciti a trovarlo.",
+  "previews_disabled": "Le anteprime sono in pausa per un breve periodo. Il tuo percorso non è interessato. Riprova più tardi.",
+  "provider_failed": "Non è andata a buon fine. Riprova tra un momento.",
+  "timeout": "Ci è voluto troppo tempo. Riprova.",
+  "offline": "Sembra che tu sia offline. Controlla la connessione e riprova.",
+  "unknown": "Qualcosa è andato storto. Riprova."
+}

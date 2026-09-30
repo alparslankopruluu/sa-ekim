@@ -1,0 +1,117 @@
+{
+  "title": "Inställningar",
+  "sections": {
+    "subscription": "Prenumeration och krediter",
+    "language": "Språk",
+    "notifications": "Aviseringar",
+    "preferences": "Preferenser",
+    "data": "Data och integritet",
+    "account": "Konto",
+    "legal": "Juridiskt och support",
+    "about": "Om",
+    "developer": "Utvecklare"
+  },
+  "subscription": {
+    "pro": "Kök Pro",
+    "free": "Gratisplan",
+    "renews": "Förnyas {{date}}",
+    "expires": "Slutar {{date}}",
+    "manage": "Hantera prenumeration",
+    "restore": "Återställ köp",
+    "upgrade": "Uppgradera till Pro",
+    "restoreDone": "Välkommen tillbaka. Pro är återställt.",
+    "restoreNone": "Inga tidigare köp hittades.",
+    "balance": "Kreditsaldo",
+    "buyCredits": "Skaffa krediter",
+    "freeHigh_one": "{{count}} gratis HD-förhandsvisning",
+    "freeHigh_other": "{{count}} gratis HD-förhandsvisningar"
+  },
+  "language": {
+    "title": "Språk",
+    "pickerTitle": "Välj ett språk",
+    "rtlNote": "Starta om Kök för att byta layoutriktning.",
+    "closePicker": "Stäng språklistan"
+  },
+  "notifications": {
+    "previews": "Förhandsvisning klar",
+    "offers": "Gåvor och erbjudanden",
+    "reminders": "Reseråminnelser",
+    "remindersHint": "Skötsel-, veckobilds- och fasråminnelser. Fasråminnelser ingår i Pro.",
+    "systemOff": "Aviseringar är avstängda för Kök i systeminställningarna. Tryck för att öppna dem."
+  },
+  "preferences": {
+    "haptics": "Haptik"
+  },
+  "data": {
+    "wipe": "Radera all min data",
+    "wipeHint": "Tar bort dina bilder från resan, din hårfällningslogg och dina förhandsvisningar från den här enheten.",
+    "wipeTitle": "Radera all din data?",
+    "wipeBody": "Detta tar permanent bort ditt operationsdatum, dina framstegsbilder, din hårfällningslogg och dina sparade förhandsvisningar. Din prenumeration och dina krediter finns kvar på ditt konto. Det går inte att ångra.",
+    "wipeConfirm": "Radera min data",
+    "wiping": "Raderar…",
+    "wiped": "Din data raderades från den här enheten."
+  },
+  "account": {
+    "guest": "Anonymt konto",
+    "id": "Konto-ID",
+    "delete": "Radera konto",
+    "deleteHint": "Raderar ditt konto, dina krediter och uppladdade bilder från våra servrar.",
+    "deleteTitle": "Radera ditt konto?",
+    "deleteBody": "Detta raderar permanent ditt konto, dina krediter, sparade förhandsvisningar och alla bilder du laddat upp, och rensar din resa på den här enheten. En aktiv prenumeration måste avslutas separat i inställningarna för ditt butikskonto.",
+    "deleteConfirm": "Radera konto",
+    "deleting": "Raderar…",
+    "deleted": "Ditt konto raderades."
+  },
+  "legal": {
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "ai": "Så fungerar AI-förhandsvisningar",
+    "support": "Hjälp och support"
+  },
+  "about": {
+    "version": "Version {{version}} ({{build}})",
+    "contact": "Mejla support",
+    "rate": "Betygsätt Kök",
+    "replay": "Visa introduktionen igen"
+  },
+  "confirm": {
+    "cancel": "Avbryt"
+  },
+  "developer": {
+    "open": "Utvecklarverktyg",
+    "backend": "Backendläge",
+    "replayOnboarding": "Visa introduktionen igen",
+    "offerings": "Butikserbjudanden",
+    "purchase": "Köpresultat",
+    "wheel": "Placering av gåvohjul",
+    "failNext": "Låt nästa förhandsvisning misslyckas",
+    "cohort": "Gruppantal för min vecka",
+    "addCredits": "Ge 50 krediter",
+    "reset": "Återställ all mockdata",
+    "resetDone": "Mockdata återställdes.",
+    "credits": "Krediter tilldelade.",
+    "testCrash": "Skicka en testkrasch",
+    "events": "Händelselogg",
+    "empty": "Inga händelser ännu",
+    "mockOnly": "De här reglagen finns bara i mockbackenden.",
+    "values": {
+      "ok": "ok",
+      "slow": "långsam",
+      "fail": "misslyckas",
+      "empty": "tom",
+      "success": "lyckas",
+      "cancel": "avbryt",
+      "home": "hem",
+      "onboarding_exit": "utgång från introduktion",
+      "off": "av"
+    },
+    "storefront": "Valuta för mockbutik",
+    "giftOffer": "Visa gåvoerbjudandet utan pris",
+    "forcePro": "Pro-behörighet",
+    "grantFreeHigh": "Ge en gratis HD-förhandsvisning",
+    "previewsEnabled": "Förhandsvisningar aktiverade (nödstopp)",
+    "nextPrize": "Nästa hjulpris",
+    "honest": "ärlig dragning",
+    "offerCacheNote": "Butiksändringar tillämpas vid nästa nya försök på betalväggen eller efter fem minuter."
+  }
+}

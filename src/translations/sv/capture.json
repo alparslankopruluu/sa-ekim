@@ -1,0 +1,84 @@
+{
+  "close": "Stäng kameran",
+  "title": "Framstegsbild",
+  "angle": {
+    "front": "Framifrån",
+    "left": "Vänster sida",
+    "right": "Höger sida",
+    "top": "Ovanifrån",
+    "crown": "Hjässa"
+  },
+  "instruction": {
+    "front": "Håret torrt och stylat som vanligt. Placera ansiktet i ovalen med hårfästet nära överkanten.",
+    "left": "Vänd dig så att vänster sida syns. Håll telefonen upprätt i ögonhöjd.",
+    "right": "Vänd dig så att höger sida syns. Håll telefonen upprätt i ögonhöjd.",
+    "top": "Håll telefonen plant ovanför huvudet med skärmen uppåt, så att bakre kameran ser ner på hjässan.",
+    "crown": "Håll telefonen plant ovanför bakhuvudet med skärmen uppåt, så att bakre kameran ser ner på hjässan."
+  },
+  "cameraNote": {
+    "front": "Använder främre kameran så att du ser ramen.",
+    "back": "Använder bakre kameran. Håll telefonen plant eller be någon ta bilden. Du känner ett tryck när den är i våg."
+  },
+  "guide": {
+    "ghostHide": "Dölj föregående bild",
+    "ghostShow": "Visa föregående bild",
+    "ghostOverlay": "Överlagring av din föregående bild ({{angle}}), {{label}}",
+    "frame": "Kameravy med hjälplinjer"
+  },
+  "level": {
+    "ok": "I våg, redo",
+    "upright": "Håll telefonen upprätt",
+    "flat": "Håll telefonen plant, skärmen uppåt",
+    "unavailable": "Den här enheten saknar rörelsesensor, så vågkontrollen är avstängd. Se själv till att telefonen hålls upprätt.",
+    "a11yOk": "Telefonen är i våg. Du kan ta bilden.",
+    "a11yBlockedUpright": "Telefonen är inte upprätt ännu.",
+    "a11yBlockedFlat": "Telefonen ligger inte plant ännu."
+  },
+  "shutter": {
+    "label": "Ta bild",
+    "blockedUpright": "Håll telefonen upprätt för att ta bilden",
+    "blockedFlat": "Håll telefonen plant för att ta bilden"
+  },
+  "library": "Välj från bildbiblioteket",
+  "permission": {
+    "checking": "Kontrollerar kameraåtkomst…",
+    "title": "Kameraåtkomst är avstängd",
+    "body": "Kök använder kameran bara för dina framstegsbilder. De stannar på den här enheten. Du kan också välja en bild från ditt bildbibliotek.",
+    "allow": "Tillåt kameran",
+    "settings": "Öppna inställningar"
+  },
+  "unavailable": {
+    "title": "Kameran är inte tillgänglig här",
+    "body": "Du kan välja en bild från bildbiblioteket i stället."
+  },
+  "review": {
+    "retake": "Ta om",
+    "use": "Använd bilden",
+    "saving": "Sparar…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Den här bilden används bara för din förhandsvisning. Den läggs inte till i din resa.",
+    "a11y": "Granskning av bilden du just tog"
+  },
+  "error": {
+    "save": "Det gick inte att spara bilden. Försök igen.",
+    "capture": "Det gick inte att ta bilden. Försök igen.",
+    "pick": "Det gick inte att öppna bildbiblioteket. Försök igen."
+  },
+  "saved": "Bilden sparad",
+  "checking": "Kontrollerar din plan…",
+  "detail": {
+    "title": "Bild",
+    "image": "Bild ({{angle}}), {{label}}",
+    "taken": "Tagen {{date}}",
+    "compare": "Jämför med…",
+    "delete": "Ta bort bilden",
+    "confirmTitle": "Ta bort den här bilden?",
+    "confirmBody": "Den tas bort från den här enheten och kan inte återställas.",
+    "confirm": "Ta bort",
+    "cancel": "Behåll",
+    "missingTitle": "Bilden finns inte kvar",
+    "missingBody": "Den kan ha tagits bort.",
+    "close": "Stäng",
+    "loadError": "Bilden kan inte visas."
+  }
+}

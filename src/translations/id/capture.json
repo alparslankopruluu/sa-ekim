@@ -1,0 +1,84 @@
+{
+  "close": "Tutup kamera",
+  "title": "Foto progres",
+  "angle": {
+    "front": "Depan",
+    "left": "Sisi kiri",
+    "right": "Sisi kanan",
+    "top": "Atas",
+    "crown": "Ubun-ubun"
+  },
+  "instruction": {
+    "front": "Rambut kering dan ditata seperti biasa. Posisikan wajahmu di dalam oval dengan garis rambut dekat bagian atas.",
+    "left": "Menolehlah untuk menampilkan sisi kirimu. Pegang ponsel tegak setinggi mata.",
+    "right": "Menolehlah untuk menampilkan sisi kananmu. Pegang ponsel tegak setinggi mata.",
+    "top": "Pegang ponsel mendatar di atas kepalamu dengan layar menghadap ke atas, agar kamera belakang mengarah ke puncak kepalamu.",
+    "crown": "Pegang ponsel mendatar di atas bagian belakang kepalamu dengan layar menghadap ke atas, agar kamera belakang mengarah ke ubun-ubunmu."
+  },
+  "cameraNote": {
+    "front": "Memakai kamera depan agar kamu bisa melihat bingkainya.",
+    "back": "Memakai kamera belakang. Pegang ponsel mendatar, atau minta bantuan orang lain untuk memotret. Kamu akan merasakan getaran saat posisinya rata."
+  },
+  "guide": {
+    "ghostHide": "Sembunyikan foto sebelumnya",
+    "ghostShow": "Tampilkan foto sebelumnya",
+    "ghostOverlay": "Lapisan foto {{angle}} sebelumnya, {{label}}",
+    "frame": "Tampilan kamera dengan panduan bingkai"
+  },
+  "level": {
+    "ok": "Rata, siap",
+    "upright": "Pegang ponsel tegak",
+    "flat": "Pegang ponsel mendatar, layar menghadap ke atas",
+    "unavailable": "Perangkat ini tidak punya sensor gerak, jadi pemeriksaan kerataan dimatikan. Pastikan sendiri ponselmu tegak.",
+    "a11yOk": "Ponsel sudah rata. Kamu bisa mengambil foto.",
+    "a11yBlockedUpright": "Ponsel belum tegak.",
+    "a11yBlockedFlat": "Ponsel belum mendatar."
+  },
+  "shutter": {
+    "label": "Ambil foto",
+    "blockedUpright": "Pegang ponselmu tegak untuk mengambil foto",
+    "blockedFlat": "Pegang ponselmu mendatar untuk mengambil foto"
+  },
+  "library": "Pilih dari galeri",
+  "permission": {
+    "checking": "Memeriksa akses kamera…",
+    "title": "Akses kamera nonaktif",
+    "body": "Kök memakai kamera hanya untuk foto progresmu. Foto tetap ada di perangkat ini. Kamu juga bisa memilih foto dari galeri.",
+    "allow": "Izinkan kamera",
+    "settings": "Buka pengaturan"
+  },
+  "unavailable": {
+    "title": "Kamera tidak tersedia di sini",
+    "body": "Kamu bisa memilih foto dari galeri sebagai gantinya."
+  },
+  "review": {
+    "retake": "Ulangi",
+    "use": "Pakai foto",
+    "saving": "Menyimpan…",
+    "caption": "{{angle}} · {{label}}",
+    "previewOnly": "Foto ini hanya dipakai untuk pratinjaumu. Foto ini tidak ditambahkan ke perjalananmu.",
+    "a11y": "Tinjauan foto yang baru saja kamu ambil"
+  },
+  "error": {
+    "save": "Foto tidak dapat disimpan. Coba lagi.",
+    "capture": "Foto tidak dapat diambil. Coba lagi.",
+    "pick": "Galerimu tidak dapat dibuka. Coba lagi."
+  },
+  "saved": "Foto tersimpan",
+  "checking": "Memeriksa paketmu…",
+  "detail": {
+    "title": "Foto",
+    "image": "Foto {{angle}}, {{label}}",
+    "taken": "Diambil {{date}}",
+    "compare": "Bandingkan dengan…",
+    "delete": "Hapus foto",
+    "confirmTitle": "Hapus foto ini?",
+    "confirmBody": "Foto akan dihapus dari perangkat ini dan tidak dapat dipulihkan.",
+    "confirm": "Hapus",
+    "cancel": "Simpan saja",
+    "missingTitle": "Foto ini sudah tidak ada",
+    "missingBody": "Mungkin foto ini sudah dihapus.",
+    "close": "Tutup",
+    "loadError": "Foto ini tidak dapat ditampilkan."
+  }
+}

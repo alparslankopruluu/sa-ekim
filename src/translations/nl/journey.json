@@ -1,0 +1,257 @@
+{
+  "greeting": {
+    "morning": "Goedemorgen",
+    "afternoon": "Goedemiddag",
+    "evening": "Goedenavond",
+    "night": "Hallo, nachtbraker"
+  },
+  "today": {
+    "subtitleUnset": "Je traject begint met één datum.",
+    "subtitleUpcoming": "Operatie op {{date}}",
+    "editDate": "Bewerk je datum en trajectgegevens",
+    "bandTitle": "Jouw week op de gebruikelijke tijdlijn"
+  },
+  "hero": {
+    "day": "Dag",
+    "dayWeek": "Dag {{day}} · Week {{week}}",
+    "monthOf": "Maand {{month}} van ongeveer {{total}}",
+    "complete": "Voorbij de gebruikelijke periode van {{months}} maanden",
+    "untilOperation_one": "{{count}} dag tot je operatie",
+    "untilOperation_other": "{{count}} dagen tot je operatie",
+    "daysToGo_one": "dag te gaan",
+    "daysToGo_other": "dagen te gaan",
+    "session": "Sessie",
+    "ofTotal": "van {{total}}",
+    "prpSession": "Sessie {{current}} van {{total}}",
+    "prpDone": "Alle {{total}} sessies gelogd"
+  },
+  "phase": {
+    "rightNow": "Nu",
+    "expected": "Verwacht",
+    "normalLabel": "Gebruikelijk op dit moment",
+    "clinicNote": "Individuele resultaten verschillen — volg het advies van je eigen kliniek.",
+    "nextIn_one": "{{phase}} begint gewoonlijk over {{count}} dag",
+    "nextIn_other": "{{phase}} begint gewoonlijk over {{count}} dagen",
+    "last": "Dit is de laatste fase van de gebruikelijke tijdlijn.",
+    "openGuide": "Opent de gids voor deze fase"
+  },
+  "band": {
+    "a11y": "Grafiek van het gebruikelijke bereik over de groeitijdlijn. Je bent in de fase: {{phase}}. Individuele resultaten verschillen.",
+    "a11yNone": "Grafiek van het gebruikelijke bereik over de groeitijdlijn. Individuele resultaten verschillen.",
+    "a11yLocked": "Grafiek van het gebruikelijke bereik, beschikbaar met Pro.",
+    "lockChip": "Zie waar je bent · Pro",
+    "lockedHint": "Opent de Pro-abonnementen",
+    "start": "Operatie",
+    "end": "Rijping",
+    "disclaimer": "Gebruikelijk bereik — individuele resultaten verschillen",
+    "seeTimeline": "Tijdlijn"
+  },
+  "care": {
+    "items": {
+      "wash": "Zacht wassen, zoals je kliniek het liet zien",
+      "sleep": "Slaap met je hoofd omhoog",
+      "hands": "Blijf van de grafts af — niet krabben",
+      "sun": "Houd het gebied uit direct zonlicht"
+    }
+  },
+  "task": {
+    "eyebrow": "Volgende stap",
+    "photoCta": "Foto maken",
+    "baseline": {
+      "title": "Maak een “voor”-foto",
+      "body": "Een foto vóór de operatie maakt elke latere vergelijking duidelijker."
+    },
+    "care": {
+      "title": "Zorgchecklist van vandaag",
+      "doneTitle": "De zorg van vandaag is afgevinkt",
+      "body": "Veel klinieken adviseren dit in de eerste twee weken. De instructies van je eigen kliniek gaan voor.",
+      "progress": "{{done}} van {{total}} klaar"
+    },
+    "photo": {
+      "firstTitle": "Maak je eerste voortgangsfoto",
+      "weeklyTitle": "De foto van deze week",
+      "monthlyTitle": "De foto van deze maand",
+      "weeklyBody": "Wekelijks in de eerste drie maanden — dezelfde hoek, hetzelfde licht.",
+      "monthlyBody": "Maandelijks vanaf maand vier — dezelfde hoek, hetzelfde licht."
+    },
+    "shed": {
+      "title": "Log de haaruitval van vandaag",
+      "body": "Haaruitval in week 2–8 komt vaak voor. Een snelle telling helpt je het verloop in de tijd te zien.",
+      "cta": "Haaruitval loggen"
+    },
+    "prp": {
+      "title": "Sessie {{current}} van {{total}} staat gepland",
+      "bodyToday": "Vandaag is de geplande dag. Een foto vóór de sessie houdt je reeks vergelijkbaar.",
+      "bodyLate": "Gepland voor {{date}}. Markeer als klaar zodra het heeft plaatsgevonden.",
+      "markDone": "Markeer als klaar"
+    },
+    "caughtUp": {
+      "title": "Helemaal bij",
+      "body": "Vandaag hoeft er niets te gebeuren.",
+      "nextPhoto_one": "Volgende foto over {{count}} dag.",
+      "nextPhoto_other": "Volgende foto over {{count}} dagen.",
+      "nextSession_one": "Volgende sessie over {{count}} dag.",
+      "nextSession_other": "Volgende sessie over {{count}} dagen."
+    }
+  },
+  "setDate": {
+    "title": "Stel je operatiedatum in",
+    "body": "Kök gebruikt de datum om je dag, week en fase te tonen en om fotoherinneringen te plannen.",
+    "prpTitle": "Stel de datum van je eerste sessie in",
+    "prpBody": "Kök plant je sessies vanaf die datum en herinnert je er de dag ervoor aan.",
+    "cta": "Datum instellen",
+    "privacy": "Blijft op je telefoon."
+  },
+  "pre": {
+    "title": "Vóór je operatie",
+    "body": "Veel mensen vinden dit handig in de dagen ervoor. De instructies van je kliniek gaan voor.",
+    "tip1": "Maak “voor”-foto's van voren, van boven en van opzij bij goed licht.",
+    "tip2": "Vraag je kliniek om hun schriftelijke nazorginstructies.",
+    "tip3": "Plan na de operatie een paar rustige dagen in.",
+    "tip4": "Leg een nekkussen klaar om met je hoofd omhoog te slapen.",
+    "clinicNote": "Vragen over medicijnen of je gezondheid? Vraag het je kliniek of een arts."
+  },
+  "previewCard": {
+    "title": "Bekijk een stijl",
+    "body": "Een AI-preview om ideeën te verkennen — geen voorspelling van je resultaat."
+  },
+  "shedPeek": {
+    "title": "Recente haaruitval",
+    "hint": "Opent het uitvallogboek",
+    "note": "Haaruitval in week 2–8 komt vaak voor."
+  },
+  "tabs": {
+    "timeline": "Tijdlijn",
+    "photos": "Foto's",
+    "plan": "Plan"
+  },
+  "timeline": {
+    "bandTitle": "De gebruikelijke tijdlijn",
+    "phasesTitle": "Fases"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Dag {{from}}–{{to}}",
+    "weeks": "Week {{from}}–{{to}}",
+    "current": "Huidige fase",
+    "past": "Achter je",
+    "upcoming": "Voor je",
+    "youAreHere": "Je bent hier"
+  },
+  "maturation": {
+    "title": "Wanneer wordt het resultaat beoordeeld?",
+    "note": "Haar blijft gewoonlijk ongeveer {{months}} maanden na de operatie rijpen.",
+    "evaluate12": "Klinieken beoordelen het resultaat gewoonlijk rond 12 maanden.",
+    "evaluate18": "Klinieken kijken gewoonlijk rond 12 maanden naar het resultaat, en de kruin of scheiding kan tot 18 maanden blijven rijpen.",
+    "clinicNote": "Individuele resultaten verschillen — je kliniek bepaalt je eigen controles."
+  },
+  "photos": {
+    "add": "Toevoegen",
+    "count_one": "{{count}} foto",
+    "count_other": "{{count}} foto's",
+    "freeCounter_one": "{{count}} van {{limit}} gratis foto's",
+    "freeCounter_other": "{{count}} van {{limit}} gratis foto's",
+    "limitReached": "{{limit}} gratis foto's gebruikt — met Pro bewaar je onbeperkt foto's",
+    "allAngles": "Alle",
+    "before": "Vóór de operatie",
+    "week": "Week {{week}} · {{date}}",
+    "all": "Foto's",
+    "compare": "Vergelijken",
+    "compareHint": "Kies twee foto's om ze te vergelijken.",
+    "selectHint": "Selecteer twee foto's.",
+    "selected_one": "{{count}} van {{max}} geselecteerd",
+    "selected_other": "{{count}} van {{max}} geselecteerd",
+    "compareCta": "Vergelijken",
+    "groupCount_one": "{{count}} foto",
+    "groupCount_other": "{{count}} foto's",
+    "thumbLabel": "Foto ({{angle}}), {{group}}",
+    "missing": "Bestand ontbreekt",
+    "emptyTitle": "Nog geen foto's",
+    "emptyBody": "Maak één foto per hoek. De volgende keer helpt een vage schim ervan je om dezelfde opname te treffen.",
+    "emptyCta": "Maak de eerste foto",
+    "emptyFilter": "Nog geen foto's vanuit deze hoek."
+  },
+  "angles": {
+    "front": "Voorkant",
+    "left": "Links",
+    "right": "Rechts",
+    "top": "Boven",
+    "crown": "Kruin"
+  },
+  "plan": {
+    "intro": "Fotocontrolemomenten in de maanden waarop klinieken gewoonlijk kijken. Dezelfde hoek, hetzelfde licht.",
+    "checkpoint": "Maand {{month}}",
+    "status": {
+      "done": "Foto gemaakt",
+      "due": "Nu aan de beurt",
+      "upcoming": "Komend",
+      "missed": "Geen foto"
+    },
+    "takePhoto": "Foto maken",
+    "note": "Een controlemoment telt met elke foto van een week ervoor tot twee weken erna."
+  },
+  "prp": {
+    "timelineTitle": "Je PRP- / mesotherapiekuur",
+    "timelineBody": "Kuren worden gewoonlijk gepland als een paar sessies met een paar weken ertussen, gevolgd door onderhoud. Je kliniek bepaalt je eigen plan.",
+    "openPlan": "Open het plan",
+    "emptyTitle": "Plan je sessies",
+    "emptyBody": "Begin met een gebruikelijk plan: {{sessions}} sessies, {{weeks}} weken uit elkaar. Je kunt elke datum aanpassen.",
+    "createPlan": "Plan maken",
+    "intro": "Vink een sessie af zodra die heeft plaatsgevonden. Een foto vóór elke sessie houdt je reeks vergelijkbaar.",
+    "session": "Sessie {{number}}",
+    "done": "Klaar",
+    "due": "Aan de beurt",
+    "planned": "Gepland",
+    "markDoneLabel": "Sessie {{number}} op {{date}} klaar",
+    "changeDate": "Datum wijzigen",
+    "photoBefore": "Foto vooraf",
+    "remove": "Verwijderen",
+    "removeTitle": "Deze sessie verwijderen?",
+    "removeBody": "De herinnering ervoor wordt ook verwijderd.",
+    "addSession": "Sessie toevoegen",
+    "maintenanceTitle": "Onderhoud",
+    "maintenanceBody": "Veel klinieken stellen een onderhoudssessie voor ongeveer {{months}} maanden later — rond {{date}}.",
+    "clinicNote": "Volg het plan van je eigen kliniek."
+  },
+  "setup": {
+    "title": "Je traject",
+    "kindTitle": "Wat volg je?",
+    "kind": {
+      "transplant": {
+        "title": "Haartransplantatie",
+        "body": "Haarlijn, kruin, scheiding, wenkbrauwen of baard"
+      },
+      "prp": {
+        "title": "PRP- / mesotherapiekuur",
+        "body": "Een reeks sessies met een paar weken ertussen"
+      }
+    },
+    "goalTitle": "Welk gebied?",
+    "goals": {
+      "hairline": "Haarlijn",
+      "crown": "Kruin",
+      "part": "Scheiding",
+      "brows": "Wenkbrauwen",
+      "beard": "Baard"
+    },
+    "dateTitleTransplant": "Operatiedatum",
+    "dateTitlePrp": "Datum eerste sessie",
+    "day": "Dag",
+    "month": "Maand",
+    "year": "Jaar",
+    "relToday": "Dat is vandaag — dag 0",
+    "relPast": "Dag {{day}} · week {{week}}",
+    "relFuture_one": "Over {{count}} dag",
+    "relFuture_other": "Over {{count}} dagen",
+    "clinicTitle": "Kliniek (optioneel)",
+    "clinicPlaceholder": "Naam van de kliniek",
+    "clinicHint": "Alleen op deze telefoon. Wordt nooit geüpload.",
+    "clinicTooLong": "Houd het onder {{max}} tekens.",
+    "clinicBlocked": "Gebruik een andere naam.",
+    "save": "Opslaan",
+    "saved": "Opgeslagen",
+    "relabelTitle": "De datum wijzigen?",
+    "relabelBody": "Het dag- en weeklabel van elke foto wordt opnieuw berekend vanaf de nieuwe datum.",
+    "relabelConfirm": "Datum wijzigen"
+  }
+}

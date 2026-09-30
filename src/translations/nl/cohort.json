@@ -1,0 +1,28 @@
+{
+  "title": "Mensen in jouw week",
+  "locked": {
+    "title": "Anderen in jouw operatieweek",
+    "body": "Met Pro zie je hoeveel mensen in dezelfde week als jij zijn geopereerd. Je ziet altijd alleen een aantal.",
+    "cta": "Bekijk met Pro"
+  },
+  "join": {
+    "title": "Doe mee met jouw operatieweek",
+    "body": "Kies ervoor om mee te tellen met mensen die in dezelfde week zijn geopereerd. Alleen je operatiedatum, doel en type worden gedeeld. Nooit foto's, je naam of je kliniek.",
+    "switch": "Tel mij mee",
+    "needDate": "Stel eerst je operatiedatum in.",
+    "setDate": "Datum instellen"
+  },
+  "joining": "Deelnemen…",
+  "joined": "Je telt mee in jouw week",
+  "loading": "Je week controleren…",
+  "visible": "Je bent een van de {{count}} mensen in jouw week",
+  "invitation": "Je doet mee. Er verschijnt een aantal zodra genoeg mensen jouw week delen, zodat niemand eruit te pikken is.",
+  "privacy": "Alleen je operatiedatum, doel en type worden gedeeld.",
+  "error": {
+    "offline": "Je bent offline. Probeer het opnieuw als je verbonden bent.",
+    "busy": "Te veel verzoeken. Probeer het zo meteen opnieuw.",
+    "pro": "Hiervoor heb je Pro nodig.",
+    "generic": "De groep kon niet worden bereikt. Probeer het opnieuw.",
+    "retry": "Opnieuw proberen"
+  }
+}

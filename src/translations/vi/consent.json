@@ -1,0 +1,25 @@
+{
+  "title": "Trước khi tạo bản xem trước của bạn",
+  "body": "Bản xem trước được tạo bởi các mô hình ảnh AI, nên ảnh bạn chọn phải rời khỏi điện thoại. Dưới đây là những gì sẽ diễn ra.",
+  "sent": {
+    "title": "Chúng tôi gửi gì",
+    "body": "Chỉ ảnh bạn đã chọn cho bản xem trước này. Không gửi gì khác từ thư viện ảnh hay hành trình của bạn."
+  },
+  "who": {
+    "title": "Ai xử lý ảnh",
+    "body": "fal.ai thực hiện việc chỉnh sửa ảnh, sử dụng các mô hình ảnh của OpenAI."
+  },
+  "retention": {
+    "title": "Ảnh được giữ bao lâu",
+    "body": "Ảnh gốc và kết quả xem trước của bạn đều bị xóa khỏi máy chủ của chúng tôi trong vòng 30 ngày. Bạn có thể xóa sớm hơn từ tab Xem trước."
+  },
+  "choice": {
+    "title": "Lựa chọn của bạn",
+    "body": "Bạn có thể từ chối mà vẫn dùng được toàn bộ hành trình. Ảnh bạn chụp cho dòng thời gian được giữ trên thiết bị của bạn."
+  },
+  "note": "Bản xem trước AI cho thấy một khả năng. Đó không phải là dự đoán về kết quả của bạn.",
+  "policy": "Đọc chính sách quyền riêng tư",
+  "accept": "Đồng ý và tiếp tục",
+  "decline": "Để sau",
+  "error": "Chúng tôi không lưu được lựa chọn của bạn. Hãy kiểm tra kết nối và thử lại."
+}

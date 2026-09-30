@@ -1,0 +1,28 @@
+{
+  "title": "Menschen in deiner Woche",
+  "locked": {
+    "title": "Andere in deiner OP-Woche",
+    "body": "Pro zeigt dir, wie viele Menschen in derselben Woche wie du operiert wurden. Du siehst immer nur eine Zahl.",
+    "cta": "Mit Pro ansehen"
+  },
+  "join": {
+    "title": "Tritt deiner OP-Woche bei",
+    "body": "Melde dich an, um mit Menschen gezählt zu werden, die in derselben Woche operiert wurden. Geteilt werden nur dein OP-Datum, dein Ziel und die Art. Niemals Fotos, dein Name oder deine Klinik.",
+    "switch": "Zähl mich mit",
+    "needDate": "Lege zuerst dein OP-Datum fest.",
+    "setDate": "Datum festlegen"
+  },
+  "joining": "Wird beigetreten…",
+  "joined": "Du wirst in deiner Woche mitgezählt",
+  "loading": "Deine Woche wird geprüft…",
+  "visible": "Du bist einer von {{count}} Menschen in deiner Woche",
+  "invitation": "Du bist dabei. Eine Zahl erscheint, sobald genug Menschen deine Woche teilen, damit niemand herausgegriffen werden kann.",
+  "privacy": "Nur dein OP-Datum, dein Ziel und die Art werden geteilt.",
+  "error": {
+    "offline": "Du bist offline. Versuche es erneut, sobald du verbunden bist.",
+    "busy": "Zu viele Anfragen. Versuche es gleich noch einmal.",
+    "pro": "Dafür brauchst du Pro.",
+    "generic": "Die Gruppe ist nicht erreichbar. Versuche es erneut.",
+    "retry": "Erneut versuchen"
+  }
+}

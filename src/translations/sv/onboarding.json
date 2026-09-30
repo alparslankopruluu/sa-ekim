@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "kicker": "Följeslagare för hårtransplantation",
+    "title": "Se vad som är typiskt för din återhämtningsvecka",
+    "subtitle": "Förhandsvisa en förändring före operationen och följ sedan vad som är typiskt för varje vecka av din återhämtning.",
+    "cta": "Kom igång",
+    "demoLabel": "Exempel på före-och-efter-reglaget. Dra för att jämföra.",
+    "demoBefore": "Före",
+    "demoAfter": "Efter",
+    "demoCaption": "Bara en illustration. Din egen förhandsvisning kommer senare.",
+    "legalPrefix": "Genom att fortsätta godkänner du våra",
+    "terms": "Villkor",
+    "privacy": "Integritetspolicy"
+  },
+  "goal": {
+    "title": "Vad arbetar du med?",
+    "subtitle": "Vi anpassar din tidslinje och dina bildvinklar efter det.",
+    "hairline": {
+      "title": "Hårfäste",
+      "subtitle": "Framsidan och tinningarna"
+    },
+    "crown": {
+      "title": "Hjässa",
+      "subtitle": "Bak- och ovansidan av huvudet"
+    },
+    "part": {
+      "title": "Bena",
+      "subtitle": "Täthet längs benan"
+    },
+    "brows": {
+      "title": "Ögonbryn",
+      "subtitle": "Ögonbrynstransplantation"
+    },
+    "beard": {
+      "title": "Skägg",
+      "subtitle": "Skägg och mustasch"
+    }
+  },
+  "stage": {
+    "title": "Var är du i processen?",
+    "subtitle": "Det avgör vad vi visar dig först.",
+    "researching": {
+      "title": "Undersöker fortfarande",
+      "subtitle": "Utforskar alternativ, inget bokat än"
+    },
+    "planned": {
+      "title": "Operation bokad",
+      "subtitle": "Jag har ett datum på gång"
+    },
+    "done": {
+      "title": "Redan gjort",
+      "subtitle": "Jag vill följa min återhämtning"
+    }
+  },
+  "date": {
+    "titlePlanned": "När är din operation?",
+    "titleDone": "När var din operation?",
+    "subtitlePlanned": "Vi räknar ner till dag 0 och förbereder dina första veckor.",
+    "subtitleDone": "Vi visar vilken fas du är i och vad som är typiskt den här veckan.",
+    "wheelDay": "Dag",
+    "wheelMonth": "Månad",
+    "wheelYear": "År",
+    "feedbackPast": "Dag {{day}} · Vecka {{week}}",
+    "feedbackToday": "Idag är dag 0",
+    "feedbackFuture_one": "Om {{count}} dag",
+    "feedbackFuture_other": "Om {{count}} dagar",
+    "errorMustBeFuture": "Välj idag eller ett senare datum.",
+    "errorMustBePast": "Välj idag eller ett tidigare datum.",
+    "errorTooFar": "Det datumet ligger för långt fram för att följas. Välj ett närmare.",
+    "errorInvalid": "Det datumet finns inte.",
+    "skip": "Jag vet inte än",
+    "skipNote": "Du kan ange eller ändra det senare under din resa."
+  },
+  "photo": {
+    "title": "Lägg till en bild för din förhandsvisning",
+    "subtitleResearching": "Se en AI-förhandsvisning av hur en förändring skulle kunna se ut, innan du bestämmer dig för något.",
+    "subtitlePlanned": "Se en AI-förhandsvisning av hur din operation skulle kunna se ut.",
+    "subtitleDone": "Se en AI-förhandsvisning av hur ditt resultat skulle kunna se ut när det mognar.",
+    "guidanceTitle": "För bästa förhandsvisning",
+    "angle": {
+      "front": "Vänd dig rakt mot kameran, med telefonen i ögonhöjd.",
+      "top": "Håll telefonen ovanför huvudet och rikta den nedåt mot hjässan.",
+      "crown": "Fotografera bakhuvudet, helst med någons hjälp."
+    },
+    "area": {
+      "hairline": "Kamma tillbaka håret så att hårfästet syns tydligt.",
+      "crown": "Håll hjässan fri och håret platt.",
+      "part": "Skilj håret så som du brukar bära det.",
+      "brows": "Håll ögonbrynen fria från hår och glasögon.",
+      "beard": "Håll skäggområdet fritt och i jämnt ljus."
+    },
+    "light": "Använd dagsljus, inga filter och ingen mössa.",
+    "take": "Ta en bild",
+    "library": "Välj från bildbiblioteket",
+    "change": "Välj en annan bild",
+    "selected": "Din valda bild",
+    "placeholder": "Ingen bild vald ännu",
+    "privacy": "Din bild skickas bara för att skapa förhandsvisningen, och bara efter att du godkänt på nästa skärm.",
+    "skip": "Hoppa över förhandsvisningen",
+    "skipNote": "Du kan skapa en senare från fliken Förhandsvisningar.",
+    "permissionDenied": "Vi kunde inte öppna dina bilder. Kontrollera behörigheten i Inställningar."
+  },
+  "notify": {
+    "title": "Missa aldrig de viktiga ögonblicken",
+    "subtitle": "Återhämtning tar tid. En vänlig påminnelse i rätt ögonblick sköter minnet åt dig.",
+    "bulletPhase": "Vi berättar när en fas byts",
+    "bulletPhoto": "Vi berättar när det är dags för bild",
+    "bulletCare": "Dagliga skötselpåminnelser de första två veckorna",
+    "allow": "Slå på påminnelser",
+    "skip": "Inte nu",
+    "note": "Skötselpåminnelser är gratis. Fas- och bildpåminnelser ingår i Pro. Du kan ändra detta när som helst i Inställningar."
+  },
+  "crafting": {
+    "title": "Skapar din förhandsvisning",
+    "titleDone": "Din förhandsvisning är klar",
+    "subtitle": "Det tar oftast under en minut.",
+    "ringLabel": "Förhandsvisningens förlopp, {{percent}} procent",
+    "lineUpload": "Skickar din bild säkert",
+    "lineReserve": "Reserverar din gratis förhandsvisning",
+    "lineEdit": "Redigerar {{area}}",
+    "lineFinish": "Lägger till sista finslipet",
+    "stateDone": "klart",
+    "stateActive": "pågår",
+    "statePending": "väntar",
+    "area": {
+      "hairline": "ditt hårfäste",
+      "crown": "din hjässa",
+      "part": "din bena",
+      "brows": "dina ögonbryn",
+      "beard": "ditt skägg"
+    },
+    "skip": "Hoppa över för nu",
+    "skipNote": "Din förhandsvisning fortsätter skapas och väntar på dig under fliken Förhandsvisningar.",
+    "failedTitle": "Vi kunde inte slutföra din förhandsvisning",
+    "failedOffline": "Du verkar vara offline. Ingenting har debiterats. Kontrollera anslutningen och försök igen.",
+    "failedGeneric": "Något gick fel hos oss. Ingenting har debiterats. Du kan försöka igen eller fortsätta utan den.",
+    "failedBlocked": "Den här bilden kan inte användas för en förhandsvisning. Ingenting har debiterats. Du kan fortsätta och prova en annan bild senare.",
+    "skipFailed": "Fortsätt utan förhandsvisning"
+  },
+  "reveal": {
+    "title": "Här är en förhandsvisning av vad som kan bli",
+    "subtitle": "Dra i handtaget för att jämföra. Det är en illustration skapad av AI.",
+    "before": "Din bild",
+    "after": "AI-förhandsvisning",
+    "disclaimer": "AI-förhandsvisning – inte en förutsägelse av ditt resultat",
+    "watermark": "Gratis förhandsvisningar har ett litet vattenmärke.",
+    "wipeLabel": "Före-och-efter-jämförelse av din bild. Dra för att jämföra.",
+    "loading": "Förbereder din förhandsvisning",
+    "loadFailed": "Vi kunde inte ladda förhandsvisningsbilden. Den är sparad under fliken Förhandsvisningar.",
+    "cta": "Se min plan"
+  }
+}

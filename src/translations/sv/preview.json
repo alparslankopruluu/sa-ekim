@@ -1,0 +1,250 @@
+{
+  "title": "Ny förhandsvisning",
+  "subtitle": "Välj en stil och en bild för att se ett möjligt utseende.",
+  "aiLabel": "AI-förhandsvisning – inte en förutsägelse av ditt resultat",
+  "aiLabelShort": "AI-förhandsvisning",
+  "aiLabelDetail": "Den visar ett möjligt utseende, inte vad som kommer att hända.",
+  "common": {
+    "close": "Stäng",
+    "back": "Tillbaka",
+    "retry": "Försök igen",
+    "cancel": "Avbryt",
+    "delete": "Ta bort"
+  },
+  "goals": {
+    "label": "Område",
+    "hairline": "Hårfäste",
+    "crown": "Hjässa",
+    "part": "Bena",
+    "brows": "Ögonbryn",
+    "beard": "Skägg"
+  },
+  "angles": {
+    "front": "bild framifrån",
+    "left": "bild från vänster sida",
+    "right": "bild från höger sida",
+    "top": "bild ovanifrån",
+    "crown": "bild av hjässan"
+  },
+  "styles": {
+    "label": "Stil",
+    "hairline_soft": {
+      "name": "Mjukare naturligt hårfäste",
+      "description": "Ett försiktigt mjukat hårfäste som behåller en naturlig form."
+    },
+    "hairline_temples": {
+      "name": "Förfinade tinningar",
+      "description": "Ett mer balanserat utseende kring tinningarna."
+    },
+    "hairline_lower": {
+      "name": "Lägre, mer markerad linje",
+      "description": "Ett något lägre, mer markerat hårfäste."
+    },
+    "hairline_density": {
+      "name": "Ökad täthet",
+      "description": "Ett tätare utseende inom ditt nuvarande hårfäste."
+    },
+    "crown_light": {
+      "name": "Lätt",
+      "description": "Lätt täckning på hjässan."
+    },
+    "crown_medium": {
+      "name": "Medel",
+      "description": "Medelgod täckning på hjässan."
+    },
+    "crown_full": {
+      "name": "Full",
+      "description": "Full täckning på hjässan."
+    },
+    "part_light": {
+      "name": "Lätt",
+      "description": "Lätt fyllighet längs benan."
+    },
+    "part_medium": {
+      "name": "Medel",
+      "description": "Medelgod fyllighet längs benan."
+    },
+    "part_full": {
+      "name": "Full",
+      "description": "Ett fylligt utseende längs benan."
+    },
+    "brows_natural": {
+      "name": "Naturliga",
+      "description": "Naturliga ögonbryn som behåller din egen form."
+    },
+    "brows_fuller": {
+      "name": "Fylligare",
+      "description": "Din egen form, lite fylligare."
+    },
+    "brows_arched": {
+      "name": "Välvda",
+      "description": "En mjukt välvd, välordnad brynlinje."
+    },
+    "beard_patch": {
+      "name": "Fyllda fläckar",
+      "description": "Glesa fläckar fylls i."
+    },
+    "beard_full": {
+      "name": "Fullskägg",
+      "description": "Ett fylligare skägg över käken och kinderna."
+    },
+    "beard_moustache": {
+      "name": "Mustasch",
+      "description": "Ett fylligare utseende ovanför läppen."
+    }
+  },
+  "bestAngle": "Fungerar bäst med en {{angle}}",
+  "density": {
+    "label": "Täthet",
+    "natural": "Naturlig",
+    "fuller": "Fylligare",
+    "full": "Full"
+  },
+  "quality": {
+    "label": "Kvalitet",
+    "standard": {
+      "title": "Standard",
+      "description": "En snabb första titt."
+    },
+    "high": {
+      "title": "Hög",
+      "description": "Mer detaljer."
+    }
+  },
+  "price": {
+    "label": "Den här förhandsvisningen",
+    "free": "Gratis",
+    "freeHigh": "Gratis HD-förhandsvisning",
+    "credits_one": "{{count}} kredit",
+    "credits_other": "{{count}} krediter",
+    "freeNote": "Din första förhandsvisning är gratis och har ett vattenmärke.",
+    "balance_one": "Du har {{count}} kredit.",
+    "balance_other": "Du har {{count}} krediter.",
+    "short_one": "Du har {{count}} kredit, och den här förhandsvisningen kräver {{cost}}.",
+    "short_other": "Du har {{count}} krediter, och den här förhandsvisningen kräver {{cost}}.",
+    "useFreeHigh": "Använd min gratis HD-förhandsvisning",
+    "useFreeHighHint_one": "Du har {{count}} gratis HD-förhandsvisning.",
+    "useFreeHighHint_other": "Du har {{count}} gratis HD-förhandsvisningar."
+  },
+  "photo": {
+    "label": "Bild",
+    "empty": "Ingen bild ännu",
+    "take": "Ta en bild",
+    "library": "Välj från bildbiblioteket",
+    "journey": "Använd senaste bilden från resan",
+    "journeySub": "{{angle}} · {{date}}",
+    "remove": "Ta bort bilden",
+    "selected": "Vald bild",
+    "sentNote": "Din bild skickas bara när du trycker på Skapa, efter att du godkänt AI-behandling.",
+    "libraryFailed": "Vi kunde inte öppna ditt bildbibliotek."
+  },
+  "cta": {
+    "create": "Skapa förhandsvisning",
+    "createFree": "Skapa gratis förhandsvisning",
+    "getCredits": "Skaffa krediter",
+    "continue": "Fortsätt",
+    "addPhoto": "Lägg till en bild för att fortsätta",
+    "chooseStyle": "Välj en stil för att fortsätta"
+  },
+  "helper": {
+    "needsConsent": "Innan din bild skickas ber vi om ditt godkännande en gång.",
+    "needsCredits": "Du behöver fler krediter för den här förhandsvisningen.",
+    "walletError": "Vi kunde inte ladda dina krediter."
+  },
+  "rendering": {
+    "title": "Din förhandsvisning",
+    "status": {
+      "uploading": "Skickar din bild",
+      "creating": "Startar din förhandsvisning",
+      "waiting": "Startar din förhandsvisning",
+      "queued": "Väntar på en ledig plats",
+      "processing": "Skapar din förhandsvisning",
+      "finalizing": "Gör den klar"
+    },
+    "estimate": "Tar oftast under en minut.",
+    "background": "Du kan lämna den här skärmen. Vi fortsätter och berättar när den är klar.",
+    "notifyMe": "Meddela mig när den är klar",
+    "notifyOn": "Vi meddelar dig när den är klar.",
+    "keepBrowsing": "Fortsätt bläddra",
+    "cancel": "Avbryt förhandsvisningen",
+    "cancelHint": "Dina krediter återförs om du avbryter.",
+    "cancelTooLate": "Den håller redan på att slutföras och kan inte avbrytas nu.",
+    "failedTitle": "Den här förhandsvisningen slutfördes inte",
+    "canceledTitle": "Förhandsvisningen avbröts",
+    "offlineTitle": "Du är offline",
+    "errorTitle": "Vi kunde inte starta förhandsvisningen",
+    "refunded_one": "Din {{count}} kredit återfördes.",
+    "refunded_other": "Dina {{count}} krediter återfördes.",
+    "nothingCharged": "Ingenting har debiterats.",
+    "retrySafe": "Det är säkert att försöka igen: du debiteras inte två gånger.",
+    "retry": "Försök igen",
+    "getCredits": "Skaffa krediter",
+    "reviewConsent": "Granska och godkänn",
+    "seePlans": "Se planer",
+    "choosePhoto": "Välj en annan bild",
+    "backToStyles": "Tillbaka till stilar",
+    "close": "Stäng",
+    "photoA11y": "Din bild",
+    "ringA11y": "Förhandsvisningens förlopp, {{percent}} procent"
+  },
+  "result": {
+    "title": "Din förhandsvisning",
+    "before": "Din bild",
+    "after": "AI-förhandsvisning",
+    "watermark": "Kök · AI-förhandsvisning",
+    "wipeA11y": "Före-och-efter-reglage. Svep uppåt eller nedåt för att jämföra din bild med AI-förhandsvisningen.",
+    "demo": "Demo",
+    "save": "Spara",
+    "share": "Dela",
+    "report": "Rapportera",
+    "delete": "Ta bort",
+    "saved": "Sparad i dina bilder",
+    "saveDenied": "Tillåt åtkomst till bilder i Inställningar för att spara förhandsvisningar.",
+    "unsupported": "Att spara och dela är inte tillgängligt för den här förhandsvisningen här.",
+    "shareTitle": "Dela din AI-förhandsvisning",
+    "tryAnother": "Prova en annan stil",
+    "upgradeTitle": "Vill du ha fler detaljer?",
+    "upgradeBody": "En HD-förhandsvisning har fler detaljer och inget vattenmärke.",
+    "notFound": "Vi hittade inte den här förhandsvisningen. Förhandsvisningar raderas efter 30 dagar.",
+    "toPreviews": "Tillbaka till förhandsvisningar",
+    "beforeGone": "Din originalbild sparas bara i 30 dagar, så jämförelsen är inte längre tillgänglig.",
+    "loadFailed": "Vi kunde inte ladda den här förhandsvisningen.",
+    "meta": "{{style}} · {{density}} · {{quality}}",
+    "upgradeTry_one": "Skapa en HD-förhandsvisning ({{count}} kredit)",
+    "upgradeTry_other": "Skapa en HD-förhandsvisning ({{count}} krediter)",
+    "upgradeTryFree": "Skapa en gratis HD-förhandsvisning",
+    "availableUntil": "Tillgänglig till {{date}}",
+    "saveNudge": "Förhandsvisningar raderas efter 30 dagar. Spara den i dina bilder för att behålla en kopia.",
+    "saveNudgeSoon": "Den här förhandsvisningen raderas snart. Spara den i dina bilder för att behålla en kopia.",
+    "expiredTitle": "Den här förhandsvisningen raderades efter 30 dagar",
+    "expiredBody": "Förhandsvisningar och bilderna de skapades av tas bort efter 30 dagar. Du kan skapa en ny när som helst."
+  },
+  "delete": {
+    "title": "Ta bort den här förhandsvisningen?",
+    "body": "Förhandsvisningsbilden raderas för gott. Det går inte att ångra.",
+    "done": "Förhandsvisningen togs bort"
+  },
+  "tab": {
+    "title": "Förhandsvisningar",
+    "new": "Ny förhandsvisning",
+    "honest": "Förhandsvisningar är AI-skapade bilder av ett möjligt utseende.",
+    "emptyTitle": "Inga förhandsvisningar ännu",
+    "emptyBody": "En förhandsvisning är en AI-skapad bild av ett möjligt utseende, inte vad som kommer att hända. Prova en stil på din egen bild och jämför.",
+    "emptyCta": "Skapa en förhandsvisning",
+    "loadFailed": "Vi kunde inte ladda dina förhandsvisningar.",
+    "menu": "Fler åtgärder",
+    "status": {
+      "queued": "Väntar",
+      "processing": "Skapar · {{percent}} %",
+      "finalizing": "Gör den klar",
+      "failed": "Slutfördes inte",
+      "canceled": "Avbruten"
+    },
+    "cardA11y": "{{style}}, {{status}}, {{date}}",
+    "retry": "Försök igen",
+    "delete": "Ta bort",
+    "deleteA11y": "Ta bort förhandsvisning",
+    "availableUntil": "Till {{date}}",
+    "expired": "Raderad efter 30 dagar"
+  }
+}

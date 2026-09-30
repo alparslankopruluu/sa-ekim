@@ -1,0 +1,146 @@
+{
+  "updated": "Última atualização: {{date}}",
+  "openWeb": "Abrir versão web",
+  "emailSupport": "Enviar e-mail ao suporte",
+  "publisher": "O Kök é publicado pela Techtactoe App Studio.",
+  "privacy": {
+    "title": "Política de Privacidade",
+    "sections": [
+      {
+        "heading": "Resumo",
+        "body": "As fotos da sua jornada ficam no seu celular. O Kök envia uma foto apenas quando você pede uma prévia de IA, e tanto essa foto quanto a imagem de prévia resultante são excluídas dos nossos servidores em até 30 dias. O Kök não exibe anúncios e não vende seus dados. O Kök não é aconselhamento médico."
+      },
+      {
+        "heading": "O que fica no seu aparelho",
+        "body": "A data da sua operação, suas fotos de progresso, o registro de queda e o nome da clínica ficam armazenados apenas no seu aparelho. O Kök nunca envia as fotos da jornada. Elas são incluídas no backup do próprio celular (iCloud ou Backup do Android), se você o tiver ativado."
+      },
+      {
+        "heading": "O que coletamos",
+        "body": "Um ID de conta anônimo (Firebase Authentication), para que você não precise informar nome nem e-mail. Seu saldo de créditos e o status das compras. Suas escolhas de idioma e de notificações. Eventos de uso, relatórios de falhas e dados de desempenho (Firebase Analytics, Crashlytics e Performance Monitoring). Um token de push, somente se você permitir notificações. Se você criar uma prévia: a única foto que você escolher, o estilo e a qualidade selecionados e a prévia resultante. Se você participar do grupo opcional da mesma semana: a data da operação, o objetivo e o tipo de jornada, e nada mais. Não coletamos seu nome, seus contatos nem sua localização precisa. O Kök não rastreia você em outros apps ou sites e não usa seu identificador de publicidade."
+      },
+      {
+        "heading": "Prévias de IA",
+        "body": "Quando você cria uma prévia, a foto escolhida é enviada aos nossos servidores e processada pela fal.ai, que executa modelos de imagem da OpenAI em nosso nome. O Kök pede sua concordância antes do primeiro envio, e esse aviso cita esses provedores. A foto é usada apenas para produzir essa prévia. Não usamos suas fotos para treinar modelos de IA. A foto enviada e a imagem da prévia são excluídas dos nossos servidores em até 30 dias, então salve a prévia na sua galeria de fotos se quiser guardá-la. Toda prévia é uma ilustração de IA, não uma previsão do seu resultado."
+      },
+      {
+        "heading": "Prestadores de serviço",
+        "body": "Compartilhamos dados apenas com empresas que os processam por nós: Google Firebase (conta, banco de dados, armazenamento de arquivos, funções, análises, relatórios de falhas, desempenho, configuração remota, verificações de integridade do app e notificações push); fal.ai e os modelos de imagem da OpenAI que ela executa (prévias de IA); RevenueCat (assinaturas e compras); Apple e Google (pagamentos e distribuição do app). O Kök não contém publicidade e não compartilha dados com anunciantes."
+      },
+      {
+        "heading": "Por quanto tempo guardamos os dados",
+        "body": "Dados da jornada: no seu aparelho, até você excluí-los. Fotos de prévia enviadas e imagens de prévia: no máximo 30 dias nos nossos servidores. Dados de uso e de falhas: até 14 meses. Registros de compra: pelo tempo exigido pela legislação fiscal e contábil. Denúncias que você enviar sobre uma prévia: pelo tempo necessário para analisá-las e tomar providências."
+      },
+      {
+        "heading": "Suas escolhas e a exclusão",
+        "body": "Em Ajustes, Dados e privacidade, Excluir todos os meus dados remove do aparelho as fotos da jornada, o registro de queda e as prévias. Em Ajustes, Conta, Excluir conta remove imediatamente dos nossos servidores sua conta, seus créditos, suas prévias e qualquer foto enviada, e apaga a sua jornada no aparelho. Você também pode desativar as notificações ali. Nada é enviado, a menos que você crie uma prévia. Excluir sua conta não cancela uma assinatura: cancele-a nos ajustes da sua conta da App Store ou do Google Play. Dependendo de onde você mora (por exemplo, conforme a LGPD, o GDPR, a KVKK da Turquia ou a CCPA da Califórnia), você pode ter direitos de acessar, corrigir, excluir ou exportar seus dados e de retirar o consentimento. Para fazer uma solicitação, envie um e-mail para techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Crianças e adolescentes",
+        "body": "O Kök é destinado a adultos. Não coletamos intencionalmente informações de pessoas com menos de 18 anos."
+      },
+      {
+        "heading": "Não é aconselhamento médico",
+        "body": "O Kök é uma ferramenta de educação e acompanhamento. Ele não diagnostica, não trata nem prevê nada, e sua linha do tempo mostra apenas faixas típicas. Em caso de qualquer preocupação, entre em contato com sua clínica ou um médico."
+      },
+      {
+        "heading": "Alterações e contato",
+        "body": "Se esta política mudar, a data acima mudará junto. Dúvidas ou solicitações: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Termos de Uso",
+    "sections": [
+      {
+        "heading": "Como usar o Kök",
+        "body": "O Kök ajuda você a acompanhar uma jornada de transplante capilar, PRP ou restauração capilar semelhante, com as suas próprias fotos e uma linha do tempo típica, e permite criar prévias de IA. Você deve ser adulto e ter capacidade para firmar este acordo. Ao usar o Kök, você aceita estes termos."
+      },
+      {
+        "heading": "Não é aconselhamento médico",
+        "body": "O Kök não é um dispositivo médico e não oferece aconselhamento, diagnóstico nem tratamento médico. As linhas do tempo e os guias descrevem o que é típico e não são uma promessa sobre o seu resultado. Se você notar febre, vermelhidão que se espalha, pus, dor forte ou sangramento intenso, entre em contato com sua clínica ou um médico."
+      },
+      {
+        "heading": "Prévias de IA",
+        "body": "Uma prévia é uma ilustração de IA feita a partir da sua foto. Ela não é uma previsão, uma promessa nem um plano para o seu resultado, e não mostra contagem de enxertos. A prévia gratuita da integração inicial leva uma marca d'água. As prévias são mantidas por 30 dias, então salve uma na sua galeria de fotos para guardá-la. Use as prévias com responsabilidade e não as apresente como uma fotografia real."
+      },
+      {
+        "heading": "Fotos e conteúdo",
+        "body": "Use apenas fotos suas ou de alguém que tenha concordado claramente. Não envie fotos de menores, de figuras públicas nem nada sexual, de ódio, de assédio, enganoso ou ilegal. Podemos bloquear conteúdo e suspender o acesso de quem violar estas regras. Você pode denunciar qualquer prévia na tela dela."
+      },
+      {
+        "heading": "Assinaturas e créditos",
+        "body": "O Kök Pro é oferecido como assinatura semanal, mensal ou anual, pelo preço que a sua loja exibe. Não há teste gratuito. As assinaturas são renovadas automaticamente até você cancelar nos ajustes da sua conta da App Store ou do Google Play, e os reembolsos seguem as regras da Apple ou do Google. Os pacotes de créditos são compras únicas. Uma prévia padrão usa 1 crédito e uma prévia HD usa 3. Se uma prévia falhar, os créditos dela são devolvidos automaticamente. Os créditos não têm valor em dinheiro e não podem ser transferidos. Você pode restaurar compras na tela de assinatura ou em Ajustes."
+      },
+      {
+        "heading": "Seu conteúdo",
+        "body": "Você mantém a propriedade das suas fotos e prévias. Você nos concede uma permissão limitada para processar o que enviar apenas para prestar o serviço que você pediu."
+      },
+      {
+        "heading": "Disponibilidade e responsabilidade",
+        "body": "O Kök é fornecido no estado em que se encontra e conforme a disponibilidade. Na medida em que a lei permitir, não nos responsabilizamos por danos indiretos ou consequenciais, e nada aqui limita os direitos que você tem sob a lei de defesa do consumidor e que não podem ser dispensados."
+      },
+      {
+        "heading": "Encerrar o uso",
+        "body": "Você pode parar de usar o Kök e excluir sua conta a qualquer momento em Ajustes. Podemos alterar estes termos e atualizaremos a data quando o fizermos."
+      },
+      {
+        "heading": "Contato",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Como funcionam as prévias de IA",
+    "sections": [
+      {
+        "heading": "O que é uma prévia",
+        "body": "Uma prévia é uma ilustração de IA de como um estilo escolhido poderia ficar na sua foto. Ela não é uma previsão do seu resultado, e um aviso dizendo isso permanece visível em todas as prévias."
+      },
+      {
+        "heading": "O que é enviado",
+        "body": "Apenas a foto que você escolher para aquela prévia, além do estilo e da qualidade selecionados. As fotos da sua jornada nunca são enviadas. Antes do primeiro envio, o Kök pede a sua concordância."
+      },
+      {
+        "heading": "Quem processa",
+        "body": "A fal.ai executa modelos de imagem da OpenAI em nosso nome. Nós os usamos apenas para criar a sua prévia e não usamos suas fotos para treinar modelos de IA. A foto enviada e a imagem da prévia são excluídas dos nossos servidores em até 30 dias."
+      },
+      {
+        "heading": "Limites",
+        "body": "Os resultados podem ser imperfeitos ou irreais. A prévia gratuita da integração inicial leva uma marca d'água. O Kök nunca mostra contagem de enxertos, estágios nem promessas de resultado."
+      },
+      {
+        "heading": "Denunciar e excluir",
+        "body": "Denuncie uma prévia na tela dela e nós a analisaremos em até 48 horas. Você pode excluir uma prévia a qualquer momento, e excluir sua conta remove tudo o que guardamos."
+      }
+    ]
+  },
+  "support": {
+    "title": "Ajuda e suporte",
+    "sections": [
+      {
+        "heading": "Fale conosco",
+        "body": "Envie um e-mail para techtactoeappstudio@gmail.com e informe a versão do app (Ajustes, Sobre). Normalmente respondemos em até dois dias úteis."
+      },
+      {
+        "heading": "Uma prévia falhou. Perdi créditos?",
+        "body": "Não. Os créditos de uma prévia que falhou ou foi cancelada são devolvidos automaticamente."
+      },
+      {
+        "heading": "Como cancelo minha assinatura?",
+        "body": "No iPhone: Ajustes, seu nome, Assinaturas, Kök. No Android: Google Play, Pagamentos e assinaturas, Assinaturas. Você também pode abrir Ajustes, Gerenciar assinatura no Kök."
+      },
+      {
+        "heading": "Como restauro as compras?",
+        "body": "Abra a tela de assinatura ou Ajustes e toque em Restaurar."
+      },
+      {
+        "heading": "Como excluo meus dados?",
+        "body": "Ajustes, Dados e privacidade, Excluir todos os meus dados apaga sua jornada e suas prévias neste aparelho. Ajustes, Conta, Excluir conta exclui sua conta e tudo o que guardamos. Você também pode nos enviar um e-mail para solicitar a exclusão."
+      },
+      {
+        "heading": "Isto é aconselhamento médico?",
+        "body": "Não. O Kök é uma ferramenta de educação e acompanhamento. Para qualquer situação preocupante, entre em contato com sua clínica ou um médico."
+      }
+    ]
+  }
+}

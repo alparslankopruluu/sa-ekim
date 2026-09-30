@@ -1,0 +1,247 @@
+{
+  "greeting": {
+    "morning": "Selamat pagi",
+    "afternoon": "Selamat siang",
+    "evening": "Selamat sore",
+    "night": "Halo, si burung hantu"
+  },
+  "today": {
+    "subtitleUnset": "Perjalananmu dimulai dari satu tanggal.",
+    "subtitleUpcoming": "Operasi pada {{date}}",
+    "editDate": "Ubah tanggal dan detail perjalananmu",
+    "bandTitle": "Minggumu pada lini masa yang lazim"
+  },
+  "hero": {
+    "day": "Hari",
+    "dayWeek": "Hari {{day}} · Minggu {{week}}",
+    "monthOf": "Bulan ke-{{month}} dari sekitar {{total}}",
+    "complete": "Melewati rentang lazim {{months}} bulan",
+    "untilOperation_other": "{{count}} hari lagi sebelum operasimu",
+    "daysToGo_other": "hari lagi",
+    "session": "Sesi",
+    "ofTotal": "dari {{total}}",
+    "prpSession": "Sesi {{current}} dari {{total}}",
+    "prpDone": "Semua {{total}} sesi tercatat"
+  },
+  "phase": {
+    "rightNow": "Saat ini",
+    "expected": "Diperkirakan",
+    "normalLabel": "Yang lazim saat ini",
+    "clinicNote": "Hasil tiap orang berbeda — ikuti saran kliniknya sendiri.",
+    "nextIn_other": "{{phase}} biasanya dimulai dalam {{count}} hari",
+    "last": "Ini adalah fase terakhir dari lini masa yang lazim.",
+    "openGuide": "Membuka panduan untuk fase ini"
+  },
+  "band": {
+    "a11y": "Grafik rentang lazim sepanjang lini masa pertumbuhan. Kamu berada di fase: {{phase}}. Hasil tiap orang berbeda.",
+    "a11yNone": "Grafik rentang lazim sepanjang lini masa pertumbuhan. Hasil tiap orang berbeda.",
+    "a11yLocked": "Grafik rentang lazim, tersedia dengan Pro.",
+    "lockChip": "Lihat posisimu · Pro",
+    "lockedHint": "Membuka paket Pro",
+    "start": "Operasi",
+    "end": "Matang",
+    "disclaimer": "Rentang lazim — hasil tiap orang berbeda",
+    "seeTimeline": "Lini masa"
+  },
+  "care": {
+    "items": {
+      "wash": "Cuci dengan lembut, sesuai yang ditunjukkan klinikmu",
+      "sleep": "Tidur dengan kepala ditinggikan",
+      "hands": "Jangan sentuh graft — jangan digaruk",
+      "sun": "Jauhkan area ini dari sinar matahari langsung"
+    }
+  },
+  "task": {
+    "eyebrow": "Langkah berikutnya",
+    "photoCta": "Ambil foto",
+    "baseline": {
+      "title": "Ambil foto “sebelum”",
+      "body": "Foto sebelum operasi membuat setiap perbandingan berikutnya lebih jelas."
+    },
+    "care": {
+      "title": "Daftar perawatan hari ini",
+      "doneTitle": "Perawatan hari ini sudah dicentang",
+      "body": "Banyak klinik menyarankan hal-hal ini pada dua minggu pertama. Instruksi kliniknya sendiri selalu diutamakan.",
+      "progress": "{{done}} dari {{total}} selesai"
+    },
+    "photo": {
+      "firstTitle": "Ambil foto progres pertamamu",
+      "weeklyTitle": "Foto minggu ini",
+      "monthlyTitle": "Foto bulan ini",
+      "weeklyBody": "Setiap minggu selama tiga bulan pertama — sudut sama, cahaya sama.",
+      "monthlyBody": "Setiap bulan mulai bulan keempat — sudut sama, cahaya sama."
+    },
+    "shed": {
+      "title": "Catat kerontokan hari ini",
+      "body": "Kerontokan pada minggu ke-2–8 umum terlihat. Hitungan singkat membantumu melihat polanya dari waktu ke waktu.",
+      "cta": "Catat kerontokan"
+    },
+    "prp": {
+      "title": "Sesi {{current}} dari {{total}} sudah dijadwalkan",
+      "bodyToday": "Hari ini adalah hari yang dijadwalkan. Foto sebelum sesi menjaga rangkaian fotomu tetap bisa dibandingkan.",
+      "bodyLate": "Dijadwalkan pada {{date}}. Tandai selesai setelah sesinya berlangsung.",
+      "markDone": "Tandai selesai"
+    },
+    "caughtUp": {
+      "title": "Semua sudah beres",
+      "body": "Tidak ada yang perlu dilakukan hari ini.",
+      "nextPhoto_other": "Foto berikutnya dalam {{count}} hari.",
+      "nextSession_other": "Sesi berikutnya dalam {{count}} hari."
+    }
+  },
+  "setDate": {
+    "title": "Atur tanggal operasimu",
+    "body": "Kök memakai tanggal ini untuk menampilkan hari, minggu, dan fasemu, serta menjadwalkan pengingat foto.",
+    "prpTitle": "Atur tanggal sesi pertamamu",
+    "prpBody": "Kök menjadwalkan sesi-sesimu dari tanggal ini dan mengingatkanmu sehari sebelum tiap sesi.",
+    "cta": "Atur tanggal",
+    "privacy": "Tetap ada di ponselmu."
+  },
+  "pre": {
+    "title": "Sebelum operasimu",
+    "body": "Banyak orang merasa hal-hal ini membantu pada hari-hari sebelumnya. Instruksi klinikmu selalu diutamakan.",
+    "tip1": "Ambil foto “sebelum” dari depan, atas, dan samping dengan cahaya yang baik.",
+    "tip2": "Minta instruksi perawatan tertulis dari klinikmu.",
+    "tip3": "Rencanakan beberapa hari tenang setelah operasi.",
+    "tip4": "Siapkan bantal leher untuk tidur dengan kepala ditinggikan.",
+    "clinicNote": "Ada pertanyaan tentang obat atau kesehatanmu? Tanyakan kepada klinik atau dokter."
+  },
+  "previewCard": {
+    "title": "Pratinjau sebuah gaya",
+    "body": "Pratinjau AI untuk menjelajahi ide — bukan prediksi hasilmu."
+  },
+  "shedPeek": {
+    "title": "Kerontokan terbaru",
+    "hint": "Membuka catatan kerontokan",
+    "note": "Kerontokan pada minggu ke-2–8 umum terlihat."
+  },
+  "tabs": {
+    "timeline": "Lini masa",
+    "photos": "Foto",
+    "plan": "Rencana"
+  },
+  "timeline": {
+    "bandTitle": "Lini masa yang lazim",
+    "phasesTitle": "Fase"
+  },
+  "rail": {
+    "dates": "{{from}} – {{to}}",
+    "days": "Hari {{from}}–{{to}}",
+    "weeks": "Minggu {{from}}–{{to}}",
+    "current": "Fase saat ini",
+    "past": "Sudah dilewati",
+    "upcoming": "Di depan",
+    "youAreHere": "Kamu di sini"
+  },
+  "maturation": {
+    "title": "Kapan hasilnya dinilai?",
+    "note": "Rambut biasanya terus mematang selama sekitar {{months}} bulan setelah operasi.",
+    "evaluate12": "Klinik biasanya mengevaluasi hasilnya sekitar bulan ke-12.",
+    "evaluate18": "Klinik biasanya melihat hasilnya sekitar bulan ke-12, dan bagian ubun-ubun atau belahan rambut bisa terus mematang hingga 18 bulan.",
+    "clinicNote": "Hasil tiap orang berbeda — kliniknya yang menentukan jadwal pemeriksaanmu."
+  },
+  "photos": {
+    "add": "Tambah",
+    "count_other": "{{count}} foto",
+    "freeCounter_other": "{{count}} dari {{limit}} foto gratis",
+    "limitReached": "{{limit}} foto gratis terpakai — Pro menyimpan foto tanpa batas",
+    "allAngles": "Semua",
+    "before": "Sebelum operasi",
+    "week": "Minggu {{week}} · {{date}}",
+    "all": "Foto",
+    "compare": "Bandingkan",
+    "compareHint": "Pilih dua foto untuk membandingkannya.",
+    "selectHint": "Pilih dua foto.",
+    "selected_other": "{{count}} dari {{max}} dipilih",
+    "compareCta": "Bandingkan",
+    "groupCount_other": "{{count}} foto",
+    "thumbLabel": "Foto {{angle}}, {{group}}",
+    "missing": "File hilang",
+    "emptyTitle": "Belum ada foto",
+    "emptyBody": "Ambil satu foto untuk tiap sudut. Lain kali, bayangan samar foto itu membantumu menyejajarkan tampilan yang sama.",
+    "emptyCta": "Ambil foto pertama",
+    "emptyFilter": "Belum ada foto dari sudut ini."
+  },
+  "angles": {
+    "front": "Depan",
+    "left": "Kiri",
+    "right": "Kanan",
+    "top": "Atas",
+    "crown": "Ubun-ubun"
+  },
+  "plan": {
+    "intro": "Titik pemeriksaan foto pada bulan-bulan yang umumnya dilihat klinik. Sudut sama, cahaya sama.",
+    "checkpoint": "Bulan ke-{{month}}",
+    "status": {
+      "done": "Foto sudah diambil",
+      "due": "Waktunya sekarang",
+      "upcoming": "Akan datang",
+      "missed": "Tanpa foto"
+    },
+    "takePhoto": "Ambil foto",
+    "note": "Sebuah titik pemeriksaan dianggap terpenuhi dengan foto apa pun dari satu minggu sebelum hingga dua minggu sesudahnya."
+  },
+  "prp": {
+    "timelineTitle": "Kursus PRP / mesoterapimu",
+    "timelineBody": "Kursus umumnya direncanakan sebagai beberapa sesi dengan jeda beberapa minggu, lalu perawatan pemeliharaan. Kliniknya yang menentukan rencanamu.",
+    "openPlan": "Buka rencana",
+    "emptyTitle": "Rencanakan sesi-sesimu",
+    "emptyBody": "Mulailah dengan rencana yang umum: {{sessions}} sesi, berjarak {{weeks}} minggu. Kamu bisa mengubah setiap tanggal.",
+    "createPlan": "Buat rencana",
+    "intro": "Centang sesi setelah berlangsung. Foto sebelum tiap sesi menjaga rangkaian fotomu tetap bisa dibandingkan.",
+    "session": "Sesi {{number}}",
+    "done": "Selesai",
+    "due": "Waktunya",
+    "planned": "Dijadwalkan",
+    "markDoneLabel": "Sesi {{number}} pada {{date}} selesai",
+    "changeDate": "Ubah tanggal",
+    "photoBefore": "Foto sebelum",
+    "remove": "Hapus",
+    "removeTitle": "Hapus sesi ini?",
+    "removeBody": "Pengingatnya ikut dihapus.",
+    "addSession": "Tambah sesi",
+    "maintenanceTitle": "Pemeliharaan",
+    "maintenanceBody": "Banyak klinik menyarankan satu sesi pemeliharaan sekitar {{months}} bulan kemudian — sekitar {{date}}.",
+    "clinicNote": "Ikuti rencana kliniknya sendiri."
+  },
+  "setup": {
+    "title": "Perjalananmu",
+    "kindTitle": "Apa yang kamu catat?",
+    "kind": {
+      "transplant": {
+        "title": "Transplantasi rambut",
+        "body": "Garis rambut, ubun-ubun, belahan, alis, atau jenggot"
+      },
+      "prp": {
+        "title": "Kursus PRP / mesoterapi",
+        "body": "Serangkaian sesi dengan jeda beberapa minggu"
+      }
+    },
+    "goalTitle": "Area mana?",
+    "goals": {
+      "hairline": "Garis rambut",
+      "crown": "Ubun-ubun",
+      "part": "Belahan",
+      "brows": "Alis",
+      "beard": "Jenggot"
+    },
+    "dateTitleTransplant": "Tanggal operasi",
+    "dateTitlePrp": "Tanggal sesi pertama",
+    "day": "Hari",
+    "month": "Bulan",
+    "year": "Tahun",
+    "relToday": "Itu hari ini — hari ke-0",
+    "relPast": "Hari {{day}} · minggu {{week}}",
+    "relFuture_other": "{{count}} hari lagi",
+    "clinicTitle": "Klinik (opsional)",
+    "clinicPlaceholder": "Nama klinik",
+    "clinicHint": "Hanya di ponsel ini. Tidak pernah diunggah.",
+    "clinicTooLong": "Mohon jaga agar kurang dari {{max}} karakter.",
+    "clinicBlocked": "Mohon gunakan nama lain.",
+    "save": "Simpan",
+    "saved": "Tersimpan",
+    "relabelTitle": "Ubah tanggalnya?",
+    "relabelBody": "Label hari dan minggu setiap foto akan dihitung ulang dari tanggal yang baru.",
+    "relabelConfirm": "Ubah tanggal"
+  }
+}

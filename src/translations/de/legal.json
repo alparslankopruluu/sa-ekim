@@ -1,0 +1,146 @@
+{
+  "updated": "Zuletzt aktualisiert: {{date}}",
+  "openWeb": "Webversion öffnen",
+  "emailSupport": "Support per E-Mail",
+  "publisher": "Kök wird von Techtactoe App Studio herausgegeben.",
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "sections": [
+      {
+        "heading": "Die Kurzfassung",
+        "body": "Deine Verlaufsfotos bleiben auf deinem Handy. Kök lädt nur dann ein Foto hoch, wenn du eine KI-Vorschau anforderst, und sowohl dieses Foto als auch das entstandene Vorschaubild werden innerhalb von 30 Tagen von unseren Servern gelöscht. Kök zeigt keine Werbung und verkauft deine Daten nicht. Kök ist keine medizinische Beratung."
+      },
+      {
+        "heading": "Was auf deinem Gerät bleibt",
+        "body": "Dein OP-Datum, deine Fortschrittsfotos, dein Ausfallprotokoll und der Name deiner Klinik werden ausschließlich auf deinem Gerät gespeichert. Kök lädt niemals Verlaufsfotos hoch. Sie sind in der Sicherung deines Handys (iCloud oder Android Auto Backup) enthalten, wenn du diese aktiviert hast."
+      },
+      {
+        "heading": "Was wir erheben",
+        "body": "Eine anonyme Konto-ID (Firebase Authentication), sodass du weder einen Namen noch eine E-Mail-Adresse angeben musst. Dein Credit-Guthaben und den Kaufstatus. Deine Sprach- und Mitteilungseinstellungen. Nutzungsereignisse, Absturzberichte und Leistungsdaten (Firebase Analytics, Crashlytics und Performance Monitoring). Ein Push-Token, nur wenn du Mitteilungen erlaubst. Wenn du eine Vorschau erstellst: das eine Foto, das du auswählst, den Stil und die Qualität, die du wählst, sowie die entstandene Vorschau. Wenn du der optionalen Gruppe derselben Woche beitrittst: dein OP-Datum, dein Ziel und die Art deines Verlaufs, sonst nichts. Wir erheben weder deinen Namen noch deine Kontakte oder deinen genauen Standort. Kök verfolgt dich nicht über andere Apps oder Websites hinweg und verwendet nicht deine Werbe-ID."
+      },
+      {
+        "heading": "KI-Vorschauen",
+        "body": "Wenn du eine Vorschau erstellst, wird das von dir gewählte Foto auf unsere Server hochgeladen und von fal.ai verarbeitet, das in unserem Auftrag OpenAI-Bildmodelle ausführt. Kök bittet vor dem ersten Hochladen um deine Zustimmung, und dieser Hinweis nennt diese Anbieter. Das Foto wird nur zur Erstellung dieser Vorschau verwendet. Wir verwenden deine Fotos nicht, um KI-Modelle zu trainieren. Das hochgeladene Foto und das Vorschaubild werden innerhalb von 30 Tagen von unseren Servern gelöscht, speichere daher eine Vorschau in deiner Fotomediathek, wenn du sie behalten möchtest. Jede Vorschau ist eine KI-Illustration, keine Vorhersage deines Ergebnisses."
+      },
+      {
+        "heading": "Dienstleister",
+        "body": "Wir geben Daten nur an Unternehmen weiter, die sie in unserem Auftrag verarbeiten: Google Firebase (Konto, Datenbank, Dateispeicher, Funktionen, Analysen, Absturzberichte, Leistungsmessung, Remote-Konfiguration, Prüfungen der App-Integrität und Push-Mitteilungen); fal.ai und die von dort ausgeführten OpenAI-Bildmodelle (KI-Vorschauen); RevenueCat (Abos und Käufe); Apple und Google (Zahlungen und App-Vertrieb). Kök enthält keine Werbung und gibt keine Daten an Werbetreibende weiter."
+      },
+      {
+        "heading": "Wie lange wir Daten aufbewahren",
+        "body": "Verlaufsdaten: auf deinem Gerät, bis du sie löschst. Hochgeladene Vorschaufotos und Vorschaubilder: höchstens 30 Tage auf unseren Servern. Nutzungs- und Absturzdaten: bis zu 14 Monate. Kaufbelege: so lange, wie es das Steuer- und Buchführungsrecht verlangt. Meldungen, die du zu einer Vorschau sendest: so lange, wie es zur Prüfung und Bearbeitung nötig ist."
+      },
+      {
+        "heading": "Deine Wahlmöglichkeiten und Löschung",
+        "body": "In den Einstellungen unter „Daten und Datenschutz“ entfernt „Alle meine Daten löschen“ deine Verlaufsfotos, dein Ausfallprotokoll und deine Vorschauen von diesem Gerät. Unter „Konto“ entfernt „Konto löschen“ dein Konto, deine Credits, Vorschauen und alle hochgeladenen Fotos sofort von unseren Servern und löscht deinen Verlauf auf dem Gerät. Dort kannst du auch Mitteilungen ausschalten. Es wird nichts hochgeladen, solange du keine Vorschau erstellst. Das Löschen deines Kontos kündigt kein Abo: Kündige es in den Kontoeinstellungen deines App Store oder Google Play. Je nach deinem Wohnort (zum Beispiel nach der DSGVO, dem türkischen KVKK oder dem kalifornischen CCPA) hast du möglicherweise Rechte auf Auskunft, Berichtigung, Löschung oder Export deiner Daten sowie auf Widerruf deiner Einwilligung. Für eine Anfrage schreibe an techtactoeappstudio@gmail.com."
+      },
+      {
+        "heading": "Kinder",
+        "body": "Kök richtet sich an Erwachsene. Wir erheben wissentlich keine Informationen von Personen unter 18 Jahren."
+      },
+      {
+        "heading": "Keine medizinische Beratung",
+        "body": "Kök ist ein Bildungs- und Verfolgungswerkzeug. Es diagnostiziert, behandelt oder sagt nichts voraus, und seine Zeitleiste zeigt nur typische Bereiche. Bei jeder Sorge wende dich an deine Klinik oder einen Arzt."
+      },
+      {
+        "heading": "Änderungen und Kontakt",
+        "body": "Wenn sich diese Erklärung ändert, ändert sich das Datum oben mit. Fragen oder Anliegen: techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "sections": [
+      {
+        "heading": "Kök nutzen",
+        "body": "Kök hilft dir, eine Haartransplantation, PRP oder eine ähnliche Haarrestauration mit deinen eigenen Fotos und einem typischen Verlauf zu verfolgen, und ermöglicht dir, KI-Vorschauen zu erstellen. Du musst volljährig und geschäftsfähig sein, um diese Vereinbarung einzugehen. Mit der Nutzung von Kök akzeptierst du diese Bedingungen."
+      },
+      {
+        "heading": "Keine medizinische Beratung",
+        "body": "Kök ist kein Medizinprodukt und gibt keine medizinische Beratung, Diagnose oder Behandlung. Zeitleisten und Leitfäden beschreiben, was typisch ist, und sind kein Versprechen für dein Ergebnis. Wenn du Fieber, sich ausbreitende Rötung, Eiter, starke Schmerzen oder starke Blutung bemerkst, wende dich an deine Klinik oder einen Arzt."
+      },
+      {
+        "heading": "KI-Vorschauen",
+        "body": "Eine Vorschau ist eine aus deinem Foto erstellte KI-Illustration. Sie ist keine Vorhersage, kein Versprechen und kein Plan für dein Ergebnis und zeigt keine Graft-Anzahlen. Die kostenlose Vorschau beim Einstieg trägt ein Wasserzeichen. Vorschauen werden 30 Tage lang aufbewahrt, speichere daher eine in deiner Fotomediathek, um sie zu behalten. Nutze Vorschauen verantwortungsvoll und gib keine als echte Fotografie aus."
+      },
+      {
+        "heading": "Fotos und Inhalte",
+        "body": "Verwende nur Fotos von dir selbst oder von Personen, die eindeutig zugestimmt haben. Lade keine Minderjährigen, Personen des öffentlichen Lebens oder Inhalte hoch, die sexuell, hasserfüllt, belästigend, täuschend oder rechtswidrig sind. Wir können Inhalte sperren und den Zugang aussetzen, wenn gegen diese Regeln verstoßen wird. Du kannst jede Vorschau auf ihrem Bildschirm melden."
+      },
+      {
+        "heading": "Abos und Credits",
+        "body": "Kök Pro wird als Wochen-, Monats- oder Jahresabo zu dem Preis angeboten, den dein Store anzeigt. Es gibt keine kostenlose Testphase. Abos verlängern sich automatisch, bis du sie in den Kontoeinstellungen deines App Store oder Google Play kündigst, und Rückerstattungen richten sich nach den Regeln von Apple oder Google. Credit-Pakete sind Einmalkäufe. Eine Standard-Vorschau kostet 1 Credit, eine HD-Vorschau 3. Wenn eine Vorschau fehlschlägt, werden ihre Credits automatisch zurückgegeben. Credits haben keinen Barwert und sind nicht übertragbar. Du kannst Käufe über die Paywall oder die Einstellungen wiederherstellen."
+      },
+      {
+        "heading": "Deine Inhalte",
+        "body": "Du behältst die Rechte an deinen Fotos und Vorschauen. Du erteilst uns eine beschränkte Erlaubnis, das von dir Hochgeladene ausschließlich zur Erbringung des von dir gewünschten Dienstes zu verarbeiten."
+      },
+      {
+        "heading": "Verfügbarkeit und Haftung",
+        "body": "Kök wird so bereitgestellt, wie es ist und wie es verfügbar ist. Soweit gesetzlich zulässig, haften wir nicht für mittelbare oder Folgeschäden, und nichts hierin schränkt Rechte ein, die dir nach Verbraucherrecht zustehen und auf die nicht verzichtet werden kann."
+      },
+      {
+        "heading": "Ende deiner Nutzung",
+        "body": "Du kannst Kök jederzeit nicht mehr nutzen und dein Konto in den Einstellungen löschen. Wir können diese Bedingungen ändern und aktualisieren dann das Datum."
+      },
+      {
+        "heading": "Kontakt",
+        "body": "Techtactoe App Studio, techtactoeappstudio@gmail.com."
+      }
+    ]
+  },
+  "ai": {
+    "title": "So funktionieren KI-Vorschauen",
+    "sections": [
+      {
+        "heading": "Was eine Vorschau ist",
+        "body": "Eine Vorschau ist eine KI-Illustration davon, wie ein gewählter Stil auf deinem Foto aussehen könnte. Sie ist keine Vorhersage deines Ergebnisses, und ein entsprechender Hinweis bleibt bei jeder Vorschau sichtbar."
+      },
+      {
+        "heading": "Was gesendet wird",
+        "body": "Nur das eine Foto, das du für diese Vorschau auswählst, sowie der gewählte Stil und die gewählte Qualität. Deine Verlaufsfotos werden nie hochgeladen. Vor dem ersten Hochladen bittet Kök um deine Zustimmung."
+      },
+      {
+        "heading": "Wer es verarbeitet",
+        "body": "fal.ai führt in unserem Auftrag OpenAI-Bildmodelle aus. Wir nutzen sie nur, um deine Vorschau zu erstellen, und verwenden deine Fotos nicht, um KI-Modelle zu trainieren. Das hochgeladene Foto und das Vorschaubild werden innerhalb von 30 Tagen von unseren Servern gelöscht."
+      },
+      {
+        "heading": "Grenzen",
+        "body": "Ergebnisse können unvollkommen oder unrealistisch sein. Die kostenlose Vorschau beim Einstieg trägt ein Wasserzeichen. Kök zeigt niemals Graft-Anzahlen, Stadien oder Ergebnisversprechen."
+      },
+      {
+        "heading": "Melden und Löschen",
+        "body": "Melde eine Vorschau auf ihrem Bildschirm, und wir prüfen sie innerhalb von 48 Stunden. Du kannst eine Vorschau jederzeit löschen, und das Löschen deines Kontos entfernt alles, was wir gespeichert haben."
+      }
+    ]
+  },
+  "support": {
+    "title": "Hilfe und Support",
+    "sections": [
+      {
+        "heading": "Kontakt",
+        "body": "Schreibe an techtactoeappstudio@gmail.com und gib deine App-Version an (Einstellungen, Info). Wir antworten in der Regel innerhalb von zwei Werktagen."
+      },
+      {
+        "heading": "Eine Vorschau ist fehlgeschlagen. Habe ich Credits verloren?",
+        "body": "Nein. Credits für eine fehlgeschlagene oder abgebrochene Vorschau werden automatisch zurückgegeben."
+      },
+      {
+        "heading": "Wie kündige ich mein Abo?",
+        "body": "Auf dem iPhone: Einstellungen, dein Name, Abonnements, Kök. Auf Android: Google Play, Zahlungen und Abos, Abos. Du kannst auch in Kök Einstellungen, Abo verwalten öffnen."
+      },
+      {
+        "heading": "Wie stelle ich Käufe wieder her?",
+        "body": "Öffne die Paywall oder die Einstellungen und tippe auf „Wiederherstellen“."
+      },
+      {
+        "heading": "Wie lösche ich meine Daten?",
+        "body": "In den Einstellungen unter „Daten und Datenschutz“ entfernt „Alle meine Daten löschen“ deinen Verlauf und deine Vorschauen von diesem Gerät. Unter „Konto“ löscht „Konto löschen“ dein Konto und alles, was wir gespeichert haben. Du kannst uns auch per E-Mail um Löschung bitten."
+      },
+      {
+        "heading": "Ist das eine medizinische Beratung?",
+        "body": "Nein. Kök ist ein Bildungs- und Verfolgungswerkzeug. Bei allem, was dich beunruhigt, wende dich an deine Klinik oder einen Arzt."
+      }
+    ]
+  }
+}

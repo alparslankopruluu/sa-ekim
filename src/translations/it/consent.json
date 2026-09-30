@@ -1,0 +1,25 @@
+{
+  "title": "Prima di creare la tua anteprima",
+  "body": "L'anteprima è creata da modelli di immagini basati sull'IA, quindi la foto che hai scelto deve lasciare il tuo telefono. Ecco cosa succede.",
+  "sent": {
+    "title": "Cosa inviamo",
+    "body": "Solo la foto che hai selezionato per questa anteprima. Nient'altro dal tuo rullino o dal tuo percorso."
+  },
+  "who": {
+    "title": "Chi la elabora",
+    "body": "fal.ai esegue la modifica dell'immagine, usando modelli di immagini di OpenAI."
+  },
+  "retention": {
+    "title": "Per quanto tempo resta",
+    "body": "La tua foto originale e il risultato dell'anteprima vengono entrambi eliminati dai nostri server entro 30 giorni. Puoi eliminarli prima dalla scheda Anteprime."
+  },
+  "choice": {
+    "title": "La tua scelta",
+    "body": "Puoi dire di no e usare comunque tutto il percorso. Le foto che scatti per la tua cronologia restano sul tuo dispositivo."
+  },
+  "note": "Le anteprime IA mostrano una possibilità. Non sono una previsione del tuo risultato.",
+  "policy": "Leggi l'informativa sulla privacy",
+  "accept": "Accetto e continuo",
+  "decline": "Non ora",
+  "error": "Non siamo riusciti a salvare la tua scelta. Controlla la connessione e riprova."
+}
