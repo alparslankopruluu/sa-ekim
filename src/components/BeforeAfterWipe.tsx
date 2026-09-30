@@ -126,18 +126,18 @@ export function BeforeAfterWipe({
         </Animated.View>
 
         <View style={[styles.tag, styles.tagStart]} pointerEvents="none">
-          <AppText variant="micro" color="text">
+          <AppText variant="micro" color="textOnAccent">
             {beforeLabel}
           </AppText>
         </View>
         <View style={[styles.tag, styles.tagEnd]} pointerEvents="none">
-          <AppText variant="micro" color="text">
+          <AppText variant="micro" color="textOnAccent">
             {afterLabel}
           </AppText>
         </View>
         {mark ? (
           <View style={styles.mark} pointerEvents="none">
-            <AppText variant="micro" color="textSecondary">
+            <AppText variant="micro" color="textOnAccent">
               {mark}
             </AppText>
           </View>
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   // The clip grows from the left; it shows the "before" image, anchored to the frame's left.
   beforeClip: { position: 'absolute', top: 0, bottom: 0, left: 0, overflow: 'hidden' },
   beforeImage: { position: 'absolute', top: 0, bottom: 0, left: 0 },
-  line: { position: 'absolute', top: 0, bottom: 0, width: 2, left: 0, backgroundColor: colors.text },
+  line: { position: 'absolute', top: 0, bottom: 0, width: 2, left: 0, backgroundColor: colors.textOnAccent },
   handle: {
     position: 'absolute',
     top: '50%',

@@ -267,7 +267,7 @@ export default function ResultScreen() {
             )}
             {after.uri ? (
               <View style={styles.aiTag} pointerEvents="none">
-                <AppText variant="micro" color="text">
+                <AppText variant="micro" color="textOnAccent">
                   {t('preview.aiLabelShort')}
                 </AppText>
               </View>

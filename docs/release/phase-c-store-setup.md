@@ -8,7 +8,7 @@ approval per write (AGENTS.md §4). Order matters: identifiers first, catalog se
 
 | Item | Value | Source |
 |---|---|---|
-| App name | Kök (working; trademark screen not done) | D-001 |
+| App name | Kök — store name "Kök: Hair Transplant Tracker" (bare "KÖK" is taken on the App Store); screen done, attorney clearance pending | D-001, D-018 |
 | Bundle ID / Android package | `com.techtactoe.kok` | `app.config.ts` |
 | URL scheme | `kok` | `app.config.ts` |
 | Apple team | from `~/.config/app-factory/operator.json` | operator profile |

@@ -48,7 +48,7 @@ export function PhotoStrip({ title, photos, selectedId, onSelect, labelFor, a11y
             >
               <Image source={{ uri: resolveJourneyUri(item.uri) }} style={styles.image} contentFit="cover" recyclingKey={item.id} />
               <View style={styles.tag}>
-                <AppText variant="micro" color="text" numberOfLines={1}>
+                <AppText variant="micro" color="textOnAccent" numberOfLines={1}>
                   {labelFor(item)}
                 </AppText>
               </View>

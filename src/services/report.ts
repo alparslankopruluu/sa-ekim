@@ -9,7 +9,8 @@ import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
 import * as Print from 'expo-print';
 import { router } from 'expo-router';
 import * as Sharing from 'expo-sharing';
-import { Platform } from 'react-native';
+import { Platform, type View } from 'react-native';
+import { captureRef } from 'react-native-view-shot';
 
 import { toIsoDate } from '@shared/timeline';
 
@@ -177,9 +178,47 @@ export async function exportClinicReport(): Promise<ExportResult> {
 }
 
 /**
- * Compare sheet: the two photos side by side with their week labels and the Kök mark, as a
- * one-page PDF (no view-capture module is installed, and expo-image-manipulator cannot
- * composite two images). Callers gate it behind `canUse('compare')`.
+ * Compare as an image: rasterizes the on-screen ShareCard (both photos, week labels, the Kök
+ * mark and the disclaimer) with react-native-view-shot and opens the share sheet. Falls back to
+ * the one-page PDF below on web or when capture fails. Callers gate it behind `canUse('compare')`.
+ */
+export async function shareComparisonImage(
+  card: View | null,
+  a: JourneyPhoto,
+  b: JourneyPhoto,
+): Promise<ExportResult> {
+  if (Platform.OS === 'web' || !card) return shareComparison(a, b);
+  if (!(await canShare())) {
+    showToast(i18n.t('compare.share.unavailable'), 'error');
+    return 'unsupported';
+  }
+  let uri: string;
+  try {
+    uri = await captureRef(card, { format: 'jpg', quality: 0.92, result: 'tmpfile' });
+  } catch (error) {
+    recordNonFatal(error, 'compare_capture');
+    return shareComparison(a, b);
+  }
+  try {
+    await Sharing.shareAsync(uri, { mimeType: 'image/jpeg', UTI: 'public.jpeg', dialogTitle: i18n.t('compare.share.dialog') });
+    useSession.getState().recordShare();
+    return 'shared';
+  } catch (error) {
+    recordNonFatal(error, 'compare_share_image');
+    showToast(i18n.t('compare.share.error'), 'error');
+    return 'failed';
+  } finally {
+    try {
+      new File(uri).delete();
+    } catch {
+      // temporary file; the OS cleans the cache anyway
+    }
+  }
+}
+
+/**
+ * Compare sheet as a one-page PDF (web and capture fallback): the two photos side by side with
+ * their week labels and the Kök mark.
  */
 export async function shareComparison(a: JourneyPhoto, b: JourneyPhoto): Promise<ExportResult> {
   if (!(await canShare())) {

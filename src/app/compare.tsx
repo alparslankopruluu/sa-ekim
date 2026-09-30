@@ -18,13 +18,14 @@ import { SegmentedTabs } from '@/components/SegmentedTabs';
 import { CloseButton, EmptyState } from '@/components/ui';
 import { angleMismatch, resolvePair } from '@/features/compare/compareLogic';
 import { PhotoStrip } from '@/features/compare/PhotoStrip';
+import { ShareCard } from '@/features/compare/ShareCard';
 import { formatTakenAt, useWeekLabel } from '@/features/compare/useWeekLabel';
 import { openPaywall } from '@/features/journey/access';
 import { useEntitlement } from '@/lib/entitlements';
 import { currentLocaleTag } from '@/lib/i18n';
 import { track } from '@/services/analytics';
 import { resolveJourneyUri } from '@/services/journeyFiles';
-import { shareComparison } from '@/services/report';
+import { shareComparisonImage } from '@/services/report';
 import { type JourneyPhoto, useJourney } from '@/stores/journey';
 import { useSession } from '@/stores/session';
 import { colors, layout, radius, spacing } from '@/theme/tokens';
@@ -49,6 +50,7 @@ export default function CompareScreen() {
   const [mode, setMode] = useState<Mode>('wipe');
   const [sharing, setSharing] = useState(false);
   const opened = useRef(false);
+  const shareCard = useRef<View>(null);
 
   const pair = useMemo(() => {
     if (!picked) return initial;
@@ -111,12 +113,26 @@ export default function CompareScreen() {
 
   const share = async () => {
     setSharing(true);
-    await shareComparison(pair.a, pair.b);
+    await shareComparisonImage(shareCard.current, pair.a, pair.b);
     setSharing(false);
   };
 
   return (
     <SafeAreaView style={styles.root} edges={['top', 'bottom']}>
+      {!locked ? (
+        // Off-screen card rasterized for "Share as image".
+        <View style={styles.shareLayer} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
+          <ShareCard
+            ref={shareCard}
+            beforeUri={resolveJourneyUri(pair.a.uri)}
+            afterUri={resolveJourneyUri(pair.b.uri)}
+            beforeLabel={beforeLabel}
+            afterLabel={afterLabel}
+            mark={t('compare.mark')}
+            disclaimer={t('compare.report.disclaimer')}
+          />
+        </View>
+      ) : null}
       <View style={styles.top}>
         <AppText variant="title1" accessibilityRole="header" style={styles.flex}>
           {t('compare.title')}
@@ -160,7 +176,7 @@ export default function CompareScreen() {
                     accessibilityLabel={t('compare.sideA11y', { label, angle: angleName(photo) })}
                   />
                   <View style={styles.tag} pointerEvents="none">
-                    <AppText variant="micro" color="text">
+                    <AppText variant="micro" color="textOnAccent">
                       {label}
                     </AppText>
                   </View>
@@ -229,6 +245,8 @@ export default function CompareScreen() {
 }
 
 const styles = StyleSheet.create({
+  // Off-screen but laid out and drawn, so view-shot can rasterize it without the user seeing it.
+  shareLayer: { position: 'absolute', top: 0, left: -10000 },
   root: { flex: 1, backgroundColor: colors.bg },
   flex: { flex: 1 },
   top: {

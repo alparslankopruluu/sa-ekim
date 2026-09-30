@@ -88,7 +88,7 @@ distributes it.
 - Backend ports (`src/services/backend/`): `mock` (default, no keys), `emulator`, `live`;
   selected by `EXPO_PUBLIC_BACKEND_MODE`. Screens never know the mode.
 - Extra Expo modules approved for Kök: `expo-camera` (ghost-overlay capture),
-  `expo-sensors` (upright-phone gate), `expo-print` (clinic PDF), `expo-image-manipulator`,
+  `expo-sensors` (upright-phone gate), `expo-print` (clinic PDF), `react-native-view-shot` (compare image share, D-017), `expo-image-manipulator`,
   `expo-media-library`, `expo-sharing`. Removed from Belto's set: `expo-audio`, `expo-video`.
 - Journey data (photos, shed log, sessions) is **device-local**: files under
   `documentDirectory/journey/`, metadata in the persisted zustand slice. iOS iCloud device
